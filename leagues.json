@@ -1,0 +1,275 @@
+{
+  "version": "2025-2026",
+  "lastUpdated": "2026-05-01T16:53:04+00:00",
+  "categories": [
+    {
+      "id": "rfef",
+      "name": "Liga Española",
+      "source": "rfef.es",
+      "divisions": [
+        {
+          "id": "rfef-primera-fs-masc",
+          "name": "Primera División FS",
+          "gender": "masculino",
+          "teams": [
+            {
+              "name": "Barça",
+              "logoUrl": null
+            },
+            {
+              "name": "ElPozo Murcia Costa Cálida",
+              "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Elpozo_Murcia_calentando.jpg"
+            },
+            {
+              "name": "Movistar Inter FS",
+              "logoUrl": null
+            },
+            {
+              "name": "Industrias Santa Coloma",
+              "logoUrl": null
+            },
+            {
+              "name": "Jaén Paraíso Interior FS",
+              "logoUrl": null
+            },
+            {
+              "name": "Jimbee Cartagena Costa Cálida",
+              "logoUrl": null
+            },
+            {
+              "name": "Illes Balears Palma Futsal",
+              "logoUrl": null
+            },
+            {
+              "name": "Real Betis Futsal",
+              "logoUrl": null
+            },
+            {
+              "name": "Viña Albali Valdepeñas",
+              "logoUrl": null
+            },
+            {
+              "name": "Córdoba Patrimonio de la Humanidad",
+              "logoUrl": null
+            },
+            {
+              "name": "Noia Portus Apostoli",
+              "logoUrl": null
+            },
+            {
+              "name": "O Parrulo Ferrol FS",
+              "logoUrl": null
+            },
+            {
+              "name": "C.A. Osasuna Magna",
+              "logoUrl": null
+            },
+            {
+              "name": "Quesos El Hidalgo Manzanares FS",
+              "logoUrl": null
+            },
+            {
+              "name": "Servigroup Peñíscola FS",
+              "logoUrl": null
+            },
+            {
+              "name": "ATP Iluminación Tudelano Ribera de Navarra",
+              "logoUrl": null
+            }
+          ]
+        },
+        {
+          "id": "rfef-segunda-fs-masc",
+          "name": "Segunda División FS",
+          "gender": "masculino",
+          "teams": [
+            {
+              "name": "Barça Atlètic",
+              "logoUrl": null
+            },
+            {
+              "name": "Burela FS",
+              "logoUrl": null
+            },
+            {
+              "name": "C.D. Melistar",
+              "logoUrl": null
+            },
+            {
+              "name": "CD Leganes FS",
+              "logoUrl": null
+            },
+            {
+              "name": "CD Málaga Ciudad Redonda FS",
+              "logoUrl": null
+            },
+            {
+              "name": "Club Sala 5 Martorell",
+              "logoUrl": null
+            },
+            {
+              "name": "Entrerios Automatización",
+              "logoUrl": null
+            },
+            {
+              "name": "Family Cash Alzira FS.",
+              "logoUrl": null
+            },
+            {
+              "name": "Inagroup CD El Ejido Futsal",
+              "logoUrl": null
+            },
+            {
+              "name": "Industrias Santa Coloma",
+              "logoUrl": null
+            },
+            {
+              "name": "Levante U.D. FS.",
+              "logoUrl": null
+            },
+            {
+              "name": "MRB FS Móstoles",
+              "logoUrl": null
+            },
+            {
+              "name": "UD Ibiza Gasifred Ciutat D'Eivissa FS",
+              "logoUrl": null
+            },
+            {
+              "name": "Vulcanizados Ruiz Tafa FS",
+              "logoUrl": null
+            },
+            {
+              "name": "Wanapix AD Sala 10",
+              "logoUrl": null
+            },
+            {
+              "name": "Zambu CFS Pinatar",
+              "logoUrl": null
+            }
+          ]
+        },
+        {
+          "id": "rfef-primera-fs-fem",
+          "name": "Primera División FS Femenina",
+          "gender": "femenino",
+          "teams": [
+            {
+              "name": "AE Les Corts UBAE",
+              "logoUrl": null
+            },
+            {
+              "name": "Arriva AD Alcorcón FSF",
+              "logoUrl": null
+            },
+            {
+              "name": "Burela FS",
+              "logoUrl": null
+            },
+            {
+              "name": "C.D. Chiloeches",
+              "logoUrl": null
+            },
+            {
+              "name": "CD Guadalcacín FS",
+              "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Guadalcac%C3%ADn-P1060795.jpg"
+            },
+            {
+              "name": "Ceuta Agrupación Deportiva",
+              "logoUrl": null
+            },
+            {
+              "name": "FSF Castro Bloques Cando",
+              "logoUrl": null
+            },
+            {
+              "name": "Futsi Atlético Navalcarnero",
+              "logoUrl": null
+            },
+            {
+              "name": "LBTL Futsal Alcantarilla",
+              "logoUrl": null
+            },
+            {
+              "name": "MRB Móstoles FSF",
+              "logoUrl": null
+            },
+            {
+              "name": "Melilla Ciudad del Deporte Torreblanca CF",
+              "logoUrl": null
+            },
+            {
+              "name": "Nueces de Ronda Atlético Torcal FS.",
+              "logoUrl": null
+            },
+            {
+              "name": "Ourense Ontime",
+              "logoUrl": null
+            },
+            {
+              "name": "PH-Quirogel AE Penya Esplugues",
+              "logoUrl": null
+            },
+            {
+              "name": "Poio Pescamar FS.",
+              "logoUrl": null
+            },
+            {
+              "name": "STV Roldán FS",
+              "logoUrl": null
+            }
+          ]
+        },
+        {
+          "id": "rfef-segunda-fs-fem",
+          "name": "Segunda División FS Femenina",
+          "gender": "femenino",
+          "teams": []
+        }
+      ]
+    },
+    {
+      "id": "fcf",
+      "name": "Liga Catalana",
+      "source": "fcf.cat (manual)",
+      "divisions": [
+        {
+          "id": "fcf-1cat-fs-masc",
+          "name": "Primera Catalana FS Masculina",
+          "gender": "masculino",
+          "teams": []
+        },
+        {
+          "id": "fcf-2cat-fs-masc",
+          "name": "Segunda Catalana FS Masculina",
+          "gender": "masculino",
+          "teams": []
+        },
+        {
+          "id": "fcf-3cat-fs-masc",
+          "name": "Tercera Catalana FS Masculina",
+          "gender": "masculino",
+          "teams": []
+        },
+        {
+          "id": "fcf-1cat-fs-fem",
+          "name": "Primera Catalana FS Femenina",
+          "gender": "femenino",
+          "teams": []
+        },
+        {
+          "id": "fcf-2cat-fs-fem",
+          "name": "Segunda Catalana FS Femenina",
+          "gender": "femenino",
+          "teams": []
+        },
+        {
+          "id": "fcf-juv-dh-fs",
+          "name": "División de Honor Juvenil FS",
+          "gender": "masculino",
+          "teams": []
+        }
+      ]
+    }
+  ]
+}
