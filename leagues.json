@@ -1,6 +1,6 @@
 {
   "version": "2025-2026",
-  "lastUpdated": "2026-05-01T17:26:13+00:00",
+  "lastUpdated": "2026-05-01T23:02:56+00:00",
   "categories": [
     {
       "id": "rfef",
@@ -18,7 +18,7 @@
             },
             {
               "name": "ElPozo Murcia Costa Cálida",
-              "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Elpozo_Murcia_calentando.jpg"
+              "logoUrl": null
             },
             {
               "name": "Movistar Inter FS",
@@ -42,7 +42,7 @@
             },
             {
               "name": "Real Betis Futsal",
-              "logoUrl": null
+              "logoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Kit_left_arm_betis2425h.png"
             },
             {
               "name": "Viña Albali Valdepeñas",
@@ -97,7 +97,7 @@
             },
             {
               "name": "CD Leganes FS",
-              "logoUrl": null
+              "logoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Kit_left_arm_leganes2324h.png"
             },
             {
               "name": "CD Málaga Ciudad Redonda FS",
@@ -125,7 +125,7 @@
             },
             {
               "name": "Levante U.D. FS.",
-              "logoUrl": null
+              "logoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Kit_left_arm_levante2526h.png"
             },
             {
               "name": "MRB FS Móstoles",
@@ -172,7 +172,7 @@
             },
             {
               "name": "CD Guadalcacín FS",
-              "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Guadalcac%C3%ADn-P1060795.jpg"
+              "logoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Partido_Guadalcac%C3%ADn_FS_CD-Viaxes_Amarelle_FS_2019-P1360434.jpg"
             },
             {
               "name": "Ceuta Agrupación Deportiva",
@@ -236,7 +236,7 @@
                 },
                 {
                   "name": "Bembrive",
-                  "logoUrl": null
+                  "logoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Escudo_de_Bembrive.svg"
                 },
                 {
                   "name": "C.D. Colegio San José",
@@ -306,7 +306,7 @@
                 },
                 {
                   "name": "Avenida Algón FS",
-                  "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/MINISTRA_DE_DEFENSA_SOBREVOL%C3%93_LA_CAPITAL_PARA_SUPERVISAR_ACATAMIENTO_DE_INMOVILIZACI%C3%93N_SOCIAL_%2850899577057%29.jpg/3840px-MINISTRA_DE_DEFENSA_SOBREVOL%C3%93_LA_CAPITAL_PARA_SUPERVISAR_ACATAMIENTO_DE_INMOVILIZACI%C3%93N_SOCIAL_%2850899577057%29.jpg"
+                  "logoUrl": null
                 },
                 {
                   "name": "C.E. Futsal Mataro",
@@ -322,7 +322,7 @@
                 },
                 {
                   "name": "CN Caldes",
-                  "logoUrl": null
+                  "logoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Escut_de_Caldes_de_Malavella.svg"
                 },
                 {
                   "name": "Entrerrios Automatización",
@@ -376,7 +376,7 @@
                 },
                 {
                   "name": "Almagro FSF.",
-                  "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Festival_de_M%C3%A1laga_2024_-_Almagro_San_Miguel.jpg/3840px-Festival_de_M%C3%A1laga_2024_-_Almagro_San_Miguel.jpg"
+                  "logoUrl": null
                 },
                 {
                   "name": "Atletico Navalcarnero",
@@ -408,7 +408,7 @@
                 },
                 {
                   "name": "Granada FS Femenino",
-                  "logoUrl": null
+                  "logoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Kit_left_arm_granada2526h.png"
                 },
                 {
                   "name": "I.E.S. Luis de Camoens",
