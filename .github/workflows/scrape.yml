@@ -1,0 +1,61 @@
+name: Scrape leagues data
+
+on:
+  # Mensual: día 1 a las 06:00 UTC
+  schedule:
+    - cron: '0 6 1 * *'
+  # Manual: trigger desde la pestaña Actions
+  workflow_dispatch:
+    inputs:
+      season:
+        description: 'Temporada (formato YYYY-YYYY)'
+        required: false
+        default: '2025-2026'
+      no_badges:
+        description: 'Saltar resolución de escudos via Wikipedia'
+        required: false
+        default: 'false'
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scraper
+        run: |
+          ARGS="--season ${{ github.event.inputs.season || '2025-2026' }}"
+          if [ "${{ github.event.inputs.no_badges }}" = "true" ]; then
+            ARGS="$ARGS --no-badges"
+          fi
+          python scrape.py $ARGS
+
+      - name: Show diff
+        run: |
+          echo "=== output/leagues.json ==="
+          head -40 output/leagues.json
+          echo "..."
+          wc -l output/leagues.json
+
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          publish_branch: gh-pages
+          keep_files: false
+          commit_message: 'chore: refresh leagues.json'

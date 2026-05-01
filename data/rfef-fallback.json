@@ -1,0 +1,39 @@
+{
+  "_comment": "Fuente autoritativa de nombres canónicos de equipos RFEF. Si el scraper de PDF falla, este archivo se usa tal cual. Los logoUrl pueden dejarse como null — el resolver de scrapers/badges.py los rellenará via Wikipedia.",
+  "season": "2025-2026",
+  "divisions": {
+    "rfef-primera-fs-masc": {
+      "name": "Primera División FS",
+      "teams": [
+        { "name": "Barça", "logoUrl": null },
+        { "name": "ElPozo Murcia Costa Cálida", "logoUrl": null },
+        { "name": "Movistar Inter FS", "logoUrl": null },
+        { "name": "Industrias Santa Coloma", "logoUrl": null },
+        { "name": "Jaén Paraíso Interior FS", "logoUrl": null },
+        { "name": "Jimbee Cartagena Costa Cálida", "logoUrl": null },
+        { "name": "Illes Balears Palma Futsal", "logoUrl": null },
+        { "name": "Real Betis Futsal", "logoUrl": null },
+        { "name": "Viña Albali Valdepeñas", "logoUrl": null },
+        { "name": "Córdoba Patrimonio de la Humanidad", "logoUrl": null },
+        { "name": "Noia Portus Apostoli", "logoUrl": null },
+        { "name": "O Parrulo Ferrol FS", "logoUrl": null },
+        { "name": "C.A. Osasuna Magna", "logoUrl": null },
+        { "name": "Quesos El Hidalgo Manzanares FS", "logoUrl": null },
+        { "name": "Servigroup Peñíscola FS", "logoUrl": null },
+        { "name": "ATP Iluminación Tudelano Ribera de Navarra", "logoUrl": null }
+      ]
+    },
+    "rfef-segunda-fs-masc": {
+      "name": "Segunda División FS",
+      "teams": []
+    },
+    "rfef-primera-fs-fem": {
+      "name": "Primera División FS Femenina",
+      "teams": []
+    },
+    "rfef-segunda-fs-fem": {
+      "name": "Segunda División FS Femenina",
+      "teams": []
+    }
+  }
+}

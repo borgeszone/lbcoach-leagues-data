@@ -1,0 +1,43 @@
+{
+  "_comment": "Plantilla curada de divisiones de futsal de la FCF. Edita la lista 'teams' de cada división con los rivales de la temporada actual. La FCF organiza por grupos territoriales — duplica una división y cambia el id si juegas en un grupo concreto (ej. 'fcf-1cat-fs-fem-grup-2'). Los escudos pueden dejarse como null; los usuarios podrán subirlos a mano desde la app y se compartirán via sync.",
+  "name": "Liga Catalana",
+  "season": "2025-2026",
+  "divisions": [
+    {
+      "id": "fcf-1cat-fs-masc",
+      "name": "Primera Catalana FS Masculina",
+      "gender": "masculino",
+      "teams": []
+    },
+    {
+      "id": "fcf-2cat-fs-masc",
+      "name": "Segunda Catalana FS Masculina",
+      "gender": "masculino",
+      "teams": []
+    },
+    {
+      "id": "fcf-3cat-fs-masc",
+      "name": "Tercera Catalana FS Masculina",
+      "gender": "masculino",
+      "teams": []
+    },
+    {
+      "id": "fcf-1cat-fs-fem",
+      "name": "Primera Catalana FS Femenina",
+      "gender": "femenino",
+      "teams": []
+    },
+    {
+      "id": "fcf-2cat-fs-fem",
+      "name": "Segunda Catalana FS Femenina",
+      "gender": "femenino",
+      "teams": []
+    },
+    {
+      "id": "fcf-juv-dh-fs",
+      "name": "División de Honor Juvenil FS",
+      "gender": "masculino",
+      "teams": []
+    }
+  ]
+}

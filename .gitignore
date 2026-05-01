@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+.idea/
+.vscode/
+*.log
+# Output generado por scrape.py — se publica en gh-pages, no se versiona en main
+output/
+
