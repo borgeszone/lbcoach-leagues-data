@@ -1,0 +1,3 @@
+{
+  "_comment": "Overrides curados manualmente por el maintainer. Toman precedencia sobre el resolver automático y la caché. Formato: {nombreNormalizado: 'https://...'}. La normalización se hace en scrapers.logo_resolver._norm() (lowercase + sin acentos + sin no-alfanuméricos). Ejemplo: 'fcbarcelona' -> 'https://upload.wikimedia.org/wikipedia/.../FC_Barcelona.svg'."
+}

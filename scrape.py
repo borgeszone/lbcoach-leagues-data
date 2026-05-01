@@ -16,7 +16,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from scrapers import fcf, rfef
+from scrapers import fcf, logo_resolver, rfef
 
 ROOT = Path(__file__).parent
 OUTPUT_DIR = ROOT / "output"
@@ -49,6 +49,9 @@ def main() -> int:
         json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
+
+    # Persistir caché de escudos para que el siguiente run arranque caliente.
+    logo_resolver.save_cache()
 
     def _count_teams(cat: dict) -> int:
         n = 0

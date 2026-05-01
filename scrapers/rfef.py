@@ -26,7 +26,7 @@ from typing import Iterable
 
 import requests
 
-from scrapers.badges import resolve_logo_url
+from scrapers.logo_resolver import resolve_logo_url
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 
