@@ -31,8 +31,15 @@ from scrapers.badges import resolve_logo_url
 DATA_DIR = Path(__file__).parent.parent / "data"
 
 # Configuración de divisiones RFEF.
-# `pdf_id` es el identificador que aparece en la URL del PDF.
-# Si pdf_id es None, esa división no se intenta descargar (solo fallback).
+#
+# Una división puede ser:
+#   - **Unificada**: tiene `pdf_id`. Se descarga un único PDF de
+#     `Calendario_{pdf_id}_{season}.pdf` y se extrae la lista de equipos.
+#   - **Por grupos**: tiene `groups_url_pattern`. El scraper prueba grupos
+#     1, 2, 3, ... hasta recibir 404, y construye la lista de grupos.
+#     En el JSON resultante, la división tendrá un campo `groups` en lugar
+#     (o además) de `teams`.
+#   - **Manual**: ni `pdf_id` ni `groups_url_pattern`. Se usa solo el fallback.
 DIVISIONS = [
     {
         "id": "rfef-primera-fs-masc",
@@ -53,14 +60,17 @@ DIVISIONS = [
         "pdf_id": "1DivFem_Sala",
     },
     {
-        # Nota: la 2ª División Femenina se organiza en grupos territoriales
-        # con URLs distintas (`calendario_grupo_N_segunda_femenina_futbol_sala.pdf`).
-        # No tiene un único PDF unificado, así que el scraper se apoya en el
-        # fallback hasta que se decida qué grupo territorial cubrir.
+        # 2ª División Femenina se organiza por grupos territoriales con URLs
+        # tipo `calendario_grupo_N_segunda_femenina_futbol_sala.pdf` en la
+        # raíz de `sites/default/files/`. El scraper prueba N=1..max_groups
+        # hasta encontrar 404.
         "id": "rfef-segunda-fs-fem",
         "name": "Segunda División FS Femenina",
         "gender": "femenino",
-        "pdf_id": None,
+        "groups_url_pattern":
+            "https://rfef.es/sites/default/files/"
+            "calendario_grupo_{n}_segunda_femenina_futbol_sala.pdf",
+        "max_groups": 10,
     },
 ]
 
@@ -97,11 +107,11 @@ def _download_pdf(url: str, timeout: int = 30) -> bytes | None:
 def _extract_teams_from_pdf(pdf_bytes: bytes) -> list[str]:
     """Extrae nombres únicos de equipos del calendario PDF de RFEF.
 
-    Estrategia: usa pdfplumber para obtener bounding boxes de cada palabra,
-    agrupa palabras por línea (coordenada `top`), y dentro de cada línea
-    busca el gap horizontal más grande entre palabras. Si supera el umbral,
-    es el separador entre las dos columnas (equipo local | equipo visitante).
-    Las líneas sin gap grande son cabeceras (Jornada N, fechas) y se descartan.
+    Dos estrategias en cascada:
+    1. Sección "Equipos Participantes" con líneas numeradas (formato usado por
+       calendarios de divisiones por grupo territorial — más limpio).
+    2. Si no encuentra esa sección: agrupa palabras por línea usando
+       bounding boxes y separa columnas por el gap horizontal más grande.
     """
     try:
         import pdfplumber
@@ -114,13 +124,45 @@ def _extract_teams_from_pdf(pdf_bytes: bytes) -> list[str]:
 
     try:
         with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
-            for page in pdf.pages:
-                teams.update(_extract_teams_from_page(page, COLUMN_GAP_THRESHOLD))
+            full_text = "\n".join(p.extract_text() or "" for p in pdf.pages)
+
+            # Estrategia 1: sección "Equipos Participantes"
+            from_section = _extract_from_participantes_section(full_text)
+            if from_section:
+                teams.update(from_section)
+            else:
+                # Estrategia 2: gaps por columnas
+                for page in pdf.pages:
+                    teams.update(
+                        _extract_teams_from_page(page, COLUMN_GAP_THRESHOLD)
+                    )
     except Exception as e:  # noqa: BLE001
         print(f"  [rfef] Error parseando PDF: {e}")
         return []
 
     return sorted(t for t in teams if _looks_like_team_name(t))
+
+
+def _extract_from_participantes_section(text: str) -> set[str]:
+    """Estrategia 1: encuentra la sección 'Equipos Participantes' y extrae las
+    líneas numeradas tipo `1.- Nombre del equipo (12345)`."""
+    m = re.search(
+        r"Equipos\s+Participantes\s*\n(.*?)(?:\nP[áa]gina|\nJornada|\Z)",
+        text,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    if not m:
+        return set()
+    block = m.group(1)
+    teams: set[str] = set()
+    for line in block.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        mm = re.match(r"^\d+\s*[\.\)\-]+\s*(.+?)(?:\s*\(\d+\))?\s*$", line)
+        if mm:
+            teams.add(_clean_team_name(mm.group(1)))
+    return teams
 
 
 def _extract_teams_from_page(page, gap_threshold: float) -> set[str]:
@@ -224,50 +266,45 @@ def scrape(season: str, resolve_badges: bool = True) -> dict:
     for div_cfg in DIVISIONS:
         div_id = div_cfg["id"]
         print(f"[rfef] Procesando {div_cfg['name']}")
-
-        # 1. Intentar scraping del PDF oficial
-        team_names: list[str] = []
-        if div_cfg.get("pdf_id"):
-            url = _pdf_url(div_cfg["pdf_id"], season)
-            pdf = _download_pdf(url)
-            if pdf:
-                team_names = _extract_teams_from_pdf(pdf)
-                if team_names:
-                    print(f"  [rfef] {len(team_names)} equipos extraídos del PDF")
-
-        # 2. Cruzar con fallback. El fallback es la fuente autoritativa para
-        #    nombres canónicos + URLs de escudos; el scraping solo confirma.
         fb_div = fb_divisions.get(div_id, {})
-        fb_teams = fb_div.get("teams", [])
 
-        if team_names:
-            # Merge con dedup por nombre normalizado (sin acentos, sin
-            # variantes "F.S." vs "FS"). El fallback es la fuente autoritativa
-            # para los nombres canónicos; el PDF solo aporta equipos nuevos.
-            fb_names_norm = {_norm(t["name"]) for t in fb_teams}
-            seen = set(fb_names_norm)
-            teams_payload = list(fb_teams)
-            for name in team_names:
-                key = _norm(name)
-                if key in seen:
-                    continue
-                seen.add(key)
-                teams_payload.append({"name": name, "logoUrl": None})
+        if div_cfg.get("groups_url_pattern"):
+            # División con grupos territoriales
+            groups = _scrape_groups(
+                pattern=div_cfg["groups_url_pattern"],
+                max_groups=div_cfg.get("max_groups", 10),
+                fb_groups=fb_div.get("groups", []),
+                resolve_badges=resolve_badges,
+            )
+            out_divisions.append({
+                "id": div_id,
+                "name": div_cfg["name"],
+                "gender": div_cfg["gender"],
+                "teams": [],  # vacío si tiene grupos
+                "groups": groups,
+            })
         else:
-            teams_payload = list(fb_teams)
+            # División unificada (un único PDF o solo fallback)
+            team_names: list[str] = []
+            if div_cfg.get("pdf_id"):
+                url = _pdf_url(div_cfg["pdf_id"], season)
+                pdf = _download_pdf(url)
+                if pdf:
+                    team_names = _extract_teams_from_pdf(pdf)
+                    if team_names:
+                        print(f"  [rfef] {len(team_names)} equipos extraídos del PDF")
 
-        # 3. Resolver escudos faltantes via Wikipedia
-        if resolve_badges:
-            for team in teams_payload:
-                if not team.get("logoUrl"):
-                    team["logoUrl"] = resolve_logo_url(team["name"])
-
-        out_divisions.append({
-            "id": div_id,
-            "name": div_cfg["name"],
-            "gender": div_cfg["gender"],
-            "teams": teams_payload,
-        })
+            teams_payload = _merge_teams(
+                fb_teams=fb_div.get("teams", []),
+                scraped_names=team_names,
+                resolve_badges=resolve_badges,
+            )
+            out_divisions.append({
+                "id": div_id,
+                "name": div_cfg["name"],
+                "gender": div_cfg["gender"],
+                "teams": teams_payload,
+            })
 
     return {
         "id": "rfef",
@@ -275,6 +312,83 @@ def scrape(season: str, resolve_badges: bool = True) -> dict:
         "source": "rfef.es",
         "divisions": out_divisions,
     }
+
+
+def _scrape_groups(
+    *,
+    pattern: str,
+    max_groups: int,
+    fb_groups: list[dict],
+    resolve_badges: bool,
+) -> list[dict]:
+    """Itera grupos N=1..max_groups descargando el PDF de cada uno y construye
+    la lista [{id, name, teams}, ...]. Para en el primer 404 consecutivo."""
+    fb_by_id = {g.get("id", f"g{i + 1}"): g for i, g in enumerate(fb_groups)}
+    groups_out: list[dict] = []
+
+    for n in range(1, max_groups + 1):
+        url = pattern.format(n=n)
+        pdf = _download_pdf(url)
+        if pdf is None:
+            # Si ya tenemos al menos un grupo, asumimos que se acabaron
+            if groups_out:
+                break
+            continue
+
+        team_names = _extract_teams_from_pdf(pdf)
+        print(f"  [rfef] Grupo {n}: {len(team_names)} equipos extraídos")
+
+        gid = f"g{n}"
+        fb_group = fb_by_id.get(gid, {})
+        teams_payload = _merge_teams(
+            fb_teams=fb_group.get("teams", []),
+            scraped_names=team_names,
+            resolve_badges=resolve_badges,
+        )
+        groups_out.append({
+            "id": gid,
+            "name": f"Grupo {n}",
+            "teams": teams_payload,
+        })
+
+    # Añadir grupos del fallback que el scraper no haya cubierto
+    scraped_ids = {g["id"] for g in groups_out}
+    for gid, fb_g in fb_by_id.items():
+        if gid not in scraped_ids:
+            groups_out.append({
+                "id": gid,
+                "name": fb_g.get("name", gid),
+                "teams": list(fb_g.get("teams", [])),
+            })
+
+    return groups_out
+
+
+def _merge_teams(
+    *,
+    fb_teams: list[dict],
+    scraped_names: list[str],
+    resolve_badges: bool,
+) -> list[dict]:
+    """Merge dedup-por-normalizado entre fallback y nombres extraídos del PDF.
+    Resuelve escudos faltantes via Wikipedia si `resolve_badges` está activo."""
+    if scraped_names:
+        seen = {_norm(t["name"]) for t in fb_teams}
+        teams = list(fb_teams)
+        for name in scraped_names:
+            key = _norm(name)
+            if key in seen:
+                continue
+            seen.add(key)
+            teams.append({"name": name, "logoUrl": None})
+    else:
+        teams = list(fb_teams)
+
+    if resolve_badges:
+        for t in teams:
+            if not t.get("logoUrl"):
+                t["logoUrl"] = resolve_logo_url(t["name"])
+    return teams
 
 
 def _norm(name: str) -> str:

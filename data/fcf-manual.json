@@ -1,5 +1,5 @@
 {
-  "_comment": "Plantilla curada de divisiones de futsal de la FCF. Edita la lista 'teams' de cada división con los rivales de la temporada actual. La FCF organiza por grupos territoriales — duplica una división y cambia el id si juegas en un grupo concreto (ej. 'fcf-1cat-fs-fem-grup-2'). Los escudos pueden dejarse como null; los usuarios podrán subirlos a mano desde la app y se compartirán via sync.",
+  "_comment": "Plantilla curada de divisiones de futsal de la FCF. Edita la lista 'teams' de cada división con los rivales de la temporada actual. Si una división se juega por grupos territoriales, define 'groups' en lugar (o además) de 'teams' — la app mostrará un dropdown adicional para elegir el grupo. Los escudos pueden dejarse como null; los usuarios podrán subirlos a mano desde la app y se compartirán via sync.",
   "name": "Liga Catalana",
   "season": "2025-2026",
   "divisions": [
@@ -13,7 +13,12 @@
       "id": "fcf-2cat-fs-masc",
       "name": "Segunda Catalana FS Masculina",
       "gender": "masculino",
-      "teams": []
+      "_comment": "Ejemplo con grupos territoriales: descomenta y rellena.",
+      "teams": [],
+      "groups": [
+        { "id": "g1", "name": "Grup 1", "teams": [] },
+        { "id": "g2", "name": "Grup 2", "teams": [] }
+      ]
     },
     {
       "id": "fcf-3cat-fs-masc",

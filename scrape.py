@@ -50,12 +50,18 @@ def main() -> int:
         encoding="utf-8",
     )
 
-    rfef_teams = sum(len(d["teams"]) for d in rfef_cat["divisions"])
-    fcf_teams = sum(len(d["teams"]) for d in fcf_cat["divisions"])
+    def _count_teams(cat: dict) -> int:
+        n = 0
+        for d in cat.get("divisions", []):
+            n += len(d.get("teams", []))
+            for g in d.get("groups", []) or []:
+                n += len(g.get("teams", []))
+        return n
+
     print(
         f"[scrape] OK -> {out} "
-        f"({len(rfef_cat['divisions'])} div RFEF / {rfef_teams} equipos, "
-        f"{len(fcf_cat['divisions'])} div FCF / {fcf_teams} equipos)"
+        f"({len(rfef_cat['divisions'])} div RFEF / {_count_teams(rfef_cat)} equipos, "
+        f"{len(fcf_cat['divisions'])} div FCF / {_count_teams(fcf_cat)} equipos)"
     )
     return 0
 

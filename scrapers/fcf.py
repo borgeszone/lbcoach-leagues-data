@@ -29,10 +29,11 @@ def load_manual() -> dict:
 
     raw = json.loads(path.read_text(encoding="utf-8"))
 
-    # Validación mínima: cada división tiene id, name, gender, teams
+    # Una división puede tener `teams` directamente, o `groups` (para
+    # divisiones por zona territorial). Pasamos lo que haya.
     divisions = []
     for d in raw.get("divisions", []):
-        divisions.append({
+        out = {
             "id": d["id"],
             "name": d["name"],
             "gender": d.get("gender", "masculino"),
@@ -40,7 +41,21 @@ def load_manual() -> dict:
                 {"name": t["name"], "logoUrl": t.get("logoUrl")}
                 for t in d.get("teams", [])
             ],
-        })
+        }
+        groups = d.get("groups")
+        if groups:
+            out["groups"] = [
+                {
+                    "id": g["id"],
+                    "name": g["name"],
+                    "teams": [
+                        {"name": t["name"], "logoUrl": t.get("logoUrl")}
+                        for t in g.get("teams", [])
+                    ],
+                }
+                for g in groups
+            ]
+        divisions.append(out)
 
     return {
         "id": "fcf",
