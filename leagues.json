@@ -1,6 +1,6 @@
 {
   "version": "2025-2026",
-  "lastUpdated": "2026-05-01T16:53:04+00:00",
+  "lastUpdated": "2026-05-01T17:26:13+00:00",
   "categories": [
     {
       "id": "rfef",
@@ -224,7 +224,219 @@
           "id": "rfef-segunda-fs-fem",
           "name": "Segunda División FS Femenina",
           "gender": "femenino",
-          "teams": []
+          "teams": [],
+          "groups": [
+            {
+              "id": "g1",
+              "name": "Grupo 1",
+              "teams": [
+                {
+                  "name": "A.D. Mioño FSF",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Bembrive",
+                  "logoUrl": null
+                },
+                {
+                  "name": "C.D. Colegio San José",
+                  "logoUrl": null
+                },
+                {
+                  "name": "C.D. Segosala",
+                  "logoUrl": null
+                },
+                {
+                  "name": "CFS Gran Canaria Teldeportivo",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Caja Rural River Zamora",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Club Deportivo Nou Turia FSF \"A\"",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Club Deportivo San Pablo-Eivis",
+                  "logoUrl": null
+                },
+                {
+                  "name": "ENCE Marín Futsal",
+                  "logoUrl": null
+                },
+                {
+                  "name": "El Gaitero Rodiles FSF",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Estrela Futsal",
+                  "logoUrl": null
+                },
+                {
+                  "name": "FC Meigas",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Futbol Sala Atlético Mercadal \"A\"",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Grupo FORMA-T Vilalba FS.",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Ourense Ontime",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Valdetires Ferrol FSF.",
+                  "logoUrl": null
+                }
+              ]
+            },
+            {
+              "id": "g2",
+              "name": "Grupo 2",
+              "teams": [
+                {
+                  "name": "AECS L Hospitalet",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Avenida Algón FS",
+                  "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/MINISTRA_DE_DEFENSA_SOBREVOL%C3%93_LA_CAPITAL_PARA_SUPERVISAR_ACATAMIENTO_DE_INMOVILIZACI%C3%93N_SOCIAL_%2850899577057%29.jpg/3840px-MINISTRA_DE_DEFENSA_SOBREVOL%C3%93_LA_CAPITAL_PARA_SUPERVISAR_ACATAMIENTO_DE_INMOVILIZACI%C3%93N_SOCIAL_%2850899577057%29.jpg"
+                },
+                {
+                  "name": "C.E. Futsal Mataro",
+                  "logoUrl": null
+                },
+                {
+                  "name": "CD Lacturale Orvina",
+                  "logoUrl": null
+                },
+                {
+                  "name": "CFS Autoescola Urgell Linyola",
+                  "logoUrl": null
+                },
+                {
+                  "name": "CN Caldes",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Entrerrios Automatización",
+                  "logoUrl": null
+                },
+                {
+                  "name": "FS. Sabadell",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Feme Castellón C.FS.",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Grupo Reciclarte Cesar Augusta",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Lainco Esportiu Rubi FS.",
+                  "logoUrl": null
+                },
+                {
+                  "name": "SD Hispania Yecla",
+                  "logoUrl": null
+                },
+                {
+                  "name": "SolarMon-Les Glories 2014 CD La Concordia",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Somriu Futbol Sala Ripollet",
+                  "logoUrl": null
+                },
+                {
+                  "name": "U.D.C. Txantrea K.K.E.",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Wanapix Aldelis InterSala 10 Zaragoza",
+                  "logoUrl": null
+                }
+              ]
+            },
+            {
+              "id": "g3",
+              "name": "Grupo 3",
+              "teams": [
+                {
+                  "name": "ARRIVA AD Alcorcón FSF",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Almagro FSF.",
+                  "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Festival_de_M%C3%A1laga_2024_-_Almagro_San_Miguel.jpg/3840px-Festival_de_M%C3%A1laga_2024_-_Almagro_San_Miguel.jpg"
+                },
+                {
+                  "name": "Atletico Navalcarnero",
+                  "logoUrl": null
+                },
+                {
+                  "name": "C.D.E. Leganés FS. Masdeporte",
+                  "logoUrl": null
+                },
+                {
+                  "name": "C.FS. Femenino San Fernando",
+                  "logoUrl": null
+                },
+                {
+                  "name": "CD Salesianos Puertollano",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Club Deportivo Basico Rivas Futsal",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Deportivo Cordoba FS. / Cajasur",
+                  "logoUrl": null
+                },
+                {
+                  "name": "GLOBALCAJA ALBACETE FS. FEMENINA",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Granada FS Femenino",
+                  "logoUrl": null
+                },
+                {
+                  "name": "I.E.S. Luis de Camoens",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Majadahonda FSF./Afar 4",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Martos FS Jaén Paraíso Interior",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Melilla Ciudad del Deporte Torreblanca C. F.",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Torrejón Sala Five Play",
+                  "logoUrl": null
+                },
+                {
+                  "name": "UD Azuqueca FS",
+                  "logoUrl": null
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -243,7 +455,19 @@
           "id": "fcf-2cat-fs-masc",
           "name": "Segunda Catalana FS Masculina",
           "gender": "masculino",
-          "teams": []
+          "teams": [],
+          "groups": [
+            {
+              "id": "g1",
+              "name": "Grup 1",
+              "teams": []
+            },
+            {
+              "id": "g2",
+              "name": "Grup 2",
+              "teams": []
+            }
+          ]
         },
         {
           "id": "fcf-3cat-fs-masc",
