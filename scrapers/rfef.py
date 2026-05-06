@@ -35,11 +35,7 @@ from pathlib import Path
 import requests
 
 from scrapers.logo_resolver import lookup_override, resolve_logo_url
-from scrapers.rfef_clasificacion import (
-    ScrapedTeam,
-    fetch_division_teams,
-    make_session,
-)
+from scrapers.rfef_clasificacion import ScrapedTeam, fetch_division_teams
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 
@@ -310,11 +306,10 @@ def scrape(season: str, resolve_badges: bool = True) -> dict:
     fallback = _load_fallback()
     fb_divisions = fallback.get("divisions", {})
 
-    # Sesión compartida para todas las llamadas a `resultados.rfef.es`. La
-    # JSESSIONID se siembra en make_session() y se reutiliza.
-    clas_session = make_session() if any(
-        d.get("clasificacion") or d.get("clasificacion_groups") for d in DIVISIONS
-    ) else None
+    # `fetch_division_teams` se encarga de crear su propia sesión y reciclarla
+    # ante errores de red — no compartimos una sesión global porque RFEF
+    # cierra la conexión bajo carga y arrastrar la JSESSIONID rota propaga
+    # el fallo a las siguientes divisiones.
 
     out_divisions = []
     for div_cfg in DIVISIONS:
@@ -328,7 +323,6 @@ def scrape(season: str, resolve_badges: bool = True) -> dict:
             groups_payload = _scrape_clasificacion_groups(
                 groups_cfg=div_cfg["clasificacion_groups"],
                 fb_groups=fb_groups,
-                session=clas_session,
                 resolve_badges=resolve_badges,
             )
             groups_payload = [g for g in groups_payload if g.get("teams")]
@@ -348,7 +342,6 @@ def scrape(season: str, resolve_badges: bool = True) -> dict:
             scraped = fetch_division_teams(
                 div_cfg["clasificacion"]["comp"],
                 div_cfg["clasificacion"]["grupo"],
-                session=clas_session,
             )
             if scraped:
                 teams_payload = _merge_clasificacion(
@@ -438,7 +431,6 @@ def _scrape_clasificacion_groups(
     *,
     groups_cfg: list[dict],
     fb_groups: list[dict],
-    session,
     resolve_badges: bool,
 ) -> list[dict]:
     """Scrapea cada grupo declarado en `clasificacion_groups`. Si un grupo
@@ -449,9 +441,7 @@ def _scrape_clasificacion_groups(
     for i, g_cfg in enumerate(groups_cfg):
         if i > 0:
             time.sleep(1.5)
-        scraped = fetch_division_teams(
-            g_cfg["comp"], g_cfg["grupo"], session=session,
-        )
+        scraped = fetch_division_teams(g_cfg["comp"], g_cfg["grupo"])
         gid = g_cfg["id"]
         fb_group = fb_by_id.get(gid, {})
         teams_payload = _merge_clasificacion(

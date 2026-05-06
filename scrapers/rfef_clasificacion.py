@@ -69,14 +69,19 @@ def fetch_division_teams(
     cod_grupo: str | int,
     *,
     session: requests.Session | None = None,
-    retries: int = 1,
+    retries: int = 3,
 ) -> list[ScrapedTeam]:
     """Descarga la clasificación y devuelve los equipos de la división/grupo.
 
-    Devuelve `[]` ante:
-    - rate-limit (200 con body vacío y sin reintento exitoso),
-    - errores de red,
-    - HTML sin la tabla esperada (estructura cambió → fallback).
+    Reintenta ante:
+    - 200 con body vacío (rate-limit / sesión perdida): siembra una sesión
+      nueva y reintenta.
+    - `ConnectionError` / `RemoteDisconnected` (RFEF a veces cierra la
+      conexión sin respuesta cuando golpeamos demasiado seguido): backoff
+      exponencial (5s, 10s, 20s) y sesión nueva.
+
+    Devuelve `[]` solo tras agotar los reintentos, o si la página no
+    contiene la tabla esperada (estructura cambió → fallback).
     """
     s = session or make_session()
     params = {
@@ -85,38 +90,56 @@ def fetch_division_teams(
         "codgrupo": str(cod_grupo),
     }
     url = BASE_URL + CLAS_PATH
+    label = f"{cod_competicion}/{cod_grupo}"
 
+    last_error: str | None = None
     for attempt in range(retries + 1):
         try:
             r = s.get(url, params=params, timeout=20)
         except requests.RequestException as e:
-            print(f"  [rfef-clas] Error de red en {cod_competicion}/{cod_grupo}: {e}")
-            return []
+            last_error = str(e)
+            backoff = 5 * (2 ** attempt)
+            if attempt < retries:
+                print(
+                    f"  [rfef-clas] {label}: error de red ({e}), "
+                    f"reintentando en {backoff}s con sesión nueva "
+                    f"({attempt + 1}/{retries})"
+                )
+                time.sleep(backoff)
+                s = make_session()  # sesión nueva: nueva JSESSIONID
+                continue
+            break
+
         if r.status_code != 200:
-            print(f"  [rfef-clas] HTTP {r.status_code} en {cod_competicion}/{cod_grupo}")
+            print(f"  [rfef-clas] {label}: HTTP {r.status_code}")
             return []
         if r.content:
             teams = _parse(r.content)
             if teams:
                 return teams
-            # 200 con cuerpo pero sin tabla: estructura cambió o página de error
+            # 200 con cuerpo pero sin tabla: la división probablemente no
+            # tiene clasificación poblada todavía (J1 sin jugar). No
+            # reintentamos — caer al fallback es mejor que insistir.
             print(
-                f"  [rfef-clas] {cod_competicion}/{cod_grupo}: respuesta sin "
-                f"tabla de clasificación ({len(r.content)} bytes)"
+                f"  [rfef-clas] {label}: respuesta sin tabla de "
+                f"clasificación ({len(r.content)} bytes)"
             )
             return []
-        # 200 con body vacío → típico de rate-limit / sesión perdida.
+        # 200 con body vacío → rate-limit / sesión perdida. Reintentar
+        # con sesión nueva.
         if attempt < retries:
+            backoff = 5 * (2 ** attempt)
             print(
-                f"  [rfef-clas] {cod_competicion}/{cod_grupo}: respuesta vacía, "
-                f"reintentando en 5s ({attempt + 1}/{retries})"
+                f"  [rfef-clas] {label}: respuesta vacía, reintentando "
+                f"en {backoff}s con sesión nueva ({attempt + 1}/{retries})"
             )
-            time.sleep(5)
+            time.sleep(backoff)
+            s = make_session()
 
-    print(
-        f"  [rfef-clas] {cod_competicion}/{cod_grupo}: respuesta vacía tras "
-        f"{retries + 1} intentos"
-    )
+    if last_error:
+        print(f"  [rfef-clas] {label}: agotados reintentos ({last_error})")
+    else:
+        print(f"  [rfef-clas] {label}: respuesta vacía tras {retries + 1} intentos")
     return []
 
 
