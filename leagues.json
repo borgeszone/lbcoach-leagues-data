@@ -1,6 +1,6 @@
 {
   "version": "2025-2026",
-  "lastUpdated": "2026-05-01T23:02:56+00:00",
+  "lastUpdated": "2026-05-06T22:41:14+00:00",
   "categories": [
     {
       "id": "rfef",
@@ -14,73 +14,73 @@
           "teams": [
             {
               "name": "Barça",
-              "logoUrl": null
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206343_50x50.png"
             },
             {
               "name": "ElPozo Murcia Costa Cálida",
-              "logoUrl": null
-            },
-            {
-              "name": "Movistar Inter FS",
-              "logoUrl": null
-            },
-            {
-              "name": "Industrias Santa Coloma",
-              "logoUrl": null
-            },
-            {
-              "name": "Jaén Paraíso Interior FS",
-              "logoUrl": null
-            },
-            {
-              "name": "Jimbee Cartagena Costa Cálida",
-              "logoUrl": null
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079009167_Pozo.png"
             },
             {
               "name": "Illes Balears Palma Futsal",
-              "logoUrl": null
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206407_50x50.png"
             },
             {
-              "name": "Real Betis Futsal",
-              "logoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Kit_left_arm_betis2425h.png"
+              "name": "Jimbee Cartagena Costa Cálida",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/208000_50x50.png"
+            },
+            {
+              "name": "Movistar Inter F.S.",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206173_50x50.png"
+            },
+            {
+              "name": "Quesos El Hidalgo Manzanares F.S.",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/207130_50x50.png"
             },
             {
               "name": "Viña Albali Valdepeñas",
-              "logoUrl": null
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205499_50x50.png"
             },
             {
-              "name": "Córdoba Patrimonio de la Humanidad",
-              "logoUrl": null
+              "name": "Jaen Paraiso Interior F.S.",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205896_50x50.png"
+            },
+            {
+              "name": "Industrias Santa Coloma",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079009093_24.png"
             },
             {
               "name": "Noia Portus Apostoli",
-              "logoUrl": null
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206140_50x50.png"
             },
             {
-              "name": "O Parrulo Ferrol FS",
-              "logoUrl": null
+              "name": "O Parrulo Ferrol F.S.",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205729_50x50.png"
             },
             {
-              "name": "C.A. Osasuna Magna",
-              "logoUrl": null
+              "name": "Servigroup Peñiscola FS",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205442_50x50.png"
             },
             {
-              "name": "Quesos El Hidalgo Manzanares FS",
-              "logoUrl": null
+              "name": "Córdoba Patrimonio De La Humanidad",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/208018_50x50.png"
             },
             {
-              "name": "Servigroup Peñíscola FS",
-              "logoUrl": null
+              "name": "CA Osasuna Magna",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/usr/local/projects/weblogic/repository/AS400/90/DOCS/201210/21/12041381.jpg"
             },
             {
-              "name": "ATP Iluminación Tudelano Ribera de Navarra",
-              "logoUrl": null
+              "name": "Family Cash Alzira F.S.",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205873_50x50.png"
+            },
+            {
+              "name": "ATP Iluminación Tudelano Ribera Navarra FS",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008853_17.png"
             }
           ]
         },
         {
           "id": "rfef-segunda-fs-masc",
-          "name": "Segunda División FS",
+          "name": "Segunda División FS A",
           "gender": "masculino",
           "teams": [
             {
@@ -97,7 +97,7 @@
             },
             {
               "name": "CD Leganes FS",
-              "logoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Kit_left_arm_leganes2324h.png"
+              "logoUrl": null
             },
             {
               "name": "CD Málaga Ciudad Redonda FS",
@@ -125,7 +125,7 @@
             },
             {
               "name": "Levante U.D. FS.",
-              "logoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Kit_left_arm_levante2526h.png"
+              "logoUrl": null
             },
             {
               "name": "MRB FS Móstoles",
@@ -150,73 +150,79 @@
           ]
         },
         {
+          "id": "rfef-segunda-b-fs-masc",
+          "name": "Segunda División FS B",
+          "gender": "masculino",
+          "teams": []
+        },
+        {
           "id": "rfef-primera-fs-fem",
           "name": "Primera División FS Femenina",
           "gender": "femenino",
           "teams": [
             {
-              "name": "AE Les Corts UBAE",
-              "logoUrl": null
+              "name": "Melilla Ciudad del Deporte Torreblanca C. F.",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/207211_50x50.png"
             },
             {
-              "name": "Arriva AD Alcorcón FSF",
-              "logoUrl": null
+              "name": "Poio Pescamar FS",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205983_50x50.png"
             },
             {
-              "name": "Burela FS",
-              "logoUrl": null
+              "name": "Atlético Navalcarnero",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079008544_logo.png"
             },
             {
-              "name": "C.D. Chiloeches",
-              "logoUrl": null
+              "name": "STV Roldán F.S",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206401_50x50.png"
             },
             {
-              "name": "CD Guadalcacín FS",
-              "logoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Partido_Guadalcac%C3%ADn_FS_CD-Viaxes_Amarelle_FS_2019-P1360434.jpg"
+              "name": "F.S.F. Castro Bloques Cando",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/209427_50x50.png"
             },
             {
-              "name": "Ceuta Agrupación Deportiva",
-              "logoUrl": null
-            },
-            {
-              "name": "FSF Castro Bloques Cando",
-              "logoUrl": null
-            },
-            {
-              "name": "Futsi Atlético Navalcarnero",
-              "logoUrl": null
-            },
-            {
-              "name": "LBTL Futsal Alcantarilla",
-              "logoUrl": null
-            },
-            {
-              "name": "MRB Móstoles FSF",
-              "logoUrl": null
-            },
-            {
-              "name": "Melilla Ciudad del Deporte Torreblanca CF",
-              "logoUrl": null
-            },
-            {
-              "name": "Nueces de Ronda Atlético Torcal FS.",
-              "logoUrl": null
+              "name": "ARRIVA AD Alcorcón FSF",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206184_50x50.png"
             },
             {
               "name": "Ourense Ontime",
-              "logoUrl": null
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008546_ESCUDO_OURENSE_FSF_NUEVO.png"
             },
             {
-              "name": "PH-Quirogel AE Penya Esplugues",
-              "logoUrl": null
+              "name": "MRB Móstoles FSF",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078990067_mostoles.png"
             },
             {
-              "name": "Poio Pescamar FS.",
-              "logoUrl": null
+              "name": "LBTL Futsal Alcantarilla",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078990072_LBTL_Alcantarilla_FS_PhotoRoom.png_PhotoRoom.png"
             },
             {
-              "name": "STV Roldán FS",
-              "logoUrl": null
+              "name": "AE Les Corts UBAE",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206387_50x50.png"
+            },
+            {
+              "name": "Nueces de Ronda Atlético Torcal FS",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205852_50x50.png"
+            },
+            {
+              "name": "C.D. Guadalcacín F.S.",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1819/DOCS/20187/12/423e0849be24bd8e1c262a7b5f1ddb19.jpg"
+            },
+            {
+              "name": "Ceuta Agrupación Deportiva",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206966_50x50.png"
+            },
+            {
+              "name": "AE Penya Esplugues",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20219/28/60b3bc87c716ce5db540ef2873ed3b0b.jpg"
+            },
+            {
+              "name": "REYCO Burela FS",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206276_50x50.png"
+            },
+            {
+              "name": "C.D. Chiloeches",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/c18a881268eaae567a944285c81291e0.jpg"
             }
           ]
         },
@@ -227,212 +233,72 @@
           "teams": [],
           "groups": [
             {
-              "id": "g1",
-              "name": "Grupo 1",
-              "teams": [
-                {
-                  "name": "A.D. Mioño FSF",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Bembrive",
-                  "logoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Escudo_de_Bembrive.svg"
-                },
-                {
-                  "name": "C.D. Colegio San José",
-                  "logoUrl": null
-                },
-                {
-                  "name": "C.D. Segosala",
-                  "logoUrl": null
-                },
-                {
-                  "name": "CFS Gran Canaria Teldeportivo",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Caja Rural River Zamora",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Club Deportivo Nou Turia FSF \"A\"",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Club Deportivo San Pablo-Eivis",
-                  "logoUrl": null
-                },
-                {
-                  "name": "ENCE Marín Futsal",
-                  "logoUrl": null
-                },
-                {
-                  "name": "El Gaitero Rodiles FSF",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Estrela Futsal",
-                  "logoUrl": null
-                },
-                {
-                  "name": "FC Meigas",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Futbol Sala Atlético Mercadal \"A\"",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Grupo FORMA-T Vilalba FS.",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Ourense Ontime",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Valdetires Ferrol FSF.",
-                  "logoUrl": null
-                }
-              ]
-            },
-            {
               "id": "g2",
               "name": "Grupo 2",
               "teams": [
                 {
-                  "name": "AECS L Hospitalet",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Avenida Algón FS",
-                  "logoUrl": null
-                },
-                {
-                  "name": "C.E. Futsal Mataro",
-                  "logoUrl": null
-                },
-                {
-                  "name": "CD Lacturale Orvina",
-                  "logoUrl": null
+                  "name": "Wanapix Aldelis InterSala 10 Zaragoza",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079011245_escudo_Intersala_sin_fondo.png"
                 },
                 {
                   "name": "CFS Autoescola Urgell Linyola",
-                  "logoUrl": null
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079009175_00100_0000971713_Escut_cfs_contorn_vermell__1_.png"
                 },
                 {
-                  "name": "CN Caldes",
-                  "logoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Escut_de_Caldes_de_Malavella.svg"
+                  "name": "Lainco Esportiu Rubi F.S.",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078990466_escudo_esportiu_rubi.jpg"
                 },
                 {
                   "name": "Entrerrios Automatización",
-                  "logoUrl": null
-                },
-                {
-                  "name": "FS. Sabadell",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Feme Castellón C.FS.",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Grupo Reciclarte Cesar Augusta",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Lainco Esportiu Rubi FS.",
-                  "logoUrl": null
-                },
-                {
-                  "name": "SD Hispania Yecla",
-                  "logoUrl": null
-                },
-                {
-                  "name": "SolarMon-Les Glories 2014 CD La Concordia",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Somriu Futbol Sala Ripollet",
-                  "logoUrl": null
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078998520_Aragon_XXI.png"
                 },
                 {
                   "name": "U.D.C. Txantrea K.K.E.",
-                  "logoUrl": null
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1415/DOCS/20149/18/6ebfb8b44cbf2204c3178b253aeb4b3e_Gg8SK3Ej.jpg"
                 },
                 {
-                  "name": "Wanapix Aldelis InterSala 10 Zaragoza",
-                  "logoUrl": null
-                }
-              ]
-            },
-            {
-              "id": "g3",
-              "name": "Grupo 3",
-              "teams": [
-                {
-                  "name": "ARRIVA AD Alcorcón FSF",
-                  "logoUrl": null
+                  "name": "Somriu Futbol Sala Ripollet",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079009174_00100_0000485600_RIPOLLET_F.S._copia.png"
                 },
                 {
-                  "name": "Almagro FSF.",
-                  "logoUrl": null
+                  "name": "SolarMon-Les Glories 2014 CD La Concordia",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008807_escudo_pelota_nueva__2_.jpg"
                 },
                 {
-                  "name": "Atletico Navalcarnero",
-                  "logoUrl": null
+                  "name": "Grupo Reciclarte Cesar Augusta",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0078998203_CESAR_AUGUSTA.jpg"
                 },
                 {
-                  "name": "C.D.E. Leganés FS. Masdeporte",
-                  "logoUrl": null
+                  "name": "Futsal Cartonajes Pans Mataró",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/70f2d7d910390790b0ee8a247317880e.jpg"
                 },
                 {
-                  "name": "C.FS. Femenino San Fernando",
-                  "logoUrl": null
+                  "name": "F.S. Sabadell",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/d176d091d48f4186bc9755ed5db31c85.JPg"
                 },
                 {
-                  "name": "CD Salesianos Puertollano",
-                  "logoUrl": null
+                  "name": "CD Lacturale Orvina",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079009077_logo_club_deportivo_orvina_texto_rojo.png"
                 },
                 {
-                  "name": "Club Deportivo Basico Rivas Futsal",
-                  "logoUrl": null
+                  "name": "Feme Castellón C.F.S.",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/usr/local/projects/weblogic/repository/AS400/02/DOCS/201304/29/12074844.jpg"
                 },
                 {
-                  "name": "Deportivo Cordoba FS. / Cajasur",
-                  "logoUrl": null
+                  "name": "AECS L Hospitalet",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/e91e07aa2419023cedae05d009e1f368.jpg"
                 },
                 {
-                  "name": "GLOBALCAJA ALBACETE FS. FEMENINA",
-                  "logoUrl": null
+                  "name": "SD Hispania Yecla",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078999056_Logo_Hispania.jpg"
                 },
                 {
-                  "name": "Granada FS Femenino",
-                  "logoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Kit_left_arm_granada2526h.png"
+                  "name": "CN Caldes",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/df07e03cd20fdd5c7fb8122543e09f4d.jpg"
                 },
                 {
-                  "name": "I.E.S. Luis de Camoens",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Majadahonda FSF./Afar 4",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Martos FS Jaén Paraíso Interior",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Melilla Ciudad del Deporte Torreblanca C. F.",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Torrejón Sala Five Play",
-                  "logoUrl": null
-                },
-                {
-                  "name": "UD Azuqueca FS",
-                  "logoUrl": null
+                  "name": "System Cars Avenida Alagón FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008818_logo_en_mini.jpg"
                 }
               ]
             }
