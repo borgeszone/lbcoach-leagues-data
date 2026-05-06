@@ -127,7 +127,10 @@ def _parse(html_bytes: bytes) -> list[ScrapedTeam]:
     y leer el `<a>` de la fila como nombre del equipo. Deduplica por nombre
     normalizado por si la página repite la imagen en tooltips/footer.
     """
-    soup = BeautifulSoup(html_bytes, "lxml", from_encoding="iso-8859-15")
+    # html.parser viene con la stdlib — evita añadir lxml a requirements.txt.
+    # La página es HTML4 simple sin nada que rompa el parser nativo.
+    html_str = html_bytes.decode("iso-8859-15", errors="replace")
+    soup = BeautifulSoup(html_str, "html.parser")
     seen_keys: set[str] = set()
     teams: list[ScrapedTeam] = []
     for img in soup.select("img.escudo_widget"):
