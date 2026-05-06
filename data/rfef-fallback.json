@@ -1,5 +1,5 @@
 {
-  "_comment": "Fuente autoritativa de nombres canónicos de equipos RFEF. Si el scraper de PDF falla, este archivo se usa tal cual. Los logoUrl pueden dejarse como null — el resolver de scrapers/badges.py los rellenará via Wikipedia.",
+  "_comment": "Fallback de equipos RFEF si la clasificación de resultados.rfef.es y el PDF de calendario fallan. La fuente primaria son los scrapers; este archivo solo se usa como red de seguridad. logoUrl puede ser null — el resolver de logo_resolver intentará Wikipedia para los huecos.",
   "season": "2025-2026",
   "divisions": {
     "rfef-primera-fs-masc": {
@@ -24,7 +24,11 @@
       ]
     },
     "rfef-segunda-fs-masc": {
-      "name": "Segunda División FS",
+      "name": "Segunda División FS A",
+      "teams": []
+    },
+    "rfef-segunda-b-fs-masc": {
+      "name": "Segunda División FS B",
       "teams": []
     },
     "rfef-primera-fs-fem": {
@@ -32,8 +36,10 @@
       "teams": []
     },
     "rfef-segunda-fs-fem": {
+      "_comment": "División por grupos territoriales. El scraper intenta descargar `calendario_grupo_N_segunda_femenina_futbol_sala.pdf` con N=1..max. Para curar manualmente, añade entradas a `groups` con la forma {id, name, teams: [...]}. Solo se publican los grupos con al menos un equipo; los esqueletos vacíos se filtran en el scraper.",
       "name": "Segunda División FS Femenina",
-      "teams": []
+      "teams": [],
+      "groups": []
     }
   }
 }

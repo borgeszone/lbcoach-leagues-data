@@ -56,10 +56,16 @@ _LOGO_PENALTIES = (
 # Wikipedia mete "Wikidata-logo.svg" en footers de muchos artículos.
 # "Fantasy_..." son diseños no-oficiales subidos por usuarios.
 # Compañías padre (Telefónica → Movistar Inter) NO sirven como escudo del club.
+# `kit_*` son las plantillas de manga/cuerpo de camiseta que Wikipedia usa
+# para componer uniformes — NUNCA son escudos del club, pero el equipo
+# aparece en el filename y antes pasaban el matching (Leganes, Levante,
+# Betis, Granada todos cayeron en esto).
 _LOGO_DISQUALIFIERS = (
     "wikidata", "fantasy", "concept_", "telef%c3%b3nica", "telefonica",
     "global_solutions", "globalsolutions", "wikipedia", "commons-logo",
     "openstreetmap", "wikimedia",
+    "kit_left_", "kit_right_", "kit_body", "kit_shorts", "kit_socks",
+    "_arm_",
 )
 _PREFERRED_EXT = (".png", ".svg", ".webp")
 # Palabras genéricas a ignorar al hacer matching team-name vs filename
@@ -127,6 +133,20 @@ def save_cache() -> None:
 
 
 # ── Resolver principal ──────────────────────────────────────────────────────
+
+def lookup_override(team_name: str) -> str | None:
+    """Devuelve solo el override curado del equipo (sin tocar Wikipedia/DDG).
+
+    Útil para flujos donde ya tenemos un escudo de buena calidad (p. ej.
+    clasificación de RFEF) y solo queremos permitir que el maintainer
+    haga override puntual sin disparar resolución automática que podría
+    devolver basura."""
+    if not team_name or not team_name.strip():
+        return None
+    _ensure_loaded()
+    val = _overrides.get(_norm(team_name))
+    return val or None
+
 
 def resolve_logo_url(team_name: str) -> str | None:
     """Devuelve la URL del escudo del equipo o None si nada funciona."""

@@ -1,13 +1,21 @@
 """Scraper de RFEF (Real Federación Española de Fútbol).
 
-Estrategia:
-1. Para cada división de fútbol sala configurada, intenta descargar el PDF
-   oficial del calendario desde rfef.es y extraer los equipos con pdfplumber.
-2. Si el download o el parseo falla, cae al fallback hardcodeado en
-   data/rfef-fallback.json.
-3. Los escudos se resuelven via scrapers.badges (Wikipedia Commons).
+Estrategia (en cascada por división):
 
-URL pattern observado (estable entre temporadas):
+1. **Clasificación pública** (`resultados.rfef.es`, módulo
+   `scrapers.rfef_clasificacion`): fuente primaria. Cada `<tr>` de la tabla
+   tiene `<img class=escudo_widget>` + `<a>NOMBRE</a>` → equipo y escudo
+   oficiales en la misma fila. Cobertura ~100%, nombres canónicos.
+2. **PDF de calendario** (legacy): si la clasificación devuelve vacío
+   (rate-limit, división nueva sin jornadas jugadas, etc.), se intenta el
+   PDF oficial de `rfef.es` con `pdfplumber`. Solo aporta nombres; los
+   escudos se resuelven via Wikipedia (resolver muy poco fiable: ~7% de
+   coverage). Es el camino que se usaba antes y se mantiene como red de
+   seguridad.
+3. **Fallback hardcodeado** (`data/rfef-fallback.json`): nombres curados a
+   mano para asegurar lista mínima incluso sin red.
+
+PDF URL pattern (estable entre temporadas):
     https://rfef.es/sites/default/files/{YEAR}-07/Calendario_{COMP}_{SEASON}.pdf
 
 Donde:
@@ -20,53 +28,81 @@ from __future__ import annotations
 import io
 import json
 import re
+import time
 import unicodedata
 from pathlib import Path
-from typing import Iterable
 
 import requests
 
-from scrapers.logo_resolver import resolve_logo_url
+from scrapers.logo_resolver import lookup_override, resolve_logo_url
+from scrapers.rfef_clasificacion import (
+    ScrapedTeam,
+    fetch_division_teams,
+    make_session,
+)
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 
 # Configuración de divisiones RFEF.
 #
-# Una división puede ser:
-#   - **Unificada**: tiene `pdf_id`. Se descarga un único PDF de
-#     `Calendario_{pdf_id}_{season}.pdf` y se extrae la lista de equipos.
-#   - **Por grupos**: tiene `groups_url_pattern`. El scraper prueba grupos
-#     1, 2, 3, ... hasta recibir 404, y construye la lista de grupos.
-#     En el JSON resultante, la división tendrá un campo `groups` en lugar
-#     (o además) de `teams`.
-#   - **Manual**: ni `pdf_id` ni `groups_url_pattern`. Se usa solo el fallback.
+# Cada división puede declarar (en orden de preferencia):
+#
+#   - `clasificacion: {comp, grupo}` → división plana scrapeada de
+#     `resultados.rfef.es`. Es la fuente primaria desde 2026: nombres
+#     oficiales + escudos en la misma fila.
+#   - `clasificacion_groups: [{id, name, comp, grupo}]` → división con
+#     grupos territoriales. Cada entrada es un grupo separado en el JSON
+#     final. Si todos los grupos vienen vacíos (rate-limit, etc.) se cae
+#     a los fallbacks de abajo.
+#   - `pdf_id` → PDF unificado en `rfef.es`. Legacy fallback para divisiones
+#     planas si la clasificación falla. Solo aporta nombres; los escudos los
+#     resuelve `logo_resolver` (Wikipedia, baja cobertura).
+#   - `groups_url_pattern` → PDFs por grupo (`calendario_grupo_N_*.pdf`).
+#     Legacy fallback para divisiones por grupos.
+#
+# El fallback hardcodeado (`data/rfef-fallback.json`) actúa como red última.
 DIVISIONS = [
     {
         "id": "rfef-primera-fs-masc",
         "name": "Primera División FS",
         "gender": "masculino",
+        "clasificacion": {"comp": "23289361", "grupo": "23289362"},
         "pdf_id": "1Div_Sala",
     },
     {
         "id": "rfef-segunda-fs-masc",
-        "name": "Segunda División FS",
+        "name": "Segunda División FS A",
         "gender": "masculino",
+        "clasificacion": {"comp": "23289363", "grupo": "23289364"},
         "pdf_id": "2Div_Sala",
+    },
+    {
+        # Segunda B FS Masculina: división nueva (temporada 2025-2026), no
+        # tenía PDF oficial publicado en `rfef.es`. Solo se publica via la
+        # clasificación. Si está recién creada y aún no hay jornadas, la
+        # división aparecerá vacía en el JSON hasta que se juegue la J1.
+        "id": "rfef-segunda-b-fs-masc",
+        "name": "Segunda División FS B",
+        "gender": "masculino",
+        "clasificacion": {"comp": "33575532", "grupo": "33575533"},
     },
     {
         "id": "rfef-primera-fs-fem",
         "name": "Primera División FS Femenina",
         "gender": "femenino",
+        "clasificacion": {"comp": "23289381", "grupo": "23289382"},
         "pdf_id": "1DivFem_Sala",
     },
     {
-        # 2ª División Femenina se organiza por grupos territoriales con URLs
-        # tipo `calendario_grupo_N_segunda_femenina_futbol_sala.pdf` en la
-        # raíz de `sites/default/files/`. El scraper prueba N=1..max_groups
-        # hasta encontrar 404.
         "id": "rfef-segunda-fs-fem",
         "name": "Segunda División FS Femenina",
         "gender": "femenino",
+        "clasificacion_groups": [
+            {"id": "g1", "name": "Grupo 1", "comp": "23289383", "grupo": "23289384"},
+            {"id": "g2", "name": "Grupo 2", "comp": "23289383", "grupo": "23289385"},
+            {"id": "g3", "name": "Grupo 3", "comp": "23289383", "grupo": "23289386"},
+        ],
+        # Legacy fallback si la clasificación falla en todos los grupos.
         "groups_url_pattern":
             "https://rfef.es/sites/default/files/"
             "calendario_grupo_{n}_segunda_femenina_futbol_sala.pdf",
@@ -258,53 +294,137 @@ def _load_fallback() -> dict:
 
 
 def scrape(season: str, resolve_badges: bool = True) -> dict:
-    """Devuelve la categoría RFEF lista para incluir en leagues.json."""
+    """Devuelve la categoría RFEF lista para incluir en leagues.json.
+
+    Estrategia por división (cascada):
+
+    1. **Clasificación HTML** (`resultados.rfef.es`): si el cfg declara
+       `clasificacion` o `clasificacion_groups`, se intenta primero. Aporta
+       nombres + escudos en una sola petición.
+    2. **PDF de calendario** (`rfef.es`): legacy. Si la clasificación falla
+       y el cfg tiene `pdf_id`/`groups_url_pattern`, se cae al flujo viejo
+       (PDF para nombres + Wikipedia para escudos).
+    3. **Fallback hardcodeado** (`data/rfef-fallback.json`): completa o
+       sustituye lo que no se haya podido scrapear.
+    """
     fallback = _load_fallback()
     fb_divisions = fallback.get("divisions", {})
+
+    # Sesión compartida para todas las llamadas a `resultados.rfef.es`. La
+    # JSESSIONID se siembra en make_session() y se reutiliza.
+    clas_session = make_session() if any(
+        d.get("clasificacion") or d.get("clasificacion_groups") for d in DIVISIONS
+    ) else None
 
     out_divisions = []
     for div_cfg in DIVISIONS:
         div_id = div_cfg["id"]
         print(f"[rfef] Procesando {div_cfg['name']}")
         fb_div = fb_divisions.get(div_id, {})
+        fb_groups = fb_div.get("groups", [])
 
+        # 1. Clasificación por grupos (camino principal para divisiones con grupos)
+        if div_cfg.get("clasificacion_groups"):
+            groups_payload = _scrape_clasificacion_groups(
+                groups_cfg=div_cfg["clasificacion_groups"],
+                fb_groups=fb_groups,
+                session=clas_session,
+                resolve_badges=resolve_badges,
+            )
+            groups_payload = [g for g in groups_payload if g.get("teams")]
+            if groups_payload:
+                out_divisions.append({
+                    "id": div_id,
+                    "name": div_cfg["name"],
+                    "gender": div_cfg["gender"],
+                    "teams": [],
+                    "groups": groups_payload,
+                })
+                continue
+            # Vacío → cae al legacy de grupos (groups_url_pattern, si existe)
+
+        # 2. Clasificación plana (camino principal para divisiones sin grupos)
+        if div_cfg.get("clasificacion"):
+            scraped = fetch_division_teams(
+                div_cfg["clasificacion"]["comp"],
+                div_cfg["clasificacion"]["grupo"],
+                session=clas_session,
+            )
+            if scraped:
+                teams_payload = _merge_clasificacion(
+                    fb_teams=fb_div.get("teams", []),
+                    scraped=scraped,
+                    resolve_badges=resolve_badges,
+                )
+                out_divisions.append({
+                    "id": div_id,
+                    "name": div_cfg["name"],
+                    "gender": div_cfg["gender"],
+                    "teams": teams_payload,
+                })
+                # Pausa entre divisiones para no saturar el servidor.
+                time.sleep(1.5)
+                continue
+            # Vacío → cae al PDF/fallback
+            print(f"  [rfef] Clasificación vacía para {div_id}; fallback a PDF")
+            time.sleep(1.5)
+
+        # 3. Legacy: scraping de PDFs por grupo
+        scraped_groups: list[dict] = []
         if div_cfg.get("groups_url_pattern"):
-            # División con grupos territoriales
-            groups = _scrape_groups(
+            scraped_groups = _scrape_groups(
                 pattern=div_cfg["groups_url_pattern"],
                 max_groups=div_cfg.get("max_groups", 10),
-                fb_groups=fb_div.get("groups", []),
+                fb_groups=fb_groups,
                 resolve_badges=resolve_badges,
             )
-            out_divisions.append({
-                "id": div_id,
-                "name": div_cfg["name"],
-                "gender": div_cfg["gender"],
-                "teams": [],  # vacío si tiene grupos
-                "groups": groups,
-            })
-        else:
-            # División unificada (un único PDF o solo fallback)
-            team_names: list[str] = []
-            if div_cfg.get("pdf_id"):
-                url = _pdf_url(div_cfg["pdf_id"], season)
-                pdf = _download_pdf(url)
-                if pdf:
-                    team_names = _extract_teams_from_pdf(pdf)
-                    if team_names:
-                        print(f"  [rfef] {len(team_names)} equipos extraídos del PDF")
 
-            teams_payload = _merge_teams(
-                fb_teams=fb_div.get("teams", []),
-                scraped_names=team_names,
-                resolve_badges=resolve_badges,
-            )
+        if not scraped_groups and fb_groups:
+            scraped_groups = [
+                {
+                    "id": fb_g.get("id", f"g{i + 1}"),
+                    "name": fb_g.get("name", f"Grupo {i + 1}"),
+                    "teams": _merge_teams(
+                        fb_teams=fb_g.get("teams", []),
+                        scraped_names=[],
+                        resolve_badges=resolve_badges,
+                    ),
+                }
+                for i, fb_g in enumerate(fb_groups)
+            ]
+
+        scraped_groups = [g for g in scraped_groups if g.get("teams")]
+        if scraped_groups:
             out_divisions.append({
                 "id": div_id,
                 "name": div_cfg["name"],
                 "gender": div_cfg["gender"],
-                "teams": teams_payload,
+                "teams": [],
+                "groups": scraped_groups,
             })
+            continue
+
+        # 4. Legacy: PDF plano + fallback
+        team_names: list[str] = []
+        if div_cfg.get("pdf_id"):
+            url = _pdf_url(div_cfg["pdf_id"], season)
+            pdf = _download_pdf(url)
+            if pdf:
+                team_names = _extract_teams_from_pdf(pdf)
+                if team_names:
+                    print(f"  [rfef] {len(team_names)} equipos extraídos del PDF")
+
+        teams_payload = _merge_teams(
+            fb_teams=fb_div.get("teams", []),
+            scraped_names=team_names,
+            resolve_badges=resolve_badges,
+        )
+        out_divisions.append({
+            "id": div_id,
+            "name": div_cfg["name"],
+            "gender": div_cfg["gender"],
+            "teams": teams_payload,
+        })
 
     return {
         "id": "rfef",
@@ -312,6 +432,71 @@ def scrape(season: str, resolve_badges: bool = True) -> dict:
         "source": "rfef.es",
         "divisions": out_divisions,
     }
+
+
+def _scrape_clasificacion_groups(
+    *,
+    groups_cfg: list[dict],
+    fb_groups: list[dict],
+    session,
+    resolve_badges: bool,
+) -> list[dict]:
+    """Scrapea cada grupo declarado en `clasificacion_groups`. Si un grupo
+    devuelve vacío, intenta usar la entrada equivalente del fallback (por
+    id de grupo)."""
+    fb_by_id = {g.get("id", f"g{i + 1}"): g for i, g in enumerate(fb_groups)}
+    out = []
+    for i, g_cfg in enumerate(groups_cfg):
+        if i > 0:
+            time.sleep(1.5)
+        scraped = fetch_division_teams(
+            g_cfg["comp"], g_cfg["grupo"], session=session,
+        )
+        gid = g_cfg["id"]
+        fb_group = fb_by_id.get(gid, {})
+        teams_payload = _merge_clasificacion(
+            fb_teams=fb_group.get("teams", []),
+            scraped=scraped,
+            resolve_badges=resolve_badges,
+        )
+        out.append({
+            "id": gid,
+            "name": g_cfg.get("name") or fb_group.get("name") or gid,
+            "teams": teams_payload,
+        })
+    return out
+
+
+def _merge_clasificacion(
+    *,
+    fb_teams: list[dict],
+    scraped: list[ScrapedTeam],
+    resolve_badges: bool,
+) -> list[dict]:
+    """Construye la lista de equipos a partir de la clasificación scrapeada.
+
+    Reglas:
+    - La clasificación es **completamente autoritativa** cuando devuelve
+      datos. El fallback (`fb_teams`) se ignora en este camino: añadirlo
+      genera duplicados por cambios de patrocinador/temporada (p.ej. un
+      equipo que el fallback llama "Real Betis Futsal" y la clasificación
+      "Real Betis Tedi" aparecería dos veces). Cuando la clasificación
+      falla, el caller cae al camino legacy que sí usa fallback.
+    - **NO** se hace resolución automática vía Wikipedia/DDG: prefiero
+      `null` (la app muestra placeholder genérico) que un escudo erróneo
+      (kit graphic, logo de patrocinador, etc.). Sí se aplica el override
+      curado de `data/badges-overrides.json` cuando el maintainer lo ha
+      indicado expresamente — gana incluso sobre el escudo de la
+      clasificación.
+    """
+    _ = resolve_badges  # ignorado a propósito en el camino de clasificación
+    _ = fb_teams  # autoritativo = clasificación; el fallback no aporta aquí
+    teams = [{"name": t.name, "logoUrl": t.logo_url} for t in scraped]
+    for t in teams:
+        override = lookup_override(t["name"])
+        if override:
+            t["logoUrl"] = override
+    return teams
 
 
 def _scrape_groups(
@@ -322,7 +507,11 @@ def _scrape_groups(
     resolve_badges: bool,
 ) -> list[dict]:
     """Itera grupos N=1..max_groups descargando el PDF de cada uno y construye
-    la lista [{id, name, teams}, ...]. Para en el primer 404 consecutivo."""
+    la lista [{id, name, teams}, ...].
+
+    Fail-fast: el primer 404 corta el bucle. Asume grupos consecutivos
+    arrancando en 1 (cierto para los PDFs RFEF observados). Si la URL ha
+    cambiado, evitamos hacer max_groups peticiones inútiles."""
     fb_by_id = {g.get("id", f"g{i + 1}"): g for i, g in enumerate(fb_groups)}
     groups_out: list[dict] = []
 
@@ -330,10 +519,7 @@ def _scrape_groups(
         url = pattern.format(n=n)
         pdf = _download_pdf(url)
         if pdf is None:
-            # Si ya tenemos al menos un grupo, asumimos que se acabaron
-            if groups_out:
-                break
-            continue
+            break
 
         team_names = _extract_teams_from_pdf(pdf)
         print(f"  [rfef] Grupo {n}: {len(team_names)} equipos extraídos")
@@ -347,18 +533,23 @@ def _scrape_groups(
         )
         groups_out.append({
             "id": gid,
-            "name": f"Grupo {n}",
+            "name": fb_group.get("name") or f"Grupo {n}",
             "teams": teams_payload,
         })
 
-    # Añadir grupos del fallback que el scraper no haya cubierto
+    # Añadir grupos del fallback que el scraper no haya cubierto. Pasamos
+    # los teams por _merge_teams para resolver escudos si están como null.
     scraped_ids = {g["id"] for g in groups_out}
     for gid, fb_g in fb_by_id.items():
         if gid not in scraped_ids:
             groups_out.append({
                 "id": gid,
                 "name": fb_g.get("name", gid),
-                "teams": list(fb_g.get("teams", [])),
+                "teams": _merge_teams(
+                    fb_teams=fb_g.get("teams", []),
+                    scraped_names=[],
+                    resolve_badges=resolve_badges,
+                ),
             })
 
     return groups_out
