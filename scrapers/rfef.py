@@ -355,15 +355,16 @@ def scrape(season: str, resolve_badges: bool = True) -> dict:
                     "gender": div_cfg["gender"],
                     "teams": teams_payload,
                 })
-                # Pausa larga entre divisiones: RFEF rate-limita por IP y
-                # tras 2-3 hits seguidos empieza a devolver bodies vacíos.
-                # 10s suele bastar para mantener la racha de éxitos sin
-                # tener que recurrir al backoff de fetch_division_teams.
+                # Pausa entre divisiones: RFEF rate-limita por IP y tras
+                # 2-3 hits seguidos empieza a devolver bodies vacíos. 10s
+                # suele bastar mientras la racha de éxitos se mantiene.
                 time.sleep(10)
                 continue
-            # Vacío → cae al PDF/fallback
+            # Vacío → cae al PDF/fallback. Pausa larga (60s) para dar
+            # tiempo a que el rate-limit se calme antes de la siguiente
+            # división — si no, las femeninas también se llevan el fallo.
             print(f"  [rfef] Clasificación vacía para {div_id}; fallback a PDF")
-            time.sleep(10)
+            time.sleep(60)
 
         # 3. Legacy: scraping de PDFs por grupo
         scraped_groups: list[dict] = []

@@ -69,7 +69,7 @@ def fetch_division_teams(
     cod_grupo: str | int,
     *,
     session: requests.Session | None = None,
-    retries: int = 3,
+    retries: int = 4,
 ) -> list[ScrapedTeam]:
     """Descarga la clasificación y devuelve los equipos de la división/grupo.
 
@@ -93,9 +93,12 @@ def fetch_division_teams(
     label = f"{cod_competicion}/{cod_grupo}"
 
     # Backoffs largos a propósito: el rate-limit por IP de RFEF dura más
-    # que un retry corto (en pruebas, ~1-2 min entre rachas). Con 15/30/60s
-    # cubrimos hasta ~2 min de espera, que en cron mensual es asumible.
-    backoffs = [15, 30, 60]
+    # que un retry corto (en pruebas, ~1-2 min entre rachas). Con
+    # 15/30/60/120s cubrimos hasta ~3.5 min de espera. En el último run
+    # de Actions el 4º intento tras 60s rescató el grupo G1 de Segunda
+    # Fem; el 5º (con 120s extra) debería rescatar también Primera Fem
+    # y G3 que ahora se quedan en el fallback PDF sin escudos.
+    backoffs = [15, 30, 60, 120]
     last_error: str | None = None
     for attempt in range(retries + 1):
         try:
