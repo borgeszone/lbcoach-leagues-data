@@ -92,14 +92,18 @@ def fetch_division_teams(
     url = BASE_URL + CLAS_PATH
     label = f"{cod_competicion}/{cod_grupo}"
 
+    # Backoffs largos a propósito: el rate-limit por IP de RFEF dura más
+    # que un retry corto (en pruebas, ~1-2 min entre rachas). Con 15/30/60s
+    # cubrimos hasta ~2 min de espera, que en cron mensual es asumible.
+    backoffs = [15, 30, 60]
     last_error: str | None = None
     for attempt in range(retries + 1):
         try:
             r = s.get(url, params=params, timeout=20)
         except requests.RequestException as e:
             last_error = str(e)
-            backoff = 5 * (2 ** attempt)
             if attempt < retries:
+                backoff = backoffs[min(attempt, len(backoffs) - 1)]
                 print(
                     f"  [rfef-clas] {label}: error de red ({e}), "
                     f"reintentando en {backoff}s con sesión nueva "
@@ -128,7 +132,7 @@ def fetch_division_teams(
         # 200 con body vacío → rate-limit / sesión perdida. Reintentar
         # con sesión nueva.
         if attempt < retries:
-            backoff = 5 * (2 ** attempt)
+            backoff = backoffs[min(attempt, len(backoffs) - 1)]
             print(
                 f"  [rfef-clas] {label}: respuesta vacía, reintentando "
                 f"en {backoff}s con sesión nueva ({attempt + 1}/{retries})"
