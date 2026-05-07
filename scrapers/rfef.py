@@ -442,10 +442,14 @@ def _scrape_clasificacion_groups(
     id de grupo)."""
     fb_by_id = {g.get("id", f"g{i + 1}"): g for i, g in enumerate(fb_groups)}
     out = []
+    last_failed = False
     for i, g_cfg in enumerate(groups_cfg):
         if i > 0:
-            time.sleep(10)  # ver comentario en scrape() sobre rate-limit
+            # Si el grupo anterior cayó al fallback, dale tiempo al
+            # rate-limit para resetearse antes de intentar el siguiente.
+            time.sleep(60 if last_failed else 10)
         scraped = fetch_division_teams(g_cfg["comp"], g_cfg["grupo"])
+        last_failed = not scraped
         gid = g_cfg["id"]
         fb_group = fb_by_id.get(gid, {})
         teams_payload = _merge_clasificacion(
