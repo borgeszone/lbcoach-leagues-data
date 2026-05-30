@@ -13,27 +13,41 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 from scrapers import fcf, logo_resolver, rfef, rfef_shields
 
 ROOT = Path(__file__).parent
 OUTPUT_DIR = ROOT / "output"
-DEFAULT_SEASON = "2025-2026"
+
+
+def current_season() -> str:
+    """Devuelve la temporada vigente en formato `YYYY-YYYY` según la fecha.
+
+    Temporada española de fútbol sala: arranca en julio/agosto y termina
+    en junio. Por tanto:
+      - meses 7-12 (jul-dic): `{year}-{year+1}` (temporada que acaba de empezar)
+      - meses 1-6  (ene-jun): `{year-1}-{year}` (temporada que está acabando)
+    """
+    today = date.today()
+    if today.month >= 7:
+        return f"{today.year}-{today.year + 1}"
+    return f"{today.year - 1}-{today.year}"
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--season", default=DEFAULT_SEASON,
-                        help="Temporada en formato YYYY-YYYY")
+    parser.add_argument("--season", default=None,
+                        help="Temporada en formato YYYY-YYYY (default: auto-detectada según la fecha)")
     parser.add_argument("--no-badges", action="store_true",
                         help="Omite la resolución de escudos via Wikipedia")
     args = parser.parse_args()
 
+    season = args.season or current_season()
     OUTPUT_DIR.mkdir(exist_ok=True)
 
-    print(f"[scrape] Generando leagues.json para temporada {args.season}")
+    print(f"[scrape] Generando leagues.json para temporada {season}")
 
     # Pre-poblar el mapa de escudos oficiales RFEF (extraídos de futsal.rfef.es)
     # Esto da escudo a casi todos los clubes RFEF sin depender de Wikipedia.
@@ -42,11 +56,11 @@ def main() -> int:
         print(f"[rfef-shields] {len(shields)} escudos oficiales descubiertos")
         logo_resolver.inject_rfef_shields(shields)
 
-    rfef_cat = rfef.scrape(season=args.season, resolve_badges=not args.no_badges)
+    rfef_cat = rfef.scrape(season=season, resolve_badges=not args.no_badges)
     fcf_cat = fcf.load_manual()
 
     payload = {
-        "version": args.season,
+        "version": season,
         "lastUpdated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "categories": [rfef_cat, fcf_cat],
     }

@@ -8,9 +8,9 @@ on:
   workflow_dispatch:
     inputs:
       season:
-        description: 'Temporada (formato YYYY-YYYY)'
+        description: 'Temporada (formato YYYY-YYYY). Vacío = auto-detectar según fecha actual.'
         required: false
-        default: '2025-2026'
+        default: ''
       no_badges:
         description: 'Saltar resolución de escudos via Wikipedia'
         required: false
@@ -38,7 +38,10 @@ jobs:
 
       - name: Run scraper
         run: |
-          ARGS="--season ${{ github.event.inputs.season || '2025-2026' }}"
+          ARGS=""
+          if [ -n "${{ github.event.inputs.season }}" ]; then
+            ARGS="--season ${{ github.event.inputs.season }}"
+          fi
           if [ "${{ github.event.inputs.no_badges }}" = "true" ]; then
             ARGS="$ARGS --no-badges"
           fi
