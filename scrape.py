@@ -16,7 +16,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from scrapers import fcf, logo_resolver, rfef
+from scrapers import fcf, logo_resolver, rfef, rfef_shields
 
 ROOT = Path(__file__).parent
 OUTPUT_DIR = ROOT / "output"
@@ -34,6 +34,13 @@ def main() -> int:
     OUTPUT_DIR.mkdir(exist_ok=True)
 
     print(f"[scrape] Generando leagues.json para temporada {args.season}")
+
+    # Pre-poblar el mapa de escudos oficiales RFEF (extraídos de futsal.rfef.es)
+    # Esto da escudo a casi todos los clubes RFEF sin depender de Wikipedia.
+    if not args.no_badges:
+        shields = rfef_shields.fetch_shield_map()
+        print(f"[rfef-shields] {len(shields)} escudos oficiales descubiertos")
+        logo_resolver.inject_rfef_shields(shields)
 
     rfef_cat = rfef.scrape(season=args.season, resolve_badges=not args.no_badges)
     fcf_cat = fcf.load_manual()

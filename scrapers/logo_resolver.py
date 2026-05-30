@@ -148,6 +148,18 @@ def lookup_override(team_name: str) -> str | None:
     return val or None
 
 
+# Mapa runtime con escudos RFEF inyectado por scrape.py al inicio del run.
+# Tiene preferencia sobre Wikipedia/DDG y se cachea como cualquier otra fuente.
+_rfef_shields: dict[str, str] = {}
+
+
+def inject_rfef_shields(shields: dict[str, str]) -> None:
+    """Inyecta el dict de escudos extraídos de futsal.rfef.es. El orchestrator
+    llama una vez al inicio del run."""
+    global _rfef_shields
+    _rfef_shields = shields
+
+
 def resolve_logo_url(team_name: str) -> str | None:
     """Devuelve la URL del escudo del equipo o None si nada funciona."""
     if not team_name or not team_name.strip():
@@ -155,25 +167,28 @@ def resolve_logo_url(team_name: str) -> str | None:
     _ensure_loaded()
     key = _norm(team_name)
 
-    # 1. Override
+    # 1. Override manual del maintainer
     if key in _overrides:
         return _overrides[key] or None
 
-    # 2. Caché
-    if key in _cache:
-        cached = _cache[key]
-        # Permitir que valores explícitos a None se respeten para no spammear
-        # APIs en cada run con equipos imposibles. Se purgan re-borrando el
-        # cache.json o quitando esa entrada.
-        return cached
+    # 2. Mapa de escudos RFEF (futsal.rfef.es) — fuente autoritativa para
+    #    los clubes que aparecen en el portal oficial.
+    if key in _rfef_shields:
+        url = _rfef_shields[key]
+        _cache[key] = url
+        return url
 
-    # 3. Wikipedia article images
+    # 3. Caché de runs anteriores (Wikipedia/DDG)
+    if key in _cache:
+        return _cache[key]
+
+    # 4. Wikipedia article images
     url = _wikipedia_logo(team_name)
     if url:
         _cache[key] = url
         return url
 
-    # 4. DuckDuckGo image search
+    # 5. DuckDuckGo image search
     url = _ddg_image_search(team_name)
     if url:
         _cache[key] = url
