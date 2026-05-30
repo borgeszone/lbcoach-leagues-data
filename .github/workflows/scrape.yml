@@ -1,9 +1,11 @@
 name: Scrape leagues data
 
 on:
-  # Mensual: día 1 a las 06:00 UTC
+  # Semanal: cada lunes a las 06:00 UTC. Granularidad fin-a-fin con la app
+  # ≤14 días (cron 7d + caché de LeaguesService 7d). Captura cambios de
+  # ligas que se confirman tarde, bajas mid-season, renombrados, etc.
   schedule:
-    - cron: '0 6 1 * *'
+    - cron: '0 6 * * 1'
   # Manual: trigger desde la pestaña Actions
   workflow_dispatch:
     inputs:
@@ -14,7 +16,7 @@ on:
       no_badges:
         description: 'Saltar resolución de escudos via Wikipedia'
         required: false
-        default: 'false'
+        default: false
         type: boolean
 
 permissions:
