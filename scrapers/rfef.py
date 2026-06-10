@@ -36,6 +36,7 @@ import requests
 
 from scrapers.logo_resolver import lookup_override, resolve_logo_url
 from scrapers.rfef_clasificacion import ScrapedTeam, fetch_division_teams
+from scrapers.rfef_calendario import fetch_division_calendar, resolve_temporada_code
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 
@@ -423,12 +424,58 @@ def scrape(season: str, resolve_badges: bool = True) -> dict:
             "teams": teams_payload,
         })
 
+    # Segunda pasada: calendario. Se hace al final, una vez los equipos
+    # (dato primario) ya están capturados, para aislar el riesgo de que las
+    # muchas peticiones de calendario disparen el rate-limit y arrastren el
+    # scraping de equipos. Best-effort: si falla, la división queda sin
+    # `calendar` y la app cae al formulario manual.
+    _attach_calendars(out_divisions, season)
+
     return {
         "id": "rfef",
         "name": "Liga Española",
         "source": "rfef.es",
         "divisions": out_divisions,
     }
+
+
+def _attach_calendars(out_divisions: list[dict], season: str) -> None:
+    """Añade `calendar` a cada división/grupo de `out_divisions` que tenga
+    códigos de clasificación en la config. Muta `out_divisions` in-place."""
+    by_id = {d["id"]: d for d in out_divisions}
+    temporada_code = resolve_temporada_code(season)
+    if temporada_code:
+        print(f"[rfef-cal] CodTemporada para {season}: {temporada_code}")
+    else:
+        print(f"[rfef-cal] CodTemporada no resuelto para {season}; usando temporada por defecto del servidor")
+
+    for div_cfg in DIVISIONS:
+        div = by_id.get(div_cfg["id"])
+        if div is None:
+            continue
+        print(f"[rfef-cal] Calendario de {div_cfg['name']}")
+
+        if div_cfg.get("clasificacion_groups"):
+            groups = {g["id"]: g for g in div.get("groups", [])}
+            for g_cfg in div_cfg["clasificacion_groups"]:
+                grp = groups.get(g_cfg["id"])
+                if grp is None:
+                    continue
+                calendar = fetch_division_calendar(
+                    g_cfg["comp"], g_cfg["grupo"], temporada_code=temporada_code
+                )
+                if calendar:
+                    grp["calendar"] = calendar
+                time.sleep(10)
+        elif div_cfg.get("clasificacion"):
+            calendar = fetch_division_calendar(
+                div_cfg["clasificacion"]["comp"],
+                div_cfg["clasificacion"]["grupo"],
+                temporada_code=temporada_code,
+            )
+            if calendar:
+                div["calendar"] = calendar
+            time.sleep(10)
 
 
 def _scrape_clasificacion_groups(
@@ -438,8 +485,8 @@ def _scrape_clasificacion_groups(
     resolve_badges: bool,
 ) -> list[dict]:
     """Scrapea cada grupo declarado en `clasificacion_groups`. Si un grupo
-    devuelve vacío, intenta usar la entrada equivalente del fallback (por
-    id de grupo)."""
+    devuelve vacío (rate-limit / J1 sin jugar), usa los equipos curados del
+    fallback equivalente (por id de grupo) para no perder el grupo entero."""
     fb_by_id = {g.get("id", f"g{i + 1}"): g for i, g in enumerate(fb_groups)}
     out = []
     last_failed = False
@@ -452,11 +499,23 @@ def _scrape_clasificacion_groups(
         last_failed = not scraped
         gid = g_cfg["id"]
         fb_group = fb_by_id.get(gid, {})
-        teams_payload = _merge_clasificacion(
-            fb_teams=fb_group.get("teams", []),
-            scraped=scraped,
-            resolve_badges=resolve_badges,
-        )
+        if scraped:
+            teams_payload = _merge_clasificacion(
+                fb_teams=fb_group.get("teams", []),
+                scraped=scraped,
+                resolve_badges=resolve_badges,
+            )
+        else:
+            # Clasificación vacía (rate-limit de RFEF o J1 sin jugar): usar el
+            # fallback curado del grupo si existe. Sin esto, un grupo que falle
+            # se filtra en `scrape()` y desaparece del JSON aunque sus hermanos
+            # sí se hayan scrapeado — el bug que dejaba "solo el Grupo 1" en
+            # Segunda FS Femenina cuando RFEF rate-limita G2/G3.
+            teams_payload = _merge_teams(
+                fb_teams=fb_group.get("teams", []),
+                scraped_names=[],
+                resolve_badges=resolve_badges,
+            )
         out.append({
             "id": gid,
             "name": g_cfg.get("name") or fb_group.get("name") or gid,
