@@ -137,6 +137,132 @@ def _download_pdf(url: str, timeout: int = 30) -> bytes | None:
         return None
 
 
+def _extract_calendar_from_pdf(pdf_bytes: bytes) -> list[dict]:
+    """Extrae el calendario por jornadas del PDF.
+
+    Devuelve `[{jornada: int, date: str?, matches: [{home, away}]}, ...]`
+    en orden de jornada. Reutiliza el algoritmo de gap-detection que ya
+    funciona para identificar las dos columnas (local | visitante) de cada
+    línea de partido, pero además rastrea las cabeceras de jornada que
+    aparecen intercaladas en el texto:
+
+        Jornada 1 (06/09/2025)
+        TeamA   TeamB
+        TeamC   TeamD
+        ...
+        Jornada 2 (13/09/2025)
+        ...
+
+    Si el PDF tiene una sección "Equipos Participantes" al inicio (formato
+    de grupos territoriales), la salta — la cabecera de jornada solo
+    aparece en las páginas del calendario propiamente dicho.
+
+    NOTA: el calendario es el oficial INICIAL. Aplazamientos y
+    recolocaciones mantienen su jornada original por convención de la liga
+    (la J10 aplazada al final de temporada sigue siendo J10).
+    """
+    try:
+        import pdfplumber
+    except ImportError:
+        return []
+
+    COLUMN_GAP_THRESHOLD = 30
+    JORNADA_HEADER_RE = re.compile(
+        r"^Jornada\s+(\d+)\s*(?:\((\d{1,2}/\d{1,2}/\d{2,4})\))?",
+        re.IGNORECASE,
+    )
+
+    jornadas: dict[int, dict] = {}
+    current_jornada: int | None = None
+
+    try:
+        with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
+            for page in pdf.pages:
+                for line_words in _group_words_by_line(page):
+                    line_text = " ".join(w["text"] for w in line_words).strip()
+
+                    # 1. ¿Cabecera de jornada?
+                    mm = JORNADA_HEADER_RE.match(line_text)
+                    if mm:
+                        current_jornada = int(mm.group(1))
+                        date = _normalize_date(mm.group(2)) if mm.group(2) else None
+                        if current_jornada not in jornadas:
+                            jornadas[current_jornada] = {
+                                "jornada": current_jornada,
+                                "date": date,
+                                "matches": [],
+                            }
+                        elif date and not jornadas[current_jornada].get("date"):
+                            jornadas[current_jornada]["date"] = date
+                        continue
+
+                    # 2. ¿Línea de partido?
+                    if current_jornada is None:
+                        continue
+                    pair = _split_match_line(line_words, COLUMN_GAP_THRESHOLD)
+                    if pair is None:
+                        continue
+                    home, away = pair
+                    if not (_looks_like_team_name(home) and _looks_like_team_name(away)):
+                        continue
+                    jornadas[current_jornada]["matches"].append({
+                        "home": home,
+                        "away": away,
+                    })
+    except Exception as e:  # noqa: BLE001
+        print(f"  [rfef] Error parseando calendario: {e}")
+        return []
+
+    return [jornadas[k] for k in sorted(jornadas)]
+
+
+def _group_words_by_line(page) -> list[list[dict]]:
+    """Agrupa las palabras de una página por línea (coordenada `top`),
+    devolviendo la lista en orden de lectura (top→bottom)."""
+    from collections import defaultdict
+    lines: dict[int, list[dict]] = defaultdict(list)
+    for w in page.extract_words():
+        lines[round(w["top"])].append(w)
+    out = []
+    for top in sorted(lines.keys()):
+        words = sorted(lines[top], key=lambda w: w["x0"])
+        out.append(words)
+    return out
+
+
+def _split_match_line(line_words: list[dict], gap_threshold: float) -> tuple[str, str] | None:
+    """Devuelve `(home, away)` si la línea tiene un gap horizontal claro,
+    o None si parece una línea normal (cabecera, sección)."""
+    if len(line_words) < 2:
+        return None
+    max_gap = 0.0
+    split_idx = -1
+    for i in range(len(line_words) - 1):
+        cur_end = line_words[i]["x0"] + line_words[i]["width"]
+        gap = line_words[i + 1]["x0"] - cur_end
+        if gap > max_gap:
+            max_gap = gap
+            split_idx = i
+    if max_gap < gap_threshold or split_idx < 0:
+        return None
+    home = _clean_team_name(" ".join(w["text"] for w in line_words[: split_idx + 1]))
+    away = _clean_team_name(" ".join(w["text"] for w in line_words[split_idx + 1:]))
+    return home, away
+
+
+def _normalize_date(raw: str) -> str:
+    """Normaliza 'DD/MM/YYYY' o 'DD/MM/YY' a ISO 'YYYY-MM-DD'."""
+    parts = raw.split("/")
+    if len(parts) != 3:
+        return raw
+    d, m, y = parts
+    y = "20" + y if len(y) == 2 else y
+    try:
+        return f"{int(y):04d}-{int(m):02d}-{int(d):02d}"
+    except ValueError:
+        return raw
+
+
 def _extract_teams_from_pdf(pdf_bytes: bytes) -> list[str]:
     """Extrae nombres únicos de equipos del calendario PDF de RFEF.
 
@@ -431,12 +557,72 @@ def scrape(season: str, resolve_badges: bool = True) -> dict:
     # `calendar` y la app cae al formulario manual.
     _attach_calendars(out_divisions, season)
 
+    # Post-proceso: añadir calendario por jornadas a cada división/grupo cuando
+    # haya PDF descargable. La clasificación HTML no expone el calendario; los
+    # PDFs sí. Mantenemos esto como paso aparte para no acoplarlo al flujo
+    # principal de scraping de equipos.
+    _attach_calendars(out_divisions, season)
+
     return {
         "id": "rfef",
         "name": "Liga Española",
         "source": "rfef.es",
         "divisions": out_divisions,
     }
+
+
+def _attach_calendars(out_divisions: list[dict], season: str) -> None:
+    """Para cada división payload, intenta descargar su PDF de calendario y
+    adjunta el calendario por jornadas. Silencioso si no hay PDF o el parse
+    falla."""
+    pdf_cache: dict[str, bytes | None] = {}
+
+    def _get(url: str) -> bytes | None:
+        if url not in pdf_cache:
+            pdf_cache[url] = _download_pdf(url)
+        return pdf_cache[url]
+
+    for div_payload in out_divisions:
+        div_cfg = next((c for c in DIVISIONS if c["id"] == div_payload["id"]), None)
+        if not div_cfg:
+            continue
+
+        if div_payload.get("groups"):
+            # División con grupos: un PDF por grupo via groups_url_pattern
+            pattern = div_cfg.get("groups_url_pattern")
+            if not pattern:
+                continue
+            for group_payload in div_payload["groups"]:
+                m = re.match(r"g(\d+)$", group_payload["id"])
+                if not m:
+                    continue
+                pdf = _get(pattern.format(n=int(m.group(1))))
+                if not pdf:
+                    continue
+                cal = _extract_calendar_from_pdf(pdf)
+                if cal:
+                    group_payload["calendar"] = cal
+                    print(
+                        f"  [rfef-cal] {div_payload['id']}/{group_payload['id']}: "
+                        f"{len(cal)} jornadas, "
+                        f"{sum(len(j['matches']) for j in cal)} partidos"
+                    )
+        else:
+            # División plana: un único PDF unificado
+            pdf_id = div_cfg.get("pdf_id")
+            if not pdf_id:
+                continue
+            pdf = _get(_pdf_url(pdf_id, season))
+            if not pdf:
+                continue
+            cal = _extract_calendar_from_pdf(pdf)
+            if cal:
+                div_payload["calendar"] = cal
+                print(
+                    f"  [rfef-cal] {div_payload['id']}: "
+                    f"{len(cal)} jornadas, "
+                    f"{sum(len(j['matches']) for j in cal)} partidos"
+                )
 
 
 def _attach_calendars(out_divisions: list[dict], season: str) -> None:
