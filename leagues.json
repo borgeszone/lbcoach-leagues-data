@@ -1,6 +1,6 @@
 {
   "version": "2025-2026",
-  "lastUpdated": "2026-06-08T10:29:00+00:00",
+  "lastUpdated": "2026-06-10T22:39:26+00:00",
   "categories": [
     {
       "id": "rfef",
@@ -147,13 +147,1087 @@
               "name": "Vulcanizados Ruiz Tafa FS",
               "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1718/DOCS/20182/6/80d69eebcba40cc40523af1e75cf4069.jpg"
             }
+          ],
+          "calendar": [
+            {
+              "jornada": 1,
+              "matches": [
+                {
+                  "home": "MRB FS Mostoles",
+                  "away": "Entrerrios Automatización",
+                  "date": "2025-09-20T16:00:00"
+                },
+                {
+                  "home": "C.D. Leganés F.S.",
+                  "away": "Barça Atlètic",
+                  "date": "2025-09-20T17:00:00"
+                },
+                {
+                  "home": "C.D. Melistar",
+                  "away": "Inagroup CD El Ejido Futsal",
+                  "date": "2025-09-20T18:00:00"
+                },
+                {
+                  "home": "Vulcanizados Ruiz Tafa FS",
+                  "away": "Unión África Ceutí \"A\"",
+                  "date": "2025-09-20T18:00:00"
+                },
+                {
+                  "home": "Club Sala 5 Martorell",
+                  "away": "Levante U.D. F.S.",
+                  "date": "2025-09-20T18:30:00"
+                },
+                {
+                  "home": "Avanza Jaén Paraíso Interior",
+                  "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "date": "2025-09-20T18:35:00"
+                },
+                {
+                  "home": "Wanapix",
+                  "away": "REYCO Burela FS",
+                  "date": "2025-09-20T19:00:00"
+                },
+                {
+                  "home": "Heredia 21 Málaga CR",
+                  "away": "Gasifred Atlético Ibiza",
+                  "date": "2025-09-21T13:00:00"
+                }
+              ]
+            },
+            {
+              "jornada": 2,
+              "matches": [
+                {
+                  "home": "Unión África Ceutí \"A\"",
+                  "away": "C.D. Leganés F.S.",
+                  "date": "2025-09-27T12:00:00"
+                },
+                {
+                  "home": "Barça Atlètic",
+                  "away": "Vulcanizados Ruiz Tafa FS",
+                  "date": "2025-09-27T17:00:00"
+                },
+                {
+                  "home": "Club Sala 5 Martorell",
+                  "away": "MRB FS Mostoles",
+                  "date": "2025-09-27T17:30:00"
+                },
+                {
+                  "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "away": "Wanapix",
+                  "date": "2025-09-27T18:00:00"
+                },
+                {
+                  "home": "Levante U.D. F.S.",
+                  "away": "Heredia 21 Málaga CR",
+                  "date": "2025-09-27T18:30:00"
+                },
+                {
+                  "home": "REYCO Burela FS",
+                  "away": "Avanza Jaén Paraíso Interior",
+                  "date": "2025-09-27T18:30:00"
+                },
+                {
+                  "home": "Entrerrios Automatización",
+                  "away": "C.D. Melistar",
+                  "date": "2025-09-27T19:00:00"
+                },
+                {
+                  "home": "Inagroup CD El Ejido Futsal",
+                  "away": "Gasifred Atlético Ibiza",
+                  "date": "2025-09-27T20:30:00"
+                }
+              ]
+            },
+            {
+              "jornada": 3,
+              "matches": [
+                {
+                  "home": "Barça Atlètic",
+                  "away": "Club Sala 5 Martorell",
+                  "date": "2025-10-11T16:00:00"
+                },
+                {
+                  "home": "C.D. Melistar",
+                  "away": "Vulcanizados Ruiz Tafa FS",
+                  "date": "2025-10-11T17:00:00"
+                },
+                {
+                  "home": "Avanza Jaén Paraíso Interior",
+                  "away": "Inagroup CD El Ejido Futsal",
+                  "date": "2025-10-11T18:30:00"
+                },
+                {
+                  "home": "Heredia 21 Málaga CR",
+                  "away": "REYCO Burela FS",
+                  "date": "2025-10-11T18:30:00"
+                },
+                {
+                  "home": "Entrerrios Automatización",
+                  "away": "Levante U.D. F.S.",
+                  "date": "2025-10-11T19:00:00"
+                },
+                {
+                  "home": "C.D. Leganés F.S.",
+                  "away": "Wanapix",
+                  "date": "2025-10-11T19:30:00"
+                },
+                {
+                  "home": "MRB FS Mostoles",
+                  "away": "Unión África Ceutí \"A\"",
+                  "date": "2025-10-12T11:30:00"
+                },
+                {
+                  "home": "Gasifred Atlético Ibiza",
+                  "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "date": "2025-10-21T20:00:00"
+                }
+              ]
+            },
+            {
+              "jornada": 4,
+              "matches": [
+                {
+                  "home": "Unión África Ceutí \"A\"",
+                  "away": "Barça Atlètic",
+                  "date": "2025-10-17T20:02:00"
+                },
+                {
+                  "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "away": "MRB FS Mostoles",
+                  "date": "2025-10-18T17:00:00"
+                },
+                {
+                  "home": "Vulcanizados Ruiz Tafa FS",
+                  "away": "C.D. Leganés F.S.",
+                  "date": "2025-10-18T18:00:00"
+                },
+                {
+                  "home": "Inagroup CD El Ejido Futsal",
+                  "away": "Heredia 21 Málaga CR",
+                  "date": "2025-10-18T18:30:00"
+                },
+                {
+                  "home": "Club Sala 5 Martorell",
+                  "away": "Entrerrios Automatización",
+                  "date": "2025-10-18T18:30:00"
+                },
+                {
+                  "home": "Levante U.D. F.S.",
+                  "away": "Gasifred Atlético Ibiza",
+                  "date": "2025-10-18T18:30:00"
+                },
+                {
+                  "home": "REYCO Burela FS",
+                  "away": "C.D. Melistar",
+                  "date": "2025-10-18T18:45:00"
+                },
+                {
+                  "home": "Wanapix",
+                  "away": "Avanza Jaén Paraíso Interior",
+                  "date": "2025-10-19T12:00:00"
+                }
+              ]
+            },
+            {
+              "jornada": 5,
+              "matches": [
+                {
+                  "home": "Avanza Jaén Paraíso Interior",
+                  "away": "Unión África Ceutí \"A\"",
+                  "date": "2025-10-25T12:30:00"
+                },
+                {
+                  "home": "Gasifred Atlético Ibiza",
+                  "away": "REYCO Burela FS",
+                  "date": "2025-10-25T17:15:00"
+                },
+                {
+                  "home": "Inagroup CD El Ejido Futsal",
+                  "away": "Vulcanizados Ruiz Tafa FS",
+                  "date": "2025-10-25T18:30:00"
+                },
+                {
+                  "home": "MRB FS Mostoles",
+                  "away": "Levante U.D. F.S.",
+                  "date": "2025-10-25T18:30:00"
+                },
+                {
+                  "home": "C.D. Leganés F.S.",
+                  "away": "Club Sala 5 Martorell",
+                  "date": "2025-10-25T19:20:00"
+                },
+                {
+                  "home": "C.D. Melistar",
+                  "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "date": "2025-10-25T19:45:00"
+                },
+                {
+                  "home": "Heredia 21 Málaga CR",
+                  "away": "Wanapix",
+                  "date": "2025-10-26T13:00:00"
+                },
+                {
+                  "home": "Entrerrios Automatización",
+                  "away": "Barça Atlètic",
+                  "date": "2025-10-26T13:00:00"
+                }
+              ]
+            },
+            {
+              "jornada": 6,
+              "matches": [
+                {
+                  "home": "Barça Atlètic",
+                  "away": "Avanza Jaén Paraíso Interior",
+                  "date": "2025-11-01T17:00:00"
+                },
+                {
+                  "home": "Levante U.D. F.S.",
+                  "away": "C.D. Leganés F.S.",
+                  "date": "2025-11-01T17:30:00"
+                },
+                {
+                  "home": "Club Sala 5 Martorell",
+                  "away": "Gasifred Atlético Ibiza",
+                  "date": "2025-11-01T18:00:00"
+                },
+                {
+                  "home": "Vulcanizados Ruiz Tafa FS",
+                  "away": "MRB FS Mostoles",
+                  "date": "2025-11-01T18:00:00"
+                },
+                {
+                  "home": "REYCO Burela FS",
+                  "away": "Inagroup CD El Ejido Futsal",
+                  "date": "2025-11-01T18:45:00"
+                },
+                {
+                  "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "away": "Heredia 21 Málaga CR",
+                  "date": "2025-11-01T18:45:00"
+                },
+                {
+                  "home": "Unión África Ceutí \"A\"",
+                  "away": "Entrerrios Automatización",
+                  "date": "2025-11-01T19:00:00"
+                },
+                {
+                  "home": "Wanapix",
+                  "away": "C.D. Melistar",
+                  "date": "2025-11-01T19:00:00"
+                }
+              ]
+            },
+            {
+              "jornada": 7,
+              "matches": [
+                {
+                  "home": "C.D. Melistar",
+                  "away": "Club Sala 5 Martorell",
+                  "date": "2025-11-08T16:30:00"
+                },
+                {
+                  "home": "Inagroup CD El Ejido Futsal",
+                  "away": "Wanapix",
+                  "date": "2025-11-08T18:30:00"
+                },
+                {
+                  "home": "Heredia 21 Málaga CR",
+                  "away": "Barça Atlètic",
+                  "date": "2025-11-08T18:30:00"
+                },
+                {
+                  "home": "MRB FS Mostoles",
+                  "away": "C.D. Leganés F.S.",
+                  "date": "2025-11-08T18:30:00"
+                },
+                {
+                  "home": "REYCO Burela FS",
+                  "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "date": "2025-11-08T18:45:00"
+                },
+                {
+                  "home": "Entrerrios Automatización",
+                  "away": "Vulcanizados Ruiz Tafa FS",
+                  "date": "2025-11-08T19:00:00"
+                },
+                {
+                  "home": "Avanza Jaén Paraíso Interior",
+                  "away": "Levante U.D. F.S.",
+                  "date": "2025-11-08T19:00:00"
+                },
+                {
+                  "home": "Gasifred Atlético Ibiza",
+                  "away": "Unión África Ceutí \"A\"",
+                  "date": "2025-11-09T12:00:00"
+                }
+              ]
+            },
+            {
+              "jornada": 8,
+              "matches": [
+                {
+                  "home": "Barça Atlètic",
+                  "away": "MRB FS Mostoles",
+                  "date": "2025-11-15T17:04:00"
+                },
+                {
+                  "home": "Vulcanizados Ruiz Tafa FS",
+                  "away": "REYCO Burela FS",
+                  "date": "2025-11-15T18:00:00"
+                },
+                {
+                  "home": "Levante U.D. F.S.",
+                  "away": "C.D. Melistar",
+                  "date": "2025-11-15T18:30:00"
+                },
+                {
+                  "home": "Club Sala 5 Martorell",
+                  "away": "Avanza Jaén Paraíso Interior",
+                  "date": "2025-11-15T18:30:00"
+                },
+                {
+                  "home": "Unión África Ceutí \"A\"",
+                  "away": "Heredia 21 Málaga CR",
+                  "date": "2025-11-15T19:00:00"
+                },
+                {
+                  "home": "C.D. Leganés F.S.",
+                  "away": "Entrerrios Automatización",
+                  "date": "2025-11-15T19:30:00"
+                },
+                {
+                  "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "away": "Inagroup CD El Ejido Futsal",
+                  "date": "2025-11-15T20:00:00"
+                },
+                {
+                  "home": "Wanapix",
+                  "away": "Gasifred Atlético Ibiza",
+                  "date": "2025-11-15T20:30:00"
+                }
+              ]
+            },
+            {
+              "jornada": 9,
+              "matches": [
+                {
+                  "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "away": "Unión África Ceutí \"A\"",
+                  "date": "2025-11-22T12:00:00"
+                },
+                {
+                  "home": "C.D. Melistar",
+                  "away": "Barça Atlètic",
+                  "date": "2025-11-22T16:30:00"
+                },
+                {
+                  "home": "REYCO Burela FS",
+                  "away": "Club Sala 5 Martorell",
+                  "date": "2025-11-22T17:00:00"
+                },
+                {
+                  "home": "Gasifred Atlético Ibiza",
+                  "away": "C.D. Leganés F.S.",
+                  "date": "2025-11-22T17:15:00"
+                },
+                {
+                  "home": "Inagroup CD El Ejido Futsal",
+                  "away": "Levante U.D. F.S.",
+                  "date": "2025-11-22T18:30:00"
+                },
+                {
+                  "home": "Heredia 21 Málaga CR",
+                  "away": "Vulcanizados Ruiz Tafa FS",
+                  "date": "2025-11-22T18:30:00"
+                },
+                {
+                  "home": "Wanapix",
+                  "away": "Entrerrios Automatización",
+                  "date": "2025-11-22T19:00:00"
+                },
+                {
+                  "home": "Avanza Jaén Paraíso Interior",
+                  "away": "MRB FS Mostoles",
+                  "date": "2025-11-22T19:00:00"
+                }
+              ]
+            },
+            {
+              "jornada": 10,
+              "matches": [
+                {
+                  "home": "Barça Atlètic",
+                  "away": "Gasifred Atlético Ibiza",
+                  "date": "2025-11-29T17:00:00"
+                },
+                {
+                  "home": "Vulcanizados Ruiz Tafa FS",
+                  "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "date": "2025-11-29T18:00:00"
+                },
+                {
+                  "home": "Levante U.D. F.S.",
+                  "away": "REYCO Burela FS",
+                  "date": "2025-11-29T18:30:00"
+                },
+                {
+                  "home": "MRB FS Mostoles",
+                  "away": "Heredia 21 Málaga CR",
+                  "date": "2025-11-29T18:30:00"
+                },
+                {
+                  "home": "Club Sala 5 Martorell",
+                  "away": "Wanapix",
+                  "date": "2025-11-29T18:34:00"
+                },
+                {
+                  "home": "Unión África Ceutí \"A\"",
+                  "away": "C.D. Melistar",
+                  "date": "2025-11-29T19:00:00"
+                },
+                {
+                  "home": "Entrerrios Automatización",
+                  "away": "Avanza Jaén Paraíso Interior",
+                  "date": "2025-11-29T19:00:00"
+                },
+                {
+                  "home": "C.D. Leganés F.S.",
+                  "away": "Inagroup CD El Ejido Futsal",
+                  "date": "2025-11-29T19:30:00"
+                }
+              ]
+            },
+            {
+              "jornada": 11,
+              "matches": [
+                {
+                  "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "away": "Levante U.D. F.S.",
+                  "date": "2025-12-06T13:00:00"
+                },
+                {
+                  "home": "C.D. Melistar",
+                  "away": "MRB FS Mostoles",
+                  "date": "2025-12-06T16:00:00"
+                },
+                {
+                  "home": "Avanza Jaén Paraíso Interior",
+                  "away": "C.D. Leganés F.S.",
+                  "date": "2025-12-06T16:00:00"
+                },
+                {
+                  "home": "Inagroup CD El Ejido Futsal",
+                  "away": "Club Sala 5 Martorell",
+                  "date": "2025-12-06T17:00:00"
+                },
+                {
+                  "home": "Gasifred Atlético Ibiza",
+                  "away": "Vulcanizados Ruiz Tafa FS",
+                  "date": "2025-12-06T17:15:00"
+                },
+                {
+                  "home": "Heredia 21 Málaga CR",
+                  "away": "Entrerrios Automatización",
+                  "date": "2025-12-06T18:30:00"
+                },
+                {
+                  "home": "REYCO Burela FS",
+                  "away": "Barça Atlètic",
+                  "date": "2025-12-06T18:45:00"
+                },
+                {
+                  "home": "Wanapix",
+                  "away": "Unión África Ceutí \"A\"",
+                  "date": "2025-12-07T12:00:00"
+                }
+              ]
+            },
+            {
+              "jornada": 12,
+              "matches": [
+                {
+                  "home": "Club Sala 5 Martorell",
+                  "away": "Heredia 21 Málaga CR",
+                  "date": "2025-12-13T16:30:00"
+                },
+                {
+                  "home": "Barça Atlètic",
+                  "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "date": "2025-12-13T18:00:00"
+                },
+                {
+                  "home": "Vulcanizados Ruiz Tafa FS",
+                  "away": "Avanza Jaén Paraíso Interior",
+                  "date": "2025-12-13T18:00:00"
+                },
+                {
+                  "home": "Levante U.D. F.S.",
+                  "away": "Wanapix",
+                  "date": "2025-12-13T18:30:00"
+                },
+                {
+                  "home": "MRB FS Mostoles",
+                  "away": "Gasifred Atlético Ibiza",
+                  "date": "2025-12-13T18:30:00"
+                },
+                {
+                  "home": "Entrerrios Automatización",
+                  "away": "REYCO Burela FS",
+                  "date": "2025-12-13T19:00:00"
+                },
+                {
+                  "home": "C.D. Leganés F.S.",
+                  "away": "C.D. Melistar",
+                  "date": "2025-12-13T19:30:00"
+                },
+                {
+                  "home": "Unión África Ceutí \"A\"",
+                  "away": "Inagroup CD El Ejido Futsal",
+                  "date": "2026-01-21T13:00:00"
+                }
+              ]
+            },
+            {
+              "jornada": 20,
+              "matches": [
+                {
+                  "home": "C.D. Melistar",
+                  "away": "Entrerrios Automatización",
+                  "date": "2026-02-21T17:00:00"
+                },
+                {
+                  "home": "Avanza Jaén Paraíso Interior",
+                  "away": "Club Sala 5 Martorell",
+                  "date": "2026-02-21T17:00:00"
+                },
+                {
+                  "home": "Vulcanizados Ruiz Tafa FS",
+                  "away": "Gasifred Atlético Ibiza",
+                  "date": "2026-02-21T18:00:00"
+                },
+                {
+                  "home": "Heredia 21 Málaga CR",
+                  "away": "Levante U.D. F.S.",
+                  "date": "2026-02-21T18:00:00"
+                },
+                {
+                  "home": "Inagroup CD El Ejido Futsal",
+                  "away": "REYCO Burela FS",
+                  "date": "2026-02-21T18:30:00"
+                },
+                {
+                  "home": "Wanapix",
+                  "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "date": "2026-02-21T19:00:00"
+                },
+                {
+                  "home": "C.D. Leganés F.S.",
+                  "away": "Unión África Ceutí \"A\"",
+                  "date": "2026-02-22T12:30:00"
+                },
+                {
+                  "home": "MRB FS Mostoles",
+                  "away": "Barça Atlètic",
+                  "date": "2026-02-22T16:00:00"
+                }
+              ]
+            },
+            {
+              "jornada": 21,
+              "matches": [
+                {
+                  "home": "Gasifred Atlético Ibiza",
+                  "away": "Inagroup CD El Ejido Futsal",
+                  "date": "2026-02-26T20:30:00"
+                },
+                {
+                  "home": "Barça Atlètic",
+                  "away": "C.D. Leganés F.S.",
+                  "date": "2026-02-28T17:00:00"
+                },
+                {
+                  "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "away": "REYCO Burela FS",
+                  "date": "2026-02-28T18:00:00"
+                },
+                {
+                  "home": "Levante U.D. F.S.",
+                  "away": "Avanza Jaén Paraíso Interior",
+                  "date": "2026-02-28T18:30:00"
+                },
+                {
+                  "home": "MRB FS Mostoles",
+                  "away": "Vulcanizados Ruiz Tafa FS",
+                  "date": "2026-02-28T18:30:00"
+                },
+                {
+                  "home": "Club Sala 5 Martorell",
+                  "away": "C.D. Melistar",
+                  "date": "2026-02-28T18:30:00"
+                },
+                {
+                  "home": "Entrerrios Automatización",
+                  "away": "Heredia 21 Málaga CR",
+                  "date": "2026-02-28T19:00:00"
+                },
+                {
+                  "home": "Unión África Ceutí \"A\"",
+                  "away": "Wanapix",
+                  "date": "2026-03-01T12:30:00"
+                }
+              ]
+            },
+            {
+              "jornada": 22,
+              "matches": [
+                {
+                  "home": "C.D. Melistar",
+                  "away": "Unión África Ceutí \"A\"",
+                  "date": "2026-03-07T12:15:00"
+                },
+                {
+                  "home": "Avanza Jaén Paraíso Interior",
+                  "away": "Barça Atlètic",
+                  "date": "2026-03-07T13:00:00"
+                },
+                {
+                  "home": "Heredia 21 Málaga CR",
+                  "away": "Club Sala 5 Martorell",
+                  "date": "2026-03-07T18:00:00"
+                },
+                {
+                  "home": "Vulcanizados Ruiz Tafa FS",
+                  "away": "Entrerrios Automatización",
+                  "date": "2026-03-07T18:00:00"
+                },
+                {
+                  "home": "Inagroup CD El Ejido Futsal",
+                  "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "date": "2026-03-07T18:30:00"
+                },
+                {
+                  "home": "Wanapix",
+                  "away": "Levante U.D. F.S.",
+                  "date": "2026-03-07T19:00:00"
+                },
+                {
+                  "home": "REYCO Burela FS",
+                  "away": "Gasifred Atlético Ibiza",
+                  "date": "2026-03-07T20:00:00"
+                },
+                {
+                  "home": "C.D. Leganés F.S.",
+                  "away": "MRB FS Mostoles",
+                  "date": "2026-03-08T12:00:00"
+                }
+              ]
+            },
+            {
+              "jornada": 23,
+              "matches": [
+                {
+                  "home": "Unión África Ceutí \"A\"",
+                  "away": "REYCO Burela FS",
+                  "date": "2026-03-14T12:30:00"
+                },
+                {
+                  "home": "Barça Atlètic",
+                  "away": "Inagroup CD El Ejido Futsal",
+                  "date": "2026-03-14T17:30:00"
+                },
+                {
+                  "home": "Gasifred Atlético Ibiza",
+                  "away": "Avanza Jaén Paraíso Interior",
+                  "date": "2026-03-14T18:00:00"
+                },
+                {
+                  "home": "Levante U.D. F.S.",
+                  "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "date": "2026-03-14T18:30:00"
+                },
+                {
+                  "home": "Club Sala 5 Martorell",
+                  "away": "Vulcanizados Ruiz Tafa FS",
+                  "date": "2026-03-14T18:30:00"
+                },
+                {
+                  "home": "MRB FS Mostoles",
+                  "away": "C.D. Melistar",
+                  "date": "2026-03-14T18:30:00"
+                },
+                {
+                  "home": "Entrerrios Automatización",
+                  "away": "Wanapix",
+                  "date": "2026-03-14T19:15:00"
+                },
+                {
+                  "home": "C.D. Leganés F.S.",
+                  "away": "Heredia 21 Málaga CR",
+                  "date": "2026-03-15T13:00:00"
+                }
+              ]
+            },
+            {
+              "jornada": 24,
+              "matches": [
+                {
+                  "home": "Inagroup CD El Ejido Futsal",
+                  "away": "Unión África Ceutí \"A\"",
+                  "date": "2026-03-28T16:30:00"
+                },
+                {
+                  "home": "Heredia 21 Málaga CR",
+                  "away": "MRB FS Mostoles",
+                  "date": "2026-03-28T17:30:00"
+                },
+                {
+                  "home": "Avanza Jaén Paraíso Interior",
+                  "away": "Entrerrios Automatización",
+                  "date": "2026-03-28T17:45:00"
+                },
+                {
+                  "home": "Vulcanizados Ruiz Tafa FS",
+                  "away": "Barça Atlètic",
+                  "date": "2026-03-28T18:00:00"
+                },
+                {
+                  "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "away": "Gasifred Atlético Ibiza",
+                  "date": "2026-03-28T18:00:00"
+                },
+                {
+                  "home": "REYCO Burela FS",
+                  "away": "Levante U.D. F.S.",
+                  "date": "2026-03-28T18:45:00"
+                },
+                {
+                  "home": "Wanapix",
+                  "away": "Club Sala 5 Martorell",
+                  "date": "2026-03-28T19:00:00"
+                },
+                {
+                  "home": "C.D. Melistar",
+                  "away": "C.D. Leganés F.S.",
+                  "date": "2026-03-28T19:45:00"
+                }
+              ]
+            },
+            {
+              "jornada": 25,
+              "matches": [
+                {
+                  "home": "Barça Atlètic",
+                  "away": "REYCO Burela FS",
+                  "date": "2026-04-11T13:00:00"
+                },
+                {
+                  "home": "Club Sala 5 Martorell",
+                  "away": "Inagroup CD El Ejido Futsal",
+                  "date": "2026-04-11T16:30:00"
+                },
+                {
+                  "home": "Gasifred Atlético Ibiza",
+                  "away": "Levante U.D. F.S.",
+                  "date": "2026-04-11T18:00:00"
+                },
+                {
+                  "home": "MRB FS Mostoles",
+                  "away": "Wanapix",
+                  "date": "2026-04-11T18:30:00"
+                },
+                {
+                  "home": "Heredia 21 Málaga CR",
+                  "away": "C.D. Melistar",
+                  "date": "2026-04-11T18:30:00"
+                },
+                {
+                  "home": "Unión África Ceutí \"A\"",
+                  "away": "Avanza Jaén Paraíso Interior",
+                  "date": "2026-04-11T19:00:00"
+                },
+                {
+                  "home": "Entrerrios Automatización",
+                  "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "date": "2026-04-11T19:00:00"
+                },
+                {
+                  "home": "C.D. Leganés F.S.",
+                  "away": "Vulcanizados Ruiz Tafa FS",
+                  "date": "2026-04-11T19:30:00"
+                }
+              ]
+            },
+            {
+              "jornada": 26,
+              "matches": [
+                {
+                  "home": "Avanza Jaén Paraíso Interior",
+                  "away": "Heredia 21 Málaga CR",
+                  "date": "2026-04-17T20:30:00"
+                },
+                {
+                  "home": "Gasifred Atlético Ibiza",
+                  "away": "Club Sala 5 Martorell",
+                  "date": "2026-04-18T16:00:00"
+                },
+                {
+                  "home": "Levante U.D. F.S.",
+                  "away": "Unión África Ceutí \"A\"",
+                  "date": "2026-04-18T16:30:00"
+                },
+                {
+                  "home": "Wanapix",
+                  "away": "C.D. Leganés F.S.",
+                  "date": "2026-04-18T17:00:00"
+                },
+                {
+                  "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "away": "Barça Atlètic",
+                  "date": "2026-04-18T18:00:00"
+                },
+                {
+                  "home": "Vulcanizados Ruiz Tafa FS",
+                  "away": "C.D. Melistar",
+                  "date": "2026-04-18T18:00:00"
+                },
+                {
+                  "home": "Inagroup CD El Ejido Futsal",
+                  "away": "Entrerrios Automatización",
+                  "date": "2026-04-18T18:30:00"
+                },
+                {
+                  "home": "REYCO Burela FS",
+                  "away": "MRB FS Mostoles",
+                  "date": "2026-04-18T19:00:00"
+                }
+              ]
+            },
+            {
+              "jornada": 27,
+              "matches": [
+                {
+                  "home": "MRB FS Mostoles",
+                  "away": "Avanza Jaén Paraíso Interior",
+                  "date": "2026-04-25T16:30:00"
+                },
+                {
+                  "home": "Barça Atlètic",
+                  "away": "Levante U.D. F.S.",
+                  "date": "2026-04-25T17:00:00"
+                },
+                {
+                  "home": "Club Sala 5 Martorell",
+                  "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "date": "2026-04-25T17:30:00"
+                },
+                {
+                  "home": "Vulcanizados Ruiz Tafa FS",
+                  "away": "Wanapix",
+                  "date": "2026-04-25T18:00:00"
+                },
+                {
+                  "home": "Heredia 21 Málaga CR",
+                  "away": "Inagroup CD El Ejido Futsal",
+                  "date": "2026-04-25T18:00:00"
+                },
+                {
+                  "home": "C.D. Leganés F.S.",
+                  "away": "REYCO Burela FS",
+                  "date": "2026-04-25T19:30:00"
+                },
+                {
+                  "home": "Entrerrios Automatización",
+                  "away": "Unión África Ceutí \"A\"",
+                  "date": "2026-04-26T11:30:00"
+                },
+                {
+                  "home": "C.D. Melistar",
+                  "away": "Gasifred Atlético Ibiza",
+                  "date": "2026-05-06T20:45:00"
+                }
+              ]
+            },
+            {
+              "jornada": 28,
+              "matches": [
+                {
+                  "home": "Gasifred Atlético Ibiza",
+                  "away": "Barça Atlètic",
+                  "date": "2026-05-02T16:30:00"
+                },
+                {
+                  "home": "Unión África Ceutí \"A\"",
+                  "away": "MRB FS Mostoles",
+                  "date": "2026-05-02T17:15:00"
+                },
+                {
+                  "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "away": "C.D. Leganés F.S.",
+                  "date": "2026-05-02T17:30:00"
+                },
+                {
+                  "home": "Avanza Jaén Paraíso Interior",
+                  "away": "Vulcanizados Ruiz Tafa FS",
+                  "date": "2026-05-02T17:45:00"
+                },
+                {
+                  "home": "Inagroup CD El Ejido Futsal",
+                  "away": "C.D. Melistar",
+                  "date": "2026-05-02T18:30:00"
+                },
+                {
+                  "home": "Levante U.D. F.S.",
+                  "away": "Club Sala 5 Martorell",
+                  "date": "2026-05-02T18:30:00"
+                },
+                {
+                  "home": "REYCO Burela FS",
+                  "away": "Entrerrios Automatización",
+                  "date": "2026-05-02T18:45:00"
+                },
+                {
+                  "home": "Wanapix",
+                  "away": "Heredia 21 Málaga CR",
+                  "date": "2026-05-03T11:15:00"
+                }
+              ]
+            },
+            {
+              "jornada": 29,
+              "matches": [
+                {
+                  "home": "C.D. Melistar",
+                  "away": "Wanapix",
+                  "date": "2026-05-09T17:00:00"
+                },
+                {
+                  "home": "Heredia 21 Málaga CR",
+                  "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "date": "2026-05-09T17:00:00"
+                },
+                {
+                  "home": "Barça Atlètic",
+                  "away": "Unión África Ceutí \"A\"",
+                  "date": "2026-05-09T18:00:00"
+                },
+                {
+                  "home": "Vulcanizados Ruiz Tafa FS",
+                  "away": "Levante U.D. F.S.",
+                  "date": "2026-05-09T18:00:00"
+                },
+                {
+                  "home": "MRB FS Mostoles",
+                  "away": "Inagroup CD El Ejido Futsal",
+                  "date": "2026-05-09T18:30:00"
+                },
+                {
+                  "home": "Club Sala 5 Martorell",
+                  "away": "REYCO Burela FS",
+                  "date": "2026-05-09T18:30:00"
+                },
+                {
+                  "home": "Entrerrios Automatización",
+                  "away": "Gasifred Atlético Ibiza",
+                  "date": "2026-05-09T19:30:00"
+                },
+                {
+                  "home": "C.D. Leganés F.S.",
+                  "away": "Avanza Jaén Paraíso Interior",
+                  "date": "2026-05-09T19:30:00"
+                }
+              ]
+            },
+            {
+              "jornada": 30,
+              "matches": [
+                {
+                  "home": "Inagroup CD El Ejido Futsal",
+                  "away": "C.D. Leganés F.S.",
+                  "date": "2026-05-16T16:00:00"
+                },
+                {
+                  "home": "Gasifred Atlético Ibiza",
+                  "away": "MRB FS Mostoles",
+                  "date": "2026-05-16T16:00:00"
+                },
+                {
+                  "home": "REYCO Burela FS",
+                  "away": "Heredia 21 Málaga CR",
+                  "date": "2026-05-16T16:00:00"
+                },
+                {
+                  "home": "Wanapix",
+                  "away": "Barça Atlètic",
+                  "date": "2026-05-16T16:00:00"
+                },
+                {
+                  "home": "Levante U.D. F.S.",
+                  "away": "Entrerrios Automatización",
+                  "date": "2026-05-16T16:00:00"
+                },
+                {
+                  "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "away": "Vulcanizados Ruiz Tafa FS",
+                  "date": "2026-05-16T16:00:00"
+                },
+                {
+                  "home": "Avanza Jaén Paraíso Interior",
+                  "away": "C.D. Melistar",
+                  "date": "2026-05-16T16:00:00"
+                },
+                {
+                  "home": "Unión África Ceutí \"A\"",
+                  "away": "Club Sala 5 Martorell",
+                  "date": "2026-05-16T19:00:00"
+                }
+              ]
+            }
           ]
         },
         {
           "id": "rfef-segunda-b-fs-masc",
           "name": "Segunda División FS B",
           "gender": "masculino",
-          "teams": []
+          "teams": [],
+          "calendar": [
+            {
+              "jornada": 1,
+              "matches": [
+                {
+                  "home": "Las Cuevecitas FS",
+                  "away": "Grupo López Bolaños F.S. \"A\"",
+                  "date": "2026-05-09T19:00:00"
+                },
+                {
+                  "home": "F.S. Salamanca",
+                  "away": "Pinseque A.D.",
+                  "date": "2026-05-09T19:03:00"
+                },
+                {
+                  "home": "Otxartabe C.D.",
+                  "away": "Adc Lugo Sala",
+                  "date": "2026-05-09T20:21:00"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "C.D. Tenerife Iberia Toscal",
+                  "date": "2026-05-10T12:00:00"
+                },
+                {
+                  "home": "ElPozo Ciudad de Murcia",
+                  "away": "C. Natacio Sabadell",
+                  "date": "2026-05-10T12:00:00"
+                },
+                {
+                  "home": "Club Inter Movistar F.S.",
+                  "away": "Xerez Toyota Nimauto",
+                  "date": "2026-05-10T13:15:00"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "rfef-primera-fs-fem",
@@ -299,6 +1373,142 @@
                 {
                   "name": "Caja Rural River Zamora",
                   "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20229/19/62551b6e55eb19dc00d857394ddbe649.jpg"
+                }
+              ]
+            },
+            {
+              "id": "g2",
+              "name": "Grupo 2",
+              "teams": [
+                {
+                  "name": "Wanapix Aldelis InterSala 10 Zaragoza",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079011245_escudo_Intersala_sin_fondo.png"
+                },
+                {
+                  "name": "CFS Autoescola Urgell Linyola",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079009175_00100_0000971713_Escut_cfs_contorn_vermell__1_.png"
+                },
+                {
+                  "name": "Entrerrios Automatización",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078998520_Aragon_XXI.png"
+                },
+                {
+                  "name": "Lainco Esportiu Rubi F.S.",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078990466_escudo_esportiu_rubi.jpg"
+                },
+                {
+                  "name": "Somriu Futbol Sala Ripollet",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079009174_00100_0000485600_RIPOLLET_F.S._copia.png"
+                },
+                {
+                  "name": "U.D.C. Txantrea K.K.E.",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1415/DOCS/20149/18/6ebfb8b44cbf2204c3178b253aeb4b3e_Gg8SK3Ej.jpg"
+                },
+                {
+                  "name": "SolarMon-Les Glories 2014 CD La Concordia",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008807_escudo_pelota_nueva__2_.jpg"
+                },
+                {
+                  "name": "Futsal Cartonajes Pans Mataró",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/70f2d7d910390790b0ee8a247317880e.jpg"
+                },
+                {
+                  "name": "Grupo Reciclarte Cesar Augusta",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0078998203_CESAR_AUGUSTA.jpg"
+                },
+                {
+                  "name": "F.S. Sabadell",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/d176d091d48f4186bc9755ed5db31c85.JPg"
+                },
+                {
+                  "name": "AECS L Hospitalet",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/e91e07aa2419023cedae05d009e1f368.jpg"
+                },
+                {
+                  "name": "CD Lacturale Orvina",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079009077_logo_club_deportivo_orvina_texto_rojo.png"
+                },
+                {
+                  "name": "Feme Castellón C.F.S.",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/usr/local/projects/weblogic/repository/AS400/02/DOCS/201304/29/12074844.jpg"
+                },
+                {
+                  "name": "SD Hispania Yecla",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078999056_Logo_Hispania.jpg"
+                },
+                {
+                  "name": "CN Caldes",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/df07e03cd20fdd5c7fb8122543e09f4d.jpg"
+                },
+                {
+                  "name": "System Cars Avenida Alagón FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008818_logo_en_mini.jpg"
+                }
+              ]
+            },
+            {
+              "id": "g3",
+              "name": "Grupo 3",
+              "teams": [
+                {
+                  "name": "Almagro F.S.F.",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206578_50x50.png"
+                },
+                {
+                  "name": "CD Salesianos Puertollano",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/16ff2cb1e1eeb0d3d4dcf12b8ac7e85a.jpg"
+                },
+                {
+                  "name": "C.F.S. Femenino San Fernando",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078990598_00100_0000003259_escudo_sanfer_web.jpg"
+                },
+                {
+                  "name": "C.D.E. Leganés F.S. Masdeporte",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079009231_IMG_20250929_WA0005.jpg"
+                },
+                {
+                  "name": "ARRIVA AD Alcorcón FSF",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206184_50x50.png"
+                },
+                {
+                  "name": "I.E.S. Luis de Camoens",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20229/22/6c77af036b358578948a0f1d37634930.jpg"
+                },
+                {
+                  "name": "Martos FS Jaén Paraíso Interior",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/anterior/1314/DOCS/20138/16/bbc7004947d0f7115a8099108146b704_pumhdq76.jpg"
+                },
+                {
+                  "name": "Globalcaja Albacete F.S.",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1415/DOCS/201410/5/c44ab32d3034b9b1c315995904be88bd_7iTQskyY.jpg"
+                },
+                {
+                  "name": "Atletico Navalcarnero",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079008545_logo.png"
+                },
+                {
+                  "name": "Fundación UAPO Granada FS Femenino",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008961_Granada_F.S..png"
+                },
+                {
+                  "name": "Majadahonda F.S.F./Afar 4",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20228/31/8c6e20bfe9cb72c33bd8df6353738138.jpg"
+                },
+                {
+                  "name": "Melilla Ciudad del Deporte Torreblanca C. F.",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/207211_50x50.png"
+                },
+                {
+                  "name": "Deportivo Cordoba F.S. / Cajasur",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/anterior/1314/DOCS/20138/17/734c5d4e3a35939a34bd5e685d41409a_2O375EZN.jpg"
+                },
+                {
+                  "name": "Torrejón Sala Five Play",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079007318_escudo_torrejon_sala.jpg"
+                },
+                {
+                  "name": "UD Azuqueca FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079009176_bormioli_220x220.jpg"
                 }
               ]
             }
