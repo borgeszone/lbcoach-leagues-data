@@ -40,11 +40,20 @@ from scrapers.rfef_clasificacion import (
 )
 
 CAL_PATH = "/pnfg/NPcd/NFG_CmpJornada"
+# Endpoint del acta oficial (PDF) que la PNFG genera por partido. Cada partido
+# de `NFG_CmpJornada` viene con un `CodActa` numérico único; con él se construye
+# esta URL y la federación devuelve el acta firmada por el árbitro como PDF.
+ACTA_URL_TMPL = (
+    "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion"
+    "?cod_primaria=1000121&codacta={cod_acta}&NPcd_Pdf=1"
+)
 
 # "DD-MM-YYYY HH:MM" dentro de la fila del partido.
 _DT_RE = re.compile(r"(\d{2})-(\d{2})-(\d{4})\s+(\d{2}):(\d{2})")
 # Opción del <select name=jornada>: "1 - 06-09-2025".
 _JORNADA_OPT_RE = re.compile(r"^\s*(\d+)\s*-\s*\d{2}-\d{2}-\d{4}")
+# `<a href="...NFG_CmpPartido?...CodActa=NNN...">` o `cod_acta=NNN`.
+_COD_ACTA_RE = re.compile(r"[Cc]od[_]?[Aa]cta=(\d+)")
 
 _BACKOFFS = [15, 30, 60, 120]
 
@@ -210,11 +219,27 @@ def _parse_matches(html: str) -> list[dict]:
         seen.add(key)
 
         date_iso = None
-        m = _DT_RE.search(tr.get_text(" ", strip=True))
+        tr_text = tr.get_text(" ", strip=True)
+        m = _DT_RE.search(tr_text)
         if m:
             dd, mm, yyyy, hh, mn = m.groups()
             date_iso = f"{yyyy}-{mm}-{dd}T{hh}:{mn}:00"
-        out.append({"home": home, "away": away, "date": date_iso})
+
+        # CodActa: aparece como `CodActa=NNN` o `codacta=NNN` en los <a href>
+        # que apuntan al detalle del partido o al PDF de la alineación. Se
+        # construye la URL del acta solo si encontramos el código.
+        acta_url = None
+        href_blob = " ".join(a.get("href", "") for a in tr.find_all("a", href=True))
+        ma = _COD_ACTA_RE.search(href_blob)
+        if ma:
+            acta_url = ACTA_URL_TMPL.format(cod_acta=ma.group(1))
+
+        out.append({
+            "home": home,
+            "away": away,
+            "date": date_iso,
+            "actaUrl": acta_url,
+        })
     return out
 
 
