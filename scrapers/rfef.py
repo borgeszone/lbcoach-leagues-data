@@ -557,12 +557,6 @@ def scrape(season: str, resolve_badges: bool = True) -> dict:
     # `calendar` y la app cae al formulario manual.
     _attach_calendars(out_divisions, season)
 
-    # Post-proceso: añadir calendario por jornadas a cada división/grupo cuando
-    # haya PDF descargable. La clasificación HTML no expone el calendario; los
-    # PDFs sí. Mantenemos esto como paso aparte para no acoplarlo al flujo
-    # principal de scraping de equipos.
-    _attach_calendars(out_divisions, season)
-
     return {
         "id": "rfef",
         "name": "Liga Española",
@@ -572,68 +566,45 @@ def scrape(season: str, resolve_badges: bool = True) -> dict:
 
 
 def _attach_calendars(out_divisions: list[dict], season: str) -> None:
-    """Para cada división payload, intenta descargar su PDF de calendario y
-    adjunta el calendario por jornadas. Silencioso si no hay PDF o el parse
-    falla."""
-    pdf_cache: dict[str, bytes | None] = {}
+    """Añade `calendar` a cada división/grupo de `out_divisions`.
 
-    def _get(url: str) -> bytes | None:
-        if url not in pdf_cache:
-            pdf_cache[url] = _download_pdf(url)
-        return pdf_cache[url]
+    Estrategia en cascada por división:
+    1. Endpoint `NFG_CmpJornada` (rfef_calendario.fetch_division_calendar).
+       Es la fuente preferente: fechas y horas precisas, mismos códigos que
+       la clasificación. Si la PNFG está rate-limitada devuelve `[]`.
+    2. Fallback al PDF oficial (`_extract_calendar_from_pdf`). Recupera al
+       menos jornada + fecha + enfrentamientos cuando el endpoint falla.
+       Sin horas concretas (los PDFs solo traen la fecha de la jornada).
 
-    for div_payload in out_divisions:
-        div_cfg = next((c for c in DIVISIONS if c["id"] == div_payload["id"]), None)
-        if not div_cfg:
-            continue
-
-        if div_payload.get("groups"):
-            # División con grupos: un PDF por grupo via groups_url_pattern
-            pattern = div_cfg.get("groups_url_pattern")
-            if not pattern:
-                continue
-            for group_payload in div_payload["groups"]:
-                m = re.match(r"g(\d+)$", group_payload["id"])
-                if not m:
-                    continue
-                pdf = _get(pattern.format(n=int(m.group(1))))
-                if not pdf:
-                    continue
-                cal = _extract_calendar_from_pdf(pdf)
-                if cal:
-                    group_payload["calendar"] = cal
-                    print(
-                        f"  [rfef-cal] {div_payload['id']}/{group_payload['id']}: "
-                        f"{len(cal)} jornadas, "
-                        f"{sum(len(j['matches']) for j in cal)} partidos"
-                    )
-        else:
-            # División plana: un único PDF unificado
-            pdf_id = div_cfg.get("pdf_id")
-            if not pdf_id:
-                continue
-            pdf = _get(_pdf_url(pdf_id, season))
-            if not pdf:
-                continue
-            cal = _extract_calendar_from_pdf(pdf)
-            if cal:
-                div_payload["calendar"] = cal
-                print(
-                    f"  [rfef-cal] {div_payload['id']}: "
-                    f"{len(cal)} jornadas, "
-                    f"{sum(len(j['matches']) for j in cal)} partidos"
-                )
-
-
-def _attach_calendars(out_divisions: list[dict], season: str) -> None:
-    """Añade `calendar` a cada división/grupo de `out_divisions` que tenga
-    códigos de clasificación en la config. Muta `out_divisions` in-place."""
+    Muta `out_divisions` in-place. Best-effort: si todo falla, la división
+    queda sin `calendar` y la app cae al formulario manual.
+    """
     by_id = {d["id"]: d for d in out_divisions}
     temporada_code = resolve_temporada_code(season)
     if temporada_code:
         print(f"[rfef-cal] CodTemporada para {season}: {temporada_code}")
     else:
         print(f"[rfef-cal] CodTemporada no resuelto para {season}; usando temporada por defecto del servidor")
+
+    pdf_cache: dict[str, bytes | None] = {}
+
+    def _pdf_calendar_for(div_cfg: dict, group_n: int | None = None) -> list[dict]:
+        """Descarga el PDF oficial y extrae el calendario por jornadas. Devuelve
+        `[]` si no hay PDF descargable o el parse falla."""
+        if group_n is not None:
+            pattern = div_cfg.get("groups_url_pattern")
+            if not pattern:
+                return []
+            url = pattern.format(n=group_n)
+        else:
+            pdf_id = div_cfg.get("pdf_id")
+            if not pdf_id:
+                return []
+            url = _pdf_url(pdf_id, season)
+        if url not in pdf_cache:
+            pdf_cache[url] = _download_pdf(url)
+        pdf = pdf_cache[url]
+        return _extract_calendar_from_pdf(pdf) if pdf else []
 
     for div_cfg in DIVISIONS:
         div = by_id.get(div_cfg["id"])
@@ -650,6 +621,14 @@ def _attach_calendars(out_divisions: list[dict], season: str) -> None:
                 calendar = fetch_division_calendar(
                     g_cfg["comp"], g_cfg["grupo"], temporada_code=temporada_code
                 )
+                if not calendar:
+                    # Fallback PDF: extrae jornada/fecha/enfrentamientos.
+                    n_match = re.match(r"g(\d+)$", g_cfg["id"])
+                    if n_match:
+                        calendar = _pdf_calendar_for(div_cfg, group_n=int(n_match.group(1)))
+                        if calendar:
+                            print(f"  [rfef-cal] {div_cfg['id']}/{g_cfg['id']}: "
+                                  f"fallback PDF → {len(calendar)} jornadas")
                 if calendar:
                     grp["calendar"] = calendar
                 time.sleep(10)
@@ -659,6 +638,11 @@ def _attach_calendars(out_divisions: list[dict], season: str) -> None:
                 div_cfg["clasificacion"]["grupo"],
                 temporada_code=temporada_code,
             )
+            if not calendar:
+                calendar = _pdf_calendar_for(div_cfg)
+                if calendar:
+                    print(f"  [rfef-cal] {div_cfg['id']}: "
+                          f"fallback PDF → {len(calendar)} jornadas")
             if calendar:
                 div["calendar"] = calendar
             time.sleep(10)
