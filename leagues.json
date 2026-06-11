@@ -1,6 +1,6 @@
 {
   "version": "2025-2026",
-  "lastUpdated": "2026-06-10T23:18:43+00:00",
+  "lastUpdated": "2026-06-11T17:23:19+00:00",
   "categories": [
     {
       "id": "rfef",
@@ -75,6 +75,1148 @@
             {
               "name": "ATP Iluminación Tudelano Ribera Navarra FS",
               "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008853_17.png"
+            }
+          ],
+          "calendar": [
+            {
+              "jornada": 1,
+              "date": "2025-09-06",
+              "matches": [
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "ATP Iluminación Tudelano Ribera de Navarra",
+                  "away": "Industrias Santa Coloma"
+                },
+                {
+                  "home": "Movistar Inter FS.",
+                  "away": "Barça"
+                },
+                {
+                  "home": "Elpozo Murcia Costa Cálida",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Real Betis Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 2,
+              "date": "2025-09-09",
+              "matches": [
+                {
+                  "home": "Barça",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "ATP Iluminación Tudelano Ribera de Navarra"
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Movistar Inter FS."
+                },
+                {
+                  "home": "Real Betis Futsal",
+                  "away": "Elpozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Industrias Santa Coloma",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Illes Balears Palma Futsal"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "O Parrulo Ferrol FS."
+                }
+              ]
+            },
+            {
+              "jornada": 3,
+              "date": "2025-09-13",
+              "matches": [
+                {
+                  "home": "Barça",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Movistar Inter FS."
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Industrias Santa Coloma"
+                },
+                {
+                  "home": "ATP Iluminación Tudelano Ribera de Navarra",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "Elpozo Murcia Costa Cálida",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Real Betis Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 4,
+              "date": "2025-09-27",
+              "matches": [
+                {
+                  "home": "Movistar Inter FS.",
+                  "away": "ATP Iluminación Tudelano Ribera de Navarra"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Real Betis Futsal",
+                  "away": "Barça"
+                },
+                {
+                  "home": "Industrias Santa Coloma",
+                  "away": "Elpozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Illes Balears Palma Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 5,
+              "date": "2025-10-04",
+              "matches": [
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "ATP Iluminación Tudelano Ribera de Navarra",
+                  "away": "Barça"
+                },
+                {
+                  "home": "Elpozo Murcia Costa Cálida",
+                  "away": "Movistar Inter FS."
+                },
+                {
+                  "home": "Industrias Santa Coloma",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Real Betis Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 6,
+              "date": "2025-10-11",
+              "matches": [
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Barça",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Elpozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Movistar Inter FS.",
+                  "away": "Industrias Santa Coloma"
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "ATP Iluminación Tudelano Ribera de Navarra"
+                },
+                {
+                  "home": "Real Betis Futsal",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Illes Balears Palma Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 7,
+              "date": "2025-10-25",
+              "matches": [
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Movistar Inter FS."
+                },
+                {
+                  "home": "Elpozo Murcia Costa Cálida",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Barça"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "ATP Iluminación Tudelano Ribera de Navarra",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "Industrias Santa Coloma",
+                  "away": "Real Betis Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 8,
+              "date": "2025-11-01",
+              "matches": [
+                {
+                  "home": "Barça",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Industrias Santa Coloma"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Elpozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "Real Betis Futsal",
+                  "away": "ATP Iluminación Tudelano Ribera de Navarra"
+                },
+                {
+                  "home": "Movistar Inter FS.",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Illes Balears Palma Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 9,
+              "date": "2025-11-08",
+              "matches": [
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Elpozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Barça"
+                },
+                {
+                  "home": "Movistar Inter FS.",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "ATP Iluminación Tudelano Ribera de Navarra",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Industrias Santa Coloma",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Real Betis Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 10,
+              "date": "2025-11-15",
+              "matches": [
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Industrias Santa Coloma"
+                },
+                {
+                  "home": "Barça",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "Elpozo Murcia Costa Cálida",
+                  "away": "ATP Iluminación Tudelano Ribera de Navarra"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "Movistar Inter FS."
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Real Betis Futsal",
+                  "away": "Illes Balears Palma Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 11,
+              "date": "2025-11-22",
+              "matches": [
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Elpozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Barça"
+                },
+                {
+                  "home": "ATP Iluminación Tudelano Ribera de Navarra",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "Industrias Santa Coloma",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "Movistar Inter FS.",
+                  "away": "Real Betis Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 12,
+              "date": "2025-11-29",
+              "matches": [
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Industrias Santa Coloma"
+                },
+                {
+                  "home": "Real Betis Futsal",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "ATP Iluminación Tudelano Ribera de Navarra"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Movistar Inter FS."
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Elpozo Murcia Costa Cálida",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Barça",
+                  "away": "Illes Balears Palma Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 13,
+              "date": "2025-12-06",
+              "matches": [
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Elpozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Movistar Inter FS.",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "ATP Iluminación Tudelano Ribera de Navarra",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "Barça"
+                },
+                {
+                  "home": "Industrias Santa Coloma",
+                  "away": "Illes Balears Palma Futsal"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Real Betis Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 14,
+              "date": "2025-12-13",
+              "matches": [
+                {
+                  "home": "Barça",
+                  "away": "Industrias Santa Coloma"
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "ATP Iluminación Tudelano Ribera de Navarra"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Movistar Inter FS."
+                },
+                {
+                  "home": "Real Betis Futsal",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Elpozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Jaén Paraiso Interior FS."
+                }
+              ]
+            },
+            {
+              "jornada": 15,
+              "date": "2025-12-27",
+              "matches": [
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Movistar Inter FS.",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "ATP Iluminación Tudelano Ribera de Navarra",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "Elpozo Murcia Costa Cálida",
+                  "away": "Barça"
+                },
+                {
+                  "home": "Industrias Santa Coloma",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Illes Balears Palma Futsal"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Real Betis Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 16,
+              "date": "2026-01-06",
+              "matches": [
+                {
+                  "home": "Barça",
+                  "away": "Movistar Inter FS."
+                },
+                {
+                  "home": "Elpozo Murcia Costa Cálida",
+                  "away": "Industrias Santa Coloma"
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "ATP Iluminación Tudelano Ribera de Navarra",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Real Betis Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 17,
+              "date": "2026-01-10",
+              "matches": [
+                {
+                  "home": "Industrias Santa Coloma",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "Movistar Inter FS.",
+                  "away": "Elpozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "ATP Iluminación Tudelano Ribera de Navarra"
+                },
+                {
+                  "home": "Real Betis Futsal",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Barça"
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Illes Balears Palma Futsal"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "O Parrulo Ferrol FS."
+                }
+              ]
+            },
+            {
+              "jornada": 18,
+              "date": "2026-02-14",
+              "matches": [
+                {
+                  "home": "Barça",
+                  "away": "Real Betis Futsal"
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Industrias Santa Coloma"
+                },
+                {
+                  "home": "Elpozo Murcia Costa Cálida",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "ATP Iluminación Tudelano Ribera de Navarra",
+                  "away": "Movistar Inter FS."
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Noia Portus Apostoli"
+                }
+              ]
+            },
+            {
+              "jornada": 19,
+              "date": "2026-02-21",
+              "matches": [
+                {
+                  "home": "Industrias Santa Coloma",
+                  "away": "ATP Iluminación Tudelano Ribera de Navarra"
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "Elpozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Real Betis Futsal",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Barça"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "Movistar Inter FS.",
+                  "away": "Illes Balears Palma Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 20,
+              "date": "2026-02-28",
+              "matches": [
+                {
+                  "home": "Barça",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Movistar Inter FS."
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "Industrias Santa Coloma"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "Elpozo Murcia Costa Cálida",
+                  "away": "Illes Balears Palma Futsal"
+                },
+                {
+                  "home": "ATP Iluminación Tudelano Ribera de Navarra",
+                  "away": "Real Betis Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 21,
+              "date": "2026-03-07",
+              "matches": [
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Elpozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Barça"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "ATP Iluminación Tudelano Ribera de Navarra"
+                },
+                {
+                  "home": "Real Betis Futsal",
+                  "away": "Movistar Inter FS."
+                },
+                {
+                  "home": "Industrias Santa Coloma",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                }
+              ]
+            },
+            {
+              "jornada": 22,
+              "date": "2026-03-14",
+              "matches": [
+                {
+                  "home": "ATP Iluminación Tudelano Ribera de Navarra",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Barça",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "Real Betis Futsal",
+                  "away": "Industrias Santa Coloma"
+                },
+                {
+                  "home": "Movistar Inter FS.",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Illes Balears Palma Futsal"
+                },
+                {
+                  "home": "Elpozo Murcia Costa Cálida",
+                  "away": "O Parrulo Ferrol FS."
+                }
+              ]
+            },
+            {
+              "jornada": 23,
+              "date": "2026-03-28",
+              "matches": [
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Elpozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Movistar Inter FS."
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "ATP Iluminación Tudelano Ribera de Navarra"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Real Betis Futsal"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "Industrias Santa Coloma",
+                  "away": "Barça"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Noia Portus Apostoli"
+                }
+              ]
+            },
+            {
+              "jornada": 24,
+              "date": "2026-04-04",
+              "matches": [
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Barça",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "ATP Iluminación Tudelano Ribera de Navarra"
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Industrias Santa Coloma"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Real Betis Futsal",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "Elpozo Murcia Costa Cálida",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "Movistar Inter FS.",
+                  "away": "O Parrulo Ferrol FS."
+                }
+              ]
+            },
+            {
+              "jornada": 25,
+              "date": "2026-04-18",
+              "matches": [
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Barça"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "ATP Iluminación Tudelano Ribera de Navarra",
+                  "away": "Elpozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Industrias Santa Coloma",
+                  "away": "Movistar Inter FS."
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Illes Balears Palma Futsal"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "Real Betis Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 26,
+              "date": "2026-04-25",
+              "matches": [
+                {
+                  "home": "Barça",
+                  "away": "ATP Iluminación Tudelano Ribera de Navarra"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Industrias Santa Coloma"
+                },
+                {
+                  "home": "Elpozo Murcia Costa Cálida",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Movistar Inter FS.",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "Real Betis Futsal",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                }
+              ]
+            },
+            {
+              "jornada": 27,
+              "date": "2026-04-28",
+              "matches": [
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Elpozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Real Betis Futsal",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Industrias Santa Coloma",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Barça"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Movistar Inter FS."
+                },
+                {
+                  "home": "ATP Iluminación Tudelano Ribera de Navarra",
+                  "away": "Illes Balears Palma Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 28,
+              "date": "2026-05-02",
+              "matches": [
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "ATP Iluminación Tudelano Ribera de Navarra"
+                },
+                {
+                  "home": "Barça",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Industrias Santa Coloma"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "Movistar Inter FS.",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Elpozo Murcia Costa Cálida",
+                  "away": "Real Betis Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 29,
+              "date": "2026-05-09",
+              "matches": [
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "ATP Iluminación Tudelano Ribera de Navarra"
+                },
+                {
+                  "home": "Barça",
+                  "away": "Elpozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Industrias Santa Coloma"
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "Real Betis Futsal",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Movistar Inter FS."
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "Illes Balears Palma Futsal"
+                }
+              ]
+            },
+            {
+              "jornada": 30,
+              "date": "2026-05-16",
+              "matches": [
+                {
+                  "home": "Movistar Inter FS.",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Elpozo Murcia Costa Cálida",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Barça"
+                },
+                {
+                  "home": "ATP Iluminación Tudelano Ribera de Navarra",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Industrias Santa Coloma",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Real Betis Futsal"
+                }
+              ]
             }
           ]
         },
@@ -1298,6 +2440,1148 @@
               "name": "REYCO Burela FS",
               "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206276_50x50.png"
             }
+          ],
+          "calendar": [
+            {
+              "jornada": 1,
+              "date": "2025-09-06",
+              "matches": [
+                {
+                  "home": "Burela FS",
+                  "away": "Melilla Ciudad del Deporte Torreblanca CF"
+                },
+                {
+                  "home": "Futsi Atlético Navalcarnero",
+                  "away": "STV Roldán FS"
+                },
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "Ceuta Agrupación Deportiva"
+                },
+                {
+                  "home": "C.D. Chiloeches",
+                  "away": "AE Les Corts UBAE"
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "CD Guadalcacín FS"
+                },
+                {
+                  "home": "Ourense Ontime",
+                  "away": "Arriva AD Alcorcón FSF"
+                },
+                {
+                  "home": "Poio Pescamar FS.",
+                  "away": "PH-Quirogel AE Penya Esplugues"
+                },
+                {
+                  "home": "Nueces de Ronda Atlético Torcal FS.",
+                  "away": "FSF Castro Bloques Cando"
+                }
+              ]
+            },
+            {
+              "jornada": 2,
+              "date": "2025-09-13",
+              "matches": [
+                {
+                  "home": "CD Guadalcacín FS",
+                  "away": "Poio Pescamar FS."
+                },
+                {
+                  "home": "Arriva AD Alcorcón FSF",
+                  "away": "Burela FS"
+                },
+                {
+                  "home": "AE Les Corts UBAE",
+                  "away": "Futsi Atlético Navalcarnero"
+                },
+                {
+                  "home": "Ceuta Agrupación Deportiva",
+                  "away": "Ourense Ontime"
+                },
+                {
+                  "home": "PH-Quirogel AE Penya Esplugues",
+                  "away": "Nueces de Ronda Atlético Torcal FS."
+                },
+                {
+                  "home": "FSF Castro Bloques Cando",
+                  "away": "LBTL Futsal Alcantarilla"
+                },
+                {
+                  "home": "STV Roldán FS",
+                  "away": "MRB Móstoles FSF"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca CF",
+                  "away": "C.D. Chiloeches"
+                }
+              ]
+            },
+            {
+              "jornada": 3,
+              "date": "2025-09-20",
+              "matches": [
+                {
+                  "home": "Burela FS",
+                  "away": "CD Guadalcacín FS"
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "Melilla Ciudad del Deporte Torreblanca CF"
+                },
+                {
+                  "home": "C.D. Chiloeches",
+                  "away": "STV Roldán FS"
+                },
+                {
+                  "home": "PH-Quirogel AE Penya Esplugues",
+                  "away": "Ourense Ontime"
+                },
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "Arriva AD Alcorcón FSF"
+                },
+                {
+                  "home": "Nueces de Ronda Atlético Torcal FS.",
+                  "away": "AE Les Corts UBAE"
+                },
+                {
+                  "home": "Poio Pescamar FS.",
+                  "away": "Ceuta Agrupación Deportiva"
+                },
+                {
+                  "home": "Futsi Atlético Navalcarnero",
+                  "away": "FSF Castro Bloques Cando"
+                }
+              ]
+            },
+            {
+              "jornada": 4,
+              "date": "2025-09-27",
+              "matches": [
+                {
+                  "home": "Poio Pescamar FS.",
+                  "away": "Nueces de Ronda Atlético Torcal FS."
+                },
+                {
+                  "home": "AE Les Corts UBAE",
+                  "away": "MRB Móstoles FSF"
+                },
+                {
+                  "home": "Ceuta Agrupación Deportiva",
+                  "away": "PH-Quirogel AE Penya Esplugues"
+                },
+                {
+                  "home": "FSF Castro Bloques Cando",
+                  "away": "C.D. Chiloeches"
+                },
+                {
+                  "home": "STV Roldán FS",
+                  "away": "Burela FS"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca CF",
+                  "away": "Futsi Atlético Navalcarnero"
+                },
+                {
+                  "home": "Ourense Ontime",
+                  "away": "LBTL Futsal Alcantarilla"
+                },
+                {
+                  "home": "CD Guadalcacín FS",
+                  "away": "Arriva AD Alcorcón FSF"
+                }
+              ]
+            },
+            {
+              "jornada": 5,
+              "date": "2025-10-04",
+              "matches": [
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "Poio Pescamar FS."
+                },
+                {
+                  "home": "Arriva AD Alcorcón FSF",
+                  "away": "Melilla Ciudad del Deporte Torreblanca CF"
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "Ourense Ontime"
+                },
+                {
+                  "home": "C.D. Chiloeches",
+                  "away": "CD Guadalcacín FS"
+                },
+                {
+                  "home": "Ceuta Agrupación Deportiva",
+                  "away": "AE Les Corts UBAE"
+                },
+                {
+                  "home": "Futsi Atlético Navalcarnero",
+                  "away": "Burela FS"
+                },
+                {
+                  "home": "Nueces de Ronda Atlético Torcal FS.",
+                  "away": "STV Roldán FS"
+                },
+                {
+                  "home": "PH-Quirogel AE Penya Esplugues",
+                  "away": "FSF Castro Bloques Cando"
+                }
+              ]
+            },
+            {
+              "jornada": 6,
+              "date": "2025-10-11",
+              "matches": [
+                {
+                  "home": "Burela FS",
+                  "away": "MRB Móstoles FSF"
+                },
+                {
+                  "home": "CD Guadalcacín FS",
+                  "away": "Futsi Atlético Navalcarnero"
+                },
+                {
+                  "home": "Arriva AD Alcorcón FSF",
+                  "away": "PH-Quirogel AE Penya Esplugues"
+                },
+                {
+                  "home": "FSF Castro Bloques Cando",
+                  "away": "Ceuta Agrupación Deportiva"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca CF",
+                  "away": "STV Roldán FS"
+                },
+                {
+                  "home": "Nueces de Ronda Atlético Torcal FS.",
+                  "away": "LBTL Futsal Alcantarilla"
+                },
+                {
+                  "home": "Ourense Ontime",
+                  "away": "AE Les Corts UBAE"
+                },
+                {
+                  "home": "Poio Pescamar FS.",
+                  "away": "C.D. Chiloeches"
+                }
+              ]
+            },
+            {
+              "jornada": 7,
+              "date": "2025-10-18",
+              "matches": [
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "Futsi Atlético Navalcarnero"
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "Poio Pescamar FS."
+                },
+                {
+                  "home": "PH-Quirogel AE Penya Esplugues",
+                  "away": "Melilla Ciudad del Deporte Torreblanca CF"
+                },
+                {
+                  "home": "Ourense Ontime",
+                  "away": "Nueces de Ronda Atlético Torcal FS."
+                },
+                {
+                  "home": "C.D. Chiloeches",
+                  "away": "Burela FS"
+                },
+                {
+                  "home": "STV Roldán FS",
+                  "away": "CD Guadalcacín FS"
+                },
+                {
+                  "home": "Ceuta Agrupación Deportiva",
+                  "away": "Arriva AD Alcorcón FSF"
+                },
+                {
+                  "home": "AE Les Corts UBAE",
+                  "away": "FSF Castro Bloques Cando"
+                }
+              ]
+            },
+            {
+              "jornada": 8,
+              "date": "2025-10-25",
+              "matches": [
+                {
+                  "home": "Burela FS",
+                  "away": "AE Les Corts UBAE"
+                },
+                {
+                  "home": "Arriva AD Alcorcón FSF",
+                  "away": "FSF Castro Bloques Cando"
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "Nueces de Ronda Atlético Torcal FS."
+                },
+                {
+                  "home": "C.D. Chiloeches",
+                  "away": "PH-Quirogel AE Penya Esplugues"
+                },
+                {
+                  "home": "CD Guadalcacín FS",
+                  "away": "LBTL Futsal Alcantarilla"
+                },
+                {
+                  "home": "STV Roldán FS",
+                  "away": "Poio Pescamar FS."
+                },
+                {
+                  "home": "Futsi Atlético Navalcarnero",
+                  "away": "Ceuta Agrupación Deportiva"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca CF",
+                  "away": "Ourense Ontime"
+                }
+              ]
+            },
+            {
+              "jornada": 9,
+              "date": "2025-11-01",
+              "matches": [
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "MRB Móstoles FSF"
+                },
+                {
+                  "home": "Ceuta Agrupación Deportiva",
+                  "away": "STV Roldán FS"
+                },
+                {
+                  "home": "FSF Castro Bloques Cando",
+                  "away": "Melilla Ciudad del Deporte Torreblanca CF"
+                },
+                {
+                  "home": "PH-Quirogel AE Penya Esplugues",
+                  "away": "Burela FS"
+                },
+                {
+                  "home": "Ourense Ontime",
+                  "away": "Futsi Atlético Navalcarnero"
+                },
+                {
+                  "home": "AE Les Corts UBAE",
+                  "away": "CD Guadalcacín FS"
+                },
+                {
+                  "home": "Poio Pescamar FS.",
+                  "away": "Arriva AD Alcorcón FSF"
+                },
+                {
+                  "home": "Nueces de Ronda Atlético Torcal FS.",
+                  "away": "C.D. Chiloeches"
+                }
+              ]
+            },
+            {
+              "jornada": 10,
+              "date": "2025-12-13",
+              "matches": [
+                {
+                  "home": "Burela FS",
+                  "away": "Nueces de Ronda Atlético Torcal FS."
+                },
+                {
+                  "home": "CD Guadalcacín FS",
+                  "away": "Ourense Ontime"
+                },
+                {
+                  "home": "Arriva AD Alcorcón FSF",
+                  "away": "AE Les Corts UBAE"
+                },
+                {
+                  "home": "C.D. Chiloeches",
+                  "away": "LBTL Futsal Alcantarilla"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca CF",
+                  "away": "Poio Pescamar FS."
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "Ceuta Agrupación Deportiva"
+                },
+                {
+                  "home": "Futsi Atlético Navalcarnero",
+                  "away": "PH-Quirogel AE Penya Esplugues"
+                },
+                {
+                  "home": "STV Roldán FS",
+                  "away": "FSF Castro Bloques Cando"
+                }
+              ]
+            },
+            {
+              "jornada": 11,
+              "date": "2025-12-20",
+              "matches": [
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "Burela FS"
+                },
+                {
+                  "home": "AE Les Corts UBAE",
+                  "away": "Melilla Ciudad del Deporte Torreblanca CF"
+                },
+                {
+                  "home": "Ceuta Agrupación Deportiva",
+                  "away": "C.D. Chiloeches"
+                },
+                {
+                  "home": "PH-Quirogel AE Penya Esplugues",
+                  "away": "MRB Móstoles FSF"
+                },
+                {
+                  "home": "FSF Castro Bloques Cando",
+                  "away": "CD Guadalcacín FS"
+                },
+                {
+                  "home": "Ourense Ontime",
+                  "away": "STV Roldán FS"
+                },
+                {
+                  "home": "Poio Pescamar FS.",
+                  "away": "Futsi Atlético Navalcarnero"
+                },
+                {
+                  "home": "Nueces de Ronda Atlético Torcal FS.",
+                  "away": "Arriva AD Alcorcón FSF"
+                }
+              ]
+            },
+            {
+              "jornada": 12,
+              "date": "2026-01-03",
+              "matches": [
+                {
+                  "home": "Burela FS",
+                  "away": "Poio Pescamar FS."
+                },
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "PH-Quirogel AE Penya Esplugues"
+                },
+                {
+                  "home": "Arriva AD Alcorcón FSF",
+                  "away": "MRB Móstoles FSF"
+                },
+                {
+                  "home": "AE Les Corts UBAE",
+                  "away": "STV Roldán FS"
+                },
+                {
+                  "home": "C.D. Chiloeches",
+                  "away": "Futsi Atlético Navalcarnero"
+                },
+                {
+                  "home": "FSF Castro Bloques Cando",
+                  "away": "Ourense Ontime"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca CF",
+                  "away": "Nueces de Ronda Atlético Torcal FS."
+                },
+                {
+                  "home": "CD Guadalcacín FS",
+                  "away": "Ceuta Agrupación Deportiva"
+                }
+              ]
+            },
+            {
+              "jornada": 13,
+              "date": "2026-01-06",
+              "matches": [
+                {
+                  "home": "Burela FS",
+                  "away": "FSF Castro Bloques Cando"
+                },
+                {
+                  "home": "Ceuta Agrupación Deportiva",
+                  "away": "Melilla Ciudad del Deporte Torreblanca CF"
+                },
+                {
+                  "home": "PH-Quirogel AE Penya Esplugues",
+                  "away": "AE Les Corts UBAE"
+                },
+                {
+                  "home": "Ourense Ontime",
+                  "away": "Poio Pescamar FS."
+                },
+                {
+                  "home": "STV Roldán FS",
+                  "away": "LBTL Futsal Alcantarilla"
+                },
+                {
+                  "home": "Nueces de Ronda Atlético Torcal FS.",
+                  "away": "CD Guadalcacín FS"
+                },
+                {
+                  "home": "Futsi Atlético Navalcarnero",
+                  "away": "Arriva AD Alcorcón FSF"
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "C.D. Chiloeches"
+                }
+              ]
+            },
+            {
+              "jornada": 14,
+              "date": "2026-01-10",
+              "matches": [
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "AE Les Corts UBAE"
+                },
+                {
+                  "home": "Arriva AD Alcorcón FSF",
+                  "away": "C.D. Chiloeches"
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "Futsi Atlético Navalcarnero"
+                },
+                {
+                  "home": "PH-Quirogel AE Penya Esplugues",
+                  "away": "STV Roldán FS"
+                },
+                {
+                  "home": "Ourense Ontime",
+                  "away": "Burela FS"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca CF",
+                  "away": "CD Guadalcacín FS"
+                },
+                {
+                  "home": "Nueces de Ronda Atlético Torcal FS.",
+                  "away": "Ceuta Agrupación Deportiva"
+                },
+                {
+                  "home": "Poio Pescamar FS.",
+                  "away": "FSF Castro Bloques Cando"
+                }
+              ]
+            },
+            {
+              "jornada": 15,
+              "date": "2026-01-17",
+              "matches": [
+                {
+                  "home": "Burela FS",
+                  "away": "Ceuta Agrupación Deportiva"
+                },
+                {
+                  "home": "Futsi Atlético Navalcarnero",
+                  "away": "Nueces de Ronda Atlético Torcal FS."
+                },
+                {
+                  "home": "AE Les Corts UBAE",
+                  "away": "Poio Pescamar FS."
+                },
+                {
+                  "home": "C.D. Chiloeches",
+                  "away": "Ourense Ontime"
+                },
+                {
+                  "home": "FSF Castro Bloques Cando",
+                  "away": "MRB Móstoles FSF"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca CF",
+                  "away": "LBTL Futsal Alcantarilla"
+                },
+                {
+                  "home": "STV Roldán FS",
+                  "away": "Arriva AD Alcorcón FSF"
+                },
+                {
+                  "home": "CD Guadalcacín FS",
+                  "away": "PH-Quirogel AE Penya Esplugues"
+                }
+              ]
+            },
+            {
+              "jornada": 16,
+              "date": "2026-01-24",
+              "matches": [
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "FSF Castro Bloques Cando"
+                },
+                {
+                  "home": "Arriva AD Alcorcón FSF",
+                  "away": "CD Guadalcacín FS"
+                },
+                {
+                  "home": "Poio Pescamar FS.",
+                  "away": "STV Roldán FS"
+                },
+                {
+                  "home": "Ceuta Agrupación Deportiva",
+                  "away": "Futsi Atlético Navalcarnero"
+                },
+                {
+                  "home": "Ourense Ontime",
+                  "away": "Melilla Ciudad del Deporte Torreblanca CF"
+                },
+                {
+                  "home": "AE Les Corts UBAE",
+                  "away": "Burela FS"
+                },
+                {
+                  "home": "Nueces de Ronda Atlético Torcal FS.",
+                  "away": "MRB Móstoles FSF"
+                },
+                {
+                  "home": "PH-Quirogel AE Penya Esplugues",
+                  "away": "C.D. Chiloeches"
+                }
+              ]
+            },
+            {
+              "jornada": 17,
+              "date": "2026-02-07",
+              "matches": [
+                {
+                  "home": "Burela FS",
+                  "away": "PH-Quirogel AE Penya Esplugues"
+                },
+                {
+                  "home": "Futsi Atlético Navalcarnero",
+                  "away": "Ourense Ontime"
+                },
+                {
+                  "home": "CD Guadalcacín FS",
+                  "away": "AE Les Corts UBAE"
+                },
+                {
+                  "home": "C.D. Chiloeches",
+                  "away": "Poio Pescamar FS."
+                },
+                {
+                  "home": "FSF Castro Bloques Cando",
+                  "away": "Nueces de Ronda Atlético Torcal FS."
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "LBTL Futsal Alcantarilla"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca CF",
+                  "away": "Arriva AD Alcorcón FSF"
+                },
+                {
+                  "home": "STV Roldán FS",
+                  "away": "Ceuta Agrupación Deportiva"
+                }
+              ]
+            },
+            {
+              "jornada": 18,
+              "date": "2026-02-14",
+              "matches": [
+                {
+                  "home": "CD Guadalcacín FS",
+                  "away": "STV Roldán FS"
+                },
+                {
+                  "home": "Arriva AD Alcorcón FSF",
+                  "away": "LBTL Futsal Alcantarilla"
+                },
+                {
+                  "home": "Poio Pescamar FS.",
+                  "away": "Melilla Ciudad del Deporte Torreblanca CF"
+                },
+                {
+                  "home": "PH-Quirogel AE Penya Esplugues",
+                  "away": "Futsi Atlético Navalcarnero"
+                },
+                {
+                  "home": "Nueces de Ronda Atlético Torcal FS.",
+                  "away": "Burela FS"
+                },
+                {
+                  "home": "Ourense Ontime",
+                  "away": "MRB Móstoles FSF"
+                },
+                {
+                  "home": "AE Les Corts UBAE",
+                  "away": "C.D. Chiloeches"
+                },
+                {
+                  "home": "Ceuta Agrupación Deportiva",
+                  "away": "FSF Castro Bloques Cando"
+                }
+              ]
+            },
+            {
+              "jornada": 19,
+              "date": "2026-02-21",
+              "matches": [
+                {
+                  "home": "Futsi Atlético Navalcarnero",
+                  "away": "Poio Pescamar FS."
+                },
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "Ourense Ontime"
+                },
+                {
+                  "home": "C.D. Chiloeches",
+                  "away": "Nueces de Ronda Atlético Torcal FS."
+                },
+                {
+                  "home": "Ceuta Agrupación Deportiva",
+                  "away": "CD Guadalcacín FS"
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "Burela FS"
+                },
+                {
+                  "home": "FSF Castro Bloques Cando",
+                  "away": "Arriva AD Alcorcón FSF"
+                },
+                {
+                  "home": "STV Roldán FS",
+                  "away": "AE Les Corts UBAE"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca CF",
+                  "away": "PH-Quirogel AE Penya Esplugues"
+                }
+              ]
+            },
+            {
+              "jornada": 20,
+              "date": "2026-02-28",
+              "matches": [
+                {
+                  "home": "CD Guadalcacín FS",
+                  "away": "Nueces de Ronda Atlético Torcal FS."
+                },
+                {
+                  "home": "Arriva AD Alcorcón FSF",
+                  "away": "Futsi Atlético Navalcarnero"
+                },
+                {
+                  "home": "Burela FS",
+                  "away": "LBTL Futsal Alcantarilla"
+                },
+                {
+                  "home": "Poio Pescamar FS.",
+                  "away": "MRB Móstoles FSF"
+                },
+                {
+                  "home": "STV Roldán FS",
+                  "away": "C.D. Chiloeches"
+                },
+                {
+                  "home": "AE Les Corts UBAE",
+                  "away": "Ceuta Agrupación Deportiva"
+                },
+                {
+                  "home": "Ourense Ontime",
+                  "away": "PH-Quirogel AE Penya Esplugues"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca CF",
+                  "away": "FSF Castro Bloques Cando"
+                }
+              ]
+            },
+            {
+              "jornada": 21,
+              "date": "2026-03-07",
+              "matches": [
+                {
+                  "home": "Burela FS",
+                  "away": "Ourense Ontime"
+                },
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "CD Guadalcacín FS"
+                },
+                {
+                  "home": "C.D. Chiloeches",
+                  "away": "Melilla Ciudad del Deporte Torreblanca CF"
+                },
+                {
+                  "home": "FSF Castro Bloques Cando",
+                  "away": "STV Roldán FS"
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "Arriva AD Alcorcón FSF"
+                },
+                {
+                  "home": "Nueces de Ronda Atlético Torcal FS.",
+                  "away": "Poio Pescamar FS."
+                },
+                {
+                  "home": "Futsi Atlético Navalcarnero",
+                  "away": "AE Les Corts UBAE"
+                },
+                {
+                  "home": "PH-Quirogel AE Penya Esplugues",
+                  "away": "Ceuta Agrupación Deportiva"
+                }
+              ]
+            },
+            {
+              "jornada": 22,
+              "date": "2026-03-28",
+              "matches": [
+                {
+                  "home": "Arriva AD Alcorcón FSF",
+                  "away": "Nueces de Ronda Atlético Torcal FS."
+                },
+                {
+                  "home": "Poio Pescamar FS.",
+                  "away": "Burela FS"
+                },
+                {
+                  "home": "STV Roldán FS",
+                  "away": "Futsi Atlético Navalcarnero"
+                },
+                {
+                  "home": "Ceuta Agrupación Deportiva",
+                  "away": "LBTL Futsal Alcantarilla"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca CF",
+                  "away": "MRB Móstoles FSF"
+                },
+                {
+                  "home": "Ourense Ontime",
+                  "away": "C.D. Chiloeches"
+                },
+                {
+                  "home": "AE Les Corts UBAE",
+                  "away": "PH-Quirogel AE Penya Esplugues"
+                },
+                {
+                  "home": "CD Guadalcacín FS",
+                  "away": "FSF Castro Bloques Cando"
+                }
+              ]
+            },
+            {
+              "jornada": 23,
+              "date": "2026-04-04",
+              "matches": [
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "Melilla Ciudad del Deporte Torreblanca CF"
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "STV Roldán FS"
+                },
+                {
+                  "home": "PH-Quirogel AE Penya Esplugues",
+                  "away": "Poio Pescamar FS."
+                },
+                {
+                  "home": "FSF Castro Bloques Cando",
+                  "away": "AE Les Corts UBAE"
+                },
+                {
+                  "home": "Futsi Atlético Navalcarnero",
+                  "away": "CD Guadalcacín FS"
+                },
+                {
+                  "home": "Burela FS",
+                  "away": "Arriva AD Alcorcón FSF"
+                },
+                {
+                  "home": "C.D. Chiloeches",
+                  "away": "Ceuta Agrupación Deportiva"
+                },
+                {
+                  "home": "Nueces de Ronda Atlético Torcal FS.",
+                  "away": "Ourense Ontime"
+                }
+              ]
+            },
+            {
+              "jornada": 24,
+              "date": "2026-04-11",
+              "matches": [
+                {
+                  "home": "Arriva AD Alcorcón FSF",
+                  "away": "Ourense Ontime"
+                },
+                {
+                  "home": "AE Les Corts UBAE",
+                  "away": "Nueces de Ronda Atlético Torcal FS."
+                },
+                {
+                  "home": "Ceuta Agrupación Deportiva",
+                  "away": "MRB Móstoles FSF"
+                },
+                {
+                  "home": "FSF Castro Bloques Cando",
+                  "away": "Futsi Atlético Navalcarnero"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca CF",
+                  "away": "Burela FS"
+                },
+                {
+                  "home": "Poio Pescamar FS.",
+                  "away": "LBTL Futsal Alcantarilla"
+                },
+                {
+                  "home": "CD Guadalcacín FS",
+                  "away": "C.D. Chiloeches"
+                },
+                {
+                  "home": "STV Roldán FS",
+                  "away": "PH-Quirogel AE Penya Esplugues"
+                }
+              ]
+            },
+            {
+              "jornada": 25,
+              "date": "2026-04-18",
+              "matches": [
+                {
+                  "home": "Burela FS",
+                  "away": "STV Roldán FS"
+                },
+                {
+                  "home": "Nueces de Ronda Atlético Torcal FS.",
+                  "away": "Melilla Ciudad del Deporte Torreblanca CF"
+                },
+                {
+                  "home": "Arriva AD Alcorcón FSF",
+                  "away": "Poio Pescamar FS."
+                },
+                {
+                  "home": "PH-Quirogel AE Penya Esplugues",
+                  "away": "CD Guadalcacín FS"
+                },
+                {
+                  "home": "Futsi Atlético Navalcarnero",
+                  "away": "LBTL Futsal Alcantarilla"
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "AE Les Corts UBAE"
+                },
+                {
+                  "home": "Ourense Ontime",
+                  "away": "Ceuta Agrupación Deportiva"
+                },
+                {
+                  "home": "C.D. Chiloeches",
+                  "away": "FSF Castro Bloques Cando"
+                }
+              ]
+            },
+            {
+              "jornada": 26,
+              "date": "2026-04-25",
+              "matches": [
+                {
+                  "home": "STV Roldán FS",
+                  "away": "Melilla Ciudad del Deporte Torreblanca CF"
+                },
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "Nueces de Ronda Atlético Torcal FS."
+                },
+                {
+                  "home": "CD Guadalcacín FS",
+                  "away": "MRB Móstoles FSF"
+                },
+                {
+                  "home": "FSF Castro Bloques Cando",
+                  "away": "PH-Quirogel AE Penya Esplugues"
+                },
+                {
+                  "home": "Ceuta Agrupación Deportiva",
+                  "away": "Burela FS"
+                },
+                {
+                  "home": "AE Les Corts UBAE",
+                  "away": "Arriva AD Alcorcón FSF"
+                },
+                {
+                  "home": "Futsi Atlético Navalcarnero",
+                  "away": "C.D. Chiloeches"
+                },
+                {
+                  "home": "Poio Pescamar FS.",
+                  "away": "Ourense Ontime"
+                }
+              ]
+            },
+            {
+              "jornada": 27,
+              "date": "2026-05-09",
+              "matches": [
+                {
+                  "home": "Burela FS",
+                  "away": "C.D. Chiloeches"
+                },
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "STV Roldán FS"
+                },
+                {
+                  "home": "Arriva AD Alcorcón FSF",
+                  "away": "Ceuta Agrupación Deportiva"
+                },
+                {
+                  "home": "Nueces de Ronda Atlético Torcal FS.",
+                  "away": "Futsi Atlético Navalcarnero"
+                },
+                {
+                  "home": "Poio Pescamar FS.",
+                  "away": "CD Guadalcacín FS"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca CF",
+                  "away": "AE Les Corts UBAE"
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "PH-Quirogel AE Penya Esplugues"
+                },
+                {
+                  "home": "Ourense Ontime",
+                  "away": "FSF Castro Bloques Cando"
+                }
+              ]
+            },
+            {
+              "jornada": 28,
+              "date": "2026-05-16",
+              "matches": [
+                {
+                  "home": "STV Roldán FS",
+                  "away": "Nueces de Ronda Atlético Torcal FS."
+                },
+                {
+                  "home": "CD Guadalcacín FS",
+                  "away": "Melilla Ciudad del Deporte Torreblanca CF"
+                },
+                {
+                  "home": "AE Les Corts UBAE",
+                  "away": "Ourense Ontime"
+                },
+                {
+                  "home": "Ceuta Agrupación Deportiva",
+                  "away": "Poio Pescamar FS."
+                },
+                {
+                  "home": "FSF Castro Bloques Cando",
+                  "away": "Burela FS"
+                },
+                {
+                  "home": "PH-Quirogel AE Penya Esplugues",
+                  "away": "LBTL Futsal Alcantarilla"
+                },
+                {
+                  "home": "C.D. Chiloeches",
+                  "away": "Arriva AD Alcorcón FSF"
+                },
+                {
+                  "home": "Futsi Atlético Navalcarnero",
+                  "away": "MRB Móstoles FSF"
+                }
+              ]
+            },
+            {
+              "jornada": 29,
+              "date": "2026-05-23",
+              "matches": [
+                {
+                  "home": "Burela FS",
+                  "away": "Futsi Atlético Navalcarnero"
+                },
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "C.D. Chiloeches"
+                },
+                {
+                  "home": "Arriva AD Alcorcón FSF",
+                  "away": "STV Roldán FS"
+                },
+                {
+                  "home": "Ourense Ontime",
+                  "away": "CD Guadalcacín FS"
+                },
+                {
+                  "home": "Poio Pescamar FS.",
+                  "away": "AE Les Corts UBAE"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca CF",
+                  "away": "Ceuta Agrupación Deportiva"
+                },
+                {
+                  "home": "Nueces de Ronda Atlético Torcal FS.",
+                  "away": "PH-Quirogel AE Penya Esplugues"
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "FSF Castro Bloques Cando"
+                }
+              ]
+            },
+            {
+              "jornada": 30,
+              "date": "2026-05-30",
+              "matches": [
+                {
+                  "home": "Futsi Atlético Navalcarnero",
+                  "away": "Melilla Ciudad del Deporte Torreblanca CF"
+                },
+                {
+                  "home": "C.D. Chiloeches",
+                  "away": "MRB Móstoles FSF"
+                },
+                {
+                  "home": "Ceuta Agrupación Deportiva",
+                  "away": "Nueces de Ronda Atlético Torcal FS."
+                },
+                {
+                  "home": "FSF Castro Bloques Cando",
+                  "away": "Poio Pescamar FS."
+                },
+                {
+                  "home": "CD Guadalcacín FS",
+                  "away": "Burela FS"
+                },
+                {
+                  "home": "AE Les Corts UBAE",
+                  "away": "LBTL Futsal Alcantarilla"
+                },
+                {
+                  "home": "PH-Quirogel AE Penya Esplugues",
+                  "away": "Arriva AD Alcorcón FSF"
+                },
+                {
+                  "home": "STV Roldán FS",
+                  "away": "Ourense Ontime"
+                }
+              ]
+            }
           ]
         },
         {
@@ -1374,6 +3658,578 @@
                   "name": "Caja Rural River Zamora",
                   "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20229/19/62551b6e55eb19dc00d857394ddbe649.jpg"
                 }
+              ],
+              "calendar": [
+                {
+                  "jornada": 1,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Grupo FORMA-T Vilalba FS. - Bembrive",
+                      "away": "Club Deportivo San Pablo-Eivis - A.D. Mioño FSF"
+                    },
+                    {
+                      "home": "C.D. Segosala - Ourense Ontime",
+                      "away": "Bembrive - Grupo FORMA-T Vilalba FS."
+                    },
+                    {
+                      "home": "ENCE Marín Futsal - FC Meigas",
+                      "away": "Ourense Ontime - C.D. Segosala"
+                    },
+                    {
+                      "home": "Valdetires Ferrol FSF. - Estrela Futsal",
+                      "away": "FC Meigas - ENCE Marín Futsal"
+                    },
+                    {
+                      "home": "CFS Gran Canaria Teldeportivo - El Gaitero Rodiles FSF",
+                      "away": "Estrela Futsal - Valdetires Ferrol FSF."
+                    },
+                    {
+                      "home": "Caja Rural River Zamora - Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "El Gaitero Rodiles FSF - CFS Gran Canaria Teldeportivo"
+                    },
+                    {
+                      "home": "C.D. Colegio San José - Futbol Sala Atlético Mercadal \"A\"",
+                      "away": "Club Deportivo Nou Turia FSF \"A\" - Caja Rural River Zamora"
+                    },
+                    {
+                      "home": "A.D. Mioño FSF - Club Deportivo San Pablo-Eivis",
+                      "away": "Futbol Sala Atlético Mercadal \"A\" - C.D. Colegio San José"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 2,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis - C.D. Colegio San José",
+                      "away": "C.D. Colegio San José - Club Deportivo San Pablo-Eivis"
+                    },
+                    {
+                      "home": "Bembrive - A.D. Mioño FSF",
+                      "away": "Grupo FORMA-T Vilalba FS. - Ourense Ontime"
+                    },
+                    {
+                      "home": "Ourense Ontime - Grupo FORMA-T Vilalba FS.",
+                      "away": "C.D. Segosala - FC Meigas"
+                    },
+                    {
+                      "home": "FC Meigas - C.D. Segosala",
+                      "away": "ENCE Marín Futsal - Estrela Futsal"
+                    },
+                    {
+                      "home": "Estrela Futsal - ENCE Marín Futsal",
+                      "away": "Valdetires Ferrol FSF. - El Gaitero Rodiles FSF"
+                    },
+                    {
+                      "home": "El Gaitero Rodiles FSF - Valdetires Ferrol FSF.",
+                      "away": "CFS Gran Canaria Teldeportivo - Club Deportivo Nou Turia FSF \"A\""
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\" - CFS Gran Canaria Teldeportivo",
+                      "away": "Caja Rural River Zamora - Futbol Sala Atlético Mercadal \"A\""
+                    },
+                    {
+                      "home": "Futbol Sala Atlético Mercadal \"A\" - Caja Rural River Zamora",
+                      "away": "A.D. Mioño FSF - Bembrive"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 3,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis - Bembrive",
+                      "away": "Bembrive - Club Deportivo San Pablo-Eivis"
+                    },
+                    {
+                      "home": "Grupo FORMA-T Vilalba FS. - FC Meigas",
+                      "away": "Ourense Ontime - A.D. Mioño FSF"
+                    },
+                    {
+                      "home": "C.D. Segosala - Estrela Futsal",
+                      "away": "FC Meigas - Grupo FORMA-T Vilalba FS."
+                    },
+                    {
+                      "home": "ENCE Marín Futsal - El Gaitero Rodiles FSF",
+                      "away": "Estrela Futsal - C.D. Segosala"
+                    },
+                    {
+                      "home": "Valdetires Ferrol FSF. - Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "El Gaitero Rodiles FSF - ENCE Marín Futsal"
+                    },
+                    {
+                      "home": "CFS Gran Canaria Teldeportivo - Futbol Sala Atlético Mercadal \"A\"",
+                      "away": "Club Deportivo Nou Turia FSF \"A\" - Valdetires Ferrol FSF."
+                    },
+                    {
+                      "home": "C.D. Colegio San José - Caja Rural River Zamora",
+                      "away": "Futbol Sala Atlético Mercadal \"A\" - CFS Gran Canaria Teldeportivo"
+                    },
+                    {
+                      "home": "A.D. Mioño FSF - Ourense Ontime",
+                      "away": "Caja Rural River Zamora - C.D. Colegio San José"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 4,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Bembrive - C.D. Colegio San José",
+                      "away": "C.D. Colegio San José - Bembrive"
+                    },
+                    {
+                      "home": "Ourense Ontime - Club Deportivo San Pablo-Eivis",
+                      "away": "Club Deportivo San Pablo-Eivis - Ourense Ontime"
+                    },
+                    {
+                      "home": "FC Meigas - A.D. Mioño FSF",
+                      "away": "Grupo FORMA-T Vilalba FS. - Estrela Futsal"
+                    },
+                    {
+                      "home": "Estrela Futsal - Grupo FORMA-T Vilalba FS.",
+                      "away": "C.D. Segosala - El Gaitero Rodiles FSF"
+                    },
+                    {
+                      "home": "El Gaitero Rodiles FSF - C.D. Segosala",
+                      "away": "ENCE Marín Futsal - Club Deportivo Nou Turia FSF \"A\""
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\" - ENCE Marín Futsal",
+                      "away": "Valdetires Ferrol FSF. - Futbol Sala Atlético Mercadal \"A\""
+                    },
+                    {
+                      "home": "Futbol Sala Atlético Mercadal \"A\" - Valdetires Ferrol FSF.",
+                      "away": "CFS Gran Canaria Teldeportivo - Caja Rural River Zamora"
+                    },
+                    {
+                      "home": "Caja Rural River Zamora - CFS Gran Canaria Teldeportivo",
+                      "away": "A.D. Mioño FSF - FC Meigas"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 5,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Bembrive - Ourense Ontime",
+                      "away": "Ourense Ontime - Bembrive"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis - FC Meigas",
+                      "away": "FC Meigas - Club Deportivo San Pablo-Eivis"
+                    },
+                    {
+                      "home": "Grupo FORMA-T Vilalba FS. - El Gaitero Rodiles FSF",
+                      "away": "Estrela Futsal - A.D. Mioño FSF"
+                    },
+                    {
+                      "home": "C.D. Segosala - Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "El Gaitero Rodiles FSF - Grupo FORMA-T Vilalba FS."
+                    },
+                    {
+                      "home": "ENCE Marín Futsal - Futbol Sala Atlético Mercadal \"A\"",
+                      "away": "Club Deportivo Nou Turia FSF \"A\" - C.D. Segosala"
+                    },
+                    {
+                      "home": "Valdetires Ferrol FSF. - Caja Rural River Zamora",
+                      "away": "Futbol Sala Atlético Mercadal \"A\" - ENCE Marín Futsal"
+                    },
+                    {
+                      "home": "C.D. Colegio San José - CFS Gran Canaria Teldeportivo",
+                      "away": "Caja Rural River Zamora - Valdetires Ferrol FSF."
+                    },
+                    {
+                      "home": "A.D. Mioño FSF - Estrela Futsal",
+                      "away": "CFS Gran Canaria Teldeportivo - C.D. Colegio San José"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 6,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Ourense Ontime - C.D. Colegio San José",
+                      "away": "C.D. Colegio San José - Ourense Ontime"
+                    },
+                    {
+                      "home": "FC Meigas - Bembrive",
+                      "away": "Bembrive - FC Meigas"
+                    },
+                    {
+                      "home": "Estrela Futsal - Club Deportivo San Pablo-Eivis",
+                      "away": "Club Deportivo San Pablo-Eivis - Estrela Futsal"
+                    },
+                    {
+                      "home": "El Gaitero Rodiles FSF - A.D. Mioño FSF",
+                      "away": "Grupo FORMA-T Vilalba FS. - Club Deportivo Nou Turia FSF \"A\""
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\" - Grupo FORMA-T Vilalba FS.",
+                      "away": "C.D. Segosala - Futbol Sala Atlético Mercadal \"A\""
+                    },
+                    {
+                      "home": "Futbol Sala Atlético Mercadal \"A\" - C.D. Segosala",
+                      "away": "ENCE Marín Futsal - Caja Rural River Zamora"
+                    },
+                    {
+                      "home": "Caja Rural River Zamora - ENCE Marín Futsal",
+                      "away": "Valdetires Ferrol FSF. - CFS Gran Canaria Teldeportivo"
+                    },
+                    {
+                      "home": "CFS Gran Canaria Teldeportivo - Valdetires Ferrol FSF.",
+                      "away": "A.D. Mioño FSF - El Gaitero Rodiles FSF"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 7,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Ourense Ontime - FC Meigas",
+                      "away": "FC Meigas - Ourense Ontime"
+                    },
+                    {
+                      "home": "Bembrive - Estrela Futsal",
+                      "away": "Estrela Futsal - Bembrive"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis - El Gaitero Rodiles FSF",
+                      "away": "El Gaitero Rodiles FSF - Club Deportivo San Pablo-Eivis"
+                    },
+                    {
+                      "home": "Grupo FORMA-T Vilalba FS. - Futbol Sala Atlético Mercadal \"A\"",
+                      "away": "Club Deportivo Nou Turia FSF \"A\" - A.D. Mioño FSF"
+                    },
+                    {
+                      "home": "C.D. Segosala - Caja Rural River Zamora",
+                      "away": "Futbol Sala Atlético Mercadal \"A\" - Grupo FORMA-T Vilalba FS."
+                    },
+                    {
+                      "home": "ENCE Marín Futsal - CFS Gran Canaria Teldeportivo",
+                      "away": "Caja Rural River Zamora - C.D. Segosala"
+                    },
+                    {
+                      "home": "C.D. Colegio San José - Valdetires Ferrol FSF.",
+                      "away": "CFS Gran Canaria Teldeportivo - ENCE Marín Futsal"
+                    },
+                    {
+                      "home": "A.D. Mioño FSF - Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "Valdetires Ferrol FSF. - C.D. Colegio San José"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 8,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "FC Meigas - C.D. Colegio San José",
+                      "away": "C.D. Colegio San José - FC Meigas"
+                    },
+                    {
+                      "home": "Estrela Futsal - Ourense Ontime",
+                      "away": "Ourense Ontime - Estrela Futsal"
+                    },
+                    {
+                      "home": "El Gaitero Rodiles FSF - Bembrive",
+                      "away": "Bembrive - El Gaitero Rodiles FSF"
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\" - Club Deportivo San Pablo-Eivis",
+                      "away": "Club Deportivo San Pablo-Eivis - Club Deportivo Nou Turia FSF \"A\""
+                    },
+                    {
+                      "home": "Futbol Sala Atlético Mercadal \"A\" - A.D. Mioño FSF",
+                      "away": "Grupo FORMA-T Vilalba FS. - Caja Rural River Zamora"
+                    },
+                    {
+                      "home": "Caja Rural River Zamora - Grupo FORMA-T Vilalba FS.",
+                      "away": "C.D. Segosala - CFS Gran Canaria Teldeportivo"
+                    },
+                    {
+                      "home": "CFS Gran Canaria Teldeportivo - C.D. Segosala",
+                      "away": "ENCE Marín Futsal - Valdetires Ferrol FSF."
+                    },
+                    {
+                      "home": "Valdetires Ferrol FSF. - ENCE Marín Futsal",
+                      "away": "A.D. Mioño FSF - Futbol Sala Atlético Mercadal \"A\""
+                    }
+                  ]
+                },
+                {
+                  "jornada": 9,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "FC Meigas - Estrela Futsal",
+                      "away": "Estrela Futsal - FC Meigas"
+                    },
+                    {
+                      "home": "Ourense Ontime - El Gaitero Rodiles FSF",
+                      "away": "El Gaitero Rodiles FSF - Ourense Ontime"
+                    },
+                    {
+                      "home": "Bembrive - Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "Club Deportivo Nou Turia FSF \"A\" - Bembrive"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis - Futbol Sala Atlético Mercadal \"A\"",
+                      "away": "Futbol Sala Atlético Mercadal \"A\" - Club Deportivo San Pablo-Eivis"
+                    },
+                    {
+                      "home": "Grupo FORMA-T Vilalba FS. - CFS Gran Canaria Teldeportivo",
+                      "away": "Caja Rural River Zamora - A.D. Mioño FSF"
+                    },
+                    {
+                      "home": "C.D. Segosala - Valdetires Ferrol FSF.",
+                      "away": "CFS Gran Canaria Teldeportivo - Grupo FORMA-T Vilalba FS."
+                    },
+                    {
+                      "home": "C.D. Colegio San José - ENCE Marín Futsal",
+                      "away": "Valdetires Ferrol FSF. - C.D. Segosala"
+                    },
+                    {
+                      "home": "A.D. Mioño FSF - Caja Rural River Zamora",
+                      "away": "ENCE Marín Futsal - C.D. Colegio San José"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 10,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Estrela Futsal - C.D. Colegio San José",
+                      "away": "C.D. Colegio San José - Estrela Futsal"
+                    },
+                    {
+                      "home": "El Gaitero Rodiles FSF - FC Meigas",
+                      "away": "FC Meigas - El Gaitero Rodiles FSF"
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\" - Ourense Ontime",
+                      "away": "Ourense Ontime - Club Deportivo Nou Turia FSF \"A\""
+                    },
+                    {
+                      "home": "Futbol Sala Atlético Mercadal \"A\" - Bembrive",
+                      "away": "Bembrive - Futbol Sala Atlético Mercadal \"A\""
+                    },
+                    {
+                      "home": "Caja Rural River Zamora - Club Deportivo San Pablo-Eivis",
+                      "away": "Club Deportivo San Pablo-Eivis - Caja Rural River Zamora"
+                    },
+                    {
+                      "home": "CFS Gran Canaria Teldeportivo - A.D. Mioño FSF",
+                      "away": "Grupo FORMA-T Vilalba FS. - Valdetires Ferrol FSF."
+                    },
+                    {
+                      "home": "Valdetires Ferrol FSF. - Grupo FORMA-T Vilalba FS.",
+                      "away": "C.D. Segosala - ENCE Marín Futsal"
+                    },
+                    {
+                      "home": "ENCE Marín Futsal - C.D. Segosala",
+                      "away": "A.D. Mioño FSF - CFS Gran Canaria Teldeportivo"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 11,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Estrela Futsal - El Gaitero Rodiles FSF",
+                      "away": "El Gaitero Rodiles FSF - Estrela Futsal"
+                    },
+                    {
+                      "home": "FC Meigas - Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "Club Deportivo Nou Turia FSF \"A\" - FC Meigas"
+                    },
+                    {
+                      "home": "Ourense Ontime - Futbol Sala Atlético Mercadal \"A\"",
+                      "away": "Futbol Sala Atlético Mercadal \"A\" - Ourense Ontime"
+                    },
+                    {
+                      "home": "Bembrive - Caja Rural River Zamora",
+                      "away": "Caja Rural River Zamora - Bembrive"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis - CFS Gran Canaria Teldeportivo",
+                      "away": "CFS Gran Canaria Teldeportivo - Club Deportivo San Pablo-Eivis"
+                    },
+                    {
+                      "home": "Grupo FORMA-T Vilalba FS. - ENCE Marín Futsal",
+                      "away": "Valdetires Ferrol FSF. - A.D. Mioño FSF"
+                    },
+                    {
+                      "home": "C.D. Colegio San José - C.D. Segosala",
+                      "away": "ENCE Marín Futsal - Grupo FORMA-T Vilalba FS."
+                    },
+                    {
+                      "home": "A.D. Mioño FSF - Valdetires Ferrol FSF.",
+                      "away": "C.D. Segosala - C.D. Colegio San José"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 12,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "El Gaitero Rodiles FSF - C.D. Colegio San José",
+                      "away": "C.D. Colegio San José - El Gaitero Rodiles FSF"
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\" - Estrela Futsal",
+                      "away": "Estrela Futsal - Club Deportivo Nou Turia FSF \"A\""
+                    },
+                    {
+                      "home": "Futbol Sala Atlético Mercadal \"A\" - FC Meigas",
+                      "away": "FC Meigas - Futbol Sala Atlético Mercadal \"A\""
+                    },
+                    {
+                      "home": "Caja Rural River Zamora - Ourense Ontime",
+                      "away": "Ourense Ontime - Caja Rural River Zamora"
+                    },
+                    {
+                      "home": "CFS Gran Canaria Teldeportivo - Bembrive",
+                      "away": "Bembrive - CFS Gran Canaria Teldeportivo"
+                    },
+                    {
+                      "home": "Valdetires Ferrol FSF. - Club Deportivo San Pablo-Eivis",
+                      "away": "Club Deportivo San Pablo-Eivis - Valdetires Ferrol FSF."
+                    },
+                    {
+                      "home": "ENCE Marín Futsal - A.D. Mioño FSF",
+                      "away": "Grupo FORMA-T Vilalba FS. - C.D. Segosala"
+                    },
+                    {
+                      "home": "C.D. Segosala - Grupo FORMA-T Vilalba FS.",
+                      "away": "A.D. Mioño FSF - ENCE Marín Futsal"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 13,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "El Gaitero Rodiles FSF - Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "Club Deportivo Nou Turia FSF \"A\" - El Gaitero Rodiles FSF"
+                    },
+                    {
+                      "home": "Estrela Futsal - Futbol Sala Atlético Mercadal \"A\"",
+                      "away": "Futbol Sala Atlético Mercadal \"A\" - Estrela Futsal"
+                    },
+                    {
+                      "home": "FC Meigas - Caja Rural River Zamora",
+                      "away": "Caja Rural River Zamora - FC Meigas"
+                    },
+                    {
+                      "home": "Ourense Ontime - CFS Gran Canaria Teldeportivo",
+                      "away": "CFS Gran Canaria Teldeportivo - Ourense Ontime"
+                    },
+                    {
+                      "home": "Bembrive - Valdetires Ferrol FSF.",
+                      "away": "Valdetires Ferrol FSF. - Bembrive"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis - ENCE Marín Futsal",
+                      "away": "ENCE Marín Futsal - Club Deportivo San Pablo-Eivis"
+                    },
+                    {
+                      "home": "C.D. Colegio San José - Grupo FORMA-T Vilalba FS.",
+                      "away": "C.D. Segosala - A.D. Mioño FSF"
+                    },
+                    {
+                      "home": "A.D. Mioño FSF - C.D. Segosala",
+                      "away": "Grupo FORMA-T Vilalba FS. - C.D. Colegio San José"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 14,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "C.D. Colegio San José - Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "Club Deportivo Nou Turia FSF \"A\" - C.D. Colegio San José"
+                    },
+                    {
+                      "home": "Futbol Sala Atlético Mercadal \"A\" - El Gaitero Rodiles FSF",
+                      "away": "El Gaitero Rodiles FSF - Futbol Sala Atlético Mercadal \"A\""
+                    },
+                    {
+                      "home": "Caja Rural River Zamora - Estrela Futsal",
+                      "away": "Estrela Futsal - Caja Rural River Zamora"
+                    },
+                    {
+                      "home": "CFS Gran Canaria Teldeportivo - FC Meigas",
+                      "away": "FC Meigas - CFS Gran Canaria Teldeportivo"
+                    },
+                    {
+                      "home": "Valdetires Ferrol FSF. - Ourense Ontime",
+                      "away": "Ourense Ontime - Valdetires Ferrol FSF."
+                    },
+                    {
+                      "home": "ENCE Marín Futsal - Bembrive",
+                      "away": "Bembrive - ENCE Marín Futsal"
+                    },
+                    {
+                      "home": "C.D. Segosala - Club Deportivo San Pablo-Eivis",
+                      "away": "Club Deportivo San Pablo-Eivis - C.D. Segosala"
+                    },
+                    {
+                      "home": "Grupo FORMA-T Vilalba FS. - A.D. Mioño FSF",
+                      "away": "A.D. Mioño FSF - Grupo FORMA-T Vilalba FS."
+                    }
+                  ]
+                },
+                {
+                  "jornada": 15,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\" - Futbol Sala Atlético Mercadal \"A\"",
+                      "away": "Futbol Sala Atlético Mercadal \"A\" - Club Deportivo Nou Turia FSF \"A\""
+                    },
+                    {
+                      "home": "El Gaitero Rodiles FSF - Caja Rural River Zamora",
+                      "away": "Caja Rural River Zamora - El Gaitero Rodiles FSF"
+                    },
+                    {
+                      "home": "Estrela Futsal - CFS Gran Canaria Teldeportivo",
+                      "away": "CFS Gran Canaria Teldeportivo - Estrela Futsal"
+                    },
+                    {
+                      "home": "FC Meigas - Valdetires Ferrol FSF.",
+                      "away": "Valdetires Ferrol FSF. - FC Meigas"
+                    },
+                    {
+                      "home": "Ourense Ontime - ENCE Marín Futsal",
+                      "away": "ENCE Marín Futsal - Ourense Ontime"
+                    },
+                    {
+                      "home": "Bembrive - C.D. Segosala",
+                      "away": "C.D. Segosala - Bembrive"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis - Grupo FORMA-T Vilalba FS.",
+                      "away": "Grupo FORMA-T Vilalba FS. - Club Deportivo San Pablo-Eivis"
+                    },
+                    {
+                      "home": "A.D. Mioño FSF - C.D. Colegio San José",
+                      "away": "C.D. Colegio San José - A.D. Mioño FSF"
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -1444,6 +4300,554 @@
                   "name": "System Cars Avenida Alagón FS",
                   "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008818_logo_en_mini.jpg"
                 }
+              ],
+              "calendar": [
+                {
+                  "jornada": 1,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "AECS L Hospitalet - CN Caldes",
+                      "away": "CN Caldes - AECS L Hospitalet"
+                    },
+                    {
+                      "home": "Avenida Algón FS - CD Lacturale Orvina",
+                      "away": "CD Lacturale Orvina - Avenida Algón FS"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola - Lainco Esportiu Rubi FS.",
+                      "away": "Lainco Esportiu Rubi FS. - CFS Autoescola Urgell Linyola"
+                    },
+                    {
+                      "home": "Wanapix Aldelis InterSala 10 Zaragoza - Feme Castellón C.FS.",
+                      "away": "Feme Castellón C.FS. - Wanapix Aldelis InterSala 10 Zaragoza"
+                    },
+                    {
+                      "home": "SD Hispania Yecla - SolarMon-Les Glories 2014 CD La Concordia",
+                      "away": "Entrerrios Automatización - C.E. Futsal Mataro"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta - U.D.C. Txantrea K.K.E.",
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia - SD Hispania Yecla"
+                    },
+                    {
+                      "home": "FS. Sabadell - Somriu Futbol Sala Ripollet",
+                      "away": "U.D.C. Txantrea K.K.E. - Grupo Reciclarte Cesar Augusta"
+                    },
+                    {
+                      "home": "C.E. Futsal Mataro - Entrerrios Automatización",
+                      "away": "Somriu Futbol Sala Ripollet - FS. Sabadell"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 2,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "CN Caldes - FS. Sabadell",
+                      "away": "FS. Sabadell - CN Caldes"
+                    },
+                    {
+                      "home": "CD Lacturale Orvina - AECS L Hospitalet",
+                      "away": "AECS L Hospitalet - CD Lacturale Orvina"
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi FS. - Avenida Algón FS",
+                      "away": "Avenida Algón FS - Lainco Esportiu Rubi FS."
+                    },
+                    {
+                      "home": "Feme Castellón C.FS. - CFS Autoescola Urgell Linyola",
+                      "away": "CFS Autoescola Urgell Linyola - Feme Castellón C.FS."
+                    },
+                    {
+                      "home": "Entrerrios Automatización - Wanapix Aldelis InterSala 10 Zaragoza",
+                      "away": "Wanapix Aldelis InterSala 10 Zaragoza - Entrerrios Automatización"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia - C.E. Futsal Mataro",
+                      "away": "SD Hispania Yecla - U.D.C. Txantrea K.K.E."
+                    },
+                    {
+                      "home": "U.D.C. Txantrea K.K.E. - SD Hispania Yecla",
+                      "away": "Grupo Reciclarte Cesar Augusta - Somriu Futbol Sala Ripollet"
+                    },
+                    {
+                      "home": "Somriu Futbol Sala Ripollet - Grupo Reciclarte Cesar Augusta",
+                      "away": "C.E. Futsal Mataro - SolarMon-Les Glories 2014 CD La Concordia"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 3,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "CN Caldes - CD Lacturale Orvina",
+                      "away": "CD Lacturale Orvina - CN Caldes"
+                    },
+                    {
+                      "home": "AECS L Hospitalet - Lainco Esportiu Rubi FS.",
+                      "away": "Lainco Esportiu Rubi FS. - AECS L Hospitalet"
+                    },
+                    {
+                      "home": "Avenida Algón FS - Feme Castellón C.FS.",
+                      "away": "Feme Castellón C.FS. - Avenida Algón FS"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola - Entrerrios Automatización",
+                      "away": "Entrerrios Automatización - CFS Autoescola Urgell Linyola"
+                    },
+                    {
+                      "home": "SD Hispania Yecla - Somriu Futbol Sala Ripollet",
+                      "away": "U.D.C. Txantrea K.K.E. - C.E. Futsal Mataro"
+                    },
+                    {
+                      "home": "FS. Sabadell - Grupo Reciclarte Cesar Augusta",
+                      "away": "Somriu Futbol Sala Ripollet - SD Hispania Yecla"
+                    },
+                    {
+                      "home": "C.E. Futsal Mataro - U.D.C. Txantrea K.K.E.",
+                      "away": "Grupo Reciclarte Cesar Augusta - FS. Sabadell"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 4,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "CD Lacturale Orvina - FS. Sabadell",
+                      "away": "FS. Sabadell - CD Lacturale Orvina"
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi FS. - CN Caldes",
+                      "away": "CN Caldes - Lainco Esportiu Rubi FS."
+                    },
+                    {
+                      "home": "Feme Castellón C.FS. - AECS L Hospitalet",
+                      "away": "AECS L Hospitalet - Feme Castellón C.FS."
+                    },
+                    {
+                      "home": "Entrerrios Automatización - Avenida Algón FS",
+                      "away": "Avenida Algón FS - Entrerrios Automatización"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia - CFS Autoescola Urgell Linyola",
+                      "away": "CFS Autoescola Urgell Linyola - SolarMon-Les Glories 2014 CD La Concordia"
+                    },
+                    {
+                      "home": "U.D.C. Txantrea K.K.E. - Wanapix Aldelis InterSala 10 Zaragoza",
+                      "away": "Wanapix Aldelis InterSala 10 Zaragoza - U.D.C. Txantrea K.K.E."
+                    },
+                    {
+                      "home": "Somriu Futbol Sala Ripollet - C.E. Futsal Mataro",
+                      "away": "SD Hispania Yecla - Grupo Reciclarte Cesar Augusta"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta - SD Hispania Yecla",
+                      "away": "C.E. Futsal Mataro - Somriu Futbol Sala Ripollet"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 5,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "CD Lacturale Orvina - Lainco Esportiu Rubi FS.",
+                      "away": "Lainco Esportiu Rubi FS. - CD Lacturale Orvina"
+                    },
+                    {
+                      "home": "CN Caldes - Feme Castellón C.FS.",
+                      "away": "Feme Castellón C.FS. - CN Caldes"
+                    },
+                    {
+                      "home": "AECS L Hospitalet - Entrerrios Automatización",
+                      "away": "Entrerrios Automatización - AECS L Hospitalet"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola - U.D.C. Txantrea K.K.E.",
+                      "away": "U.D.C. Txantrea K.K.E. - CFS Autoescola Urgell Linyola"
+                    },
+                    {
+                      "home": "Wanapix Aldelis InterSala 10 Zaragoza - Somriu Futbol Sala Ripollet",
+                      "away": "Somriu Futbol Sala Ripollet - Wanapix Aldelis InterSala 10 Zaragoza"
+                    },
+                    {
+                      "home": "FS. Sabadell - SD Hispania Yecla",
+                      "away": "Grupo Reciclarte Cesar Augusta - C.E. Futsal Mataro"
+                    },
+                    {
+                      "home": "C.E. Futsal Mataro - Grupo Reciclarte Cesar Augusta",
+                      "away": "SD Hispania Yecla - FS. Sabadell"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 6,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Lainco Esportiu Rubi FS. - FS. Sabadell",
+                      "away": "FS. Sabadell - Lainco Esportiu Rubi FS."
+                    },
+                    {
+                      "home": "Feme Castellón C.FS. - CD Lacturale Orvina",
+                      "away": "CD Lacturale Orvina - Feme Castellón C.FS."
+                    },
+                    {
+                      "home": "Entrerrios Automatización - CN Caldes",
+                      "away": "CN Caldes - Entrerrios Automatización"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia - AECS L Hospitalet",
+                      "away": "AECS L Hospitalet - SolarMon-Les Glories 2014 CD La Concordia"
+                    },
+                    {
+                      "home": "U.D.C. Txantrea K.K.E. - Avenida Algón FS",
+                      "away": "Avenida Algón FS - U.D.C. Txantrea K.K.E."
+                    },
+                    {
+                      "home": "Somriu Futbol Sala Ripollet - CFS Autoescola Urgell Linyola",
+                      "away": "CFS Autoescola Urgell Linyola - Somriu Futbol Sala Ripollet"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta - Wanapix Aldelis InterSala 10 Zaragoza",
+                      "away": "Wanapix Aldelis InterSala 10 Zaragoza - Grupo Reciclarte Cesar Augusta"
+                    },
+                    {
+                      "home": "SD Hispania Yecla - C.E. Futsal Mataro",
+                      "away": "C.E. Futsal Mataro - SD Hispania Yecla"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 7,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Lainco Esportiu Rubi FS. - Feme Castellón C.FS.",
+                      "away": "Feme Castellón C.FS. - Lainco Esportiu Rubi FS."
+                    },
+                    {
+                      "home": "CD Lacturale Orvina - Entrerrios Automatización",
+                      "away": "Entrerrios Automatización - CD Lacturale Orvina"
+                    },
+                    {
+                      "home": "AECS L Hospitalet - U.D.C. Txantrea K.K.E.",
+                      "away": "U.D.C. Txantrea K.K.E. - AECS L Hospitalet"
+                    },
+                    {
+                      "home": "Avenida Algón FS - Somriu Futbol Sala Ripollet",
+                      "away": "Somriu Futbol Sala Ripollet - Avenida Algón FS"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola - Grupo Reciclarte Cesar Augusta",
+                      "away": "Grupo Reciclarte Cesar Augusta - CFS Autoescola Urgell Linyola"
+                    },
+                    {
+                      "home": "Wanapix Aldelis InterSala 10 Zaragoza - SD Hispania Yecla",
+                      "away": "SD Hispania Yecla - Wanapix Aldelis InterSala 10 Zaragoza"
+                    },
+                    {
+                      "home": "FS. Sabadell - C.E. Futsal Mataro",
+                      "away": "C.E. Futsal Mataro - FS. Sabadell"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 8,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Feme Castellón C.FS. - FS. Sabadell",
+                      "away": "FS. Sabadell - Feme Castellón C.FS."
+                    },
+                    {
+                      "home": "Entrerrios Automatización - Lainco Esportiu Rubi FS.",
+                      "away": "Lainco Esportiu Rubi FS. - Entrerrios Automatización"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia - CD Lacturale Orvina",
+                      "away": "CD Lacturale Orvina - SolarMon-Les Glories 2014 CD La Concordia"
+                    },
+                    {
+                      "home": "U.D.C. Txantrea K.K.E. - CN Caldes",
+                      "away": "CN Caldes - U.D.C. Txantrea K.K.E."
+                    },
+                    {
+                      "home": "Somriu Futbol Sala Ripollet - AECS L Hospitalet",
+                      "away": "AECS L Hospitalet - Somriu Futbol Sala Ripollet"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta - Avenida Algón FS",
+                      "away": "Avenida Algón FS - Grupo Reciclarte Cesar Augusta"
+                    },
+                    {
+                      "home": "SD Hispania Yecla - CFS Autoescola Urgell Linyola",
+                      "away": "CFS Autoescola Urgell Linyola - SD Hispania Yecla"
+                    },
+                    {
+                      "home": "C.E. Futsal Mataro - Wanapix Aldelis InterSala 10 Zaragoza",
+                      "away": "Wanapix Aldelis InterSala 10 Zaragoza - C.E. Futsal Mataro"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 9,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Feme Castellón C.FS. - Entrerrios Automatización",
+                      "away": "Entrerrios Automatización - Feme Castellón C.FS."
+                    },
+                    {
+                      "home": "CD Lacturale Orvina - U.D.C. Txantrea K.K.E.",
+                      "away": "U.D.C. Txantrea K.K.E. - CD Lacturale Orvina"
+                    },
+                    {
+                      "home": "CN Caldes - Somriu Futbol Sala Ripollet",
+                      "away": "Somriu Futbol Sala Ripollet - CN Caldes"
+                    },
+                    {
+                      "home": "AECS L Hospitalet - Grupo Reciclarte Cesar Augusta",
+                      "away": "Grupo Reciclarte Cesar Augusta - AECS L Hospitalet"
+                    },
+                    {
+                      "home": "Avenida Algón FS - SD Hispania Yecla",
+                      "away": "SD Hispania Yecla - Avenida Algón FS"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola - C.E. Futsal Mataro",
+                      "away": "Wanapix Aldelis InterSala 10 Zaragoza - FS. Sabadell"
+                    },
+                    {
+                      "home": "FS. Sabadell - Wanapix Aldelis InterSala 10 Zaragoza",
+                      "away": "C.E. Futsal Mataro - CFS Autoescola Urgell Linyola"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 10,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Entrerrios Automatización - FS. Sabadell",
+                      "away": "FS. Sabadell - Entrerrios Automatización"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia - Feme Castellón C.FS.",
+                      "away": "Feme Castellón C.FS. - SolarMon-Les Glories 2014 CD La Concordia"
+                    },
+                    {
+                      "home": "U.D.C. Txantrea K.K.E. - Lainco Esportiu Rubi FS.",
+                      "away": "Lainco Esportiu Rubi FS. - U.D.C. Txantrea K.K.E."
+                    },
+                    {
+                      "home": "Somriu Futbol Sala Ripollet - CD Lacturale Orvina",
+                      "away": "CD Lacturale Orvina - Somriu Futbol Sala Ripollet"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta - CN Caldes",
+                      "away": "CN Caldes - Grupo Reciclarte Cesar Augusta"
+                    },
+                    {
+                      "home": "SD Hispania Yecla - AECS L Hospitalet",
+                      "away": "AECS L Hospitalet - SD Hispania Yecla"
+                    },
+                    {
+                      "home": "Wanapix Aldelis InterSala 10 Zaragoza - CFS Autoescola Urgell Linyola",
+                      "away": "Avenida Algón FS - C.E. Futsal Mataro"
+                    },
+                    {
+                      "home": "C.E. Futsal Mataro - Avenida Algón FS",
+                      "away": "CFS Autoescola Urgell Linyola - Wanapix Aldelis InterSala 10 Zaragoza"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 11,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Feme Castellón C.FS. - U.D.C. Txantrea K.K.E.",
+                      "away": "U.D.C. Txantrea K.K.E. - Feme Castellón C.FS."
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi FS. - Somriu Futbol Sala Ripollet",
+                      "away": "Somriu Futbol Sala Ripollet - Lainco Esportiu Rubi FS."
+                    },
+                    {
+                      "home": "CD Lacturale Orvina - Grupo Reciclarte Cesar Augusta",
+                      "away": "Grupo Reciclarte Cesar Augusta - CD Lacturale Orvina"
+                    },
+                    {
+                      "home": "CN Caldes - SD Hispania Yecla",
+                      "away": "SD Hispania Yecla - CN Caldes"
+                    },
+                    {
+                      "home": "AECS L Hospitalet - C.E. Futsal Mataro",
+                      "away": "Wanapix Aldelis InterSala 10 Zaragoza - Avenida Algón FS"
+                    },
+                    {
+                      "home": "Avenida Algón FS - Wanapix Aldelis InterSala 10 Zaragoza",
+                      "away": "CFS Autoescola Urgell Linyola - FS. Sabadell"
+                    },
+                    {
+                      "home": "FS. Sabadell - CFS Autoescola Urgell Linyola",
+                      "away": "C.E. Futsal Mataro - AECS L Hospitalet"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 12,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia - FS. Sabadell",
+                      "away": "FS. Sabadell - SolarMon-Les Glories 2014 CD La Concordia"
+                    },
+                    {
+                      "home": "U.D.C. Txantrea K.K.E. - Entrerrios Automatización",
+                      "away": "Entrerrios Automatización - U.D.C. Txantrea K.K.E."
+                    },
+                    {
+                      "home": "Somriu Futbol Sala Ripollet - Feme Castellón C.FS.",
+                      "away": "Feme Castellón C.FS. - Somriu Futbol Sala Ripollet"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta - Lainco Esportiu Rubi FS.",
+                      "away": "Lainco Esportiu Rubi FS. - Grupo Reciclarte Cesar Augusta"
+                    },
+                    {
+                      "home": "SD Hispania Yecla - CD Lacturale Orvina",
+                      "away": "CD Lacturale Orvina - SD Hispania Yecla"
+                    },
+                    {
+                      "home": "Wanapix Aldelis InterSala 10 Zaragoza - AECS L Hospitalet",
+                      "away": "CN Caldes - C.E. Futsal Mataro"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola - Avenida Algón FS",
+                      "away": "AECS L Hospitalet - Wanapix Aldelis InterSala 10 Zaragoza"
+                    },
+                    {
+                      "home": "C.E. Futsal Mataro - CN Caldes",
+                      "away": "Avenida Algón FS - CFS Autoescola Urgell Linyola"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 13,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia - U.D.C. Txantrea K.K.E.",
+                      "away": "U.D.C. Txantrea K.K.E. - SolarMon-Les Glories 2014 CD La Concordia"
+                    },
+                    {
+                      "home": "Entrerrios Automatización - Somriu Futbol Sala Ripollet",
+                      "away": "Somriu Futbol Sala Ripollet - Entrerrios Automatización"
+                    },
+                    {
+                      "home": "Feme Castellón C.FS. - Grupo Reciclarte Cesar Augusta",
+                      "away": "Grupo Reciclarte Cesar Augusta - Feme Castellón C.FS."
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi FS. - SD Hispania Yecla",
+                      "away": "SD Hispania Yecla - Lainco Esportiu Rubi FS."
+                    },
+                    {
+                      "home": "CD Lacturale Orvina - C.E. Futsal Mataro",
+                      "away": "Wanapix Aldelis InterSala 10 Zaragoza - CN Caldes"
+                    },
+                    {
+                      "home": "CN Caldes - Wanapix Aldelis InterSala 10 Zaragoza",
+                      "away": "CFS Autoescola Urgell Linyola - AECS L Hospitalet"
+                    },
+                    {
+                      "home": "AECS L Hospitalet - CFS Autoescola Urgell Linyola",
+                      "away": "Avenida Algón FS - FS. Sabadell"
+                    },
+                    {
+                      "home": "FS. Sabadell - Avenida Algón FS",
+                      "away": "C.E. Futsal Mataro - CD Lacturale Orvina"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 14,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "FS. Sabadell - U.D.C. Txantrea K.K.E.",
+                      "away": "U.D.C. Txantrea K.K.E. - FS. Sabadell"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta - Entrerrios Automatización",
+                      "away": "Entrerrios Automatización - Grupo Reciclarte Cesar Augusta"
+                    },
+                    {
+                      "home": "SD Hispania Yecla - Feme Castellón C.FS.",
+                      "away": "Feme Castellón C.FS. - SD Hispania Yecla"
+                    },
+                    {
+                      "home": "Wanapix Aldelis InterSala 10 Zaragoza - CD Lacturale Orvina",
+                      "away": "Lainco Esportiu Rubi FS. - C.E. Futsal Mataro"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola - CN Caldes",
+                      "away": "CD Lacturale Orvina - Wanapix Aldelis InterSala 10 Zaragoza"
+                    },
+                    {
+                      "home": "Avenida Algón FS - AECS L Hospitalet",
+                      "away": "CN Caldes - CFS Autoescola Urgell Linyola"
+                    },
+                    {
+                      "home": "C.E. Futsal Mataro - Lainco Esportiu Rubi FS.",
+                      "away": "AECS L Hospitalet - Avenida Algón FS"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 15,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "U.D.C. Txantrea K.K.E. - Somriu Futbol Sala Ripollet",
+                      "away": "Somriu Futbol Sala Ripollet - U.D.C. Txantrea K.K.E."
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia - Grupo Reciclarte Cesar Augusta",
+                      "away": "Grupo Reciclarte Cesar Augusta - SolarMon-Les Glories 2014 CD La Concordia"
+                    },
+                    {
+                      "home": "Entrerrios Automatización - SD Hispania Yecla",
+                      "away": "SD Hispania Yecla - Entrerrios Automatización"
+                    },
+                    {
+                      "home": "Feme Castellón C.FS. - C.E. Futsal Mataro",
+                      "away": "Wanapix Aldelis InterSala 10 Zaragoza - Lainco Esportiu Rubi FS."
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi FS. - Wanapix Aldelis InterSala 10 Zaragoza",
+                      "away": "CFS Autoescola Urgell Linyola - CD Lacturale Orvina"
+                    },
+                    {
+                      "home": "CD Lacturale Orvina - CFS Autoescola Urgell Linyola",
+                      "away": "Avenida Algón FS - CN Caldes"
+                    },
+                    {
+                      "home": "CN Caldes - Avenida Algón FS",
+                      "away": "FS. Sabadell - AECS L Hospitalet"
+                    },
+                    {
+                      "home": "AECS L Hospitalet - FS. Sabadell",
+                      "away": "C.E. Futsal Mataro - Feme Castellón C.FS."
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -1509,6 +4913,542 @@
                 {
                   "name": "UD Azuqueca FS",
                   "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079009176_bormioli_220x220.jpg"
+                }
+              ],
+              "calendar": [
+                {
+                  "jornada": 1,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Granada FS Femenino - I.E.S. Luis de Camoens",
+                      "away": "I.E.S. Luis de Camoens - Granada FS Femenino"
+                    },
+                    {
+                      "home": "C.FS. Femenino San Fernando - Almagro FSF.",
+                      "away": "UD Azuqueca FS - C.D.E. Leganés FS. Masdeporte"
+                    },
+                    {
+                      "home": "Martos FS Jaén Paraíso Interior - Club Deportivo Basico Rivas Futsal",
+                      "away": "Almagro FSF. - C.FS. Femenino San Fernando"
+                    },
+                    {
+                      "home": "CD Salesianos Puertollano - ARRIVA AD Alcorcón FSF",
+                      "away": "Deportivo Cordoba FS. / Cajasur - Majadahonda FSF./Afar 4"
+                    },
+                    {
+                      "home": "Torrejón Sala Five Play - GLOBALCAJA ALBACETE FS. FEMENINA",
+                      "away": "Club Deportivo Basico Rivas Futsal - Martos FS Jaén Paraíso Interior"
+                    },
+                    {
+                      "home": "Atletico Navalcarnero - Melilla Ciudad del Deporte Torreblanca C. F.",
+                      "away": "ARRIVA AD Alcorcón FSF - CD Salesianos Puertollano"
+                    },
+                    {
+                      "home": "C.D.E. Leganés FS. Masdeporte - UD Azuqueca FS",
+                      "away": "GLOBALCAJA ALBACETE FS. FEMENINA - Torrejón Sala Five Play"
+                    },
+                    {
+                      "home": "Majadahonda FSF./Afar 4 - Deportivo Cordoba FS. / Cajasur",
+                      "away": "Melilla Ciudad del Deporte Torreblanca C. F. - Atletico Navalcarnero"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 2,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "I.E.S. Luis de Camoens - Atletico Navalcarnero",
+                      "away": "Atletico Navalcarnero - I.E.S. Luis de Camoens"
+                    },
+                    {
+                      "home": "UD Azuqueca FS - Granada FS Femenino",
+                      "away": "Granada FS Femenino - UD Azuqueca FS"
+                    },
+                    {
+                      "home": "Almagro FSF. - C.D.E. Leganés FS. Masdeporte",
+                      "away": "C.FS. Femenino San Fernando - Deportivo Cordoba FS. / Cajasur"
+                    },
+                    {
+                      "home": "Deportivo Cordoba FS. / Cajasur - C.FS. Femenino San Fernando",
+                      "away": "Martos FS Jaén Paraíso Interior - ARRIVA AD Alcorcón FSF"
+                    },
+                    {
+                      "home": "Club Deportivo Basico Rivas Futsal - Majadahonda FSF./Afar 4",
+                      "away": "CD Salesianos Puertollano - GLOBALCAJA ALBACETE FS. FEMENINA"
+                    },
+                    {
+                      "home": "ARRIVA AD Alcorcón FSF - Martos FS Jaén Paraíso Interior",
+                      "away": "Torrejón Sala Five Play - Melilla Ciudad del Deporte Torreblanca C. F."
+                    },
+                    {
+                      "home": "GLOBALCAJA ALBACETE FS. FEMENINA - CD Salesianos Puertollano",
+                      "away": "C.D.E. Leganés FS. Masdeporte - Almagro FSF."
+                    },
+                    {
+                      "home": "Melilla Ciudad del Deporte Torreblanca C. F. - Torrejón Sala Five Play",
+                      "away": "Majadahonda FSF./Afar 4 - Club Deportivo Basico Rivas Futsal"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 3,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "I.E.S. Luis de Camoens - UD Azuqueca FS",
+                      "away": "UD Azuqueca FS - I.E.S. Luis de Camoens"
+                    },
+                    {
+                      "home": "Granada FS Femenino - Almagro FSF.",
+                      "away": "Almagro FSF. - Granada FS Femenino"
+                    },
+                    {
+                      "home": "C.FS. Femenino San Fernando - Club Deportivo Basico Rivas Futsal",
+                      "away": "Deportivo Cordoba FS. / Cajasur - C.D.E. Leganés FS. Masdeporte"
+                    },
+                    {
+                      "home": "Martos FS Jaén Paraíso Interior - GLOBALCAJA ALBACETE FS. FEMENINA",
+                      "away": "Club Deportivo Basico Rivas Futsal - C.FS. Femenino San Fernando"
+                    },
+                    {
+                      "home": "CD Salesianos Puertollano - Melilla Ciudad del Deporte Torreblanca C. F.",
+                      "away": "ARRIVA AD Alcorcón FSF - Majadahonda FSF./Afar 4"
+                    },
+                    {
+                      "home": "Atletico Navalcarnero - Torrejón Sala Five Play",
+                      "away": "GLOBALCAJA ALBACETE FS. FEMENINA - Martos FS Jaén Paraíso Interior"
+                    },
+                    {
+                      "home": "C.D.E. Leganés FS. Masdeporte - Deportivo Cordoba FS. / Cajasur",
+                      "away": "Melilla Ciudad del Deporte Torreblanca C. F. - CD Salesianos Puertollano"
+                    },
+                    {
+                      "home": "Majadahonda FSF./Afar 4 - ARRIVA AD Alcorcón FSF",
+                      "away": "Torrejón Sala Five Play - Atletico Navalcarnero"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 4,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "UD Azuqueca FS - Atletico Navalcarnero",
+                      "away": "Atletico Navalcarnero - UD Azuqueca FS"
+                    },
+                    {
+                      "home": "Almagro FSF. - I.E.S. Luis de Camoens",
+                      "away": "I.E.S. Luis de Camoens - Almagro FSF."
+                    },
+                    {
+                      "home": "Deportivo Cordoba FS. / Cajasur - Granada FS Femenino",
+                      "away": "Granada FS Femenino - Deportivo Cordoba FS. / Cajasur"
+                    },
+                    {
+                      "home": "Club Deportivo Basico Rivas Futsal - C.D.E. Leganés FS. Masdeporte",
+                      "away": "C.FS. Femenino San Fernando - ARRIVA AD Alcorcón FSF"
+                    },
+                    {
+                      "home": "ARRIVA AD Alcorcón FSF - C.FS. Femenino San Fernando",
+                      "away": "Martos FS Jaén Paraíso Interior - Melilla Ciudad del Deporte Torreblanca C. F."
+                    },
+                    {
+                      "home": "GLOBALCAJA ALBACETE FS. FEMENINA - Majadahonda FSF./Afar 4",
+                      "away": "CD Salesianos Puertollano - Torrejón Sala Five Play"
+                    },
+                    {
+                      "home": "Melilla Ciudad del Deporte Torreblanca C. F. - Martos FS Jaén Paraíso Interior",
+                      "away": "C.D.E. Leganés FS. Masdeporte - Club Deportivo Basico Rivas Futsal"
+                    },
+                    {
+                      "home": "Torrejón Sala Five Play - CD Salesianos Puertollano",
+                      "away": "Majadahonda FSF./Afar 4 - GLOBALCAJA ALBACETE FS. FEMENINA"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 5,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "UD Azuqueca FS - Almagro FSF.",
+                      "away": "Almagro FSF. - UD Azuqueca FS"
+                    },
+                    {
+                      "home": "I.E.S. Luis de Camoens - Deportivo Cordoba FS. / Cajasur",
+                      "away": "Deportivo Cordoba FS. / Cajasur - I.E.S. Luis de Camoens"
+                    },
+                    {
+                      "home": "Granada FS Femenino - Club Deportivo Basico Rivas Futsal",
+                      "away": "Club Deportivo Basico Rivas Futsal - Granada FS Femenino"
+                    },
+                    {
+                      "home": "C.FS. Femenino San Fernando - GLOBALCAJA ALBACETE FS. FEMENINA",
+                      "away": "ARRIVA AD Alcorcón FSF - C.D.E. Leganés FS. Masdeporte"
+                    },
+                    {
+                      "home": "Martos FS Jaén Paraíso Interior - Torrejón Sala Five Play",
+                      "away": "GLOBALCAJA ALBACETE FS. FEMENINA - C.FS. Femenino San Fernando"
+                    },
+                    {
+                      "home": "Atletico Navalcarnero - CD Salesianos Puertollano",
+                      "away": "Melilla Ciudad del Deporte Torreblanca C. F. - Majadahonda FSF./Afar 4"
+                    },
+                    {
+                      "home": "C.D.E. Leganés FS. Masdeporte - ARRIVA AD Alcorcón FSF",
+                      "away": "Torrejón Sala Five Play - Martos FS Jaén Paraíso Interior"
+                    },
+                    {
+                      "home": "Majadahonda FSF./Afar 4 - Melilla Ciudad del Deporte Torreblanca C. F.",
+                      "away": "CD Salesianos Puertollano - Atletico Navalcarnero"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 6,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Almagro FSF. - Atletico Navalcarnero",
+                      "away": "Atletico Navalcarnero - Almagro FSF."
+                    },
+                    {
+                      "home": "Deportivo Cordoba FS. / Cajasur - UD Azuqueca FS",
+                      "away": "UD Azuqueca FS - Deportivo Cordoba FS. / Cajasur"
+                    },
+                    {
+                      "home": "Club Deportivo Basico Rivas Futsal - I.E.S. Luis de Camoens",
+                      "away": "I.E.S. Luis de Camoens - Club Deportivo Basico Rivas Futsal"
+                    },
+                    {
+                      "home": "ARRIVA AD Alcorcón FSF - Granada FS Femenino",
+                      "away": "Granada FS Femenino - ARRIVA AD Alcorcón FSF"
+                    },
+                    {
+                      "home": "GLOBALCAJA ALBACETE FS. FEMENINA - C.D.E. Leganés FS. Masdeporte",
+                      "away": "C.FS. Femenino San Fernando - Melilla Ciudad del Deporte Torreblanca C. F."
+                    },
+                    {
+                      "home": "Melilla Ciudad del Deporte Torreblanca C. F. - C.FS. Femenino San Fernando",
+                      "away": "Martos FS Jaén Paraíso Interior - CD Salesianos Puertollano"
+                    },
+                    {
+                      "home": "Torrejón Sala Five Play - Majadahonda FSF./Afar 4",
+                      "away": "C.D.E. Leganés FS. Masdeporte - GLOBALCAJA ALBACETE FS. FEMENINA"
+                    },
+                    {
+                      "home": "CD Salesianos Puertollano - Martos FS Jaén Paraíso Interior",
+                      "away": "Majadahonda FSF./Afar 4 - Torrejón Sala Five Play"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 7,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Almagro FSF. - Deportivo Cordoba FS. / Cajasur",
+                      "away": "Deportivo Cordoba FS. / Cajasur - Almagro FSF."
+                    },
+                    {
+                      "home": "UD Azuqueca FS - Club Deportivo Basico Rivas Futsal",
+                      "away": "Club Deportivo Basico Rivas Futsal - UD Azuqueca FS"
+                    },
+                    {
+                      "home": "I.E.S. Luis de Camoens - ARRIVA AD Alcorcón FSF",
+                      "away": "ARRIVA AD Alcorcón FSF - I.E.S. Luis de Camoens"
+                    },
+                    {
+                      "home": "C.FS. Femenino San Fernando - Torrejón Sala Five Play",
+                      "away": "Melilla Ciudad del Deporte Torreblanca C. F. - C.D.E. Leganés FS. Masdeporte"
+                    },
+                    {
+                      "home": "Atletico Navalcarnero - Martos FS Jaén Paraíso Interior",
+                      "away": "Torrejón Sala Five Play - C.FS. Femenino San Fernando"
+                    },
+                    {
+                      "home": "C.D.E. Leganés FS. Masdeporte - Melilla Ciudad del Deporte Torreblanca C. F.",
+                      "away": "CD Salesianos Puertollano - Majadahonda FSF./Afar 4"
+                    },
+                    {
+                      "home": "Majadahonda FSF./Afar 4 - CD Salesianos Puertollano",
+                      "away": "Martos FS Jaén Paraíso Interior - Atletico Navalcarnero"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 8,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Deportivo Cordoba FS. / Cajasur - Atletico Navalcarnero",
+                      "away": "Atletico Navalcarnero - Deportivo Cordoba FS. / Cajasur"
+                    },
+                    {
+                      "home": "Club Deportivo Basico Rivas Futsal - Almagro FSF.",
+                      "away": "Almagro FSF. - Club Deportivo Basico Rivas Futsal"
+                    },
+                    {
+                      "home": "ARRIVA AD Alcorcón FSF - UD Azuqueca FS",
+                      "away": "UD Azuqueca FS - ARRIVA AD Alcorcón FSF"
+                    },
+                    {
+                      "home": "GLOBALCAJA ALBACETE FS. FEMENINA - I.E.S. Luis de Camoens",
+                      "away": "I.E.S. Luis de Camoens - GLOBALCAJA ALBACETE FS. FEMENINA"
+                    },
+                    {
+                      "home": "Melilla Ciudad del Deporte Torreblanca C. F. - Granada FS Femenino",
+                      "away": "Granada FS Femenino - Melilla Ciudad del Deporte Torreblanca C. F."
+                    },
+                    {
+                      "home": "Torrejón Sala Five Play - C.D.E. Leganés FS. Masdeporte",
+                      "away": "C.FS. Femenino San Fernando - CD Salesianos Puertollano"
+                    },
+                    {
+                      "home": "CD Salesianos Puertollano - C.FS. Femenino San Fernando",
+                      "away": "C.D.E. Leganés FS. Masdeporte - Torrejón Sala Five Play"
+                    },
+                    {
+                      "home": "Martos FS Jaén Paraíso Interior - Majadahonda FSF./Afar 4",
+                      "away": "Majadahonda FSF./Afar 4 - Martos FS Jaén Paraíso Interior"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 9,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Deportivo Cordoba FS. / Cajasur - Club Deportivo Basico Rivas Futsal",
+                      "away": "Club Deportivo Basico Rivas Futsal - Deportivo Cordoba FS. / Cajasur"
+                    },
+                    {
+                      "home": "Almagro FSF. - ARRIVA AD Alcorcón FSF",
+                      "away": "ARRIVA AD Alcorcón FSF - Almagro FSF."
+                    },
+                    {
+                      "home": "Granada FS Femenino - Torrejón Sala Five Play",
+                      "away": "Torrejón Sala Five Play - Granada FS Femenino"
+                    },
+                    {
+                      "home": "C.FS. Femenino San Fernando - Martos FS Jaén Paraíso Interior",
+                      "away": "CD Salesianos Puertollano - C.D.E. Leganés FS. Masdeporte"
+                    },
+                    {
+                      "home": "Atletico Navalcarnero - Majadahonda FSF./Afar 4",
+                      "away": "Martos FS Jaén Paraíso Interior - C.FS. Femenino San Fernando"
+                    },
+                    {
+                      "home": "C.D.E. Leganés FS. Masdeporte - CD Salesianos Puertollano",
+                      "away": "Majadahonda FSF./Afar 4 - Atletico Navalcarnero"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 10,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Club Deportivo Basico Rivas Futsal - Atletico Navalcarnero",
+                      "away": "Atletico Navalcarnero - Club Deportivo Basico Rivas Futsal"
+                    },
+                    {
+                      "home": "ARRIVA AD Alcorcón FSF - Deportivo Cordoba FS. / Cajasur",
+                      "away": "Deportivo Cordoba FS. / Cajasur - ARRIVA AD Alcorcón FSF"
+                    },
+                    {
+                      "home": "GLOBALCAJA ALBACETE FS. FEMENINA - Almagro FSF.",
+                      "away": "Almagro FSF. - GLOBALCAJA ALBACETE FS. FEMENINA"
+                    },
+                    {
+                      "home": "Melilla Ciudad del Deporte Torreblanca C. F. - UD Azuqueca FS",
+                      "away": "UD Azuqueca FS - Melilla Ciudad del Deporte Torreblanca C. F."
+                    },
+                    {
+                      "home": "Torrejón Sala Five Play - I.E.S. Luis de Camoens",
+                      "away": "I.E.S. Luis de Camoens - Torrejón Sala Five Play"
+                    },
+                    {
+                      "home": "CD Salesianos Puertollano - Granada FS Femenino",
+                      "away": "Granada FS Femenino - CD Salesianos Puertollano"
+                    },
+                    {
+                      "home": "Martos FS Jaén Paraíso Interior - C.D.E. Leganés FS. Masdeporte",
+                      "away": "C.FS. Femenino San Fernando - Majadahonda FSF./Afar 4"
+                    },
+                    {
+                      "home": "Majadahonda FSF./Afar 4 - C.FS. Femenino San Fernando",
+                      "away": "C.D.E. Leganés FS. Masdeporte - Martos FS Jaén Paraíso Interior"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 11,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Club Deportivo Basico Rivas Futsal - ARRIVA AD Alcorcón FSF",
+                      "away": "ARRIVA AD Alcorcón FSF - Club Deportivo Basico Rivas Futsal"
+                    },
+                    {
+                      "home": "UD Azuqueca FS - Torrejón Sala Five Play",
+                      "away": "Torrejón Sala Five Play - UD Azuqueca FS"
+                    },
+                    {
+                      "home": "I.E.S. Luis de Camoens - CD Salesianos Puertollano",
+                      "away": "CD Salesianos Puertollano - I.E.S. Luis de Camoens"
+                    },
+                    {
+                      "home": "Granada FS Femenino - Martos FS Jaén Paraíso Interior",
+                      "away": "Martos FS Jaén Paraíso Interior - Granada FS Femenino"
+                    },
+                    {
+                      "home": "Atletico Navalcarnero - C.FS. Femenino San Fernando",
+                      "away": "C.FS. Femenino San Fernando - Atletico Navalcarnero"
+                    },
+                    {
+                      "home": "C.D.E. Leganés FS. Masdeporte - Majadahonda FSF./Afar 4",
+                      "away": "Majadahonda FSF./Afar 4 - C.D.E. Leganés FS. Masdeporte"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 12,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "ARRIVA AD Alcorcón FSF - Atletico Navalcarnero",
+                      "away": "Atletico Navalcarnero - ARRIVA AD Alcorcón FSF"
+                    },
+                    {
+                      "home": "GLOBALCAJA ALBACETE FS. FEMENINA - Club Deportivo Basico Rivas Futsal",
+                      "away": "Club Deportivo Basico Rivas Futsal - GLOBALCAJA ALBACETE FS. FEMENINA"
+                    },
+                    {
+                      "home": "Melilla Ciudad del Deporte Torreblanca C. F. - Deportivo Cordoba FS. / Cajasur",
+                      "away": "Deportivo Cordoba FS. / Cajasur - Melilla Ciudad del Deporte Torreblanca C. F."
+                    },
+                    {
+                      "home": "Torrejón Sala Five Play - Almagro FSF.",
+                      "away": "Almagro FSF. - Torrejón Sala Five Play"
+                    },
+                    {
+                      "home": "CD Salesianos Puertollano - UD Azuqueca FS",
+                      "away": "UD Azuqueca FS - CD Salesianos Puertollano"
+                    },
+                    {
+                      "home": "Martos FS Jaén Paraíso Interior - I.E.S. Luis de Camoens",
+                      "away": "I.E.S. Luis de Camoens - Martos FS Jaén Paraíso Interior"
+                    },
+                    {
+                      "home": "C.FS. Femenino San Fernando - C.D.E. Leganés FS. Masdeporte",
+                      "away": "Granada FS Femenino - Majadahonda FSF./Afar 4"
+                    },
+                    {
+                      "home": "Majadahonda FSF./Afar 4 - Granada FS Femenino",
+                      "away": "C.D.E. Leganés FS. Masdeporte - C.FS. Femenino San Fernando"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 13,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Deportivo Cordoba FS. / Cajasur - Torrejón Sala Five Play",
+                      "away": "Torrejón Sala Five Play - Deportivo Cordoba FS. / Cajasur"
+                    },
+                    {
+                      "home": "Almagro FSF. - CD Salesianos Puertollano",
+                      "away": "CD Salesianos Puertollano - Almagro FSF."
+                    },
+                    {
+                      "home": "UD Azuqueca FS - Martos FS Jaén Paraíso Interior",
+                      "away": "Martos FS Jaén Paraíso Interior - UD Azuqueca FS"
+                    },
+                    {
+                      "home": "I.E.S. Luis de Camoens - Majadahonda FSF./Afar 4",
+                      "away": "C.FS. Femenino San Fernando - Granada FS Femenino"
+                    },
+                    {
+                      "home": "Granada FS Femenino - C.FS. Femenino San Fernando",
+                      "away": "Majadahonda FSF./Afar 4 - I.E.S. Luis de Camoens"
+                    },
+                    {
+                      "home": "Atletico Navalcarnero - C.D.E. Leganés FS. Masdeporte",
+                      "away": "C.D.E. Leganés FS. Masdeporte - Atletico Navalcarnero"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 14,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "Melilla Ciudad del Deporte Torreblanca C. F. - ARRIVA AD Alcorcón FSF",
+                      "away": "ARRIVA AD Alcorcón FSF - Melilla Ciudad del Deporte Torreblanca C. F."
+                    },
+                    {
+                      "home": "Torrejón Sala Five Play - Club Deportivo Basico Rivas Futsal",
+                      "away": "Club Deportivo Basico Rivas Futsal - Torrejón Sala Five Play"
+                    },
+                    {
+                      "home": "CD Salesianos Puertollano - Deportivo Cordoba FS. / Cajasur",
+                      "away": "Deportivo Cordoba FS. / Cajasur - CD Salesianos Puertollano"
+                    },
+                    {
+                      "home": "Martos FS Jaén Paraíso Interior - Almagro FSF.",
+                      "away": "Almagro FSF. - Martos FS Jaén Paraíso Interior"
+                    },
+                    {
+                      "home": "C.FS. Femenino San Fernando - I.E.S. Luis de Camoens",
+                      "away": "UD Azuqueca FS - Majadahonda FSF./Afar 4"
+                    },
+                    {
+                      "home": "Majadahonda FSF./Afar 4 - UD Azuqueca FS",
+                      "away": "I.E.S. Luis de Camoens - C.FS. Femenino San Fernando"
+                    },
+                    {
+                      "home": "C.D.E. Leganés FS. Masdeporte - Granada FS Femenino",
+                      "away": "Granada FS Femenino - C.D.E. Leganés FS. Masdeporte"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 15,
+                  "date": null,
+                  "matches": [
+                    {
+                      "home": "ARRIVA AD Alcorcón FSF - Torrejón Sala Five Play",
+                      "away": "Torrejón Sala Five Play - ARRIVA AD Alcorcón FSF"
+                    },
+                    {
+                      "home": "Club Deportivo Basico Rivas Futsal - CD Salesianos Puertollano",
+                      "away": "CD Salesianos Puertollano - Club Deportivo Basico Rivas Futsal"
+                    },
+                    {
+                      "home": "Deportivo Cordoba FS. / Cajasur - Martos FS Jaén Paraíso Interior",
+                      "away": "Martos FS Jaén Paraíso Interior - Deportivo Cordoba FS. / Cajasur"
+                    },
+                    {
+                      "home": "Almagro FSF. - Majadahonda FSF./Afar 4",
+                      "away": "C.FS. Femenino San Fernando - UD Azuqueca FS"
+                    },
+                    {
+                      "home": "UD Azuqueca FS - C.FS. Femenino San Fernando",
+                      "away": "Atletico Navalcarnero - Granada FS Femenino"
+                    },
+                    {
+                      "home": "I.E.S. Luis de Camoens - C.D.E. Leganés FS. Masdeporte",
+                      "away": "Majadahonda FSF./Afar 4 - Almagro FSF."
+                    },
+                    {
+                      "home": "Granada FS Femenino - Atletico Navalcarnero",
+                      "away": "C.D.E. Leganés FS. Masdeporte - I.E.S. Luis de Camoens"
+                    }
+                  ]
                 }
               ]
             }
