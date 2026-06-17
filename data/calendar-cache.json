@@ -1,0 +1,3 @@
+{
+  "_comment": "Caché persistente de actaUrls por partido auto-generada por scrapers.calendar_cache. NO editar a mano. Cada run del scraper fusiona lo fresco con esta caché: una vez la federación publica el CodActa de un partido queda permanente para el resto de la temporada aunque RFEF rate-limite en runs posteriores. Si una URL deja de funcionar, simplemente borra esa entrada y la próxima ejecución la reresolverá."
+}

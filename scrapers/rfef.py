@@ -34,6 +34,7 @@ from pathlib import Path
 
 import requests
 
+from scrapers import calendar_cache
 from scrapers.logo_resolver import lookup_override, resolve_logo_url
 from scrapers.rfef_clasificacion import ScrapedTeam, fetch_division_teams
 from scrapers.rfef_calendario import fetch_division_calendar, resolve_temporada_code
@@ -630,6 +631,8 @@ def _attach_calendars(out_divisions: list[dict], season: str) -> None:
                             print(f"  [rfef-cal] {div_cfg['id']}/{g_cfg['id']}: "
                                   f"fallback PDF → {len(calendar)} jornadas")
                 if calendar:
+                    _merge_acta_cache(calendar, g_cfg["comp"], g_cfg["grupo"],
+                                      label=f"{div_cfg['id']}/{g_cfg['id']}")
                     grp["calendar"] = calendar
                 time.sleep(10)
         elif div_cfg.get("clasificacion"):
@@ -644,8 +647,53 @@ def _attach_calendars(out_divisions: list[dict], season: str) -> None:
                     print(f"  [rfef-cal] {div_cfg['id']}: "
                           f"fallback PDF → {len(calendar)} jornadas")
             if calendar:
+                _merge_acta_cache(
+                    calendar,
+                    div_cfg["clasificacion"]["comp"],
+                    div_cfg["clasificacion"]["grupo"],
+                    label=div_cfg["id"],
+                )
                 div["calendar"] = calendar
             time.sleep(10)
+
+
+def _merge_acta_cache(
+    calendar: list[dict],
+    comp: str | int,
+    grupo: str | int,
+    *,
+    label: str,
+) -> None:
+    """Funde el calendario fresco con la caché persistente de actaUrls.
+
+    - Partidos con `actaUrl` recién extraído → se almacenan en la caché para
+      próximos runs (clave: comp|grupo|J{jornada}|home_norm|away_norm).
+    - Partidos sin `actaUrl` → se busca en la caché por la misma clave. Si
+      hay hit, se rellena. Resultado: cobertura monotónicamente creciente
+      aunque RFEF rate-limite en un run concreto.
+    """
+    stored = 0
+    recovered = 0
+    for j in calendar:
+        jn = j.get("jornada")
+        if not isinstance(jn, int):
+            continue
+        for m in j.get("matches", []):
+            home = m.get("home") or ""
+            away = m.get("away") or ""
+            if not home or not away:
+                continue
+            cur = m.get("actaUrl")
+            if cur:
+                calendar_cache.store(comp, grupo, jn, home, away, cur)
+                stored += 1
+            else:
+                cached = calendar_cache.lookup(comp, grupo, jn, home, away)
+                if cached:
+                    m["actaUrl"] = cached
+                    recovered += 1
+    if stored or recovered:
+        print(f"  [rfef-cal] {label}: acta-cache fresh={stored} recovered={recovered}")
 
 
 def _scrape_clasificacion_groups(
