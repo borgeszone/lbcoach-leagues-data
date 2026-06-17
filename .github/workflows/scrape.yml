@@ -56,6 +56,23 @@ jobs:
           echo "..."
           wc -l output/leagues.json
 
+      # Persistir las cachés acumulativas (escudos + actaUrls) de vuelta a main.
+      # Sin este commit el scraper regeneraba desde cero en cada run y las
+      # cachés nunca acumulaban — el archivo en disco se tiraba con el container.
+      - name: Commit caches back to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Solo committeamos cambios en los ficheros de caché. El resto del repo
+          # queda intacto.
+          git add data/badges-cache.json data/calendar-cache.json
+          if git diff --cached --quiet; then
+            echo "Sin cambios en las cachés"
+          else
+            git commit -m "chore: refresh data caches [skip ci]"
+            git push origin main
+          fi
+
       - name: Publish to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
