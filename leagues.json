@@ -1,6 +1,6 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-07-27T10:39:48+00:00",
+  "lastUpdated": "2026-07-28T15:48:39+00:00",
   "categories": [
     {
       "id": "rfef",
@@ -3228,7 +3228,24 @@
                 }
               ]
             }
+          ],
+          "notices": [
+            {
+              "id": "rfef-2afsfem-ejemplo-2026-07",
+              "title": "Ejemplo · Horarios provisionales de la jornada 1",
+              "body": "Novedad de ejemplo a nivel de división (Segunda FS Femenina): solo la ven los equipos de esa división.",
+              "date": "2026-07-05"
+            }
           ]
+        }
+      ],
+      "notices": [
+        {
+          "id": "rfef-ejemplo-2026-07",
+          "title": "Ejemplo · Nueva normativa de sanciones 2026/27",
+          "body": "Aviso de ejemplo para probar las notificaciones de novedades de federación. Lo ven todos los equipos RFEF. Bórralo de data/notices-manual.json cuando confirmes que funciona.",
+          "url": "https://www.rfef.es/",
+          "date": "2026-07-06"
         }
       ]
     },
