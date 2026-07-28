@@ -36,6 +36,36 @@ def current_season() -> str:
     return f"{today.year - 1}-{today.year}"
 
 
+def load_notices() -> dict:
+    """Lee data/notices-manual.json (novedades/comunicados de federación).
+
+    Estructura: {"categories": {<catId>: [notice, ...]},
+                 "divisions":  {<divId>: [notice, ...]}}.
+    Devuelve {} si el fichero no existe.
+    """
+    path = ROOT / "data" / "notices-manual.json"
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def apply_notices(categories: list[dict], notices: dict) -> None:
+    """Inyecta las novedades manuales en las categorías/divisiones que coincidan
+    por id. La app (LeagueData.noticesFor) lee `notices` a nivel de categoría y
+    de división. Modifica `categories` in-place.
+    """
+    cat_notices = notices.get("categories", {})
+    div_notices = notices.get("divisions", {})
+    for cat in categories:
+        cid = cat.get("id")
+        if cid in cat_notices:
+            cat["notices"] = cat_notices[cid]
+        for div in cat.get("divisions", []):
+            did = div.get("id")
+            if did in div_notices:
+                div["notices"] = div_notices[did]
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--season", default=None,
@@ -59,10 +89,15 @@ def main() -> int:
     rfef_cat = rfef.scrape(season=season, resolve_badges=not args.no_badges)
     fcf_cat = fcf.load_manual()
 
+    categories = [rfef_cat, fcf_cat]
+
+    # Inyectar novedades/comunicados de federación (data/notices-manual.json).
+    apply_notices(categories, load_notices())
+
     payload = {
         "version": season,
         "lastUpdated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "categories": [rfef_cat, fcf_cat],
+        "categories": categories,
     }
 
     out = OUTPUT_DIR / "leagues.json"

@@ -52,6 +52,30 @@ Edita `data/fcf-manual.json`:
 
 Push al repo y GitHub Actions corre solo (o trigger manual desde la UI).
 
+### Novedades de federación (manual)
+La app muestra "Novedades de tu liga" (notificación local + bandeja con badge) a partir del campo `notices` del JSON. Se mantienen a mano en `data/notices-manual.json` y `scrape.py` las inyecta en la categoría/división correspondiente:
+
+```jsonc
+{
+  "categories": {                         // novedad para TODA la federación
+    "rfef": [
+      { "id": "circ-2026-07",             // id estable (imprescindible para dedup)
+        "title": "Nueva normativa de sanciones",
+        "body": "…",                      // opcional
+        "url": "https://www.rfef.es/…",   // opcional (se abre en el navegador)
+        "date": "2026-07-06" }            // opcional (YYYY-MM-DD)
+    ]
+  },
+  "divisions": {                          // novedad solo para una división
+    "rfef-segunda-fs-fem": [ { "id": "…", "title": "…" } ]
+  }
+}
+```
+
+- La clave es el `id` de una categoría (`rfef`/`fcf`) o de una división (mira los ids en `output/leagues.json`).
+- El `id` de cada novedad debe ser **estable**: la app deduplica por él para no repetir la notificación. Cambiar el `id` = novedad nueva.
+- El fichero incluye entradas `ejemplo`; bórralas cuando confirmes el flujo.
+
 ## GitHub Actions
 
 El workflow `.github/workflows/scrape.yml`:
