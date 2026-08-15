@@ -1,27 +1,39 @@
 """Scraper de RFEF (Real Federación Española de Fútbol).
 
-Estrategia (en cascada por división):
+Qué divisiones existen y con qué códigos se pregunta a la PNFG en cada run
+(`scrapers.rfef_discovery`). Aquí ya no hay ningún código de competición
+escrito a mano: son por temporada, y tenerlos fijos fue el bug de agosto de
+2026 — el scraper republicó la liga de 2025-26 con el sello de 2026-27, sin un
+solo error por el camino.
 
-1. **Clasificación pública** (`resultados.rfef.es`, módulo
-   `scrapers.rfef_clasificacion`): fuente primaria. Cada `<tr>` de la tabla
-   tiene `<img class=escudo_widget>` + `<a>NOMBRE</a>` → equipo y escudo
-   oficiales en la misma fila. Cobertura ~100%, nombres canónicos.
-2. **PDF de calendario** (legacy): si la clasificación devuelve vacío
-   (rate-limit, división nueva sin jornadas jugadas, etc.), se intenta el
-   PDF oficial de `rfef.es` con `pdfplumber`. Solo aporta nombres; los
-   escudos se resuelven via Wikipedia (resolver muy poco fiable: ~7% de
-   coverage). Es el camino que se usaba antes y se mantiene como red de
-   seguridad.
-3. **Fallback hardcodeado** (`data/rfef-fallback.json`): nombres curados a
-   mano para asegurar lista mínima incluso sin red.
+Estrategia de equipos, en cascada por división/grupo:
 
-PDF URL pattern (estable entre temporadas):
+1. **Clasificación pública** (`scrapers.rfef_clasificacion`): cada `<tr>` trae
+   `<img class=escudo_widget>` + `<a>NOMBRE</a>`, así que da nombre canónico y
+   escudo oficial en la misma fila. Es la mejor fuente **pero no existe hasta
+   que se juega la J1**.
+2. **Calendario** (`rfef_calendario.teams_from_calendar`): los equipos salen de
+   los enfrentamientos. Existe desde que se sortea, así que es la fuente que
+   funciona en pretemporada, que es justo cuando se prepara la temporada nueva.
+3. **PDF oficial** de `rfef.es` con `pdfplumber` (legacy). Solo nombres.
+4. **Fallback curado** (`data/rfef-fallback.json`), **y solo si su campo
+   `season` coincide con la temporada pedida**. Sin esa condición, el fallback
+   es una forma silenciosa de publicar la liga del año pasado.
+
+El PDF sigue en la cascada porque su URL sí es estable entre temporadas:
+
     https://rfef.es/sites/default/files/{YEAR}-07/Calendario_{COMP}_{SEASON}.pdf
-
-Donde:
-    YEAR = primer año de la temporada (2025-2026 -> 2025)
-    COMP = identificador de la competición ("1Div_Sala", "2Div_Sala", etc.)
+    YEAR   = primer año de la temporada (2025-2026 → 2025)
+    COMP   = identificador de la competición ("1Div_Sala", "2Div_Sala", …)
     SEASON = "2025-2026"
+
+## Fallar cerrado
+
+Si no se puede verificar contra qué temporada se está scrapeando, `scrape()`
+devuelve la categoría vacía con `seasonVerified: False` y `scrape.py` aborta sin
+escribir el fichero. Un run que falla deja publicado el JSON anterior, que es
+viejo pero coherente; un run que "sale bien" con datos de otra temporada deja
+publicada una mentira con fecha de hoy. La segunda es peor y es la que ocurrió.
 """
 from __future__ import annotations
 
@@ -37,76 +49,56 @@ import requests
 from scrapers import calendar_cache
 from scrapers.logo_resolver import lookup_override, resolve_logo_url
 from scrapers.rfef_clasificacion import ScrapedTeam, fetch_division_teams
-from scrapers.rfef_calendario import fetch_division_calendar, resolve_temporada_code
+from scrapers.rfef_calendario import fetch_division_calendar, teams_from_calendar
+from scrapers.rfef_discovery import (
+    DIVISION_NAMES,
+    SEASON_NOT_PUBLISHED,
+    Fetcher,
+    list_competitions,
+    list_groups,
+    match_division,
+    resolve_season,
+)
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 
-# Configuración de divisiones RFEF.
+# Config **legacy** de PDFs, indexada por id estable de división.
 #
-# Cada división puede declarar (en orden de preferencia):
+# Los códigos `comp`/`grupo` ya no viven aquí: son por temporada y tenerlos
+# escritos a mano fue exactamente el bug de agosto de 2026 (ver la cabecera de
+# `rfef_discovery`). Ahora se descubren en cada run.
 #
-#   - `clasificacion: {comp, grupo}` → división plana scrapeada de
-#     `resultados.rfef.es`. Es la fuente primaria desde 2026: nombres
-#     oficiales + escudos en la misma fila.
-#   - `clasificacion_groups: [{id, name, comp, grupo}]` → división con
-#     grupos territoriales. Cada entrada es un grupo separado en el JSON
-#     final. Si todos los grupos vienen vacíos (rate-limit, etc.) se cae
-#     a los fallbacks de abajo.
-#   - `pdf_id` → PDF unificado en `rfef.es`. Legacy fallback para divisiones
-#     planas si la clasificación falla. Solo aporta nombres; los escudos los
-#     resuelve `logo_resolver` (Wikipedia, baja cobertura).
-#   - `groups_url_pattern` → PDFs por grupo (`calendario_grupo_N_*.pdf`).
-#     Legacy fallback para divisiones por grupos.
+# Lo que sí queda es el PDF oficial de `rfef.es`, que sigue siendo una red de
+# seguridad razonable porque su URL **sí** es estable entre temporadas: lleva la
+# temporada dentro en vez de un identificador opaco.
 #
-# El fallback hardcodeado (`data/rfef-fallback.json`) actúa como red última.
-DIVISIONS = [
-    {
-        "id": "rfef-primera-fs-masc",
-        "name": "Primera División FS",
-        "gender": "masculino",
-        "clasificacion": {"comp": "23289361", "grupo": "23289362"},
-        "pdf_id": "1Div_Sala",
-    },
-    {
-        "id": "rfef-segunda-fs-masc",
-        "name": "Segunda División FS A",
-        "gender": "masculino",
-        "clasificacion": {"comp": "23289363", "grupo": "23289364"},
-        "pdf_id": "2Div_Sala",
-    },
-    {
-        # Segunda B FS Masculina: división nueva (temporada 2025-2026), no
-        # tenía PDF oficial publicado en `rfef.es`. Solo se publica via la
-        # clasificación. Si está recién creada y aún no hay jornadas, la
-        # división aparecerá vacía en el JSON hasta que se juegue la J1.
-        "id": "rfef-segunda-b-fs-masc",
-        "name": "Segunda División FS B",
-        "gender": "masculino",
-        "clasificacion": {"comp": "33575532", "grupo": "33575533"},
-    },
-    {
-        "id": "rfef-primera-fs-fem",
-        "name": "Primera División FS Femenina",
-        "gender": "femenino",
-        "clasificacion": {"comp": "23289381", "grupo": "23289382"},
-        "pdf_id": "1DivFem_Sala",
-    },
-    {
-        "id": "rfef-segunda-fs-fem",
-        "name": "Segunda División FS Femenina",
-        "gender": "femenino",
-        "clasificacion_groups": [
-            {"id": "g1", "name": "Grupo 1", "comp": "23289383", "grupo": "23289384"},
-            {"id": "g2", "name": "Grupo 2", "comp": "23289383", "grupo": "23289385"},
-            {"id": "g3", "name": "Grupo 3", "comp": "23289383", "grupo": "23289386"},
-        ],
-        # Legacy fallback si la clasificación falla en todos los grupos.
+#   - `pdf_id` → PDF unificado, para divisiones planas.
+#   - `groups_url_pattern` → un PDF por grupo (`calendario_grupo_N_*.pdf`).
+#
+# Segunda B no aparece: nunca ha tenido PDF oficial publicado.
+LEGACY_PDF: dict[str, dict] = {
+    "rfef-primera-fs-masc": {"pdf_id": "1Div_Sala"},
+    "rfef-segunda-fs-masc": {"pdf_id": "2Div_Sala"},
+    "rfef-primera-fs-fem": {"pdf_id": "1DivFem_Sala"},
+    "rfef-segunda-fs-fem": {
         "groups_url_pattern":
             "https://rfef.es/sites/default/files/"
             "calendario_grupo_{n}_segunda_femenina_futbol_sala.pdf",
         "max_groups": 10,
     },
-]
+}
+
+# Orden de publicación de las divisiones en el JSON. Se fija aquí y no se toma
+# del orden en que la PNFG las devuelva: así el fichero publicado no cambia de
+# orden entre runs sin que haya cambiado nada, y el desplegable de la app no
+# baila.
+DIVISION_ORDER = (
+    "rfef-primera-fs-masc",
+    "rfef-segunda-fs-masc",
+    "rfef-segunda-b-fs-masc",
+    "rfef-primera-fs-fem",
+    "rfef-segunda-fs-fem",
+)
 
 
 def _pdf_url(pdf_id: str, season: str) -> str:
@@ -417,188 +409,352 @@ def _load_fallback() -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def discover_divisions(season_code: str, *, session=None) -> list[dict] | None:
+    """Pregunta a la PNFG qué divisiones tiene esta temporada y con qué códigos.
+
+    Devuelve una cfg por división, con la misma forma que consumía la constante
+    `DIVISIONS` de antes, más el grupo descubierto. Las competiciones que no
+    casan con ninguna regla (juveniles, copas, selecciones) se descartan en
+    silencio: eso es lo normal, no un fallo.
+
+    Devuelve **None** si no se pudo ni consultar, que es distinto de una lista
+    vacía ("la federación aún no ha publicado nada"). Ver `resolve_season`.
+    """
+    comps = list_competitions(season_code, session=session)
+    if comps is None:
+        return None
+    print(f"[rfef-disc] {len(comps)} competiciones de fútbol sala en la temporada")
+
+    by_id: dict[str, dict] = {}
+    for comp in comps:
+        matched = match_division(comp.name)
+        if matched is None:
+            continue
+        div_id, gender = matched
+        if div_id in by_id:
+            # Dos competiciones casando con la misma división: quedarse con la
+            # primera y avisar. Pasaría si RFEF crease "Segunda División FS
+            # Masculino" y "Segunda División FS Masculina" a la vez.
+            print(f"  [rfef-disc] AVISO: {comp.name!r} también casa con "
+                  f"{div_id}, ya asignado a {by_id[div_id]['competition']['name']!r}")
+            continue
+        groups = list_groups(comp.code, session=session)
+        if not groups:
+            print(f"  [rfef-disc] {div_id}: sin grupos publicados todavía")
+            continue
+        cfg = {
+            "id": div_id,
+            "name": DIVISION_NAMES[div_id],
+            "gender": gender,
+            "competition": {"code": comp.code, "name": comp.name},
+            # Una división con un solo grupo se publica plana: es cómo la ve la
+            # entrenadora (no hay nada que elegir) y cómo la esperan los equipos
+            # que ya tienen `groupId` nulo.
+            "flat": len(groups) == 1,
+            "groups": groups,
+            **LEGACY_PDF.get(div_id, {}),
+        }
+        by_id[div_id] = cfg
+        print(f"  [rfef-disc] {div_id} <- {comp.name!r} "
+              f"(comp {comp.code}, {len(groups)} grupo/s)")
+        time.sleep(2)
+
+    return [by_id[d] for d in DIVISION_ORDER if d in by_id]
+
+
 def scrape(season: str, resolve_badges: bool = True) -> dict:
     """Devuelve la categoría RFEF lista para incluir en leagues.json.
 
-    Estrategia por división (cascada):
+    ## El orden importa y no es el de antes
 
-    1. **Clasificación HTML** (`resultados.rfef.es`): si el cfg declara
-       `clasificacion` o `clasificacion_groups`, se intenta primero. Aporta
-       nombres + escudos en una sola petición.
-    2. **PDF de calendario** (`rfef.es`): legacy. Si la clasificación falla
-       y el cfg tiene `pdf_id`/`groups_url_pattern`, se cae al flujo viejo
-       (PDF para nombres + Wikipedia para escudos).
-    3. **Fallback hardcodeado** (`data/rfef-fallback.json`): completa o
-       sustituye lo que no se haya podido scrapear.
+    Antes se capturaban los equipos primero (de la clasificación) y el
+    calendario después. Eso funcionaba en mitad de temporada y fallaba justo
+    cuando hace falta: **la clasificación no existe hasta que se juega la J1**,
+    así que en pretemporada las divisiones salían vacías y se rellenaban con el
+    fallback del año pasado.
+
+    Ahora el calendario va primero y es la fuente base de equipos. La
+    clasificación sigue siendo preferente cuando responde, porque trae los
+    escudos oficiales en la misma fila.
+
+    Cascada por división/grupo:
+
+    1. **Clasificación** — nombres canónicos + escudos. Solo desde la J1.
+    2. **Calendario** — nombres desde los enfrentamientos. Desde el sorteo.
+    3. **PDF oficial** de `rfef.es` (legacy).
+    4. **Fallback curado** (`data/rfef-fallback.json`) — **solo si su temporada
+       coincide con la pedida**. Ver más abajo.
+
+    ## El guard de temporada
+
+    El fallback y los códigos de competición son datos *de una temporada
+    concreta*. Usarlos para otra es lo que produjo un JSON de 2026-27 lleno de
+    equipos de 2025-26 sin una sola señal de error. Aquí:
+
+    - Si no se puede resolver el `CodTemporada` de la temporada pedida, **no se
+      publica nada**: se devuelve la categoría vacía con `seasonVerified: False`
+      y `scrape.py` aborta el run sin escribir el fichero. Un run fallido deja
+      el JSON anterior en su sitio; uno "exitoso" con datos viejos, no.
+    - Si `data/rfef-fallback.json` declara otra temporada, se ignora entero.
     """
+    warnings: list[str] = []
+
     fallback = _load_fallback()
-    fb_divisions = fallback.get("divisions", {})
+    fb_season = fallback.get("season")
+    if fb_season == season:
+        fb_divisions = fallback.get("divisions", {})
+    else:
+        fb_divisions = {}
+        msg = (f"data/rfef-fallback.json es de {fb_season!r} y se pidió "
+               f"{season!r}: se ignora (no se rellenan divisiones con equipos "
+               f"de otra temporada)")
+        print(f"[rfef] AVISO: {msg}")
+        warnings.append(msg)
 
-    # `fetch_division_teams` se encarga de crear su propia sesión y reciclarla
-    # ante errores de red — no compartimos una sesión global porque RFEF
-    # cierra la conexión bajo carga y arrastrar la JSESSIONID rota propaga
-    # el fallo a las siguientes divisiones.
+    # Un `Fetcher` compartido para todo el descubrimiento: cuando una llamada se
+    # come el rate-limit y consigue una JSESSIONID nueva, las siguientes
+    # arrancan ya con la buena. El scraping pesado (`fetch_division_teams`,
+    # `fetch_division_calendar`) sigue creando la suya, porque RFEF cierra la
+    # conexión bajo carga y arrastrar una sesión rota propaga el fallo.
+    session = Fetcher()
 
-    out_divisions = []
-    for div_cfg in DIVISIONS:
-        div_id = div_cfg["id"]
-        print(f"[rfef] Procesando {div_cfg['name']}")
-        fb_div = fb_divisions.get(div_id, {})
-        fb_groups = fb_div.get("groups", [])
+    def _nothing(msg: str, *, pending: bool) -> dict:
+        """Categoría vacía. `pending` = la federación aún no lo ha publicado
+        (esperable cada julio), frente a una avería de verdad."""
+        print(f"[rfef] {'PENDIENTE' if pending else 'ERROR'}: {msg}")
+        return {
+            "id": "rfef", "name": "Liga Española", "source": "rfef.es",
+            "divisions": [], "season": season, "seasonVerified": False,
+            "seasonPending": pending, "warnings": warnings + [msg],
+        }
 
-        # 1. Clasificación por grupos (camino principal para divisiones con grupos)
-        if div_cfg.get("clasificacion_groups"):
-            groups_payload = _scrape_clasificacion_groups(
-                groups_cfg=div_cfg["clasificacion_groups"],
-                fb_groups=fb_groups,
-                resolve_badges=resolve_badges,
-            )
-            groups_payload = [g for g in groups_payload if g.get("teams")]
-            if groups_payload:
-                out_divisions.append({
-                    "id": div_id,
-                    "name": div_cfg["name"],
-                    "gender": div_cfg["gender"],
-                    "teams": [],
-                    "groups": groups_payload,
-                })
-                continue
-            # Vacío → cae al legacy de grupos (groups_url_pattern, si existe)
+    season_code, status = resolve_season(season, session=session)
+    if status == SEASON_NOT_PUBLISHED:
+        return _nothing(
+            f"la PNFG todavía no ha creado la temporada {season}; no hay nada "
+            f"que scrapear (normal hasta que la federación abre la temporada)",
+            pending=True)
+    if season_code is None:
+        return _nothing(
+            f"no se pudo consultar el CodTemporada de {season} en la PNFG "
+            f"(rate-limit, red o cambio de HTML); no se publica nada de RFEF",
+            pending=False)
+    print(f"[rfef] CodTemporada de {season}: {season_code}")
 
-        # 2. Clasificación plana (camino principal para divisiones sin grupos)
-        if div_cfg.get("clasificacion"):
-            scraped = fetch_division_teams(
-                div_cfg["clasificacion"]["comp"],
-                div_cfg["clasificacion"]["grupo"],
-            )
-            if scraped:
-                teams_payload = _merge_clasificacion(
-                    fb_teams=fb_div.get("teams", []),
-                    scraped=scraped,
-                    resolve_badges=resolve_badges,
-                )
-                out_divisions.append({
-                    "id": div_id,
-                    "name": div_cfg["name"],
-                    "gender": div_cfg["gender"],
-                    "teams": teams_payload,
-                })
-                # Pausa entre divisiones: RFEF rate-limita por IP y tras
-                # 2-3 hits seguidos empieza a devolver bodies vacíos. 10s
-                # suele bastar mientras la racha de éxitos se mantiene.
-                time.sleep(10)
-                continue
-            # Vacío → cae al PDF/fallback. Pausa larga (60s) para dar
-            # tiempo a que el rate-limit se calme antes de la siguiente
-            # división — si no, las femeninas también se llevan el fallo.
-            print(f"  [rfef] Clasificación vacía para {div_id}; fallback a PDF")
-            time.sleep(60)
+    divisions_cfg = discover_divisions(season_code, session=session)
+    if divisions_cfg is None:
+        return _nothing(
+            f"no se pudo consultar el catálogo de competiciones de {season}",
+            pending=False)
+    if not divisions_cfg:
+        return _nothing(
+            f"la PNFG no publica todavía ninguna división de fútbol sala "
+            f"reconocible para {season}",
+            pending=True)
 
-        # 3. Legacy: scraping de PDFs por grupo
-        scraped_groups: list[dict] = []
-        if div_cfg.get("groups_url_pattern"):
-            scraped_groups = _scrape_groups(
-                pattern=div_cfg["groups_url_pattern"],
-                max_groups=div_cfg.get("max_groups", 10),
-                fb_groups=fb_groups,
-                resolve_badges=resolve_badges,
-            )
+    faltan = [d for d in DIVISION_ORDER if d not in {c["id"] for c in divisions_cfg}]
+    if faltan:
+        # No es un fallo: las masculinas de LNFS se publican semanas más tarde
+        # que las femeninas. Pero tiene que constar, porque una división que
+        # falta se ve igual que una división que se perdió.
+        msg = f"sin publicar en la PNFG para {season}: {', '.join(faltan)}"
+        print(f"[rfef] AVISO: {msg}")
+        warnings.append(msg)
 
-        if not scraped_groups and fb_groups:
-            scraped_groups = [
-                {
-                    "id": fb_g.get("id", f"g{i + 1}"),
-                    "name": fb_g.get("name", f"Grupo {i + 1}"),
-                    "teams": _merge_teams(
-                        fb_teams=fb_g.get("teams", []),
-                        scraped_names=[],
-                        resolve_badges=resolve_badges,
-                    ),
-                }
-                for i, fb_g in enumerate(fb_groups)
-            ]
+    # 1. Esqueleto: ids, nombres y grupos. Los equipos se rellenan al final,
+    #    cuando ya se sabe qué dio el calendario.
+    out_divisions: list[dict] = []
+    for cfg in divisions_cfg:
+        div: dict = {"id": cfg["id"], "name": cfg["name"],
+                     "gender": cfg["gender"], "teams": []}
+        if not cfg["flat"]:
+            div["groups"] = [{"id": g.id, "name": g.name, "teams": []}
+                             for g in cfg["groups"]]
+        out_divisions.append(div)
 
-        scraped_groups = [g for g in scraped_groups if g.get("teams")]
-        if scraped_groups:
-            out_divisions.append({
-                "id": div_id,
-                "name": div_cfg["name"],
-                "gender": div_cfg["gender"],
-                "teams": [],
-                "groups": scraped_groups,
-            })
-            continue
+    # 2. Calendarios (y con ellos, la lista de equipos de pretemporada).
+    _attach_calendars(out_divisions, season, divisions_cfg, season_code)
 
-        # 4. Legacy: PDF plano + fallback
-        team_names: list[str] = []
-        if div_cfg.get("pdf_id"):
-            url = _pdf_url(div_cfg["pdf_id"], season)
-            pdf = _download_pdf(url)
-            if pdf:
-                team_names = _extract_teams_from_pdf(pdf)
-                if team_names:
-                    print(f"  [rfef] {len(team_names)} equipos extraídos del PDF")
+    # 3. Equipos.
+    _fill_teams(out_divisions, divisions_cfg, fb_divisions, season, resolve_badges)
 
-        teams_payload = _merge_teams(
-            fb_teams=fb_div.get("teams", []),
-            scraped_names=team_names,
-            resolve_badges=resolve_badges,
-        )
-        out_divisions.append({
-            "id": div_id,
-            "name": div_cfg["name"],
-            "gender": div_cfg["gender"],
-            "teams": teams_payload,
-        })
-
-    # Segunda pasada: calendario. Se hace al final, una vez los equipos
-    # (dato primario) ya están capturados, para aislar el riesgo de que las
-    # muchas peticiones de calendario disparen el rate-limit y arrastren el
-    # scraping de equipos. Best-effort: si falla, la división queda sin
-    # `calendar` y la app cae al formulario manual.
-    _attach_calendars(out_divisions, season)
+    # Grupos que se quedaron sin equipos y sin calendario: se caen del JSON.
+    # La app ya los filtraría (`Division.nonEmptyGroups`), pero publicarlos
+    # obliga a cada cliente a razonar sobre un grupo que no existe.
+    for div in out_divisions:
+        if "groups" in div:
+            div["groups"] = [g for g in div["groups"]
+                             if g.get("teams") or g.get("calendar")]
 
     return {
         "id": "rfef",
         "name": "Liga Española",
         "source": "rfef.es",
         "divisions": out_divisions,
+        "season": season,
+        "seasonVerified": True,
+        "seasonPending": False,
+        "warnings": warnings,
     }
 
 
-def _attach_calendars(out_divisions: list[dict], season: str) -> None:
+def _fill_teams(
+    out_divisions: list[dict],
+    divisions_cfg: list[dict],
+    fb_divisions: dict,
+    season: str,
+    resolve_badges: bool,
+) -> None:
+    """Rellena `teams` de cada división/grupo. Muta `out_divisions` in-place."""
+    by_id = {d["id"]: d for d in out_divisions}
+
+    for cfg in divisions_cfg:
+        div = by_id.get(cfg["id"])
+        if div is None:
+            continue
+        print(f"[rfef] Equipos de {cfg['name']}")
+        fb_div = fb_divisions.get(cfg["id"], {})
+        comp_code = cfg["competition"]["code"]
+
+        if cfg["flat"]:
+            group = cfg["groups"][0]
+            div["teams"] = _teams_for(
+                comp=comp_code, grupo=group.code,
+                calendar=div.get("calendar", []),
+                fb_teams=fb_div.get("teams", []),
+                cfg=cfg, group_n=None, season=season,
+                label=cfg["id"], resolve_badges=resolve_badges,
+            )
+            continue
+
+        fb_groups = {g.get("id"): g for g in fb_div.get("groups", [])}
+        out_groups = {g["id"]: g for g in div.get("groups", [])}
+        for i, group in enumerate(cfg["groups"]):
+            out_group = out_groups.get(group.id)
+            if out_group is None:
+                continue
+            if i > 0:
+                time.sleep(10)
+            n_match = re.match(r"g(\d+)$", group.id)
+            out_group["teams"] = _teams_for(
+                comp=comp_code, grupo=group.code,
+                calendar=out_group.get("calendar", []),
+                fb_teams=fb_groups.get(group.id, {}).get("teams", []),
+                cfg=cfg, group_n=int(n_match.group(1)) if n_match else None,
+                season=season,
+                label=f"{cfg['id']}/{group.id}", resolve_badges=resolve_badges,
+            )
+
+
+def _teams_for(
+    *,
+    comp: str,
+    grupo: str,
+    calendar: list[dict],
+    fb_teams: list[dict],
+    cfg: dict,
+    group_n: int | None,
+    season: str,
+    label: str,
+    resolve_badges: bool,
+) -> list[dict]:
+    """La cascada de fuentes para un grupo concreto. Ver `scrape()`."""
+    cal_names = teams_from_calendar(calendar)
+
+    # 1. Clasificación: la única fuente que trae escudo oficial. Se le dan
+    #    menos reintentos cuando el calendario ya nos ha dado los nombres —
+    #    ahí es un extra, no la respuesta, y agotar 225s de backoff por grupo
+    #    en pretemporada solo sirve para que RFEF nos bloquee la IP.
+    scraped = fetch_division_teams(comp, grupo, retries=1 if cal_names else 4)
+    if scraped:
+        print(f"  [rfef] {label}: {len(scraped)} equipos de la clasificación")
+        return _merge_clasificacion(
+            fb_teams=fb_teams, scraped=scraped, resolve_badges=resolve_badges,
+        )
+
+    # 2. Calendario: funciona desde que se sortea, que es lo que importa en
+    #    agosto.
+    if cal_names:
+        print(f"  [rfef] {label}: {len(cal_names)} equipos del calendario")
+        return _teams_from_names(cal_names, resolve_badges=resolve_badges)
+
+    # 3. PDF oficial (legacy).
+    team_names: list[str] = []
+    if group_n is not None and cfg.get("groups_url_pattern"):
+        pdf = _download_pdf(cfg["groups_url_pattern"].format(n=group_n))
+        if pdf:
+            team_names = _extract_teams_from_pdf(pdf)
+    elif cfg.get("pdf_id"):
+        pdf = _download_pdf(_pdf_url(cfg["pdf_id"], season))
+        if pdf:
+            team_names = _extract_teams_from_pdf(pdf)
+    if team_names:
+        print(f"  [rfef] {label}: {len(team_names)} equipos del PDF")
+
+    # 4. Fallback curado — ya viene vacío si es de otra temporada.
+    teams = _merge_teams(
+        fb_teams=fb_teams, scraped_names=team_names, resolve_badges=resolve_badges,
+    )
+    if not teams:
+        print(f"  [rfef] {label}: sin equipos por ninguna vía")
+    return teams
+
+
+def _teams_from_names(names: list[str], *, resolve_badges: bool) -> list[dict]:
+    """Equipos a partir de nombres del calendario.
+
+    Solo se resuelven escudos de fuentes **fiables** (override curado del
+    maintainer y mapa oficial de `futsal.rfef.es`). No se busca en
+    Wikipedia/DDG: por la misma razón que documenta `_merge_clasificacion`, un
+    placeholder genérico es mejor que el escudo equivocado, y aquí no hay una
+    fila oficial que confirme nada.
+    """
+    teams = [{"name": n, "logoUrl": None} for n in names]
+    if resolve_badges:
+        for t in teams:
+            t["logoUrl"] = resolve_logo_url(t["name"], trusted_only=True)
+    else:
+        for t in teams:
+            t["logoUrl"] = lookup_override(t["name"])
+    return teams
+
+
+def _attach_calendars(
+    out_divisions: list[dict],
+    season: str,
+    divisions_cfg: list[dict],
+    season_code: str,
+) -> None:
     """Añade `calendar` a cada división/grupo de `out_divisions`.
 
-    Estrategia en cascada por división:
-    1. Endpoint `NFG_CmpJornada` (rfef_calendario.fetch_division_calendar).
-       Es la fuente preferente: fechas y horas precisas, mismos códigos que
-       la clasificación. Si la PNFG está rate-limitada devuelve `[]`.
-    2. Fallback al PDF oficial (`_extract_calendar_from_pdf`). Recupera al
-       menos jornada + fecha + enfrentamientos cuando el endpoint falla.
-       Sin horas concretas (los PDFs solo traen la fecha de la jornada).
+    Cascada por división:
+    1. Endpoint `NFG_CmpJornada` con los códigos descubiertos. Fuente
+       preferente: fechas, horas y `CodActa`.
+    2. PDF oficial (`_extract_calendar_from_pdf`), legacy. Recupera jornada +
+       fecha + enfrentamientos, sin hora.
 
-    Muta `out_divisions` in-place. Best-effort: si todo falla, la división
-    queda sin `calendar` y la app cae al formulario manual.
+    Muta `out_divisions` in-place. Best-effort para el *calendario*: si falla,
+    la app cae al formulario manual. Pero ojo — desde este cambio el calendario
+    es además la **fuente de equipos** en pretemporada, así que un fallo aquí ya
+    no es solo perder el autorrelleno de jornada.
+
+    `season_code` se pasa siempre resuelto (`scrape()` aborta si no lo está).
+    Antes esto admitía None y seguía adelante "usando la temporada por defecto
+    del servidor", que es la mitad del bug de agosto de 2026.
     """
     by_id = {d["id"]: d for d in out_divisions}
-    temporada_code = resolve_temporada_code(season)
-    if temporada_code:
-        print(f"[rfef-cal] CodTemporada para {season}: {temporada_code}")
-    else:
-        print(f"[rfef-cal] CodTemporada no resuelto para {season}; usando temporada por defecto del servidor")
-
     pdf_cache: dict[str, bytes | None] = {}
 
-    def _pdf_calendar_for(div_cfg: dict, group_n: int | None = None) -> list[dict]:
-        """Descarga el PDF oficial y extrae el calendario por jornadas. Devuelve
-        `[]` si no hay PDF descargable o el parse falla."""
+    def _pdf_calendar_for(cfg: dict, group_n: int | None = None) -> list[dict]:
+        """Descarga el PDF oficial y extrae el calendario por jornadas. `[]` si
+        no hay PDF descargable o el parse falla."""
         if group_n is not None:
-            pattern = div_cfg.get("groups_url_pattern")
+            pattern = cfg.get("groups_url_pattern")
             if not pattern:
                 return []
             url = pattern.format(n=group_n)
         else:
-            pdf_id = div_cfg.get("pdf_id")
+            pdf_id = cfg.get("pdf_id")
             if not pdf_id:
                 return []
             url = _pdf_url(pdf_id, season)
@@ -607,53 +763,48 @@ def _attach_calendars(out_divisions: list[dict], season: str) -> None:
         pdf = pdf_cache[url]
         return _extract_calendar_from_pdf(pdf) if pdf else []
 
-    for div_cfg in DIVISIONS:
-        div = by_id.get(div_cfg["id"])
+    for cfg in divisions_cfg:
+        div = by_id.get(cfg["id"])
         if div is None:
             continue
-        print(f"[rfef-cal] Calendario de {div_cfg['name']}")
+        print(f"[rfef-cal] Calendario de {cfg['name']}")
+        comp_code = cfg["competition"]["code"]
 
-        if div_cfg.get("clasificacion_groups"):
-            groups = {g["id"]: g for g in div.get("groups", [])}
-            for g_cfg in div_cfg["clasificacion_groups"]:
-                grp = groups.get(g_cfg["id"])
-                if grp is None:
-                    continue
-                calendar = fetch_division_calendar(
-                    g_cfg["comp"], g_cfg["grupo"], temporada_code=temporada_code
-                )
-                if not calendar:
-                    # Fallback PDF: extrae jornada/fecha/enfrentamientos.
-                    n_match = re.match(r"g(\d+)$", g_cfg["id"])
-                    if n_match:
-                        calendar = _pdf_calendar_for(div_cfg, group_n=int(n_match.group(1)))
-                        if calendar:
-                            print(f"  [rfef-cal] {div_cfg['id']}/{g_cfg['id']}: "
-                                  f"fallback PDF → {len(calendar)} jornadas")
-                if calendar:
-                    _merge_acta_cache(calendar, g_cfg["comp"], g_cfg["grupo"],
-                                      label=f"{div_cfg['id']}/{g_cfg['id']}")
-                    grp["calendar"] = calendar
-                time.sleep(10)
-        elif div_cfg.get("clasificacion"):
+        if cfg["flat"]:
+            group = cfg["groups"][0]
             calendar = fetch_division_calendar(
-                div_cfg["clasificacion"]["comp"],
-                div_cfg["clasificacion"]["grupo"],
-                temporada_code=temporada_code,
+                comp_code, group.code, temporada_code=season_code,
             )
             if not calendar:
-                calendar = _pdf_calendar_for(div_cfg)
+                calendar = _pdf_calendar_for(cfg)
                 if calendar:
-                    print(f"  [rfef-cal] {div_cfg['id']}: "
-                          f"fallback PDF → {len(calendar)} jornadas")
+                    print(f"  [rfef-cal] {cfg['id']}: "
+                          f"fallback PDF -> {len(calendar)} jornadas")
             if calendar:
-                _merge_acta_cache(
-                    calendar,
-                    div_cfg["clasificacion"]["comp"],
-                    div_cfg["clasificacion"]["grupo"],
-                    label=div_cfg["id"],
-                )
+                _merge_acta_cache(calendar, comp_code, group.code, label=cfg["id"])
                 div["calendar"] = calendar
+            time.sleep(10)
+            continue
+
+        groups = {g["id"]: g for g in div.get("groups", [])}
+        for group in cfg["groups"]:
+            grp = groups.get(group.id)
+            if grp is None:
+                continue
+            calendar = fetch_division_calendar(
+                comp_code, group.code, temporada_code=season_code,
+            )
+            if not calendar:
+                n_match = re.match(r"g(\d+)$", group.id)
+                if n_match:
+                    calendar = _pdf_calendar_for(cfg, group_n=int(n_match.group(1)))
+                    if calendar:
+                        print(f"  [rfef-cal] {cfg['id']}/{group.id}: "
+                              f"fallback PDF -> {len(calendar)} jornadas")
+            if calendar:
+                _merge_acta_cache(calendar, comp_code, group.code,
+                                  label=f"{cfg['id']}/{group.id}")
+                grp["calendar"] = calendar
             time.sleep(10)
 
 
@@ -696,52 +847,6 @@ def _merge_acta_cache(
         print(f"  [rfef-cal] {label}: acta-cache fresh={stored} recovered={recovered}")
 
 
-def _scrape_clasificacion_groups(
-    *,
-    groups_cfg: list[dict],
-    fb_groups: list[dict],
-    resolve_badges: bool,
-) -> list[dict]:
-    """Scrapea cada grupo declarado en `clasificacion_groups`. Si un grupo
-    devuelve vacío (rate-limit / J1 sin jugar), usa los equipos curados del
-    fallback equivalente (por id de grupo) para no perder el grupo entero."""
-    fb_by_id = {g.get("id", f"g{i + 1}"): g for i, g in enumerate(fb_groups)}
-    out = []
-    last_failed = False
-    for i, g_cfg in enumerate(groups_cfg):
-        if i > 0:
-            # Si el grupo anterior cayó al fallback, dale tiempo al
-            # rate-limit para resetearse antes de intentar el siguiente.
-            time.sleep(60 if last_failed else 10)
-        scraped = fetch_division_teams(g_cfg["comp"], g_cfg["grupo"])
-        last_failed = not scraped
-        gid = g_cfg["id"]
-        fb_group = fb_by_id.get(gid, {})
-        if scraped:
-            teams_payload = _merge_clasificacion(
-                fb_teams=fb_group.get("teams", []),
-                scraped=scraped,
-                resolve_badges=resolve_badges,
-            )
-        else:
-            # Clasificación vacía (rate-limit de RFEF o J1 sin jugar): usar el
-            # fallback curado del grupo si existe. Sin esto, un grupo que falle
-            # se filtra en `scrape()` y desaparece del JSON aunque sus hermanos
-            # sí se hayan scrapeado — el bug que dejaba "solo el Grupo 1" en
-            # Segunda FS Femenina cuando RFEF rate-limita G2/G3.
-            teams_payload = _merge_teams(
-                fb_teams=fb_group.get("teams", []),
-                scraped_names=[],
-                resolve_badges=resolve_badges,
-            )
-        out.append({
-            "id": gid,
-            "name": g_cfg.get("name") or fb_group.get("name") or gid,
-            "teams": teams_payload,
-        })
-    return out
-
-
 def _merge_clasificacion(
     *,
     fb_teams: list[dict],
@@ -772,62 +877,6 @@ def _merge_clasificacion(
         if override:
             t["logoUrl"] = override
     return teams
-
-
-def _scrape_groups(
-    *,
-    pattern: str,
-    max_groups: int,
-    fb_groups: list[dict],
-    resolve_badges: bool,
-) -> list[dict]:
-    """Itera grupos N=1..max_groups descargando el PDF de cada uno y construye
-    la lista [{id, name, teams}, ...].
-
-    Fail-fast: el primer 404 corta el bucle. Asume grupos consecutivos
-    arrancando en 1 (cierto para los PDFs RFEF observados). Si la URL ha
-    cambiado, evitamos hacer max_groups peticiones inútiles."""
-    fb_by_id = {g.get("id", f"g{i + 1}"): g for i, g in enumerate(fb_groups)}
-    groups_out: list[dict] = []
-
-    for n in range(1, max_groups + 1):
-        url = pattern.format(n=n)
-        pdf = _download_pdf(url)
-        if pdf is None:
-            break
-
-        team_names = _extract_teams_from_pdf(pdf)
-        print(f"  [rfef] Grupo {n}: {len(team_names)} equipos extraídos")
-
-        gid = f"g{n}"
-        fb_group = fb_by_id.get(gid, {})
-        teams_payload = _merge_teams(
-            fb_teams=fb_group.get("teams", []),
-            scraped_names=team_names,
-            resolve_badges=resolve_badges,
-        )
-        groups_out.append({
-            "id": gid,
-            "name": fb_group.get("name") or f"Grupo {n}",
-            "teams": teams_payload,
-        })
-
-    # Añadir grupos del fallback que el scraper no haya cubierto. Pasamos
-    # los teams por _merge_teams para resolver escudos si están como null.
-    scraped_ids = {g["id"] for g in groups_out}
-    for gid, fb_g in fb_by_id.items():
-        if gid not in scraped_ids:
-            groups_out.append({
-                "id": gid,
-                "name": fb_g.get("name", gid),
-                "teams": _merge_teams(
-                    fb_teams=fb_g.get("teams", []),
-                    scraped_names=[],
-                    resolve_badges=resolve_badges,
-                ),
-            })
-
-    return groups_out
 
 
 def _merge_teams(

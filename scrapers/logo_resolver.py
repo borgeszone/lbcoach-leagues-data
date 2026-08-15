@@ -160,8 +160,16 @@ def inject_rfef_shields(shields: dict[str, str]) -> None:
     _rfef_shields = shields
 
 
-def resolve_logo_url(team_name: str) -> str | None:
-    """Devuelve la URL del escudo del equipo o None si nada funciona."""
+def resolve_logo_url(team_name: str, *, trusted_only: bool = False) -> str | None:
+    """Devuelve la URL del escudo del equipo o None si nada funciona.
+
+    `trusted_only` corta la cascada después de las dos fuentes autoritativas
+    (override curado y mapa oficial de RFEF) y no busca en Wikipedia ni en DDG.
+    Lo usan los caminos donde el nombre del equipo viene del calendario: ahí no
+    hay ninguna fila oficial que confirme la asociación, y un escudo equivocado
+    es peor que el placeholder genérico — que es lo que la app ya enseña y lo
+    que la entrenadora puede corregir subiendo el suyo.
+    """
     if not team_name or not team_name.strip():
         return None
     _ensure_loaded()
@@ -177,6 +185,13 @@ def resolve_logo_url(team_name: str) -> str | None:
         url = _rfef_shields[key]
         _cache[key] = url
         return url
+
+    if trusted_only:
+        # Se corta **antes** de la caché, no después. La caché guarda lo que
+        # encontraron Wikipedia y DDG en runs anteriores: un acierto suyo es tan
+        # poco fiable hoy como lo era el día que se guardó, y devolverlo aquí
+        # sería colar por la puerta de atrás justo lo que este flag descarta.
+        return None
 
     # 3. Caché de runs anteriores (Wikipedia/DDG)
     if key in _cache:

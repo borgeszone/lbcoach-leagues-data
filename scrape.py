@@ -89,14 +89,57 @@ def main() -> int:
     rfef_cat = rfef.scrape(season=season, resolve_badges=not args.no_badges)
     fcf_cat = fcf.load_manual()
 
+    # ── Guard de temporada ───────────────────────────────────────────────
+    #
+    # `version` se estampa con la temporada que se ha *pedido*, y esa es la
+    # cadena que la app y el panel enseñan. Publicarla sobre datos que nadie ha
+    # verificado contra esa temporada es cómo el JSON del 10 de agosto de 2026
+    # acabó diciendo "2026-2027" con los equipos y el calendario de 2025-26.
+    #
+    # Se aborta **sin escribir el fichero**: el paso de publicación del workflow
+    # no llega a ejecutarse y gh-pages conserva el JSON anterior. Viejo pero
+    # coherente es mejor que nuevo pero falso, y el fallo del run manda el email
+    # de Actions, que es la única alerta que hay.
+    #
+    # Se sale con 0 o con 1 según **de quién** sea el problema, y esa distinción
+    # existe para que el email de fallo de Actions siga significando algo. Cada
+    # julio hay unas semanas en que la temporada ya cambió en el calendario pero
+    # la federación aún no la ha abierto: si eso mandara un fallo diario, en dos
+    # veranos nadie mira esos emails — y son también la alerta del keep-alive de
+    # Supabase (§10 de CLAUDE.md).
+    if not rfef_cat.get("seasonVerified"):
+        pending = rfef_cat.get("seasonPending", False)
+        print()
+        if pending:
+            print(f"[scrape] SIN PUBLICAR: la federación todavía no ha abierto "
+                  f"{season}.")
+        else:
+            print(f"[scrape] ABORTADO: no se ha podido verificar RFEF contra "
+                  f"{season}.")
+        for w in rfef_cat.get("warnings", []):
+            print(f"  - {w}")
+        print("[scrape] No se escribe output/leagues.json; se conserva el publicado.")
+        return 0 if pending else 1
+
     categories = [rfef_cat, fcf_cat]
 
     # Inyectar novedades/comunicados de federación (data/notices-manual.json).
     apply_notices(categories, load_notices())
 
+    # `warnings` es de diagnóstico y no lo consume la app: sube al nivel raíz
+    # para que el panel pueda enseñar "faltan las masculinas" sin tener que
+    # deducirlo de un recuento de equipos a cero, que se parece demasiado a un
+    # scraper roto.
+    warnings = [f"{c['id']}: {w}" for c in categories for w in c.get("warnings", [])]
+    for c in categories:
+        c.pop("warnings", None)
+        c.pop("seasonVerified", None)
+        c.pop("seasonPending", None)
+
     payload = {
         "version": season,
         "lastUpdated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "warnings": warnings,
         "categories": categories,
     }
 

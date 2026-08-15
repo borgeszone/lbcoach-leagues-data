@@ -1,5 +1,5 @@
 {
-  "_comment": "Fallback de equipos RFEF si la clasificación de resultados.rfef.es y el PDF de calendario fallan. La fuente primaria son los scrapers; este archivo solo se usa como red de seguridad. logoUrl puede ser null — el resolver de logo_resolver intentará Wikipedia para los huecos.",
+  "_comment": "Fallback de equipos RFEF, red de seguridad si fallan la clasificacion, el calendario y el PDF. OJO: el campo `season` de abajo es LOAD-BEARING desde agosto de 2026 — `rfef.scrape()` ignora este fichero entero si no coincide con la temporada que se esta scrapeando. Sin esa comprobacion, este archivo es la via silenciosa por la que la liga del anyo pasado se republica con el sello de la nueva, que es justo lo que paso. Al empezar temporada: o se actualizan los equipos Y el `season`, o se deja como esta y simplemente no se usara. Lo que NO se puede hacer es subir `season` sin cambiar los equipos.",
   "season": "2025-2026",
   "divisions": {
     "rfef-primera-fs-masc": {

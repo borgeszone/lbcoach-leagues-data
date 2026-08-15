@@ -38,6 +38,7 @@ from scrapers.rfef_clasificacion import (
     make_session,
     _norm,
 )
+from scrapers.rfef_discovery import resolve_season_code
 
 CAL_PATH = "/pnfg/NPcd/NFG_CmpJornada"
 # Endpoint del acta oficial (PDF) que la PNFG genera por partido. Cada partido
@@ -59,26 +60,46 @@ _BACKOFFS = [15, 30, 60, 120]
 
 
 def resolve_temporada_code(season: str, *, session: requests.Session | None = None) -> str | None:
-    """Mapea una temporada "YYYY-YYYY" a su `CodTemporada` numérico leyendo el
-    `<select name=temporada>` de la página de calendario. Devuelve None si no
-    se encuentra (el caller omitirá `CodTemporada` y el servidor usará la
-    temporada vigente por defecto)."""
-    s = session or make_session()
-    try:
-        r = s.get(BASE_URL + CAL_PATH, params={"cod_primaria": COD_PRIMARIA}, timeout=20)
-        if not r.content:
-            return None
-        soup = BeautifulSoup(r.content.decode("iso-8859-15", errors="replace"), "html.parser")
-        sel = soup.find("select", attrs={"name": "temporada"})
-        if sel is None:
-            return None
-        for opt in sel.find_all("option"):
-            if opt.get_text(strip=True) == season:
-                value = (opt.get("value") or "").strip()
-                return value or None
-    except requests.RequestException as e:
-        print(f"  [rfef-cal] No se pudo resolver CodTemporada para {season}: {e}")
-    return None
+    """Alias histórico de `rfef_discovery.resolve_season_code`.
+
+    La implementación se mudó a `rfef_discovery` porque allí el `<select
+    name=temporada>` no es un detalle del calendario sino el primer paso del
+    descubrimiento de competiciones. Se mantiene el nombre para no tocar los
+    callers.
+    """
+    return resolve_season_code(season, session=session)
+
+
+def teams_from_calendar(calendar: list[dict]) -> list[str]:
+    """Nombres de equipo deducidos de un calendario (unión de local y visitante).
+
+    Es la **fuente primaria de equipos antes de que arranque la liga**, y ese
+    "antes" es justo cuando el scraper hace falta. La tabla de clasificación no
+    existe hasta que se juega la J1: en agosto está siempre vacía, el scraper se
+    quedaba sin equipos y caía al fallback curado de la temporada anterior. El
+    calendario, en cambio, existe en cuanto se sortea.
+
+    Se recorren **todas** las jornadas y no solo la primera: con un número impar
+    de equipos hay uno que descansa cada jornada, y mirando solo la J1 ese se
+    perdería.
+
+    Devuelve los nombres ordenados alfabéticamente. El orden importa poco para
+    la app —el selector los reordena— pero uno estable evita que el JSON
+    publicado cambie de un run a otro sin que haya cambiado nada.
+    """
+    seen: dict[str, str] = {}
+    for jornada in calendar:
+        for match in jornada.get("matches", []):
+            for name in (match.get("home"), match.get("away")):
+                name = (name or "").strip()
+                if not name:
+                    continue
+                key = _norm(name)
+                # Se conserva la primera grafía vista: las siguientes solo
+                # varían en espacios o comillas.
+                if key and key not in seen:
+                    seen[key] = name
+    return [seen[k] for k in sorted(seen)]
 
 
 def fetch_division_calendar(
