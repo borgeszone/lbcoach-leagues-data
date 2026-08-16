@@ -225,6 +225,40 @@ class AbortaSinEscribir(unittest.TestCase):
         self.assertNotIn("seasonVerified", payload["categories"][0])
 
 
+class DivisionesSinAbrir(unittest.TestCase):
+    """Las divisiones que la federación aún no ha publicado salen **vacías pero
+    presentes**. Omitirlas deja a la entrenadora sin poder seleccionar la suya,
+    y su equipo con `divisionId` nulo: el día que la federación publique, nada
+    se engancharía solo."""
+
+    def test_las_cinco_estan_siempre_y_en_orden(self):
+        descubiertas = [{"id": "rfef-primera-fs-fem", "name": "1a Fem",
+                         "gender": "femenino", "teams": [{"name": "A"}]}]
+        out = rfef._with_placeholders(descubiertas)
+        self.assertEqual([d["id"] for d in out], list(rfef.DIVISION_ORDER))
+
+    def test_el_placeholder_va_vacio_no_con_equipos_viejos(self):
+        out = rfef._with_placeholders([])
+        for d in out:
+            self.assertEqual(d["teams"], [], d["id"])
+            self.assertNotIn("calendar", d)
+            self.assertNotIn("groups", d)
+
+    def test_no_pisa_lo_descubierto(self):
+        real = {"id": "rfef-primera-fs-fem", "name": "1a Fem",
+                "gender": "femenino", "teams": [{"name": "A"}],
+                "calendar": [{"jornada": 1, "matches": []}]}
+        out = rfef._with_placeholders([real])
+        got = [d for d in out if d["id"] == "rfef-primera-fs-fem"][0]
+        self.assertIs(got, real)
+
+    def test_nombre_y_genero_del_placeholder(self):
+        out = {d["id"]: d for d in rfef._with_placeholders([])}
+        self.assertEqual(out["rfef-primera-fs-masc"]["name"], "Primera División FS")
+        self.assertEqual(out["rfef-primera-fs-masc"]["gender"], "masculino")
+        self.assertEqual(out["rfef-segunda-fs-fem"]["gender"], "femenino")
+
+
 class HerenciaDeCalendarios(unittest.TestCase):
     """El run rápido (`--teams-only`) no descarga calendarios: los hereda del
     publicado. Es el sitio donde un descuido borra el autorrelleno por jornada
@@ -306,7 +340,9 @@ class HerenciaDeCalendarios(unittest.TestCase):
              mock.patch.object(rfef, "_load_fallback",
                                return_value={"season": "2026-2027", "divisions": {}}):
             cat = rfef.scrape("2026-2027", resolve_badges=False, teams_only=True)
-        div = cat["divisions"][0]
+        # Por id, no por posición: desde que hay placeholders, `divisions[0]`
+        # es la primera del orden canónico y no la que se ha descubierto.
+        div = [d for d in cat["divisions"] if d["id"] == "rfef-primera-fs-fem"][0]
         self.assertEqual([t["name"] for t in div["teams"]], ["A", "B"])
         self.assertNotIn("calendar", div)   # <- lo importante
         self.assertTrue(cat["teamsOnly"])

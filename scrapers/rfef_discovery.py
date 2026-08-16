@@ -122,6 +122,10 @@ DIVISION_NAMES = {
     "rfef-segunda-fs-fem": "Segunda División FS Femenina",
 }
 
+# Género por división, derivado de las reglas para que no haya dos listas que
+# un día discrepen.
+DIVISION_GENDER = {div_id: gender for div_id, gender, _, _ in DIVISION_RULES}
+
 # Cualquiera de estas palabras descarta la competición. Cubre playoffs, copas,
 # supercopas, categorías de base y campeonatos de selecciones — todo lo que
 # comparte plataforma con las ligas pero no es una liga.

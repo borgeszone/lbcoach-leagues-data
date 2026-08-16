@@ -51,6 +51,7 @@ from scrapers.logo_resolver import lookup_override, resolve_logo_url
 from scrapers.rfef_clasificacion import ScrapedTeam, fetch_division_teams
 from scrapers.rfef_calendario import fetch_division_calendar, teams_from_calendar
 from scrapers.rfef_discovery import (
+    DIVISION_GENDER,
     DIVISION_NAMES,
     SEASON_NOT_PUBLISHED,
     Fetcher,
@@ -605,6 +606,8 @@ def scrape(season: str, resolve_badges: bool = True,
     if teams_only:
         print("[rfef] modo solo-equipos: el calendario se hereda del publicado")
 
+    out_divisions = _with_placeholders(out_divisions)
+
     return {
         "id": "rfef",
         "name": "Liga Española",
@@ -616,6 +619,44 @@ def scrape(season: str, resolve_badges: bool = True,
         "teamsOnly": teams_only,
         "warnings": warnings,
     }
+
+
+def _with_placeholders(out_divisions: list[dict]) -> list[dict]:
+    """Completa la lista con las divisiones que la federación aún no ha abierto,
+    vacías pero presentes, y en el orden canónico.
+
+    **Por qué no basta con omitirlas.** Quitarlas del JSON parece lo coherente
+    —no hay datos, no se publica nada— pero rompe algo que no se ve: la
+    entrenadora no puede *seleccionar* su división, así que su equipo se queda
+    con `divisionId` nulo. Y el día que la federación publique, nada se engancha
+    solo: tendría que acordarse de volver a editar el equipo. Con la división
+    presente, elige ahora y el calendario, los rivales y las novedades aparecen
+    solos en cuanto el scraper los encuentre.
+
+    Publicarla vacía **no** reintroduce el bug de agosto de 2026: lo que aquel
+    hacía era rellenarla con los equipos del año pasado. Aquí no hay ni un
+    equipo, que es exactamente la verdad — y es además cómo se comportaba la app
+    antes con las divisiones sin datos: desplegable visible, rivales a mano.
+    """
+    by_id = {d["id"]: d for d in out_divisions}
+    out = []
+    for div_id in DIVISION_ORDER:
+        if div_id in by_id:
+            out.append(by_id[div_id])
+        else:
+            out.append({
+                "id": div_id,
+                "name": DIVISION_NAMES[div_id],
+                "gender": DIVISION_GENDER[div_id],
+                "teams": [],
+            })
+    # Cualquier división descubierta que no esté en el orden canónico (no
+    # deberia pasar: el casado se hace contra esa misma lista) va al final en
+    # lugar de perderse.
+    for d in out_divisions:
+        if d["id"] not in DIVISION_ORDER:
+            out.append(d)
+    return out
 
 
 def _fill_teams(
