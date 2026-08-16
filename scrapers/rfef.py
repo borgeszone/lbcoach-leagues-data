@@ -462,7 +462,8 @@ def discover_divisions(season_code: str, *, session=None) -> list[dict] | None:
     return [by_id[d] for d in DIVISION_ORDER if d in by_id]
 
 
-def scrape(season: str, resolve_badges: bool = True) -> dict:
+def scrape(season: str, resolve_badges: bool = True,
+           teams_only: bool = False) -> dict:
     """Devuelve la categoría RFEF lista para incluir en leagues.json.
 
     ## El orden importa y no es el de antes
@@ -573,10 +574,25 @@ def scrape(season: str, resolve_badges: bool = True) -> dict:
         out_divisions.append(div)
 
     # 2. Calendarios (y con ellos, la lista de equipos de pretemporada).
-    _attach_calendars(out_divisions, season, divisions_cfg, season_code)
+    #
+    # En modo `teams_only` se bajan solo las dos primeras jornadas: bastan para
+    # deducir la plantilla y cuestan 2 peticiones por grupo en vez de ~30. Ese
+    # calendario parcial NO se publica (se retira en el paso 4) — lo empalma
+    # `scrape.py` con el que ya está publicado, que está completo.
+    _attach_calendars(out_divisions, season, divisions_cfg, season_code,
+                      max_jornadas=2 if teams_only else None)
 
     # 3. Equipos.
     _fill_teams(out_divisions, divisions_cfg, fb_divisions, season, resolve_badges)
+
+    # 4. Fuera el calendario parcial. Publicarlo sería peor que no tenerlo: la
+    #    app ofrecería un desplegable con dos jornadas y la entrenadora no
+    #    encontraría la suya.
+    if teams_only:
+        for div in out_divisions:
+            div.pop("calendar", None)
+            for g in div.get("groups", []):
+                g.pop("calendar", None)
 
     # Grupos que se quedaron sin equipos y sin calendario: se caen del JSON.
     # La app ya los filtraría (`Division.nonEmptyGroups`), pero publicarlos
@@ -586,6 +602,9 @@ def scrape(season: str, resolve_badges: bool = True) -> dict:
             div["groups"] = [g for g in div["groups"]
                              if g.get("teams") or g.get("calendar")]
 
+    if teams_only:
+        print("[rfef] modo solo-equipos: el calendario se hereda del publicado")
+
     return {
         "id": "rfef",
         "name": "Liga Española",
@@ -594,6 +613,7 @@ def scrape(season: str, resolve_badges: bool = True) -> dict:
         "season": season,
         "seasonVerified": True,
         "seasonPending": False,
+        "teamsOnly": teams_only,
         "warnings": warnings,
     }
 
@@ -724,6 +744,7 @@ def _attach_calendars(
     season: str,
     divisions_cfg: list[dict],
     season_code: str,
+    max_jornadas: int | None = None,
 ) -> None:
     """Añade `calendar` a cada división/grupo de `out_divisions`.
 
@@ -748,6 +769,10 @@ def _attach_calendars(
     def _pdf_calendar_for(cfg: dict, group_n: int | None = None) -> list[dict]:
         """Descarga el PDF oficial y extrae el calendario por jornadas. `[]` si
         no hay PDF descargable o el parse falla."""
+        if max_jornadas is not None:
+            # En modo solo-equipos el calendario no se publica, así que
+            # descargar y parsear un PDF de 30 jornadas no aporta nada.
+            return []
         if group_n is not None:
             pattern = cfg.get("groups_url_pattern")
             if not pattern:
@@ -774,6 +799,7 @@ def _attach_calendars(
             group = cfg["groups"][0]
             calendar = fetch_division_calendar(
                 comp_code, group.code, temporada_code=season_code,
+                max_jornadas=max_jornadas,
             )
             if not calendar:
                 calendar = _pdf_calendar_for(cfg)
@@ -793,6 +819,7 @@ def _attach_calendars(
                 continue
             calendar = fetch_division_calendar(
                 comp_code, group.code, temporada_code=season_code,
+                max_jornadas=max_jornadas,
             )
             if not calendar:
                 n_match = re.match(r"g(\d+)$", group.id)

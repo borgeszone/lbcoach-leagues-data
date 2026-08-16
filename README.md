@@ -130,7 +130,17 @@ La app muestra "Novedades de tu liga" (notificación local + bandeja con badge) 
 ## GitHub Actions
 
 El workflow `.github/workflows/scrape.yml`:
-- **Cron:** diario a las 06:00 UTC en julio-septiembre (pretemporada: las divisiones van abriendo de una en una), semanal los lunes el resto del año
+- **Cron:** diario a las 06:00 UTC en julio-septiembre (pretemporada), lunes el resto del año. Los meses no se solapan a propósito: si los dos cron casaran el mismo día, GitHub lanzaría dos runs que competirían por publicar
+- **Dos modos**, porque cuestan cosas muy distintas:
+
+  | Modo | Qué trae | Coste | Cuándo |
+  |---|---|---|---|
+  | `--teams-only` | equipos (2 jornadas por grupo) | ~1 min | cron de martes a domingo |
+  | completo | equipos + las ~30 jornadas | ~3 h | lunes, y `workflow_dispatch` por defecto |
+
+  El run rápido **hereda los calendarios del JSON ya publicado**, y no publica si no puede leerlo o si es de otra temporada — sin eso, un fallo de red de treinta segundos dejaría a la app sin autorrelleno por jornada, y heredar de otra temporada sería reintroducir el bug original por la puerta de atrás.
+
+  El reparto no es arbitrario: el calendario de una temporada apenas cambia (lo que cambia dentro son las actas, y esas ya tienen caché acumulativa), mientras que en agosto lo que cambia a diario es qué divisiones existen. Bajarse las 30 jornadas cada día era pegarle hora y media diaria a la federación desde la misma IP, provocando en parte los bloqueos que luego hacen perder jornadas.
 - **Manual:** desde la pestaña Actions → "Scrape leagues data" → "Run workflow"
 - **Output:** publica `output/leagues.json` en la branch `gh-pages`
 

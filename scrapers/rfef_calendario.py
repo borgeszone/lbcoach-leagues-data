@@ -110,8 +110,15 @@ def fetch_division_calendar(
     session: requests.Session | None = None,
     retries: int = 4,
     jornada_delay: float = 4.0,
+    max_jornadas: int | None = None,
 ) -> list[dict]:
     """Devuelve `[{"jornada": N, "matches": [{"home","away","date"}]}]`.
+
+    `max_jornadas` corta tras las N primeras. Existe para el modo "solo
+    equipos" (`scrape.py --teams-only`): la plantilla de un grupo se deduce de
+    dos jornadas, y bajarse las ~30 cuesta hora y media contra el rate-limit de
+    la PNFG. Dos, y no una, porque con un número impar de equipos hay uno que
+    descansa cada jornada y con la J1 sola se perdería.
 
     `date` en ISO-8601 (`YYYY-MM-DDTHH:MM:00`) o None si la fila no trae fecha.
     Estrategia: descarga la jornada 1 para leer el `<select>` de jornadas
@@ -131,6 +138,9 @@ def fetch_division_calendar(
         # Página sin <select> de jornadas poblado: intentar parsear J1 sola.
         matches = _parse_matches(first_html)
         return [{"jornada": 1, "matches": matches}] if matches else []
+
+    if max_jornadas is not None:
+        jornada_nums = jornada_nums[:max_jornadas]
 
     out: list[dict] = []
     for num in jornada_nums:

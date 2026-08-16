@@ -225,5 +225,92 @@ class AbortaSinEscribir(unittest.TestCase):
         self.assertNotIn("seasonVerified", payload["categories"][0])
 
 
+class HerenciaDeCalendarios(unittest.TestCase):
+    """El run rápido (`--teams-only`) no descarga calendarios: los hereda del
+    publicado. Es el sitio donde un descuido borra el autorrelleno por jornada
+    de toda la app, o —peor— mete el calendario del año pasado."""
+
+    PUBLICADO = {
+        "version": "2026-2027",
+        "categories": [{
+            "id": "rfef",
+            "divisions": [
+                {"id": "d-plana", "calendar": [{"jornada": 1, "matches": []}]},
+                {"id": "d-grupos", "groups": [
+                    {"id": "g1", "calendar": [{"jornada": 1, "matches": []}]},
+                    {"id": "g2", "calendar": [{"jornada": 2, "matches": []}]},
+                ]},
+            ],
+        }],
+    }
+
+    def test_hereda_por_id_en_divisiones_y_grupos(self):
+        cats = [{"id": "rfef", "divisions": [
+            {"id": "d-plana", "teams": []},
+            {"id": "d-grupos", "groups": [{"id": "g1"}, {"id": "g2"}]},
+        ]}]
+        n = scrape_main.inherit_calendars(cats, self.PUBLICADO)
+        self.assertEqual(n, 3)
+        self.assertEqual(cats[0]["divisions"][0]["calendar"][0]["jornada"], 1)
+        self.assertEqual(
+            cats[0]["divisions"][1]["groups"][1]["calendar"][0]["jornada"], 2)
+
+    def test_no_pisa_un_calendario_recien_scrapeado(self):
+        fresco = [{"jornada": 99, "matches": []}]
+        cats = [{"id": "rfef", "divisions": [
+            {"id": "d-plana", "calendar": fresco}]}]
+        self.assertEqual(scrape_main.inherit_calendars(cats, self.PUBLICADO), 0)
+        self.assertEqual(cats[0]["divisions"][0]["calendar"], fresco)
+
+    def test_empareja_por_id_no_por_posicion(self):
+        """Una división que la federación aún no ha abierto no está en este run.
+        Emparejando por índice, su calendario se le pegaría a otra división."""
+        cats = [{"id": "rfef", "divisions": [{"id": "d-grupos", "groups": [
+            {"id": "g2"}]}]}]
+        scrape_main.inherit_calendars(cats, self.PUBLICADO)
+        self.assertEqual(
+            cats[0]["divisions"][0]["groups"][0]["calendar"][0]["jornada"], 2)
+
+    def test_id_desconocido_se_queda_sin_calendario(self):
+        cats = [{"id": "rfef", "divisions": [{"id": "division-nueva"}]}]
+        self.assertEqual(scrape_main.inherit_calendars(cats, self.PUBLICADO), 0)
+        self.assertNotIn("calendar", cats[0]["divisions"][0])
+
+    def test_publicado_de_otra_temporada_no_se_hereda(self):
+        """El guard que impide reintroducir el bug original por la puerta de
+        atrás: heredar el calendario de 2025-26 dentro de un JSON de 2026-27."""
+        with mock.patch.object(scrape_main.urllib.request, "urlopen") as u:
+            u.return_value.__enter__.return_value.read.return_value = \
+                json.dumps({"version": "2025-2026", "categories": []}).encode()
+            self.assertIsNone(scrape_main.fetch_published("2026-2027"))
+
+    def test_sin_red_no_se_hereda_y_por_tanto_no_se_publica(self):
+        with mock.patch.object(scrape_main.urllib.request, "urlopen",
+                               side_effect=OSError("sin red")):
+            self.assertIsNone(scrape_main.fetch_published("2026-2027"))
+
+    def test_teams_only_no_publica_calendario_parcial(self):
+        """Con 2 jornadas descargadas, publicarlas dejaría a la app ofreciendo
+        un calendario de dos jornadas. Se retiran y las pone la herencia."""
+        cfg = {"id": "rfef-primera-fs-fem", "name": "1a Fem", "gender": "femenino",
+               "competition": {"code": "1", "name": "X"}, "flat": True,
+               "groups": [Group(id="g1", code="2", name="G")]}
+        cal = [{"jornada": 1, "matches": [{"home": "A", "away": "B"}]},
+               {"jornada": 2, "matches": [{"home": "B", "away": "A"}]}]
+        with mock.patch.object(rfef, "resolve_season", return_value=("22", "ok")), \
+             mock.patch.object(rfef, "Fetcher"), \
+             mock.patch.object(rfef, "discover_divisions", return_value=[cfg]), \
+             mock.patch.object(rfef, "fetch_division_calendar", return_value=cal), \
+             mock.patch.object(rfef, "fetch_division_teams", return_value=[]), \
+             mock.patch.object(rfef, "time"), \
+             mock.patch.object(rfef, "_load_fallback",
+                               return_value={"season": "2026-2027", "divisions": {}}):
+            cat = rfef.scrape("2026-2027", resolve_badges=False, teams_only=True)
+        div = cat["divisions"][0]
+        self.assertEqual([t["name"] for t in div["teams"]], ["A", "B"])
+        self.assertNotIn("calendar", div)   # <- lo importante
+        self.assertTrue(cat["teamsOnly"])
+
+
 if __name__ == "__main__":
     unittest.main()

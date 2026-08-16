@@ -1,16 +1,24 @@
 name: Scrape leagues data
 
 on:
+  # Dos trabajos con cadencias distintas, porque cuestan cosas muy distintas:
+  #
+  #   solo equipos  ~1 min   2 jornadas por grupo. Es lo que cambia en agosto,
+  #                          cuando las divisiones van abriendo de una en una.
+  #   completo      ~3 h     las ~30 jornadas de cada grupo, contra el
+  #                          rate-limit de la PNFG. El calendario de una
+  #                          temporada apenas cambia; lo que cambia dentro son
+  #                          las actas, y esas ya tienen caché acumulativa.
+  #
+  # Hacer el completo a diario en pretemporada era pegarle hora y media al día
+  # a la federación desde la misma IP — provocando en parte los bloqueos que
+  # luego hacen perder jornadas.
+  #
+  # Los meses NO se solapan a propósito: si los dos cron casaran el mismo día,
+  # GitHub lanzaría dos runs a la vez y competirían por publicar.
   schedule:
-    # Diario en julio-agosto-septiembre. Es la pretemporada: las divisiones van
-    # apareciendo de una en una según cada competición abre (las masculinas de
-    # LNFS, semanas por detrás de las femeninas). Con el cron semanal, una
-    # división publicada un martes tardaba hasta 7 días en salir + hasta 24 h de
-    # caché de la app: ocho días en los que la entrenadora no encuentra su liga.
-    - cron: '0 6 * 7-9 *'
-    # Semanal el resto del año, que es cuando ya solo cambian renombrados,
-    # bajas a mitad de temporada y actas nuevas.
-    - cron: '0 6 * * 1'
+    - cron: '0 6 * 7-9 *'            # jul-sep: diario
+    - cron: '0 6 * 1-6,10-12 1'      # oct-jun: solo lunes
   # Manual: trigger desde la pestaña Actions
   workflow_dispatch:
     inputs:
@@ -23,6 +31,12 @@ on:
         required: false
         default: false
         type: boolean
+      mode:
+        description: 'completo (equipos + calendario, ~3h) o equipos (~1 min)'
+        required: false
+        default: 'completo'
+        type: choice
+        options: ['completo', 'equipos']
 
 permissions:
   contents: write
@@ -50,6 +64,24 @@ jobs:
       - name: Run tests
         run: python -m unittest discover -s tests -v
 
+      # Qué modo toca:
+      #   - workflow_dispatch → lo que haya elegido quien lo lanza.
+      #   - cron              → completo los lunes, solo-equipos el resto.
+      #     Con el cron de oct-jun eso siempre es lunes = siempre completo; en
+      #     jul-sep sale un completo semanal y seis rápidos.
+      - name: Decidir modo
+        id: modo
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            MODE="${{ github.event.inputs.mode }}"
+          elif [ "$(date -u +%u)" = "1" ]; then
+            MODE="completo"
+          else
+            MODE="equipos"
+          fi
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+          echo "Modo: $MODE"
+
       - name: Run scraper
         run: |
           ARGS=""
@@ -58,6 +90,9 @@ jobs:
           fi
           if [ "${{ github.event.inputs.no_badges }}" = "true" ]; then
             ARGS="$ARGS --no-badges"
+          fi
+          if [ "${{ steps.modo.outputs.mode }}" = "equipos" ]; then
+            ARGS="$ARGS --teams-only"
           fi
           python scrape.py $ARGS
 
