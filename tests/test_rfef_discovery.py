@@ -87,7 +87,7 @@ class ParseGroups(unittest.TestCase):
         self.assertEqual(groups[0].code, "33836180")
 
     def test_el_id_sale_del_nombre_no_de_la_posicion(self):
-        """`Team.groupId` está persistido en el móvil de cada entrenadora.
+        """`Team.groupId` está persistido en el móvil de cada entrenador.
 
         Si los ids fueran posicionales y la PNFG devolviera los grupos en otro
         orden, cada equipo quedaría en el grupo del vecino — sin que nada
@@ -149,14 +149,61 @@ class MatchDivision(unittest.TestCase):
         self.assertEqual(match_division("Segunda División Fútbol Sala Masculino")[0],
                          "rfef-segunda-fs-masc")
 
-    def test_todas_las_reglas_dan_ids_distintos(self):
-        from scrapers.rfef_discovery import DIVISION_NAMES, DIVISION_RULES
-        ids = [r[0] for r in DIVISION_RULES]
-        self.assertEqual(len(ids), len(set(ids)))
-        # Toda regla tiene nombre visible: si falta, la división saldría sin
-        # etiqueta en el desplegable de la app.
-        for div_id in ids:
-            self.assertIn(div_id, DIVISION_NAMES)
+    def test_la_marca_nueva_de_la_maxima_masculina(self):
+        """2026-27: "Primera División Fútbol Sala Masculino" pasó a llamarse
+        **Liga Prime Futsal**, con Apertura y Clausura. No lleva ni "primera",
+        ni "sala", ni "masculino": ninguna regla clásica la reconocía y se
+        descartaba en silencio."""
+        for name in ["Liga Prime Futsal",
+                     "Liga Prime Futsal Apertura",
+                     "Liga Prime Futsal - Torneo Clausura"]:
+            with self.subTest(name=name):
+                got = match_division(name)
+                self.assertIsNotNone(got, name)
+                self.assertEqual(got, ("rfef-primera-fs-masc", "masculino"))
+
+    def test_futsal_vale_igual_que_sala(self):
+        self.assertIsNotNone(match_division("Segunda División Futsal Masculino"))
+
+    def test_lo_que_parece_liga_y_no_se_reconoce_se_denuncia(self):
+        """La red de seguridad de verdad: si vuelven a rebautizar algo, tiene
+        que salir en `warnings` en vez de desaparecer del JSON."""
+        from scrapers.rfef_discovery import (
+            COMP_IGNORED, COMP_LEAGUE, COMP_UNKNOWN, classify_competition)
+        self.assertEqual(
+            classify_competition("Superliga Endesa Futsal Masculina")[0],
+            COMP_UNKNOWN)
+        # Una copa sigue siendo descarte normal, no una alarma.
+        self.assertEqual(
+            classify_competition("Copa de España de Futbol Sala")[0],
+            COMP_IGNORED)
+        # Y el fútbol 11 ni se mira.
+        self.assertEqual(
+            classify_competition("Campeonato Nacional de Liga de Primera División")[0],
+            COMP_IGNORED)
+        self.assertEqual(
+            classify_competition("Liga Prime Futsal")[0], COMP_LEAGUE)
+
+    def test_toda_regla_apunta_a_una_division_conocida(self):
+        """Varias reglas pueden apuntar a la misma división —la marca nueva y el
+        nombre clásico de Primera masculina conviven— pero **ninguna** puede
+        apuntar a un id que no exista: saldría sin nombre en el desplegable de la
+        app y sin género."""
+        from scrapers.rfef_discovery import (
+            DIVISION_GENDER, DIVISION_NAMES, DIVISION_RULES)
+        for div_id, gender, _, _ in DIVISION_RULES:
+            with self.subTest(div_id=div_id):
+                self.assertIn(div_id, DIVISION_NAMES)
+                self.assertEqual(DIVISION_GENDER[div_id], gender)
+
+    def test_apertura_y_clausura_casan_con_la_misma_division(self):
+        """Los dos torneos son la misma liga con los mismos equipos. Que casen
+        igual es lo correcto; que solo uno acabe en el JSON es una limitación
+        conocida (el calendario del otro se pierde)."""
+        a = match_division("Liga Prime Futsal Torneo Apertura")
+        c = match_division("Liga Prime Futsal Torneo Clausura")
+        self.assertEqual(a, c)
+        self.assertEqual(a[0], "rfef-primera-fs-masc")
 
 
 if __name__ == "__main__":

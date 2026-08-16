@@ -227,7 +227,7 @@ class AbortaSinEscribir(unittest.TestCase):
 
 class DivisionesSinAbrir(unittest.TestCase):
     """Las divisiones que la federación aún no ha publicado salen **vacías pero
-    presentes**. Omitirlas deja a la entrenadora sin poder seleccionar la suya,
+    presentes**. Omitirlas deja al entrenador sin poder seleccionar la suya,
     y su equipo con `divisionId` nulo: el día que la federación publique, nada
     se engancharía solo."""
 

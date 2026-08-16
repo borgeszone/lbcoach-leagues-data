@@ -168,7 +168,7 @@ def resolve_logo_url(team_name: str, *, trusted_only: bool = False) -> str | Non
     Lo usan los caminos donde el nombre del equipo viene del calendario: ahí no
     hay ninguna fila oficial que confirme la asociación, y un escudo equivocado
     es peor que el placeholder genérico — que es lo que la app ya enseña y lo
-    que la entrenadora puede corregir subiendo el suyo.
+    que el entrenador puede corregir subiendo el suyo.
     """
     if not team_name or not team_name.strip():
         return None

@@ -51,13 +51,15 @@ from scrapers.logo_resolver import lookup_override, resolve_logo_url
 from scrapers.rfef_clasificacion import ScrapedTeam, fetch_division_teams
 from scrapers.rfef_calendario import fetch_division_calendar, teams_from_calendar
 from scrapers.rfef_discovery import (
+    COMP_LEAGUE,
+    COMP_UNKNOWN,
     DIVISION_GENDER,
     DIVISION_NAMES,
     SEASON_NOT_PUBLISHED,
     Fetcher,
+    classify_competition,
     list_competitions,
     list_groups,
-    match_division,
     resolve_season,
 )
 
@@ -410,7 +412,8 @@ def _load_fallback() -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def discover_divisions(season_code: str, *, session=None) -> list[dict] | None:
+def discover_divisions(season_code: str, *, session=None,
+                       unknown: list[str] | None = None) -> list[dict] | None:
     """Pregunta a la PNFG qué divisiones tiene esta temporada y con qué códigos.
 
     Devuelve una cfg por división, con la misma forma que consumía la constante
@@ -428,10 +431,20 @@ def discover_divisions(season_code: str, *, session=None) -> list[dict] | None:
 
     by_id: dict[str, dict] = {}
     for comp in comps:
-        matched = match_division(comp.name)
-        if matched is None:
+        clase, div_id, gender = classify_competition(comp.name)
+        if clase == COMP_UNKNOWN:
+            # Parece una liga de sala y no la reconocemos. Casi siempre
+            # significa que la han rebautizado — pasó en 2026-27 con "Liga
+            # Prime Futsal". Se denuncia en vez de tirarla en silencio.
+            msg = (f"competición de sala sin reconocer: {comp.name!r} "
+                   f"(comp {comp.code}). Si es una de nuestras divisiones, "
+                   f"añade su nombre a DIVISION_RULES")
+            print(f"  [rfef-disc] AVISO: {msg}")
+            if unknown is not None:
+                unknown.append(msg)
             continue
-        div_id, gender = matched
+        if clase != COMP_LEAGUE:
+            continue
         if div_id in by_id:
             # Dos competiciones casando con la misma división: quedarse con la
             # primera y avisar. Pasaría si RFEF crease "Segunda División FS
@@ -449,7 +462,7 @@ def discover_divisions(season_code: str, *, session=None) -> list[dict] | None:
             "gender": gender,
             "competition": {"code": comp.code, "name": comp.name},
             # Una división con un solo grupo se publica plana: es cómo la ve la
-            # entrenadora (no hay nada que elegir) y cómo la esperan los equipos
+            # entrenador (no hay nada que elegir) y cómo la esperan los equipos
             # que ya tienen `groupId` nulo.
             "flat": len(groups) == 1,
             "groups": groups,
@@ -543,7 +556,8 @@ def scrape(season: str, resolve_badges: bool = True,
             pending=False)
     print(f"[rfef] CodTemporada de {season}: {season_code}")
 
-    divisions_cfg = discover_divisions(season_code, session=session)
+    divisions_cfg = discover_divisions(season_code, session=session,
+                                       unknown=warnings)
     if divisions_cfg is None:
         return _nothing(
             f"no se pudo consultar el catálogo de competiciones de {season}",
@@ -587,7 +601,7 @@ def scrape(season: str, resolve_badges: bool = True,
     _fill_teams(out_divisions, divisions_cfg, fb_divisions, season, resolve_badges)
 
     # 4. Fuera el calendario parcial. Publicarlo sería peor que no tenerlo: la
-    #    app ofrecería un desplegable con dos jornadas y la entrenadora no
+    #    app ofrecería un desplegable con dos jornadas y el entrenador no
     #    encontraría la suya.
     if teams_only:
         for div in out_divisions:
@@ -626,8 +640,8 @@ def _with_placeholders(out_divisions: list[dict]) -> list[dict]:
     vacías pero presentes, y en el orden canónico.
 
     **Por qué no basta con omitirlas.** Quitarlas del JSON parece lo coherente
-    —no hay datos, no se publica nada— pero rompe algo que no se ve: la
-    entrenadora no puede *seleccionar* su división, así que su equipo se queda
+    —no hay datos, no se publica nada— pero rompe algo que no se ve: el
+    entrenador no puede *seleccionar* su división, así que su equipo se queda
     con `divisionId` nulo. Y el día que la federación publique, nada se engancha
     solo: tendría que acordarse de volver a editar el equipo. Con la división
     presente, elige ahora y el calendario, los rivales y las novedades aparecen

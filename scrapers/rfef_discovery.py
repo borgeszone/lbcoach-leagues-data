@@ -98,6 +98,14 @@ class Group:
 #
 # `require` son palabras que tienen que estar; `forbid`, palabras que no pueden.
 DIVISION_RULES: tuple[tuple[str, str, frozenset[str], frozenset[str]], ...] = (
+    # Marca nueva de la máxima categoría masculina desde 2026-27: la RFEF
+    # rebautizó "Primera División Fútbol Sala Masculino" como **Liga Prime
+    # Futsal**, con torneos de Apertura y Clausura. No lleva ni "primera" ni
+    # "sala" ni "masculino", así que ninguna de las reglas clásicas la
+    # reconocía — y se descartaba en silencio. Ver la nota sobre nombres al
+    # final de este bloque.
+    ("rfef-primera-fs-masc", "masculino",
+     frozenset({"liga", "prime"}), frozenset({"femenino", "femenina"})),
     ("rfef-segunda-b-fs-masc", "masculino",
      frozenset({"segunda", "b", "sala"}), frozenset({"femenino"})),
     ("rfef-primera-fs-fem", "femenino",
@@ -109,6 +117,19 @@ DIVISION_RULES: tuple[tuple[str, str, frozenset[str], frozenset[str]], ...] = (
     ("rfef-segunda-fs-masc", "masculino",
      frozenset({"segunda", "sala", "masculino"}), frozenset({"b", "femenino"})),
 )
+
+# NOTA SOBRE NOMBRES, escrita después de equivocarme.
+#
+# La decisión de casar por nombre en vez de por código sigue siendo la correcta
+# —los códigos cambian **cada** temporada, sin excepción— pero el argumento con
+# el que se justificó ("los nombres aguantan de un año a otro") resultó falso a
+# la primera: en 2026-27 la máxima categoría masculina pasó a llamarse "Liga
+# Prime Futsal", sin una sola palabra en común con la anterior.
+#
+# Por eso lo que de verdad protege no es la lista de reglas, que siempre irá por
+# detrás de la próxima campaña de marketing, sino que **lo que no casa se
+# denuncia** (`classify_competition` → "desconocida" → `warnings` del JSON). Una
+# competición de sala sin reconocer es una señal, no un caso normal.
 
 # Nombre visible de cada división en el JSON publicado. No se toma el de la
 # PNFG porque cambia de puntuación y de mayúsculas entre temporadas ("Primera
@@ -134,8 +155,12 @@ _EXCLUDE = frozenset({
     "infantil", "alevin", "benjamin", "prebenjamin", "seleccion",
     "selecciones", "autonomicas", "campeonato", "campeonatos", "base",
     "sub", "reina", "rey", "playa", "fase", "ascenso", "titulo",
-    "diversidad", "amistoso", "torneo", "honor",
+    "diversidad", "amistoso", "honor",
 })
+# "torneo" estuvo aquí y hubo que sacarlo: desde 2026-27 la máxima categoría
+# masculina se juega como "Torneo Apertura" y "Torneo Clausura", así que
+# excluirlo tiraba justo la competición que buscamos. Lo que de verdad descarta
+# selecciones y campeonatos de base son "selecciones", "campeonato" y "sub".
 
 
 def _words(name: str) -> list[str]:
@@ -146,21 +171,53 @@ def _words(name: str) -> list[str]:
     return [w for w in re.split(r"[^a-z0-9]+", s.lower()) if w]
 
 
+# "Sala" y "futsal" son la misma cosa. Hizo falta el segundo cuando la marca
+# nueva dejó de decir "sala".
+_SALA_WORDS = frozenset({"sala", "futsal"})
+
+# Clasificación de una competición del catálogo.
+COMP_LEAGUE = "liga"          # es una de nuestras divisiones
+COMP_IGNORED = "descartada"   # copa, juvenil, selecciones, playa… correcto ignorarla
+COMP_UNKNOWN = "desconocida"  # parece liga sénior de sala y no la reconocemos
+
+
+def classify_competition(name: str) -> tuple[str, str | None, str | None]:
+    """`(clase, division_id, gender)`.
+
+    La clase `COMP_UNKNOWN` es la que importa: una competición que **parece** una
+    liga de fútbol sala y que ninguna regla reconoce. Antes eso era
+    indistinguible de una copa y se tiraba sin decir nada — que es como una
+    división rebautizada desaparecería del JSON durante una temporada entera sin
+    que nadie se enterase.
+    """
+    words = set(_words(name))
+    is_futsal = bool(words & _SALA_WORDS)
+    # "Futsal" y "sala" son sinónimos, así que las reglas escritas con "sala"
+    # tienen que casar igual con "Segunda División Futsal Masculino".
+    if "futsal" in words:
+        words.add("sala")
+    # La marca nueva no dice ni "sala" ni "futsal" en algunos rótulos cortos.
+    if not is_futsal and {"liga", "prime"} <= words:
+        is_futsal = True
+    if not is_futsal:
+        return COMP_IGNORED, None, None
+    if words & _EXCLUDE:
+        return COMP_IGNORED, None, None
+    for div_id, gender, require, forbid in DIVISION_RULES:
+        if require <= words and not (forbid & words):
+            return COMP_LEAGUE, div_id, gender
+    return COMP_UNKNOWN, None, None
+
+
 def match_division(competition_name: str) -> tuple[str, str] | None:
     """`(division_id, gender)` de una competición, o None si no nos interesa.
 
     Devolver None es lo normal y no es un error: la agrupación de fútbol sala
-    trae también juveniles, copas y selecciones.
+    trae también juveniles, copas y selecciones. Para distinguir "no nos
+    interesa" de "no la reconozco", usa `classify_competition`.
     """
-    words = set(_words(competition_name))
-    if "sala" not in words:
-        return None
-    if words & _EXCLUDE:
-        return None
-    for div_id, gender, require, forbid in DIVISION_RULES:
-        if require <= words and not (forbid & words):
-            return div_id, gender
-    return None
+    clase, div_id, gender = classify_competition(competition_name)
+    return (div_id, gender) if clase == COMP_LEAGUE else None
 
 
 # ── Parsers (puros: reciben texto, no tocan la red) ─────────────────────────
