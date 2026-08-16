@@ -80,7 +80,25 @@ DATA_DIR = Path(__file__).parent.parent / "data"
 #
 # Segunda B no aparece: nunca ha tenido PDF oficial publicado.
 LEGACY_PDF: dict[str, dict] = {
-    "rfef-primera-fs-masc": {"pdf_id": "1Div_Sala"},
+    "rfef-primera-fs-masc": {
+        "pdf_id": "1Div_Sala",
+        # PDFs sueltos, **indexados por temporada a propósito**.
+        #
+        # En 2026-27 la RFEF publicó el calendario de Liga Prime Futsal con un
+        # nombre que rompe el patrón de siempre: ni prefijo `Calendario_`, ni
+        # temporada en el fichero, y la carpeta es el mes de publicación. O sea,
+        # una URL que no se puede deducir y que caduca sin avisar — exactamente
+        # la clase de valor fijo que causó el bug de agosto.
+        #
+        # Por eso va bajo su temporada: no se puede usar para otra ni por
+        # accidente. Y aun así se comprueba la temporada **impresa dentro del
+        # PDF** antes de aceptarlo (`_pdf_declares_season`), porque confiar en
+        # la ruta es justo lo que salió mal la otra vez.
+        "pdf_urls": {
+            "2026-2027":
+                "https://rfef.es/sites/default/files/2026-06/Liga_Prime_Futsal.pdf",
+        },
+    },
     "rfef-segunda-fs-masc": {"pdf_id": "2Div_Sala"},
     "rfef-primera-fs-fem": {"pdf_id": "1DivFem_Sala"},
     "rfef-segunda-fs-fem": {
@@ -163,13 +181,25 @@ def _extract_calendar_from_pdf(pdf_bytes: bytes) -> list[dict]:
         return []
 
     COLUMN_GAP_THRESHOLD = 30
+    # Dos formatos de cabecera conviven:
+    #
+    #   "Jornada 1 (06/09/2025)"            PDFs clásicos
+    #   "Torneo Apertura J 1 (13/09/2026)"  Liga Prime Futsal desde 2026-27
+    #
+    # El segundo trae **fase**, y eso no es decorativo: Apertura y Clausura
+    # tienen cada uno su J1..J15, así que el número de jornada por sí solo deja
+    # de identificar un partido.
     JORNADA_HEADER_RE = re.compile(
-        r"^Jornada\s+(\d+)\s*(?:\((\d{1,2}/\d{1,2}/\d{2,4})\))?",
+        r"^(?:Torneo\s+(\w+)\s+)?J(?:ornada)?\s*(\d+)\s*"
+        r"(?:\((\d{1,2}/\d{1,2}/\d{2,4})\))?",
         re.IGNORECASE,
     )
 
-    jornadas: dict[int, dict] = {}
-    current_jornada: int | None = None
+    # Clave (fase, jornada) y no solo jornada: con una sola, la J1 de Clausura
+    # sobrescribiría la de Apertura y se perderían quince jornadas sin ruido.
+    jornadas: dict[tuple[str, int], dict] = {}
+    order: list[tuple[str, int]] = []
+    current: tuple[str, int] | None = None
 
     try:
         with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
@@ -180,20 +210,25 @@ def _extract_calendar_from_pdf(pdf_bytes: bytes) -> list[dict]:
                     # 1. ¿Cabecera de jornada?
                     mm = JORNADA_HEADER_RE.match(line_text)
                     if mm:
-                        current_jornada = int(mm.group(1))
-                        date = _normalize_date(mm.group(2)) if mm.group(2) else None
-                        if current_jornada not in jornadas:
-                            jornadas[current_jornada] = {
-                                "jornada": current_jornada,
-                                "date": date,
-                                "matches": [],
-                            }
-                        elif date and not jornadas[current_jornada].get("date"):
-                            jornadas[current_jornada]["date"] = date
+                        phase = (mm.group(1) or "").strip().title() or None
+                        num = int(mm.group(2))
+                        date = _normalize_date(mm.group(3)) if mm.group(3) else None
+                        current = (phase or "", num)
+                        if current not in jornadas:
+                            entry = {"jornada": num, "date": date, "matches": []}
+                            if phase:
+                                entry["phase"] = phase
+                            jornadas[current] = entry
+                            # El orden de lectura del PDF es el de la
+                            # competición; ordenar por número mezclaría las dos
+                            # fases (A1, C1, A2, C2…).
+                            order.append(current)
+                        elif date and not jornadas[current].get("date"):
+                            jornadas[current]["date"] = date
                         continue
 
                     # 2. ¿Línea de partido?
-                    if current_jornada is None:
+                    if current is None:
                         continue
                     pair = _split_match_line(line_words, COLUMN_GAP_THRESHOLD)
                     if pair is None:
@@ -201,7 +236,7 @@ def _extract_calendar_from_pdf(pdf_bytes: bytes) -> list[dict]:
                     home, away = pair
                     if not (_looks_like_team_name(home) and _looks_like_team_name(away)):
                         continue
-                    jornadas[current_jornada]["matches"].append({
+                    jornadas[current]["matches"].append({
                         "home": home,
                         "away": away,
                     })
@@ -209,7 +244,7 @@ def _extract_calendar_from_pdf(pdf_bytes: bytes) -> list[dict]:
         print(f"  [rfef] Error parseando calendario: {e}")
         return []
 
-    return [jornadas[k] for k in sorted(jornadas)]
+    return [jornadas[k] for k in order]
 
 
 def _group_words_by_line(page) -> list[list[dict]]:
@@ -622,6 +657,10 @@ def scrape(season: str, resolve_badges: bool = True,
 
     out_divisions = _with_placeholders(out_divisions)
 
+    # Las que la PNFG no publica: última oportunidad por el PDF oficial.
+    _fill_missing_from_pdf(out_divisions, season, resolve_badges, warnings,
+                           teams_only)
+
     return {
         "id": "rfef",
         "name": "Liga Española",
@@ -633,6 +672,96 @@ def scrape(season: str, resolve_badges: bool = True,
         "teamsOnly": teams_only,
         "warnings": warnings,
     }
+
+
+def _pdf_declares_season(pdf_bytes: bytes, season: str) -> bool:
+    """¿El PDF dice por dentro que es de esta temporada?
+
+    Los calendarios de la RFEF imprimen la temporada en la portada
+    ("Calendario / Liga Prime Futsal / 2026/2027"). Comprobarlo es más fuerte
+    que fiarse del nombre del fichero: la ruta la elige quien sube el PDF y ya
+    ha cambiado de formato una vez, mientras que la portada describe el
+    contenido. Es la misma regla que aplica `rfef-fallback.json` con su campo
+    `season`, y por el mismo motivo.
+
+    Ante la duda **dice que no**: preferimos una división vacía y avisada a una
+    llena de la temporada equivocada.
+    """
+    try:
+        import pdfplumber
+    except ImportError:
+        return False
+    a, b = season.split("-")
+    wanted = {f"{a}/{b}", f"{a}-{b}", f"{a}/{b[-2:]}"}
+    try:
+        with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
+            head = " ".join((p.extract_text() or "") for p in pdf.pages[:2])
+    except Exception:  # noqa: BLE001
+        return False
+    return any(w in head for w in wanted)
+
+
+def _pdf_candidates(cfg: dict, season: str) -> list[str]:
+    """URLs de PDF a probar, de más fiable a menos.
+
+    El patrón clásico va primero porque lleva la temporada dentro de la URL: si
+    existe, no hay ambigüedad posible.
+    """
+    urls = []
+    if cfg.get("pdf_id"):
+        urls.append(_pdf_url(cfg["pdf_id"], season))
+    extra = (cfg.get("pdf_urls") or {}).get(season)
+    if extra:
+        urls.append(extra)
+    return urls
+
+
+def _fill_missing_from_pdf(
+    out_divisions: list[dict],
+    season: str,
+    resolve_badges: bool,
+    warnings: list[str],
+    teams_only: bool,
+) -> None:
+    """Último recurso para las divisiones que la PNFG no publica todavía.
+
+    Sin esto, el PDF oficial no se llega a intentar nunca para una división que
+    no aparece en la PNFG: la cascada de `_teams_for` cuelga de una división
+    *descubierta*. Y da la casualidad de que ese es justo el caso donde el PDF
+    es la única fuente que hay — en 2026-27, la máxima categoría masculina.
+    """
+    for div in out_divisions:
+        if div.get("teams") or div.get("groups"):
+            continue
+        cfg = LEGACY_PDF.get(div["id"])
+        if not cfg:
+            continue
+        for url in _pdf_candidates(cfg, season):
+            pdf = _download_pdf(url)
+            if not pdf:
+                continue
+            if not _pdf_declares_season(pdf, season):
+                msg = (f"{div['id']}: el PDF {url.rsplit('/', 1)[-1]} no declara "
+                       f"la temporada {season} en su portada; se descarta")
+                print(f"  [rfef] AVISO: {msg}")
+                warnings.append(msg)
+                continue
+            names = _extract_teams_from_pdf(pdf)
+            if not names:
+                continue
+            div["teams"] = _teams_from_names(names, resolve_badges=resolve_badges)
+            con_escudo = sum(1 for t in div["teams"] if t.get("logoUrl"))
+            if not teams_only:
+                calendar = _extract_calendar_from_pdf(pdf)
+                if calendar:
+                    div["calendar"] = calendar
+            msg = (f"{div['id']}: sin datos en la PNFG; equipos tomados del PDF "
+                   f"oficial ({len(names)} equipos, {con_escudo} con escudo). "
+                   f"Los nombres pueden ir por detrás de los patrocinios hasta "
+                   f"que arranque la clasificación")
+            print(f"  [rfef] {msg}")
+            warnings.append(msg)
+            break
 
 
 def _with_placeholders(out_divisions: list[dict]) -> list[dict]:

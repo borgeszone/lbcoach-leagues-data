@@ -1,3 +1,11 @@
 {
-  "_comment": "Overrides curados manualmente por el maintainer. Toman precedencia sobre el resolver automático y la caché. Formato: {nombreNormalizado: 'https://...'}. La normalización se hace en scrapers.logo_resolver._norm() (lowercase + sin acentos + sin no-alfanuméricos). Ejemplo: 'fcbarcelona' -> 'https://upload.wikimedia.org/wikipedia/.../FC_Barcelona.svg'."
+  "_comment": "Overrides curados manualmente por el maintainer. Toman precedencia sobre el resolver automático y la caché. Formato: {nombreNormalizado: 'https://...'}. La normalización se hace en scrapers.logo_resolver._norm() (lowercase + sin acentos + sin no-alfanuméricos). Ejemplo: 'fcbarcelona' -> 'https://upload.wikimedia.org/wikipedia/.../FC_Barcelona.svg'. Las entradas de fútbol sala masculino apuntan al portal oficial futsal.rfef.es y existen porque el nombre del PDF de calendario no casa letra por letra con el del portal (sobra un 'FS.', un 'El', un 'De La'...). Se pueden borrar en cuanto la clasificación de la PNFG publique nombre y escudo en la misma fila, que es la fuente preferente.",
+  "oparruloferrolfs": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/29.png",
+  "quesoselhidalgomanzanaresfs": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/9.png",
+  "cordobapatrimoniodelahumanidad": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/4.png",
+  "wanapixadsala10": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/23.png",
+  "catgasenergiasantacoloma": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png",
+  "fsgarcia": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png",
+  "cdxota": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/20.png",
+  "caosasunamagna": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/20.png"
 }
