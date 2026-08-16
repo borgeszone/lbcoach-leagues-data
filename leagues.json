@@ -1,6 +1,6 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-08-16T12:58:33+00:00",
+  "lastUpdated": "2026-08-16T17:18:35+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
     "rfef: sin publicar en la PNFG para 2026-2027: rfef-primera-fs-masc, rfef-segunda-fs-masc, rfef-segunda-b-fs-masc"
@@ -11,6 +11,24 @@
       "name": "Liga Española",
       "source": "rfef.es",
       "divisions": [
+        {
+          "id": "rfef-primera-fs-masc",
+          "name": "Primera División FS",
+          "gender": "masculino",
+          "teams": []
+        },
+        {
+          "id": "rfef-segunda-fs-masc",
+          "name": "Segunda División FS A",
+          "gender": "masculino",
+          "teams": []
+        },
+        {
+          "id": "rfef-segunda-b-fs-masc",
+          "name": "Segunda División FS B",
+          "gender": "masculino",
+          "teams": []
+        },
         {
           "id": "rfef-primera-fs-fem",
           "name": "Primera División FS Femenina",
