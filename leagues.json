@@ -1,6 +1,6 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-08-19T06:47:47+00:00",
+  "lastUpdated": "2026-08-20T06:49:15+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
     "rfef: sin publicar en la PNFG para 2026-2027: rfef-segunda-fs-masc, rfef-segunda-b-fs-masc"
