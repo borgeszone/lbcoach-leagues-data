@@ -2,9 +2,16 @@
 
 Cascada de resolución (la primera que tenga éxito gana):
 
-1. **Override curado** (`data/badges-overrides.json`): el maintainer añade
+1. **Allowlist curada** (`data/badges-overrides.json`): el maintainer añade
    manualmente entradas cuando una resolución automática es errónea o un club
    importante no aparece en ningún lado. Es la fuente autoritativa.
+
+   Cada entrada es un objeto `{url, fuente, titular, licencia, verificado}` —
+   los campos de procedencia los pide `IP-004` de la auditoría legal. Se sigue
+   aceptando el valor en forma de cadena suelta (era el formato original), así
+   que un fichero viejo se lee igual; lo que no se puede es **escribir** en el
+   formato viejo, porque entonces la entrada entra sin procedencia y el hueco
+   deja de verse.
 
 2. **Caché persistente** (`data/badges-cache.json`): resoluciones exitosas
    de runs anteriores. Se commitea al repo en `main` para que la siguiente
@@ -99,11 +106,33 @@ def _load_json(path: Path) -> dict:
         return {}
 
 
+def _override_url(value: object) -> str | None:
+    """Saca la URL de una entrada de la allowlist, en cualquiera de sus dos
+    formas: objeto con procedencia (la actual) o cadena suelta (la original).
+
+    Una entrada sin `url` utilizable devuelve None en vez de reventar: este
+    fichero se edita a mano, y una entrada a medias tiene que costar un escudo,
+    no el run entero.
+    """
+    if isinstance(value, str):
+        return value.strip() or None
+    if isinstance(value, dict):
+        url = value.get("url")
+        if isinstance(url, str):
+            return url.strip() or None
+    return None
+
+
 def _ensure_loaded() -> None:
     global _overrides, _cache
     if _overrides is None:
-        _overrides = {k: v for k, v in _load_json(OVERRIDES_PATH).items()
-                      if not k.startswith("_")}
+        _overrides = {}
+        for k, v in _load_json(OVERRIDES_PATH).items():
+            if k.startswith("_"):
+                continue
+            url = _override_url(v)
+            if url:
+                _overrides[k] = url
     if _cache is None:
         _cache = {k: v for k, v in _load_json(CACHE_PATH).items()
                   if not k.startswith("_")}

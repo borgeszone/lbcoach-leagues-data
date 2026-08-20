@@ -1,11 +1,447 @@
 {
-  "_comment": "Overrides curados manualmente por el maintainer. Toman precedencia sobre el resolver automático y la caché. Formato: {nombreNormalizado: 'https://...'}. La normalización se hace en scrapers.logo_resolver._norm() (lowercase + sin acentos + sin no-alfanuméricos). Ejemplo: 'fcbarcelona' -> 'https://upload.wikimedia.org/wikipedia/.../FC_Barcelona.svg'. Las entradas de fútbol sala masculino apuntan al portal oficial futsal.rfef.es y existen porque el nombre del PDF de calendario no casa letra por letra con el del portal (sobra un 'FS.', un 'El', un 'De La'...). Se pueden borrar en cuanto la clasificación de la PNFG publique nombre y escudo en la misma fila, que es la fuente preferente.",
-  "oparruloferrolfs": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/29.png",
-  "quesoselhidalgomanzanaresfs": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/9.png",
-  "cordobapatrimoniodelahumanidad": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/4.png",
-  "wanapixadsala10": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/23.png",
-  "catgasenergiasantacoloma": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png",
-  "fsgarcia": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png",
-  "cdxota": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/20.png",
-  "caosasunamagna": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/20.png"
+  "_comment": "Allowlist curada de escudos. Es la fuente AUTORITATIVA: gana sobre el mapa del portal, sobre la cache y sobre la clasificacion de la PNFG.  Clave = nombre del equipo normalizado por scrapers.logo_resolver._norm() (minusculas, sin acentos, sin no-alfanumericos). Valor = objeto {url, fuente, titular, licencia, verificado, nota?}. Se acepta tambien el valor legacy en forma de cadena con la URL suelta.  Los campos de procedencia existen por IP-004 (LEGAL_IP_AUDIT): la auditoria pide registrar origen, titular y licencia por entrada. licencia=\"sin-verificar\" es deliberado y honesto — ninguna de estas imagenes tiene autorizacion escrita todavia, y poner otra cosa seria esconder el hueco. fuente=lnfs es el portal oficial futsal.rfef.es; fuente=pnfg es el servidor de ficheros de la propia federacion (rfef.filesnovanet.es), de donde salen los escudos de las filas de clasificacion. NO añadir entradas de Wikipedia/Wikimedia ni de busquedas de imagenes: es justo lo que IP-004 manda quitar.  OJO CON LAS 47 ENTRADAS fuente=pnfg: estaban dentro de data/rfef-fallback.json, que desde agosto de 2026 se ignora entero si su season no coincide con la que se scrapea. Ahi eran inalcanzables — el camino del calendario resuelve con trusted_only=True, que solo lee este fichero y el mapa del portal, y habria publicado esas divisiones sin un solo escudo. Este fichero no tiene temporada a proposito: un escudo no caduca en junio. NO devolverlas al fallback.  Las entradas fuente=lnfs existen porque el nombre del portal y el de la PNFG no casan letra por letra, y el casado automatico por contencion no salva ni los infijos (\"Cordoba Patrimonio [de la] Humanidad\") ni los cambios de patrocinador (\"Movistar Inter FS\" -> \"Inter JP Financial\"). El id del club en el portal es estable entre temporadas; el nombre comercial no.",
+  "_pendientes": "Clubes vistos en una fuente oficial para los que NO hay escudo todavia, anotados para que el hueco se vea: \"Sur Seed CD El Ejido Futsal\" (Primera masc 2026-27, recien ascendido) no tiene ficha en futsal.rfef.es a fecha 2026-08-19, asi que se queda con el placeholder generico de la app hasta que la clasificacion de la PNFG abra y traiga su escudo en la propia fila. NO inventar una URL para taparlo.",
+  "admionofsf": {
+    "url": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/91afc7059c04b707fa8e3e7f63f213f3.jpg",
+    "fuente": "pnfg",
+    "titular": "A.D. Mioño FSF",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "aecslhospitalet": {
+    "url": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/e91e07aa2419023cedae05d009e1f368.jpg",
+    "fuente": "pnfg",
+    "titular": "AECS L Hospitalet",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "almagrofsf": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206578_50x50.png",
+    "fuente": "pnfg",
+    "titular": "Almagro F.S.F.",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "arrivaadalcorconfsf": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206184_50x50.png",
+    "fuente": "pnfg",
+    "titular": "ARRIVA AD Alcorcón FSF",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "atleticonavalcarnero": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079008545_logo.png",
+    "fuente": "pnfg",
+    "titular": "Atletico Navalcarnero",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "atpiluminaciontudelanoriberadenavarra": {
+    "url": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/17.png",
+    "fuente": "lnfs",
+    "titular": "ATP Ilum. Tudelano Ribera Navarra",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19",
+    "nota": "El portal abrevia Iluminacion y se come el de"
+  },
+  "bembrive": {
+    "url": "https://rfef.filesnovanet.es/pnfg/var/docs/1415/DOCS/20149/23/cc126aafe8ea69a2e268c518677ca761_StvZ5CkX.jpg",
+    "fuente": "pnfg",
+    "titular": "Bembrive",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "cajaruralriverzamora": {
+    "url": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20229/19/62551b6e55eb19dc00d857394ddbe649.jpg",
+    "fuente": "pnfg",
+    "titular": "Caja Rural River Zamora",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "caosasunamagna": {
+    "url": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/20.png",
+    "fuente": "lnfs",
+    "titular": "CD Xota",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19",
+    "nota": "Osasuna Magna es el antiguo Xota FS"
+  },
+  "catgasenergiasantacoloma": {
+    "url": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png",
+    "fuente": "lnfs",
+    "titular": "Catgas Energia Santa Coloma",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "cdcolegiosanjose": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078990797_ESCUDO_San_Jos_.png",
+    "fuente": "pnfg",
+    "titular": "C.D. Colegio San José",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "cdeleganesfsmasdeporte": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079009231_IMG_20250929_WA0005.jpg",
+    "fuente": "pnfg",
+    "titular": "C.D.E. Leganés F.S. Masdeporte",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "cdlacturaleorvina": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079009077_logo_club_deportivo_orvina_texto_rojo.png",
+    "fuente": "pnfg",
+    "titular": "CD Lacturale Orvina",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "cdsalesianospuertollano": {
+    "url": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/16ff2cb1e1eeb0d3d4dcf12b8ac7e85a.jpg",
+    "fuente": "pnfg",
+    "titular": "CD Salesianos Puertollano",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "cdsegosala": {
+    "url": "https://rfef.filesnovanet.es/pnfg/usr/local/projects/weblogic/repository/AS400/16/DOCS/201211/13/12043436.jpg",
+    "fuente": "pnfg",
+    "titular": "C.D. Segosala",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "cdxota": {
+    "url": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/20.png",
+    "fuente": "lnfs",
+    "titular": "CD Xota",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "cfsautoescolaurgelllinyola": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079009175_00100_0000971713_Escut_cfs_contorn_vermell__1_.png",
+    "fuente": "pnfg",
+    "titular": "CFS Autoescola Urgell Linyola",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "cfsfemeninosanfernando": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078990598_00100_0000003259_escudo_sanfer_web.jpg",
+    "fuente": "pnfg",
+    "titular": "C.F.S. Femenino San Fernando",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "cfsgrancanariateldeportivo": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205289_50x50.png",
+    "fuente": "pnfg",
+    "titular": "CFS Gran Canaria Teldeportivo",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "clubdeportivonouturiafsfa": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079007475_logo_nouturia_azul.png",
+    "fuente": "pnfg",
+    "titular": "Club Deportivo Nou Turia FSF \"A\"",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "clubdeportivosanpabloeivis": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079016525_WhatsApp_Image_2025_12_12_at_15.07.37.jpeg",
+    "fuente": "pnfg",
+    "titular": "Club Deportivo San Pablo-Eivis",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "cncaldes": {
+    "url": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/df07e03cd20fdd5c7fb8122543e09f4d.jpg",
+    "fuente": "pnfg",
+    "titular": "CN Caldes",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "cordobapatrimoniodelahumanidad": {
+    "url": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/4.png",
+    "fuente": "lnfs",
+    "titular": "Córdoba Patrimonio Humanidad",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "deportivocordobafscajasur": {
+    "url": "https://rfef.filesnovanet.es/pnfg/var/docs/anterior/1314/DOCS/20138/17/734c5d4e3a35939a34bd5e685d41409a_2O375EZN.jpg",
+    "fuente": "pnfg",
+    "titular": "Deportivo Cordoba F.S. / Cajasur",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "elgaiterorodilesfsf": {
+    "url": "https://rfef.filesnovanet.es/pnfg/var/docs/1819/DOCS/201810/15/0c62448a342baa03de718a5be6fae147.jpg",
+    "fuente": "pnfg",
+    "titular": "El Gaitero Rodiles FSF",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "encemarinfutsal": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/209265_50x50.png",
+    "fuente": "pnfg",
+    "titular": "ENCE Marín Futsal",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "entrerriosautomatizacion": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078998520_Aragon_XXI.png",
+    "fuente": "pnfg",
+    "titular": "Entrerrios Automatización",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "estrelafutsal": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079009170_434395803_939435660955667_6662029654097948157_n.jpg",
+    "fuente": "pnfg",
+    "titular": "Estrela Futsal",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "fcmeigas": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079022942_escudo_Meigas_futsal_club.png",
+    "fuente": "pnfg",
+    "titular": "FC Meigas",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "femecastelloncfs": {
+    "url": "https://rfef.filesnovanet.es/pnfg/usr/local/projects/weblogic/repository/AS400/02/DOCS/201304/29/12074844.jpg",
+    "fuente": "pnfg",
+    "titular": "Feme Castellón C.F.S.",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "fsgarcia": {
+    "url": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png",
+    "fuente": "lnfs",
+    "titular": "Catgas Energia Santa Coloma",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19",
+    "nota": "Mismo club que Santa Coloma con otro patrocinador"
+  },
+  "fssabadell": {
+    "url": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/d176d091d48f4186bc9755ed5db31c85.JPg",
+    "fuente": "pnfg",
+    "titular": "F.S. Sabadell",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "fundacionuapogranadafsfemenino": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008961_Granada_F.S..png",
+    "fuente": "pnfg",
+    "titular": "Fundación UAPO Granada FS Femenino",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "futbolsalaatleticomercadala": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008911_PHOTO_2024_07_29_15_50_36.jpg",
+    "fuente": "pnfg",
+    "titular": "Futbol Sala Atlético Mercadal \"A\"",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "futsalcartonajespansmataro": {
+    "url": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/70f2d7d910390790b0ee8a247317880e.jpg",
+    "fuente": "pnfg",
+    "titular": "Futsal Cartonajes Pans Mataró",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "globalcajaalbacetefs": {
+    "url": "https://rfef.filesnovanet.es/pnfg/var/docs/1415/DOCS/201410/5/c44ab32d3034b9b1c315995904be88bd_7iTQskyY.jpg",
+    "fuente": "pnfg",
+    "titular": "Globalcaja Albacete F.S.",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "grupoformatvilalbafs": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078989920_ESCUDO_VILALBA_F.S..jpg",
+    "fuente": "pnfg",
+    "titular": "Grupo FORMA-T Vilalba F.S.",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "gruporeciclartecesaraugusta": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0078998203_CESAR_AUGUSTA.jpg",
+    "fuente": "pnfg",
+    "titular": "Grupo Reciclarte Cesar Augusta",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "iesluisdecamoens": {
+    "url": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20229/22/6c77af036b358578948a0f1d37634930.jpg",
+    "fuente": "pnfg",
+    "titular": "I.E.S. Luis de Camoens",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "industriassantacoloma": {
+    "url": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png",
+    "fuente": "lnfs",
+    "titular": "Catgas Energia Santa Coloma",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19",
+    "nota": "Mismo club que Catgas/FS Garcia"
+  },
+  "interjpfinancial": {
+    "url": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/27.png",
+    "fuente": "lnfs",
+    "titular": "Inter JP Financial",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19",
+    "nota": "Nombre con el que el club sale en el PDF oficial de 2026-27; movistarinterfs es el mismo club con el patrocinador anterior"
+  },
+  "jaenparaisointeriorfs": {
+    "url": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/25.png",
+    "fuente": "lnfs",
+    "titular": "Jaén Paraíso Interior",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19",
+    "nota": "Al nombre del portal le falta el FS"
+  },
+  "laincoesportiurubifs": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078990466_escudo_esportiu_rubi.jpg",
+    "fuente": "pnfg",
+    "titular": "Lainco Esportiu Rubi F.S.",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "majadahondafsfafar4": {
+    "url": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20228/31/8c6e20bfe9cb72c33bd8df6353738138.jpg",
+    "fuente": "pnfg",
+    "titular": "Majadahonda F.S.F./Afar 4",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "martosfsjaenparaisointerior": {
+    "url": "https://rfef.filesnovanet.es/pnfg/var/docs/anterior/1314/DOCS/20138/16/bbc7004947d0f7115a8099108146b704_pumhdq76.jpg",
+    "fuente": "pnfg",
+    "titular": "Martos FS Jaén Paraíso Interior",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "melillaciudaddeldeportetorreblancacf": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/207211_50x50.png",
+    "fuente": "pnfg",
+    "titular": "Melilla Ciudad del Deporte Torreblanca C. F.",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "movistarinterfs": {
+    "url": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/27.png",
+    "fuente": "lnfs",
+    "titular": "Inter JP Financial",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19",
+    "nota": "Mismo club, patrocinador distinto; escudo verificado a la vista"
+  },
+  "oparruloferrolfs": {
+    "url": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/29.png",
+    "fuente": "lnfs",
+    "titular": "O Parrulo Ferrol",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "ourenseontime": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008546_ESCUDO_OURENSE_FSF_NUEVO.png",
+    "fuente": "pnfg",
+    "titular": "Ourense Ontime",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "quesoselhidalgomanzanaresfs": {
+    "url": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/9.png",
+    "fuente": "lnfs",
+    "titular": "Quesos  Hidalgo Manzanares FS",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "realbetisfutsal": {
+    "url": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/12.png",
+    "fuente": "lnfs",
+    "titular": "Real Betis Futsal",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19",
+    "nota": "Nombre identico; no casaba porque el club no sale en la home del portal"
+  },
+  "sdhispaniayecla": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078999056_Logo_Hispania.jpg",
+    "fuente": "pnfg",
+    "titular": "SD Hispania Yecla",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "servigrouppeniscolafs": {
+    "url": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/31.png",
+    "fuente": "lnfs",
+    "titular": "Servigroup Peñíscola FS",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19",
+    "nota": "Nombre identico; idem"
+  },
+  "solarmonlesglories2014cdlaconcordia": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008807_escudo_pelota_nueva__2_.jpg",
+    "fuente": "pnfg",
+    "titular": "SolarMon-Les Glories 2014 CD La Concordia",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "somriufutbolsalaripollet": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079009174_00100_0000485600_RIPOLLET_F.S._copia.png",
+    "fuente": "pnfg",
+    "titular": "Somriu Futbol Sala Ripollet",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "systemcarsavenidaalagonfs": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008818_logo_en_mini.jpg",
+    "fuente": "pnfg",
+    "titular": "System Cars Avenida Alagón FS",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "torrejonsalafiveplay": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079007318_escudo_torrejon_sala.jpg",
+    "fuente": "pnfg",
+    "titular": "Torrejón Sala Five Play",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "udazuquecafs": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079009176_bormioli_220x220.jpg",
+    "fuente": "pnfg",
+    "titular": "UD Azuqueca FS",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "udctxantreakke": {
+    "url": "https://rfef.filesnovanet.es/pnfg/var/docs/1415/DOCS/20149/18/6ebfb8b44cbf2204c3178b253aeb4b3e_Gg8SK3Ej.jpg",
+    "fuente": "pnfg",
+    "titular": "U.D.C. Txantrea K.K.E.",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "valdetiresferrolfsf": {
+    "url": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/05585564438ffdf7376296737e02d968.jpg",
+    "fuente": "pnfg",
+    "titular": "Valdetires Ferrol F.S.F.",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "wanapixadsala10": {
+    "url": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/23.png",
+    "fuente": "lnfs",
+    "titular": "Wanapix",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  },
+  "wanapixaldelisintersala10zaragoza": {
+    "url": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079011245_escudo_Intersala_sin_fondo.png",
+    "fuente": "pnfg",
+    "titular": "Wanapix Aldelis InterSala 10 Zaragoza",
+    "licencia": "sin-verificar",
+    "verificado": "2026-08-19"
+  }
 }

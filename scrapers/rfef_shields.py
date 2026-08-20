@@ -22,14 +22,22 @@ import requests
 BASE = "https://futsal.rfef.es"
 SHIELD_URL = BASE + "/media/lnfs/shields_futsal/png/{id}.png"
 
-# Páginas que listan clubes (cada una añade IDs nuevos al dict)
+# Páginas que listan clubes (cada una añade IDs nuevos al dict).
+#
+# Aquí había seis rutas y **cinco no existen** (2026-08-19): el portal se
+# rediseñó y las `/clasificacion/*` desaparecieron. No se notaba porque
+# futsal.rfef.es **responde 200 con su página genérica** a cualquier ruta que no
+# conoce, así que el guard `if r.status_code != 200: continue` no puede verlo —
+# y esa página genérica lleva dentro el mismo bloque de clubes que la home, de
+# modo que el bucle parseaba seis veces los mismos doce equipos y parecía estar
+# trabajando. Se comprueba pidiendo un id de escudo inexistente: devuelve 200
+# con `Content-Type: text/html`.
+#
+# Con solo la home, el mapa tiene techo: ~12 clubes, y con nombres de
+# patrocinador de temporadas pasadas ("CD Xota", "Catgas Energia Santa Coloma").
+# Ese hueco lo cubre `data/badges-overrides.json`, no más rutas aquí.
 PAGES_TO_SCAN = [
     "/",
-    "/clasificacion/primera",
-    "/clasificacion/segunda",
-    "/clasificacion/segundab",
-    "/clasificacion/primera-femenina",
-    "/clasificacion/segunda-femenina",
 ]
 
 # Captura el bloque <a href=".../equipo/SLUG/ID/info"> ... <img ... alt="NAME">
