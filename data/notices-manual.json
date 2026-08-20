@@ -1,24 +1,5 @@
 {
-  "_comment": "Novedades / comunicados de federación que la app GoalDash muestra como 'Novedades de tu liga' (notificación local + bandeja con badge en la pantalla de inicio). Se inyectan en el leagues.json publicado por scrape.py. La clave es el id de una CATEGORÍA (rfef, fcf) — la novedad la ven todos los equipos de esa federación — o el id de una DIVISIÓN (mira los ids en output/leagues.json) — solo la ven los equipos de esa división. Cada novedad: 'id' (estable, IMPRESCINDIBLE para deduplicar y no repetir el aviso), 'title' (obligatorio), 'body' (opcional), 'url' (opcional, se abre en el navegador), 'date' (opcional, YYYY-MM-DD). Las entradas 'ejemplo' de abajo son para probar el flujo de punta a punta: BÓRRALAS cuando confirmes que funciona.",
-  "categories": {
-    "rfef": [
-      {
-        "id": "rfef-ejemplo-2026-07",
-        "title": "Ejemplo · Nueva normativa de sanciones 2026/27",
-        "body": "Aviso de ejemplo para probar las notificaciones de novedades de federación. Lo ven todos los equipos RFEF. Bórralo de data/notices-manual.json cuando confirmes que funciona.",
-        "url": "https://www.rfef.es/",
-        "date": "2026-07-06"
-      }
-    ]
-  },
-  "divisions": {
-    "rfef-segunda-fs-fem": [
-      {
-        "id": "rfef-2afsfem-ejemplo-2026-07",
-        "title": "Ejemplo · Horarios provisionales de la jornada 1",
-        "body": "Novedad de ejemplo a nivel de división (Segunda FS Femenina): solo la ven los equipos de esa división.",
-        "date": "2026-07-05"
-      }
-    ]
-  }
+  "_comment": "Novedades / comunicados de federación que la app GoalDash muestra como 'Novedades de tu liga' (notificación local + bandeja con badge en la pantalla de inicio). Se inyectan en el leagues.json publicado por scrape.py. La clave es el id de una CATEGORÍA (rfef, fcf) — la novedad la ven todos los equipos de esa federación — o el id de una DIVISIÓN (mira los ids en output/leagues.json) — solo la ven los equipos de esa división. Cada novedad: 'id' (estable, IMPRESCINDIBLE para deduplicar y no repetir el aviso), 'title' (obligatorio), 'body' (opcional), 'url' (opcional, se abre en el navegador), 'date' (opcional, YYYY-MM-DD). NO metas avisos de prueba aquí: llegan al móvil de todos los equipos de esa categoría/división, y el id queda marcado como notificado para siempre.",
+  "categories": {},
+  "divisions": {}
 }

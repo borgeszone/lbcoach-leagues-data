@@ -1,0 +1,5 @@
+{
+  "_comment": "Reglamento / bases de competición de cada temporada. La app (GoalDash) avisa una vez, con enlace al documento, a los equipos de esa categoría o división. La clave es el id de una CATEGORÍA (rfef, fcf) o el de una DIVISIÓN (mira los ids en output/leagues.json); si una división tiene bases propias, las suyas mandan sobre el reglamento general de su federación. Cada entrada: 'season' (OBLIGATORIO, mismo formato que la version del JSON: 2026-2027), 'title', 'url' (OBLIGATORIO, se abre en el navegador) y 'published' (opcional, YYYY-MM-DD). scrape.py SOLO publica las entradas cuya 'season' coincide con la temporada que se está generando, así que las de años anteriores se pueden dejar aquí como histórico sin que lleguen a nadie. Si la federación cuelga una revisión a mitad de temporada, cambia la 'url' y la app vuelve a avisar; si sólo cambias el 'title', no.",
+  "categories": {},
+  "divisions": {}
+}

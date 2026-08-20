@@ -104,7 +104,12 @@ Edita `data/fcf-manual.json`:
 Push al repo y GitHub Actions corre solo (o trigger manual desde la UI).
 
 ### Novedades de federación (manual)
-La app muestra "Novedades de tu liga" (notificación local + bandeja con badge) a partir del campo `notices` del JSON. Se mantienen a mano en `data/notices-manual.json` y `scrape.py` las inyecta en la categoría/división correspondiente:
+La bandeja de "Novedades" de la app tiene **dos fuentes**, y ésta es solo una:
+
+- **Las novedades del equipo las deduce la propia app** de este calendario, sin que nadie escriba nada: un partido que cambia de hora, un acta que aparece, un calendario que se publica. Es lo que ve el 99 % de los entrenadores, y no requiere mantenimiento (§6.43 del informe técnico).
+- **Los comunicados de federación** —una circular, un cambio de normativa— sí se escriben a mano aquí, porque no están en ningún dato que se scrapee.
+
+Se mantienen en `data/notices-manual.json` y `scrape.py` las inyecta en la categoría/división correspondiente:
 
 ```jsonc
 {
@@ -125,7 +130,29 @@ La app muestra "Novedades de tu liga" (notificación local + bandeja con badge) 
 
 - La clave es el `id` de una categoría (`rfef`/`fcf`) o de una división (mira los ids en `output/leagues.json`).
 - El `id` de cada novedad debe ser **estable**: la app deduplica por él para no repetir la notificación. Cambiar el `id` = novedad nueva.
-- El fichero incluye entradas `ejemplo`; bórralas cuando confirmes el flujo.
+- **Nada de avisos de prueba.** Lo que se escriba aquí llega como notificación al móvil de todos los equipos de esa categoría o división, y su `id` queda marcado como notificado para siempre: no se puede retirar publicando de nuevo. El fichero se publicó una vez con dos entradas `ejemplo` — por eso el aviso.
+
+### Reglamento de la temporada (manual, una línea al año)
+`data/rules-manual.json` guarda el reglamento o las bases de competición de cada temporada. La app avisa una vez, con enlace al PDF, a los equipos de esa categoría o división.
+
+```jsonc
+{
+  "categories": {
+    "rfef": { "season": "2026-2027",              // OBLIGATORIO, mismo formato que `version`
+              "title": "Reglamento General de Fútbol Sala",
+              "url": "https://rfef.es/…/reglamento.pdf",   // OBLIGATORIO
+              "published": "2026-08-01" }         // opcional
+  },
+  "divisions": {                                  // bases propias de una división
+    "rfef-primera-fs-fem": { "season": "…", "title": "…", "url": "…" }
+  }
+}
+```
+
+- **`scrape.py` sólo publica las entradas cuya `season` coincide con la temporada que se está generando.** Por eso los reglamentos de años anteriores se pueden dejar aquí como histórico: no llegan a nadie. Quitar ese filtro publicaría el documento del año pasado etiquetado como el de éste.
+- Si una división tiene bases propias, **mandan sobre** el reglamento general de su federación (la app no suma los dos, elige el más específico).
+- Una **revisión a mitad de temporada** se anuncia cambiando la `url`; con el mismo `season` la app lo dice como "Actualizado el reglamento". Cambiar sólo el `title` no genera aviso.
+- No está automatizado y no es un olvido: la PNFG no publica el reglamento en ningún endpoint estructurado — cuelga de `rfef.es/sites/default/files/YYYY-MM/` con un nombre impredecible.
 
 ## GitHub Actions
 

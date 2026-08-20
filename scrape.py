@@ -125,6 +125,54 @@ def load_notices() -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def load_rules() -> dict:
+    """Lee data/rules-manual.json (reglamento/bases de competición por temporada).
+
+    Estructura: {"categories": {<catId>: rules}, "divisions": {<divId>: rules}},
+    donde cada `rules` es {"season", "title", "url", "published"?}.
+    Devuelve {} si el fichero no existe.
+    """
+    path = ROOT / "data" / "rules-manual.json"
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def apply_rules(categories: list[dict], rules: dict, season: str) -> int:
+    """Inyecta el reglamento en las categorías/divisiones que coincidan por id.
+
+    **Sólo el de la temporada que se está publicando.** El fichero se mantiene a
+    mano y acumula los de temporadas anteriores; sin este filtro, el JSON de
+    2026-27 saldría con el reglamento de 2025-26 dentro y la app avisaría del
+    documento equivocado con la etiqueta de temporada equivocada — que es el
+    mismo error que §6.32 costó descubrir con los equipos.
+
+    Modifica `categories` in-place y devuelve cuántos ha puesto.
+    """
+    cat_rules = rules.get("categories", {})
+    div_rules = rules.get("divisions", {})
+
+    def ok(r) -> bool:
+        return (
+            isinstance(r, dict)
+            and r.get("season") == season
+            and bool(r.get("url"))
+        )
+
+    n = 0
+    for cat in categories:
+        r = cat_rules.get(cat.get("id"))
+        if ok(r):
+            cat["rules"] = r
+            n += 1
+        for div in cat.get("divisions", []):
+            dr = div_rules.get(div.get("id"))
+            if ok(dr):
+                div["rules"] = dr
+                n += 1
+    return n
+
+
 def apply_notices(categories: list[dict], notices: dict) -> None:
     """Inyecta las novedades manuales en las categorías/divisiones que coincidan
     por id. La app (LeagueData.noticesFor) lee `notices` a nivel de categoría y
@@ -223,6 +271,10 @@ def main() -> int:
 
     # Inyectar novedades/comunicados de federación (data/notices-manual.json).
     apply_notices(categories, load_notices())
+
+    # Y el reglamento de esta temporada, si lo hay (data/rules-manual.json).
+    n_rules = apply_rules(categories, load_rules(), season)
+    print(f"[scrape] Reglamentos de {season} publicados: {n_rules}")
 
     # `warnings` es de diagnóstico y no lo consume la app: sube al nivel raíz
     # para que el panel pueda enseñar "faltan las masculinas" sin tener que
