@@ -1,9 +1,8 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-08-20T06:49:15+00:00",
+  "lastUpdated": "2026-08-21T07:36:14+00:00",
   "warnings": [
-    "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
-    "rfef: sin publicar en la PNFG para 2026-2027: rfef-segunda-fs-masc, rfef-segunda-b-fs-masc"
+    "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)"
   ],
   "categories": [
     {
@@ -1265,84 +1264,296 @@
           "id": "rfef-segunda-fs-masc",
           "name": "Segunda División FS A",
           "gender": "masculino",
-          "teams": []
+          "teams": [
+            {
+              "name": "Avanza Jaén Paraíso Interior",
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/2951.png"
+            },
+            {
+              "name": "Barça Atlètic",
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/1.png"
+            },
+            {
+              "name": "C.D. Leganés F.S.",
+              "logoUrl": null
+            },
+            {
+              "name": "C.D. Melistar",
+              "logoUrl": null
+            },
+            {
+              "name": "C.E. Futsal Gestoria Luis Mataró",
+              "logoUrl": null
+            },
+            {
+              "name": "ElPozo Ciudad de Murcia",
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/7.png"
+            },
+            {
+              "name": "Entrerrios Automatización",
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/3.png"
+            },
+            {
+              "name": "Family Cash Alzira F.S.",
+              "logoUrl": null
+            },
+            {
+              "name": "Gasifred Atlético Ibiza",
+              "logoUrl": null
+            },
+            {
+              "name": "MRB FS Mostoles",
+              "logoUrl": null
+            },
+            {
+              "name": "REYCO Burela FS",
+              "logoUrl": null
+            },
+            {
+              "name": "Ribera Navarra FS",
+              "logoUrl": null
+            },
+            {
+              "name": "Sala 5 Martorell MCD Grup",
+              "logoUrl": null
+            },
+            {
+              "name": "Unión África Ceutí \"A\"",
+              "logoUrl": null
+            },
+            {
+              "name": "Xerez Toyota Nimauto",
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/3206.png"
+            },
+            {
+              "name": "Zambú CFS Pinatar Cerramientos Abatibles",
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/2838.png"
+            }
+          ]
         },
         {
           "id": "rfef-segunda-b-fs-masc",
           "name": "Segunda División FS B",
           "gender": "masculino",
-          "teams": []
+          "teams": [],
+          "groups": [
+            {
+              "id": "g1",
+              "name": "Grupo 1",
+              "teams": [
+                {
+                  "name": "5 Coruña F.S.",
+                  "logoUrl": null
+                },
+                {
+                  "name": "ADC Lugo Sala",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Caja Rural Atlético Benavente FS",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Caja Rural River Sala Zamora",
+                  "logoUrl": null
+                },
+                {
+                  "name": "CD Albense FS",
+                  "logoUrl": null
+                },
+                {
+                  "name": "C.D. COMPOSALA",
+                  "logoUrl": null
+                },
+                {
+                  "name": "C.D. Tierno Galván",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Deporcyl - Guardo FS",
+                  "logoUrl": null
+                },
+                {
+                  "name": "F.S. Salamanca Energía Duero",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Grupo FORMA-T Vilalba F.S.",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Noia Portus Apostoli",
+                  "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/10.png"
+                },
+                {
+                  "name": "O Esteo F.S.",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Racing de Mieres",
+                  "logoUrl": null
+                },
+                {
+                  "name": "S.D. Xove F.S.",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Sibuscascoche Ribeira Fútbol Sala",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Stellae Leis Pontevedra F.S.",
+                  "logoUrl": null
+                }
+              ]
+            },
+            {
+              "id": "g5",
+              "name": "Grupo 5",
+              "teams": [
+                {
+                  "name": "Cdb Salvatierra Fs",
+                  "logoUrl": null
+                },
+                {
+                  "name": "C.D. Bujalance F.S. Beconet",
+                  "logoUrl": null
+                },
+                {
+                  "name": "C.D. Malacitano Futsal",
+                  "logoUrl": null
+                },
+                {
+                  "name": "C.D. Sporting FS Almería Biocampojoyma",
+                  "logoUrl": null
+                },
+                {
+                  "name": "CD Virgili Cádiz \"A\"",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Crevillent Futsal Starts \"A\"",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Dos Hermanas F.S. C.D. \"A\"",
+                  "logoUrl": null
+                },
+                {
+                  "name": "FLEXLIVING JUMILLA FS",
+                  "logoUrl": null
+                },
+                {
+                  "name": "GH Distribución Moral FS",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Imperio Los Rosales",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Jimbee Cartagena Futbol Sala",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Joasan Construcciones CFS Pinatar \"B\"",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Melilla Ciudad del Deporte Nueva Era",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Nawter Blanca FS",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Oleoinnova Mengibar FS",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Sima Granada FS",
+                  "logoUrl": null
+                }
+              ]
+            },
+            {
+              "id": "g6",
+              "name": "Grupo 6",
+              "teams": [
+                {
+                  "name": "AD Duggi-San Fernando",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Aguas de Teror",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Basilea Futbol Sala C.D.",
+                  "logoUrl": null
+                },
+                {
+                  "name": "C.D. Chinguaro \"A\"",
+                  "logoUrl": null
+                },
+                {
+                  "name": "C.D. Cisneros Alter",
+                  "logoUrl": null
+                },
+                {
+                  "name": "C.D. Salesianos Tenerife",
+                  "logoUrl": null
+                },
+                {
+                  "name": "C.D. Tenerife Iberia Toscal",
+                  "logoUrl": null
+                },
+                {
+                  "name": "C.F.S. Casa Juv. La Matanza",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Doctoral FS",
+                  "logoUrl": null
+                },
+                {
+                  "name": "F.S. Los Pinos",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Gran Canaria FS",
+                  "logoUrl": null
+                },
+                {
+                  "name": "La Salle San Ildelfonso",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Las Cuevecitas FS",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Malta 97",
+                  "logoUrl": null
+                },
+                {
+                  "name": "NovoComunidades-Bugedo FS",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Suntryp Agüimes FS",
+                  "logoUrl": null
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "rfef-primera-fs-fem",
           "name": "Primera División FS Femenina",
           "gender": "femenino",
-          "teams": [
-            {
-              "name": "AE Les Corts UBAE",
-              "logoUrl": null
-            },
-            {
-              "name": "ARRIVA AD Alcorcón FSF",
-              "logoUrl": null
-            },
-            {
-              "name": "Atlético Navalcarnero",
-              "logoUrl": null
-            },
-            {
-              "name": "C.D. Guadalcacín F.S.",
-              "logoUrl": null
-            },
-            {
-              "name": "Ceuta Agrupación Deportiva",
-              "logoUrl": null
-            },
-            {
-              "name": "Estrela Futsal",
-              "logoUrl": null
-            },
-            {
-              "name": "F.S.F. Castro Bloques Cando",
-              "logoUrl": null
-            },
-            {
-              "name": "LBTL Futsal Alcantarilla",
-              "logoUrl": null
-            },
-            {
-              "name": "Melilla Ciudad del Deporte Torreblanca C. F.",
-              "logoUrl": null
-            },
-            {
-              "name": "MRB Móstoles FSF",
-              "logoUrl": null
-            },
-            {
-              "name": "Nueces de Ronda Atlético Torcal FS",
-              "logoUrl": null
-            },
-            {
-              "name": "Ourense Ontime",
-              "logoUrl": null
-            },
-            {
-              "name": "Poio Pescamar FS",
-              "logoUrl": null
-            },
-            {
-              "name": "Rodiles F.S. \"A\"",
-              "logoUrl": null
-            },
-            {
-              "name": "STV Roldán F.S",
-              "logoUrl": null
-            },
-            {
-              "name": "Wanapix Aldelis InterSala 10 Zaragoza",
-              "logoUrl": null
-            }
-          ],
+          "teams": [],
           "calendar": [
             {
               "jornada": 1,
@@ -2739,23 +2950,11 @@
                   "logoUrl": null
                 },
                 {
-                  "name": "At. Arnoya",
-                  "logoUrl": null
-                },
-                {
                   "name": "Bembrive",
-                  "logoUrl": null
+                  "logoUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Escudo_de_Bembrive.svg"
                 },
                 {
-                  "name": "CDE Muslera GSW \"A\"",
-                  "logoUrl": null
-                },
-                {
-                  "name": "C.D. Juventud del Círculo Católico",
-                  "logoUrl": null
-                },
-                {
-                  "name": "CD Lacturale Orvina",
+                  "name": "C.D. Colegio San José",
                   "logoUrl": null
                 },
                 {
@@ -2767,11 +2966,15 @@
                   "logoUrl": null
                 },
                 {
-                  "name": "CLUB DEPORTIVO TEIDAYA \"A\"",
+                  "name": "Caja Rural River Zamora",
                   "logoUrl": null
                 },
                 {
-                  "name": "El Gaitero Rodiles FSF",
+                  "name": "Club Deportivo Nou Turia FSF \"A\"",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Club Deportivo San Pablo-Eivis",
                   "logoUrl": null
                 },
                 {
@@ -2779,23 +2982,31 @@
                   "logoUrl": null
                 },
                 {
+                  "name": "El Gaitero Rodiles FSF",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Estrela Futsal",
+                  "logoUrl": null
+                },
+                {
                   "name": "FC Meigas",
                   "logoUrl": null
                 },
                 {
-                  "name": "Grupo FORMA-T Vilalba F.S.",
+                  "name": "Futbol Sala Atlético Mercadal \"A\"",
                   "logoUrl": null
                 },
                 {
-                  "name": "REYCO Burela FS",
+                  "name": "Grupo FORMA-T Vilalba FS.",
                   "logoUrl": null
                 },
                 {
-                  "name": "U.D.C. Txantrea K.K.E.",
+                  "name": "Ourense Ontime",
                   "logoUrl": null
                 },
                 {
-                  "name": "Valdetires Ferrol F.S.F.",
+                  "name": "Valdetires Ferrol FSF.",
                   "logoUrl": null
                 }
               ],
@@ -4051,7 +4262,7 @@
                 },
                 {
                   "name": "Entrerrios Automatización",
-                  "logoUrl": null
+                  "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/3.png"
                 },
                 {
                   "name": "FS. Sabadell",
