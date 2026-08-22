@@ -195,7 +195,10 @@ def main() -> int:
     parser.add_argument("--season", default=None,
                         help="Temporada en formato YYYY-YYYY (default: auto-detectada según la fecha)")
     parser.add_argument("--no-badges", action="store_true",
-                        help="Omite la resolución de escudos via Wikipedia")
+                        help="No consulta el portal oficial de escudos "
+                             "(futsal.rfef.es). La allowlist curada de "
+                             "data/badges-overrides.json se sigue aplicando: "
+                             "no depende de la red.")
     parser.add_argument("--teams-only", action="store_true",
                         help="Solo equipos (2 jornadas por grupo, ~1 min). "
                              "Hereda los calendarios del JSON ya publicado. "
@@ -220,8 +223,11 @@ def main() -> int:
             print("[scrape] Lanza primero un run completo (sin --teams-only).")
             return 1
 
-    # Pre-poblar el mapa de escudos oficiales RFEF (extraídos de futsal.rfef.es)
-    # Esto da escudo a casi todos los clubes RFEF sin depender de Wikipedia.
+    # Pre-poblar el mapa de escudos del portal oficial (futsal.rfef.es).
+    #
+    # Tiene techo: el portal solo lista ~12 clubes desde su home, y con nombres
+    # de patrocinador de temporadas pasadas (§6.46 del informe). Lo que cubre el
+    # resto es la allowlist curada, que no pasa por aquí ni por la red.
     if not args.no_badges:
         shields = rfef_shields.fetch_shield_map()
         print(f"[rfef-shields] {len(shields)} escudos oficiales descubiertos")
@@ -301,7 +307,7 @@ def main() -> int:
     )
 
     # Persistir cachés que sobreviven entre runs: escudos (descubiertos por
-    # Wikipedia/DDG) y actaUrls (descubiertos vía NFG_CmpJornada). Ambas son
+    # el portal oficial) y actaUrls (descubiertos vía NFG_CmpJornada). Ambas son
     # acumulativas — una entrada cacheada solo se borra a mano si deja de
     # funcionar.
     logo_resolver.save_cache()

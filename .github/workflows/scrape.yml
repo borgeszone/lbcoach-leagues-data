@@ -27,7 +27,7 @@ on:
         required: false
         default: ''
       no_badges:
-        description: 'Saltar resolución de escudos via Wikipedia'
+        description: 'No consultar el portal de escudos (la allowlist curada se aplica igual)'
         required: false
         default: false
         type: boolean

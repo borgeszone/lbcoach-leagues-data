@@ -7,7 +7,7 @@ de equipos del grupo, donde cada fila contiene:
     <td><img src="https://rfef.filesnovanet.es/..." class=escudo_widget></td>
     <td><a> Nombre del Equipo </a></td>
 
-Esto reemplaza la cascada anterior (PDF para nombres + Wikipedia/DDG para
+Esto reemplaza la cascada anterior (PDF para nombres + fuentes no oficiales para
 escudos) que sufría de cobertura ~7% para escudos y nombres con artefactos
 del parseo PDF. Aquí ambos vienen de la misma fila → 100% coverage y nombres
 oficiales canónicos.

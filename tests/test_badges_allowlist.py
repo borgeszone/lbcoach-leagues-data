@@ -13,8 +13,8 @@ enseñaría si el club no tuviera escudo.
 `data/rfef-fallback.json`, que desde agosto de 2026 se ignora entero si su
 `season` no coincide con la que se scrapea (§6.32). En el camino del calendario
 —el que se usa antes de que se juegue la J1, que es cuando el scraper hace
-falta— la resolución va con `trusted_only=True` y solo lee este fichero y el
-mapa del portal, así que devolverlas al fallback las vuelve inalcanzables sin
+falta— la resolución solo lee este fichero, el mapa del portal y la caché de
+runs anteriores, así que devolverlas al fallback las vuelve inalcanzables sin
 que ningún test ni ningún warning lo diga.
 
     python -m unittest discover -s tests -v
@@ -263,6 +263,88 @@ class PrimeraMasculinaTest(unittest.TestCase):
         self.assertIsNone(logo_resolver.lookup_override("Sur Seed CD El Ejido Futsal"))
         raw = json.loads((DATA / "badges-overrides.json").read_text(encoding="utf-8"))
         self.assertIn("El Ejido", raw.get("_pendientes", ""))
+
+
+class FuentesDeConfianzaTest(unittest.TestCase):
+    """La garantía que sustituye a la cascada retirada.
+
+    Wikipedia y DuckDuckGo salieron por `IP-004` (procedencia desconocida). Lo
+    que impide que vuelvan a entrar no es que ya no se llamen, sino que **nada
+    que no venga de un dominio de la federación puede quedarse en la caché**, ni
+    al leerla ni al escribirla. Sin esa validación, la purga de agosto de 2026
+    sería un apaño de una vez: bastaría con recuperar un fichero de caché viejo
+    del historial de git para reintroducir las URLs.
+    """
+
+    def test_acepta_los_dos_dominios_de_la_federacion(self):
+        for url in (
+            "https://futsal.rfef.es/media/lnfs/shields_futsal/png/18.png",
+            "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/x.jpg",
+        ):
+            self.assertTrue(logo_resolver._is_trusted_url(url), url)
+
+    def test_rechaza_lo_que_IP_004_manda_retirar(self):
+        for url in (
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Escudo.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/a/b/Escudo.png",
+            "https://external-content.duckduckgo.com/iu/?u=x",
+            "https://i.imgur.com/x.png",
+            "",
+            None,
+            42,
+        ):
+            self.assertFalse(logo_resolver._is_trusted_url(url), repr(url))
+
+    def test_no_basta_con_que_el_dominio_aparezca_en_la_url(self):
+        # El agujero clásico de esta comprobación: un `in` sobre la cadena deja
+        # pasar cualquier host que lleve el dominio bueno en la ruta o pegado
+        # al nombre.
+        for url in (
+            "https://malo.example.com/futsal.rfef.es/escudo.png",
+            "https://futsal.rfef.es.malo.example.com/escudo.png",
+            "https://notfutsal.rfef.es.evil/escudo.png",
+        ):
+            self.assertFalse(logo_resolver._is_trusted_url(url), url)
+
+    def test_un_subdominio_de_la_federacion_si_vale(self):
+        self.assertTrue(
+            logo_resolver._is_trusted_url("https://cdn.futsal.rfef.es/x.png")
+        )
+
+    def test_la_cache_en_disco_solo_tiene_urls_oficiales(self):
+        raw = json.loads((DATA / "badges-cache.json").read_text(encoding="utf-8"))
+        for key, value in raw.items():
+            if key.startswith("_"):
+                continue
+            with self.subTest(key=key):
+                self.assertTrue(logo_resolver._is_trusted_url(value), value)
+
+    def test_el_mapa_del_portal_se_filtra_al_inyectarlo(self):
+        # El mapa lo construye un parser sobre HTML de terceros, y de él salen
+        # las escrituras que se persisten en la caché.
+        _reset_resolver()
+        logo_resolver.inject_rfef_shields({
+            "bueno": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/9.png",
+            "malo": "https://commons.wikimedia.org/wiki/Special:FilePath/x.svg",
+        })
+        self.assertIn("bueno", logo_resolver._rfef_shields)
+        self.assertNotIn("malo", logo_resolver._rfef_shields)
+
+    def test_ya_no_hay_ninguna_fuente_de_red_en_el_resolver(self):
+        # Si alguien vuelve a meter una búsqueda automática, el import reaparece
+        # y este caso lo caza antes de que llegue a publicarse nada.
+        fuente = (
+            pathlib.Path(logo_resolver.__file__)
+            .read_text(encoding="utf-8")
+            .lower()
+        )
+        codigo = "\n".join(
+            l for l in fuente.splitlines()
+            if not l.lstrip().startswith("#")
+        )
+        for prohibido in ("import requests", "requests.get", "duckduckgo.com",
+                          "es.wikipedia.org", "api.php"):
+            self.assertNotIn(prohibido, codigo, prohibido)
 
 
 if __name__ == "__main__":

@@ -909,7 +909,7 @@ def _teams_from_names(names: list[str], *, resolve_badges: bool) -> list[dict]:
 
     Solo se resuelven escudos de fuentes **fiables** (override curado del
     maintainer y mapa oficial de `futsal.rfef.es`). No se busca en
-    Wikipedia/DDG: por la misma razón que documenta `_merge_clasificacion`, un
+    fuentes no oficiales: por la misma razón que documenta `_merge_clasificacion`, un
     placeholder genérico es mejor que el escudo equivocado, y aquí no hay una
     fila oficial que confirme nada.
     """
@@ -1073,11 +1073,12 @@ def _merge_clasificacion(
       equipo que el fallback llama "Real Betis Futsal" y la clasificación
       "Real Betis Tedi" aparecería dos veces). Cuando la clasificación
       falla, el caller cae al camino legacy que sí usa fallback.
-    - **NO** se hace resolución automática vía Wikipedia/DDG: prefiero
-      `null` (la app muestra placeholder genérico) que un escudo erróneo
-      (kit graphic, logo de patrocinador, etc.). Sí se aplica el override
-      curado de `data/badges-overrides.json` cuando el maintainer lo ha
-      indicado expresamente — gana incluso sobre el escudo de la
+    - **No hay resolución automática fuera de las fuentes oficiales**: se
+      prefiere `null` (la app muestra placeholder genérico) a un escudo erróneo
+      (kit graphic, logo de patrocinador, etc.). Las dos fuentes que sí lo
+      hacían —Wikipedia y DuckDuckGo— se retiraron por `IP-004`. Sí se aplica
+      la allowlist curada de `data/badges-overrides.json` cuando el maintainer
+      lo ha indicado expresamente — gana incluso sobre el escudo de la
       clasificación.
     """
     _ = resolve_badges  # ignorado a propósito en el camino de clasificación
@@ -1097,7 +1098,8 @@ def _merge_teams(
     resolve_badges: bool,
 ) -> list[dict]:
     """Merge dedup-por-normalizado entre fallback y nombres extraídos del PDF.
-    Resuelve escudos faltantes via Wikipedia si `resolve_badges` está activo."""
+    Resuelve los escudos que falten contra las fuentes oficiales (allowlist
+    curada, portal y caché) si `resolve_badges` está activo."""
     if scraped_names:
         seen = {_norm(t["name"]) for t in fb_teams}
         teams = list(fb_teams)
