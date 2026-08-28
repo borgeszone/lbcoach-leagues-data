@@ -1,6 +1,6 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-08-27T18:11:10+00:00",
+  "lastUpdated": "2026-08-28T19:05:06+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)"
   ],
@@ -17,8 +17,8 @@
           "teams": [],
           "groups": [
             {
-              "id": "g1",
-              "name": "Torneo Apertura",
+              "id": "g2",
+              "name": "Torneo Clausura",
               "teams": [
                 {
                   "name": "Barça",
@@ -1387,71 +1387,71 @@
           "teams": [],
           "groups": [
             {
-              "id": "g1",
-              "name": "Grupo 1",
+              "id": "g4",
+              "name": "Grupo 4",
               "teams": [
                 {
-                  "name": "5 Coruña F.S.",
+                  "name": "CD Albacete FS",
                   "logoUrl": null
                 },
                 {
-                  "name": "ADC Lugo Sala",
+                  "name": "CD Cobisa FS \"A\"",
                   "logoUrl": null
                 },
                 {
-                  "name": "Caja Rural Atlético Benavente FS",
+                  "name": "C.D.E. Mostoles Futsal",
                   "logoUrl": null
                 },
                 {
-                  "name": "Caja Rural River Sala Zamora",
+                  "name": "Club Unión Deportiva Loeches",
                   "logoUrl": null
                 },
                 {
-                  "name": "CD Albense FS",
+                  "name": "Club Union Deportiva Rena",
                   "logoUrl": null
                 },
                 {
-                  "name": "C.D. COMPOSALA",
+                  "name": "Colegio El Valle C.D.",
                   "logoUrl": null
                 },
                 {
-                  "name": "C.D. Tierno Galván",
+                  "name": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
                   "logoUrl": null
                 },
                 {
-                  "name": "Deporcyl - Guardo FS",
+                  "name": "El Alamo F.S.",
                   "logoUrl": null
                 },
                 {
-                  "name": "F.S. Salamanca Energía Duero",
+                  "name": "Entreparéntesis - Enertel FS Talavera",
                   "logoUrl": null
                 },
                 {
-                  "name": "Grupo FORMA-T Vilalba F.S.",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078989920_ESCUDO_VILALBA_F.S..jpg"
-                },
-                {
-                  "name": "Noia Portus Apostoli",
-                  "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/10.png"
-                },
-                {
-                  "name": "O Esteo F.S.",
+                  "name": "Grupo López Bolaños F.S. \"A\"",
                   "logoUrl": null
                 },
                 {
-                  "name": "Racing de Mieres",
+                  "name": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
                   "logoUrl": null
                 },
                 {
-                  "name": "S.D. Xove F.S.",
+                  "name": "Inter JP Financial F.S.",
                   "logoUrl": null
                 },
                 {
-                  "name": "Sibuscascoche Ribeira Fútbol Sala",
+                  "name": "Naturpellet San Cristóbal",
                   "logoUrl": null
                 },
                 {
-                  "name": "Stellae Leis Pontevedra F.S.",
+                  "name": "Serbis AD Alcorcón FS",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Soliss A.D. Bargas",
+                  "logoUrl": null
+                },
+                {
+                  "name": "Unión Tres Cantos FS",
                   "logoUrl": null
                 }
               ]
@@ -1522,76 +1522,6 @@
                 },
                 {
                   "name": "Sima Granada FS",
-                  "logoUrl": null
-                }
-              ]
-            },
-            {
-              "id": "g6",
-              "name": "Grupo 6",
-              "teams": [
-                {
-                  "name": "AD Duggi-San Fernando",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Aguas de Teror",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Basilea Futbol Sala C.D.",
-                  "logoUrl": null
-                },
-                {
-                  "name": "C.D. Chinguaro \"A\"",
-                  "logoUrl": null
-                },
-                {
-                  "name": "C.D. Cisneros Alter",
-                  "logoUrl": null
-                },
-                {
-                  "name": "C.D. Salesianos Tenerife",
-                  "logoUrl": null
-                },
-                {
-                  "name": "C.D. Tenerife Iberia Toscal",
-                  "logoUrl": null
-                },
-                {
-                  "name": "C.F.S. Casa Juv. La Matanza",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Doctoral FS",
-                  "logoUrl": null
-                },
-                {
-                  "name": "F.S. Los Pinos",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Gran Canaria FS",
-                  "logoUrl": null
-                },
-                {
-                  "name": "La Salle San Ildelfonso",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Las Cuevecitas FS",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Malta 97",
-                  "logoUrl": null
-                },
-                {
-                  "name": "NovoComunidades-Bugedo FS",
-                  "logoUrl": null
-                },
-                {
-                  "name": "Suntryp Agüimes FS",
                   "logoUrl": null
                 }
               ]
