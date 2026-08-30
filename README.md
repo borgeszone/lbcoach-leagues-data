@@ -8,6 +8,7 @@ Genera y publica `leagues.json` — la fuente de datos que la app **GoalDash / l
 ┌─────────────────────────────────────┐
 │ scrape.py                           │
 │   ├─ scrapers/rfef_discovery.py     │  Qué competiciones tiene la temporada
+│   ├─ scrapers/rfef_web.py           │  Equipos desde rfef.es (pretemporada)
 │   ├─ scrapers/rfef.py               │  Equipos + calendario (PNFG, PDF)
 │   ├─ scrapers/fcf.py                │  Lee data/fcf-manual.json
 │   └─ scrapers/logo_resolver.py      │  Escudos oficiales → Wikipedia
@@ -62,13 +63,77 @@ el calendario, la importación de rivales y las novedades. Los nombres aguantan
 de una temporada a otra; los códigos no.
 
 Los equipos salen, por orden: de la **clasificación** (trae escudo oficial, pero
-no existe hasta la J1), del **calendario** (existe desde el sorteo — es lo que
-funciona en pretemporada), del PDF oficial, y del fallback curado.
+no existe hasta la J1), del **PDF de calendario de rfef.es** (`scrapers/rfef_web.py`,
+con la temporada leída de su portada), del **calendario de la PNFG** (existe desde
+el sorteo), del PDF oficial legacy, de la **página de competición** de rfef.es, y del
+fallback curado.
+
+Las dos fuentes de `rfef.es` son las que funcionan en pretemporada. Y hay una regla
+que no conviene deshacer: **ninguna URL de PDF se escribe a mano**. Se descubren
+siguiendo los enlaces de `/es/competiciones/<slug>` a las noticias que los publican,
+porque los nombres de fichero cambian sin avisar y no se pueden deducir
+(`calendario_2af_g2-1-3.pdf` en 2026-27 donde antes había
+`calendario_grupo_2_segunda_femenina_futbol_sala.pdf`). Esa segunda URL, la de siempre,
+**sigue devolviendo 200 con el PDF de 2025-26**: es como los 48 equipos del año pasado
+acabaron publicados como si fueran de 2026-27. Por eso cada PDF se acepta solo si su
+portada declara la temporada pedida, y se atribuye a una división por el nombre de
+competición que él mismo imprime — no por qué página lo enlazaba, que trae las noticias
+de media federación.
+
+Lo único escrito a mano de esta fuente son los slugs de las páginas de competición
+(`rfef_web.COMPETITION_SLUGS`). Describen la competición, no su edición, así que aguantan
+entre temporadas — pero el de Primera Femenina lleva el patrocinador dentro
+(`primera-futbol-sala-iberdrola`), y ese es el candidato a romperse. Si uno deja de
+responder, su división se queda sin esta fuente y el run lo dice; no se rellena con otra
+cosa.
 
 **Al cambiar de temporada no hay que hacer nada.** Las divisiones que la
 federación aún no haya publicado —las masculinas de LNFS suelen ir semanas por
 detrás de las femeninas— salen listadas en `warnings` del JSON y aparecen solas
 en el run siguiente.
+
+### El nombre se puede cambiar; el id no
+
+`DIVISION_NAMES` es solo la etiqueta del desplegable y se corrige cuando haga
+falta. El id de al lado (`rfef-segunda-fs-masc`) va guardado dentro de cada
+equipo de la app (`Team.divisionId`) y de él cuelgan el calendario, la
+importación de rivales y las novedades: cambiarlo deja a todos los equipos
+existentes sin liga.
+
+Ejemplo real: esa división se llamaba "Segunda División FS **A**" y ahora se
+llama "Segunda División FS". No hay ninguna "Segunda A" — la categoría es
+Segunda División y la de abajo Segunda División B. El id no se tocó.
+
+### Los códigos de la PNFG también están en la web
+
+La página de competición enlaza su calendario en la PNFG ("Actas, clasificación
+y calendario") y ese enlace lleva competición, grupo y temporada dentro. Sirve
+para recuperar el código de grupo cuando el catálogo de la PNFG —su llamada más
+frágil— se come el rate-limit.
+
+Pero **la mitad de esos enlaces están sin actualizar**: el 29/08/2026, Segunda y
+Primera Femenina apuntaban a `CodTemporada=22` (2026-27) y Segunda B a `21`, y
+encima al playoff de ascenso del año pasado. Por eso solo se acepta si la
+temporada coincide con la resuelta y la competición es la ya descubierta.
+
+### El calendario del PDF va a dos columnas
+
+La RFEF maqueta la ida a la izquierda y la vuelta a la derecha, con la J1 y la
+J16 empezando en la misma línea. Leído como texto plano, cada línea salía como un
+partido inventado entre el visitante de la ida y el local de la vuelta: 240
+nombres distintos para un grupo de 16 equipos.
+
+`rfef_web.parse_calendar_multicolumn` las separa por la **x del guion**, que es
+fija por columna. Ojo con dos cosas si se toca: un guion dentro de un nombre
+también está a x fija (por eso el umbral es relativo al separador más frecuente,
+no absoluto), y la columna de una cabecera sale de su x y no de su orden en la
+línea (en Segunda las dos cabeceras no están alineadas).
+
+Y **nunca se publica un calendario que nombre a un equipo que no está en el
+plantel**: las filas con nombres muy largos se parten en varias líneas y dejan
+trozos sueltos ("MRB FS", "C.E."). Un nombre de más descarta el calendario
+entero; uno de menos se acepta con aviso, porque tirarlo dejaría sin autorrelleno
+a los otros quince equipos para proteger a uno.
 
 ### El guard de temporada
 
@@ -221,7 +286,12 @@ curl https://raw.githubusercontent.com/<owner>/lbcoach-leagues-data/gh-pages/lea
           "name": "Primera División FS",
           "gender": "masculino",
           "teams": [
-            { "name": "Barça", "logoUrl": "https://upload.wikimedia.org/..." }
+            { "name": "Barça", "logoUrl": "https://rfef.filesnovanet.es/..." },
+            {
+              "name": "Osasuna Magna",
+              "officialName": "C.A. Osasuna Magna",
+              "logoUrl": null
+            }
           ]
         }
       ]
@@ -230,3 +300,9 @@ curl https://raw.githubusercontent.com/<owner>/lbcoach-leagues-data/gh-pages/lea
   ]
 }
 ```
+
+`officialName` es **opcional** y solo aparece cuando el club tiene dos nombres: el corto
+que publica la federación en su página de competición ("Osasuna Magna") y el largo con
+patrocinador que sale en el acta y en el calendario ("C.A. Osasuna Magna"). La app enseña
+`name` y usa los dos para emparejar. Un cliente viejo que no lo conozca lo ignora y se
+queda con el corto, que es el que quiere enseñar de todas formas.

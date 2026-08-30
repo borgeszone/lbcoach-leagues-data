@@ -46,7 +46,7 @@ from pathlib import Path
 
 import requests
 
-from scrapers import calendar_cache
+from scrapers import calendar_cache, rfef_web
 from scrapers.logo_resolver import lookup_override, resolve_logo_url
 from scrapers.rfef_clasificacion import ScrapedTeam, fetch_division_teams
 from scrapers.rfef_calendario import fetch_division_calendar, teams_from_calendar
@@ -58,6 +58,7 @@ from scrapers.rfef_discovery import (
     SEASON_NOT_PUBLISHED,
     Fetcher,
     classify_competition,
+    is_phase,
     list_competitions,
     list_groups,
     resolve_season,
@@ -151,6 +152,43 @@ def _download_pdf(url: str, timeout: int = 30) -> bytes | None:
         return None
 
 
+def _calendar_is_sane(
+    calendar: list[dict], roster: list[str] | None, *, label: str = "",
+) -> bool:
+    """¿El calendario parseado solo nombra a equipos que están en el plantel?
+
+    La asimetría es a propósito, y viene de cómo fallan de verdad estos PDF:
+
+    - **Un nombre de más se rechaza.** Significa que el parser se inventó un
+      equipo, casi siempre porque una fila se partió en varias líneas físicas y
+      quedó un trozo suelto ("MRB FS", "C.E."). Publicarlo llena el desplegable
+      de jornadas de rivales que no existen.
+    - **Un nombre de menos se acepta y se avisa.** Es el mismo corte visto por
+      el otro lado: en el Grupo 3 de Segunda B, "Col. Santo Ángel/Ccr-Baixsud de
+      Castelldefels A" ocupa tres líneas y sus 30 partidos se pierden. Tirar el
+      calendario entero por eso deja sin autorrelleno a los otros quince
+      equipos para proteger a uno, que es peor negocio.
+
+    Sin plantel con el que comparar no hay nada que afirmar, y se acepta.
+    """
+    if not roster:
+        return True
+    known = {rfef_web.norm(n) for n in roster}
+    seen = {rfef_web.norm(m[k])
+            for j in calendar for m in j.get("matches", []) for k in ("home", "away")}
+    invented = seen - known
+    if invented:
+        print(f"  [rfef-cal] {label}: calendario descartado, nombra a "
+              f"{len(invented)} equipo/s que no están en el plantel "
+              f"(el PDF parte filas largas en varias líneas)")
+        return False
+    missing = known - seen
+    if missing:
+        print(f"  [rfef-cal] {label}: {len(missing)} equipo/s del plantel no "
+              f"aparecen en el calendario; se publica igual para el resto")
+    return True
+
+
 def _extract_calendar_from_pdf(pdf_bytes: bytes) -> list[dict]:
     """Extrae el calendario por jornadas del PDF.
 
@@ -194,6 +232,17 @@ def _extract_calendar_from_pdf(pdf_bytes: bytes) -> list[dict]:
         r"(?:\((\d{1,2}/\d{1,2}/\d{2,4})\))?",
         re.IGNORECASE,
     )
+
+    # Primero, el layout a **dos columnas de jornadas** (ida a la izquierda,
+    # vuelta a la derecha, la J1 y la J16 en la misma línea). Ahí este parser
+    # no falla a medias: pega el visitante de la ida con el local de la vuelta
+    # y devuelve un partido inventado por línea — 240 nombres distintos para un
+    # grupo de 16. `parse_calendar_multicolumn` devuelve `[]` si el PDF no es de
+    # ese tipo, así que Liga Prime y los calendarios de una sola columna siguen
+    # por el camino de siempre.
+    multi = rfef_web.parse_calendar_multicolumn(pdf_bytes)
+    if multi:
+        return multi
 
     # Clave (fase, jornada) y no solo jornada: con una sola, la J1 de Clausura
     # sobrescribiría la de Apertura y se perderían quince jornadas sin ruido.
@@ -447,6 +496,35 @@ def _load_fallback() -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def _group_from_web(div_id: str, comp_code: str, season_code: str):
+    """Un grupo único, leído del enlace a la PNFG de la página de competición.
+
+    Devuelve una lista de un `Group` o `[]`. Solo sirve para divisiones de un
+    grupo —la página enlaza un calendario, no seis— y por eso el id es `g1`: es
+    el que `discover_divisions` daría a un grupo único, y con él la división se
+    publica plana, sin desplegable de grupo.
+
+    Vale para lo que vale: recupera Primera Femenina y Segunda cuando el
+    catálogo de la PNFG no contesta. En Segunda B y Segunda Femenina el enlace
+    de la página apunta a la temporada pasada, así que el guard de
+    `pnfg_group_for` lo descarta — que es justo lo que tiene que hacer.
+    """
+    from scrapers.rfef_discovery import Group
+
+    slug = rfef_web.COMPETITION_SLUGS.get(div_id)
+    if not slug:
+        return []
+    html = rfef_web.fetch_competition_html(slug)
+    if not html:
+        return []
+    grupo = rfef_web.pnfg_group_for(html, comp_code, season_code)
+    if not grupo:
+        return []
+    print(f"  [rfef-disc] {div_id}: grupo {grupo} recuperado del enlace a la "
+          f"PNFG en rfef.es (el catálogo no contestó)")
+    return [Group(id="g1", code=grupo, name=DIVISION_NAMES[div_id])]
+
+
 def discover_divisions(season_code: str, *, session=None,
                        unknown: list[str] | None = None) -> list[dict] | None:
     """Pregunta a la PNFG qué divisiones tiene esta temporada y con qué códigos.
@@ -489,8 +567,24 @@ def discover_divisions(season_code: str, *, session=None,
             continue
         groups = list_groups(comp.code, session=session)
         if not groups:
+            # Segundo intento por la web de la federación: su página de
+            # competición enlaza el calendario en la PNFG con los tres códigos
+            # dentro. Rescata a las divisiones de un grupo cuando el catálogo
+            # —la llamada más frágil de la PNFG— se come el rate-limit.
+            groups = _group_from_web(div_id, comp.code, season_code)
+        if not groups:
             print(f"  [rfef-disc] {div_id}: sin grupos publicados todavía")
             continue
+        # Fases (Apertura/Clausura) no son grupos: mismos equipos, y elegir no
+        # significa nada. Se publica plana. Ver `rfef_discovery.is_phase`.
+        #
+        # LÍMITE CONOCIDO: el calendario se toma entonces de la primera fase, o
+        # sea el Apertura. A partir de enero habrá que empalmar las dos para que
+        # la J16 en adelante aparezca en el autorrelleno.
+        phases = len(groups) > 1 and all(is_phase(g.name) for g in groups)
+        if phases:
+            print(f"  [rfef-disc] {div_id}: "
+                  f"{[g.name for g in groups]} son fases, no grupos; se publica plana")
         cfg = {
             "id": div_id,
             "name": DIVISION_NAMES[div_id],
@@ -499,7 +593,7 @@ def discover_divisions(season_code: str, *, session=None,
             # Una división con un solo grupo se publica plana: es cómo la ve la
             # entrenador (no hay nada que elegir) y cómo la esperan los equipos
             # que ya tienen `groupId` nulo.
-            "flat": len(groups) == 1,
+            "flat": len(groups) == 1 or phases,
             "groups": groups,
             **LEGACY_PDF.get(div_id, {}),
         }
@@ -629,11 +723,17 @@ def scrape(season: str, resolve_badges: bool = True,
     # deducir la plantilla y cuestan 2 peticiones por grupo en vez de ~30. Ese
     # calendario parcial NO se publica (se retira en el paso 4) — lo empalma
     # `scrape.py` con el que ya está publicado, que está completo.
+    # La web pública va **antes** que el calendario y que los equipos: es la
+    # única fuente que existe en pretemporada (la PNFG no tiene equipos hasta la
+    # J1) y además descubre de qué PDF sale el calendario de cada grupo.
+    web = fetch_web_sources(divisions_cfg, season, warnings)
+
     _attach_calendars(out_divisions, season, divisions_cfg, season_code,
-                      max_jornadas=2 if teams_only else None)
+                      max_jornadas=2 if teams_only else None, web=web)
 
     # 3. Equipos.
-    _fill_teams(out_divisions, divisions_cfg, fb_divisions, season, resolve_badges)
+    _fill_teams(out_divisions, divisions_cfg, fb_divisions, season,
+                resolve_badges, web=web, warnings=warnings)
 
     # 4. Fuera el calendario parcial. Publicarlo sería peor que no tenerlo: la
     #    app ofrecería un desplegable con dos jornadas y el entrenador no
@@ -802,15 +902,66 @@ def _with_placeholders(out_divisions: list[dict]) -> list[dict]:
     return out
 
 
+def fetch_web_sources(
+    divisions_cfg: list[dict], season: str, warnings: list[str],
+) -> dict[str, dict]:
+    """Lo que aporta la web pública de la RFEF, por división.
+
+        {div_id: {"shorts": [nombre corto, ...],
+                  "groups": {"g2": [nombre oficial, ...], ...}}}
+
+    Es la fuente que **funciona en pretemporada**, que es cuando la app se usa
+    para preparar la temporada y cuando la PNFG no tiene nada: su clasificación
+    no existe hasta la J1. Ver la cabecera de `rfef_web`.
+
+    Best-effort de principio a fin: si `rfef.es` no contesta, esto devuelve
+    `{}` y la cascada de siempre sigue funcionando. Lo que **no** hace es
+    rellenar con lo que sea — un PDF que no declare esta temporada se descarta.
+    """
+    out: dict[str, dict] = {}
+    for cfg in divisions_cfg:
+        div_id = cfg["id"]
+        slug = rfef_web.COMPETITION_SLUGS.get(div_id)
+        if not slug:
+            continue
+        html = rfef_web.fetch_competition_html(slug)
+        shorts = [t.name for t in rfef_web.parse_teams(html)] if html else []
+        rosters = rfef_web.fetch_rosters(slug, season, div_id) if html else []
+        groups = {r.group_id: r.teams for r in rosters}
+        # La URL del PDF que ganó, por grupo: el calendario tiene que salir del
+        # **mismo** fichero que el plantel. Antes lo sacaba de
+        # `groups_url_pattern`, que es la ruta sin temporada dentro.
+        pdfs = {r.group_id: r.url for r in rosters if r.url}
+        if shorts or groups:
+            out[div_id] = {"shorts": shorts, "groups": groups, "pdfs": pdfs}
+            print(f"  [rfef-web] {div_id}: {len(shorts)} equipos en la página, "
+                  f"{len(groups)} grupo/s con PDF de {season}")
+
+        # Un desajuste entre la página y los PDF significa que una de las dos
+        # va por detrás. No se elige en silencio: se publica lo que digan los
+        # PDF (que llevan la temporada dentro) y se avisa del descuadre.
+        total_pdf = sum(len(v) for v in groups.values())
+        if shorts and total_pdf and total_pdf != len(shorts):
+            msg = (f"{div_id}: la página de rfef.es lista {len(shorts)} equipos "
+                   f"y los PDF de calendario suman {total_pdf}; alguno de los "
+                   f"dos va por detrás")
+            print(f"  [rfef-web] AVISO: {msg}")
+            warnings.append(msg)
+    return out
+
+
 def _fill_teams(
     out_divisions: list[dict],
     divisions_cfg: list[dict],
     fb_divisions: dict,
     season: str,
     resolve_badges: bool,
+    web: dict[str, dict] | None = None,
+    warnings: list[str] | None = None,
 ) -> None:
     """Rellena `teams` de cada división/grupo. Muta `out_divisions` in-place."""
     by_id = {d["id"]: d for d in out_divisions}
+    web = web or {}
 
     for cfg in divisions_cfg:
         div = by_id.get(cfg["id"])
@@ -819,6 +970,9 @@ def _fill_teams(
         print(f"[rfef] Equipos de {cfg['name']}")
         fb_div = fb_divisions.get(cfg["id"], {})
         comp_code = cfg["competition"]["code"]
+        web_div = web.get(cfg["id"], {})
+        shorts = web_div.get("shorts", [])
+        web_groups = web_div.get("groups", {})
 
         if cfg["flat"]:
             group = cfg["groups"][0]
@@ -828,6 +982,13 @@ def _fill_teams(
                 fb_teams=fb_div.get("teams", []),
                 cfg=cfg, group_n=None, season=season,
                 label=cfg["id"], resolve_badges=resolve_badges,
+                web_names=_web_names_for(web_groups, None),
+                web_shorts=shorts,
+                # La lista entera de la página solo vale como fuente si la
+                # división es plana. En una con grupos serían los 48 equipos
+                # metidos en el grupo que se quedó sin PDF.
+                web_fallback=shorts,
+                warnings=warnings,
             )
             continue
 
@@ -847,7 +1008,25 @@ def _fill_teams(
                 cfg=cfg, group_n=int(n_match.group(1)) if n_match else None,
                 season=season,
                 label=f"{cfg['id']}/{group.id}", resolve_badges=resolve_badges,
+                web_names=_web_names_for(web_groups, group.id),
+                web_shorts=shorts,
+                warnings=warnings,
             )
+
+
+def _web_names_for(web_groups: dict, group_id: str | None) -> list[str]:
+    """Plantel oficial que la web da para este grupo.
+
+    Si solo hay un plantel y viene sin grupo (`None`), vale para cualquier
+    grupo de la división. Ese es el caso de Liga Prime: la PNFG la parte en
+    "Torneo Apertura" y "Torneo Clausura", que son **fases con los mismos 16
+    equipos**, no grupos territoriales.
+    """
+    if group_id in web_groups:
+        return web_groups[group_id]
+    if list(web_groups) == [None]:
+        return web_groups[None]
+    return []
 
 
 def _teams_for(
@@ -861,47 +1040,129 @@ def _teams_for(
     season: str,
     label: str,
     resolve_badges: bool,
+    web_names: list[str] | None = None,
+    web_shorts: list[str] | None = None,
+    web_fallback: list[str] | None = None,
+    warnings: list[str] | None = None,
 ) -> list[dict]:
     """La cascada de fuentes para un grupo concreto. Ver `scrape()`."""
     cal_names = teams_from_calendar(calendar)
+    web_names = list(web_names or [])
+    web_shorts = list(web_shorts or [])
+    web_fallback = list(web_fallback or [])
 
     # 1. Clasificación: la única fuente que trae escudo oficial. Se le dan
-    #    menos reintentos cuando el calendario ya nos ha dado los nombres —
-    #    ahí es un extra, no la respuesta, y agotar 225s de backoff por grupo
-    #    en pretemporada solo sirve para que RFEF nos bloquee la IP.
-    scraped = fetch_division_teams(comp, grupo, retries=1 if cal_names else 4)
+    #    menos reintentos cuando ya tenemos los nombres por otra vía — ahí es
+    #    un extra, no la respuesta, y agotar 225s de backoff por grupo en
+    #    pretemporada solo sirve para que RFEF nos bloquee la IP.
+    scraped = fetch_division_teams(
+        comp, grupo, retries=1 if (cal_names or web_names) else 4)
     if scraped:
         print(f"  [rfef] {label}: {len(scraped)} equipos de la clasificación")
-        return _merge_clasificacion(
+        return _with_short_names(_merge_clasificacion(
             fb_teams=fb_teams, scraped=scraped, resolve_badges=resolve_badges,
-        )
+        ), web_shorts)
 
-    # 2. Calendario: funciona desde que se sortea, que es lo que importa en
-    #    agosto.
+    # 2. Web pública de la RFEF: el PDF de calendario del grupo, con la
+    #    temporada leída de su portada. Va por delante del calendario de la
+    #    PNFG porque aquel no dice de qué temporada es —hay que fiarse del
+    #    código de competición— y este sí.
+    if web_names:
+        print(f"  [rfef] {label}: {len(web_names)} equipos del PDF de rfef.es")
+        return _with_short_names(
+            _teams_from_names(web_names, resolve_badges=resolve_badges),
+            web_shorts)
+
+    # 3. Calendario de la PNFG: funciona desde que se sortea.
     if cal_names:
         print(f"  [rfef] {label}: {len(cal_names)} equipos del calendario")
-        return _teams_from_names(cal_names, resolve_badges=resolve_badges)
+        return _with_short_names(
+            _teams_from_names(cal_names, resolve_badges=resolve_badges),
+            web_shorts)
 
-    # 3. PDF oficial (legacy).
-    team_names: list[str] = []
-    if group_n is not None and cfg.get("groups_url_pattern"):
-        pdf = _download_pdf(cfg["groups_url_pattern"].format(n=group_n))
-        if pdf:
-            team_names = _extract_teams_from_pdf(pdf)
-    elif cfg.get("pdf_id"):
-        pdf = _download_pdf(_pdf_url(cfg["pdf_id"], season))
-        if pdf:
-            team_names = _extract_teams_from_pdf(pdf)
+    # 4. PDF oficial (legacy), con el mismo guard de temporada que usa
+    #    `_fill_missing_from_pdf`. Antes esta rama no lo tenía, y es por donde
+    #    entraba el PDF sin temporada en la URL de Segunda Femenina.
+    team_names = _legacy_pdf_names(cfg, season, group_n, label)
     if team_names:
         print(f"  [rfef] {label}: {len(team_names)} equipos del PDF")
 
-    # 4. Fallback curado — ya viene vacío si es de otra temporada.
+    # 5. La lista de la propia página de competición.
+    #
+    # Va la penúltima porque es la única que **no se puede verificar por
+    # temporada**: la página no dice de qué año es. A cambio, es la que la
+    # federación mantiene viva y la única que existe para una división sin PDF
+    # publicado — hoy, Primera Femenina. Publicarla con un aviso es mejor que
+    # dejar la división vacía, que es como salió en agosto de 2026.
+    if not team_names and web_fallback:
+        msg = (f"{label}: sus {len(web_fallback)} equipos salen de la página de "
+               f"competición de rfef.es — la única fuente que hay para esta "
+               f"división ahora mismo — y **no se ha podido verificar que sean "
+               f"de {season}**: la página no dice de qué temporada es")
+        print(f"  [rfef] AVISO: {msg}")
+        if warnings is not None:
+            warnings.append(msg)
+        return _teams_from_names(web_fallback, resolve_badges=resolve_badges)
+
+    # 6. Fallback curado — ya viene vacío si es de otra temporada.
     teams = _merge_teams(
         fb_teams=fb_teams, scraped_names=team_names, resolve_badges=resolve_badges,
     )
     if not teams:
         print(f"  [rfef] {label}: sin equipos por ninguna vía")
-    return teams
+    return _with_short_names(teams, web_shorts)
+
+
+def _legacy_pdf_names(
+    cfg: dict, season: str, group_n: int | None, label: str,
+) -> list[str]:
+    """Nombres del PDF oficial, **solo** si su portada declara esta temporada.
+
+    El guard no es decorativo. `groups_url_pattern` apunta a
+    `calendario_grupo_N_segunda_femenina_futbol_sala.pdf`, una ruta sin
+    temporada dentro que la federación no ha vuelto a tocar desde agosto de
+    2025: sin comprobar la portada, esta rama publica el año pasado.
+    """
+    urls: list[str] = []
+    if group_n is not None and cfg.get("groups_url_pattern"):
+        urls.append(cfg["groups_url_pattern"].format(n=group_n))
+    else:
+        urls.extend(_pdf_candidates(cfg, season))
+    for url in urls:
+        pdf = _download_pdf(url)
+        if not pdf:
+            continue
+        if not _pdf_declares_season(pdf, season):
+            print(f"  [rfef] {label}: descartado {url.rsplit('/', 1)[-1]} "
+                  f"(no declara la temporada {season})")
+            continue
+        names = _extract_teams_from_pdf(pdf)
+        if names:
+            return names
+    return []
+
+
+def _with_short_names(teams: list[dict], shorts: list[str]) -> list[dict]:
+    """Cambia el nombre publicado por el corto de rfef.es y guarda el oficial.
+
+    La entrenadora ve "Burela FS" en el desplegable y en el marcador; el
+    "REYCO Burela FS" del acta viaja como `officialName` para casar con el
+    calendario y con los partidos que ya tenga guardados.
+
+    Lo que no casa con confianza se queda con su nombre oficial. Es feo y es
+    cierto, que en un histórico de partidos importa más: renombrar al rival por
+    un parecido razonable le rompe las estadísticas contra ese equipo.
+    """
+    if not shorts or not teams:
+        return teams
+    pairs = rfef_web.pair_names(shorts, [t["name"] for t in teams])
+    out = []
+    for t in teams:
+        short = pairs.get(t["name"])
+        if short and rfef_web.norm(short) != rfef_web.norm(t["name"]):
+            t = {**t, "name": short, "officialName": t["name"]}
+        out.append(t)
+    return out
 
 
 def _teams_from_names(names: list[str], *, resolve_badges: bool) -> list[dict]:
@@ -929,6 +1190,7 @@ def _attach_calendars(
     divisions_cfg: list[dict],
     season_code: str,
     max_jornadas: int | None = None,
+    web: dict[str, dict] | None = None,
 ) -> None:
     """Añade `calendar` a cada división/grupo de `out_divisions`.
 
@@ -950,27 +1212,51 @@ def _attach_calendars(
     by_id = {d["id"]: d for d in out_divisions}
     pdf_cache: dict[str, bytes | None] = {}
 
-    def _pdf_calendar_for(cfg: dict, group_n: int | None = None) -> list[dict]:
-        """Descarga el PDF oficial y extrae el calendario por jornadas. `[]` si
-        no hay PDF descargable o el parse falla."""
+    def _pdf_calendar_for(cfg: dict, group_n: int | None = None,
+                          group_id: str | None = None) -> list[dict]:
+        """Calendario del PDF oficial. `[]` si no hay PDF válido o el parse falla.
+
+        El PDF que descubrió `rfef_web` manda: es el que ya se comprobó que
+        declara esta temporada, y es el mismo del que salió el plantel. Las
+        rutas escritas a mano se quedan como red de seguridad, y ahora **con el
+        guard de temporada** — `groups_url_pattern` es justo la que sigue
+        sirviendo el calendario de 2025-26.
+        """
         if max_jornadas is not None:
             # En modo solo-equipos el calendario no se publica, así que
             # descargar y parsear un PDF de 30 jornadas no aporta nada.
             return []
-        if group_n is not None:
-            pattern = cfg.get("groups_url_pattern")
-            if not pattern:
-                return []
-            url = pattern.format(n=group_n)
-        else:
-            pdf_id = cfg.get("pdf_id")
-            if not pdf_id:
-                return []
-            url = _pdf_url(pdf_id, season)
-        if url not in pdf_cache:
-            pdf_cache[url] = _download_pdf(url)
-        pdf = pdf_cache[url]
-        return _extract_calendar_from_pdf(pdf) if pdf else []
+
+        urls: list[str] = []
+        discovered = (web or {}).get(cfg["id"], {}).get("pdfs", {})
+        for key in (group_id, None):
+            if key in discovered:
+                urls.append(discovered[key])
+                break
+        if group_n is not None and cfg.get("groups_url_pattern"):
+            urls.append(cfg["groups_url_pattern"].format(n=group_n))
+        elif group_id is None and group_n is None:
+            # Solo para divisiones planas: el PDF unificado de una división por
+            # grupos traería el calendario de otro grupo.
+            urls.extend(_pdf_candidates(cfg, season))
+
+        for url in urls:
+            if url not in pdf_cache:
+                pdf_cache[url] = _download_pdf(url)
+            pdf = pdf_cache[url]
+            if not pdf:
+                continue
+            if not _pdf_declares_season(pdf, season):
+                print(f"  [rfef-cal] {cfg['id']}: descartado "
+                      f"{url.rsplit('/', 1)[-1]} (no declara {season})")
+                continue
+            calendar = _extract_calendar_from_pdf(pdf)
+            if not calendar:
+                continue
+            roster = (web or {}).get(cfg["id"], {}).get("groups", {}).get(group_id)
+            if _calendar_is_sane(calendar, roster, label=f"{cfg['id']}/{group_id}"):
+                return calendar
+        return []
 
     for cfg in divisions_cfg:
         div = by_id.get(cfg["id"])
@@ -1007,11 +1293,14 @@ def _attach_calendars(
             )
             if not calendar:
                 n_match = re.match(r"g(\d+)$", group.id)
-                if n_match:
-                    calendar = _pdf_calendar_for(cfg, group_n=int(n_match.group(1)))
-                    if calendar:
-                        print(f"  [rfef-cal] {cfg['id']}/{group.id}: "
-                              f"fallback PDF -> {len(calendar)} jornadas")
+                calendar = _pdf_calendar_for(
+                    cfg,
+                    group_n=int(n_match.group(1)) if n_match else None,
+                    group_id=group.id,
+                )
+                if calendar:
+                    print(f"  [rfef-cal] {cfg['id']}/{group.id}: "
+                          f"fallback PDF -> {len(calendar)} jornadas")
             if calendar:
                 _merge_acta_cache(calendar, comp_code, group.code,
                                   label=f"{cfg['id']}/{group.id}")

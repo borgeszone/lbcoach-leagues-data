@@ -135,9 +135,17 @@ DIVISION_RULES: tuple[tuple[str, str, frozenset[str], frozenset[str]], ...] = (
 # PNFG porque cambia de puntuación y de mayúsculas entre temporadas ("Primera
 # División Futbol Sala Masculino" un año, "Fútbol" con tilde al siguiente) y la
 # app lo enseña tal cual en un desplegable.
+#
+# **El nombre se puede corregir; el id de arriba no.** La app guarda
+# `Team.divisionId` dentro de cada equipo, y de él cuelgan el calendario, la
+# importación de rivales y las novedades. Por eso `rfef-segunda-fs-masc` sigue
+# llamándose así aunque su nombre visible ya no lleve la "A".
 DIVISION_NAMES = {
     "rfef-primera-fs-masc": "Primera División FS",
-    "rfef-segunda-fs-masc": "Segunda División FS A",
+    # No es "Segunda A": la categoría se llama Segunda División, y la de abajo
+    # Segunda División B. La "A" era invención nuestra para distinguirlas, y en
+    # el desplegable le hacía dudar a quien sí sabe cómo se llama su liga.
+    "rfef-segunda-fs-masc": "Segunda División FS",
     "rfef-segunda-b-fs-masc": "Segunda División FS B",
     "rfef-primera-fs-fem": "Primera División FS Femenina",
     "rfef-segunda-fs-fem": "Segunda División FS Femenina",
@@ -276,6 +284,26 @@ def parse_competitions(script: str) -> list[Competition]:
         seen.add(code)
         out.append(Competition(code=code, name=name, group_label=current_label))
     return out
+
+
+# Un "grupo" que en realidad es una fase del calendario. Desde 2026-27 la
+# máxima categoría masculina se juega como Torneo Apertura + Torneo Clausura, y
+# la PNFG los expone por el mismo `<select>` que los grupos territoriales.
+#
+# La diferencia importa: los grupos territoriales tienen **equipos distintos**
+# y la entrenadora elige el suyo; las fases tienen **los mismos 16** y elegir no
+# significa nada. Publicar Liga Prime con un desplegable de "Torneo Apertura /
+# Torneo Clausura" le pide al usuario una decisión que no existe — y en el JSON
+# de agosto de 2026 salió publicado solo el Clausura, que es la fase que aún no
+# se juega.
+_PHASE_WORDS = frozenset({"apertura", "clausura", "fase", "vuelta", "torneo"})
+
+
+def is_phase(name: str) -> bool:
+    """¿Este "grupo" es una fase del calendario y no un grupo territorial?"""
+    words = set(_words(name))
+    return bool(words & _PHASE_WORDS) and not _GRUPO_N_RE.search(
+        " ".join(_words(name)))
 
 
 def parse_groups(script: str) -> list[Group]:
