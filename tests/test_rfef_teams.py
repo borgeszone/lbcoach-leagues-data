@@ -21,7 +21,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 import scrape as scrape_main  # noqa: E402
 from scrapers import rfef  # noqa: E402
 from scrapers.rfef_calendario import _parse_matches, teams_from_calendar  # noqa: E402
-from scrapers.rfef_discovery import Group  # noqa: E402
+from scrapers.rfef_discovery import Competition, Group  # noqa: E402
 
 FIXTURES = pathlib.Path(__file__).parent / "fixtures"
 
@@ -127,6 +127,7 @@ class GuardDeTemporada(unittest.TestCase):
     def _scrape(self, *, season_result, competitions=None):
         with mock.patch.object(rfef, "resolve_season", return_value=season_result), \
              mock.patch.object(rfef, "Fetcher"), \
+             mock.patch.object(rfef, "fetch_web_sources", return_value={}), \
              mock.patch.object(rfef, "list_competitions", return_value=competitions):
             return rfef.scrape("2026-2027", resolve_badges=False)
 
@@ -336,6 +337,7 @@ class HerenciaDeCalendarios(unittest.TestCase):
              mock.patch.object(rfef, "discover_divisions", return_value=[cfg]), \
              mock.patch.object(rfef, "fetch_division_calendar", return_value=cal), \
              mock.patch.object(rfef, "fetch_division_teams", return_value=[]), \
+             mock.patch.object(rfef, "fetch_web_sources", return_value={}), \
              mock.patch.object(rfef, "time"), \
              mock.patch.object(rfef, "_load_fallback",
                                return_value={"season": "2026-2027", "divisions": {}}):
@@ -346,6 +348,116 @@ class HerenciaDeCalendarios(unittest.TestCase):
         self.assertEqual([t["name"] for t in div["teams"]], ["A", "B"])
         self.assertNotIn("calendar", div)   # <- lo importante
         self.assertTrue(cat["teamsOnly"])
+
+
+class ElPdfLegacyTambienPasaElGuardDeTemporada(unittest.TestCase):
+    """La rama del PDF legacy dentro de la cascada de equipos **no tenía** el
+    guard, y era por donde entraba el fallo.
+
+    `groups_url_pattern` de Segunda Femenina apunta a
+    `calendario_grupo_N_segunda_femenina_futbol_sala.pdf`: una ruta sin la
+    temporada dentro, que sigue devolviendo 200 y sigue sirviendo el fichero de
+    2025-26 que la federación subió en agosto de aquel año.
+    """
+
+    CFG = {"groups_url_pattern": "https://ejemplo/grupo_{n}.pdf"}
+
+    def test_rechaza_el_pdf_de_otra_temporada(self):
+        viejo = (FIXTURES /
+                 "calendario_grupo_2_segunda_femenina_2025-2026.pdf").read_bytes()
+        with mock.patch.object(rfef, "_download_pdf", return_value=viejo):
+            names = rfef._legacy_pdf_names(self.CFG, "2026-2027", 2, "seg-fem/g2")
+        self.assertEqual(names, [])
+
+    def test_acepta_el_de_la_temporada_pedida(self):
+        nuevo = (FIXTURES / "calendario_2af_g2_2026-2027.pdf").read_bytes()
+        with mock.patch.object(rfef, "_download_pdf", return_value=nuevo):
+            names = rfef._legacy_pdf_names(self.CFG, "2026-2027", 2, "seg-fem/g2")
+        self.assertEqual(len(names), 16)
+        self.assertIn("AECS L Hospitalet", names)
+
+
+class ElNombreCortoSustituyeAlOficial(unittest.TestCase):
+    """La entrenadora ve "Burela FS"; "REYCO Burela FS" viaja como alias para
+    casar con el calendario y con los partidos ya guardados."""
+
+    def test_renombra_y_guarda_el_oficial(self):
+        teams = [{"name": "REYCO Burela FS", "logoUrl": "u"}]
+        out = rfef._with_short_names(teams, ["Burela FS"])
+        self.assertEqual(out[0]["name"], "Burela FS")
+        self.assertEqual(out[0]["officialName"], "REYCO Burela FS")
+        self.assertEqual(out[0]["logoUrl"], "u", "el escudo no se pierde")
+
+    def test_sin_pareja_se_queda_como_estaba(self):
+        """Y **sin** el campo `officialName`, que solo tiene sentido cuando de
+        verdad hay dos nombres."""
+        teams = [{"name": "Atletico Navalcarnero", "logoUrl": None}]
+        out = rfef._with_short_names(teams, ["Futsi Atlético B"])
+        self.assertEqual(out[0]["name"], "Atletico Navalcarnero")
+        self.assertNotIn("officialName", out[0])
+
+    def test_no_se_marca_alias_si_es_el_mismo_nombre(self):
+        teams = [{"name": "Ribera Navarra FS", "logoUrl": None}]
+        out = rfef._with_short_names(teams, ["Ribera Navarra FS"])
+        self.assertNotIn("officialName", out[0])
+
+
+class UnCalendarioConEquiposInventadosNoSePublica(unittest.TestCase):
+    """El corte de una fila larga en varias líneas físicas deja trozos sueltos
+    ("MRB FS", "C.E."). La asimetría de `_calendar_is_sane` es a propósito: el
+    mismo fallo visto por un lado inventa un rival y por el otro pierde uno."""
+
+    ROSTER = ["MRB FS Mostoles", "C.D. Melistar", "REYCO Burela FS"]
+
+    def _cal(self, pares):
+        return [{"jornada": 1, "date": "2026-09-19",
+                 "matches": [{"home": h, "away": a} for h, a in pares]}]
+
+    def test_rechaza_el_que_nombra_a_quien_no_existe(self):
+        cal = self._cal([("MRB FS", "C.D. Melistar")])  # <- trozo suelto
+        self.assertFalse(rfef._calendar_is_sane(cal, self.ROSTER))
+
+    def test_acepta_el_que_pierde_un_equipo(self):
+        """Tirarlo entero dejaría sin autorrelleno a los otros quince para
+        proteger a uno."""
+        cal = self._cal([("MRB FS Mostoles", "C.D. Melistar")])
+        self.assertTrue(rfef._calendar_is_sane(cal, self.ROSTER))
+
+    def test_acepta_el_completo(self):
+        cal = self._cal([("MRB FS Mostoles", "C.D. Melistar"),
+                         ("REYCO Burela FS", "MRB FS Mostoles")])
+        self.assertTrue(rfef._calendar_is_sane(cal, self.ROSTER))
+
+    def test_sin_plantel_no_hay_nada_que_afirmar(self):
+        cal = self._cal([("Cualquiera", "Otro")])
+        self.assertTrue(rfef._calendar_is_sane(cal, None))
+        self.assertTrue(rfef._calendar_is_sane(cal, []))
+
+
+class FasesPublicadasComoDivisionPlana(unittest.TestCase):
+    """Liga Prime se juega como Torneo Apertura + Torneo Clausura, y la PNFG los
+    expone por el mismo `<select>` que los grupos territoriales. Publicarlos como
+    grupos le pide a la entrenadora que elija entre dos listas idénticas — y en
+    el JSON de agosto de 2026 salió publicado solo el Clausura."""
+
+    def _discover(self, group_names):
+        # `Competition` y no un Mock: `name` es un atributo reservado de
+        # `Mock`, así que un `Mock(name=...)` no lleva dentro el nombre.
+        comps = [Competition(code="1", name="Liga Prime Futsal")]
+        groups = [Group(id=f"g{i+1}", code=str(i + 10), name=n)
+                  for i, n in enumerate(group_names)]
+        with mock.patch.object(rfef, "list_competitions", return_value=comps), \
+             mock.patch.object(rfef, "list_groups", return_value=groups), \
+             mock.patch.object(rfef, "time"):
+            return rfef.discover_divisions("22")
+
+    def test_apertura_y_clausura_se_publican_planas(self):
+        cfgs = self._discover(["Torneo Apertura", "Torneo Clausura"])
+        self.assertTrue(cfgs[0]["flat"])
+
+    def test_los_grupos_territoriales_siguen_siendo_grupos(self):
+        cfgs = self._discover(["Grupo 1", "Grupo 2"])
+        self.assertFalse(cfgs[0]["flat"])
 
 
 if __name__ == "__main__":
