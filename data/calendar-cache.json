@@ -189,5 +189,12 @@
   "33575532|33575533|J1|illesbalearspalmafutsal|cdtenerifeiberiatoscal": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70690460&NPcd_Pdf=1",
   "33575532|33575533|J1|lascuevecitasfs|grupolopezbolanosfsa": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70690462&NPcd_Pdf=1",
   "33575532|33575533|J1|otxartabecd|adclugosala": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70690459&NPcd_Pdf=1",
+  "33836159|33892849|J1|catgasenergiasantacoloma|illesbalearspalmafutsal": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697009&NPcd_Pdf=1",
+  "33836159|33892849|J1|cdxotafs|jaenparaisointeriorfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697011&NPcd_Pdf=1",
+  "33836159|33892849|J1|jimbeecartagenacostacalida|interjpfinancial": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697006&NPcd_Pdf=1",
+  "33836159|33892849|J1|noiaportusapostoli|elpozomurciacostacalida": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697010&NPcd_Pdf=1",
+  "33836159|33892849|J1|oparruloferrolfs|quesoselhidalgomanzanaresfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697012&NPcd_Pdf=1",
+  "33836159|33892849|J1|surseedselejidofs|cordobapatrimoniodelahumanidad": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697008&NPcd_Pdf=1",
+  "33836159|33892849|J1|vinaalbalivaldepenas|barca": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697013&NPcd_Pdf=1",
   "_comment": "Caché persistente de actaUrls por partido auto-generada por scrapers.calendar_cache. NO editar a mano. Cada run del scraper fusiona lo fresco con esta caché: una vez la federación publica el CodActa de un partido queda permanente para el resto de la temporada aunque RFEF rate-limite en runs posteriores. Si una URL deja de funcionar, simplemente borra esa entrada y la próxima ejecución la reresolverá."
 }
