@@ -85,6 +85,13 @@ class CascadaDeEquipos(unittest.TestCase):
            "groups": [Group(id="g1", code="2", name="Grupo 1")]}
 
     def _call(self, calendar, fb_teams=(), scraped=()):
+        """Devuelve solo los equipos; la procedencia se prueba en `_source`."""
+        return self._full(calendar, fb_teams, scraped)[0]
+
+    def _source(self, calendar, fb_teams=(), scraped=()):
+        return self._full(calendar, fb_teams, scraped)[1]
+
+    def _full(self, calendar, fb_teams=(), scraped=()):
         with mock.patch.object(rfef, "fetch_division_teams", return_value=list(scraped)), \
              mock.patch.object(rfef, "_download_pdf", return_value=None), \
              mock.patch.object(rfef, "resolve_logo_url", return_value=None), \
@@ -116,6 +123,32 @@ class CascadaDeEquipos(unittest.TestCase):
     def test_el_fallback_de_la_temporada_correcta_si_se_usa(self):
         teams = self._call([], fb_teams=[{"name": "Curado", "logoUrl": None}])
         self.assertEqual([t["name"] for t in teams], ["Curado"])
+
+    def test_cada_fuente_dice_de_donde_viene(self):
+        """La procedencia es lo que luego deja publicar o no: si una fuente
+        dejara de declararse, `_drop_unverified_teams` la tiraría."""
+        from scrapers.rfef_clasificacion import ScrapedTeam
+        cal = [{"jornada": 1, "matches": [{"home": "A", "away": "B"}]}]
+        self.assertEqual(self._source(cal), rfef.SOURCE_CALENDARIO)
+        self.assertEqual(
+            self._source(cal, scraped=[ScrapedTeam("A", None)]),
+            rfef.SOURCE_CLASIFICACION)
+        self.assertEqual(
+            self._source([], fb_teams=[{"name": "Curado", "logoUrl": None}]),
+            rfef.SOURCE_FALLBACK)
+        self.assertEqual(self._source([], fb_teams=[]), rfef.SOURCE_NINGUNA)
+
+    def test_todas_las_fuentes_de_la_cascada_son_fechables(self):
+        """Ninguna vía de `_teams_for` puede devolver algo que el guard tire:
+        si alguna lo hiciera, la división saldría vacía sin que nadie lo
+        entendiera."""
+        from scrapers.rfef_clasificacion import ScrapedTeam
+        cal = [{"jornada": 1, "matches": [{"home": "A", "away": "B"}]}]
+        for fuente in (self._source(cal),
+                       self._source(cal, scraped=[ScrapedTeam("A", None)]),
+                       self._source([], fb_teams=[{"name": "C", "logoUrl": None}])):
+            with self.subTest(fuente=fuente):
+                self.assertIn(fuente, rfef.VERIFIED_SOURCES)
 
 
 class GuardDeTemporada(unittest.TestCase):
@@ -400,6 +433,78 @@ class ElNombreCortoSustituyeAlOficial(unittest.TestCase):
         teams = [{"name": "Ribera Navarra FS", "logoUrl": None}]
         out = rfef._with_short_names(teams, ["Ribera Navarra FS"])
         self.assertNotIn("officialName", out[0])
+
+
+
+class NadaSePublicaSinPoderFecharlo(unittest.TestCase):
+    """La garantía que pidió la usuaria: lo publicado es de la temporada pedida,
+    o no se publica.
+
+    Las dos veces que este scraper sacó la liga del año pasado, el run terminó
+    **en verde**: los códigos escritos a mano (§6.32) y el PDF cuya URL no lleva
+    la temporada (§6.49). Por eso el guard recorre lo que se va a publicar en vez
+    de fiarse de la cascada."""
+
+    def _div(self, fuente, n=2):
+        return {"id": "rfef-primera-fs-fem", "name": "1a Fem",
+                "teams": [{"name": f"E{i}"} for i in range(n)],
+                "teamsSource": fuente}
+
+    def test_deja_pasar_las_fuentes_fechables(self):
+        for fuente in sorted(rfef.VERIFIED_SOURCES):
+            with self.subTest(fuente=fuente):
+                divs = [self._div(fuente)]
+                avisos = []
+                rfef._drop_unverified_teams(divs, "2026-2027", avisos)
+                self.assertEqual(len(divs[0]["teams"]), 2)
+                self.assertEqual(avisos, [])
+
+    def test_vacia_la_pagina_que_no_dice_de_que_ano_es(self):
+        divs = [self._div(rfef.SOURCE_PAGINA)]
+        avisos = []
+        rfef._drop_unverified_teams(divs, "2026-2027", avisos)
+        self.assertEqual(divs[0]["teams"], [])
+        self.assertEqual(len(avisos), 1)
+        self.assertIn("2026-2027", avisos[0])
+
+    def test_una_fuente_nueva_sin_declarar_no_cuela(self):
+        """El caso que de verdad protege: alguien añade un camino y se olvida de
+        fecharlo. Sin nombre conocido, no se publica."""
+        divs = [self._div("una-fuente-que-nadie-ha-fechado")]
+        avisos = []
+        rfef._drop_unverified_teams(divs, "2026-2027", avisos)
+        self.assertEqual(divs[0]["teams"], [])
+        self.assertEqual(len(avisos), 1)
+
+    def test_sin_procedencia_tampoco(self):
+        div = self._div(rfef.SOURCE_PAGINA)
+        del div["teamsSource"]
+        avisos = []
+        rfef._drop_unverified_teams([div], "2026-2027", avisos)
+        self.assertEqual(div["teams"], [])
+
+    def test_los_grupos_se_miran_uno_a_uno(self):
+        """Una división puede tener un grupo del PDF y otro sin fechar: se cae
+        solo el que no se puede afirmar."""
+        div = {"id": "rfef-segunda-fs-fem", "name": "2a Fem", "teams": [],
+               "groups": [
+                   {"id": "g1", "teams": [{"name": "A"}],
+                    "teamsSource": rfef.SOURCE_PDF_RFEF},
+                   {"id": "g2", "teams": [{"name": "B"}],
+                    "teamsSource": rfef.SOURCE_PAGINA},
+               ]}
+        avisos = []
+        rfef._drop_unverified_teams([div], "2026-2027", avisos)
+        self.assertEqual(len(div["groups"][0]["teams"]), 1)
+        self.assertEqual(div["groups"][1]["teams"], [])
+        self.assertEqual(len(avisos), 1)
+        self.assertIn("g2", avisos[0])
+
+    def test_una_division_vacia_no_genera_ruido(self):
+        divs = [{"id": "x", "teams": [], "teamsSource": rfef.SOURCE_NINGUNA}]
+        avisos = []
+        rfef._drop_unverified_teams(divs, "2026-2027", avisos)
+        self.assertEqual(avisos, [])
 
 
 class UnCalendarioConEquiposInventadosNoSePublica(unittest.TestCase):

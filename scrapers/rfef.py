@@ -123,6 +123,32 @@ DIVISION_ORDER = (
 )
 
 
+# ── De dónde salieron los equipos, y si eso permite fechar la temporada ──────
+#
+# El scraper ya se equivocó una vez publicando la liga de 2025-26 con el sello de
+# 2026-27, y dos veces por caminos distintos: los códigos de competición escritos
+# a mano (§6.32) y un PDF cuya URL no lleva la temporada dentro (§6.49). Las dos
+# veces el run terminó bien y nadie se enteró.
+#
+# Así que la procedencia se anota por división y `scrape()` **se niega a publicar
+# equipos que no vengan de una fuente fechable**. La lista de abajo es la
+# afirmación completa que el scraper puede hacer sobre la temporada; añadir una
+# fuente sin poder fecharla es reabrir el mismo agujero.
+SOURCE_CLASIFICACION = "clasificacion"  # comp/grupo descubiertos para esta temporada
+SOURCE_PDF_RFEF = "pdf-rfef"            # portada del PDF: "Temporada 2026-2027"
+SOURCE_CALENDARIO = "calendario"        # NFG_CmpJornada con CodTemporada explícito
+SOURCE_PDF_LEGACY = "pdf-legacy"        # idem, por el patrón de URL clásico
+SOURCE_FALLBACK = "fallback"            # data/rfef-fallback.json, con su `season`
+SOURCE_PAGINA = "pagina"                # rfef.es: NO dice de qué temporada es
+SOURCE_NINGUNA = "-"
+
+# Las que permiten afirmar el año. `pagina` queda fuera a propósito.
+VERIFIED_SOURCES = frozenset({
+    SOURCE_CLASIFICACION, SOURCE_PDF_RFEF, SOURCE_CALENDARIO,
+    SOURCE_PDF_LEGACY, SOURCE_FALLBACK,
+})
+
+
 def _pdf_url(pdf_id: str, season: str) -> str:
     year = season.split("-")[0]
     return (
@@ -735,6 +761,7 @@ def scrape(season: str, resolve_badges: bool = True,
     _fill_teams(out_divisions, divisions_cfg, fb_divisions, season,
                 resolve_badges, web=web, warnings=warnings)
 
+
     # 4. Fuera el calendario parcial. Publicarlo sería peor que no tenerlo: la
     #    app ofrecería un desplegable con dos jornadas y el entrenador no
     #    encontraría la suya.
@@ -760,6 +787,12 @@ def scrape(season: str, resolve_badges: bool = True,
     # Las que la PNFG no publica: última oportunidad por el PDF oficial.
     _fill_missing_from_pdf(out_divisions, season, resolve_badges, warnings,
                            teams_only)
+
+    # El último paso antes de devolver nada: fuera todo lo que no se pueda
+    # fechar. Va aquí y no junto a `_fill_teams` para que cubra también lo que
+    # rellene cualquier vía que se añada después — que es justo como se coló el
+    # PDF caducado de §6.49.
+    _drop_unverified_teams(out_divisions, season, warnings)
 
     return {
         "id": "rfef",
@@ -850,6 +883,8 @@ def _fill_missing_from_pdf(
             if not names:
                 continue
             div["teams"] = _teams_from_names(names, resolve_badges=resolve_badges)
+            # El PDF pasó por `_pdf_declares_season` unas líneas más arriba.
+            div["teamsSource"] = SOURCE_PDF_LEGACY
             con_escudo = sum(1 for t in div["teams"] if t.get("logoUrl"))
             if not teams_only:
                 calendar = _extract_calendar_from_pdf(pdf)
@@ -976,7 +1011,7 @@ def _fill_teams(
 
         if cfg["flat"]:
             group = cfg["groups"][0]
-            div["teams"] = _teams_for(
+            div["teams"], div["teamsSource"] = _teams_for(
                 comp=comp_code, grupo=group.code,
                 calendar=div.get("calendar", []),
                 fb_teams=fb_div.get("teams", []),
@@ -984,11 +1019,6 @@ def _fill_teams(
                 label=cfg["id"], resolve_badges=resolve_badges,
                 web_names=_web_names_for(web_groups, None),
                 web_shorts=shorts,
-                # La lista entera de la página solo vale como fuente si la
-                # división es plana. En una con grupos serían los 48 equipos
-                # metidos en el grupo que se quedó sin PDF.
-                web_fallback=shorts,
-                warnings=warnings,
             )
             continue
 
@@ -1001,7 +1031,7 @@ def _fill_teams(
             if i > 0:
                 time.sleep(10)
             n_match = re.match(r"g(\d+)$", group.id)
-            out_group["teams"] = _teams_for(
+            out_group["teams"], out_group["teamsSource"] = _teams_for(
                 comp=comp_code, grupo=group.code,
                 calendar=out_group.get("calendar", []),
                 fb_teams=fb_groups.get(group.id, {}).get("teams", []),
@@ -1010,7 +1040,6 @@ def _fill_teams(
                 label=f"{cfg['id']}/{group.id}", resolve_badges=resolve_badges,
                 web_names=_web_names_for(web_groups, group.id),
                 web_shorts=shorts,
-                warnings=warnings,
             )
 
 
@@ -1029,6 +1058,38 @@ def _web_names_for(web_groups: dict, group_id: str | None) -> list[str]:
     return []
 
 
+def _drop_unverified_teams(out_divisions: list[dict], season: str,
+                           warnings: list[str]) -> None:
+    """Vacía los equipos cuya procedencia no permita afirmar la temporada.
+
+    Es el cinturón, no el tirante: la cascada de `_teams_for` ya solo devuelve
+    fuentes fechables. Esto existe porque las dos veces que este scraper publicó
+    la liga del año pasado, lo hizo **sin un solo error** — un camino nuevo que
+    nadie fechó, y el run terminando en verde. Un guard que recorre lo que se va
+    a publicar, y no lo que se cree haber hecho, es lo único que caza eso.
+
+    Vaciar y avisar, no abortar: si una división se queda sin fuente fechable, el
+    resto del JSON sigue siendo bueno y la app degrada esa división al formulario
+    manual, que es lo que hacía antes de existir el scraper.
+    """
+    for div in out_divisions:
+        nodos = [(div["id"], div)] + [
+            (f"{div['id']}/{g['id']}", g) for g in div.get("groups", [])]
+        for label, nodo in nodos:
+            if not nodo.get("teams"):
+                continue
+            fuente = nodo.get("teamsSource", SOURCE_NINGUNA)
+            if fuente in VERIFIED_SOURCES:
+                continue
+            msg = (f"{label}: {len(nodo['teams'])} equipos descartados — su "
+                   f"fuente ({fuente!r}) no permite afirmar que sean de "
+                   f"{season}. Antes que publicar la temporada equivocada, la "
+                   f"división se publica vacía")
+            print(f"[rfef] AVISO: {msg}")
+            warnings.append(msg)
+            nodo["teams"] = []
+
+
 def _teams_for(
     *,
     comp: str,
@@ -1042,14 +1103,17 @@ def _teams_for(
     resolve_badges: bool,
     web_names: list[str] | None = None,
     web_shorts: list[str] | None = None,
-    web_fallback: list[str] | None = None,
-    warnings: list[str] | None = None,
-) -> list[dict]:
-    """La cascada de fuentes para un grupo concreto. Ver `scrape()`."""
+) -> tuple[list[dict], str]:
+    """La cascada de fuentes para un grupo concreto: `(equipos, procedencia)`.
+
+    **La procedencia no es telemetría, es el guard.** `scrape()` se niega a
+    publicar equipos cuya fuente no esté en `VERIFIED_SOURCES`, y de ahí sale la
+    única garantía que se puede dar de verdad: que lo publicado es de la
+    temporada pedida y no de la anterior. Ver `SOURCE_*`.
+    """
     cal_names = teams_from_calendar(calendar)
     web_names = list(web_names or [])
     web_shorts = list(web_shorts or [])
-    web_fallback = list(web_fallback or [])
 
     # 1. Clasificación: la única fuente que trae escudo oficial. Se le dan
     #    menos reintentos cuando ya tenemos los nombres por otra vía — ahí es
@@ -1061,7 +1125,7 @@ def _teams_for(
         print(f"  [rfef] {label}: {len(scraped)} equipos de la clasificación")
         return _with_short_names(_merge_clasificacion(
             fb_teams=fb_teams, scraped=scraped, resolve_badges=resolve_badges,
-        ), web_shorts)
+        ), web_shorts), SOURCE_CLASIFICACION
 
     # 2. Web pública de la RFEF: el PDF de calendario del grupo, con la
     #    temporada leída de su portada. Va por delante del calendario de la
@@ -1071,14 +1135,14 @@ def _teams_for(
         print(f"  [rfef] {label}: {len(web_names)} equipos del PDF de rfef.es")
         return _with_short_names(
             _teams_from_names(web_names, resolve_badges=resolve_badges),
-            web_shorts)
+            web_shorts), SOURCE_PDF_RFEF
 
     # 3. Calendario de la PNFG: funciona desde que se sortea.
     if cal_names:
         print(f"  [rfef] {label}: {len(cal_names)} equipos del calendario")
         return _with_short_names(
             _teams_from_names(cal_names, resolve_badges=resolve_badges),
-            web_shorts)
+            web_shorts), SOURCE_CALENDARIO
 
     # 4. PDF oficial (legacy), con el mismo guard de temporada que usa
     #    `_fill_missing_from_pdf`. Antes esta rama no lo tenía, y es por donde
@@ -1087,22 +1151,20 @@ def _teams_for(
     if team_names:
         print(f"  [rfef] {label}: {len(team_names)} equipos del PDF")
 
-    # 5. La lista de la propia página de competición.
+    # La lista de la página de competición **ya no es fuente de equipos**, y esa
+    # es la decisión de fondo de este guard.
     #
-    # Va la penúltima porque es la única que **no se puede verificar por
-    # temporada**: la página no dice de qué año es. A cambio, es la que la
-    # federación mantiene viva y la única que existe para una división sin PDF
-    # publicado — hoy, Primera Femenina. Publicarla con un aviso es mejor que
-    # dejar la división vacía, que es como salió en agosto de 2026.
-    if not team_names and web_fallback:
-        msg = (f"{label}: sus {len(web_fallback)} equipos salen de la página de "
-               f"competición de rfef.es — la única fuente que hay para esta "
-               f"división ahora mismo — y **no se ha podido verificar que sean "
-               f"de {season}**: la página no dice de qué temporada es")
-        print(f"  [rfef] AVISO: {msg}")
-        if warnings is not None:
-            warnings.append(msg)
-        return _teams_from_names(web_fallback, resolve_badges=resolve_badges)
+    # Es la única de la cascada que no se puede fechar: la página no dice de qué
+    # temporada es, así que publicar desde ella era publicar sin poder afirmar el
+    # año — exactamente lo que este scraper existe para no volver a hacer. Sigue
+    # aportando los nombres cortos (`web_shorts`), que es seguro: un corto solo
+    # se le pega a un equipo que ya vino de una fuente fechada, y el emparejado
+    # es 1:1.
+    #
+    # En la práctica no se pierde nada: las cinco divisiones tienen calendario o
+    # PDF fechado. Lo que cambia es qué pasa el día que fallen — antes se
+    # publicaba sin fecha y con un aviso que nadie iba a leer; ahora la división
+    # sale vacía, que es la verdad.
 
     # 6. Fallback curado — ya viene vacío si es de otra temporada.
     teams = _merge_teams(
@@ -1110,7 +1172,11 @@ def _teams_for(
     )
     if not teams:
         print(f"  [rfef] {label}: sin equipos por ninguna vía")
-    return _with_short_names(teams, web_shorts)
+        return [], SOURCE_NINGUNA
+    # El PDF legacy manda sobre el fallback curado cuando ha dado nombres; si no,
+    # lo publicado es el fallback, que trae su propia temporada dentro.
+    fuente = SOURCE_PDF_LEGACY if team_names else SOURCE_FALLBACK
+    return _with_short_names(teams, web_shorts), fuente
 
 
 def _legacy_pdf_names(

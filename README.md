@@ -116,6 +116,29 @@ Primera Femenina apuntaban a `CodTemporada=22` (2026-27) y Segunda B a `21`, y
 encima al playoff de ascenso del año pasado. Por eso solo se acepta si la
 temporada coincide con la resuelta y la competición es la ya descubierta.
 
+### Nada se publica sin poder fecharlo
+
+Cada división anota **de dónde salieron sus equipos** (`teamsSource` en el JSON),
+y `_drop_unverified_teams` vacía las que no vengan de una fuente que permita
+afirmar la temporada:
+
+| fuente | por qué se puede fechar |
+|---|---|
+| `clasificacion` | comp/grupo descubiertos para esta temporada |
+| `calendario` | `NFG_CmpJornada` con `CodTemporada` explícito |
+| `pdf-rfef`, `pdf-legacy` | la portada imprime "Temporada 2026-2027" |
+| `fallback` | `data/rfef-fallback.json` declara su `season` |
+| `pagina` | **no se puede** — rfef.es no dice de qué año es |
+
+La página de competición dejó de ser fuente de equipos por eso. Sigue aportando
+los nombres cortos, que es seguro: un corto solo se le pega a un equipo que ya
+vino de una fuente fechada, y el emparejado es 1:1.
+
+El guard recorre **lo que se va a publicar**, no lo que se cree haber hecho. Las
+dos veces que este scraper sacó la liga del año pasado el run terminó en verde,
+y las dos por un camino que nadie había fechado. Prefiere una división vacía
+—la app degrada al formulario manual— a una llena de la temporada equivocada.
+
 ### El calendario del PDF va a dos columnas
 
 La RFEF maqueta la ida a la izquierda y la vuelta a la derecha, con la J1 y la
