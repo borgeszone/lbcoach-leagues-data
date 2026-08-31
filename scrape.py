@@ -80,13 +80,31 @@ def fetch_published(season: str) -> dict | None:
     return published
 
 
-def inherit_calendars(categories: list[dict], published: dict) -> int:
-    """Copia los `calendar` del JSON publicado a las divisiones/grupos que no
-    lo traigan. Devuelve cuántos ha heredado.
+def _calendar_size(cal: list | None) -> tuple[int, int]:
+    """`(jornadas, partidos)`, para comparar dos calendarios del mismo grupo."""
+    if not cal:
+        return (0, 0)
+    return (len(cal), sum(len(j.get("matches", [])) for j in cal))
 
-    Se empareja por id, no por posición: una división que la federación aún no
-    haya abierto no está en la lista de este run, y emparejar por índice
-    correría los calendarios de sitio.
+
+def inherit_calendars(categories: list[dict], published: dict) -> int:
+    """Se queda con el calendario **más completo** entre este run y el publicado.
+
+    Antes solo rellenaba los huecos (`if not div.get("calendar")`), y eso deja
+    pasar una regresión silenciosa: el PNFG se corta a media descarga, el run
+    trae 11 jornadas donde había 30, y las 11 ganan. Pasó — cuatro grupos de
+    Segunda B se publicaron con 11, 12 y 18 jornadas de 30, y no se iban a
+    arreglar solos porque el run siguiente heredaba de ese mismo fichero.
+
+    Ahora la cobertura solo puede crecer, que es la regla que este repo ya
+    aplica a los escudos (`badges-cache.json`) y a las actas
+    (`calendar-cache.json`). No hace falta que un run salga perfecto: basta con
+    que cada uno aporte lo que consiga.
+
+    El guard de temporada vive en `fetch_published`: si el publicado es de otro
+    año, aquí no llega nada. Se empareja por id y no por posición — una división
+    que la federación aún no haya abierto no está en la lista de este run, y por
+    índice los calendarios se correrían de sitio.
     """
     src: dict[str, list] = {}
     for cat in published.get("categories", []):
@@ -98,17 +116,27 @@ def inherit_calendars(categories: list[dict], published: dict) -> int:
                     src[f"{cat['id']}/{div['id']}/{g['id']}"] = g["calendar"]
 
     n = 0
+
+    def _mejor(nodo: dict, clave: str, etiqueta: str) -> int:
+        publicado = src.get(clave)
+        if not publicado:
+            return 0
+        mio, suyo = _calendar_size(nodo.get("calendar")), _calendar_size(publicado)
+        if suyo <= mio:
+            return 0
+        if mio != (0, 0):
+            print(f"[scrape] {etiqueta}: este run trajo {mio[0]} jornadas y el "
+                  f"publicado tiene {suyo[0]}; se conserva el publicado")
+        nodo["calendar"] = publicado
+        return 1
+
     for cat in categories:
         for div in cat.get("divisions", []):
             key = f"{cat['id']}/{div['id']}"
-            if not div.get("calendar") and key in src:
-                div["calendar"] = src[key]
-                n += 1
+            n += _mejor(div, key, div["id"])
             for g in div.get("groups", []) or []:
                 gkey = f"{key}/{g['id']}"
-                if not g.get("calendar") and gkey in src:
-                    g["calendar"] = src[gkey]
-                    n += 1
+                n += _mejor(g, gkey, f"{div['id']}/{g['id']}")
     return n
 
 
@@ -211,17 +239,23 @@ def main() -> int:
     modo = "solo equipos" if args.teams_only else "completo"
     print(f"[scrape] Generando leagues.json para temporada {season} ({modo})")
 
-    # En modo rápido se necesita el publicado ANTES de gastar peticiones: si no
-    # se puede heredar de él, este run no debe llegar a publicar.
-    published = None
-    if args.teams_only:
-        published = fetch_published(season)
-        if published is None:
-            print("[scrape] ABORTADO: sin un JSON publicado de esta temporada "
-                  "no hay calendarios que heredar, y publicar sin ellos dejaría "
-                  "a la app sin autorrelleno por jornada.")
-            print("[scrape] Lanza primero un run completo (sin --teams-only).")
-            return 1
+    # El publicado se descarga ANTES de gastar peticiones, y en los dos modos.
+    #
+    # En el rápido es obligatorio: no trae calendarios, así que sin él no hay
+    # nada que heredar y el run no debe llegar a publicar.
+    #
+    # En el completo es opcional pero importante igual: el PNFG se corta a media
+    # descarga con frecuencia, y sin comparar contra lo publicado un run que
+    # traiga 11 jornadas de 30 las publica y se lleva por delante las otras 19.
+    # Que no se pueda descargar no aborta el run completo — ese sí trae
+    # calendarios propios.
+    published = fetch_published(season)
+    if published is None and args.teams_only:
+        print("[scrape] ABORTADO: sin un JSON publicado de esta temporada "
+              "no hay calendarios que heredar, y publicar sin ellos dejaría "
+              "a la app sin autorrelleno por jornada.")
+        print("[scrape] Lanza primero un run completo (sin --teams-only).")
+        return 1
 
     # Pre-poblar el mapa de escudos del portal oficial (futsal.rfef.es).
     #

@@ -344,6 +344,54 @@ class HerenciaDeCalendarios(unittest.TestCase):
         self.assertEqual(scrape_main.inherit_calendars(cats, self.PUBLICADO), 0)
         self.assertNotIn("calendar", cats[0]["divisions"][0])
 
+    def test_un_run_a_medias_no_se_lleva_las_jornadas_que_habia(self):
+        """El fallo real: el PNFG se corta a media descarga y el run trae 11
+        jornadas donde había 30. Antes ganaban las 11 —y el run siguiente
+        heredaba de ese mismo fichero, así que no se arreglaba solo."""
+        publicado = {"version": "2026-2027", "categories": [{
+            "id": "rfef", "divisions": [{
+                "id": "d-plana",
+                "calendar": [{"jornada": n, "matches": [{"home": "A", "away": "B"}]}
+                             for n in range(1, 31)],
+            }],
+        }]}
+        parcial = [{"jornada": n, "matches": [{"home": "A", "away": "B"}]}
+                   for n in range(1, 12)]
+        cats = [{"id": "rfef", "divisions": [
+            {"id": "d-plana", "calendar": parcial}]}]
+
+        self.assertEqual(scrape_main.inherit_calendars(cats, publicado), 1)
+        self.assertEqual(len(cats[0]["divisions"][0]["calendar"]), 30)
+
+    def test_un_run_mejor_que_lo_publicado_si_gana(self):
+        """La cobertura crece; no se queda congelada en el primer run bueno."""
+        publicado = {"version": "2026-2027", "categories": [{
+            "id": "rfef", "divisions": [{
+                "id": "d-plana",
+                "calendar": [{"jornada": n, "matches": []} for n in range(1, 12)],
+            }],
+        }]}
+        completo = [{"jornada": n, "matches": []} for n in range(1, 31)]
+        cats = [{"id": "rfef", "divisions": [
+            {"id": "d-plana", "calendar": completo}]}]
+
+        self.assertEqual(scrape_main.inherit_calendars(cats, publicado), 0)
+        self.assertEqual(len(cats[0]["divisions"][0]["calendar"]), 30)
+
+    def test_a_igual_jornadas_gana_el_que_trae_mas_partidos(self):
+        """Mismo número de jornadas puede esconder jornadas a medias: el PNFG
+        devuelve la cabecera y se queda sin filas."""
+        lleno = [{"jornada": 1, "matches": [{"home": "A", "away": "B"},
+                                            {"home": "C", "away": "D"}]}]
+        vacio = [{"jornada": 1, "matches": []}]
+        publicado = {"version": "2026-2027", "categories": [{
+            "id": "rfef", "divisions": [{"id": "d-plana", "calendar": lleno}]}]}
+        cats = [{"id": "rfef", "divisions": [
+            {"id": "d-plana", "calendar": vacio}]}]
+
+        self.assertEqual(scrape_main.inherit_calendars(cats, publicado), 1)
+        self.assertEqual(len(cats[0]["divisions"][0]["calendar"][0]["matches"]), 2)
+
     def test_publicado_de_otra_temporada_no_se_hereda(self):
         """El guard que impide reintroducir el bug original por la puerta de
         atrás: heredar el calendario de 2025-26 dentro de un JSON de 2026-27."""
