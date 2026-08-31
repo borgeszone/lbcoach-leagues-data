@@ -1,6 +1,6 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-08-31T18:24:24+00:00",
+  "lastUpdated": "2026-08-31T21:16:33+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)"
   ],
@@ -91,6 +91,7 @@
               "officialName": "Wanapix"
             }
           ],
+          "teamsSource": "calendario",
           "calendar": [
             {
               "jornada": 1,
@@ -834,8 +835,7 @@
                 }
               ]
             }
-          ],
-          "teamsSource": "calendario"
+          ]
         },
         {
           "id": "rfef-segunda-fs-masc",
@@ -918,6 +918,7 @@
               "officialName": "C.E. Futsal Gestoria Luis Mataró"
             }
           ],
+          "teamsSource": "pdf-rfef",
           "calendar": [
             {
               "jornada": 1,
@@ -2138,8 +2139,7 @@
                 }
               ]
             }
-          ],
-          "teamsSource": "pdf-rfef"
+          ]
         },
         {
           "id": "rfef-segunda-b-fs-masc",
@@ -2228,6 +2228,7 @@
                   "officialName": "Deporcyl - Guardo FS"
                 }
               ],
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -3609,8 +3610,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             },
             {
               "id": "g2",
@@ -3691,6 +3691,7 @@
                   "officialName": "Vulcanizados Ruiz Tafa FS"
                 }
               ],
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -5072,8 +5073,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             },
             {
               "id": "g3",
@@ -5159,6 +5159,7 @@
                   "officialName": "Nunsys El Pilar"
                 }
               ],
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -6390,8 +6391,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             },
             {
               "id": "g4",
@@ -6477,6 +6477,7 @@
                   "officialName": "El Alamo F.S."
                 }
               ],
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -7432,8 +7433,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             },
             {
               "id": "g5",
@@ -7520,6 +7520,7 @@
                   "officialName": "Sima Granada FS"
                 }
               ],
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -8104,8 +8105,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             },
             {
               "id": "g6",
@@ -8189,6 +8189,7 @@
                   "officialName": "Doctoral FS"
                 }
               ],
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -8826,8 +8827,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             }
           ]
         },
@@ -8835,8 +8835,88 @@
           "id": "rfef-primera-fs-fem",
           "name": "Primera División FS Femenina",
           "gender": "femenino",
-          "teams": [],
-          "teamsSource": "-"
+          "teams": [
+            {
+              "name": "AE Les Corts",
+              "logoUrl": null,
+              "officialName": "AE Les Corts UBAE"
+            },
+            {
+              "name": "AD Alcorcón",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206184_50x50.png",
+              "officialName": "ARRIVA AD Alcorcón FSF"
+            },
+            {
+              "name": "Atlético Navalcarnero",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079008545_logo.png"
+            },
+            {
+              "name": "Guadalcacín",
+              "logoUrl": null,
+              "officialName": "C.D. Guadalcacín F.S."
+            },
+            {
+              "name": "Ceuta AD",
+              "logoUrl": null,
+              "officialName": "Ceuta Agrupación Deportiva"
+            },
+            {
+              "name": "Estrela Verín",
+              "logoUrl": null,
+              "officialName": "Estrela Revoltosa Verín FSF"
+            },
+            {
+              "name": "FSF Castro",
+              "logoUrl": null,
+              "officialName": "F.S.F. Castro Bloques Cando"
+            },
+            {
+              "name": "LBTL Alcantarilla",
+              "logoUrl": null,
+              "officialName": "LBTL Futsal Alcantarilla"
+            },
+            {
+              "name": "MSC Torreblanca FS",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/207211_50x50.png",
+              "officialName": "Melilla Ciudad del Deporte Torreblanca C. F."
+            },
+            {
+              "name": "FSF Móstoles",
+              "logoUrl": null,
+              "officialName": "MRB Móstoles FSF"
+            },
+            {
+              "name": "Nueces de Ronda Atl. Torcal",
+              "logoUrl": null,
+              "officialName": "Nueces de Ronda Atlético Torcal FS"
+            },
+            {
+              "name": "Ourense FSF",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008546_ESCUDO_OURENSE_FSF_NUEVO.png",
+              "officialName": "Ourense Ontime"
+            },
+            {
+              "name": "Poio FS",
+              "logoUrl": null,
+              "officialName": "Poio Pescamar FS"
+            },
+            {
+              "name": "Rodiles FS",
+              "logoUrl": null,
+              "officialName": "Rodiles F.S. \"A\""
+            },
+            {
+              "name": "Roldán FSF",
+              "logoUrl": null,
+              "officialName": "STV Roldán F.S"
+            },
+            {
+              "name": "Intersala Zaragoza",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079011245_escudo_Intersala_sin_fondo.png",
+              "officialName": "Wanapix Aldelis InterSala 10 Zaragoza"
+            }
+          ],
+          "teamsSource": "calendario"
         },
         {
           "id": "rfef-segunda-fs-fem",
@@ -8925,6 +9005,7 @@
                   "officialName": "CDE Muslera GSW \"A\""
                 }
               ],
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -10306,8 +10387,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             },
             {
               "id": "g2",
@@ -10391,6 +10471,7 @@
                   "officialName": "Somriu Futbol Sala Ripollet"
                 }
               ],
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -11772,8 +11853,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             },
             {
               "id": "g3",
@@ -11857,6 +11937,7 @@
                   "officialName": "Fundación UAPO Granada FS Femenino"
                 }
               ],
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -13238,8 +13319,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             }
           ]
         }
