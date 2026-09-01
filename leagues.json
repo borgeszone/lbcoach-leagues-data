@@ -1,6 +1,6 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-01T15:52:54+00:00",
+  "lastUpdated": "2026-09-01T16:05:17+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)"
   ],
@@ -9089,7 +9089,1389 @@
                   "officialName": "Somriu Futbol Sala Ripollet"
                 }
               ],
-              "teamsSource": "pdf-rfef"
+              "teamsSource": "pdf-rfef",
+              "calendar": [
+                {
+                  "jornada": 1,
+                  "date": "2026-09-19",
+                  "matches": [
+                    {
+                      "home": "AECS L Hospitalet",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
+                      "date": "2026-09-19"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "away": "CFS Autoescola Urgell Linyola",
+                      "date": "2026-09-19"
+                    },
+                    {
+                      "home": "La Villa",
+                      "away": "Entrerrios Automatización",
+                      "date": "2026-09-19"
+                    },
+                    {
+                      "home": "Feme Castellón C.F.S.",
+                      "away": "Futsal Cartonajes Pans Mataró",
+                      "date": "2026-09-19"
+                    },
+                    {
+                      "home": "AE Penya Esplugues \"A\"",
+                      "away": "Grupo Reciclarte Cesar Augusta",
+                      "date": "2026-09-19"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis",
+                      "away": "Les Corts, A.E. \"B\"",
+                      "date": "2026-09-19"
+                    },
+                    {
+                      "home": "F.S. Sabadell",
+                      "away": "Lainco Esportiu Rubi F.S.",
+                      "date": "2026-09-19"
+                    },
+                    {
+                      "home": "Somriu Futbol Sala Ripollet",
+                      "away": "C.D. Parque Col. Santa Ana",
+                      "date": "2026-09-19"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 2,
+                  "date": "2026-09-26",
+                  "matches": [
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "Somriu Futbol Sala Ripollet",
+                      "date": "2026-09-26"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola",
+                      "away": "AECS L Hospitalet",
+                      "date": "2026-09-26"
+                    },
+                    {
+                      "home": "Entrerrios Automatización",
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "date": "2026-09-26"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta",
+                      "away": "Feme Castellón C.F.S.",
+                      "date": "2026-09-26"
+                    },
+                    {
+                      "home": "Les Corts, A.E. \"B\"",
+                      "away": "AE Penya Esplugues \"A\"",
+                      "date": "2026-09-26"
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi F.S.",
+                      "away": "Club Deportivo San Pablo-Eivis",
+                      "date": "2026-09-26"
+                    },
+                    {
+                      "home": "C.D. Parque Col. Santa Ana",
+                      "away": "F.S. Sabadell",
+                      "date": "2026-09-26"
+                    },
+                    {
+                      "home": "Futsal Cartonajes Pans Mataró",
+                      "away": "La Villa",
+                      "date": "2026-09-26"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 3,
+                  "date": "2026-10-03",
+                  "matches": [
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "CFS Autoescola Urgell Linyola",
+                      "date": "2026-10-03"
+                    },
+                    {
+                      "home": "AECS L Hospitalet",
+                      "away": "Entrerrios Automatización",
+                      "date": "2026-10-03"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "away": "Futsal Cartonajes Pans Mataró",
+                      "date": "2026-10-03"
+                    },
+                    {
+                      "home": "La Villa",
+                      "away": "Grupo Reciclarte Cesar Augusta",
+                      "date": "2026-10-03"
+                    },
+                    {
+                      "home": "Feme Castellón C.F.S.",
+                      "away": "Les Corts, A.E. \"B\"",
+                      "date": "2026-10-03"
+                    },
+                    {
+                      "home": "AE Penya Esplugues \"A\"",
+                      "away": "Lainco Esportiu Rubi F.S.",
+                      "date": "2026-10-03"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis",
+                      "away": "C.D. Parque Col. Santa Ana",
+                      "date": "2026-10-03"
+                    },
+                    {
+                      "home": "Somriu Futbol Sala Ripollet",
+                      "away": "F.S. Sabadell",
+                      "date": "2026-10-03"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 4,
+                  "date": "2026-10-10",
+                  "matches": [
+                    {
+                      "home": "CFS Autoescola Urgell Linyola",
+                      "away": "Somriu Futbol Sala Ripollet",
+                      "date": "2026-10-10"
+                    },
+                    {
+                      "home": "Entrerrios Automatización",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
+                      "date": "2026-10-10"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta",
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "date": "2026-10-10"
+                    },
+                    {
+                      "home": "Les Corts, A.E. \"B\"",
+                      "away": "La Villa",
+                      "date": "2026-10-10"
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi F.S.",
+                      "away": "Feme Castellón C.F.S.",
+                      "date": "2026-10-10"
+                    },
+                    {
+                      "home": "C.D. Parque Col. Santa Ana",
+                      "away": "AE Penya Esplugues \"A\"",
+                      "date": "2026-10-10"
+                    },
+                    {
+                      "home": "F.S. Sabadell",
+                      "away": "Club Deportivo San Pablo-Eivis",
+                      "date": "2026-10-10"
+                    },
+                    {
+                      "home": "Futsal Cartonajes Pans Mataró",
+                      "away": "AECS L Hospitalet",
+                      "date": "2026-10-10"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 5,
+                  "date": "2026-10-17",
+                  "matches": [
+                    {
+                      "home": "CFS Autoescola Urgell Linyola",
+                      "away": "Entrerrios Automatización",
+                      "date": "2026-10-17"
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "Futsal Cartonajes Pans Mataró",
+                      "date": "2026-10-17"
+                    },
+                    {
+                      "home": "AECS L Hospitalet",
+                      "away": "Grupo Reciclarte Cesar Augusta",
+                      "date": "2026-10-17"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "away": "Les Corts, A.E. \"B\"",
+                      "date": "2026-10-17"
+                    },
+                    {
+                      "home": "La Villa",
+                      "away": "Lainco Esportiu Rubi F.S.",
+                      "date": "2026-10-17"
+                    },
+                    {
+                      "home": "Feme Castellón C.F.S.",
+                      "away": "C.D. Parque Col. Santa Ana",
+                      "date": "2026-10-17"
+                    },
+                    {
+                      "home": "AE Penya Esplugues \"A\"",
+                      "away": "F.S. Sabadell",
+                      "date": "2026-10-17"
+                    },
+                    {
+                      "home": "Somriu Futbol Sala Ripollet",
+                      "away": "Club Deportivo San Pablo-Eivis",
+                      "date": "2026-10-17"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 6,
+                  "date": "2026-10-24",
+                  "matches": [
+                    {
+                      "home": "Entrerrios Automatización",
+                      "away": "Somriu Futbol Sala Ripollet",
+                      "date": "2026-10-24"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
+                      "date": "2026-10-24"
+                    },
+                    {
+                      "home": "Les Corts, A.E. \"B\"",
+                      "away": "AECS L Hospitalet",
+                      "date": "2026-10-24"
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi F.S.",
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "date": "2026-10-24"
+                    },
+                    {
+                      "home": "C.D. Parque Col. Santa Ana",
+                      "away": "La Villa",
+                      "date": "2026-10-24"
+                    },
+                    {
+                      "home": "F.S. Sabadell",
+                      "away": "Feme Castellón C.F.S.",
+                      "date": "2026-10-24"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis",
+                      "away": "AE Penya Esplugues \"A\"",
+                      "date": "2026-10-24"
+                    },
+                    {
+                      "home": "Futsal Cartonajes Pans Mataró",
+                      "away": "CFS Autoescola Urgell Linyola",
+                      "date": "2026-10-24"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 7,
+                  "date": "2026-10-31",
+                  "matches": [
+                    {
+                      "home": "Entrerrios Automatización",
+                      "away": "Futsal Cartonajes Pans Mataró",
+                      "date": "2026-10-31"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola",
+                      "away": "Grupo Reciclarte Cesar Augusta",
+                      "date": "2026-10-31"
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "Les Corts, A.E. \"B\"",
+                      "date": "2026-10-31"
+                    },
+                    {
+                      "home": "AECS L Hospitalet",
+                      "away": "Lainco Esportiu Rubi F.S.",
+                      "date": "2026-10-31"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "away": "C.D. Parque Col. Santa Ana",
+                      "date": "2026-10-31"
+                    },
+                    {
+                      "home": "La Villa",
+                      "away": "F.S. Sabadell",
+                      "date": "2026-10-31"
+                    },
+                    {
+                      "home": "Feme Castellón C.F.S.",
+                      "away": "Club Deportivo San Pablo-Eivis",
+                      "date": "2026-10-31"
+                    },
+                    {
+                      "home": "Somriu Futbol Sala Ripollet",
+                      "away": "AE Penya Esplugues \"A\"",
+                      "date": "2026-10-31"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 8,
+                  "date": "2026-11-07",
+                  "matches": [
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta",
+                      "away": "Entrerrios Automatización",
+                      "date": "2026-11-07"
+                    },
+                    {
+                      "home": "Les Corts, A.E. \"B\"",
+                      "away": "CFS Autoescola Urgell Linyola",
+                      "date": "2026-11-07"
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi F.S.",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
+                      "date": "2026-11-07"
+                    },
+                    {
+                      "home": "C.D. Parque Col. Santa Ana",
+                      "away": "AECS L Hospitalet",
+                      "date": "2026-11-07"
+                    },
+                    {
+                      "home": "F.S. Sabadell",
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "date": "2026-11-07"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis",
+                      "away": "La Villa",
+                      "date": "2026-11-07"
+                    },
+                    {
+                      "home": "AE Penya Esplugues \"A\"",
+                      "away": "Feme Castellón C.F.S.",
+                      "date": "2026-11-07"
+                    },
+                    {
+                      "home": "Futsal Cartonajes Pans Mataró",
+                      "away": "Somriu Futbol Sala Ripollet",
+                      "date": "2026-11-07"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 9,
+                  "date": "2026-11-14",
+                  "matches": [
+                    {
+                      "home": "Entrerrios Automatización",
+                      "away": "Les Corts, A.E. \"B\"",
+                      "date": "2026-11-14"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola",
+                      "away": "Lainco Esportiu Rubi F.S.",
+                      "date": "2026-11-14"
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "C.D. Parque Col. Santa Ana",
+                      "date": "2026-11-14"
+                    },
+                    {
+                      "home": "AECS L Hospitalet",
+                      "away": "F.S. Sabadell",
+                      "date": "2026-11-14"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "away": "Club Deportivo San Pablo-Eivis",
+                      "date": "2026-11-14"
+                    },
+                    {
+                      "home": "La Villa",
+                      "away": "AE Penya Esplugues \"A\"",
+                      "date": "2026-11-14"
+                    },
+                    {
+                      "home": "Somriu Futbol Sala Ripollet",
+                      "away": "Feme Castellón C.F.S.",
+                      "date": "2026-11-14"
+                    },
+                    {
+                      "home": "Futsal Cartonajes Pans Mataró",
+                      "away": "Grupo Reciclarte Cesar Augusta",
+                      "date": "2026-11-14"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 10,
+                  "date": "2026-11-21",
+                  "matches": [
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta",
+                      "away": "Somriu Futbol Sala Ripollet",
+                      "date": "2026-11-21"
+                    },
+                    {
+                      "home": "Les Corts, A.E. \"B\"",
+                      "away": "Futsal Cartonajes Pans Mataró",
+                      "date": "2026-11-21"
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi F.S.",
+                      "away": "Entrerrios Automatización",
+                      "date": "2026-11-21"
+                    },
+                    {
+                      "home": "C.D. Parque Col. Santa Ana",
+                      "away": "CFS Autoescola Urgell Linyola",
+                      "date": "2026-11-21"
+                    },
+                    {
+                      "home": "F.S. Sabadell",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
+                      "date": "2026-11-21"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis",
+                      "away": "AECS L Hospitalet",
+                      "date": "2026-11-21"
+                    },
+                    {
+                      "home": "AE Penya Esplugues \"A\"",
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "date": "2026-11-21"
+                    },
+                    {
+                      "home": "Feme Castellón C.F.S.",
+                      "away": "La Villa",
+                      "date": "2026-11-21"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 11,
+                  "date": "2026-11-28",
+                  "matches": [
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta",
+                      "away": "Les Corts, A.E. \"B\"",
+                      "date": "2026-11-28"
+                    },
+                    {
+                      "home": "Entrerrios Automatización",
+                      "away": "C.D. Parque Col. Santa Ana",
+                      "date": "2026-11-28"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola",
+                      "away": "F.S. Sabadell",
+                      "date": "2026-11-28"
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "Club Deportivo San Pablo-Eivis",
+                      "date": "2026-11-28"
+                    },
+                    {
+                      "home": "AECS L Hospitalet",
+                      "away": "AE Penya Esplugues \"A\"",
+                      "date": "2026-11-28"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "away": "Feme Castellón C.F.S.",
+                      "date": "2026-11-28"
+                    },
+                    {
+                      "home": "Somriu Futbol Sala Ripollet",
+                      "away": "La Villa",
+                      "date": "2026-11-28"
+                    },
+                    {
+                      "home": "Futsal Cartonajes Pans Mataró",
+                      "away": "Lainco Esportiu Rubi F.S.",
+                      "date": "2026-11-28"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 12,
+                  "date": "2026-12-05",
+                  "matches": [
+                    {
+                      "home": "Les Corts, A.E. \"B\"",
+                      "away": "Somriu Futbol Sala Ripollet",
+                      "date": "2026-12-05"
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi F.S.",
+                      "away": "Grupo Reciclarte Cesar Augusta",
+                      "date": "2026-12-05"
+                    },
+                    {
+                      "home": "C.D. Parque Col. Santa Ana",
+                      "away": "Futsal Cartonajes Pans Mataró",
+                      "date": "2026-12-05"
+                    },
+                    {
+                      "home": "F.S. Sabadell",
+                      "away": "Entrerrios Automatización",
+                      "date": "2026-12-05"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis",
+                      "away": "CFS Autoescola Urgell Linyola",
+                      "date": "2026-12-05"
+                    },
+                    {
+                      "home": "AE Penya Esplugues \"A\"",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
+                      "date": "2026-12-05"
+                    },
+                    {
+                      "home": "Feme Castellón C.F.S.",
+                      "away": "AECS L Hospitalet",
+                      "date": "2026-12-05"
+                    },
+                    {
+                      "home": "La Villa",
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "date": "2026-12-05"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 13,
+                  "date": "2026-12-12",
+                  "matches": [
+                    {
+                      "home": "Les Corts, A.E. \"B\"",
+                      "away": "Lainco Esportiu Rubi F.S.",
+                      "date": "2026-12-12"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta",
+                      "away": "C.D. Parque Col. Santa Ana",
+                      "date": "2026-12-12"
+                    },
+                    {
+                      "home": "Entrerrios Automatización",
+                      "away": "Club Deportivo San Pablo-Eivis",
+                      "date": "2026-12-12"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola",
+                      "away": "AE Penya Esplugues \"A\"",
+                      "date": "2026-12-12"
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "Feme Castellón C.F.S.",
+                      "date": "2026-12-12"
+                    },
+                    {
+                      "home": "AECS L Hospitalet",
+                      "away": "La Villa",
+                      "date": "2026-12-12"
+                    },
+                    {
+                      "home": "Somriu Futbol Sala Ripollet",
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "date": "2026-12-12"
+                    },
+                    {
+                      "home": "Futsal Cartonajes Pans Mataró",
+                      "away": "F.S. Sabadell",
+                      "date": "2026-12-12"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 14,
+                  "date": "2026-12-19",
+                  "matches": [
+                    {
+                      "home": "Somriu Futbol Sala Ripollet",
+                      "away": "Lainco Esportiu Rubi F.S.",
+                      "date": "2026-12-19"
+                    },
+                    {
+                      "home": "C.D. Parque Col. Santa Ana",
+                      "away": "Les Corts, A.E. \"B\"",
+                      "date": "2026-12-19"
+                    },
+                    {
+                      "home": "F.S. Sabadell",
+                      "away": "Grupo Reciclarte Cesar Augusta",
+                      "date": "2026-12-19"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis",
+                      "away": "Futsal Cartonajes Pans Mataró",
+                      "date": "2026-12-19"
+                    },
+                    {
+                      "home": "AE Penya Esplugues \"A\"",
+                      "away": "Entrerrios Automatización",
+                      "date": "2026-12-19"
+                    },
+                    {
+                      "home": "Feme Castellón C.F.S.",
+                      "away": "CFS Autoescola Urgell Linyola",
+                      "date": "2026-12-19"
+                    },
+                    {
+                      "home": "La Villa",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
+                      "date": "2026-12-19"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "away": "AECS L Hospitalet",
+                      "date": "2026-12-19"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 15,
+                  "date": "2027-01-09",
+                  "matches": [
+                    {
+                      "home": "Lainco Esportiu Rubi F.S.",
+                      "away": "C.D. Parque Col. Santa Ana",
+                      "date": "2027-01-09"
+                    },
+                    {
+                      "home": "Les Corts, A.E. \"B\"",
+                      "away": "F.S. Sabadell",
+                      "date": "2027-01-09"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta",
+                      "away": "Club Deportivo San Pablo-Eivis",
+                      "date": "2027-01-09"
+                    },
+                    {
+                      "home": "Entrerrios Automatización",
+                      "away": "Feme Castellón C.F.S.",
+                      "date": "2027-01-09"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola",
+                      "away": "La Villa",
+                      "date": "2027-01-09"
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "date": "2027-01-09"
+                    },
+                    {
+                      "home": "AECS L Hospitalet",
+                      "away": "Somriu Futbol Sala Ripollet",
+                      "date": "2027-01-09"
+                    },
+                    {
+                      "home": "Futsal Cartonajes Pans Mataró",
+                      "away": "AE Penya Esplugues \"A\"",
+                      "date": "2027-01-09"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 16,
+                  "date": "2027-01-16",
+                  "matches": [
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "AECS L Hospitalet",
+                      "date": "2027-01-16"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola",
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "date": "2027-01-16"
+                    },
+                    {
+                      "home": "Entrerrios Automatización",
+                      "away": "La Villa",
+                      "date": "2027-01-16"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta",
+                      "away": "AE Penya Esplugues \"A\"",
+                      "date": "2027-01-16"
+                    },
+                    {
+                      "home": "Les Corts, A.E. \"B\"",
+                      "away": "Club Deportivo San Pablo-Eivis",
+                      "date": "2027-01-16"
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi F.S.",
+                      "away": "F.S. Sabadell",
+                      "date": "2027-01-16"
+                    },
+                    {
+                      "home": "C.D. Parque Col. Santa Ana",
+                      "away": "Somriu Futbol Sala Ripollet",
+                      "date": "2027-01-16"
+                    },
+                    {
+                      "home": "Futsal Cartonajes Pans Mataró",
+                      "away": "Feme Castellón C.F.S.",
+                      "date": "2027-01-16"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 17,
+                  "date": "2027-01-23",
+                  "matches": [
+                    {
+                      "home": "Somriu Futbol Sala Ripollet",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
+                      "date": "2027-01-23"
+                    },
+                    {
+                      "home": "AECS L Hospitalet",
+                      "away": "CFS Autoescola Urgell Linyola",
+                      "date": "2027-01-23"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "away": "Entrerrios Automatización",
+                      "date": "2027-01-23"
+                    },
+                    {
+                      "home": "La Villa",
+                      "away": "Futsal Cartonajes Pans Mataró",
+                      "date": "2027-01-23"
+                    },
+                    {
+                      "home": "Feme Castellón C.F.S.",
+                      "away": "Grupo Reciclarte Cesar Augusta",
+                      "date": "2027-01-23"
+                    },
+                    {
+                      "home": "AE Penya Esplugues \"A\"",
+                      "away": "Les Corts, A.E. \"B\"",
+                      "date": "2027-01-23"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis",
+                      "away": "Lainco Esportiu Rubi F.S.",
+                      "date": "2027-01-23"
+                    },
+                    {
+                      "home": "F.S. Sabadell",
+                      "away": "C.D. Parque Col. Santa Ana",
+                      "date": "2027-01-23"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 18,
+                  "date": "2027-02-06",
+                  "matches": [
+                    {
+                      "home": "CFS Autoescola Urgell Linyola",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
+                      "date": "2027-02-06"
+                    },
+                    {
+                      "home": "Entrerrios Automatización",
+                      "away": "AECS L Hospitalet",
+                      "date": "2027-02-06"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta",
+                      "away": "La Villa",
+                      "date": "2027-02-06"
+                    },
+                    {
+                      "home": "Les Corts, A.E. \"B\"",
+                      "away": "Feme Castellón C.F.S.",
+                      "date": "2027-02-06"
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi F.S.",
+                      "away": "AE Penya Esplugues \"A\"",
+                      "date": "2027-02-06"
+                    },
+                    {
+                      "home": "C.D. Parque Col. Santa Ana",
+                      "away": "Club Deportivo San Pablo-Eivis",
+                      "date": "2027-02-06"
+                    },
+                    {
+                      "home": "F.S. Sabadell",
+                      "away": "Somriu Futbol Sala Ripollet",
+                      "date": "2027-02-06"
+                    },
+                    {
+                      "home": "Futsal Cartonajes Pans Mataró",
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "date": "2027-02-06"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 19,
+                  "date": "2027-02-13",
+                  "matches": [
+                    {
+                      "home": "Somriu Futbol Sala Ripollet",
+                      "away": "CFS Autoescola Urgell Linyola",
+                      "date": "2027-02-13"
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "Entrerrios Automatización",
+                      "date": "2027-02-13"
+                    },
+                    {
+                      "home": "AECS L Hospitalet",
+                      "away": "Futsal Cartonajes Pans Mataró",
+                      "date": "2027-02-13"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "away": "Grupo Reciclarte Cesar Augusta",
+                      "date": "2027-02-13"
+                    },
+                    {
+                      "home": "La Villa",
+                      "away": "Les Corts, A.E. \"B\"",
+                      "date": "2027-02-13"
+                    },
+                    {
+                      "home": "Feme Castellón C.F.S.",
+                      "away": "Lainco Esportiu Rubi F.S.",
+                      "date": "2027-02-13"
+                    },
+                    {
+                      "home": "AE Penya Esplugues \"A\"",
+                      "away": "C.D. Parque Col. Santa Ana",
+                      "date": "2027-02-13"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis",
+                      "away": "F.S. Sabadell",
+                      "date": "2027-02-13"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 20,
+                  "date": "2027-02-20",
+                  "matches": [
+                    {
+                      "home": "Entrerrios Automatización",
+                      "away": "CFS Autoescola Urgell Linyola",
+                      "date": "2027-02-20"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta",
+                      "away": "AECS L Hospitalet",
+                      "date": "2027-02-20"
+                    },
+                    {
+                      "home": "Les Corts, A.E. \"B\"",
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "date": "2027-02-20"
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi F.S.",
+                      "away": "La Villa",
+                      "date": "2027-02-20"
+                    },
+                    {
+                      "home": "C.D. Parque Col. Santa Ana",
+                      "away": "Feme Castellón C.F.S.",
+                      "date": "2027-02-20"
+                    },
+                    {
+                      "home": "F.S. Sabadell",
+                      "away": "AE Penya Esplugues \"A\"",
+                      "date": "2027-02-20"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis",
+                      "away": "Somriu Futbol Sala Ripollet",
+                      "date": "2027-02-20"
+                    },
+                    {
+                      "home": "Futsal Cartonajes Pans Mataró",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
+                      "date": "2027-02-20"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 21,
+                  "date": "2027-03-06",
+                  "matches": [
+                    {
+                      "home": "Somriu Futbol Sala Ripollet",
+                      "away": "Entrerrios Automatización",
+                      "date": "2027-03-06"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola",
+                      "away": "Futsal Cartonajes Pans Mataró",
+                      "date": "2027-03-06"
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "Grupo Reciclarte Cesar Augusta",
+                      "date": "2027-03-06"
+                    },
+                    {
+                      "home": "AECS L Hospitalet",
+                      "away": "Les Corts, A.E. \"B\"",
+                      "date": "2027-03-06"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "away": "Lainco Esportiu Rubi F.S.",
+                      "date": "2027-03-06"
+                    },
+                    {
+                      "home": "La Villa",
+                      "away": "C.D. Parque Col. Santa Ana",
+                      "date": "2027-03-06"
+                    },
+                    {
+                      "home": "Feme Castellón C.F.S.",
+                      "away": "F.S. Sabadell",
+                      "date": "2027-03-06"
+                    },
+                    {
+                      "home": "AE Penya Esplugues \"A\"",
+                      "away": "Club Deportivo San Pablo-Eivis",
+                      "date": "2027-03-06"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 22,
+                  "date": "2027-03-13",
+                  "matches": [
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta",
+                      "away": "CFS Autoescola Urgell Linyola",
+                      "date": "2027-03-13"
+                    },
+                    {
+                      "home": "Les Corts, A.E. \"B\"",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
+                      "date": "2027-03-13"
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi F.S.",
+                      "away": "AECS L Hospitalet",
+                      "date": "2027-03-13"
+                    },
+                    {
+                      "home": "C.D. Parque Col. Santa Ana",
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "date": "2027-03-13"
+                    },
+                    {
+                      "home": "F.S. Sabadell",
+                      "away": "La Villa",
+                      "date": "2027-03-13"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis",
+                      "away": "Feme Castellón C.F.S.",
+                      "date": "2027-03-13"
+                    },
+                    {
+                      "home": "AE Penya Esplugues \"A\"",
+                      "away": "Somriu Futbol Sala Ripollet",
+                      "date": "2027-03-13"
+                    },
+                    {
+                      "home": "Futsal Cartonajes Pans Mataró",
+                      "away": "Entrerrios Automatización",
+                      "date": "2027-03-13"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 23,
+                  "date": "2027-03-20",
+                  "matches": [
+                    {
+                      "home": "Somriu Futbol Sala Ripollet",
+                      "away": "Futsal Cartonajes Pans Mataró",
+                      "date": "2027-03-20"
+                    },
+                    {
+                      "home": "Entrerrios Automatización",
+                      "away": "Grupo Reciclarte Cesar Augusta",
+                      "date": "2027-03-20"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola",
+                      "away": "Les Corts, A.E. \"B\"",
+                      "date": "2027-03-20"
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "Lainco Esportiu Rubi F.S.",
+                      "date": "2027-03-20"
+                    },
+                    {
+                      "home": "AECS L Hospitalet",
+                      "away": "C.D. Parque Col. Santa Ana",
+                      "date": "2027-03-20"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "away": "F.S. Sabadell",
+                      "date": "2027-03-20"
+                    },
+                    {
+                      "home": "La Villa",
+                      "away": "Club Deportivo San Pablo-Eivis",
+                      "date": "2027-03-20"
+                    },
+                    {
+                      "home": "Feme Castellón C.F.S.",
+                      "away": "AE Penya Esplugues \"A\"",
+                      "date": "2027-03-20"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 24,
+                  "date": "2027-04-03",
+                  "matches": [
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta",
+                      "away": "Futsal Cartonajes Pans Mataró",
+                      "date": "2027-04-03"
+                    },
+                    {
+                      "home": "Les Corts, A.E. \"B\"",
+                      "away": "Entrerrios Automatización",
+                      "date": "2027-04-03"
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi F.S.",
+                      "away": "CFS Autoescola Urgell Linyola",
+                      "date": "2027-04-03"
+                    },
+                    {
+                      "home": "C.D. Parque Col. Santa Ana",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
+                      "date": "2027-04-03"
+                    },
+                    {
+                      "home": "F.S. Sabadell",
+                      "away": "AECS L Hospitalet",
+                      "date": "2027-04-03"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis",
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "date": "2027-04-03"
+                    },
+                    {
+                      "home": "AE Penya Esplugues \"A\"",
+                      "away": "La Villa",
+                      "date": "2027-04-03"
+                    },
+                    {
+                      "home": "Feme Castellón C.F.S.",
+                      "away": "Somriu Futbol Sala Ripollet",
+                      "date": "2027-04-03"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 25,
+                  "date": "2027-04-10",
+                  "matches": [
+                    {
+                      "home": "Somriu Futbol Sala Ripollet",
+                      "away": "Grupo Reciclarte Cesar Augusta",
+                      "date": "2027-04-10"
+                    },
+                    {
+                      "home": "Entrerrios Automatización",
+                      "away": "Lainco Esportiu Rubi F.S.",
+                      "date": "2027-04-10"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola",
+                      "away": "C.D. Parque Col. Santa Ana",
+                      "date": "2027-04-10"
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "F.S. Sabadell",
+                      "date": "2027-04-10"
+                    },
+                    {
+                      "home": "AECS L Hospitalet",
+                      "away": "Club Deportivo San Pablo-Eivis",
+                      "date": "2027-04-10"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "away": "AE Penya Esplugues \"A\"",
+                      "date": "2027-04-10"
+                    },
+                    {
+                      "home": "La Villa",
+                      "away": "Feme Castellón C.F.S.",
+                      "date": "2027-04-10"
+                    },
+                    {
+                      "home": "Futsal Cartonajes Pans Mataró",
+                      "away": "Les Corts, A.E. \"B\"",
+                      "date": "2027-04-10"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 26,
+                  "date": "2027-04-24",
+                  "matches": [
+                    {
+                      "home": "Les Corts, A.E. \"B\"",
+                      "away": "Grupo Reciclarte Cesar Augusta",
+                      "date": "2027-04-24"
+                    },
+                    {
+                      "home": "Lainco Esportiu Rubi F.S.",
+                      "away": "Futsal Cartonajes Pans Mataró",
+                      "date": "2027-04-24"
+                    },
+                    {
+                      "home": "C.D. Parque Col. Santa Ana",
+                      "away": "Entrerrios Automatización",
+                      "date": "2027-04-24"
+                    },
+                    {
+                      "home": "F.S. Sabadell",
+                      "away": "CFS Autoescola Urgell Linyola",
+                      "date": "2027-04-24"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
+                      "date": "2027-04-24"
+                    },
+                    {
+                      "home": "AE Penya Esplugues \"A\"",
+                      "away": "AECS L Hospitalet",
+                      "date": "2027-04-24"
+                    },
+                    {
+                      "home": "Feme Castellón C.F.S.",
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "date": "2027-04-24"
+                    },
+                    {
+                      "home": "La Villa",
+                      "away": "Somriu Futbol Sala Ripollet",
+                      "date": "2027-04-24"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 27,
+                  "date": "2027-05-01",
+                  "matches": [
+                    {
+                      "home": "Somriu Futbol Sala Ripollet",
+                      "away": "Les Corts, A.E. \"B\"",
+                      "date": "2027-05-01"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta",
+                      "away": "Lainco Esportiu Rubi F.S.",
+                      "date": "2027-05-01"
+                    },
+                    {
+                      "home": "Entrerrios Automatización",
+                      "away": "F.S. Sabadell",
+                      "date": "2027-05-01"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola",
+                      "away": "Club Deportivo San Pablo-Eivis",
+                      "date": "2027-05-01"
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "AE Penya Esplugues \"A\"",
+                      "date": "2027-05-01"
+                    },
+                    {
+                      "home": "AECS L Hospitalet",
+                      "away": "Feme Castellón C.F.S.",
+                      "date": "2027-05-01"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "away": "La Villa",
+                      "date": "2027-05-01"
+                    },
+                    {
+                      "home": "Futsal Cartonajes Pans Mataró",
+                      "away": "C.D. Parque Col. Santa Ana",
+                      "date": "2027-05-01"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 28,
+                  "date": "2027-05-08",
+                  "matches": [
+                    {
+                      "home": "Lainco Esportiu Rubi F.S.",
+                      "away": "Les Corts, A.E. \"B\"",
+                      "date": "2027-05-08"
+                    },
+                    {
+                      "home": "C.D. Parque Col. Santa Ana",
+                      "away": "Grupo Reciclarte Cesar Augusta",
+                      "date": "2027-05-08"
+                    },
+                    {
+                      "home": "F.S. Sabadell",
+                      "away": "Futsal Cartonajes Pans Mataró",
+                      "date": "2027-05-08"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis",
+                      "away": "Entrerrios Automatización",
+                      "date": "2027-05-08"
+                    },
+                    {
+                      "home": "AE Penya Esplugues \"A\"",
+                      "away": "CFS Autoescola Urgell Linyola",
+                      "date": "2027-05-08"
+                    },
+                    {
+                      "home": "Feme Castellón C.F.S.",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
+                      "date": "2027-05-08"
+                    },
+                    {
+                      "home": "La Villa",
+                      "away": "AECS L Hospitalet",
+                      "date": "2027-05-08"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "away": "Somriu Futbol Sala Ripollet",
+                      "date": "2027-05-08"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 29,
+                  "date": "2027-05-15",
+                  "matches": [
+                    {
+                      "home": "Lainco Esportiu Rubi F.S.",
+                      "away": "Somriu Futbol Sala Ripollet",
+                      "date": "2027-05-15"
+                    },
+                    {
+                      "home": "Les Corts, A.E. \"B\"",
+                      "away": "C.D. Parque Col. Santa Ana",
+                      "date": "2027-05-15"
+                    },
+                    {
+                      "home": "Grupo Reciclarte Cesar Augusta",
+                      "away": "F.S. Sabadell",
+                      "date": "2027-05-15"
+                    },
+                    {
+                      "home": "Entrerrios Automatización",
+                      "away": "AE Penya Esplugues \"A\"",
+                      "date": "2027-05-15"
+                    },
+                    {
+                      "home": "CFS Autoescola Urgell Linyola",
+                      "away": "Feme Castellón C.F.S.",
+                      "date": "2027-05-15"
+                    },
+                    {
+                      "home": "Club Deportivo Nou Turia FSF \"A\"",
+                      "away": "La Villa",
+                      "date": "2027-05-15"
+                    },
+                    {
+                      "home": "AECS L Hospitalet",
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "date": "2027-05-15"
+                    },
+                    {
+                      "home": "Futsal Cartonajes Pans Mataró",
+                      "away": "Club Deportivo San Pablo-Eivis",
+                      "date": "2027-05-15"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 30,
+                  "date": "2027-05-22",
+                  "matches": [
+                    {
+                      "home": "C.D. Parque Col. Santa Ana",
+                      "away": "Lainco Esportiu Rubi F.S.",
+                      "date": "2027-05-22"
+                    },
+                    {
+                      "home": "F.S. Sabadell",
+                      "away": "Les Corts, A.E. \"B\"",
+                      "date": "2027-05-22"
+                    },
+                    {
+                      "home": "Club Deportivo San Pablo-Eivis",
+                      "away": "Grupo Reciclarte Cesar Augusta",
+                      "date": "2027-05-22"
+                    },
+                    {
+                      "home": "AE Penya Esplugues \"A\"",
+                      "away": "Futsal Cartonajes Pans Mataró",
+                      "date": "2027-05-22"
+                    },
+                    {
+                      "home": "Feme Castellón C.F.S.",
+                      "away": "Entrerrios Automatización",
+                      "date": "2027-05-22"
+                    },
+                    {
+                      "home": "La Villa",
+                      "away": "CFS Autoescola Urgell Linyola",
+                      "date": "2027-05-22"
+                    },
+                    {
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
+                      "date": "2027-05-22"
+                    },
+                    {
+                      "home": "Somriu Futbol Sala Ripollet",
+                      "away": "AECS L Hospitalet",
+                      "date": "2027-05-22"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "id": "g3",
