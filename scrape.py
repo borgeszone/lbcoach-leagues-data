@@ -107,13 +107,23 @@ def inherit_calendars(categories: list[dict], published: dict) -> int:
     índice los calendarios se correrían de sitio.
     """
     src: dict[str, list] = {}
+    # `jornadasTotal` va por separado y **no compite**: es un dato de la
+    # competición (el `<select>` de la PNFG), no del run. Si este run no pudo
+    # leerlo se conserva el publicado, igual que el calendario — sin esto, un run
+    # bloqueado borraría el denominador y el panel volvería a no poder distinguir
+    # "23 de 30" de "23 y no sabemos".
+    totales: dict[str, int] = {}
     for cat in published.get("categories", []):
         for div in cat.get("divisions", []):
             if div.get("calendar"):
                 src[f"{cat['id']}/{div['id']}"] = div["calendar"]
+            if div.get("jornadasTotal"):
+                totales[f"{cat['id']}/{div['id']}"] = div["jornadasTotal"]
             for g in div.get("groups", []) or []:
                 if g.get("calendar"):
                     src[f"{cat['id']}/{div['id']}/{g['id']}"] = g["calendar"]
+                if g.get("jornadasTotal"):
+                    totales[f"{cat['id']}/{div['id']}/{g['id']}"] = g["jornadasTotal"]
 
     n = 0
 
@@ -130,13 +140,19 @@ def inherit_calendars(categories: list[dict], published: dict) -> int:
         nodo["calendar"] = publicado
         return 1
 
+    def _total(nodo: dict, clave: str) -> None:
+        if not nodo.get("jornadasTotal") and totales.get(clave):
+            nodo["jornadasTotal"] = totales[clave]
+
     for cat in categories:
         for div in cat.get("divisions", []):
             key = f"{cat['id']}/{div['id']}"
             n += _mejor(div, key, div["id"])
+            _total(div, key)
             for g in div.get("groups", []) or []:
                 gkey = f"{key}/{g['id']}"
                 n += _mejor(g, gkey, f"{div['id']}/{g['id']}")
+                _total(g, gkey)
     return n
 
 

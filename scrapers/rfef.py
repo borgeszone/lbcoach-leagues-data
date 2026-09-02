@@ -1447,13 +1447,15 @@ def _attach_calendars(
 
         if cfg["flat"]:
             group = cfg["groups"][0]
+            meta: dict = {}
             calendar = _calendar_for_group(
                 comp_code, group.code, season_code, max_jornadas, breaker,
-                label=cfg["id"], pdf=lambda: _pdf_calendar_for(cfg),
+                label=cfg["id"], pdf=lambda: _pdf_calendar_for(cfg), meta=meta,
             )
             if calendar:
                 _merge_acta_cache(calendar, comp_code, group.code, label=cfg["id"])
                 div["calendar"] = calendar
+            _note_total(div, meta, cfg["id"])
             time.sleep(10)
             continue
 
@@ -1463,6 +1465,7 @@ def _attach_calendars(
             if grp is None:
                 continue
             n_match = re.match(r"g(\d+)$", group.id)
+            meta = {}
             calendar = _calendar_for_group(
                 comp_code, group.code, season_code, max_jornadas, breaker,
                 label=f"{cfg['id']}/{group.id}",
@@ -1471,11 +1474,13 @@ def _attach_calendars(
                     group_n=int(n_match.group(1)) if n_match else None,
                     group_id=group.id,
                 ),
+                meta=meta,
             )
             if calendar:
                 _merge_acta_cache(calendar, comp_code, group.code,
                                   label=f"{cfg['id']}/{group.id}")
                 grp["calendar"] = calendar
+            _note_total(grp, meta, f"{cfg['id']}/{group.id}")
             time.sleep(10)
 
     resumen = breaker.summary()
@@ -1483,6 +1488,32 @@ def _attach_calendars(
         print(f"[rfef-cal] AVISO: {resumen}")
         if warnings is not None:
             warnings.append(resumen)
+
+
+def _note_total(nodo: dict, meta: dict, label: str) -> None:
+    """Anota `jornadasTotal`: cuántas jornadas tiene la competición **de verdad**.
+
+    Sale del `<select name=jornada>` de la PNFG, así que es un dato de la
+    federación y no una estimación nuestra. Y se sabe aunque el resto del bucle
+    se lo coma el rate-limit, porque ese `<select>` viene en la J1.
+
+    Sin esto, "23 jornadas publicadas" no se puede leer: pueden ser las 23 que
+    hay o 23 de 30. El panel lo estimaba con `2·(N−1)` y se equivocaba en las
+    divisiones por fases —Liga Prime publica una sola y sus 15 de 16 equipos
+    están bien—, así que el aviso de "puede faltar la cola" era permanente ahí.
+    Con el total publicado la ambigüedad desaparece: son 15 de 15.
+
+    **No se baja nunca.** Si este run no pudo leerlo, no se escribe y
+    `scrape.inherit_calendars` conserva el del JSON anterior — mismo criterio
+    que el calendario, que es un dato de la competición y no del run.
+    """
+    total = meta.get("total")
+    if not total:
+        return
+    nodo["jornadasTotal"] = total
+    hay = len(nodo.get("calendar") or [])
+    if hay < total:
+        print(f"  [rfef-cal] {label}: {hay} de {total} jornadas")
 
 
 def _calendar_for_group(
@@ -1494,6 +1525,7 @@ def _calendar_for_group(
     *,
     label: str,
     pdf,
+    meta: dict | None = None,
 ) -> list[dict]:
     """El calendario de un grupo: PNFG, si no PDF, y la caché por encima.
 
@@ -1512,7 +1544,7 @@ def _calendar_for_group(
     """
     fresh = fetch_division_calendar(
         comp_code, group_code, temporada_code=season_code,
-        max_jornadas=max_jornadas, breaker=breaker,
+        max_jornadas=max_jornadas, breaker=breaker, meta=meta,
     )
     if fresh:
         n = calendar_cache.store_jornadas(comp_code, group_code, fresh)

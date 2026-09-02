@@ -202,6 +202,7 @@ def fetch_division_calendar(
     jornada_delay: float = 4.0,
     max_jornadas: int | None = None,
     breaker: "RateLimitBreaker | None" = None,
+    meta: dict | None = None,
 ) -> list[dict]:
     """Devuelve `[{"jornada": N, "matches": [{"home","away","date"}]}]`.
 
@@ -243,6 +244,17 @@ def fetch_division_calendar(
         # Página sin <select> de jornadas poblado: intentar parsear J1 sola.
         matches = _parse_matches(first_html)
         return [{"jornada": 1, "matches": matches}] if matches else []
+
+    # **El total, antes de recortar.** Es lo único que dice cuántas jornadas
+    # tiene la competición de verdad, y se sabe aquí aunque el resto del bucle
+    # se lo coma el rate-limit: sale del `<select>` de la J1.
+    #
+    # Se anota antes del recorte de `max_jornadas` a propósito. En modo
+    # solo-equipos se piden dos jornadas y se publican cero, pero el total sigue
+    # siendo el de la competición — y publicarlo permite que el panel distinga
+    # "faltan 7 de 30" de "hay 23 y no sabemos si son todas".
+    if meta is not None:
+        meta["total"] = len(jornada_nums)
 
     if max_jornadas is not None:
         jornada_nums = jornada_nums[:max_jornadas]
