@@ -203,6 +203,42 @@ def inject_rfef_shields(shields: dict[str, str]) -> None:
     _rfef_shields = {k: v for k, v in shields.items() if _is_trusted_url(v)}
 
 
+def shield_count() -> int:
+    """Cuántas entradas tiene el mapa oficial de esta ejecución. Sólo para poder
+    decir en el log cuánto ha aportado cada fuente."""
+    return len(_rfef_shields)
+
+
+def add_rfef_shields(shields: dict[str, str]) -> None:
+    """Añade escudos al mapa oficial, **sin pisar** lo que ya hubiera.
+
+    Existe aparte de `inject_rfef_shields` porque las dos llamadas dicen cosas
+    distintas: aquélla la hace el orchestrator una vez al principio con el mapa
+    del portal, y ésta la hace el scraper del calendario cuando ya ha bajado las
+    jornadas. Si ésta reemplazara —que es lo que hace la otra— borraría el mapa
+    del portal, y si aquélla fusionara, un run no podría empezar limpio.
+
+    `setdefault` y no `update`: el portal es una página de club y el calendario
+    una fila de partido; ante duda gana quien llegó primero, que es el orden de
+    la cascada de `resolve_logo_url`.
+
+    Mismo filtro de dominio, y por el mismo motivo: de aquí salen escrituras a
+    `badges-cache.json`, que sí se persisten.
+
+    **Ojo a la asimetría con `inject_rfef_shields`: ésta recibe los nombres en
+    crudo y normaliza aquí dentro.** Es a propósito: su llamador tiene los
+    nombres tal y como los escribió la federación en el HTML del calendario, y
+    normalizar en el sitio de la llamada sería una tercera copia de `_norm` — la
+    clase de duplicado que hace que un día el mapa se indexe con una clave y se
+    consulte con otra, y que no falla en voz alta: simplemente no encuentra
+    nada y los escudos no aparecen.
+    """
+    global _rfef_shields
+    for k, v in shields.items():
+        if _is_trusted_url(v):
+            _rfef_shields.setdefault(_norm(k), v)
+
+
 def resolve_logo_url(team_name: str, *, trusted_only: bool = False) -> str | None:
     """Devuelve la URL del escudo del equipo o None si nada la tiene.
 

@@ -286,6 +286,12 @@ def fetch_division_calendar(
         matches = _parse_matches(html)
         if matches:
             out.append({"jornada": num, "matches": matches})
+        # Los escudos se acumulan de TODAS las jornadas y no solo de la primera:
+        # con un número impar de equipos hay uno que descansa cada jornada, y
+        # mirando una sola ese se quedaría sin escudo. Es el mismo motivo por el
+        # que `teams_from_calendar` recorre el calendario entero.
+        if meta is not None:
+            meta.setdefault("badges", {}).update(parse_jornada_badges(html))
 
     print(f"  [rfef-cal] {label}: {len(out)} jornadas con partidos")
     return out
@@ -356,15 +362,18 @@ def _parse_jornada_numbers(html: str) -> list[int]:
     return sorted(nums)
 
 
-def _parse_matches(html: str) -> list[dict]:
-    """Extrae los partidos de una jornada. Cada `<tr>` con exactamente un
-    `div.font_widgetL` (local) y un `div.font_widgetV` (visitante) es un
-    partido; la fecha+hora se lee del propio `<tr>`.
+def _match_rows(html: str):
+    """Las filas de partido de una jornada, con sus dos nombres ya limpios.
 
-    Deduplica por (local, visitante) normalizados porque un `<tr>` ancestro
-    puede envolver al de cada partido y colar duplicados."""
+    Criterio: un `<tr>` con **exactamente** un `div.font_widgetL` (local) y un
+    `div.font_widgetV` (visitante). Vive aquí y no duplicado en cada parser
+    porque lo consumen dos —los partidos y los escudos—, y dos copias de este
+    criterio son dos cosas que un día discrepan sobre qué es un partido.
+
+    Deduplica por (local, visitante) normalizados: un `<tr>` ancestro puede
+    envolver al de cada partido y colar duplicados.
+    """
     soup = BeautifulSoup(html, "html.parser")
-    out: list[dict] = []
     seen: set[tuple[str, str]] = set()
     for tr in soup.find_all("tr"):
         locals_ = tr.select("div.font_widgetL")
@@ -379,7 +388,77 @@ def _parse_matches(html: str) -> list[dict]:
         if key in seen:
             continue
         seen.add(key)
+        yield tr, home, away
 
+
+def parse_jornada_badges(html: str) -> dict[str, str]:
+    """`{nombre de equipo: URL de su escudo}` leído de las filas de una jornada.
+
+    ## Por qué existe
+
+    La cobertura de escudos estaba en el 33 % (65 de 192). La única fuente que
+    trae el escudo **en la misma fila que el nombre** era la clasificación, y la
+    clasificación no existe hasta que se juega la J1: medido el 2026-09-02, con
+    la temporada arrancando dos días después, su página respondía 60 KB sin
+    tabla.
+
+    Pero el calendario —que este módulo ya descarga entero— trae los dos escudos
+    en cada fila, servidos por el servidor de ficheros de la propia federación,
+    que es uno de los dominios que la allowlist admite (`IP-004`). Así que esta
+    fuente no cuesta ni una petición más, existe desde el sorteo, y la
+    asociación nombre → escudo la confirma **la fila**: no es un parecido de
+    nombres ni una búsqueda.
+
+    ## El orden de las dos imágenes es el contrato
+
+    Cada fila trae exactamente dos: local y visitante, en ese orden. Con más o
+    con menos no se afirma nada y la fila se salta — preferir `None` a un escudo
+    que puede ser del equipo de al lado es la regla de todo el resolver, y aquí
+    el error sería especialmente difícil de ver: un escudo equivocado se parece
+    mucho a un escudo.
+
+    **No se filtra por dominio aquí.** Eso lo hace `logo_resolver` al inyectar,
+    que es donde vive la allowlist y donde tiene que quedarse la decisión.
+
+    Los nombres son los **oficiales** (los del acta), que es justo la clave con
+    la que `_teams_from_names` resuelve antes de que `_with_short_names` los
+    renombre.
+    """
+    out: dict[str, str] = {}
+    for tr, home, away in _match_rows(html):
+        imgs = [i.get("src") for i in tr.find_all("img") if i.get("src")]
+        if len(imgs) != 2:
+            continue
+        for nombre, url in ((home, imgs[0]), (away, imgs[1])):
+            if _is_placeholder(url):
+                continue
+            out.setdefault(nombre, url)
+    return out
+
+
+# El escudo genérico que la PNFG sirve cuando un club no tiene el suyo subido.
+# Es **la misma URL para todos**, sin ningún id dentro:
+#
+#   .../pnfg/img/web_responsive_2/ESP/escudo_sm_resultados_.jpg
+#
+# Hay que descartarlo por lo que es y no por el host que lo sirve. Hoy viene de
+# un dominio que la allowlist no admite, así que el filtro de `logo_resolver` lo
+# para de rebote — pero eso es una casualidad, no una garantía: el día que lo
+# sirvan desde `rfef.filesnovanet.es` entraría, y entonces medio JSON tendría
+# "escudo" y sería el mismo dibujo gris para todos. Un placeholder publicado
+# como escudo es peor que un hueco: el hueco la app ya lo pinta con su propio
+# marcador, y además se ve en el recuento de cobertura.
+_PLACEHOLDER_RE = re.compile(r"escudo_sm_resultados|/web_responsive_\d+/", re.I)
+
+
+def _is_placeholder(url: str) -> bool:
+    return bool(_PLACEHOLDER_RE.search(url or ""))
+
+
+def _parse_matches(html: str) -> list[dict]:
+    """Los partidos de una jornada, con fecha+hora y acta si la fila las trae."""
+    out: list[dict] = []
+    for tr, home, away in _match_rows(html):
         date_iso = None
         tr_text = tr.get_text(" ", strip=True)
         m = _DT_RE.search(tr_text)

@@ -48,7 +48,12 @@ from pathlib import Path
 import requests
 
 from scrapers import calendar_cache, rfef_web
-from scrapers.logo_resolver import lookup_override, resolve_logo_url
+from scrapers.logo_resolver import (
+    add_rfef_shields,
+    lookup_override,
+    resolve_logo_url,
+    shield_count as logo_resolver_shield_count,
+)
 from scrapers.rfef_clasificacion import ScrapedTeam, fetch_division_teams
 from scrapers.rfef_calendario import (
     RateLimitBreaker,
@@ -1391,6 +1396,10 @@ def _attach_calendars(
     by_id = {d["id"]: d for d in out_divisions}
     pdf_cache: dict[str, bytes | None] = {}
     breaker = RateLimitBreaker()
+    # Los escudos que traen las filas del calendario, de todos los grupos.
+    # Se inyectan **al final y una sola vez**: `_fill_teams` corre después de
+    # esta función, así que para cuando resuelva ya está el mapa completo.
+    escudos: dict[str, str] = {}
 
     def _pdf_calendar_for(cfg: dict, group_n: int | None = None,
                           group_id: str | None = None) -> list[dict]:
@@ -1456,6 +1465,7 @@ def _attach_calendars(
                 _merge_acta_cache(calendar, comp_code, group.code, label=cfg["id"])
                 div["calendar"] = calendar
             _note_total(div, meta, cfg["id"])
+            escudos.update(meta.get("badges") or {})
             time.sleep(10)
             continue
 
@@ -1481,7 +1491,15 @@ def _attach_calendars(
                                   label=f"{cfg['id']}/{group.id}")
                 grp["calendar"] = calendar
             _note_total(grp, meta, f"{cfg['id']}/{group.id}")
+            escudos.update(meta.get("badges") or {})
             time.sleep(10)
+
+    if escudos:
+        antes = logo_resolver_shield_count()
+        add_rfef_shields(escudos)
+        print(f"[rfef-cal] {len(escudos)} escudos cosechados de las filas del "
+              f"calendario; el mapa oficial pasa de {antes} a "
+              f"{logo_resolver_shield_count()} entradas")
 
     resumen = breaker.summary()
     if resumen is not None:
