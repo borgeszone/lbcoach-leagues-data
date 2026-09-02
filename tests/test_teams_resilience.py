@@ -7,12 +7,16 @@ estaban completos— y el run terminó **en verde**, con un aviso que además
 culpaba a la federación: "sin publicar en la PNFG para 2026-2027". La PNFG sí
 la publicaba; lo que pasó es que no contestó a la consulta de grupos.
 
-Dos piezas, una por cada mitad del fallo:
+Tres piezas:
 
   - `list_groups` distingue "no se pudo preguntar" (None) de "no hay grupos
     todavía" (`[]`), que es la distinción que el resto del módulo ya hacía.
   - `inherit_teams` conserva los equipos del JSON publicado cuando este run no
     ha traído ninguno.
+  - `scrape_order` rota **el orden de pedir**, para que el presupuesto de
+    bloqueos del run no se lo coma siempre el mismo final de cola. Y el orden de
+    **publicar** sigue siendo fijo, que es la mitad que se rompe sola si alguien
+    "unifica" las dos cosas.
 
 Ninguno toca la red.
 
@@ -20,6 +24,7 @@ Ninguno toca la red.
 """
 from __future__ import annotations
 
+import datetime
 import pathlib
 import sys
 import unittest
@@ -146,6 +151,105 @@ class UnaAveriaNoSeCuelaComoDecisionDeLaFederacion(unittest.TestCase):
             any("no contestó al catálogo de grupos" in w for w in cat["warnings"]),
             cat["warnings"])
         self.assertIn("rfef-segunda-fs-fem", self._sin_publicar(cat))
+
+
+class ElOrdenDePedirRotaYElDePublicarNo(unittest.TestCase):
+    """Todo run tiene un presupuesto finito de bloqueos, y con un orden fijo se lo
+    come siempre el mismo final de cola.
+
+    Lo que se prueba aquí es la distinción entre los dos ejes, que es lo único
+    que alguien podría "unificar" por limpieza rompiendo el fichero publicado.
+    """
+
+    ORDEN = ("a", "b", "c", "d", "e")
+
+    def test_el_mismo_dia_da_el_mismo_orden(self):
+        """Reproducible a propósito: un run manual para depurar tiene que
+        comportarse como el del cron, y no hay estado que guardar."""
+        d = datetime.date(2026, 9, 7)
+        self.assertEqual(rfef.scrape_order(self.ORDEN, d),
+                         rfef.scrape_order(self.ORDEN, d))
+
+    def test_en_cinco_runs_semanales_le_toca_ir_primero_a_cada_uno(self):
+        # 7 % 5 = 2, así que el desplazamiento avanza 0-2-4-1-3 y vuelve: las
+        # cinco posiciones sin repetir.
+        lunes = [datetime.date(2026, 9, 7) + datetime.timedelta(days=7 * n)
+                 for n in range(5)]
+        primeros = [rfef.scrape_order(self.ORDEN, d)[0] for d in lunes]
+        self.assertEqual(sorted(primeros), sorted(self.ORDEN), primeros)
+
+    def test_rotar_no_pierde_ni_duplica_ninguna(self):
+        for n in range(400):
+            d = datetime.date(2026, 1, 1) + datetime.timedelta(days=n)
+            o = rfef.scrape_order(self.ORDEN, d)
+            self.assertEqual(sorted(o), sorted(self.ORDEN), d)
+
+    def test_una_lista_vacia_no_revienta(self):
+        self.assertEqual(rfef.scrape_order(()), ())
+
+    def test_discover_divisions_LA_USA_de_verdad(self):
+        """El caso que faltaba, y sin él todo lo de arriba era decorativo:
+        probaban `scrape_order` aislada, así que quitar la rotación del código
+        dejaba los cinco en verde. Esto mira lo que sale de `discover_divisions`,
+        que es lo que alimenta las tres llamadas caras."""
+        comps = [Competition(code=str(i), name=n) for i, n in enumerate([
+            "Liga Prime Futsal",
+            "Segunda División Fútbol Sala Masculino",
+            "Primera División Fútbol Sala Femenino",
+        ])]
+
+        def _orden(dia):
+            with mock.patch.object(rfef, "list_competitions", return_value=comps), \
+                 mock.patch.object(rfef, "list_groups",
+                                   return_value=[Group(id="g1", code="9",
+                                                       name="Grupo 1")]), \
+                 mock.patch.object(rfef, "time"), \
+                 mock.patch.object(rfef, "date") as hoy:
+                hoy.today.return_value = dia
+                return [c["id"] for c in rfef.discover_divisions("22")]
+
+        # Dos días cuyo desplazamiento no coincide: yday 250 % 5 = 0 y 251 % 5 = 1.
+        a = _orden(datetime.date(2026, 9, 7))
+        b = _orden(datetime.date(2026, 9, 8))
+        self.assertEqual(sorted(a), sorted(b), 'mismas divisiones')
+        self.assertNotEqual(a, b, f'el orden de scrapeo no rota: {a}')
+
+    def test_EL_ORDEN_PUBLICADO_NO_ROTA(self):
+        """La mitad que importa. Si el JSON cambiara de orden cada semana sin que
+        hubiera cambiado un dato, los diffs de gh-pages serían ilegibles y el
+        árbol del panel bailaría — y es lo que dice el comentario de
+        `DIVISION_ORDER` desde que existe."""
+        comps = [Competition(code=str(i), name=n) for i, n in enumerate([
+            "Liga Prime Futsal",
+            "Segunda División Fútbol Sala Masculino",
+            "Primera División Fútbol Sala Femenino",
+        ])]
+        publicados = []
+        for dia in (datetime.date(2026, 9, 7), datetime.date(2026, 9, 14),
+                    datetime.date(2026, 9, 21)):
+            with mock.patch.object(rfef, "resolve_season",
+                                   return_value=("22", "ok")), \
+                 mock.patch.object(rfef, "Fetcher"), \
+                 mock.patch.object(rfef, "list_competitions",
+                                   return_value=comps), \
+                 mock.patch.object(rfef, "list_groups",
+                                   return_value=[Group(id="g1", code="9",
+                                                       name="Grupo 1")]), \
+                 mock.patch.object(rfef, "fetch_web_sources", return_value={}), \
+                 mock.patch.object(rfef, "fetch_division_teams", return_value=[]), \
+                 mock.patch.object(rfef, "_attach_calendars"), \
+                 mock.patch.object(rfef, "_fill_missing_from_pdf"), \
+                 mock.patch.object(rfef, "time"), \
+                 mock.patch.object(rfef, "date") as hoy, \
+                 mock.patch.object(rfef, "_load_fallback",
+                                   return_value={"season": "2026-2027",
+                                                 "divisions": {}}):
+                hoy.today.return_value = dia
+                cat = rfef.scrape("2026-2027", resolve_badges=False)
+            publicados.append([d["id"] for d in cat["divisions"]])
+
+        for orden in publicados:
+            self.assertEqual(orden, list(rfef.DIVISION_ORDER), orden)
 
 
 def _equipos(*nombres):

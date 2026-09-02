@@ -42,6 +42,7 @@ import json
 import re
 import time
 import unicodedata
+from datetime import date
 from pathlib import Path
 
 import requests
@@ -125,6 +126,48 @@ DIVISION_ORDER = (
     "rfef-primera-fs-fem",
     "rfef-segunda-fs-fem",
 )
+
+
+def scrape_order(order: tuple[str, ...], day: "date | None" = None) -> tuple[str, ...]:
+    """El orden en que se **scrapea**, que no es el orden en que se publica.
+
+    ## El problema
+
+    Todo run tiene un presupuesto finito de bloqueos: el `RateLimitBreaker` corta
+    cuando la PNFG lleva doce jornadas negadas, y a partir de ahí lo que quede por
+    pedir se queda sin pedir. Con un orden fijo, **quien está al final de la cola
+    es siempre el mismo**, así que las mismas divisiones se quedan siempre a
+    medias — y el 1 y el 2 de septiembre de 2026 eso costó las dos femeninas
+    enteras, que son justamente las dos últimas.
+
+    Rotar no reduce los bloqueos ni una jornada. Lo que hace es repartir a quién
+    le toca comérselos, y **eso es lo que la caché de jornadas necesita para que
+    la cobertura suba en todos los nodos** en vez de en los tres primeros: cada
+    run aporta lo que consigue, y con el reparto rotando, en cinco runs le ha
+    tocado ir primero a cada división.
+
+    ## Por el día del año, y no por un contador guardado
+
+    Sin estado que persistir, sin fichero que commitear, y reproducible: dos runs
+    del mismo día rotan igual, lo que hace que un run manual para depurar se
+    comporte como el del cron. Con los ~5 elementos de hoy y un run completo
+    semanal, `7 % 5 = 2`, así que el desplazamiento avanza 0-2-4-1-3 y vuelve:
+    **las cinco posiciones en cinco semanas**, sin repetir.
+
+    ## Lo que NO se rota
+
+    `DIVISION_ORDER` sigue mandando en el JSON publicado (`_with_placeholders`).
+    Rotar también aquello haría que el fichero cambiara de orden cada semana sin
+    que hubiera cambiado un dato — diffs ilegibles en gh-pages y el árbol del
+    panel bailando— y es justo lo que el comentario de esa constante lleva
+    diciendo desde que existe. Son dos ejes distintos y conviene no confundirlos:
+    **el orden de pedir** y **el orden de publicar**.
+    """
+    if not order:
+        return order
+    d = day or date.today()
+    off = d.timetuple().tm_yday % len(order)
+    return order[off:] + order[:off]
 
 
 # ── De dónde salieron los equipos, y si eso permite fechar la temporada ──────
@@ -655,7 +698,16 @@ def discover_divisions(season_code: str, *, session=None,
               f"(comp {comp.code}, {len(groups)} grupo/s)")
         time.sleep(2)
 
-    return [by_id[d] for d in DIVISION_ORDER if d in by_id]
+    # Rotado: el orden de **pedir**, no el de publicar. Ver `scrape_order`. Lo
+    # que sale de aquí alimenta `fetch_web_sources`, `_attach_calendars` y
+    # `_fill_teams`, que son las tres cosas caras; el JSON se ordena después con
+    # `DIVISION_ORDER` en `_with_placeholders`.
+    orden = scrape_order(DIVISION_ORDER)
+    cfgs = [by_id[d] for d in orden if d in by_id]
+    if cfgs:
+        print(f"[rfef-disc] orden de scrapeo de hoy: "
+              f"{', '.join(c['id'] for c in cfgs)}")
+    return cfgs
 
 
 def scrape(season: str, resolve_badges: bool = True,
