@@ -1,6 +1,6 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-01T16:05:17+00:00",
+  "lastUpdated": "2026-09-02T10:59:36+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)"
   ],
@@ -20,13 +20,9 @@
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/18.png"
             },
             {
-              "name": "Industrias Santa Coloma",
-              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png",
-              "officialName": "Catgas Energía Santa Coloma"
-            },
-            {
-              "name": "CD Xota FS",
-              "logoUrl": null
+              "name": "Osasuna Magna",
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/20.png",
+              "officialName": "C.A. Osasuna Magna"
             },
             {
               "name": "Córdoba Patrimonio",
@@ -36,6 +32,10 @@
             {
               "name": "ElPozo Murcia Costa Cálida",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/22.png"
+            },
+            {
+              "name": "FS García",
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png"
             },
             {
               "name": "Palma Futsal",
@@ -50,7 +50,7 @@
             {
               "name": "Jaén FS",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/25.png",
-              "officialName": "Jaen Paraiso Interior F.S."
+              "officialName": "Jaén Paraiso Interior FS."
             },
             {
               "name": "Jimbee Cartagena",
@@ -64,12 +64,12 @@
             {
               "name": "O Parrulo Ferrol",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/29.png",
-              "officialName": "O Parrulo Ferrol F.S."
+              "officialName": "O Parrulo Ferrol FS."
             },
             {
               "name": "Manzanares FS",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/9.png",
-              "officialName": "Quesos El Hidalgo Manzanares F.S."
+              "officialName": "Quesos El Hidalgo Manzanares FS"
             },
             {
               "name": "Peñíscola FS",
@@ -79,7 +79,7 @@
             {
               "name": "Inagroup El Ejido",
               "logoUrl": null,
-              "officialName": "Sur Seeds El Ejido F.S."
+              "officialName": "Sur Seed CD El Ejido Futsal"
             },
             {
               "name": "Viña Albali Valdepeñas",
@@ -88,10 +88,10 @@
             {
               "name": "Wanapix Sala 10",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/23.png",
-              "officialName": "Wanapix"
+              "officialName": "Wanapix AD Sala 10"
             }
           ],
-          "teamsSource": "calendario",
+          "teamsSource": "pdf-legacy",
           "calendar": [
             {
               "jornada": 1,
@@ -8835,88 +8835,8 @@
           "id": "rfef-primera-fs-fem",
           "name": "Primera División FS Femenina",
           "gender": "femenino",
-          "teams": [
-            {
-              "name": "AE Les Corts",
-              "logoUrl": null,
-              "officialName": "AE Les Corts UBAE"
-            },
-            {
-              "name": "AD Alcorcón",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206184_50x50.png",
-              "officialName": "ARRIVA AD Alcorcón FSF"
-            },
-            {
-              "name": "Atlético Navalcarnero",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079008545_logo.png"
-            },
-            {
-              "name": "Guadalcacín",
-              "logoUrl": null,
-              "officialName": "C.D. Guadalcacín F.S."
-            },
-            {
-              "name": "Ceuta AD",
-              "logoUrl": null,
-              "officialName": "Ceuta Agrupación Deportiva"
-            },
-            {
-              "name": "Estrela Verín",
-              "logoUrl": null,
-              "officialName": "Estrela Revoltosa Verín FSF"
-            },
-            {
-              "name": "FSF Castro",
-              "logoUrl": null,
-              "officialName": "F.S.F. Castro Bloques Cando"
-            },
-            {
-              "name": "LBTL Alcantarilla",
-              "logoUrl": null,
-              "officialName": "LBTL Futsal Alcantarilla"
-            },
-            {
-              "name": "MSC Torreblanca FS",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/207211_50x50.png",
-              "officialName": "Melilla Ciudad del Deporte Torreblanca C. F."
-            },
-            {
-              "name": "FSF Móstoles",
-              "logoUrl": null,
-              "officialName": "MRB Móstoles FSF"
-            },
-            {
-              "name": "Nueces de Ronda Atl. Torcal",
-              "logoUrl": null,
-              "officialName": "Nueces de Ronda Atlético Torcal FS"
-            },
-            {
-              "name": "Ourense FSF",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008546_ESCUDO_OURENSE_FSF_NUEVO.png",
-              "officialName": "Ourense Ontime"
-            },
-            {
-              "name": "Poio FS",
-              "logoUrl": null,
-              "officialName": "Poio Pescamar FS"
-            },
-            {
-              "name": "Rodiles FS",
-              "logoUrl": null,
-              "officialName": "Rodiles F.S. \"A\""
-            },
-            {
-              "name": "Roldán FSF",
-              "logoUrl": null,
-              "officialName": "STV Roldán F.S"
-            },
-            {
-              "name": "Intersala Zaragoza",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079011245_escudo_Intersala_sin_fondo.png",
-              "officialName": "Wanapix Aldelis InterSala 10 Zaragoza"
-            }
-          ],
-          "teamsSource": "calendario"
+          "teams": [],
+          "teamsSource": "-"
         },
         {
           "id": "rfef-segunda-fs-fem",
