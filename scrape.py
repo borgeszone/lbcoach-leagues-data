@@ -140,6 +140,174 @@ def inherit_calendars(categories: list[dict], published: dict) -> int:
     return n
 
 
+def inherit_teams(categories: list[dict], published: dict) -> int:
+    """Rellena con lo publicado los equipos que este run **no ha conseguido**.
+
+    Es el espejo de `inherit_calendars`, con una diferencia que no se puede
+    copiar de él: aquí sólo se rellenan **huecos**, nunca se conserva "el más
+    completo". Un calendario sólo puede crecer —las jornadas se acumulan— pero
+    un plantel puede encogerse de verdad: un equipo que se retira en noviembre
+    deja la lista en 15, y quedarse con los 16 del publicado lo mantendría como
+    rival fantasma el resto de la temporada. Así que la regla es: si este run
+    trajo equipos, mandan los suyos; si no trajo ninguno, se conservan los de
+    ayer.
+
+    **El caso que lo motiva.** El run del 1 de septiembre de 2026 publicó
+    `rfef-segunda-fs-fem` con cero equipos y cero grupos —48 equipos y 90
+    jornadas que estaban bien el día anterior— porque la PNFG se comió la
+    consulta de grupos. Nada falló: el JSON salió en verde, con un aviso que
+    además culpaba a la federación de no haberla publicado. Para un entrenador
+    de esa división eso es quedarse sin rivales que importar y sin calendario
+    que autorrellenar, sin ninguna explicación y sin nada que pueda hacer.
+
+    De ahí que se cubran los dos daños que hizo aquel run, que no son el mismo:
+
+    1. La división vuelve como **cascarón** (ni equipos ni grupos, el
+       `placeholder` de `rfef.py`) → se restauran los grupos publicados con sus
+       equipos. Sin esto no hay dónde colgar nada: los equipos de Segunda
+       Femenina viven dentro de los grupos, y el cascarón no los trae.
+    2. La división está, pero un grupo —o una división plana— se queda **a
+       cero** → se rellena ese nodo y sólo ese.
+
+    Va **antes** de `inherit_calendars` a propósito: los grupos que restaura el
+    caso 1 tienen que existir cuando la herencia de calendarios los busque por
+    id, o la división se quedaría con sus equipos y sin jornadas.
+
+    El guard de temporada lo da `fetch_published`, igual que en los
+    calendarios: si el publicado es de otro año, aquí no llega nada. Y por eso
+    estos equipos no vuelven a pasar por `_drop_unverified_teams` — se
+    verificaron contra **esta misma temporada** el día que se publicaron.
+
+    LÍMITE CONOCIDO: si la federación retira una división de verdad, sus equipos
+    se heredarán mientras siga apareciendo vacía. Es el intercambio que se
+    acepta, y va en la dirección correcta — una división de más en un
+    desplegable se ve; 48 rivales que desaparecen del móvil, no.
+    """
+    src: dict[str, dict] = {}
+    for cat in published.get("categories", []):
+        for div in cat.get("divisions", []):
+            src[f"{cat['id']}/{div['id']}"] = div
+
+    n = 0
+
+    def _con_equipos(nodos: list | None) -> list[dict]:
+        return [g for g in (nodos or []) if g.get("teams")]
+
+    def _copiar(destino: dict, origen: dict, etiqueta: str, avisos: list) -> int:
+        destino["teams"] = origen["teams"]
+        if origen.get("teamsSource"):
+            destino["teamsSource"] = origen["teamsSource"]
+        msg = (f"{etiqueta}: este run no trajo equipos; se conservan los "
+               f"{len(origen['teams'])} del JSON publicado")
+        print(f"[scrape] {msg}")
+        avisos.append(msg)
+        return 1
+
+    for cat in categories:
+        avisos = cat.setdefault("warnings", [])
+        for div in cat.get("divisions", []):
+            pub = src.get(f"{cat['id']}/{div['id']}")
+            if pub is None:
+                continue
+            pub_groups = _con_equipos(pub.get("groups"))
+
+            # Caso 1: cascarón. Se restaura la estructura de grupos, que es lo
+            # único que permite colgar los equipos donde la app los busca.
+            if not div.get("teams") and not div.get("groups") and pub_groups:
+                div["groups"] = []
+                for g in pub_groups:
+                    nuevo = {"id": g["id"], "name": g.get("name", g["id"]),
+                             "teams": []}
+                    div["groups"].append(nuevo)
+                    n += _copiar(nuevo, g, f"{div['id']}/{g['id']}", avisos)
+                continue
+
+            # Caso 2: la división está; se rellena grupo a grupo, sólo los que
+            # vengan a cero.
+            if div.get("groups"):
+                por_id = {g["id"]: g for g in pub_groups}
+                for g in div["groups"]:
+                    origen = por_id.get(g["id"])
+                    if g.get("teams") or origen is None:
+                        continue
+                    n += _copiar(g, origen, f"{div['id']}/{g['id']}", avisos)
+                continue
+
+            # Caso 3: división plana vacía.
+            if not div.get("teams") and pub.get("teams"):
+                n += _copiar(div, pub, div["id"], avisos)
+
+    return n
+
+
+# Categorías cuyos equipos se mantienen **a mano** (`data/*-manual.json`).
+#
+# La distinción con RFEF decide todo lo que hace `drop_unfilled_divisions`, y no
+# es cosmética: una división de RFEF vacía está *pendiente* —la federación aún
+# no la ha abierto, y el día que la abra, el móvil que ya la tenía elegida se
+# trae sus rivales solo (§6.46 del informe)—, mientras que una división curada
+# vacía está *sin rellenar*, y no la va a rellenar nadie que no sea una persona
+# editando el JSON. Meter a RFEF aquí es el sabotaje más probable de este
+# fichero: rompería justo esa recuperación automática de agosto.
+CURATED_CATEGORY_IDS = {"fcf"}
+
+
+def drop_unfilled_divisions(categories: list[dict]) -> list[str]:
+    """Retira de las categorías curadas lo que no tiene ni un equipo.
+
+    Una liga que se puede elegir y no da nada es peor que una que no aparece:
+    el entrenador la encuentra, la elige, guarda el `divisionId` en su equipo, y
+    se queda esperando unos rivales y un calendario que no van a llegar nunca.
+    Con tres agravantes, y ninguno se ve desde fuera:
+
+    - La app le dice —con razón para RFEF y en falso para éstas— que "la
+      federación todavía no ha publicado los equipos de esta liga".
+    - `RivalsAutoimportService` reintenta la reconciliación en **cada arranque
+      para siempre**, porque una división vacía no se sella a propósito: eso
+      está pensado para el agosto de RFEF, donde el estado es transitorio.
+    - Con `divisionId` guardado, el equipo entra en el camino del federado
+      (novedades, jornada, acta) sin ninguno de sus datos.
+
+    Se ejecuta **después de heredar del publicado**, y ese orden es la única
+    protección que le queda al lado curado: si alguien vacía `fcf-manual.json`
+    sin querer, `inherit_teams` ya habrá restaurado los equipos de ayer y la
+    división no se cae. Lo que se retira es lo que está vacío en las dos
+    partes — o sea, las plantillas que nadie ha rellenado nunca.
+
+    Una categoría que se queda sin ninguna división se retira entera: dejarla
+    deja un desplegable de "División" cuya única opción es "selecciona
+    división", que es un callejón sin salida peor que no estar.
+
+    Devuelve las etiquetas de lo retirado para que salgan en `warnings`. Sin
+    eso, las plantillas desaparecen del JSON y con ellas el único recordatorio
+    de que hay divisiones esperando a que alguien las rellene.
+    """
+    quitadas: list[str] = []
+    for cat in list(categories):
+        if cat.get("id") not in CURATED_CATEGORY_IDS:
+            continue
+        vivas = []
+        for div in cat.get("divisions", []):
+            # Los grupos sin equipos tampoco se publican: el cliente ya los
+            # esconde (`Division.nonEmptyGroups`), así que sólo abultan el JSON.
+            grupos = [g for g in (div.get("groups") or []) if g.get("teams")]
+            if not div.get("teams") and not grupos:
+                quitadas.append(
+                    f"{div['id']}: sin equipos curados, no se publica "
+                    f"(rellénala en data/fcf-manual.json)")
+                continue
+            if div.get("groups") is not None:
+                div["groups"] = grupos
+            vivas.append(div)
+        cat["divisions"] = vivas
+        if not vivas:
+            categories.remove(cat)
+            quitadas.append(
+                f"{cat['id']}: ninguna división con equipos, la categoría "
+                f"entera no se publica")
+    return quitadas
+
+
 def load_notices() -> dict:
     """Lee data/notices-manual.json (novedades/comunicados de federación).
 
@@ -247,8 +415,10 @@ def main() -> int:
     # En el completo es opcional pero importante igual: el PNFG se corta a media
     # descarga con frecuencia, y sin comparar contra lo publicado un run que
     # traiga 11 jornadas de 30 las publica y se lleva por delante las otras 19.
-    # Que no se pueda descargar no aborta el run completo — ese sí trae
-    # calendarios propios.
+    # Lo mismo con los equipos desde `inherit_teams`: una división que la PNFG
+    # no conteste vuelve vacía, y sin el publicado se publica vacía. Que no se
+    # pueda descargar no aborta el run completo — ese sí trae calendarios
+    # propios.
     published = fetch_published(season)
     if published is None and args.teams_only:
         print("[scrape] ABORTADO: sin un JSON publicado de esta temporada "
@@ -306,8 +476,18 @@ def main() -> int:
     categories = [rfef_cat, fcf_cat]
 
     if published is not None:
+        # Los equipos primero: si una división volvió como cascarón, sus grupos
+        # se restauran aquí y la herencia de calendarios ya los encuentra.
+        n = inherit_teams(categories, published)
+        print(f"[scrape] Nodos con equipos heredados del publicado: {n}")
         n = inherit_calendars(categories, published)
         print(f"[scrape] Calendarios heredados del publicado: {n}")
+
+    # Va después de heredar: lo que sobreviva a la herencia y siga vacío es una
+    # plantilla que nadie ha rellenado, no un run malo.
+    pruned = drop_unfilled_divisions(categories)
+    for msg in pruned:
+        print(f"[scrape] {msg}")
 
     # Inyectar novedades/comunicados de federación (data/notices-manual.json).
     apply_notices(categories, load_notices())
@@ -321,6 +501,9 @@ def main() -> int:
     # deducirlo de un recuento de equipos a cero, que se parece demasiado a un
     # scraper roto.
     warnings = [f"{c['id']}: {w}" for c in categories for w in c.get("warnings", [])]
+    # Lo retirado va aquí y no en la categoría: puede haberse ido la categoría
+    # entera, y con ella se llevaría su propio aviso.
+    warnings.extend(pruned)
     for c in categories:
         c.pop("warnings", None)
         c.pop("seasonVerified", None)

@@ -49,7 +49,11 @@ import requests
 from scrapers import calendar_cache, rfef_web
 from scrapers.logo_resolver import lookup_override, resolve_logo_url
 from scrapers.rfef_clasificacion import ScrapedTeam, fetch_division_teams
-from scrapers.rfef_calendario import fetch_division_calendar, teams_from_calendar
+from scrapers.rfef_calendario import (
+    RateLimitBreaker,
+    fetch_division_calendar,
+    teams_from_calendar,
+)
 from scrapers.rfef_discovery import (
     COMP_LEAGUE,
     COMP_UNKNOWN,
@@ -552,7 +556,9 @@ def _group_from_web(div_id: str, comp_code: str, season_code: str):
 
 
 def discover_divisions(season_code: str, *, session=None,
-                       unknown: list[str] | None = None) -> list[dict] | None:
+                       warnings: list[str] | None = None,
+                       unresolved: set[str] | None = None,
+                       ) -> list[dict] | None:
     """Pregunta a la PNFG qué divisiones tiene esta temporada y con qué códigos.
 
     Devuelve una cfg por división, con la misma forma que consumía la constante
@@ -579,8 +585,8 @@ def discover_divisions(season_code: str, *, session=None,
                    f"(comp {comp.code}). Si es una de nuestras divisiones, "
                    f"añade su nombre a DIVISION_RULES")
             print(f"  [rfef-disc] AVISO: {msg}")
-            if unknown is not None:
-                unknown.append(msg)
+            if warnings is not None:
+                warnings.append(msg)
             continue
         if clase != COMP_LEAGUE:
             continue
@@ -592,6 +598,12 @@ def discover_divisions(season_code: str, *, session=None,
                   f"{div_id}, ya asignado a {by_id[div_id]['competition']['name']!r}")
             continue
         groups = list_groups(comp.code, session=session)
+        # `None` es "no se pudo preguntar" y `[]` es "la PNFG dice que aún no
+        # hay grupos". Los dos acaban saliéndose de aquí sin cfg, pero **no
+        # significan lo mismo y no se pueden contar igual**: el segundo es lo
+        # normal antes del sorteo, y el primero es una avería que le cuesta a la
+        # app una división entera.
+        catalogo_muerto = groups is None
         if not groups:
             # Segundo intento por la web de la federación: su página de
             # competición enlaza el calendario en la PNFG con los tres códigos
@@ -599,7 +611,22 @@ def discover_divisions(season_code: str, *, session=None,
             # —la llamada más frágil de la PNFG— se come el rate-limit.
             groups = _group_from_web(div_id, comp.code, season_code)
         if not groups:
-            print(f"  [rfef-disc] {div_id}: sin grupos publicados todavía")
+            if catalogo_muerto:
+                # La competición **está** en el catálogo de esta temporada: la
+                # acabamos de leer de ahí. Así que decir "sin publicar" sería
+                # mentir, y es la mentira que hizo perder una tarde: el JSON del
+                # 1 de septiembre de 2026 culpaba a la federación de haber
+                # borrado Segunda Femenina.
+                msg = (f"{div_id}: la PNFG no contestó al catálogo de grupos de "
+                       f"{comp.name!r} (comp {comp.code}); la división existe "
+                       f"pero este run no ha podido scrapearla")
+                print(f"  [rfef-disc] AVERÍA: {msg}")
+                if warnings is not None:
+                    warnings.append(msg)
+                if unresolved is not None:
+                    unresolved.add(div_id)
+            else:
+                print(f"  [rfef-disc] {div_id}: sin grupos publicados todavía")
             continue
         # Fases (Apertura/Clausura) no son grupos: mismos equipos, y elegir no
         # significa nada. Se publica plana. Ver `rfef_discovery.is_phase`.
@@ -711,19 +738,36 @@ def scrape(season: str, resolve_badges: bool = True,
             pending=False)
     print(f"[rfef] CodTemporada de {season}: {season_code}")
 
+    # Las divisiones que están en el catálogo y que este run no ha conseguido
+    # resolver. No se cuentan como "sin publicar": ya tienen su propio aviso, y
+    # meterlas en el mismo saco es lo que hace que una avería se lea como una
+    # decisión de la federación.
+    unresolved: set[str] = set()
     divisions_cfg = discover_divisions(season_code, session=session,
-                                       unknown=warnings)
+                                       warnings=warnings,
+                                       unresolved=unresolved)
     if divisions_cfg is None:
         return _nothing(
             f"no se pudo consultar el catálogo de competiciones de {season}",
             pending=False)
     if not divisions_cfg:
+        # Vacío por dos motivos que se pagan distinto. Si alguna división estaba
+        # en el catálogo y no se pudo resolver, esto **no** es la ventana de
+        # verano: es una avería, y tiene que salir con código 1 para que llegue
+        # el email de Actions. Tratarla como "pendiente" es lo que convierte un
+        # rate-limit total en un run verde del que nadie se entera.
+        if unresolved:
+            return _nothing(
+                f"la PNFG lista competiciones de {season} pero no se ha podido "
+                f"resolver ninguna ({', '.join(sorted(unresolved))})",
+                pending=False)
         return _nothing(
             f"la PNFG no publica todavía ninguna división de fútbol sala "
             f"reconocible para {season}",
             pending=True)
 
-    faltan = [d for d in DIVISION_ORDER if d not in {c["id"] for c in divisions_cfg}]
+    hay = {c["id"] for c in divisions_cfg}
+    faltan = [d for d in DIVISION_ORDER if d not in hay and d not in unresolved]
     if faltan:
         # No es un fallo: las masculinas de LNFS se publican semanas más tarde
         # que las femeninas. Pero tiene que constar, porque una división que
@@ -755,7 +799,8 @@ def scrape(season: str, resolve_badges: bool = True,
     web = fetch_web_sources(divisions_cfg, season, warnings)
 
     _attach_calendars(out_divisions, season, divisions_cfg, season_code,
-                      max_jornadas=2 if teams_only else None, web=web)
+                      max_jornadas=2 if teams_only else None, web=web,
+                      warnings=warnings)
 
     # 3. Equipos.
     _fill_teams(out_divisions, divisions_cfg, fb_divisions, season,
@@ -1257,14 +1302,30 @@ def _attach_calendars(
     season_code: str,
     max_jornadas: int | None = None,
     web: dict[str, dict] | None = None,
+    warnings: list[str] | None = None,
 ) -> None:
     """Añade `calendar` a cada división/grupo de `out_divisions`.
 
-    Cascada por división:
+    Cascada por división (ver `_calendar_for_group`):
     1. Endpoint `NFG_CmpJornada` con los códigos descubiertos. Fuente
        preferente: fechas, horas y `CodActa`.
     2. PDF oficial (`_extract_calendar_from_pdf`), legacy. Recupera jornada +
        fecha + enfrentamientos, sin hora.
+    3. `calendar_cache`, que rellena las jornadas que este run no consiguió con
+       lo que trajeron los anteriores.
+
+    **El cortacircuitos.** Un `RateLimitBreaker` compartido por todos los grupos
+    corta cuando la PNFG está bloqueando, en vez de gastar 225 s de backoff por
+    jornada hasta el corte de 6 h de Actions. Se comparte a propósito: el
+    presupuesto de fallos es del run entero, porque lo que describe es el humor
+    del servidor, no el de un grupo. Lo que deja a medias lo cubre el paso 3, y
+    por encima `scrape.inherit_calendars` conserva el calendario publicado si
+    resulta ser más completo que el de este run — son tres redes distintas y
+    ninguna sustituye a las otras dos:
+
+        breaker         deja de pedir            (dentro del grupo)
+        calendar_cache  rellena por jornada      (entre runs, sin red)
+        inherit_calend. conserva el más completo (entre runs, contra gh-pages)
 
     Muta `out_divisions` in-place. Best-effort para el *calendario*: si falla,
     la app cae al formulario manual. Pero ojo — desde este cambio el calendario
@@ -1277,6 +1338,7 @@ def _attach_calendars(
     """
     by_id = {d["id"]: d for d in out_divisions}
     pdf_cache: dict[str, bytes | None] = {}
+    breaker = RateLimitBreaker()
 
     def _pdf_calendar_for(cfg: dict, group_n: int | None = None,
                           group_id: str | None = None) -> list[dict]:
@@ -1333,15 +1395,10 @@ def _attach_calendars(
 
         if cfg["flat"]:
             group = cfg["groups"][0]
-            calendar = fetch_division_calendar(
-                comp_code, group.code, temporada_code=season_code,
-                max_jornadas=max_jornadas,
+            calendar = _calendar_for_group(
+                comp_code, group.code, season_code, max_jornadas, breaker,
+                label=cfg["id"], pdf=lambda: _pdf_calendar_for(cfg),
             )
-            if not calendar:
-                calendar = _pdf_calendar_for(cfg)
-                if calendar:
-                    print(f"  [rfef-cal] {cfg['id']}: "
-                          f"fallback PDF -> {len(calendar)} jornadas")
             if calendar:
                 _merge_acta_cache(calendar, comp_code, group.code, label=cfg["id"])
                 div["calendar"] = calendar
@@ -1353,25 +1410,131 @@ def _attach_calendars(
             grp = groups.get(group.id)
             if grp is None:
                 continue
-            calendar = fetch_division_calendar(
-                comp_code, group.code, temporada_code=season_code,
-                max_jornadas=max_jornadas,
-            )
-            if not calendar:
-                n_match = re.match(r"g(\d+)$", group.id)
-                calendar = _pdf_calendar_for(
+            n_match = re.match(r"g(\d+)$", group.id)
+            calendar = _calendar_for_group(
+                comp_code, group.code, season_code, max_jornadas, breaker,
+                label=f"{cfg['id']}/{group.id}",
+                pdf=lambda cfg=cfg, group=group, n_match=n_match: _pdf_calendar_for(
                     cfg,
                     group_n=int(n_match.group(1)) if n_match else None,
                     group_id=group.id,
-                )
-                if calendar:
-                    print(f"  [rfef-cal] {cfg['id']}/{group.id}: "
-                          f"fallback PDF -> {len(calendar)} jornadas")
+                ),
+            )
             if calendar:
                 _merge_acta_cache(calendar, comp_code, group.code,
                                   label=f"{cfg['id']}/{group.id}")
                 grp["calendar"] = calendar
             time.sleep(10)
+
+    resumen = breaker.summary()
+    if resumen is not None:
+        print(f"[rfef-cal] AVISO: {resumen}")
+        if warnings is not None:
+            warnings.append(resumen)
+
+
+def _calendar_for_group(
+    comp_code: str | int,
+    group_code: str | int,
+    season_code: str,
+    max_jornadas: int | None,
+    breaker: RateLimitBreaker,
+    *,
+    label: str,
+    pdf,
+) -> list[dict]:
+    """El calendario de un grupo: PNFG, si no PDF, y la caché por encima.
+
+    El orden no es negociable y cada paso tiene su motivo:
+
+    1. **PNFG.** Lo único que trae hora y `CodActa`.
+    2. **Se guarda en caché lo que haya traído la PNFG, y solo eso.** Si aquí
+       entrara el PDF, una jornada con hora acabaría pisada por la misma jornada
+       sin ella y la caché iría hacia atrás.
+    3. **PDF** si la PNFG no dio nada. Se conserva el `if not calendar` de
+       siempre: no se pide un PDF de 30 jornadas para completar dos que falten.
+    4. **La caché rellena los huecos.** Es el paso nuevo, y el que arregla el
+       grupo que falla *a medias*: hasta ahora, 14 jornadas de 15 se publicaban
+       como 14 porque el fallback mira si la lista está vacía, no si está
+       completa.
+    """
+    fresh = fetch_division_calendar(
+        comp_code, group_code, temporada_code=season_code,
+        max_jornadas=max_jornadas, breaker=breaker,
+    )
+    if fresh:
+        n = calendar_cache.store_jornadas(comp_code, group_code, fresh)
+        if n:
+            print(f"  [rfef-cal] {label}: {n} jornadas guardadas en caché")
+
+    calendar = fresh
+    if not calendar:
+        calendar = pdf()
+        if calendar:
+            print(f"  [rfef-cal] {label}: fallback PDF -> {len(calendar)} jornadas")
+
+    return _merge_calendar_cache(calendar, comp_code, group_code, label=label)
+
+
+def _timed_matches(matches: list[dict]) -> int:
+    """Cuántos partidos traen **hora** y no solo día.
+
+    La PNFG devuelve `2026-09-11T19:30:00`; el PDF, `2026-09-19` a secas. La `T`
+    es la única diferencia observable entre las dos fuentes una vez el partido
+    está en el JSON, y es lo que decide quién gana en `_merge_calendar_cache`.
+    """
+    return sum(1 for m in matches if "T" in (m.get("date") or ""))
+
+
+def _merge_calendar_cache(
+    calendar: list[dict],
+    comp: str | int,
+    grupo: str | int,
+    *,
+    label: str,
+) -> list[dict]:
+    """Rellena con la caché las jornadas que este run no consiguió.
+
+    Dos reglas, y la segunda es la que no es obvia:
+
+    - **Manda lo fresco.** La caché solo entra donde no hay nada. Es lo que
+      permite que un aplazamiento se corrija: al volver a bajar esa jornada, la
+      fecha nueva pisa a la vieja. Si la caché ganara, una fecha mala se quedaría
+      para siempre.
+    - **Salvo que lo fresco no tenga hora y la caché sí.** Un run que cae al PDF
+      trae las 30 jornadas con el día pelado; sin esta excepción, ese run tiraría
+      todas las horas que ya teníamos y la cobertura iría hacia atrás en cada
+      bloqueo.
+
+    **Las competiciones por fases se quedan fuera**, y no por prudencia genérica:
+    el PDF de Liga Prime trae Apertura y Clausura en el mismo calendario, así que
+    ahí el número de jornada no identifica un partido —hay dos J1—. La caché, en
+    cambio, se indexa por código de grupo, y cada fase tiene el suyo, o sea que
+    sus jornadas no llevan fase dentro. Cruzarlas por número las mezclaría.
+    """
+    cached = calendar_cache.lookup_jornadas(comp, grupo)
+    if not cached:
+        return calendar
+
+    if any(j.get("phase") for j in calendar):
+        print(f"  [rfef-cal] {label}: calendario por fases, la caché no se fusiona")
+        return calendar
+
+    por_num = {j["jornada"]: j for j in calendar if isinstance(j.get("jornada"), int)}
+    rellenadas, mejoradas = 0, 0
+    for num, matches in cached.items():
+        actual = por_num.get(num)
+        if actual is None:
+            por_num[num] = {"jornada": num, "matches": matches}
+            rellenadas += 1
+        elif _timed_matches(actual.get("matches", [])) == 0 and _timed_matches(matches) > 0:
+            actual["matches"] = matches
+            mejoradas += 1
+
+    if rellenadas or mejoradas:
+        print(f"  [rfef-cal] {label}: caché de calendario -> "
+              f"{rellenadas} jornada/s recuperada/s, {mejoradas} con hora")
+    return [por_num[n] for n in sorted(por_num)]
 
 
 def _merge_acta_cache(

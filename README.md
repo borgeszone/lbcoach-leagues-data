@@ -183,6 +183,58 @@ coincide con la temporada pedida. Al empezar temporada: o se actualizan los
 equipos **y** el `season`, o se deja como está y simplemente no se usa. Subir el
 `season` sin cambiar los equipos es exactamente el fallo que esto evita.
 
+### El rate-limit de la PNFG, y por qué costaba horas
+
+La PNFG bloquea **devolviendo 200 con el cuerpo vacío**, no un 429. Eso importa
+porque no se distingue de "esta jornada no existe", así que la única respuesta
+posible era reintentar: 15+30+60+120 = **225 s por jornada**. Con ~360 jornadas
+por run completo (12 grupos × ~30), un run bloqueado se pasaba horas
+reintentando —alimentando el bloqueo que causó el reintento— y moría en el corte
+de 6 h de Actions **sin llegar a publicar**.
+
+Tres piezas, y cada una cubre lo que las otras no:
+
+| Pieza | Qué hace | Dónde |
+|---|---|---|
+| `RateLimitBreaker` | deja de pedir | dentro del run |
+| `calendar_cache` (`_calendars`) | rellena por jornada | entre runs, sin red |
+| `inherit_calendars` | conserva el más completo | entre runs, contra gh-pages |
+
+**El cortacircuitos** abandona un grupo tras 3 jornadas seguidas sin respuesta
+(11 min de evidencia; la cuarta no informa de nada nuevo) y el run entero tras 12
+fallos. El presupuesto es del run y no por grupo a propósito: doce grupos con dos
+fallos describen el mismo servidor enfadado que un grupo con veinticuatro, y el
+objetivo es dejar de pegarle. Además **los reintentos se hunden a uno tras el
+primer fallo y se recuperan con la primera respuesta buena**, que es lo que evita
+que un corte transitorio degrade el resto del run.
+
+**Abandonar no es perder**, y ésa es la condición para que cortar antes sea una
+mejora y no un recorte: lo que el breaker deja a medias lo rellena la caché de
+jornadas. Si algún día se quitan las otras dos piezas, hay que quitar el breaker
+con ellas.
+
+**La caché guarda solo lo que viene fresco de la PNFG**, nunca lo derivado del
+PDF. Si entrara el PDF, una jornada con hora acabaría pisada por la misma jornada
+sin ella y la caché iría hacia atrás. Al fusionar manda lo fresco —así un
+aplazamiento se corrige al volver a bajar esa jornada— con una excepción: si lo
+fresco no trae hora en ningún partido y la caché sí, gana la caché.
+
+Esto arregla además un caso que no era de bloqueo total sino **a medias**: el
+fallback al PDF es `if not calendar`, un booleano sobre la lista, así que un
+grupo que trajera 14 de 15 jornadas se publicaba con 14 y el PDF ni se
+consultaba. Pasó el 2026-08-31 con Primera masculina (le faltaba la J12).
+
+Cuando el breaker recorta algo, el JSON publicado lo dice en `warnings`. Va ahí y
+no solo al log porque un run recortado se parece demasiado a uno normal: sin eso,
+la única diferencia visible entre "la federación no lo ha publicado" y "nos
+bloquearon" es un recuento de jornadas que nadie mira.
+
+> **Lo que esto NO hace: bajar el número de peticiones.** Sigue siendo una por
+> jornada. El siguiente paso natural es invertir la cascada —PDF como base (1
+> petición por grupo, las 30 jornadas con su día) y PNFG solo para la ventana
+> alrededor de hoy (hora y `actaUrl`, que es lo único que cambia)—, que llevaría
+> el run de ~360 peticiones a ~84. No está hecho.
+
 ### FCF (manual, ~30 min/año)
 Edita `data/fcf-manual.json`:
 1. Para cada división donde juegues, rellena el array `teams` con los rivales de la temporada actual

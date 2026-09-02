@@ -475,12 +475,25 @@ def list_competitions(
 
 def list_groups(
     competition_code: str, *, session: "requests.Session | Fetcher | None" = None
-) -> list[Group]:
-    """Grupos de una competición."""
+) -> list[Group] | None:
+    """Grupos de una competición.
+
+    **None y `[]` no son lo mismo**, igual que en `resolve_season` y en
+    `list_competitions`, y por el mismo motivo — sólo que aquí faltaba, y salió
+    caro. None es "no se pudo preguntar" (la PNFG rate-limita devolviendo 200
+    con el cuerpo vacío); `[]` es "la PNFG contesta que esta competición
+    todavía no tiene grupos", que es lo normal antes del sorteo.
+
+    Colapsar los dos en una lista vacía —que es lo que hacía— convierte una
+    avería en un "aún no hay nada" y `discover_divisions` **tira la división**:
+    el 1 de septiembre de 2026 eso publicó `rfef-segunda-fs-fem` vacía y se
+    llevó por delante 48 equipos y 90 jornadas que estaban bien en el JSON
+    anterior, con el aviso diciendo "sin publicar en la PNFG" — que era falso.
+    """
     f = _as_fetcher(session)
     script = f.get(EXEC_PATH, {
         "cod_primaria": COD_PRIMARIA,
         "codcompeticion": competition_code,
         "Sch_Codigo_Delegacion": "",
     }, label=f"grupos de {competition_code}")
-    return parse_groups(script) if script else []
+    return parse_groups(script) if script is not None else None

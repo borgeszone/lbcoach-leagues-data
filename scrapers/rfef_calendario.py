@@ -59,6 +59,96 @@ _COD_ACTA_RE = re.compile(r"[Cc]od[_]?[Aa]cta=(\d+)")
 _BACKOFFS = [15, 30, 60, 120]
 
 
+class RateLimitBreaker:
+    """Cortacircuitos para el rate-limit de la PNFG.
+
+    **El problema que resuelve.** Un run completo pide ~360 páginas (12 grupos
+    x ~30 jornadas). Cuando la PNFG bloquea —200 con el cuerpo vacío—, cada
+    jornada agota sus cuatro backoffs: 15+30+60+120 = 225 s **por jornada**, y
+    después el bucle sigue con la siguiente como si nada. Un run bloqueado de
+    verdad se pasa horas reintentando, alimentando el bloqueo que causó el
+    reintento, y muere en el corte de 6 h de Actions **sin llegar a publicar**.
+
+    Así que aquí el fallo no se reintenta indefinidamente: se cuenta.
+
+    - `per_group` jornadas seguidas sin respuesta → se abandona ese grupo. A
+      225 s cada una, tres ya son once minutos de evidencia; la cuarta no
+      informa de nada nuevo.
+    - `run_budget` fallos en total → no se pide **ni una página más** en todo el
+      run. El presupuesto es del run entero y no por grupo a propósito: doce
+      grupos con dos fallos cada uno describen el mismo servidor enfadado que
+      un grupo con veinticuatro, y el objetivo es dejar de pegarle.
+
+    **Abandonar no es perder.** Lo que este cortacircuitos deja a medias lo
+    rellena `calendar_cache` con lo que trajeron los runs anteriores, y por
+    encima `inherit_calendars` conserva el calendario publicado si es más
+    completo. Sin esas dos piezas, cortar antes sería sencillamente publicar
+    menos: no lo actives sin ellas.
+
+    **El contador de reintentos se hunde tras el primer fallo, y se recupera
+    solo.** Ese primer fallo ya demostró que el servidor está negando; volver a
+    pagar 225 s en la jornada siguiente es lo que convierte un run de 26 min en
+    uno de seis horas. Una sola respuesta buena lo restaura, así que un corte
+    transitorio no degrada el resto del run.
+    """
+
+    def __init__(self, *, per_group: int = 3, run_budget: int = 12) -> None:
+        self.per_group = per_group
+        self.run_budget = run_budget
+        self.failures = 0
+        self.groups_abandoned = 0
+        self._consecutive = 0
+        self._label = ""
+
+    @property
+    def blocked(self) -> bool:
+        """El run agotó su presupuesto: no se pide nada más a la PNFG."""
+        return self.failures >= self.run_budget
+
+    @property
+    def group_tripped(self) -> bool:
+        """Demasiadas jornadas seguidas sin respuesta en el grupo en curso."""
+        return self._consecutive >= self.per_group
+
+    def start_group(self, label: str) -> None:
+        self._label = label
+        self._consecutive = 0
+
+    def note_success(self) -> None:
+        self._consecutive = 0
+
+    def note_failure(self) -> None:
+        self.failures += 1
+        self._consecutive += 1
+
+    def note_group_abandoned(self) -> None:
+        self.groups_abandoned += 1
+
+    def retries_for(self, retries: int) -> int:
+        """Reintentos que tocan ahora. Ver la nota de la clase: tras un fallo sin
+        éxito de por medio, uno solo."""
+        return 1 if self._consecutive else retries
+
+    def summary(self) -> str | None:
+        """Una línea para `warnings` del JSON publicado, o None si no hubo nada
+        que contar.
+
+        Va al JSON y no solo al log porque un run recortado se parece
+        demasiado a un run normal: sin esto, la única diferencia visible entre
+        "la federación no lo ha publicado" y "nos bloquearon" es un recuento de
+        jornadas que nadie mira.
+        """
+        if not self.failures:
+            return None
+        parte = (f"la PNFG rate-limitó {self.failures} jornada/s"
+                 f"{f' y se abandonaron {self.groups_abandoned} grupo/s' if self.groups_abandoned else ''}")
+        if self.blocked:
+            return (f"{parte}; agotado el presupuesto de {self.run_budget} fallos, "
+                    f"el resto del calendario no se pidió. Lo publicado sale de la "
+                    f"caché y del JSON anterior")
+        return f"{parte}; esas jornadas salen de la caché o del JSON anterior"
+
+
 def resolve_temporada_code(season: str, *, session: requests.Session | None = None) -> str | None:
     """Alias histórico de `rfef_discovery.resolve_season_code`.
 
@@ -111,6 +201,7 @@ def fetch_division_calendar(
     retries: int = 4,
     jornada_delay: float = 4.0,
     max_jornadas: int | None = None,
+    breaker: "RateLimitBreaker | None" = None,
 ) -> list[dict]:
     """Devuelve `[{"jornada": N, "matches": [{"home","away","date"}]}]`.
 
@@ -120,6 +211,10 @@ def fetch_division_calendar(
     la PNFG. Dos, y no una, porque con un número impar de equipos hay uno que
     descansa cada jornada y con la J1 sola se perdería.
 
+    `breaker` corta cuando la PNFG está bloqueando (ver `RateLimitBreaker`). Se
+    comparte entre grupos para que el presupuesto sea del run entero; sin él se
+    usa uno propio, que da el corte por grupo pero no el global.
+
     `date` en ISO-8601 (`YYYY-MM-DDTHH:MM:00`) o None si la fila no trae fecha.
     Estrategia: descarga la jornada 1 para leer el `<select>` de jornadas
     (cuántas hay), parsea sus partidos, y luego itera el resto de jornadas con
@@ -127,11 +222,21 @@ def fetch_division_calendar(
     """
     s = session or make_session()
     label = f"{cod_competicion}/{cod_grupo}"
+    br = breaker or RateLimitBreaker()
+    br.start_group(label)
 
-    first_html = _fetch_jornada_html(s, cod_competicion, cod_grupo, 1, temporada_code, retries)
+    if br.blocked:
+        print(f"  [rfef-cal] {label}: omitido, el run agotó su presupuesto de fallos")
+        return []
+
+    first_html = _fetch_jornada_html(
+        s, cod_competicion, cod_grupo, 1, temporada_code, br.retries_for(retries))
     if first_html is None:
+        br.note_failure()
+        br.note_group_abandoned()
         print(f"  [rfef-cal] {label}: sin respuesta para J1; calendario vacío")
         return []
+    br.note_success()
 
     jornada_nums = _parse_jornada_numbers(first_html)
     if not jornada_nums:
@@ -147,11 +252,25 @@ def fetch_division_calendar(
         if num == 1:
             html = first_html
         else:
+            if br.blocked:
+                print(f"  [rfef-cal] {label}: cortado en J{num}, el run agotó su "
+                      f"presupuesto de fallos")
+                br.note_group_abandoned()
+                break
             time.sleep(jornada_delay)
-            html = _fetch_jornada_html(s, cod_competicion, cod_grupo, num, temporada_code, retries)
+            html = _fetch_jornada_html(
+                s, cod_competicion, cod_grupo, num, temporada_code,
+                br.retries_for(retries))
             if html is None:
+                br.note_failure()
+                if br.group_tripped:
+                    print(f"  [rfef-cal] {label}: {br.per_group} jornadas seguidas "
+                          f"sin respuesta; se abandona el grupo en J{num}")
+                    br.note_group_abandoned()
+                    break
                 print(f"  [rfef-cal] {label}: J{num} sin respuesta, saltando")
                 continue
+            br.note_success()
         matches = _parse_matches(html)
         if matches:
             out.append({"jornada": num, "matches": matches})
