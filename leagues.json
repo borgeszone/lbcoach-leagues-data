@@ -1,6 +1,6 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-02T19:43:59+00:00",
+  "lastUpdated": "2026-09-02T20:57:56+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
     "rfef: la PNFG rate-limitó 12 jornada/s y se abandonaron 6 grupo/s; agotado el presupuesto de 12 fallos, el resto del calendario no se pidió. Lo publicado sale de la caché y del JSON anterior",
@@ -685,6 +685,59 @@
               ]
             },
             {
+              "jornada": 12,
+              "matches": [
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "CD Xota FS",
+                  "date": "2026-12-12T00:00:00",
+                  "actaUrl": null
+                },
+                {
+                  "home": "Catgas Energía Santa Coloma",
+                  "away": "Noia Portus Apostoli",
+                  "date": "2026-12-12T00:00:00",
+                  "actaUrl": null
+                },
+                {
+                  "home": "Jaen Paraiso Interior F.S.",
+                  "away": "Servigroup Peñiscola FS",
+                  "date": "2026-12-12T00:00:00",
+                  "actaUrl": null
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares F.S.",
+                  "away": "Inter JP Financial",
+                  "date": "2026-12-12T00:00:00",
+                  "actaUrl": null
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Barça",
+                  "date": "2026-12-12T00:00:00",
+                  "actaUrl": null
+                },
+                {
+                  "home": "O Parrulo Ferrol F.S.",
+                  "away": "Jimbee Cartagena Costa Cálida",
+                  "date": "2026-12-12T00:00:00",
+                  "actaUrl": null
+                },
+                {
+                  "home": "ElPozo Murcia Costa Cálida",
+                  "away": "Viña Albali Valdepeñas",
+                  "date": "2026-12-12T00:00:00",
+                  "actaUrl": null
+                },
+                {
+                  "home": "Wanapix",
+                  "away": "Sur Seeds El Ejido F.S.",
+                  "date": "2026-12-12T00:00:00",
+                  "actaUrl": null
+                }
+              ]
+            },
+            {
               "jornada": 13,
               "matches": [
                 {
@@ -844,7 +897,8 @@
               ]
             }
           ],
-          "teamsSource": "calendario"
+          "teamsSource": "calendario",
+          "jornadasTotal": 15
         },
         {
           "id": "rfef-segunda-fs-masc",
@@ -1512,6 +1566,165 @@
               ]
             },
             {
+              "jornada": 12,
+              "matches": [
+                {
+                  "home": "Avanza Jaén Paraíso Interior",
+                  "away": "C.D. Leganés F.S.",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Barça Atlètic",
+                  "away": "Unión África Ceutí \"A\"",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Gasifred Atlético Ibiza",
+                  "away": "Family Cash Alzira F.S.",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "C.E. Futsal Gestoria Luis Mataró",
+                  "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "ElPozo Ciudad de Murcia",
+                  "away": "MRB FS Mostoles",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Ribera Navarra FS",
+                  "away": "C.D. Melistar",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "REYCO Burela FS",
+                  "away": "Sala 5 Martorell MCD Grup",
+                  "date": "2026-12-05T17:00:00",
+                  "actaUrl": null
+                },
+                {
+                  "home": "Entrerrios Automatización",
+                  "away": "Xerez Toyota Nimauto",
+                  "date": "2026-12-05T19:00:00",
+                  "actaUrl": null
+                }
+              ]
+            },
+            {
+              "jornada": 13,
+              "matches": [
+                {
+                  "home": "Family Cash Alzira F.S.",
+                  "away": "Avanza Jaén Paraíso Interior",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "C.D. Leganés F.S.",
+                  "away": "MRB FS Mostoles",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Unión África Ceutí \"A\"",
+                  "away": "Gasifred Atlético Ibiza",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "C.E. Futsal Gestoria Luis Mataró",
+                  "away": "REYCO Burela FS",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Xerez Toyota Nimauto",
+                  "away": "Ribera Navarra FS",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "away": "Sala 5 Martorell MCD Grup",
+                  "date": "2026-12-12T18:00:00",
+                  "actaUrl": null
+                },
+                {
+                  "home": "Entrerrios Automatización",
+                  "away": "Barça Atlètic",
+                  "date": "2026-12-12T19:00:00",
+                  "actaUrl": null
+                },
+                {
+                  "home": "C.D. Melistar",
+                  "away": "ElPozo Ciudad de Murcia",
+                  "date": "2026-12-12T19:30:00",
+                  "actaUrl": null
+                }
+              ]
+            },
+            {
+              "jornada": 14,
+              "matches": [
+                {
+                  "home": "Avanza Jaén Paraíso Interior",
+                  "away": "Gasifred Atlético Ibiza",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Barça Atlètic",
+                  "away": "C.D. Leganés F.S.",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "REYCO Burela FS",
+                  "away": "Xerez Toyota Nimauto",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Unión África Ceutí \"A\"",
+                  "away": "C.D. Melistar",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Sala 5 Martorell MCD Grup",
+                  "away": "Ribera Navarra FS",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "MRB FS Mostoles",
+                  "away": "Family Cash Alzira F.S.",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "ElPozo Ciudad de Murcia",
+                  "away": "C.E. Futsal Gestoria Luis Mataró",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "away": "Entrerrios Automatización",
+                  "date": "2026-12-19T18:00:00",
+                  "actaUrl": null
+                }
+              ]
+            },
+            {
               "jornada": 15,
               "matches": [
                 {
@@ -2146,9 +2359,222 @@
                   "actaUrl": null
                 }
               ]
+            },
+            {
+              "jornada": 27,
+              "matches": [
+                {
+                  "home": "Avanza Jaén Paraíso Interior",
+                  "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Barça Atlètic",
+                  "away": "C.D. Melistar",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Unión África Ceutí \"A\"",
+                  "away": "C.D. Leganés F.S.",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Sala 5 Martorell MCD Grup",
+                  "away": "REYCO Burela FS",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "MRB FS Mostoles",
+                  "away": "C.E. Futsal Gestoria Luis Mataró",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "ElPozo Ciudad de Murcia",
+                  "away": "Family Cash Alzira F.S.",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Ribera Navarra FS",
+                  "away": "Xerez Toyota Nimauto",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Entrerrios Automatización",
+                  "away": "Gasifred Atlético Ibiza",
+                  "date": "2027-04-17T19:00:00",
+                  "actaUrl": null
+                }
+              ]
+            },
+            {
+              "jornada": 28,
+              "matches": [
+                {
+                  "home": "Family Cash Alzira F.S.",
+                  "away": "Sala 5 Martorell MCD Grup",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "REYCO Burela FS",
+                  "away": "MRB FS Mostoles",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Gasifred Atlético Ibiza",
+                  "away": "ElPozo Ciudad de Murcia",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "C.D. Leganés F.S.",
+                  "away": "Barça Atlètic",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "C.E. Futsal Gestoria Luis Mataró",
+                  "away": "Avanza Jaén Paraíso Interior",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Xerez Toyota Nimauto",
+                  "away": "Unión África Ceutí \"A\"",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "away": "Ribera Navarra FS",
+                  "date": "2027-04-24T18:00:00",
+                  "actaUrl": null
+                },
+                {
+                  "home": "C.D. Melistar",
+                  "away": "Entrerrios Automatización",
+                  "date": "2027-04-24T19:30:00",
+                  "actaUrl": null
+                }
+              ]
+            },
+            {
+              "jornada": 29,
+              "matches": [
+                {
+                  "home": "Avanza Jaén Paraíso Interior",
+                  "away": "C.D. Melistar",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Barça Atlètic",
+                  "away": "Family Cash Alzira F.S.",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Entrerrios Automatización",
+                  "away": "C.D. Leganés F.S.",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Unión África Ceutí \"A\"",
+                  "away": "C.E. Futsal Gestoria Luis Mataró",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Sala 5 Martorell MCD Grup",
+                  "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "MRB FS Mostoles",
+                  "away": "Xerez Toyota Nimauto",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "ElPozo Ciudad de Murcia",
+                  "away": "REYCO Burela FS",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Ribera Navarra FS",
+                  "away": "Gasifred Atlético Ibiza",
+                  "date": null,
+                  "actaUrl": null
+                }
+              ]
+            },
+            {
+              "jornada": 30,
+              "matches": [
+                {
+                  "home": "Family Cash Alzira F.S.",
+                  "away": "MRB FS Mostoles",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "REYCO Burela FS",
+                  "away": "Barça Atlètic",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Gasifred Atlético Ibiza",
+                  "away": "Unión África Ceutí \"A\"",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "C.D. Leganés F.S.",
+                  "away": "Avanza Jaén Paraíso Interior",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "C.E. Futsal Gestoria Luis Mataró",
+                  "away": "Ribera Navarra FS",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "C.D. Melistar",
+                  "away": "Sala 5 Martorell MCD Grup",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Xerez Toyota Nimauto",
+                  "away": "Entrerrios Automatización",
+                  "date": null,
+                  "actaUrl": null
+                },
+                {
+                  "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+                  "away": "ElPozo Ciudad de Murcia",
+                  "date": "2027-05-08T18:00:00",
+                  "actaUrl": null
+                }
+              ]
             }
           ],
-          "teamsSource": "pdf-rfef"
+          "teamsSource": "pdf-rfef",
+          "jornadasTotal": 30
         },
         {
           "id": "rfef-segunda-b-fs-masc",
@@ -10892,7 +11318,169 @@
               "officialName": "Wanapix Aldelis InterSala 10 Zaragoza"
             }
           ],
-          "teamsSource": "calendario"
+          "teamsSource": "calendario",
+          "calendar": [
+            {
+              "jornada": 1,
+              "matches": [
+                {
+                  "home": "Estrela Revoltosa Verín FSF",
+                  "away": "F.S.F. Castro Bloques Cando",
+                  "date": "2026-09-04T21:00:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696748&NPcd_Pdf=1"
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "STV Roldán F.S",
+                  "date": "2026-09-05T11:00:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696750&NPcd_Pdf=1"
+                },
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "Ceuta Agrupación Deportiva",
+                  "date": "2026-09-05T12:30:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696747&NPcd_Pdf=1"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
+                  "away": "Nueces de Ronda Atlético Torcal FS",
+                  "date": "2026-09-05T13:00:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696749&NPcd_Pdf=1"
+                },
+                {
+                  "home": "ARRIVA AD Alcorcón FSF",
+                  "away": "C.D. Guadalcacín F.S.",
+                  "date": "2026-09-05T16:30:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696746&NPcd_Pdf=1"
+                },
+                {
+                  "home": "Ourense Ontime",
+                  "away": "AE Les Corts UBAE",
+                  "date": "2026-09-05T17:00:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696751&NPcd_Pdf=1"
+                },
+                {
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
+                  "away": "Poio Pescamar FS",
+                  "date": "2026-09-05T18:00:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696753&NPcd_Pdf=1"
+                },
+                {
+                  "home": "Rodiles F.S. \"A\"",
+                  "away": "Atlético Navalcarnero",
+                  "date": "2026-09-05T18:30:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696752&NPcd_Pdf=1"
+                }
+              ]
+            },
+            {
+              "jornada": 2,
+              "matches": [
+                {
+                  "home": "Atlético Navalcarnero",
+                  "away": "ARRIVA AD Alcorcón FSF",
+                  "date": "2026-09-12T10:00:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696758&NPcd_Pdf=1"
+                },
+                {
+                  "home": "Ceuta Agrupación Deportiva",
+                  "away": "F.S.F. Castro Bloques Cando",
+                  "date": "2026-09-12T12:00:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696754&NPcd_Pdf=1"
+                },
+                {
+                  "home": "AE Les Corts UBAE",
+                  "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
+                  "date": "2026-09-12T12:00:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696755&NPcd_Pdf=1"
+                },
+                {
+                  "home": "C.D. Guadalcacín F.S.",
+                  "away": "Ourense Ontime",
+                  "date": "2026-09-12T17:00:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696756&NPcd_Pdf=1"
+                },
+                {
+                  "home": "STV Roldán F.S",
+                  "away": "Wanapix Aldelis InterSala 10 Zaragoza",
+                  "date": "2026-09-12T18:00:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696760&NPcd_Pdf=1"
+                },
+                {
+                  "home": "Nueces de Ronda Atlético Torcal FS",
+                  "away": "Estrela Revoltosa Verín FSF",
+                  "date": "2026-09-12T18:00:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696761&NPcd_Pdf=1"
+                },
+                {
+                  "home": "MRB Móstoles FSF",
+                  "away": "LBTL Futsal Alcantarilla",
+                  "date": "2026-09-12T18:30:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696757&NPcd_Pdf=1"
+                },
+                {
+                  "home": "Poio Pescamar FS",
+                  "away": "Rodiles F.S. \"A\"",
+                  "date": "2026-09-12T18:30:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696759&NPcd_Pdf=1"
+                }
+              ]
+            },
+            {
+              "jornada": 3,
+              "matches": [
+                {
+                  "home": "STV Roldán F.S",
+                  "away": "Ceuta Agrupación Deportiva",
+                  "date": "2026-09-19T12:00:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696768&NPcd_Pdf=1"
+                },
+                {
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
+                  "away": "MRB Móstoles FSF",
+                  "date": "2026-09-19T12:30:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696766&NPcd_Pdf=1"
+                },
+                {
+                  "home": "ARRIVA AD Alcorcón FSF",
+                  "away": "Poio Pescamar FS",
+                  "date": "2026-09-19T13:00:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696762&NPcd_Pdf=1"
+                },
+                {
+                  "home": "Estrela Revoltosa Verín FSF",
+                  "away": "AE Les Corts UBAE",
+                  "date": "2026-09-19T17:30:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696765&NPcd_Pdf=1"
+                },
+                {
+                  "home": "Rodiles F.S. \"A\"",
+                  "away": "Nueces de Ronda Atlético Torcal FS",
+                  "date": "2026-09-19T18:30:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696767&NPcd_Pdf=1"
+                },
+                {
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
+                  "away": "Atlético Navalcarnero",
+                  "date": "2026-09-19T19:00:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696769&NPcd_Pdf=1"
+                },
+                {
+                  "home": "F.S.F. Castro Bloques Cando",
+                  "away": "C.D. Guadalcacín F.S.",
+                  "date": "2026-09-19T19:30:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696764&NPcd_Pdf=1"
+                },
+                {
+                  "home": "LBTL Futsal Alcantarilla",
+                  "away": "Ourense Ontime",
+                  "date": "2026-09-20T12:00:00",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696763&NPcd_Pdf=1"
+                }
+              ]
+            }
+          ],
+          "jornadasTotal": 30
         },
         {
           "id": "rfef-segunda-fs-fem",
