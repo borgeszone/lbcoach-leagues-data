@@ -229,5 +229,1483 @@
   "33918407|33918408|J1|reycoburelafs|elpozociudaddemurcia": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703440&NPcd_Pdf=1",
   "33918407|33918408|J1|riberanavarrafs|entrerriosautomatizacion": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703445&NPcd_Pdf=1",
   "33918407|33918408|J1|xereztoyotanimauto|avanzajaenparaisointerior": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703446&NPcd_Pdf=1",
-  "_comment": "Caché persistente de actaUrls por partido auto-generada por scrapers.calendar_cache. NO editar a mano. Cada run del scraper fusiona lo fresco con esta caché: una vez la federación publica el CodActa de un partido queda permanente para el resto de la temporada aunque RFEF rate-limite en runs posteriores. Si una URL deja de funcionar, simplemente borra esa entrada y la próxima ejecución la reresolverá."
+  "_calendars": {
+    "33836159|33892849": {
+      "1": [
+        {
+          "away": "Jaen Paraiso Interior F.S.",
+          "date": "2026-09-11T19:30:00",
+          "home": "CD Xota FS"
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2026-09-11T21:30:00",
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "Servigroup Peñiscola FS",
+          "date": "2026-09-12T13:00:00",
+          "home": "Wanapix"
+        },
+        {
+          "away": "Córdoba Patrimonio De La Humanidad",
+          "date": "2026-09-12T16:30:00",
+          "home": "Sur Seeds El Ejido F.S."
+        },
+        {
+          "away": "Barça",
+          "date": "2026-09-12T18:30:00",
+          "home": "Viña Albali Valdepeñas"
+        },
+        {
+          "away": "ElPozo Murcia Costa Cálida",
+          "date": "2026-09-12T20:30:00",
+          "home": "Noia Portus Apostoli"
+        },
+        {
+          "away": "Inter JP Financial",
+          "date": "2026-09-13T12:45:00",
+          "home": "Jimbee Cartagena Costa Cálida"
+        },
+        {
+          "away": "Quesos El Hidalgo Manzanares F.S.",
+          "date": "2026-09-13T16:30:00",
+          "home": "O Parrulo Ferrol F.S."
+        }
+      ],
+      "10": [
+        {
+          "away": "CD Xota FS",
+          "date": "2026-11-28T00:00:00",
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "Noia Portus Apostoli",
+          "date": "2026-11-28T00:00:00",
+          "home": "Inter JP Financial"
+        },
+        {
+          "away": "Wanapix",
+          "date": "2026-11-28T00:00:00",
+          "home": "Jaen Paraiso Interior F.S."
+        },
+        {
+          "away": "Barça",
+          "date": "2026-11-28T00:00:00",
+          "home": "Quesos El Hidalgo Manzanares F.S."
+        },
+        {
+          "away": "Viña Albali Valdepeñas",
+          "date": "2026-11-28T00:00:00",
+          "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "Córdoba Patrimonio De La Humanidad",
+          "date": "2026-11-28T00:00:00",
+          "home": "O Parrulo Ferrol F.S."
+        },
+        {
+          "away": "Jimbee Cartagena Costa Cálida",
+          "date": "2026-11-28T00:00:00",
+          "home": "Servigroup Peñiscola FS"
+        },
+        {
+          "away": "Sur Seeds El Ejido F.S.",
+          "date": "2026-11-28T00:00:00",
+          "home": "ElPozo Murcia Costa Cálida"
+        }
+      ],
+      "11": [
+        {
+          "away": "Jaen Paraiso Interior F.S.",
+          "date": "2026-12-05T00:00:00",
+          "home": "Barça"
+        },
+        {
+          "away": "ElPozo Murcia Costa Cálida",
+          "date": "2026-12-05T00:00:00",
+          "home": "Jimbee Cartagena Costa Cálida"
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2026-12-05T00:00:00",
+          "home": "Córdoba Patrimonio De La Humanidad"
+        },
+        {
+          "away": "O Parrulo Ferrol F.S.",
+          "date": "2026-12-05T00:00:00",
+          "home": "Sur Seeds El Ejido F.S."
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2026-12-05T00:00:00",
+          "home": "Inter JP Financial"
+        },
+        {
+          "away": "Quesos El Hidalgo Manzanares F.S.",
+          "date": "2026-12-05T00:00:00",
+          "home": "Noia Portus Apostoli"
+        },
+        {
+          "away": "Servigroup Peñiscola FS",
+          "date": "2026-12-05T00:00:00",
+          "home": "CD Xota FS"
+        },
+        {
+          "away": "Wanapix",
+          "date": "2026-12-05T00:00:00",
+          "home": "Viña Albali Valdepeñas"
+        }
+      ],
+      "2": [
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2026-09-18T19:30:00",
+          "home": "O Parrulo Ferrol F.S."
+        },
+        {
+          "away": "ElPozo Murcia Costa Cálida",
+          "date": "2026-09-19T12:00:00",
+          "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "Quesos El Hidalgo Manzanares F.S.",
+          "date": "2026-09-19T16:30:00",
+          "home": "Córdoba Patrimonio De La Humanidad"
+        },
+        {
+          "away": "Wanapix",
+          "date": "2026-09-19T18:30:00",
+          "home": "Jimbee Cartagena Costa Cálida"
+        },
+        {
+          "away": "Sur Seeds El Ejido F.S.",
+          "date": "2026-09-19T20:30:00",
+          "home": "Inter JP Financial"
+        },
+        {
+          "away": "Noia Portus Apostoli",
+          "date": "2026-09-20T13:00:00",
+          "home": "Jaen Paraiso Interior F.S."
+        },
+        {
+          "away": "CD Xota FS",
+          "date": "2026-09-20T16:30:00",
+          "home": "Viña Albali Valdepeñas"
+        },
+        {
+          "away": "Servigroup Peñiscola FS",
+          "date": "2026-09-21T20:30:00",
+          "home": "Barça"
+        }
+      ],
+      "3": [
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2026-09-25T19:30:00",
+          "home": "CD Xota FS"
+        },
+        {
+          "away": "Jimbee Cartagena Costa Cálida",
+          "date": "2026-09-25T21:30:00",
+          "home": "Barça"
+        },
+        {
+          "away": "Inter JP Financial",
+          "date": "2026-09-26T12:00:00",
+          "home": "Jaen Paraiso Interior F.S."
+        },
+        {
+          "away": "O Parrulo Ferrol F.S.",
+          "date": "2026-09-26T16:30:00",
+          "home": "Wanapix"
+        },
+        {
+          "away": "Viña Albali Valdepeñas",
+          "date": "2026-09-26T18:30:00",
+          "home": "Servigroup Peñiscola FS"
+        },
+        {
+          "away": "Córdoba Patrimonio De La Humanidad",
+          "date": "2026-09-26T20:30:00",
+          "home": "ElPozo Murcia Costa Cálida"
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2026-09-27T13:00:00",
+          "home": "Quesos El Hidalgo Manzanares F.S."
+        },
+        {
+          "away": "Sur Seeds El Ejido F.S.",
+          "date": "2026-09-27T16:30:00",
+          "home": "Noia Portus Apostoli"
+        }
+      ],
+      "4": [
+        {
+          "away": "Jaen Paraiso Interior F.S.",
+          "date": "2026-10-03T00:00:00",
+          "home": "Córdoba Patrimonio De La Humanidad"
+        },
+        {
+          "away": "CD Xota FS",
+          "date": "2026-10-03T00:00:00",
+          "home": "Sur Seeds El Ejido F.S."
+        },
+        {
+          "away": "Wanapix",
+          "date": "2026-10-03T00:00:00",
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "ElPozo Murcia Costa Cálida",
+          "date": "2026-10-03T00:00:00",
+          "home": "Inter JP Financial"
+        },
+        {
+          "away": "Jimbee Cartagena Costa Cálida",
+          "date": "2026-10-03T00:00:00",
+          "home": "Quesos El Hidalgo Manzanares F.S."
+        },
+        {
+          "away": "Barça",
+          "date": "2026-10-03T00:00:00",
+          "home": "Noia Portus Apostoli"
+        },
+        {
+          "away": "Servigroup Peñiscola FS",
+          "date": "2026-10-03T00:00:00",
+          "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "Viña Albali Valdepeñas",
+          "date": "2026-10-03T00:00:00",
+          "home": "O Parrulo Ferrol F.S."
+        }
+      ],
+      "5": [
+        {
+          "away": "CD Xota FS",
+          "date": "2026-10-10T00:00:00",
+          "home": "Barça"
+        },
+        {
+          "away": "Noia Portus Apostoli",
+          "date": "2026-10-10T00:00:00",
+          "home": "Jimbee Cartagena Costa Cálida"
+        },
+        {
+          "away": "Sur Seeds El Ejido F.S.",
+          "date": "2026-10-10T00:00:00",
+          "home": "Jaen Paraiso Interior F.S."
+        },
+        {
+          "away": "O Parrulo Ferrol F.S.",
+          "date": "2026-10-10T00:00:00",
+          "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "Córdoba Patrimonio De La Humanidad",
+          "date": "2026-10-10T00:00:00",
+          "home": "Servigroup Peñiscola FS"
+        },
+        {
+          "away": "Quesos El Hidalgo Manzanares F.S.",
+          "date": "2026-10-10T00:00:00",
+          "home": "ElPozo Murcia Costa Cálida"
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2026-10-10T00:00:00",
+          "home": "Viña Albali Valdepeñas"
+        },
+        {
+          "away": "Inter JP Financial",
+          "date": "2026-10-10T00:00:00",
+          "home": "Wanapix"
+        }
+      ],
+      "6": [
+        {
+          "away": "Jimbee Cartagena Costa Cálida",
+          "date": "2026-10-24T00:00:00",
+          "home": "Córdoba Patrimonio De La Humanidad"
+        },
+        {
+          "away": "Barça",
+          "date": "2026-10-24T00:00:00",
+          "home": "Sur Seeds El Ejido F.S."
+        },
+        {
+          "away": "ElPozo Murcia Costa Cálida",
+          "date": "2026-10-24T00:00:00",
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "Viña Albali Valdepeñas",
+          "date": "2026-10-24T00:00:00",
+          "home": "Inter JP Financial"
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2026-10-24T00:00:00",
+          "home": "Quesos El Hidalgo Manzanares F.S."
+        },
+        {
+          "away": "Servigroup Peñiscola FS",
+          "date": "2026-10-24T00:00:00",
+          "home": "Noia Portus Apostoli"
+        },
+        {
+          "away": "Wanapix",
+          "date": "2026-10-24T00:00:00",
+          "home": "CD Xota FS"
+        },
+        {
+          "away": "Jaen Paraiso Interior F.S.",
+          "date": "2026-10-24T00:00:00",
+          "home": "O Parrulo Ferrol F.S."
+        }
+      ],
+      "7": [
+        {
+          "away": "ElPozo Murcia Costa Cálida",
+          "date": "2026-09-29T20:30:00",
+          "home": "Wanapix"
+        },
+        {
+          "away": "O Parrulo Ferrol F.S.",
+          "date": "2026-09-30T20:45:00",
+          "home": "Barça"
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2026-10-31T00:00:00",
+          "home": "Jimbee Cartagena Costa Cálida"
+        },
+        {
+          "away": "Quesos El Hidalgo Manzanares F.S.",
+          "date": "2026-10-31T00:00:00",
+          "home": "Jaen Paraiso Interior F.S."
+        },
+        {
+          "away": "Noia Portus Apostoli",
+          "date": "2026-10-31T00:00:00",
+          "home": "CD Xota FS"
+        },
+        {
+          "away": "Sur Seeds El Ejido F.S.",
+          "date": "2026-10-31T00:00:00",
+          "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "Inter JP Financial",
+          "date": "2026-10-31T00:00:00",
+          "home": "Servigroup Peñiscola FS"
+        },
+        {
+          "away": "Córdoba Patrimonio De La Humanidad",
+          "date": "2026-10-31T00:00:00",
+          "home": "Viña Albali Valdepeñas"
+        }
+      ],
+      "8": [
+        {
+          "away": "Wanapix",
+          "date": "2026-11-14T00:00:00",
+          "home": "Córdoba Patrimonio De La Humanidad"
+        },
+        {
+          "away": "Jimbee Cartagena Costa Cálida",
+          "date": "2026-11-14T00:00:00",
+          "home": "Sur Seeds El Ejido F.S."
+        },
+        {
+          "away": "Jaen Paraiso Interior F.S.",
+          "date": "2026-11-14T00:00:00",
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "CD Xota FS",
+          "date": "2026-11-14T00:00:00",
+          "home": "Inter JP Financial"
+        },
+        {
+          "away": "Viña Albali Valdepeñas",
+          "date": "2026-11-14T00:00:00",
+          "home": "Quesos El Hidalgo Manzanares F.S."
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2026-11-14T00:00:00",
+          "home": "Noia Portus Apostoli"
+        },
+        {
+          "away": "Servigroup Peñiscola FS",
+          "date": "2026-11-14T00:00:00",
+          "home": "O Parrulo Ferrol F.S."
+        },
+        {
+          "away": "Barça",
+          "date": "2026-11-14T00:00:00",
+          "home": "ElPozo Murcia Costa Cálida"
+        }
+      ],
+      "9": [
+        {
+          "away": "Córdoba Patrimonio De La Humanidad",
+          "date": "2026-11-21T00:00:00",
+          "home": "Barça"
+        },
+        {
+          "away": "Jaen Paraiso Interior F.S.",
+          "date": "2026-11-21T00:00:00",
+          "home": "Jimbee Cartagena Costa Cálida"
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2026-11-21T00:00:00",
+          "home": "Sur Seeds El Ejido F.S."
+        },
+        {
+          "away": "O Parrulo Ferrol F.S.",
+          "date": "2026-11-21T00:00:00",
+          "home": "CD Xota FS"
+        },
+        {
+          "away": "Inter JP Financial",
+          "date": "2026-11-21T00:00:00",
+          "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "ElPozo Murcia Costa Cálida",
+          "date": "2026-11-21T00:00:00",
+          "home": "Servigroup Peñiscola FS"
+        },
+        {
+          "away": "Noia Portus Apostoli",
+          "date": "2026-11-21T00:00:00",
+          "home": "Viña Albali Valdepeñas"
+        },
+        {
+          "away": "Quesos El Hidalgo Manzanares F.S.",
+          "date": "2026-11-21T00:00:00",
+          "home": "Wanapix"
+        }
+      ]
+    },
+    "33836163|33836166": {
+      "1": [
+        {
+          "away": "C. Natacio Sabadell",
+          "date": null,
+          "home": "Hospitalet Bellsport F.S."
+        },
+        {
+          "away": "C.F.S. Futsal IBI - Juypal Hogar",
+          "date": null,
+          "home": "Les Corts EF \"A\""
+        },
+        {
+          "away": "Club Deportivo Sporting la Nucía",
+          "date": null,
+          "home": "Covisa Manresa"
+        },
+        {
+          "away": "F.S. Ripollet \"A\"",
+          "date": null,
+          "home": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A"
+        },
+        {
+          "away": "Ye Faky F.S.",
+          "date": null,
+          "home": "Sant Joan Despí CFS Cumsa"
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": null,
+          "home": "Nunsys El Pilar"
+        },
+        {
+          "away": "Canet F.S.",
+          "date": "2026-09-19T16:00:00",
+          "home": "A.E. Llevant De Manacor Futsal \"A\""
+        },
+        {
+          "away": "F.S. Picassent",
+          "date": "2026-09-19T18:00:00",
+          "home": "Catgas Energía Santa Coloma"
+        }
+      ],
+      "10": [
+        {
+          "away": "Nunsys El Pilar",
+          "date": null,
+          "home": "F.S. Picassent"
+        },
+        {
+          "away": "Club Deportivo Sporting la Nucía",
+          "date": null,
+          "home": "F.S. Ripollet \"A\""
+        },
+        {
+          "away": "Canet F.S.",
+          "date": null,
+          "home": "Ye Faky F.S."
+        },
+        {
+          "away": "C. Natacio Sabadell",
+          "date": null,
+          "home": "Sant Joan Despí CFS Cumsa"
+        },
+        {
+          "away": "Hospitalet Bellsport F.S.",
+          "date": null,
+          "home": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A"
+        },
+        {
+          "away": "Les Corts EF \"A\"",
+          "date": null,
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "A.E. Llevant De Manacor Futsal \"A\"",
+          "date": null,
+          "home": "Covisa Manresa"
+        },
+        {
+          "away": "C.F.S. Futsal IBI - Juypal Hogar",
+          "date": "2026-11-21T16:00:00",
+          "home": "Illes Balears Palma Futsal"
+        }
+      ],
+      "11": [
+        {
+          "away": "F.S. Ripollet \"A\"",
+          "date": null,
+          "home": "F.S. Picassent"
+        },
+        {
+          "away": "Ye Faky F.S.",
+          "date": null,
+          "home": "Club Deportivo Sporting la Nucía"
+        },
+        {
+          "away": "Sant Joan Despí CFS Cumsa",
+          "date": null,
+          "home": "C.F.S. Futsal IBI - Juypal Hogar"
+        },
+        {
+          "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
+          "date": null,
+          "home": "C. Natacio Sabadell"
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": null,
+          "home": "Hospitalet Bellsport F.S."
+        },
+        {
+          "away": "Covisa Manresa",
+          "date": null,
+          "home": "Les Corts EF \"A\""
+        },
+        {
+          "away": "A.E. Llevant De Manacor Futsal \"A\"",
+          "date": null,
+          "home": "Nunsys El Pilar"
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2026-11-28T16:00:00",
+          "home": "Canet F.S."
+        }
+      ],
+      "12": [
+        {
+          "away": "Nunsys El Pilar",
+          "date": null,
+          "home": "F.S. Ripollet \"A\""
+        },
+        {
+          "away": "F.S. Picassent",
+          "date": null,
+          "home": "Ye Faky F.S."
+        },
+        {
+          "away": "Canet F.S.",
+          "date": null,
+          "home": "Sant Joan Despí CFS Cumsa"
+        },
+        {
+          "away": "C.F.S. Futsal IBI - Juypal Hogar",
+          "date": null,
+          "home": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A"
+        },
+        {
+          "away": "C. Natacio Sabadell",
+          "date": null,
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "Hospitalet Bellsport F.S.",
+          "date": null,
+          "home": "Covisa Manresa"
+        },
+        {
+          "away": "Les Corts EF \"A\"",
+          "date": null,
+          "home": "A.E. Llevant De Manacor Futsal \"A\""
+        },
+        {
+          "away": "Club Deportivo Sporting la Nucía",
+          "date": "2026-12-05T16:00:00",
+          "home": "Illes Balears Palma Futsal"
+        }
+      ],
+      "2": [
+        {
+          "away": "Nunsys El Pilar",
+          "date": null,
+          "home": "C. Natacio Sabadell"
+        },
+        {
+          "away": "Hospitalet Bellsport F.S.",
+          "date": null,
+          "home": "C.F.S. Futsal IBI - Juypal Hogar"
+        },
+        {
+          "away": "A.E. Llevant De Manacor Futsal \"A\"",
+          "date": null,
+          "home": "Club Deportivo Sporting la Nucía"
+        },
+        {
+          "away": "Covisa Manresa",
+          "date": null,
+          "home": "F.S. Picassent"
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": null,
+          "home": "F.S. Ripollet \"A\""
+        },
+        {
+          "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
+          "date": null,
+          "home": "Ye Faky F.S."
+        },
+        {
+          "away": "Sant Joan Despí CFS Cumsa",
+          "date": "2026-09-26T16:00:00",
+          "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "Les Corts EF \"A\"",
+          "date": "2026-09-26T19:00:00",
+          "home": "Canet F.S."
+        }
+      ],
+      "3": [
+        {
+          "away": "C.F.S. Futsal IBI - Juypal Hogar",
+          "date": null,
+          "home": "C. Natacio Sabadell"
+        },
+        {
+          "away": "Canet F.S.",
+          "date": null,
+          "home": "Hospitalet Bellsport F.S."
+        },
+        {
+          "away": "Club Deportivo Sporting la Nucía",
+          "date": null,
+          "home": "Les Corts EF \"A\""
+        },
+        {
+          "away": "F.S. Ripollet \"A\"",
+          "date": null,
+          "home": "Covisa Manresa"
+        },
+        {
+          "away": "Ye Faky F.S.",
+          "date": null,
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": null,
+          "home": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A"
+        },
+        {
+          "away": "Sant Joan Despí CFS Cumsa",
+          "date": null,
+          "home": "Nunsys El Pilar"
+        },
+        {
+          "away": "F.S. Picassent",
+          "date": "2026-10-03T13:15:00",
+          "home": "A.E. Llevant De Manacor Futsal \"A\""
+        }
+      ],
+      "4": [
+        {
+          "away": "Nunsys El Pilar",
+          "date": null,
+          "home": "C.F.S. Futsal IBI - Juypal Hogar"
+        },
+        {
+          "away": "Hospitalet Bellsport F.S.",
+          "date": null,
+          "home": "Club Deportivo Sporting la Nucía"
+        },
+        {
+          "away": "Les Corts EF \"A\"",
+          "date": null,
+          "home": "F.S. Picassent"
+        },
+        {
+          "away": "A.E. Llevant De Manacor Futsal \"A\"",
+          "date": null,
+          "home": "F.S. Ripollet \"A\""
+        },
+        {
+          "away": "Covisa Manresa",
+          "date": null,
+          "home": "Ye Faky F.S."
+        },
+        {
+          "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
+          "date": null,
+          "home": "Sant Joan Despí CFS Cumsa"
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2026-10-10T16:00:00",
+          "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "C. Natacio Sabadell",
+          "date": "2026-10-10T19:00:00",
+          "home": "Canet F.S."
+        }
+      ],
+      "5": [
+        {
+          "away": "Canet F.S.",
+          "date": null,
+          "home": "C.F.S. Futsal IBI - Juypal Hogar"
+        },
+        {
+          "away": "Club Deportivo Sporting la Nucía",
+          "date": null,
+          "home": "C. Natacio Sabadell"
+        },
+        {
+          "away": "F.S. Picassent",
+          "date": null,
+          "home": "Hospitalet Bellsport F.S."
+        },
+        {
+          "away": "F.S. Ripollet \"A\"",
+          "date": null,
+          "home": "Les Corts EF \"A\""
+        },
+        {
+          "away": "Ye Faky F.S.",
+          "date": null,
+          "home": "A.E. Llevant De Manacor Futsal \"A\""
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": null,
+          "home": "Covisa Manresa"
+        },
+        {
+          "away": "Sant Joan Despí CFS Cumsa",
+          "date": null,
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
+          "date": null,
+          "home": "Nunsys El Pilar"
+        }
+      ],
+      "6": [
+        {
+          "away": "C.F.S. Futsal IBI - Juypal Hogar",
+          "date": null,
+          "home": "Club Deportivo Sporting la Nucía"
+        },
+        {
+          "away": "C. Natacio Sabadell",
+          "date": null,
+          "home": "F.S. Picassent"
+        },
+        {
+          "away": "Hospitalet Bellsport F.S.",
+          "date": null,
+          "home": "F.S. Ripollet \"A\""
+        },
+        {
+          "away": "Les Corts EF \"A\"",
+          "date": null,
+          "home": "Ye Faky F.S."
+        },
+        {
+          "away": "Covisa Manresa",
+          "date": null,
+          "home": "Sant Joan Despí CFS Cumsa"
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": null,
+          "home": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A"
+        },
+        {
+          "away": "Nunsys El Pilar",
+          "date": "2026-10-24T19:00:00",
+          "home": "Canet F.S."
+        },
+        {
+          "away": "A.E. Llevant De Manacor Futsal \"A\"",
+          "date": "2026-10-25T13:00:00",
+          "home": "Illes Balears Palma Futsal"
+        }
+      ],
+      "7": [
+        {
+          "away": "F.S. Picassent",
+          "date": null,
+          "home": "C.F.S. Futsal IBI - Juypal Hogar"
+        },
+        {
+          "away": "F.S. Ripollet \"A\"",
+          "date": null,
+          "home": "C. Natacio Sabadell"
+        },
+        {
+          "away": "Ye Faky F.S.",
+          "date": null,
+          "home": "Hospitalet Bellsport F.S."
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": null,
+          "home": "Les Corts EF \"A\""
+        },
+        {
+          "away": "Sant Joan Despí CFS Cumsa",
+          "date": null,
+          "home": "A.E. Llevant De Manacor Futsal \"A\""
+        },
+        {
+          "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
+          "date": null,
+          "home": "Covisa Manresa"
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": null,
+          "home": "Nunsys El Pilar"
+        },
+        {
+          "away": "Club Deportivo Sporting la Nucía",
+          "date": "2026-10-31T19:00:00",
+          "home": "Canet F.S."
+        }
+      ],
+      "8": [
+        {
+          "away": "Nunsys El Pilar",
+          "date": null,
+          "home": "Club Deportivo Sporting la Nucía"
+        },
+        {
+          "away": "Canet F.S.",
+          "date": null,
+          "home": "F.S. Picassent"
+        },
+        {
+          "away": "C.F.S. Futsal IBI - Juypal Hogar",
+          "date": null,
+          "home": "F.S. Ripollet \"A\""
+        },
+        {
+          "away": "C. Natacio Sabadell",
+          "date": null,
+          "home": "Ye Faky F.S."
+        },
+        {
+          "away": "Les Corts EF \"A\"",
+          "date": null,
+          "home": "Sant Joan Despí CFS Cumsa"
+        },
+        {
+          "away": "A.E. Llevant De Manacor Futsal \"A\"",
+          "date": null,
+          "home": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A"
+        },
+        {
+          "away": "Covisa Manresa",
+          "date": null,
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "Hospitalet Bellsport F.S.",
+          "date": "2026-11-07T16:00:00",
+          "home": "Illes Balears Palma Futsal"
+        }
+      ],
+      "9": [
+        {
+          "away": "F.S. Picassent",
+          "date": null,
+          "home": "Club Deportivo Sporting la Nucía"
+        },
+        {
+          "away": "Ye Faky F.S.",
+          "date": null,
+          "home": "C.F.S. Futsal IBI - Juypal Hogar"
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": null,
+          "home": "C. Natacio Sabadell"
+        },
+        {
+          "away": "Sant Joan Despí CFS Cumsa",
+          "date": null,
+          "home": "Hospitalet Bellsport F.S."
+        },
+        {
+          "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
+          "date": null,
+          "home": "Les Corts EF \"A\""
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": null,
+          "home": "A.E. Llevant De Manacor Futsal \"A\""
+        },
+        {
+          "away": "Covisa Manresa",
+          "date": null,
+          "home": "Nunsys El Pilar"
+        },
+        {
+          "away": "F.S. Ripollet \"A\"",
+          "date": "2026-11-14T19:00:00",
+          "home": "Canet F.S."
+        }
+      ]
+    },
+    "33918407|33918408": {
+      "1": [
+        {
+          "away": "ElPozo Ciudad de Murcia",
+          "date": "2026-09-18T20:30:00",
+          "home": "REYCO Burela FS"
+        },
+        {
+          "away": "C.D. Leganés F.S.",
+          "date": null,
+          "home": "Family Cash Alzira F.S."
+        },
+        {
+          "away": "Entrerrios Automatización",
+          "date": null,
+          "home": "Ribera Navarra FS"
+        },
+        {
+          "away": "Sala 5 Martorell MCD Grup",
+          "date": "2026-09-19T16:30:00",
+          "home": "Gasifred Atlético Ibiza"
+        },
+        {
+          "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+          "date": "2026-09-19T17:00:00",
+          "home": "C.D. Melistar"
+        },
+        {
+          "away": "Barça Atlètic",
+          "date": "2026-09-19T18:30:00",
+          "home": "MRB FS Mostoles"
+        },
+        {
+          "away": "Avanza Jaén Paraíso Interior",
+          "date": "2026-09-19T19:30:00",
+          "home": "Xerez Toyota Nimauto"
+        },
+        {
+          "away": "Unión África Ceutí \"A\"",
+          "date": "2026-09-20T12:00:00",
+          "home": "C.E. Futsal Gestoria Luis Mataró"
+        }
+      ],
+      "10": [
+        {
+          "away": "C.E. Futsal Gestoria Luis Mataró",
+          "date": null,
+          "home": "Avanza Jaén Paraíso Interior"
+        },
+        {
+          "away": "Sala 5 Martorell MCD Grup",
+          "date": null,
+          "home": "Barça Atlètic"
+        },
+        {
+          "away": "C.D. Melistar",
+          "date": null,
+          "home": "REYCO Burela FS"
+        },
+        {
+          "away": "Ribera Navarra FS",
+          "date": null,
+          "home": "Gasifred Atlético Ibiza"
+        },
+        {
+          "away": "ElPozo Ciudad de Murcia",
+          "date": null,
+          "home": "Unión África Ceutí \"A\""
+        },
+        {
+          "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+          "date": null,
+          "home": "MRB FS Mostoles"
+        },
+        {
+          "away": "C.D. Leganés F.S.",
+          "date": null,
+          "home": "Xerez Toyota Nimauto"
+        },
+        {
+          "away": "Family Cash Alzira F.S.",
+          "date": "2026-11-21T19:00:00",
+          "home": "Entrerrios Automatización"
+        }
+      ],
+      "11": [
+        {
+          "away": "Barça Atlètic",
+          "date": null,
+          "home": "Family Cash Alzira F.S."
+        },
+        {
+          "away": "Entrerrios Automatización",
+          "date": null,
+          "home": "C.D. Leganés F.S."
+        },
+        {
+          "away": "C.E. Futsal Gestoria Luis Mataró",
+          "date": null,
+          "home": "Sala 5 Martorell MCD Grup"
+        },
+        {
+          "away": "REYCO Burela FS",
+          "date": null,
+          "home": "MRB FS Mostoles"
+        },
+        {
+          "away": "Avanza Jaén Paraíso Interior",
+          "date": null,
+          "home": "ElPozo Ciudad de Murcia"
+        },
+        {
+          "away": "Unión África Ceutí \"A\"",
+          "date": null,
+          "home": "Ribera Navarra FS"
+        },
+        {
+          "away": "Xerez Toyota Nimauto",
+          "date": "2026-11-28T18:00:00",
+          "home": "Zambú CFS Pinatar Cerramientos Abatibles"
+        },
+        {
+          "away": "Gasifred Atlético Ibiza",
+          "date": "2026-11-28T18:30:00",
+          "home": "C.D. Melistar"
+        }
+      ],
+      "12": [
+        {
+          "away": "C.D. Leganés F.S.",
+          "date": null,
+          "home": "Avanza Jaén Paraíso Interior"
+        },
+        {
+          "away": "Unión África Ceutí \"A\"",
+          "date": null,
+          "home": "Barça Atlètic"
+        },
+        {
+          "away": "Family Cash Alzira F.S.",
+          "date": null,
+          "home": "Gasifred Atlético Ibiza"
+        },
+        {
+          "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+          "date": null,
+          "home": "C.E. Futsal Gestoria Luis Mataró"
+        },
+        {
+          "away": "MRB FS Mostoles",
+          "date": null,
+          "home": "ElPozo Ciudad de Murcia"
+        },
+        {
+          "away": "C.D. Melistar",
+          "date": null,
+          "home": "Ribera Navarra FS"
+        },
+        {
+          "away": "Sala 5 Martorell MCD Grup",
+          "date": "2026-12-05T17:00:00",
+          "home": "REYCO Burela FS"
+        },
+        {
+          "away": "Xerez Toyota Nimauto",
+          "date": "2026-12-05T19:00:00",
+          "home": "Entrerrios Automatización"
+        }
+      ],
+      "2": [
+        {
+          "away": "Avanza Jaén Paraíso Interior",
+          "date": null,
+          "home": "Sala 5 Martorell MCD Grup"
+        },
+        {
+          "away": "Gasifred Atlético Ibiza",
+          "date": "2026-09-26T16:30:00",
+          "home": "ElPozo Ciudad de Murcia"
+        },
+        {
+          "away": "Ribera Navarra FS",
+          "date": "2026-09-26T17:00:00",
+          "home": "Barça Atlètic"
+        },
+        {
+          "away": "Family Cash Alzira F.S.",
+          "date": "2026-09-26T18:00:00",
+          "home": "Zambú CFS Pinatar Cerramientos Abatibles"
+        },
+        {
+          "away": "MRB FS Mostoles",
+          "date": "2026-09-26T19:00:00",
+          "home": "Entrerrios Automatización"
+        },
+        {
+          "away": "Xerez Toyota Nimauto",
+          "date": "2026-09-26T19:00:00",
+          "home": "Unión África Ceutí \"A\""
+        },
+        {
+          "away": "C.D. Melistar",
+          "date": "2026-09-26T19:30:00",
+          "home": "C.E. Futsal Gestoria Luis Mataró"
+        },
+        {
+          "away": "C.D. Leganés F.S.",
+          "date": "2026-09-26T20:00:00",
+          "home": "REYCO Burela FS"
+        }
+      ],
+      "3": [
+        {
+          "away": "Barça Atlètic",
+          "date": null,
+          "home": "Avanza Jaén Paraíso Interior"
+        },
+        {
+          "away": "C.E. Futsal Gestoria Luis Mataró",
+          "date": null,
+          "home": "Family Cash Alzira F.S."
+        },
+        {
+          "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+          "date": null,
+          "home": "Ribera Navarra FS"
+        },
+        {
+          "away": "REYCO Burela FS",
+          "date": "2026-10-03T17:00:00",
+          "home": "Gasifred Atlético Ibiza"
+        },
+        {
+          "away": "C.D. Melistar",
+          "date": "2026-10-03T19:00:00",
+          "home": "Entrerrios Automatización"
+        },
+        {
+          "away": "Sala 5 Martorell MCD Grup",
+          "date": "2026-10-03T19:30:00",
+          "home": "C.D. Leganés F.S."
+        },
+        {
+          "away": "ElPozo Ciudad de Murcia",
+          "date": "2026-10-03T19:30:00",
+          "home": "Xerez Toyota Nimauto"
+        },
+        {
+          "away": "Unión África Ceutí \"A\"",
+          "date": "2026-10-04T11:30:00",
+          "home": "MRB FS Mostoles"
+        }
+      ],
+      "4": [
+        {
+          "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+          "date": null,
+          "home": "Barça Atlètic"
+        },
+        {
+          "away": "Family Cash Alzira F.S.",
+          "date": null,
+          "home": "Sala 5 Martorell MCD Grup"
+        },
+        {
+          "away": "Xerez Toyota Nimauto",
+          "date": null,
+          "home": "C.E. Futsal Gestoria Luis Mataró"
+        },
+        {
+          "away": "Gasifred Atlético Ibiza",
+          "date": null,
+          "home": "MRB FS Mostoles"
+        },
+        {
+          "away": "Ribera Navarra FS",
+          "date": null,
+          "home": "ElPozo Ciudad de Murcia"
+        },
+        {
+          "away": "Avanza Jaén Paraíso Interior",
+          "date": "2026-10-10T19:00:00",
+          "home": "Unión África Ceutí \"A\""
+        },
+        {
+          "away": "C.D. Melistar",
+          "date": "2026-10-10T19:30:00",
+          "home": "C.D. Leganés F.S."
+        },
+        {
+          "away": "Entrerrios Automatización",
+          "date": "2026-10-10T20:00:00",
+          "home": "REYCO Burela FS"
+        }
+      ],
+      "5": [
+        {
+          "away": "MRB FS Mostoles",
+          "date": null,
+          "home": "Avanza Jaén Paraíso Interior"
+        },
+        {
+          "away": "Unión África Ceutí \"A\"",
+          "date": null,
+          "home": "Family Cash Alzira F.S."
+        },
+        {
+          "away": "C.E. Futsal Gestoria Luis Mataró",
+          "date": null,
+          "home": "Gasifred Atlético Ibiza"
+        },
+        {
+          "away": "C.D. Melistar",
+          "date": null,
+          "home": "Sala 5 Martorell MCD Grup"
+        },
+        {
+          "away": "REYCO Burela FS",
+          "date": null,
+          "home": "Ribera Navarra FS"
+        },
+        {
+          "away": "Barça Atlètic",
+          "date": null,
+          "home": "Xerez Toyota Nimauto"
+        },
+        {
+          "away": "C.D. Leganés F.S.",
+          "date": "2026-10-17T18:00:00",
+          "home": "Zambú CFS Pinatar Cerramientos Abatibles"
+        },
+        {
+          "away": "ElPozo Ciudad de Murcia",
+          "date": "2026-10-17T19:00:00",
+          "home": "Entrerrios Automatización"
+        }
+      ],
+      "6": [
+        {
+          "away": "Ribera Navarra FS",
+          "date": null,
+          "home": "Avanza Jaén Paraíso Interior"
+        },
+        {
+          "away": "Family Cash Alzira F.S.",
+          "date": null,
+          "home": "REYCO Burela FS"
+        },
+        {
+          "away": "C.E. Futsal Gestoria Luis Mataró",
+          "date": null,
+          "home": "C.D. Leganés F.S."
+        },
+        {
+          "away": "Sala 5 Martorell MCD Grup",
+          "date": null,
+          "home": "MRB FS Mostoles"
+        },
+        {
+          "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+          "date": null,
+          "home": "ElPozo Ciudad de Murcia"
+        },
+        {
+          "away": "Barça Atlètic",
+          "date": "2026-10-24T18:00:00",
+          "home": "Gasifred Atlético Ibiza"
+        },
+        {
+          "away": "Xerez Toyota Nimauto",
+          "date": "2026-10-24T18:30:00",
+          "home": "C.D. Melistar"
+        },
+        {
+          "away": "Entrerrios Automatización",
+          "date": "2026-10-24T19:00:00",
+          "home": "Unión África Ceutí \"A\""
+        }
+      ],
+      "7": [
+        {
+          "away": "ElPozo Ciudad de Murcia",
+          "date": null,
+          "home": "Barça Atlètic"
+        },
+        {
+          "away": "Unión África Ceutí \"A\"",
+          "date": null,
+          "home": "Sala 5 Martorell MCD Grup"
+        },
+        {
+          "away": "MRB FS Mostoles",
+          "date": null,
+          "home": "C.E. Futsal Gestoria Luis Mataró"
+        },
+        {
+          "away": "C.D. Leganés F.S.",
+          "date": null,
+          "home": "Ribera Navarra FS"
+        },
+        {
+          "away": "Gasifred Atlético Ibiza",
+          "date": null,
+          "home": "Xerez Toyota Nimauto"
+        },
+        {
+          "away": "REYCO Burela FS",
+          "date": "2026-10-31T18:00:00",
+          "home": "Zambú CFS Pinatar Cerramientos Abatibles"
+        },
+        {
+          "away": "Family Cash Alzira F.S.",
+          "date": "2026-10-31T18:30:00",
+          "home": "C.D. Melistar"
+        },
+        {
+          "away": "Avanza Jaén Paraíso Interior",
+          "date": "2026-10-31T19:00:00",
+          "home": "Entrerrios Automatización"
+        }
+      ],
+      "8": [
+        {
+          "away": "REYCO Burela FS",
+          "date": null,
+          "home": "Avanza Jaén Paraíso Interior"
+        },
+        {
+          "away": "Ribera Navarra FS",
+          "date": null,
+          "home": "Family Cash Alzira F.S."
+        },
+        {
+          "away": "C.E. Futsal Gestoria Luis Mataró",
+          "date": null,
+          "home": "Barça Atlètic"
+        },
+        {
+          "away": "Entrerrios Automatización",
+          "date": null,
+          "home": "Gasifred Atlético Ibiza"
+        },
+        {
+          "away": "C.D. Melistar",
+          "date": null,
+          "home": "MRB FS Mostoles"
+        },
+        {
+          "away": "C.D. Leganés F.S.",
+          "date": null,
+          "home": "ElPozo Ciudad de Murcia"
+        },
+        {
+          "away": "Sala 5 Martorell MCD Grup",
+          "date": null,
+          "home": "Xerez Toyota Nimauto"
+        },
+        {
+          "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+          "date": "2026-11-07T19:00:00",
+          "home": "Unión África Ceutí \"A\""
+        }
+      ],
+      "9": [
+        {
+          "away": "Xerez Toyota Nimauto",
+          "date": null,
+          "home": "Family Cash Alzira F.S."
+        },
+        {
+          "away": "Unión África Ceutí \"A\"",
+          "date": null,
+          "home": "REYCO Burela FS"
+        },
+        {
+          "away": "Gasifred Atlético Ibiza",
+          "date": null,
+          "home": "C.D. Leganés F.S."
+        },
+        {
+          "away": "ElPozo Ciudad de Murcia",
+          "date": null,
+          "home": "Sala 5 Martorell MCD Grup"
+        },
+        {
+          "away": "Entrerrios Automatización",
+          "date": null,
+          "home": "C.E. Futsal Gestoria Luis Mataró"
+        },
+        {
+          "away": "MRB FS Mostoles",
+          "date": null,
+          "home": "Ribera Navarra FS"
+        },
+        {
+          "away": "Barça Atlètic",
+          "date": "2026-11-14T16:30:00",
+          "home": "C.D. Melistar"
+        },
+        {
+          "away": "Avanza Jaén Paraíso Interior",
+          "date": "2026-11-14T18:00:00",
+          "home": "Zambú CFS Pinatar Cerramientos Abatibles"
+        }
+      ]
+    }
+  },
+  "_comment": "Cache persistente del calendario auto-generada por scrapers.calendar_cache. NO editar a mano. Las claves planas son actaUrls por partido; la seccion _calendars guarda las jornadas enteras tal y como las devolvio la PNFG. Cada run fusiona lo fresco con esta cache para que un rate-limit no borre datos que ya teniamos. Si una entrada deja de ser valida, borrala y la proxima ejecucion la volvera a resolver. Las claves llevan dentro el codigo de competicion, que cambia cada temporada, asi que las entradas de temporadas pasadas quedan inertes (no se podan solas)."
 }
