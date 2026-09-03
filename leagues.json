@@ -1,10 +1,9 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-02T20:57:56+00:00",
+  "lastUpdated": "2026-09-03T10:59:09+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
-    "rfef: la PNFG rate-limitó 12 jornada/s y se abandonaron 6 grupo/s; agotado el presupuesto de 12 fallos, el resto del calendario no se pidió. Lo publicado sale de la caché y del JSON anterior",
-    "rfef: rfef-primera-fs-fem: este run no trajo equipos; se conservan los 16 del JSON publicado",
+    "rfef: la PNFG rate-limitó 7 jornada/s y se abandonaron 7 grupo/s; esas jornadas salen de la caché o del JSON anterior",
     "fcf-1cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-2cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-3cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
@@ -100,6 +99,7 @@
               "officialName": "Wanapix"
             }
           ],
+          "teamsSource": "calendario",
           "calendar": [
             {
               "jornada": 1,
@@ -897,7 +897,6 @@
               ]
             }
           ],
-          "teamsSource": "calendario",
           "jornadasTotal": 15
         },
         {
@@ -907,21 +906,21 @@
           "teams": [
             {
               "name": "Ribera Navarra FS",
-              "logoUrl": null
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008853_17.png"
             },
             {
               "name": "Melistar Futsal",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206634_50x50.png",
               "officialName": "C.D. Melistar"
             },
             {
               "name": "Alzira FS",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205873_50x50.png",
               "officialName": "Family Cash Alzira F.S."
             },
             {
               "name": "Ciudad de Móstoles FS",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/23/363c7dbf5282349366ea08ffeed88fd0.jpg",
               "officialName": "MRB FS Mostoles"
             },
             {
@@ -930,7 +929,7 @@
             },
             {
               "name": "Sala 5 Martorell",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/207076_50x50.png",
               "officialName": "Sala 5 Martorell MCD Grup"
             },
             {
@@ -940,7 +939,7 @@
             },
             {
               "name": "Union África Ceutí",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/207155_50x50.png",
               "officialName": "Unión África Ceutí \"A\""
             },
             {
@@ -955,7 +954,7 @@
             },
             {
               "name": "Gasifred Atlético",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079014011_GASIFRED_ESCUDO.png",
               "officialName": "Gasifred Atlético Ibiza"
             },
             {
@@ -964,7 +963,7 @@
             },
             {
               "name": "Burela FS",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206276_50x50.png",
               "officialName": "REYCO Burela FS"
             },
             {
@@ -973,14 +972,16 @@
             },
             {
               "name": "C.D. Leganés F.S.",
-              "logoUrl": null
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079009231_IMG_20250929_WA0005.jpg"
             },
             {
               "name": "Futsal Gestoria Luis Mataró",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/70f2d7d910390790b0ee8a247317880e.jpg",
               "officialName": "C.E. Futsal Gestoria Luis Mataró"
             }
           ],
+          "jornadasTotal": 30,
+          "teamsSource": "pdf-rfef",
           "calendar": [
             {
               "jornada": 1,
@@ -2572,9 +2573,7 @@
                 }
               ]
             }
-          ],
-          "teamsSource": "pdf-rfef",
-          "jornadasTotal": 30
+          ]
         },
         {
           "id": "rfef-segunda-b-fs-masc",
@@ -2663,6 +2662,7 @@
                   "officialName": "Deporcyl - Guardo FS"
                 }
               ],
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -4044,8 +4044,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             },
             {
               "id": "g2",
@@ -4053,26 +4052,26 @@
               "teams": [
                 {
                   "name": "Otxartabe C.D.",
-                  "logoUrl": null
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1819/DOCS/20194/26/a700bc209f0069e9ac126bd082b3713d.jpg"
                 },
                 {
                   "name": "Lauburu Ke Ibarra",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205505_50x50.png",
                   "officialName": "CMO Valves Lauburu Ibarra"
                 },
                 {
                   "name": "San Juan FS",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206431_50x50.png",
                   "officialName": "A.D. San Juan"
                 },
                 {
                   "name": "Sala Quinto Cd Futsal",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/abcba85786a66329a95d22b9d5a3b7fb.jpg",
                   "officialName": "Sala Quinto CD"
                 },
                 {
                   "name": "Juv. del Circulo Católico",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1415/DOCS/20151/22/e5244297e91944cedc09e4d9e739f4c2_7VyzBVQ5.jpg",
                   "officialName": "C.D. Juventud del Círculo Católico"
                 },
                 {
@@ -4081,40 +4080,40 @@
                 },
                 {
                   "name": "Antiguoko Ke",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs//1516/DOCS/20163/11/25c06c4080109e3489132a1c2bcb60dd.jpg",
                   "officialName": "Antiguoko KE Estudio Dental Barrenechea"
                 },
                 {
                   "name": "Mondrate C.D.",
-                  "logoUrl": null
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078990220_Mondrate.png"
                 },
                 {
                   "name": "Ibararte FS",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1718/DOCS/20179/11/b9648712d105ff2b93432d3e9201f085.jpg",
                   "officialName": "C.D.Ibararte"
                 },
                 {
                   "name": "Rioja Sala",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078998628_Escudo_2022_PNG_Ultimo.png",
                   "officialName": "A.D. Rioja Sala"
                 },
                 {
                   "name": "Tauste FS",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078990612_escudo_13691.jpg",
                   "officialName": "Acontebro Tauste FS"
                 },
                 {
                   "name": "Pinseque A.D.",
-                  "logoUrl": null
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1819/DOCS/20194/26/ab46bb121343844770f9204ef25a2854.jpg"
                 },
                 {
                   "name": "Zierbena CDF",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1819/DOCS/20194/26/44352371e5cba241aedd243e4a6d0e47.jpg",
                   "officialName": "CDF Zierbena"
                 },
                 {
                   "name": "EMD. Cadrete Forjas Casado",
-                  "logoUrl": null
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079007250_Escudo_EMD_Cadrete.png"
                 },
                 {
                   "name": "Club Nuestra Señora del Portal",
@@ -4122,10 +4121,12 @@
                 },
                 {
                   "name": "CD Tafa FS",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1718/DOCS/20182/6/80d69eebcba40cc40523af1e75cf4069.jpg",
                   "officialName": "Vulcanizados Ruiz Tafa FS"
                 }
               ],
+              "jornadasTotal": 30,
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -5507,8 +5508,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             },
             {
               "id": "g3",
@@ -5516,12 +5516,12 @@
               "teams": [
                 {
                   "name": "Hospitalet Bellsport",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1819/DOCS/20188/16/066d4b26da23ddac971f5d6235a2bf08.JPG",
                   "officialName": "Hospitalet Bellsport F.S."
                 },
                 {
                   "name": "La Nucia",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/207941_50x50.png",
                   "officialName": "Club Deportivo Sporting la Nucía"
                 },
                 {
@@ -5531,17 +5531,17 @@
                 },
                 {
                   "name": "Club Manresa FS",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/166774de884dffef2b2a3559e9490243.jpg",
                   "officialName": "Covisa Manresa"
                 },
                 {
                   "name": "Natacio Sabadell",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206517_50x50.png",
                   "officialName": "C. Natacio Sabadell"
                 },
                 {
                   "name": "Picassent",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20229/27/87878ee7c7aa5526ff5d63b358aeb6a1.jpg",
                   "officialName": "F.S. Picassent"
                 },
                 {
@@ -5551,36 +5551,36 @@
                 },
                 {
                   "name": "Llevant De Manacor FS",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20219/22/ccbb54ef164c6b4b0cd215973d86b26a.jpg",
                   "officialName": "A.E. Llevant De Manacor Futsal \"A\""
                 },
                 {
                   "name": "CFS Ibi",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079005879_escudo_IBI.jpg",
                   "officialName": "C.F.S. Futsal IBI - Juypal Hogar"
                 },
                 {
                   "name": "Ripollet",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079009185_Ripollet.jpg",
                   "officialName": "F.S. Ripollet \"A\""
                 },
                 {
                   "name": "CCR Castelldefels",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008954_LOGO_CCR_BAIXSUD.jpg",
                   "officialName": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A"
                 },
                 {
                   "name": "AE Les Corts FS",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078990614_escudo_12671.png",
                   "officialName": "Les Corts EF \"A\""
                 },
                 {
                   "name": "Canet F.S.",
-                  "logoUrl": null
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079036632_004canet.jpg"
                 },
                 {
                   "name": "Ye Faky",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/anterior/1314/DOCS/20141/14/e4e430d57f19b4ce6206edd922056e87_odoSYCGn.jpg",
                   "officialName": "Ye Faky F.S."
                 },
                 {
@@ -5590,10 +5590,12 @@
                 },
                 {
                   "name": "Colegio El Pilar Valencia",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/usr/local/projects/weblogic/repository/AS400/02/DOCS/201211/15/12043758.jpg",
                   "officialName": "Nunsys El Pilar"
                 }
               ],
+              "jornadasTotal": 30,
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -6825,8 +6827,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             },
             {
               "id": "g4",
@@ -6912,6 +6913,7 @@
                   "officialName": "El Alamo F.S."
                 }
               ],
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -8293,8 +8295,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             },
             {
               "id": "g5",
@@ -8381,6 +8382,7 @@
                   "officialName": "Sima Granada FS"
                 }
               ],
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -9762,8 +9764,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             },
             {
               "id": "g6",
@@ -9847,6 +9848,7 @@
                   "officialName": "Doctoral FS"
                 }
               ],
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -11228,8 +11230,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             }
           ]
         },
@@ -11240,7 +11241,7 @@
           "teams": [
             {
               "name": "AE Les Corts",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206387_50x50.png",
               "officialName": "AE Les Corts UBAE"
             },
             {
@@ -11254,27 +11255,27 @@
             },
             {
               "name": "Guadalcacín",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1819/DOCS/20187/12/423e0849be24bd8e1c262a7b5f1ddb19.jpg",
               "officialName": "C.D. Guadalcacín F.S."
             },
             {
               "name": "Ceuta AD",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206966_50x50.png",
               "officialName": "Ceuta Agrupación Deportiva"
             },
             {
               "name": "Estrela Verín",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079039051_ESTRELA_FUTSAL_VERIN.png",
               "officialName": "Estrela Revoltosa Verín FSF"
             },
             {
               "name": "FSF Castro",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/209427_50x50.png",
               "officialName": "F.S.F. Castro Bloques Cando"
             },
             {
               "name": "LBTL Alcantarilla",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078990072_LBTL_Alcantarilla_FS_PhotoRoom.png_PhotoRoom.png",
               "officialName": "LBTL Futsal Alcantarilla"
             },
             {
@@ -11284,12 +11285,12 @@
             },
             {
               "name": "FSF Móstoles",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078990067_mostoles.png",
               "officialName": "MRB Móstoles FSF"
             },
             {
               "name": "Nueces de Ronda Atl. Torcal",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205852_50x50.png",
               "officialName": "Nueces de Ronda Atlético Torcal FS"
             },
             {
@@ -11299,17 +11300,17 @@
             },
             {
               "name": "Poio FS",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205983_50x50.png",
               "officialName": "Poio Pescamar FS"
             },
             {
               "name": "Rodiles FS",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1819/DOCS/201810/15/0c62448a342baa03de718a5be6fae147.jpg",
               "officialName": "Rodiles F.S. \"A\""
             },
             {
               "name": "Roldán FSF",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206401_50x50.png",
               "officialName": "STV Roldán F.S"
             },
             {
@@ -11318,6 +11319,7 @@
               "officialName": "Wanapix Aldelis InterSala 10 Zaragoza"
             }
           ],
+          "jornadasTotal": 30,
           "teamsSource": "calendario",
           "calendar": [
             {
@@ -11479,8 +11481,7 @@
                 }
               ]
             }
-          ],
-          "jornadasTotal": 30
+          ]
         },
         {
           "id": "rfef-segunda-fs-fem",
@@ -11499,11 +11500,11 @@
                 },
                 {
                   "name": "At. Arnoya",
-                  "logoUrl": null
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079039320_escudo_5744.png"
                 },
                 {
                   "name": "CFSF Teidaya",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079039321_779017844_17984066286051848_5259007767354409594_n.jpg",
                   "officialName": "CLUB DEPORTIVO TEIDAYA \"A\""
                 },
                 {
@@ -11526,7 +11527,7 @@
                 },
                 {
                   "name": "Juventud Círculo Católico",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1415/DOCS/20151/22/e5244297e91944cedc09e4d9e739f4c2_7VyzBVQ5.jpg",
                   "officialName": "C.D. Juventud del Círculo Católico"
                 },
                 {
@@ -11551,7 +11552,7 @@
                 },
                 {
                   "name": "Burela FS",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206276_50x50.png",
                   "officialName": "REYCO Burela FS"
                 },
                 {
@@ -11565,10 +11566,12 @@
                 },
                 {
                   "name": "CDE Muslera",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/202212/16/00dcb17944ca4c9c691afdef0407b8fb.jpg",
                   "officialName": "CDE Muslera GSW \"A\""
                 }
               ],
+              "jornadasTotal": 30,
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -12950,8 +12953,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             },
             {
               "id": "g2",
@@ -13035,6 +13037,7 @@
                   "officialName": "Somriu Futbol Sala Ripollet"
                 }
               ],
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -14416,8 +14419,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             },
             {
               "id": "g3",
@@ -14501,6 +14503,7 @@
                   "officialName": "Fundación UAPO Granada FS Femenino"
                 }
               ],
+              "teamsSource": "pdf-rfef",
               "calendar": [
                 {
                   "jornada": 1,
@@ -15882,8 +15885,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "pdf-rfef"
+              ]
             }
           ]
         }
