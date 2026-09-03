@@ -694,6 +694,92 @@
         }
       ]
     },
+    "33836163|33836165": {
+      "1": [
+        {
+          "away": "C.D. Juventud del Círculo Católico",
+          "date": null,
+          "home": "Otxartabe C.D."
+        },
+        {
+          "away": "C.D.Ibararte",
+          "date": null,
+          "home": "Pinseque A.D."
+        },
+        {
+          "away": "CDF Zierbena",
+          "date": null,
+          "home": "Mondrate C.D."
+        },
+        {
+          "away": "CMO Valves Lauburu Ibarra",
+          "date": null,
+          "home": "Sala Quinto CD"
+        },
+        {
+          "away": "Entrerrios Automatización",
+          "date": null,
+          "home": "Coras Futsal Zaragoza"
+        },
+        {
+          "away": "EMD. Cadrete Forjas Casado",
+          "date": null,
+          "home": "Antiguoko KE Estudio Dental Barrenechea"
+        },
+        {
+          "away": "A.D. San Juan",
+          "date": null,
+          "home": "Vulcanizados Ruiz Tafa FS"
+        },
+        {
+          "away": "A.D. Rioja Sala",
+          "date": "2026-09-19T16:00:00",
+          "home": "Acontebro Tauste FS"
+        }
+      ],
+      "2": [
+        {
+          "away": "Otxartabe C.D.",
+          "date": null,
+          "home": "C.D.Ibararte"
+        },
+        {
+          "away": "Pinseque A.D.",
+          "date": null,
+          "home": "CDF Zierbena"
+        },
+        {
+          "away": "Mondrate C.D.",
+          "date": null,
+          "home": "CMO Valves Lauburu Ibarra"
+        },
+        {
+          "away": "Sala Quinto CD",
+          "date": null,
+          "home": "Entrerrios Automatización"
+        },
+        {
+          "away": "Coras Futsal Zaragoza",
+          "date": null,
+          "home": "A.D. Rioja Sala"
+        },
+        {
+          "away": "Acontebro Tauste FS",
+          "date": null,
+          "home": "EMD. Cadrete Forjas Casado"
+        },
+        {
+          "away": "Antiguoko KE Estudio Dental Barrenechea",
+          "date": null,
+          "home": "A.D. San Juan"
+        },
+        {
+          "away": "Vulcanizados Ruiz Tafa FS",
+          "date": "2026-09-26T19:00:00",
+          "home": "C.D. Juventud del Círculo Católico"
+        }
+      ]
+    },
     "33836163|33836166": {
       "1": [
         {
@@ -717,11 +803,6 @@
           "home": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A"
         },
         {
-          "away": "Ye Faky F.S.",
-          "date": null,
-          "home": "Sant Joan Despí CFS Cumsa"
-        },
-        {
           "away": "Illes Balears Palma Futsal",
           "date": null,
           "home": "Nunsys El Pilar"
@@ -735,6 +816,11 @@
           "away": "F.S. Picassent",
           "date": "2026-09-19T18:00:00",
           "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "Ye Faky F.S.",
+          "date": "2026-09-20T12:00:00",
+          "home": "Sant Joan Despí CFS Cumsa"
         }
       ],
       "10": [
@@ -1200,17 +1286,184 @@
         }
       ]
     },
+    "33836179|33836180": {
+      "1": [
+        {
+          "away": "F.S.F. Castro Bloques Cando",
+          "date": "2026-09-04T21:00:00",
+          "home": "Estrela Revoltosa Verín FSF"
+        },
+        {
+          "away": "STV Roldán F.S",
+          "date": "2026-09-05T11:00:00",
+          "home": "MRB Móstoles FSF"
+        },
+        {
+          "away": "Ceuta Agrupación Deportiva",
+          "date": "2026-09-05T12:30:00",
+          "home": "LBTL Futsal Alcantarilla"
+        },
+        {
+          "away": "Nueces de Ronda Atlético Torcal FS",
+          "date": "2026-09-05T13:00:00",
+          "home": "Melilla Ciudad del Deporte Torreblanca C. F."
+        },
+        {
+          "away": "C.D. Guadalcacín F.S.",
+          "date": "2026-09-05T16:30:00",
+          "home": "ARRIVA AD Alcorcón FSF"
+        },
+        {
+          "away": "AE Les Corts UBAE",
+          "date": "2026-09-05T17:00:00",
+          "home": "Ourense Ontime"
+        },
+        {
+          "away": "Poio Pescamar FS",
+          "date": "2026-09-05T18:00:00",
+          "home": "Wanapix Aldelis InterSala 10 Zaragoza"
+        },
+        {
+          "away": "Atlético Navalcarnero",
+          "date": "2026-09-05T18:30:00",
+          "home": "Rodiles F.S. \"A\""
+        }
+      ],
+      "2": [
+        {
+          "away": "ARRIVA AD Alcorcón FSF",
+          "date": "2026-09-12T10:00:00",
+          "home": "Atlético Navalcarnero"
+        },
+        {
+          "away": "F.S.F. Castro Bloques Cando",
+          "date": "2026-09-12T12:00:00",
+          "home": "Ceuta Agrupación Deportiva"
+        },
+        {
+          "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
+          "date": "2026-09-12T12:00:00",
+          "home": "AE Les Corts UBAE"
+        },
+        {
+          "away": "Ourense Ontime",
+          "date": "2026-09-12T17:00:00",
+          "home": "C.D. Guadalcacín F.S."
+        },
+        {
+          "away": "Wanapix Aldelis InterSala 10 Zaragoza",
+          "date": "2026-09-12T18:00:00",
+          "home": "STV Roldán F.S"
+        },
+        {
+          "away": "Estrela Revoltosa Verín FSF",
+          "date": "2026-09-12T18:00:00",
+          "home": "Nueces de Ronda Atlético Torcal FS"
+        },
+        {
+          "away": "LBTL Futsal Alcantarilla",
+          "date": "2026-09-12T18:30:00",
+          "home": "MRB Móstoles FSF"
+        },
+        {
+          "away": "Rodiles F.S. \"A\"",
+          "date": "2026-09-12T18:30:00",
+          "home": "Poio Pescamar FS"
+        }
+      ]
+    },
+    "33836181|33836182": {
+      "1": [
+        {
+          "away": "FC Meigas",
+          "date": null,
+          "home": "CD Lacturale Orvina"
+        },
+        {
+          "away": "Grupo FORMA-T Vilalba F.S.",
+          "date": null,
+          "home": "CFS Gran Canaria Teldeportivo"
+        },
+        {
+          "away": "REYCO Burela FS",
+          "date": null,
+          "home": "ENCE Marín Futsal"
+        },
+        {
+          "away": "Valdetires Ferrol F.S.F.",
+          "date": null,
+          "home": "Bembrive"
+        },
+        {
+          "away": "El Gaitero Rodiles FSF",
+          "date": "2026-09-19T18:00:00",
+          "home": "U.D.C. Txantrea K.K.E."
+        },
+        {
+          "away": "C.D. Segosala",
+          "date": "2026-09-19T19:00:00",
+          "home": "C.D. Juventud del Círculo Católico"
+        },
+        {
+          "away": "CLUB DEPORTIVO TEIDAYA \"A\"",
+          "date": null,
+          "home": "A.D. Mioño FSF"
+        },
+        {
+          "away": "At. Arnoya",
+          "date": "2026-09-20T12:00:00",
+          "home": "CDE Muslera GSW \"A\""
+        }
+      ],
+      "2": [
+        {
+          "away": "CDE Muslera GSW \"A\"",
+          "date": null,
+          "home": "CLUB DEPORTIVO TEIDAYA \"A\""
+        },
+        {
+          "away": "CD Lacturale Orvina",
+          "date": null,
+          "home": "Grupo FORMA-T Vilalba F.S."
+        },
+        {
+          "away": "ENCE Marín Futsal",
+          "date": null,
+          "home": "Valdetires Ferrol F.S.F."
+        },
+        {
+          "away": "Bembrive",
+          "date": null,
+          "home": "At. Arnoya"
+        },
+        {
+          "away": "CFS Gran Canaria Teldeportivo",
+          "date": "2026-09-26T17:00:00",
+          "home": "C.D. Segosala"
+        },
+        {
+          "away": "C.D. Juventud del Círculo Católico",
+          "date": "2026-09-26T17:00:00",
+          "home": "REYCO Burela FS"
+        },
+        {
+          "away": "A.D. Mioño FSF",
+          "date": "2026-09-26T18:30:00",
+          "home": "El Gaitero Rodiles FSF"
+        },
+        {
+          "away": "U.D.C. Txantrea K.K.E.",
+          "date": "2026-09-26T19:00:00",
+          "home": "FC Meigas"
+        }
+      ]
+    },
     "33918407|33918408": {
       "1": [
         {
           "away": "ElPozo Ciudad de Murcia",
           "date": "2026-09-18T20:30:00",
           "home": "REYCO Burela FS"
-        },
-        {
-          "away": "C.D. Leganés F.S.",
-          "date": null,
-          "home": "Family Cash Alzira F.S."
         },
         {
           "away": "Entrerrios Automatización",
@@ -1226,6 +1479,11 @@
           "away": "Zambú CFS Pinatar Cerramientos Abatibles",
           "date": "2026-09-19T17:00:00",
           "home": "C.D. Melistar"
+        },
+        {
+          "away": "C.D. Leganés F.S.",
+          "date": "2026-09-19T18:00:00",
+          "home": "Family Cash Alzira F.S."
         },
         {
           "away": "Barça Atlètic",
