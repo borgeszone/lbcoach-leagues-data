@@ -1,6 +1,6 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-04T11:09:46+00:00",
+  "lastUpdated": "2026-09-05T10:31:05+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
     "rfef: la PNFG rate-limitó 8 jornada/s y se abandonaron 8 grupo/s; esas jornadas salen de la caché o del JSON anterior",
@@ -2582,6 +2582,90 @@
           "teams": [],
           "groups": [
             {
+              "id": "g1",
+              "name": "Grupo 1",
+              "teams": [
+                {
+                  "name": "5 Coruña F.S.",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/f80d6428cfd42dc147aef2bc459cfca2.jpg"
+                },
+                {
+                  "name": "CD Lugo Sala",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/208806_50x50.png",
+                  "officialName": "ADC Lugo Sala"
+                },
+                {
+                  "name": "Atletico Benavente FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1718/DOCS/20179/13/840d8aac87bed67e54ac33efd66cdb04.jpg",
+                  "officialName": "Caja Rural Atlético Benavente FS"
+                },
+                {
+                  "name": "River Zamora FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20229/19/62551b6e55eb19dc00d857394ddbe649.jpg",
+                  "officialName": "Caja Rural River Sala Zamora"
+                },
+                {
+                  "name": "Albense",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/anterior/1314/DOCS/20141/28/2a007f0649a60013d98a1a7de59acb28_tzn2ciYJ.JPG",
+                  "officialName": "CD Albense FS"
+                },
+                {
+                  "name": "C.D. COMPOSALA",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079039300_449692278_1173240227460346_5063438521756555111_n.jpg"
+                },
+                {
+                  "name": "C.D. Tierno Galván",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1819/DOCS/201811/5/3ec1690c25d73813302d6fecdb6a6529.jpg"
+                },
+                {
+                  "name": "Guardo",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/202211/21/387a089dda8206ec8c88ee8248477f0c.jpg",
+                  "officialName": "Deporcyl - Guardo FS"
+                },
+                {
+                  "name": "FS Salamanca",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/anterior/1314/DOCS/20141/31/b9e00b9ecb30faf9cb7e7f37cd71388b_R1tjkUlT.jpg",
+                  "officialName": "F.S. Salamanca Energía Duero"
+                },
+                {
+                  "name": "Vilalba FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078989920_ESCUDO_VILALBA_F.S..jpg",
+                  "officialName": "Grupo FORMA-T Vilalba F.S."
+                },
+                {
+                  "name": "Noia Portus B",
+                  "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/10.png",
+                  "officialName": "Noia Portus Apostoli"
+                },
+                {
+                  "name": "O Esteo",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1415/DOCS/20149/29/5b443aa2dabbfeecf9bed5b1ca7e9d26_XpsJbt7A.jpg",
+                  "officialName": "O Esteo F.S."
+                },
+                {
+                  "name": "Racing de Mieres",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/202210/17/4adbef7414aa6c47206484139efc7b1a.jpg"
+                },
+                {
+                  "name": "SD Xove",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1920/DOCS/20197/17/4f40600971abfe87d56beea1884d09d0.jpg",
+                  "officialName": "S.D. Xove F.S."
+                },
+                {
+                  "name": "Ribeira De Piquin",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/23/db9e6e4a191e4b82d50d65b7265fae36.jpg",
+                  "officialName": "Sibuscascoche Ribeira Fútbol Sala"
+                },
+                {
+                  "name": "Leis Pontevedra",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079005807_Escudo_Original.png",
+                  "officialName": "Stellae Leis Pontevedra F.S."
+                }
+              ],
+              "jornadasTotal": 30,
+              "teamsSource": "calendario"
+            },
+            {
               "id": "g2",
               "name": "Grupo 2",
               "teams": [
@@ -4130,7 +4214,6 @@
                   "officialName": "Ye Faky F.S."
                 }
               ],
-              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -5363,7 +5446,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30
             }
           ]
         },
@@ -5452,7 +5536,6 @@
               "officialName": "Wanapix Aldelis InterSala 10 Zaragoza"
             }
           ],
-          "jornadasTotal": 30,
           "teamsSource": "calendario",
           "calendar": [
             {
@@ -5614,7 +5697,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "jornadasTotal": 30
         },
         {
           "id": "rfef-segunda-fs-fem",
@@ -7087,6 +7171,91 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "g2",
+              "name": "Grupo 2",
+              "teams": [
+                {
+                  "name": "AECS L Hospitalet",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/e91e07aa2419023cedae05d009e1f368.jpg"
+                },
+                {
+                  "name": "AE Penya Esplugues",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20219/28/60b3bc87c716ce5db540ef2873ed3b0b.jpg",
+                  "officialName": "AE Penya Esplugues Salvat Logística \"A\""
+                },
+                {
+                  "name": "Parque Col. Santa Ana",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1516/DOCS/201511/3/7868d22a0d046bed739fc4facc7da6b5_nAHpk7FJ.JPG",
+                  "officialName": "C.D. Parque Col. Santa Ana"
+                },
+                {
+                  "name": "CFS Linyola",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079009175_00100_0000971713_Escut_cfs_contorn_vermell__1_.png",
+                  "officialName": "CFS Autoescola Urgell Linyola"
+                },
+                {
+                  "name": "Nou Turia",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079007475_logo_nouturia_azul.png",
+                  "officialName": "Club Deportivo Nou Turia FSF \"A\""
+                },
+                {
+                  "name": "San Pablo-Eivisa",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079016525_WhatsApp_Image_2025_12_12_at_15.07.37.jpeg",
+                  "officialName": "Club Deportivo San Pablo-Eivis"
+                },
+                {
+                  "name": "Entrerrios Automatización",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078998520_Aragon_XXI.png"
+                },
+                {
+                  "name": "Bisontes Castellón",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/usr/local/projects/weblogic/repository/AS400/02/DOCS/201304/29/12074844.jpg",
+                  "officialName": "Feme Castellón C.F.S."
+                },
+                {
+                  "name": "F.S. Sabadell",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/d176d091d48f4186bc9755ed5db31c85.JPg"
+                },
+                {
+                  "name": "Futsal Mataró",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/70f2d7d910390790b0ee8a247317880e.jpg",
+                  "officialName": "Futsal Cartonajes Pans Mataró"
+                },
+                {
+                  "name": "FSF César Augusta",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0078998203_CESAR_AUGUSTA.jpg",
+                  "officialName": "Grupo Reciclarte Cesar Augusta"
+                },
+                {
+                  "name": "Rubí FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078990466_escudo_esportiu_rubi.jpg",
+                  "officialName": "Lainco Esportiu Rubi F.S."
+                },
+                {
+                  "name": "La Villa Móstoles",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079039322_475432209_794430852880919_2482076283060241869_n.jpg",
+                  "officialName": "La Villa"
+                },
+                {
+                  "name": "AE Les Corts B",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079025168_LOGO_50_COLOR.png",
+                  "officialName": "Les Corts, A.E. \"B\""
+                },
+                {
+                  "name": "CD La Concordia",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008807_escudo_pelota_nueva__2_.jpg",
+                  "officialName": "SolarMon-Les Glories 2014 CD La Concordia"
+                },
+                {
+                  "name": "FS Ripollet",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079009174_00100_0000485600_RIPOLLET_F.S._copia.png",
+                  "officialName": "Somriu Futbol Sala Ripollet"
+                }
+              ],
+              "jornadasTotal": 30,
+              "teamsSource": "calendario"
             }
           ]
         }
