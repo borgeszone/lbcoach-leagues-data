@@ -696,6 +696,92 @@
         }
       ]
     },
+    "33836163|33836164": {
+      "1": [
+        {
+          "away": "C.D. COMPOSALA",
+          "date": null,
+          "home": "Sibuscascoche Ribeira Fútbol Sala"
+        },
+        {
+          "away": "Caja Rural Atlético Benavente FS",
+          "date": null,
+          "home": "Noia Portus Apostoli"
+        },
+        {
+          "away": "S.D. Xove F.S.",
+          "date": null,
+          "home": "O Esteo F.S."
+        },
+        {
+          "away": "Stellae Leis Pontevedra F.S.",
+          "date": null,
+          "home": "Grupo FORMA-T Vilalba F.S."
+        },
+        {
+          "away": "Racing de Mieres",
+          "date": null,
+          "home": "F.S. Salamanca Energía Duero"
+        },
+        {
+          "away": "5 Coruña F.S.",
+          "date": null,
+          "home": "Caja Rural River Sala Zamora"
+        },
+        {
+          "away": "CD Albense FS",
+          "date": null,
+          "home": "C.D. Tierno Galván"
+        },
+        {
+          "away": "ADC Lugo Sala",
+          "date": null,
+          "home": "Deporcyl - Guardo FS"
+        }
+      ],
+      "2": [
+        {
+          "away": "Deporcyl - Guardo FS",
+          "date": null,
+          "home": "C.D. COMPOSALA"
+        },
+        {
+          "away": "Sibuscascoche Ribeira Fútbol Sala",
+          "date": null,
+          "home": "Caja Rural Atlético Benavente FS"
+        },
+        {
+          "away": "Noia Portus Apostoli",
+          "date": null,
+          "home": "S.D. Xove F.S."
+        },
+        {
+          "away": "O Esteo F.S.",
+          "date": null,
+          "home": "Stellae Leis Pontevedra F.S."
+        },
+        {
+          "away": "Grupo FORMA-T Vilalba F.S.",
+          "date": null,
+          "home": "Racing de Mieres"
+        },
+        {
+          "away": "F.S. Salamanca Energía Duero",
+          "date": null,
+          "home": "5 Coruña F.S."
+        },
+        {
+          "away": "C.D. Tierno Galván",
+          "date": null,
+          "home": "ADC Lugo Sala"
+        },
+        {
+          "away": "Caja Rural River Sala Zamora",
+          "date": "2026-09-26T18:00:00",
+          "home": "CD Albense FS"
+        }
+      ]
+    },
     "33836163|33836165": {
       "1": [
         {
@@ -1457,6 +1543,92 @@
           "away": "U.D.C. Txantrea K.K.E.",
           "date": "2026-09-26T19:00:00",
           "home": "FC Meigas"
+        }
+      ]
+    },
+    "33836181|33836183": {
+      "1": [
+        {
+          "away": "Club Deportivo Nou Turia FSF \"A\"",
+          "date": null,
+          "home": "AECS L Hospitalet"
+        },
+        {
+          "away": "CFS Autoescola Urgell Linyola",
+          "date": null,
+          "home": "SolarMon-Les Glories 2014 CD La Concordia"
+        },
+        {
+          "away": "Entrerrios Automatización",
+          "date": null,
+          "home": "La Villa"
+        },
+        {
+          "away": "Futsal Cartonajes Pans Mataró",
+          "date": null,
+          "home": "Feme Castellón C.F.S."
+        },
+        {
+          "away": "Les Corts, A.E. \"B\"",
+          "date": null,
+          "home": "Club Deportivo San Pablo-Eivis"
+        },
+        {
+          "away": "C.D. Parque Col. Santa Ana",
+          "date": null,
+          "home": "Somriu Futbol Sala Ripollet"
+        },
+        {
+          "away": "Grupo Reciclarte Cesar Augusta",
+          "date": "2026-09-19T16:00:00",
+          "home": "AE Penya Esplugues Salvat Logística \"A\""
+        },
+        {
+          "away": "Lainco Esportiu Rubi F.S.",
+          "date": "2026-09-19T20:00:00",
+          "home": "F.S. Sabadell"
+        }
+      ],
+      "2": [
+        {
+          "away": "Somriu Futbol Sala Ripollet",
+          "date": null,
+          "home": "Club Deportivo Nou Turia FSF \"A\""
+        },
+        {
+          "away": "AECS L Hospitalet",
+          "date": null,
+          "home": "CFS Autoescola Urgell Linyola"
+        },
+        {
+          "away": "SolarMon-Les Glories 2014 CD La Concordia",
+          "date": null,
+          "home": "Entrerrios Automatización"
+        },
+        {
+          "away": "Feme Castellón C.F.S.",
+          "date": null,
+          "home": "Grupo Reciclarte Cesar Augusta"
+        },
+        {
+          "away": "AE Penya Esplugues Salvat Logística \"A\"",
+          "date": null,
+          "home": "Les Corts, A.E. \"B\""
+        },
+        {
+          "away": "F.S. Sabadell",
+          "date": null,
+          "home": "C.D. Parque Col. Santa Ana"
+        },
+        {
+          "away": "Club Deportivo San Pablo-Eivis",
+          "date": "2026-09-26T16:00:00",
+          "home": "Lainco Esportiu Rubi F.S."
+        },
+        {
+          "away": "La Villa",
+          "date": "2026-09-26T17:00:00",
+          "home": "Futsal Cartonajes Pans Mataró"
         }
       ]
     },
