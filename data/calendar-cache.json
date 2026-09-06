@@ -876,11 +876,6 @@
           "home": "Hospitalet Bellsport F.S."
         },
         {
-          "away": "C.F.S. Futsal IBI - Juypal Hogar",
-          "date": null,
-          "home": "Les Corts EF \"A\""
-        },
-        {
           "away": "Club Deportivo Sporting la Nucía",
           "date": null,
           "home": "Covisa Manresa"
@@ -899,6 +894,11 @@
           "away": "Canet F.S.",
           "date": "2026-09-19T16:00:00",
           "home": "A.E. Llevant De Manacor Futsal \"A\""
+        },
+        {
+          "away": "C.F.S. Futsal IBI - Juypal Hogar",
+          "date": "2026-09-19T16:15:00",
+          "home": "Les Corts EF \"A\""
         },
         {
           "away": "F.S. Picassent",
@@ -1059,11 +1059,6 @@
           "home": "F.S. Ripollet \"A\""
         },
         {
-          "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
-          "date": null,
-          "home": "Ye Faky F.S."
-        },
-        {
           "away": "A.E. Llevant De Manacor Futsal \"A\"",
           "date": "2026-09-26T13:30:00",
           "home": "Club Deportivo Sporting la Nucía"
@@ -1072,6 +1067,11 @@
           "away": "Sant Joan Despí CFS Cumsa",
           "date": "2026-09-26T16:00:00",
           "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
+          "date": "2026-09-26T18:00:00",
+          "home": "Ye Faky F.S."
         },
         {
           "away": "Les Corts EF \"A\"",
@@ -1374,6 +1374,92 @@
         }
       ]
     },
+    "33836163|33836167": {
+      "1": [
+        {
+          "away": "Unión Tres Cantos FS",
+          "date": null,
+          "home": "CD Albacete FS"
+        },
+        {
+          "away": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
+          "date": null,
+          "home": "Soliss A.D. Bargas"
+        },
+        {
+          "away": "Serbis AD Alcorcón FS",
+          "date": null,
+          "home": "CD Cobisa FS \"A\""
+        },
+        {
+          "away": "Club Unión Deportiva Loeches",
+          "date": null,
+          "home": "Naturpellet San Cristóbal"
+        },
+        {
+          "away": "Club Union Deportiva Rena",
+          "date": null,
+          "home": "C.D.E. Mostoles Futsal"
+        },
+        {
+          "away": "Colegio El Valle C.D.",
+          "date": null,
+          "home": "Grupo López Bolaños F.S. \"A\""
+        },
+        {
+          "away": "Entreparéntesis - Enertel FS Talavera",
+          "date": null,
+          "home": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón"
+        },
+        {
+          "away": "Inter JP Financial F.S.",
+          "date": "2026-09-19T17:00:00",
+          "home": "El Alamo F.S."
+        }
+      ],
+      "2": [
+        {
+          "away": "El Alamo F.S.",
+          "date": null,
+          "home": "Unión Tres Cantos FS"
+        },
+        {
+          "away": "CD Albacete FS",
+          "date": null,
+          "home": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\""
+        },
+        {
+          "away": "Soliss A.D. Bargas",
+          "date": null,
+          "home": "Serbis AD Alcorcón FS"
+        },
+        {
+          "away": "CD Cobisa FS \"A\"",
+          "date": null,
+          "home": "Club Unión Deportiva Loeches"
+        },
+        {
+          "away": "Naturpellet San Cristóbal",
+          "date": null,
+          "home": "Club Union Deportiva Rena"
+        },
+        {
+          "away": "C.D.E. Mostoles Futsal",
+          "date": null,
+          "home": "Colegio El Valle C.D."
+        },
+        {
+          "away": "Grupo López Bolaños F.S. \"A\"",
+          "date": null,
+          "home": "Entreparéntesis - Enertel FS Talavera"
+        },
+        {
+          "away": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
+          "date": null,
+          "home": "Inter JP Financial F.S."
+        }
+      ]
+    },
     "33836179|33836180": {
       "1": [
         {
@@ -1488,11 +1574,6 @@
           "home": "C.D. Juventud del Círculo Católico"
         },
         {
-          "away": "CLUB DEPORTIVO TEIDAYA \"A\"",
-          "date": null,
-          "home": "A.D. Mioño FSF"
-        },
-        {
           "away": "FC Meigas",
           "date": "2026-09-20T11:30:00",
           "home": "CD Lacturale Orvina"
@@ -1501,6 +1582,11 @@
           "away": "At. Arnoya",
           "date": "2026-09-20T12:00:00",
           "home": "CDE Muslera GSW \"A\""
+        },
+        {
+          "away": "CLUB DEPORTIVO TEIDAYA \"A\"",
+          "date": "2026-09-20T13:30:00",
+          "home": "A.D. Mioño FSF"
         }
       ],
       "2": [
@@ -1629,6 +1715,92 @@
           "away": "La Villa",
           "date": "2026-09-26T17:00:00",
           "home": "Futsal Cartonajes Pans Mataró"
+        }
+      ]
+    },
+    "33836181|33836184": {
+      "1": [
+        {
+          "away": "ARRIVA AD Alcorcón FSF",
+          "date": null,
+          "home": "Globalcaja Albacete F.S."
+        },
+        {
+          "away": "Martos FS Jaén Paraíso Interior",
+          "date": null,
+          "home": "CD Salesianos Puertollano"
+        },
+        {
+          "away": "CD La Garrovilla Femenino",
+          "date": null,
+          "home": "C.F.S. Femenino San Fernando"
+        },
+        {
+          "away": "UDAF Afanion \"A\"",
+          "date": null,
+          "home": "Coviran UAPO Granada FS Femenino"
+        },
+        {
+          "away": "Majadahonda F.S.F./Afar 4",
+          "date": "2026-09-19T16:00:00",
+          "home": "Melilla Ciudad del Deporte Torreblanca C. F."
+        },
+        {
+          "away": "Almagro F.S.F.",
+          "date": "2026-09-19T19:00:00",
+          "home": "I.E.S. Luis de Camoens"
+        },
+        {
+          "away": "Ramón Y Cajal Féminas",
+          "date": "2026-09-19T19:30:00",
+          "home": "C.D.E. Leganés F.S. Masdeporte"
+        },
+        {
+          "away": "Atletico Navalcarnero",
+          "date": "2026-09-19T20:30:00",
+          "home": "Dos Hermanas F.S. C.D."
+        }
+      ],
+      "2": [
+        {
+          "away": "Coviran UAPO Granada FS Femenino",
+          "date": null,
+          "home": "ARRIVA AD Alcorcón FSF"
+        },
+        {
+          "away": "Globalcaja Albacete F.S.",
+          "date": null,
+          "home": "Atletico Navalcarnero"
+        },
+        {
+          "away": "Dos Hermanas F.S. C.D.",
+          "date": null,
+          "home": "Martos FS Jaén Paraíso Interior"
+        },
+        {
+          "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
+          "date": null,
+          "home": "Ramón Y Cajal Féminas"
+        },
+        {
+          "away": "C.D.E. Leganés F.S. Masdeporte",
+          "date": null,
+          "home": "CD La Garrovilla Femenino"
+        },
+        {
+          "away": "C.F.S. Femenino San Fernando",
+          "date": null,
+          "home": "Almagro F.S.F."
+        },
+        {
+          "away": "I.E.S. Luis de Camoens",
+          "date": null,
+          "home": "UDAF Afanion \"A\""
+        },
+        {
+          "away": "CD Salesianos Puertollano",
+          "date": null,
+          "home": "Majadahonda F.S.F./Afar 4"
         }
       ]
     },
