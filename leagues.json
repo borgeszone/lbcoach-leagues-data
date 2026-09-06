@@ -1,9 +1,9 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-05T10:31:05+00:00",
+  "lastUpdated": "2026-09-06T10:38:47+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
-    "rfef: la PNFG rate-limitó 8 jornada/s y se abandonaron 8 grupo/s; esas jornadas salen de la caché o del JSON anterior",
+    "rfef: la PNFG rate-limitó 7 jornada/s y se abandonaron 7 grupo/s; esas jornadas salen de la caché o del JSON anterior",
     "fcf-1cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-2cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-3cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
@@ -34,7 +34,7 @@
             },
             {
               "name": "CD Xota FS",
-              "logoUrl": null
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/usr/local/projects/weblogic/repository/AS400/90/DOCS/201210/21/12041381.jpg"
             },
             {
               "name": "Córdoba Patrimonio",
@@ -86,7 +86,7 @@
             },
             {
               "name": "El Ejido FS",
-              "logoUrl": null,
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/209175_50x50.png",
               "officialName": "Sur Seeds El Ejido F.S."
             },
             {
@@ -99,6 +99,7 @@
               "officialName": "Wanapix"
             }
           ],
+          "jornadasTotal": 15,
           "teamsSource": "calendario",
           "calendar": [
             {
@@ -896,8 +897,7 @@
                 }
               ]
             }
-          ],
-          "jornadasTotal": 15
+          ]
         },
         {
           "id": "rfef-segunda-fs-masc",
@@ -2662,8 +2662,8 @@
                   "officialName": "Stellae Leis Pontevedra F.S."
                 }
               ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario"
+              "teamsSource": "calendario",
+              "jornadasTotal": 30
             },
             {
               "id": "g2",
@@ -2745,7 +2745,6 @@
                   "officialName": "Vulcanizados Ruiz Tafa FS"
                 }
               ],
-              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -4128,7 +4127,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30
             },
             {
               "id": "g3",
@@ -4214,6 +4214,7 @@
                   "officialName": "Ye Faky F.S."
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -5446,8 +5447,94 @@
                     }
                   ]
                 }
+              ]
+            },
+            {
+              "id": "g4",
+              "name": "Grupo 4",
+              "teams": [
+                {
+                  "name": "CD Albacete FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1415/DOCS/201410/5/c44ab32d3034b9b1c315995904be88bd_7iTQskyY.jpg"
+                },
+                {
+                  "name": "Cobisa FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/aeb0c9e1e0d5a01f03e3b837884c9817.jpg",
+                  "officialName": "CD Cobisa FS \"A\""
+                },
+                {
+                  "name": "Athletic Móstoles",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079011290_Escudo.png",
+                  "officialName": "C.D.E. Mostoles Futsal"
+                },
+                {
+                  "name": "CDU Loeches FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079009157_Escudo_de_Loeches.svg__66_pix_.png",
+                  "officialName": "Club Unión Deportiva Loeches"
+                },
+                {
+                  "name": "Bambatan Rena FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20229/15/508ecf33e464c0239c55d667c96886b7.jpg",
+                  "officialName": "Club Union Deportiva Rena"
+                },
+                {
+                  "name": "CD El Valle",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/801ba82d790c298275edd6651502f8ef.jpg",
+                  "officialName": "Colegio El Valle C.D."
+                },
+                {
+                  "name": "Ciudad de Torrejón",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078990617_escudo_13208.jpg",
+                  "officialName": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón"
+                },
+                {
+                  "name": "FS El Álamo",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/4c91b7dadd26dafb64c93b085d6d5dea.jpg",
+                  "officialName": "El Alamo F.S."
+                },
+                {
+                  "name": "FS Talavera",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079002213_FS_Talavera.png",
+                  "officialName": "Entreparéntesis - Enertel FS Talavera"
+                },
+                {
+                  "name": "Grupo Lopez Bolaños",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078998884_escudo_24.jpg",
+                  "officialName": "Grupo López Bolaños F.S. \"A\""
+                },
+                {
+                  "name": "Sierra San Vicente FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/221095b016c202f998b35b32b2223d80.jpg",
+                  "officialName": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\""
+                },
+                {
+                  "name": "Inter JP Financial FS B",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206173_50x50.png",
+                  "officialName": "Inter JP Financial F.S."
+                },
+                {
+                  "name": "CD San Cristóbal Nuñez",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1415/DOCS/201411/14/f0fcbb7d69178842829e25d1e32c406b_XyWLkZmY.jpg",
+                  "officialName": "Naturpellet San Cristóbal"
+                },
+                {
+                  "name": "AD Alcorcón FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206184_50x50.png",
+                  "officialName": "Serbis AD Alcorcón FS"
+                },
+                {
+                  "name": "Bargas CD",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0078998073_1.jpg",
+                  "officialName": "Soliss A.D. Bargas"
+                },
+                {
+                  "name": "Unión Tres Cantos",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/ad34f20a4037f499f4036926819229d3.jpg",
+                  "officialName": "Unión Tres Cantos FS"
+                }
               ],
-              "jornadasTotal": 30
+              "jornadasTotal": 30,
+              "teamsSource": "calendario"
             }
           ]
         },
@@ -7252,6 +7339,91 @@
                   "name": "FS Ripollet",
                   "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079009174_00100_0000485600_RIPOLLET_F.S._copia.png",
                   "officialName": "Somriu Futbol Sala Ripollet"
+                }
+              ],
+              "teamsSource": "calendario",
+              "jornadasTotal": 30
+            },
+            {
+              "id": "g3",
+              "name": "Grupo 3",
+              "teams": [
+                {
+                  "name": "Almagro F.S.F.",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206578_50x50.png"
+                },
+                {
+                  "name": "AD Alcorcón B",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206184_50x50.png",
+                  "officialName": "ARRIVA AD Alcorcón FSF"
+                },
+                {
+                  "name": "Atletico Navalcarnero",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079008545_logo.png"
+                },
+                {
+                  "name": "CD Leganés",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079009231_IMG_20250929_WA0005.jpg",
+                  "officialName": "C.D.E. Leganés F.S. Masdeporte"
+                },
+                {
+                  "name": "Sporting Garrovilla",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079039323_567607198_18269663599303655_7469266346877841432_n.jpg",
+                  "officialName": "CD La Garrovilla Femenino"
+                },
+                {
+                  "name": "CD Salesianos Puertollano",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/16ff2cb1e1eeb0d3d4dcf12b8ac7e85a.jpg"
+                },
+                {
+                  "name": "FS San Fernando",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078990598_00100_0000003259_escudo_sanfer_web.jpg",
+                  "officialName": "C.F.S. Femenino San Fernando"
+                },
+                {
+                  "name": "Granada FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008961_Granada_F.S..png",
+                  "officialName": "Coviran UAPO Granada FS Femenino"
+                },
+                {
+                  "name": "Dos Hermanas",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/anterior/1314/DOCS/20137/25/faf5fde51678349d33806a754ccd303a_oloUcgqD.jpg",
+                  "officialName": "Dos Hermanas F.S. C.D."
+                },
+                {
+                  "name": "Albacete FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1415/DOCS/201410/5/c44ab32d3034b9b1c315995904be88bd_7iTQskyY.jpg",
+                  "officialName": "Globalcaja Albacete F.S."
+                },
+                {
+                  "name": "CD Camoens",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20229/22/6c77af036b358578948a0f1d37634930.jpg",
+                  "officialName": "I.E.S. Luis de Camoens"
+                },
+                {
+                  "name": "Rayo Majadahonda FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20228/31/8c6e20bfe9cb72c33bd8df6353738138.jpg",
+                  "officialName": "Majadahonda F.S.F./Afar 4"
+                },
+                {
+                  "name": "Martos FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/anterior/1314/DOCS/20138/16/bbc7004947d0f7115a8099108146b704_pumhdq76.jpg",
+                  "officialName": "Martos FS Jaén Paraíso Interior"
+                },
+                {
+                  "name": "MSC Torreblanca FS B",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/207211_50x50.png",
+                  "officialName": "Melilla Ciudad del Deporte Torreblanca C. F."
+                },
+                {
+                  "name": "Ramón y Cajal",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079039324_00100_0000037414_R_Y_Cajal_feminas.jpg",
+                  "officialName": "Ramón Y Cajal Féminas"
+                },
+                {
+                  "name": "UDAF Afanion",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/cf91ee0d1f26ad625deecd344de7e135.jpg",
+                  "officialName": "UDAF Afanion \"A\""
                 }
               ],
               "jornadasTotal": 30,
