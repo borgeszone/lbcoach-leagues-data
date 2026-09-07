@@ -1,9 +1,9 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-06T10:38:47+00:00",
+  "lastUpdated": "2026-09-07T11:51:52+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
-    "rfef: la PNFG rate-limitó 7 jornada/s y se abandonaron 7 grupo/s; esas jornadas salen de la caché o del JSON anterior",
+    "rfef: la PNFG rate-limitó 12 jornada/s y se abandonaron 8 grupo/s; agotado el presupuesto de 12 fallos, el resto del calendario no se pidió. Lo publicado sale de la caché y del JSON anterior",
     "fcf-1cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-2cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-3cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
@@ -28,13 +28,9 @@
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/18.png"
             },
             {
-              "name": "Industrias Santa Coloma",
-              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png",
-              "officialName": "Catgas Energía Santa Coloma"
-            },
-            {
-              "name": "CD Xota FS",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/usr/local/projects/weblogic/repository/AS400/90/DOCS/201210/21/12041381.jpg"
+              "name": "Osasuna Magna",
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/20.png",
+              "officialName": "C.A. Osasuna Magna"
             },
             {
               "name": "Córdoba Patrimonio",
@@ -44,6 +40,10 @@
             {
               "name": "ElPozo Murcia Costa Cálida",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/22.png"
+            },
+            {
+              "name": "FS García",
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png"
             },
             {
               "name": "Palma Futsal",
@@ -58,7 +58,7 @@
             {
               "name": "Jaén FS",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/25.png",
-              "officialName": "Jaen Paraiso Interior F.S."
+              "officialName": "Jaén Paraiso Interior FS."
             },
             {
               "name": "Jimbee Cartagena",
@@ -72,12 +72,12 @@
             {
               "name": "O Parrulo Ferrol",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/29.png",
-              "officialName": "O Parrulo Ferrol F.S."
+              "officialName": "O Parrulo Ferrol FS."
             },
             {
               "name": "Manzanares FS",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/9.png",
-              "officialName": "Quesos El Hidalgo Manzanares F.S."
+              "officialName": "Quesos El Hidalgo Manzanares FS"
             },
             {
               "name": "Peñíscola FS",
@@ -86,8 +86,8 @@
             },
             {
               "name": "El Ejido FS",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/209175_50x50.png",
-              "officialName": "Sur Seeds El Ejido F.S."
+              "logoUrl": null,
+              "officialName": "Sur Seed CD El Ejido Futsal"
             },
             {
               "name": "Viña Albali Valdepeñas",
@@ -96,808 +96,1191 @@
             {
               "name": "Wanapix Sala 10",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/23.png",
-              "officialName": "Wanapix"
+              "officialName": "Wanapix AD Sala 10"
             }
           ],
-          "jornadasTotal": 15,
-          "teamsSource": "calendario",
           "calendar": [
             {
               "jornada": 1,
+              "date": "2026-09-13",
               "matches": [
-                {
-                  "home": "CD Xota FS",
-                  "away": "Jaen Paraiso Interior F.S.",
-                  "date": "2026-09-11T19:30:00",
-                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697011&NPcd_Pdf=1"
-                },
-                {
-                  "home": "Catgas Energía Santa Coloma",
-                  "away": "Illes Balears Palma Futsal",
-                  "date": "2026-09-11T21:30:00",
-                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697009&NPcd_Pdf=1"
-                },
-                {
-                  "home": "Wanapix",
-                  "away": "Servigroup Peñiscola FS",
-                  "date": "2026-09-12T13:00:00",
-                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697014&NPcd_Pdf=1"
-                },
-                {
-                  "home": "Sur Seeds El Ejido F.S.",
-                  "away": "Córdoba Patrimonio De La Humanidad",
-                  "date": "2026-09-12T16:30:00",
-                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697008&NPcd_Pdf=1"
-                },
-                {
-                  "home": "Viña Albali Valdepeñas",
-                  "away": "Barça",
-                  "date": "2026-09-12T18:30:00",
-                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697013&NPcd_Pdf=1"
-                },
-                {
-                  "home": "Noia Portus Apostoli",
-                  "away": "ElPozo Murcia Costa Cálida",
-                  "date": "2026-09-12T20:30:00",
-                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697010&NPcd_Pdf=1"
-                },
                 {
                   "home": "Jimbee Cartagena Costa Cálida",
                   "away": "Inter JP Financial",
-                  "date": "2026-09-13T12:45:00",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697006&NPcd_Pdf=1"
                 },
                 {
-                  "home": "O Parrulo Ferrol F.S.",
-                  "away": "Quesos El Hidalgo Manzanares F.S.",
-                  "date": "2026-09-13T16:30:00",
+                  "home": "Sur Seed CD El Ejido Futsal",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "FS García",
+                  "away": "Illes Balears Palma Futsal"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "ElPozo Murcia Costa Cálida",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697010&NPcd_Pdf=1"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Quesos El Hidalgo Manzanares FS",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697012&NPcd_Pdf=1"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Barça",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697013&NPcd_Pdf=1"
+                },
+                {
+                  "home": "Wanapix AD Sala 10",
+                  "away": "Servigroup Peñiscola FS"
                 }
-              ]
+              ],
+              "phase": "Apertura"
             },
             {
               "jornada": 2,
+              "date": "2026-09-20",
               "matches": [
                 {
-                  "home": "O Parrulo Ferrol F.S.",
-                  "away": "Catgas Energía Santa Coloma",
-                  "date": "2026-09-18T19:30:00",
-                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697021&NPcd_Pdf=1"
+                  "home": "Barça",
+                  "away": "Servigroup Peñiscola FS",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697015&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Illes Balears Palma Futsal",
-                  "away": "ElPozo Murcia Costa Cálida",
-                  "date": "2026-09-19T12:00:00",
-                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697020&NPcd_Pdf=1"
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Wanapix AD Sala 10"
                 },
                 {
                   "home": "Córdoba Patrimonio De La Humanidad",
-                  "away": "Quesos El Hidalgo Manzanares F.S.",
-                  "date": "2026-09-19T16:30:00",
+                  "away": "Quesos El Hidalgo Manzanares FS",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697017&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Jimbee Cartagena Costa Cálida",
-                  "away": "Wanapix",
-                  "date": "2026-09-19T18:30:00",
-                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697016&NPcd_Pdf=1"
-                },
-                {
                   "home": "Inter JP Financial",
-                  "away": "Sur Seeds El Ejido F.S.",
-                  "date": "2026-09-19T20:30:00",
-                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697018&NPcd_Pdf=1"
+                  "away": "Sur Seed CD El Ejido Futsal"
                 },
                 {
-                  "home": "Jaen Paraiso Interior F.S.",
+                  "home": "Jaén Paraiso Interior FS.",
                   "away": "Noia Portus Apostoli",
-                  "date": "2026-09-20T13:00:00",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697019&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Viña Albali Valdepeñas",
-                  "away": "CD Xota FS",
-                  "date": "2026-09-20T16:30:00",
-                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697022&NPcd_Pdf=1"
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "ElPozo Murcia Costa Cálida",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697020&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Barça",
-                  "away": "Servigroup Peñiscola FS",
-                  "date": "2026-09-21T20:30:00",
-                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697015&NPcd_Pdf=1"
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "FS García"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "C.A. Osasuna Magna"
                 }
-              ]
+              ],
+              "phase": "Apertura"
             },
             {
               "jornada": 3,
+              "date": "2026-09-27",
               "matches": [
                 {
-                  "home": "CD Xota FS",
-                  "away": "Illes Balears Palma Futsal",
-                  "date": "2026-09-25T19:30:00",
-                  "actaUrl": null
-                },
-                {
                   "home": "Barça",
-                  "away": "Jimbee Cartagena Costa Cálida",
-                  "date": "2026-09-25T21:30:00",
-                  "actaUrl": null
+                  "away": "Jimbee Cartagena Costa Cálida"
                 },
                 {
-                  "home": "Jaen Paraiso Interior F.S.",
-                  "away": "Inter JP Financial",
-                  "date": "2026-09-26T12:00:00",
-                  "actaUrl": null
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Inter JP Financial"
                 },
                 {
-                  "home": "Wanapix",
-                  "away": "O Parrulo Ferrol F.S.",
-                  "date": "2026-09-26T16:30:00",
-                  "actaUrl": null
-                },
-                {
-                  "home": "Servigroup Peñiscola FS",
-                  "away": "Viña Albali Valdepeñas",
-                  "date": "2026-09-26T18:30:00",
-                  "actaUrl": null
-                },
-                {
-                  "home": "ElPozo Murcia Costa Cálida",
-                  "away": "Córdoba Patrimonio De La Humanidad",
-                  "date": "2026-09-26T20:30:00",
-                  "actaUrl": null
-                },
-                {
-                  "home": "Quesos El Hidalgo Manzanares F.S.",
-                  "away": "Catgas Energía Santa Coloma",
-                  "date": "2026-09-27T13:00:00",
-                  "actaUrl": null
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "FS García"
                 },
                 {
                   "home": "Noia Portus Apostoli",
-                  "away": "Sur Seeds El Ejido F.S.",
-                  "date": "2026-09-27T16:30:00",
-                  "actaUrl": null
+                  "away": "Sur Seed CD El Ejido Futsal"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Illes Balears Palma Futsal"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "ElPozo Murcia Costa Cálida",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Wanapix AD Sala 10",
+                  "away": "O Parrulo Ferrol FS."
                 }
-              ]
+              ],
+              "phase": "Apertura"
             },
             {
               "jornada": 4,
+              "date": "2026-10-04",
               "matches": [
                 {
                   "home": "Córdoba Patrimonio De La Humanidad",
-                  "away": "Jaen Paraiso Interior F.S.",
-                  "date": "2026-10-03T00:00:00",
-                  "actaUrl": null
+                  "away": "Jaén Paraiso Interior FS."
                 },
                 {
-                  "home": "Sur Seeds El Ejido F.S.",
-                  "away": "CD Xota FS",
-                  "date": "2026-10-03T00:00:00",
-                  "actaUrl": null
+                  "home": "Sur Seed CD El Ejido Futsal",
+                  "away": "C.A. Osasuna Magna"
                 },
                 {
-                  "home": "Catgas Energía Santa Coloma",
-                  "away": "Wanapix",
-                  "date": "2026-10-03T00:00:00",
-                  "actaUrl": null
+                  "home": "FS García",
+                  "away": "Wanapix AD Sala 10"
                 },
                 {
                   "home": "Inter JP Financial",
-                  "away": "ElPozo Murcia Costa Cálida",
-                  "date": "2026-10-03T00:00:00",
-                  "actaUrl": null
+                  "away": "ElPozo Murcia Costa Cálida"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares F.S.",
-                  "away": "Jimbee Cartagena Costa Cálida",
-                  "date": "2026-10-03T00:00:00",
-                  "actaUrl": null
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Jimbee Cartagena Costa Cálida"
                 },
                 {
                   "home": "Noia Portus Apostoli",
-                  "away": "Barça",
-                  "date": "2026-10-03T00:00:00",
-                  "actaUrl": null
+                  "away": "Barça"
                 },
                 {
                   "home": "Illes Balears Palma Futsal",
-                  "away": "Servigroup Peñiscola FS",
-                  "date": "2026-10-03T00:00:00",
-                  "actaUrl": null
+                  "away": "Servigroup Peñiscola FS"
                 },
                 {
-                  "home": "O Parrulo Ferrol F.S.",
-                  "away": "Viña Albali Valdepeñas",
-                  "date": "2026-10-03T00:00:00",
-                  "actaUrl": null
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Viña Albali Valdepeñas"
                 }
-              ]
+              ],
+              "phase": "Apertura"
             },
             {
               "jornada": 5,
+              "date": "2026-10-11",
               "matches": [
                 {
                   "home": "Barça",
-                  "away": "CD Xota FS",
-                  "date": "2026-10-10T00:00:00",
-                  "actaUrl": null
+                  "away": "C.A. Osasuna Magna"
                 },
                 {
                   "home": "Jimbee Cartagena Costa Cálida",
-                  "away": "Noia Portus Apostoli",
-                  "date": "2026-10-10T00:00:00",
-                  "actaUrl": null
+                  "away": "Noia Portus Apostoli"
                 },
                 {
-                  "home": "Jaen Paraiso Interior F.S.",
-                  "away": "Sur Seeds El Ejido F.S.",
-                  "date": "2026-10-10T00:00:00",
-                  "actaUrl": null
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Sur Seed CD El Ejido Futsal"
                 },
                 {
                   "home": "Illes Balears Palma Futsal",
-                  "away": "O Parrulo Ferrol F.S.",
-                  "date": "2026-10-10T00:00:00",
-                  "actaUrl": null
+                  "away": "O Parrulo Ferrol FS."
                 },
                 {
                   "home": "Servigroup Peñiscola FS",
-                  "away": "Córdoba Patrimonio De La Humanidad",
-                  "date": "2026-10-10T00:00:00",
-                  "actaUrl": null
+                  "away": "Córdoba Patrimonio De La Humanidad"
                 },
                 {
                   "home": "ElPozo Murcia Costa Cálida",
-                  "away": "Quesos El Hidalgo Manzanares F.S.",
-                  "date": "2026-10-10T00:00:00",
-                  "actaUrl": null
+                  "away": "Quesos El Hidalgo Manzanares FS"
                 },
                 {
                   "home": "Viña Albali Valdepeñas",
-                  "away": "Catgas Energía Santa Coloma",
-                  "date": "2026-10-10T00:00:00",
-                  "actaUrl": null
+                  "away": "FS García"
                 },
                 {
-                  "home": "Wanapix",
-                  "away": "Inter JP Financial",
-                  "date": "2026-10-10T00:00:00",
-                  "actaUrl": null
+                  "home": "Wanapix AD Sala 10",
+                  "away": "Inter JP Financial"
                 }
-              ]
+              ],
+              "phase": "Apertura"
             },
             {
               "jornada": 6,
+              "date": "2026-10-25",
               "matches": [
                 {
                   "home": "Córdoba Patrimonio De La Humanidad",
-                  "away": "Jimbee Cartagena Costa Cálida",
-                  "date": "2026-10-24T00:00:00",
-                  "actaUrl": null
+                  "away": "Jimbee Cartagena Costa Cálida"
                 },
                 {
-                  "home": "Sur Seeds El Ejido F.S.",
-                  "away": "Barça",
-                  "date": "2026-10-24T00:00:00",
-                  "actaUrl": null
+                  "home": "Sur Seed CD El Ejido Futsal",
+                  "away": "Barça"
                 },
                 {
-                  "home": "Catgas Energía Santa Coloma",
-                  "away": "ElPozo Murcia Costa Cálida",
-                  "date": "2026-10-24T00:00:00",
-                  "actaUrl": null
+                  "home": "FS García",
+                  "away": "ElPozo Murcia Costa Cálida"
                 },
                 {
                   "home": "Inter JP Financial",
-                  "away": "Viña Albali Valdepeñas",
-                  "date": "2026-10-24T00:00:00",
-                  "actaUrl": null
+                  "away": "Viña Albali Valdepeñas"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares F.S.",
-                  "away": "Illes Balears Palma Futsal",
-                  "date": "2026-10-24T00:00:00",
-                  "actaUrl": null
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Illes Balears Palma Futsal"
                 },
                 {
                   "home": "Noia Portus Apostoli",
-                  "away": "Servigroup Peñiscola FS",
-                  "date": "2026-10-24T00:00:00",
-                  "actaUrl": null
+                  "away": "Servigroup Peñiscola FS"
                 },
                 {
-                  "home": "CD Xota FS",
-                  "away": "Wanapix",
-                  "date": "2026-10-24T00:00:00",
-                  "actaUrl": null
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Wanapix AD Sala 10"
                 },
                 {
-                  "home": "O Parrulo Ferrol F.S.",
-                  "away": "Jaen Paraiso Interior F.S.",
-                  "date": "2026-10-24T00:00:00",
-                  "actaUrl": null
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Jaén Paraiso Interior FS."
                 }
-              ]
+              ],
+              "phase": "Apertura"
             },
             {
               "jornada": 7,
+              "date": "2026-11-01",
               "matches": [
                 {
-                  "home": "Wanapix",
-                  "away": "ElPozo Murcia Costa Cálida",
-                  "date": "2026-09-29T20:30:00",
-                  "actaUrl": null
-                },
-                {
                   "home": "Barça",
-                  "away": "O Parrulo Ferrol F.S.",
-                  "date": "2026-09-30T20:45:00",
-                  "actaUrl": null
+                  "away": "O Parrulo Ferrol FS."
                 },
                 {
                   "home": "Jimbee Cartagena Costa Cálida",
-                  "away": "Catgas Energía Santa Coloma",
-                  "date": "2026-10-31T00:00:00",
-                  "actaUrl": null
+                  "away": "FS García"
                 },
                 {
-                  "home": "Jaen Paraiso Interior F.S.",
-                  "away": "Quesos El Hidalgo Manzanares F.S.",
-                  "date": "2026-10-31T00:00:00",
-                  "actaUrl": null
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Quesos El Hidalgo Manzanares FS"
                 },
                 {
-                  "home": "CD Xota FS",
-                  "away": "Noia Portus Apostoli",
-                  "date": "2026-10-31T00:00:00",
-                  "actaUrl": null
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Noia Portus Apostoli"
                 },
                 {
                   "home": "Illes Balears Palma Futsal",
-                  "away": "Sur Seeds El Ejido F.S.",
-                  "date": "2026-10-31T00:00:00",
-                  "actaUrl": null
+                  "away": "Sur Seed CD El Ejido Futsal"
                 },
                 {
                   "home": "Servigroup Peñiscola FS",
-                  "away": "Inter JP Financial",
-                  "date": "2026-10-31T00:00:00",
-                  "actaUrl": null
+                  "away": "Inter JP Financial"
                 },
                 {
                   "home": "Viña Albali Valdepeñas",
-                  "away": "Córdoba Patrimonio De La Humanidad",
-                  "date": "2026-10-31T00:00:00",
-                  "actaUrl": null
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Wanapix AD Sala 10",
+                  "away": "ElPozo Murcia Costa Cálida"
                 }
-              ]
+              ],
+              "phase": "Apertura"
             },
             {
               "jornada": 8,
+              "date": "2026-11-15",
               "matches": [
                 {
                   "home": "Córdoba Patrimonio De La Humanidad",
-                  "away": "Wanapix",
-                  "date": "2026-11-14T00:00:00",
-                  "actaUrl": null
+                  "away": "Wanapix AD Sala 10"
                 },
                 {
-                  "home": "Sur Seeds El Ejido F.S.",
-                  "away": "Jimbee Cartagena Costa Cálida",
-                  "date": "2026-11-14T00:00:00",
-                  "actaUrl": null
+                  "home": "Sur Seed CD El Ejido Futsal",
+                  "away": "Jimbee Cartagena Costa Cálida"
                 },
                 {
-                  "home": "Catgas Energía Santa Coloma",
-                  "away": "Jaen Paraiso Interior F.S.",
-                  "date": "2026-11-14T00:00:00",
-                  "actaUrl": null
+                  "home": "FS García",
+                  "away": "Jaén Paraiso Interior FS."
                 },
                 {
                   "home": "Inter JP Financial",
-                  "away": "CD Xota FS",
-                  "date": "2026-11-14T00:00:00",
-                  "actaUrl": null
+                  "away": "C.A. Osasuna Magna"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares F.S.",
-                  "away": "Viña Albali Valdepeñas",
-                  "date": "2026-11-14T00:00:00",
-                  "actaUrl": null
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Viña Albali Valdepeñas"
                 },
                 {
                   "home": "Noia Portus Apostoli",
-                  "away": "Illes Balears Palma Futsal",
-                  "date": "2026-11-14T00:00:00",
-                  "actaUrl": null
+                  "away": "Illes Balears Palma Futsal"
                 },
                 {
-                  "home": "O Parrulo Ferrol F.S.",
-                  "away": "Servigroup Peñiscola FS",
-                  "date": "2026-11-14T00:00:00",
-                  "actaUrl": null
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Servigroup Peñiscola FS"
                 },
                 {
                   "home": "ElPozo Murcia Costa Cálida",
-                  "away": "Barça",
-                  "date": "2026-11-14T00:00:00",
-                  "actaUrl": null
+                  "away": "Barça"
                 }
-              ]
+              ],
+              "phase": "Apertura"
             },
             {
               "jornada": 9,
+              "date": "2026-11-22",
               "matches": [
                 {
                   "home": "Barça",
-                  "away": "Córdoba Patrimonio De La Humanidad",
-                  "date": "2026-11-21T00:00:00",
-                  "actaUrl": null
+                  "away": "Córdoba Patrimonio De La Humanidad"
                 },
                 {
                   "home": "Jimbee Cartagena Costa Cálida",
-                  "away": "Jaen Paraiso Interior F.S.",
-                  "date": "2026-11-21T00:00:00",
-                  "actaUrl": null
+                  "away": "Jaén Paraiso Interior FS."
                 },
                 {
-                  "home": "Sur Seeds El Ejido F.S.",
-                  "away": "Catgas Energía Santa Coloma",
-                  "date": "2026-11-21T00:00:00",
-                  "actaUrl": null
+                  "home": "Sur Seed CD El Ejido Futsal",
+                  "away": "FS García"
                 },
                 {
-                  "home": "CD Xota FS",
-                  "away": "O Parrulo Ferrol F.S.",
-                  "date": "2026-11-21T00:00:00",
-                  "actaUrl": null
+                  "home": "C.A. Osasuna Magna",
+                  "away": "O Parrulo Ferrol FS."
                 },
                 {
                   "home": "Illes Balears Palma Futsal",
-                  "away": "Inter JP Financial",
-                  "date": "2026-11-21T00:00:00",
-                  "actaUrl": null
+                  "away": "Inter JP Financial"
                 },
                 {
                   "home": "Servigroup Peñiscola FS",
-                  "away": "ElPozo Murcia Costa Cálida",
-                  "date": "2026-11-21T00:00:00",
-                  "actaUrl": null
+                  "away": "ElPozo Murcia Costa Cálida"
                 },
                 {
                   "home": "Viña Albali Valdepeñas",
-                  "away": "Noia Portus Apostoli",
-                  "date": "2026-11-21T00:00:00",
-                  "actaUrl": null
+                  "away": "Noia Portus Apostoli"
                 },
                 {
-                  "home": "Wanapix",
-                  "away": "Quesos El Hidalgo Manzanares F.S.",
-                  "date": "2026-11-21T00:00:00",
-                  "actaUrl": null
+                  "home": "Wanapix AD Sala 10",
+                  "away": "Quesos El Hidalgo Manzanares FS"
                 }
-              ]
+              ],
+              "phase": "Apertura"
             },
             {
               "jornada": 10,
+              "date": "2026-11-29",
               "matches": [
                 {
-                  "home": "Catgas Energía Santa Coloma",
-                  "away": "CD Xota FS",
-                  "date": "2026-11-28T00:00:00",
-                  "actaUrl": null
+                  "home": "FS García",
+                  "away": "C.A. Osasuna Magna"
                 },
                 {
                   "home": "Inter JP Financial",
-                  "away": "Noia Portus Apostoli",
-                  "date": "2026-11-28T00:00:00",
-                  "actaUrl": null
+                  "away": "Noia Portus Apostoli"
                 },
                 {
-                  "home": "Jaen Paraiso Interior F.S.",
-                  "away": "Wanapix",
-                  "date": "2026-11-28T00:00:00",
-                  "actaUrl": null
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Wanapix AD Sala 10"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares F.S.",
-                  "away": "Barça",
-                  "date": "2026-11-28T00:00:00",
-                  "actaUrl": null
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Barça"
                 },
                 {
                   "home": "Illes Balears Palma Futsal",
-                  "away": "Viña Albali Valdepeñas",
-                  "date": "2026-11-28T00:00:00",
-                  "actaUrl": null
+                  "away": "Viña Albali Valdepeñas"
                 },
                 {
-                  "home": "O Parrulo Ferrol F.S.",
-                  "away": "Córdoba Patrimonio De La Humanidad",
-                  "date": "2026-11-28T00:00:00",
-                  "actaUrl": null
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Córdoba Patrimonio De La Humanidad"
                 },
                 {
                   "home": "Servigroup Peñiscola FS",
-                  "away": "Jimbee Cartagena Costa Cálida",
-                  "date": "2026-11-28T00:00:00",
-                  "actaUrl": null
+                  "away": "Jimbee Cartagena Costa Cálida"
                 },
                 {
                   "home": "ElPozo Murcia Costa Cálida",
-                  "away": "Sur Seeds El Ejido F.S.",
-                  "date": "2026-11-28T00:00:00",
-                  "actaUrl": null
+                  "away": "Sur Seed CD El Ejido Futsal"
                 }
-              ]
+              ],
+              "phase": "Apertura"
             },
             {
               "jornada": 11,
+              "date": "2026-12-06",
               "matches": [
                 {
                   "home": "Barça",
-                  "away": "Jaen Paraiso Interior F.S.",
-                  "date": "2026-12-05T00:00:00",
-                  "actaUrl": null
+                  "away": "Jaén Paraiso Interior FS."
                 },
                 {
                   "home": "Jimbee Cartagena Costa Cálida",
-                  "away": "ElPozo Murcia Costa Cálida",
-                  "date": "2026-12-05T00:00:00",
-                  "actaUrl": null
+                  "away": "ElPozo Murcia Costa Cálida"
                 },
                 {
                   "home": "Córdoba Patrimonio De La Humanidad",
-                  "away": "Illes Balears Palma Futsal",
-                  "date": "2026-12-05T00:00:00",
-                  "actaUrl": null
+                  "away": "Illes Balears Palma Futsal"
                 },
                 {
-                  "home": "Sur Seeds El Ejido F.S.",
-                  "away": "O Parrulo Ferrol F.S.",
-                  "date": "2026-12-05T00:00:00",
-                  "actaUrl": null
+                  "home": "Sur Seed CD El Ejido Futsal",
+                  "away": "O Parrulo Ferrol FS."
                 },
                 {
                   "home": "Inter JP Financial",
-                  "away": "Catgas Energía Santa Coloma",
-                  "date": "2026-12-05T00:00:00",
-                  "actaUrl": null
+                  "away": "FS García"
                 },
                 {
                   "home": "Noia Portus Apostoli",
-                  "away": "Quesos El Hidalgo Manzanares F.S.",
-                  "date": "2026-12-05T00:00:00",
-                  "actaUrl": null
+                  "away": "Quesos El Hidalgo Manzanares FS"
                 },
                 {
-                  "home": "CD Xota FS",
-                  "away": "Servigroup Peñiscola FS",
-                  "date": "2026-12-05T00:00:00",
-                  "actaUrl": null
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Servigroup Peñiscola FS"
                 },
                 {
                   "home": "Viña Albali Valdepeñas",
-                  "away": "Wanapix",
-                  "date": "2026-12-05T00:00:00",
-                  "actaUrl": null
+                  "away": "Wanapix AD Sala 10"
                 }
-              ]
+              ],
+              "phase": "Apertura"
             },
             {
               "jornada": 12,
+              "date": "2026-12-13",
               "matches": [
                 {
                   "home": "Córdoba Patrimonio De La Humanidad",
-                  "away": "CD Xota FS",
-                  "date": "2026-12-12T00:00:00",
-                  "actaUrl": null
+                  "away": "C.A. Osasuna Magna"
                 },
                 {
-                  "home": "Catgas Energía Santa Coloma",
-                  "away": "Noia Portus Apostoli",
-                  "date": "2026-12-12T00:00:00",
-                  "actaUrl": null
+                  "home": "FS García",
+                  "away": "Noia Portus Apostoli"
                 },
                 {
-                  "home": "Jaen Paraiso Interior F.S.",
-                  "away": "Servigroup Peñiscola FS",
-                  "date": "2026-12-12T00:00:00",
-                  "actaUrl": null
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Servigroup Peñiscola FS"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares F.S.",
-                  "away": "Inter JP Financial",
-                  "date": "2026-12-12T00:00:00",
-                  "actaUrl": null
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Inter JP Financial"
                 },
                 {
                   "home": "Illes Balears Palma Futsal",
-                  "away": "Barça",
-                  "date": "2026-12-12T00:00:00",
-                  "actaUrl": null
+                  "away": "Barça"
                 },
                 {
-                  "home": "O Parrulo Ferrol F.S.",
-                  "away": "Jimbee Cartagena Costa Cálida",
-                  "date": "2026-12-12T00:00:00",
-                  "actaUrl": null
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Jimbee Cartagena Costa Cálida"
                 },
                 {
                   "home": "ElPozo Murcia Costa Cálida",
-                  "away": "Viña Albali Valdepeñas",
-                  "date": "2026-12-12T00:00:00",
-                  "actaUrl": null
+                  "away": "Viña Albali Valdepeñas"
                 },
                 {
-                  "home": "Wanapix",
-                  "away": "Sur Seeds El Ejido F.S.",
-                  "date": "2026-12-12T00:00:00",
-                  "actaUrl": null
+                  "home": "Wanapix AD Sala 10",
+                  "away": "Sur Seed CD El Ejido Futsal"
                 }
-              ]
+              ],
+              "phase": "Apertura"
             },
             {
               "jornada": 13,
+              "date": "2026-12-20",
               "matches": [
                 {
                   "home": "Barça",
-                  "away": "Wanapix",
-                  "date": "2026-12-19T00:00:00",
-                  "actaUrl": null
+                  "away": "Wanapix AD Sala 10"
                 },
                 {
                   "home": "Jimbee Cartagena Costa Cálida",
-                  "away": "Illes Balears Palma Futsal",
-                  "date": "2026-12-19T00:00:00",
-                  "actaUrl": null
+                  "away": "Illes Balears Palma Futsal"
                 },
                 {
-                  "home": "Sur Seeds El Ejido F.S.",
-                  "away": "Quesos El Hidalgo Manzanares F.S.",
-                  "date": "2026-12-19T00:00:00",
-                  "actaUrl": null
+                  "home": "Sur Seed CD El Ejido Futsal",
+                  "away": "Quesos El Hidalgo Manzanares FS"
                 },
                 {
                   "home": "Inter JP Financial",
-                  "away": "O Parrulo Ferrol F.S.",
-                  "date": "2026-12-19T00:00:00",
-                  "actaUrl": null
+                  "away": "O Parrulo Ferrol FS."
                 },
                 {
                   "home": "Noia Portus Apostoli",
-                  "away": "Córdoba Patrimonio De La Humanidad",
-                  "date": "2026-12-19T00:00:00",
-                  "actaUrl": null
+                  "away": "Córdoba Patrimonio De La Humanidad"
                 },
                 {
                   "home": "Servigroup Peñiscola FS",
-                  "away": "Catgas Energía Santa Coloma",
-                  "date": "2026-12-19T00:00:00",
-                  "actaUrl": null
+                  "away": "FS García"
                 },
                 {
                   "home": "ElPozo Murcia Costa Cálida",
-                  "away": "CD Xota FS",
-                  "date": "2026-12-19T00:00:00",
-                  "actaUrl": null
+                  "away": "C.A. Osasuna Magna"
                 },
                 {
                   "home": "Viña Albali Valdepeñas",
-                  "away": "Jaen Paraiso Interior F.S.",
-                  "date": "2026-12-19T00:00:00",
-                  "actaUrl": null
+                  "away": "Jaén Paraiso Interior FS."
                 }
-              ]
+              ],
+              "phase": "Apertura"
             },
             {
               "jornada": 14,
+              "date": "2026-12-27",
               "matches": [
                 {
                   "home": "Barça",
-                  "away": "Inter JP Financial",
-                  "date": "2026-12-26T00:00:00",
-                  "actaUrl": null
+                  "away": "Inter JP Financial"
                 },
                 {
                   "home": "Córdoba Patrimonio De La Humanidad",
-                  "away": "Catgas Energía Santa Coloma",
-                  "date": "2026-12-26T00:00:00",
-                  "actaUrl": null
+                  "away": "FS García"
                 },
                 {
-                  "home": "Jaen Paraiso Interior F.S.",
-                  "away": "ElPozo Murcia Costa Cálida",
-                  "date": "2026-12-26T00:00:00",
-                  "actaUrl": null
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "ElPozo Murcia Costa Cálida"
                 },
                 {
-                  "home": "CD Xota FS",
-                  "away": "Jimbee Cartagena Costa Cálida",
-                  "date": "2026-12-26T00:00:00",
-                  "actaUrl": null
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Jimbee Cartagena Costa Cálida"
                 },
                 {
-                  "home": "O Parrulo Ferrol F.S.",
-                  "away": "Noia Portus Apostoli",
-                  "date": "2026-12-26T00:00:00",
-                  "actaUrl": null
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Noia Portus Apostoli"
                 },
                 {
                   "home": "Servigroup Peñiscola FS",
-                  "away": "Quesos El Hidalgo Manzanares F.S.",
-                  "date": "2026-12-26T00:00:00",
-                  "actaUrl": null
+                  "away": "Quesos El Hidalgo Manzanares FS"
                 },
                 {
                   "home": "Viña Albali Valdepeñas",
-                  "away": "Sur Seeds El Ejido F.S.",
-                  "date": "2026-12-26T00:00:00",
-                  "actaUrl": null
+                  "away": "Sur Seed CD El Ejido Futsal"
                 },
                 {
-                  "home": "Wanapix",
-                  "away": "Illes Balears Palma Futsal",
-                  "date": "2026-12-26T00:00:00",
-                  "actaUrl": null
+                  "home": "Wanapix AD Sala 10",
+                  "away": "Illes Balears Palma Futsal"
                 }
-              ]
+              ],
+              "phase": "Apertura"
             },
             {
               "jornada": 15,
+              "date": "2026-12-30",
               "matches": [
                 {
                   "home": "Jimbee Cartagena Costa Cálida",
-                  "away": "Viña Albali Valdepeñas",
-                  "date": "2026-12-30T00:00:00",
-                  "actaUrl": null
+                  "away": "Viña Albali Valdepeñas"
                 },
                 {
-                  "home": "Sur Seeds El Ejido F.S.",
-                  "away": "Servigroup Peñiscola FS",
-                  "date": "2026-12-30T00:00:00",
-                  "actaUrl": null
+                  "home": "Sur Seed CD El Ejido Futsal",
+                  "away": "Servigroup Peñiscola FS"
                 },
                 {
-                  "home": "Catgas Energía Santa Coloma",
-                  "away": "Barça",
-                  "date": "2026-12-30T00:00:00",
-                  "actaUrl": null
+                  "home": "FS García",
+                  "away": "Barça"
                 },
                 {
                   "home": "Inter JP Financial",
-                  "away": "Córdoba Patrimonio De La Humanidad",
-                  "date": "2026-12-30T00:00:00",
-                  "actaUrl": null
+                  "away": "Córdoba Patrimonio De La Humanidad"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares F.S.",
-                  "away": "CD Xota FS",
-                  "date": "2026-12-30T00:00:00",
-                  "actaUrl": null
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "C.A. Osasuna Magna"
                 },
                 {
                   "home": "Noia Portus Apostoli",
-                  "away": "Wanapix",
-                  "date": "2026-12-30T00:00:00",
-                  "actaUrl": null
+                  "away": "Wanapix AD Sala 10"
                 },
                 {
                   "home": "Illes Balears Palma Futsal",
-                  "away": "Jaen Paraiso Interior F.S.",
-                  "date": "2026-12-30T00:00:00",
-                  "actaUrl": null
+                  "away": "Jaén Paraiso Interior FS."
                 },
                 {
                   "home": "ElPozo Murcia Costa Cálida",
-                  "away": "O Parrulo Ferrol F.S.",
-                  "date": "2026-12-30T00:00:00",
-                  "actaUrl": null
+                  "away": "O Parrulo Ferrol FS."
                 }
-              ]
+              ],
+              "phase": "Apertura"
+            },
+            {
+              "jornada": 1,
+              "date": "2027-01-10",
+              "matches": [
+                {
+                  "home": "Barça",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "ElPozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Sur Seed CD El Ejido Futsal"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Illes Balears Palma Futsal"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Inter JP Financial"
+                },
+                {
+                  "home": "Wanapix AD Sala 10",
+                  "away": "FS García"
+                }
+              ],
+              "phase": "Clausura"
+            },
+            {
+              "jornada": 2,
+              "date": "2027-01-17",
+              "matches": [
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "Sur Seed CD El Ejido Futsal",
+                  "away": "Inter JP Financial"
+                },
+                {
+                  "home": "FS García",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Barça"
+                },
+                {
+                  "home": "ElPozo Murcia Costa Cálida",
+                  "away": "Wanapix AD Sala 10"
+                }
+              ],
+              "phase": "Clausura"
+            },
+            {
+              "jornada": 3,
+              "date": "2027-01-24",
+              "matches": [
+                {
+                  "home": "Barça",
+                  "away": "ElPozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Sur Seed CD El Ejido Futsal"
+                },
+                {
+                  "home": "Inter JP Financial",
+                  "away": "Illes Balears Palma Futsal"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "FS García"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Wanapix AD Sala 10"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Noia Portus Apostoli"
+                }
+              ],
+              "phase": "Clausura"
+            },
+            {
+              "jornada": 4,
+              "date": "2027-01-31",
+              "matches": [
+                {
+                  "home": "FS García",
+                  "away": "Sur Seed CD El Ejido Futsal"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "Inter JP Financial"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Barça"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "ElPozo Murcia Costa Cálida",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "Wanapix AD Sala 10",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                }
+              ],
+              "phase": "Clausura"
+            },
+            {
+              "jornada": 5,
+              "date": "2027-02-07",
+              "matches": [
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Barça"
+                },
+                {
+                  "home": "Sur Seed CD El Ejido Futsal",
+                  "away": "ElPozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "FS García",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "Inter JP Financial",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Illes Balears Palma Futsal"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "Wanapix AD Sala 10",
+                  "away": "Viña Albali Valdepeñas"
+                }
+              ],
+              "phase": "Clausura"
+            },
+            {
+              "jornada": 6,
+              "date": "2027-02-14",
+              "matches": [
+                {
+                  "home": "Barça",
+                  "away": "Sur Seed CD El Ejido Futsal"
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "FS García"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Wanapix AD Sala 10"
+                },
+                {
+                  "home": "ElPozo Murcia Costa Cálida",
+                  "away": "Inter JP Financial"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                }
+              ],
+              "phase": "Clausura"
+            },
+            {
+              "jornada": 7,
+              "date": "2027-02-21",
+              "matches": [
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Sur Seed CD El Ejido Futsal",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "FS García",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "Inter JP Financial",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "ElPozo Murcia Costa Cálida",
+                  "away": "Illes Balears Palma Futsal"
+                },
+                {
+                  "home": "Wanapix AD Sala 10",
+                  "away": "Barça"
+                }
+              ],
+              "phase": "Clausura"
+            },
+            {
+              "jornada": 8,
+              "date": "2027-03-07",
+              "matches": [
+                {
+                  "home": "Barça",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "FS García"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Inter JP Financial"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Wanapix AD Sala 10"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Sur Seed CD El Ejido Futsal"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "ElPozo Murcia Costa Cálida"
+                }
+              ],
+              "phase": "Clausura"
+            },
+            {
+              "jornada": 9,
+              "date": "2027-03-21",
+              "matches": [
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "Sur Seed CD El Ejido Futsal",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "FS García",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "Inter JP Financial",
+                  "away": "Barça"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Illes Balears Palma Futsal"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "ElPozo Murcia Costa Cálida",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "Wanapix AD Sala 10",
+                  "away": "C.A. Osasuna Magna"
+                }
+              ],
+              "phase": "Clausura"
+            },
+            {
+              "jornada": 10,
+              "date": "2027-03-28",
+              "matches": [
+                {
+                  "home": "Sur Seed CD El Ejido Futsal",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "FS García",
+                  "away": "Inter JP Financial"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "ElPozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Barça"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "Wanapix AD Sala 10",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                }
+              ],
+              "phase": "Clausura"
+            },
+            {
+              "jornada": 11,
+              "date": "2027-04-04",
+              "matches": [
+                {
+                  "home": "Barça",
+                  "away": "Illes Balears Palma Futsal"
+                },
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Sur Seed CD El Ejido Futsal"
+                },
+                {
+                  "home": "Inter JP Financial",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Wanapix AD Sala 10"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "ElPozo Murcia Costa Cálida",
+                  "away": "FS García"
+                }
+              ],
+              "phase": "Clausura"
+            },
+            {
+              "jornada": 12,
+              "date": "2027-04-11",
+              "matches": [
+                {
+                  "home": "Barça",
+                  "away": "FS García"
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "Inter JP Financial"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Sur Seed CD El Ejido Futsal"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "ElPozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "Wanapix AD Sala 10",
+                  "away": "Jaén Paraiso Interior FS."
+                }
+              ],
+              "phase": "Clausura"
+            },
+            {
+              "jornada": 13,
+              "date": "2027-04-25",
+              "matches": [
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "Sur Seed CD El Ejido Futsal",
+                  "away": "Wanapix AD Sala 10"
+                },
+                {
+                  "home": "FS García",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "Inter JP Financial",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Barça"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "ElPozo Murcia Costa Cálida",
+                  "away": "Noia Portus Apostoli"
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Illes Balears Palma Futsal"
+                }
+              ],
+              "phase": "Clausura"
+            },
+            {
+              "jornada": 14,
+              "date": "2027-05-02",
+              "matches": [
+                {
+                  "home": "Barça",
+                  "away": "Viña Albali Valdepeñas"
+                },
+                {
+                  "home": "Córdoba Patrimonio De La Humanidad",
+                  "away": "O Parrulo Ferrol FS."
+                },
+                {
+                  "home": "Inter JP Financial",
+                  "away": "Wanapix AD Sala 10"
+                },
+                {
+                  "home": "Jaén Paraiso Interior FS.",
+                  "away": "Jimbee Cartagena Costa Cálida"
+                },
+                {
+                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "away": "ElPozo Murcia Costa Cálida"
+                },
+                {
+                  "home": "Noia Portus Apostoli",
+                  "away": "C.A. Osasuna Magna"
+                },
+                {
+                  "home": "Illes Balears Palma Futsal",
+                  "away": "FS García"
+                },
+                {
+                  "home": "Servigroup Peñiscola FS",
+                  "away": "Sur Seed CD El Ejido Futsal"
+                }
+              ],
+              "phase": "Clausura"
+            },
+            {
+              "jornada": 15,
+              "date": "2027-05-16",
+              "matches": [
+                {
+                  "home": "Jimbee Cartagena Costa Cálida",
+                  "away": "Barça"
+                },
+                {
+                  "home": "Sur Seed CD El Ejido Futsal",
+                  "away": "Illes Balears Palma Futsal"
+                },
+                {
+                  "home": "FS García",
+                  "away": "Quesos El Hidalgo Manzanares FS"
+                },
+                {
+                  "home": "C.A. Osasuna Magna",
+                  "away": "Córdoba Patrimonio De La Humanidad"
+                },
+                {
+                  "home": "O Parrulo Ferrol FS.",
+                  "away": "Inter JP Financial"
+                },
+                {
+                  "home": "ElPozo Murcia Costa Cálida",
+                  "away": "Jaén Paraiso Interior FS."
+                },
+                {
+                  "home": "Viña Albali Valdepeñas",
+                  "away": "Servigroup Peñiscola FS"
+                },
+                {
+                  "home": "Wanapix AD Sala 10",
+                  "away": "Noia Portus Apostoli"
+                }
+              ],
+              "phase": "Clausura"
             }
-          ]
+          ],
+          "teamsSource": "calendario",
+          "jornadasTotal": 15
         },
         {
           "id": "rfef-segunda-fs-masc",
@@ -980,7 +1363,6 @@
               "officialName": "Zambú CFS Pinatar Cerramientos Abatibles"
             }
           ],
-          "teamsSource": "calendario",
           "calendar": [
             {
               "jornada": 1,
@@ -2573,7 +2955,8 @@
               ]
             }
           ],
-          "jornadasTotal": 30
+          "jornadasTotal": 30,
+          "teamsSource": "calendario"
         },
         {
           "id": "rfef-segunda-b-fs-masc",
@@ -2662,6 +3045,98 @@
                   "officialName": "Stellae Leis Pontevedra F.S."
                 }
               ],
+              "calendar": [
+                {
+                  "jornada": 1,
+                  "matches": [
+                    {
+                      "away": "C.D. COMPOSALA",
+                      "date": null,
+                      "home": "Sibuscascoche Ribeira Fútbol Sala"
+                    },
+                    {
+                      "away": "Caja Rural Atlético Benavente FS",
+                      "date": null,
+                      "home": "Noia Portus Apostoli"
+                    },
+                    {
+                      "away": "S.D. Xove F.S.",
+                      "date": null,
+                      "home": "O Esteo F.S."
+                    },
+                    {
+                      "away": "Stellae Leis Pontevedra F.S.",
+                      "date": null,
+                      "home": "Grupo FORMA-T Vilalba F.S."
+                    },
+                    {
+                      "away": "Racing de Mieres",
+                      "date": null,
+                      "home": "F.S. Salamanca Energía Duero"
+                    },
+                    {
+                      "away": "5 Coruña F.S.",
+                      "date": null,
+                      "home": "Caja Rural River Sala Zamora"
+                    },
+                    {
+                      "away": "CD Albense FS",
+                      "date": null,
+                      "home": "C.D. Tierno Galván"
+                    },
+                    {
+                      "away": "ADC Lugo Sala",
+                      "date": null,
+                      "home": "Deporcyl - Guardo FS"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 2,
+                  "matches": [
+                    {
+                      "away": "Deporcyl - Guardo FS",
+                      "date": null,
+                      "home": "C.D. COMPOSALA"
+                    },
+                    {
+                      "away": "Sibuscascoche Ribeira Fútbol Sala",
+                      "date": null,
+                      "home": "Caja Rural Atlético Benavente FS"
+                    },
+                    {
+                      "away": "Noia Portus Apostoli",
+                      "date": null,
+                      "home": "S.D. Xove F.S."
+                    },
+                    {
+                      "away": "O Esteo F.S.",
+                      "date": null,
+                      "home": "Stellae Leis Pontevedra F.S."
+                    },
+                    {
+                      "away": "Grupo FORMA-T Vilalba F.S.",
+                      "date": null,
+                      "home": "Racing de Mieres"
+                    },
+                    {
+                      "away": "F.S. Salamanca Energía Duero",
+                      "date": null,
+                      "home": "5 Coruña F.S."
+                    },
+                    {
+                      "away": "C.D. Tierno Galván",
+                      "date": null,
+                      "home": "ADC Lugo Sala"
+                    },
+                    {
+                      "away": "Caja Rural River Sala Zamora",
+                      "date": "2026-09-26T18:00:00",
+                      "home": "CD Albense FS"
+                    }
+                  ]
+                }
+              ],
               "teamsSource": "calendario",
               "jornadasTotal": 30
             },
@@ -2745,7 +3220,6 @@
                   "officialName": "Vulcanizados Ruiz Tafa FS"
                 }
               ],
-              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -4128,6 +4602,7 @@
                   ]
                 }
               ],
+              "teamsSource": "calendario",
               "jornadasTotal": 30
             },
             {
@@ -4214,8 +4689,6 @@
                   "officialName": "Ye Faky F.S."
                 }
               ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -5447,7 +5920,9 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30,
+              "teamsSource": "calendario"
             },
             {
               "id": "g4",
@@ -5533,8 +6008,100 @@
                   "officialName": "Unión Tres Cantos FS"
                 }
               ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario"
+              "calendar": [
+                {
+                  "jornada": 1,
+                  "matches": [
+                    {
+                      "away": "Unión Tres Cantos FS",
+                      "date": null,
+                      "home": "CD Albacete FS"
+                    },
+                    {
+                      "away": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
+                      "date": null,
+                      "home": "Soliss A.D. Bargas"
+                    },
+                    {
+                      "away": "Serbis AD Alcorcón FS",
+                      "date": null,
+                      "home": "CD Cobisa FS \"A\""
+                    },
+                    {
+                      "away": "Club Unión Deportiva Loeches",
+                      "date": null,
+                      "home": "Naturpellet San Cristóbal"
+                    },
+                    {
+                      "away": "Club Union Deportiva Rena",
+                      "date": null,
+                      "home": "C.D.E. Mostoles Futsal"
+                    },
+                    {
+                      "away": "Colegio El Valle C.D.",
+                      "date": null,
+                      "home": "Grupo López Bolaños F.S. \"A\""
+                    },
+                    {
+                      "away": "Entreparéntesis - Enertel FS Talavera",
+                      "date": null,
+                      "home": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón"
+                    },
+                    {
+                      "away": "Inter JP Financial F.S.",
+                      "date": "2026-09-19T17:00:00",
+                      "home": "El Alamo F.S."
+                    }
+                  ]
+                },
+                {
+                  "jornada": 2,
+                  "matches": [
+                    {
+                      "away": "El Alamo F.S.",
+                      "date": null,
+                      "home": "Unión Tres Cantos FS"
+                    },
+                    {
+                      "away": "CD Albacete FS",
+                      "date": null,
+                      "home": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\""
+                    },
+                    {
+                      "away": "Soliss A.D. Bargas",
+                      "date": null,
+                      "home": "Serbis AD Alcorcón FS"
+                    },
+                    {
+                      "away": "CD Cobisa FS \"A\"",
+                      "date": null,
+                      "home": "Club Unión Deportiva Loeches"
+                    },
+                    {
+                      "away": "Naturpellet San Cristóbal",
+                      "date": null,
+                      "home": "Club Union Deportiva Rena"
+                    },
+                    {
+                      "away": "C.D.E. Mostoles Futsal",
+                      "date": null,
+                      "home": "Colegio El Valle C.D."
+                    },
+                    {
+                      "away": "Grupo López Bolaños F.S. \"A\"",
+                      "date": null,
+                      "home": "Entreparéntesis - Enertel FS Talavera"
+                    },
+                    {
+                      "away": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
+                      "date": null,
+                      "home": "Inter JP Financial F.S."
+                    }
+                  ]
+                }
+              ],
+              "teamsSource": "calendario",
+              "jornadasTotal": 30
             }
           ]
         },
@@ -5623,7 +6190,6 @@
               "officialName": "Wanapix Aldelis InterSala 10 Zaragoza"
             }
           ],
-          "teamsSource": "calendario",
           "calendar": [
             {
               "jornada": 1,
@@ -5785,6 +6351,7 @@
               ]
             }
           ],
+          "teamsSource": "calendario",
           "jornadasTotal": 30
         },
         {
@@ -5874,8 +6441,6 @@
                   "officialName": "Valdetires Ferrol F.S.F."
                 }
               ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -7257,7 +7822,9 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "teamsSource": "calendario",
+              "jornadasTotal": 30
             },
             {
               "id": "g2",
@@ -7339,6 +7906,98 @@
                   "name": "FS Ripollet",
                   "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079009174_00100_0000485600_RIPOLLET_F.S._copia.png",
                   "officialName": "Somriu Futbol Sala Ripollet"
+                }
+              ],
+              "calendar": [
+                {
+                  "jornada": 1,
+                  "matches": [
+                    {
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
+                      "date": null,
+                      "home": "AECS L Hospitalet"
+                    },
+                    {
+                      "away": "CFS Autoescola Urgell Linyola",
+                      "date": null,
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia"
+                    },
+                    {
+                      "away": "Entrerrios Automatización",
+                      "date": null,
+                      "home": "La Villa"
+                    },
+                    {
+                      "away": "Futsal Cartonajes Pans Mataró",
+                      "date": null,
+                      "home": "Feme Castellón C.F.S."
+                    },
+                    {
+                      "away": "Les Corts, A.E. \"B\"",
+                      "date": null,
+                      "home": "Club Deportivo San Pablo-Eivis"
+                    },
+                    {
+                      "away": "C.D. Parque Col. Santa Ana",
+                      "date": null,
+                      "home": "Somriu Futbol Sala Ripollet"
+                    },
+                    {
+                      "away": "Grupo Reciclarte Cesar Augusta",
+                      "date": "2026-09-19T16:00:00",
+                      "home": "AE Penya Esplugues Salvat Logística \"A\""
+                    },
+                    {
+                      "away": "Lainco Esportiu Rubi F.S.",
+                      "date": "2026-09-19T20:00:00",
+                      "home": "F.S. Sabadell"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 2,
+                  "matches": [
+                    {
+                      "away": "Somriu Futbol Sala Ripollet",
+                      "date": null,
+                      "home": "Club Deportivo Nou Turia FSF \"A\""
+                    },
+                    {
+                      "away": "AECS L Hospitalet",
+                      "date": null,
+                      "home": "CFS Autoescola Urgell Linyola"
+                    },
+                    {
+                      "away": "SolarMon-Les Glories 2014 CD La Concordia",
+                      "date": null,
+                      "home": "Entrerrios Automatización"
+                    },
+                    {
+                      "away": "Feme Castellón C.F.S.",
+                      "date": null,
+                      "home": "Grupo Reciclarte Cesar Augusta"
+                    },
+                    {
+                      "away": "AE Penya Esplugues Salvat Logística \"A\"",
+                      "date": null,
+                      "home": "Les Corts, A.E. \"B\""
+                    },
+                    {
+                      "away": "F.S. Sabadell",
+                      "date": null,
+                      "home": "C.D. Parque Col. Santa Ana"
+                    },
+                    {
+                      "away": "Club Deportivo San Pablo-Eivis",
+                      "date": "2026-09-26T16:00:00",
+                      "home": "Lainco Esportiu Rubi F.S."
+                    },
+                    {
+                      "away": "La Villa",
+                      "date": "2026-09-26T17:00:00",
+                      "home": "Futsal Cartonajes Pans Mataró"
+                    }
+                  ]
                 }
               ],
               "teamsSource": "calendario",
@@ -7426,8 +8085,100 @@
                   "officialName": "UDAF Afanion \"A\""
                 }
               ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario"
+              "calendar": [
+                {
+                  "jornada": 1,
+                  "matches": [
+                    {
+                      "away": "ARRIVA AD Alcorcón FSF",
+                      "date": null,
+                      "home": "Globalcaja Albacete F.S."
+                    },
+                    {
+                      "away": "Martos FS Jaén Paraíso Interior",
+                      "date": null,
+                      "home": "CD Salesianos Puertollano"
+                    },
+                    {
+                      "away": "CD La Garrovilla Femenino",
+                      "date": null,
+                      "home": "C.F.S. Femenino San Fernando"
+                    },
+                    {
+                      "away": "UDAF Afanion \"A\"",
+                      "date": null,
+                      "home": "Coviran UAPO Granada FS Femenino"
+                    },
+                    {
+                      "away": "Majadahonda F.S.F./Afar 4",
+                      "date": "2026-09-19T16:00:00",
+                      "home": "Melilla Ciudad del Deporte Torreblanca C. F."
+                    },
+                    {
+                      "away": "Almagro F.S.F.",
+                      "date": "2026-09-19T19:00:00",
+                      "home": "I.E.S. Luis de Camoens"
+                    },
+                    {
+                      "away": "Ramón Y Cajal Féminas",
+                      "date": "2026-09-19T19:30:00",
+                      "home": "C.D.E. Leganés F.S. Masdeporte"
+                    },
+                    {
+                      "away": "Atletico Navalcarnero",
+                      "date": "2026-09-19T20:30:00",
+                      "home": "Dos Hermanas F.S. C.D."
+                    }
+                  ]
+                },
+                {
+                  "jornada": 2,
+                  "matches": [
+                    {
+                      "away": "Coviran UAPO Granada FS Femenino",
+                      "date": null,
+                      "home": "ARRIVA AD Alcorcón FSF"
+                    },
+                    {
+                      "away": "Globalcaja Albacete F.S.",
+                      "date": null,
+                      "home": "Atletico Navalcarnero"
+                    },
+                    {
+                      "away": "Dos Hermanas F.S. C.D.",
+                      "date": null,
+                      "home": "Martos FS Jaén Paraíso Interior"
+                    },
+                    {
+                      "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
+                      "date": null,
+                      "home": "Ramón Y Cajal Féminas"
+                    },
+                    {
+                      "away": "C.D.E. Leganés F.S. Masdeporte",
+                      "date": null,
+                      "home": "CD La Garrovilla Femenino"
+                    },
+                    {
+                      "away": "C.F.S. Femenino San Fernando",
+                      "date": null,
+                      "home": "Almagro F.S.F."
+                    },
+                    {
+                      "away": "I.E.S. Luis de Camoens",
+                      "date": null,
+                      "home": "UDAF Afanion \"A\""
+                    },
+                    {
+                      "away": "CD Salesianos Puertollano",
+                      "date": null,
+                      "home": "Majadahonda F.S.F./Afar 4"
+                    }
+                  ]
+                }
+              ],
+              "teamsSource": "calendario",
+              "jornadasTotal": 30
             }
           ]
         }
