@@ -231,6 +231,13 @@
   "33918407|33918408|J1|reycoburelafs|elpozociudaddemurcia": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703440&NPcd_Pdf=1",
   "33918407|33918408|J1|riberanavarrafs|entrerriosautomatizacion": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703445&NPcd_Pdf=1",
   "33918407|33918408|J1|xereztoyotanimauto|avanzajaenparaisointerior": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703446&NPcd_Pdf=1",
+  "33918407|33918408|J2|barcaatletic|riberanavarrafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703447&NPcd_Pdf=1",
+  "33918407|33918408|J2|cefutsalgestorialuismataro|cdmelistar": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703452&NPcd_Pdf=1",
+  "33918407|33918408|J2|elpozociudaddemurcia|gasifredatleticoibiza": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703454&NPcd_Pdf=1",
+  "33918407|33918408|J2|entrerriosautomatizacion|mrbfsmostoles": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703449&NPcd_Pdf=1",
+  "33918407|33918408|J2|reycoburelafs|cdleganesfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703448&NPcd_Pdf=1",
+  "33918407|33918408|J2|unionafricaceutia|xereztoyotanimauto": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703450&NPcd_Pdf=1",
+  "33918407|33918408|J2|zambucfspinatarcerramientosabatibles|familycashalzirafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703453&NPcd_Pdf=1",
   "_calendars": {
     "33836159|33892849": {
       "1": [
@@ -881,11 +888,6 @@
           "home": "Covisa Manresa"
         },
         {
-          "away": "F.S. Ripollet \"A\"",
-          "date": null,
-          "home": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A"
-        },
-        {
           "away": "Illes Balears Palma Futsal",
           "date": null,
           "home": "Nunsys El Pilar"
@@ -906,6 +908,11 @@
           "home": "Catgas Energía Santa Coloma"
         },
         {
+          "away": "F.S. Ripollet \"A\"",
+          "date": "2026-09-19T18:00:00",
+          "home": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A"
+        },
+        {
           "away": "Ye Faky F.S.",
           "date": "2026-09-20T12:00:00",
           "home": "Sant Joan Despí CFS Cumsa"
@@ -921,11 +928,6 @@
           "away": "Club Deportivo Sporting la Nucía",
           "date": null,
           "home": "F.S. Ripollet \"A\""
-        },
-        {
-          "away": "Canet F.S.",
-          "date": null,
-          "home": "Ye Faky F.S."
         },
         {
           "away": "C. Natacio Sabadell",
@@ -951,6 +953,11 @@
           "away": "C.F.S. Futsal IBI - Juypal Hogar",
           "date": "2026-11-21T16:00:00",
           "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "Canet F.S.",
+          "date": "2026-11-21T18:00:00",
+          "home": "Ye Faky F.S."
         }
       ],
       "11": [
@@ -1002,11 +1009,6 @@
           "home": "F.S. Ripollet \"A\""
         },
         {
-          "away": "F.S. Picassent",
-          "date": null,
-          "home": "Ye Faky F.S."
-        },
-        {
           "away": "Canet F.S.",
           "date": null,
           "home": "Sant Joan Despí CFS Cumsa"
@@ -1035,6 +1037,11 @@
           "away": "Club Deportivo Sporting la Nucía",
           "date": "2026-12-05T16:00:00",
           "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "F.S. Picassent",
+          "date": "2026-12-05T18:00:00",
+          "home": "Ye Faky F.S."
         }
       ],
       "2": [
@@ -1106,11 +1113,6 @@
           "home": "Catgas Energía Santa Coloma"
         },
         {
-          "away": "Illes Balears Palma Futsal",
-          "date": null,
-          "home": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A"
-        },
-        {
           "away": "Sant Joan Despí CFS Cumsa",
           "date": null,
           "home": "Nunsys El Pilar"
@@ -1119,6 +1121,11 @@
           "away": "F.S. Picassent",
           "date": "2026-10-03T13:15:00",
           "home": "A.E. Llevant De Manacor Futsal \"A\""
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2026-10-03T18:00:00",
+          "home": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A"
         }
       ],
       "4": [
@@ -1143,11 +1150,6 @@
           "home": "F.S. Ripollet \"A\""
         },
         {
-          "away": "Covisa Manresa",
-          "date": null,
-          "home": "Ye Faky F.S."
-        },
-        {
           "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
           "date": null,
           "home": "Sant Joan Despí CFS Cumsa"
@@ -1156,6 +1158,11 @@
           "away": "Catgas Energía Santa Coloma",
           "date": "2026-10-10T16:00:00",
           "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "Covisa Manresa",
+          "date": "2026-10-10T18:00:00",
+          "home": "Ye Faky F.S."
         },
         {
           "away": "C. Natacio Sabadell",
@@ -1185,11 +1192,6 @@
           "home": "Les Corts EF \"A\""
         },
         {
-          "away": "Ye Faky F.S.",
-          "date": null,
-          "home": "A.E. Llevant De Manacor Futsal \"A\""
-        },
-        {
           "away": "Illes Balears Palma Futsal",
           "date": null,
           "home": "Covisa Manresa"
@@ -1203,6 +1205,11 @@
           "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
           "date": null,
           "home": "Nunsys El Pilar"
+        },
+        {
+          "away": "Ye Faky F.S.",
+          "date": "2026-10-17T12:00:00",
+          "home": "A.E. Llevant De Manacor Futsal \"A\""
         }
       ],
       "6": [
@@ -1222,11 +1229,6 @@
           "home": "F.S. Ripollet \"A\""
         },
         {
-          "away": "Les Corts EF \"A\"",
-          "date": null,
-          "home": "Ye Faky F.S."
-        },
-        {
           "away": "Covisa Manresa",
           "date": null,
           "home": "Sant Joan Despí CFS Cumsa"
@@ -1235,6 +1237,11 @@
           "away": "Catgas Energía Santa Coloma",
           "date": null,
           "home": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A"
+        },
+        {
+          "away": "Les Corts EF \"A\"",
+          "date": "2026-10-24T18:00:00",
+          "home": "Ye Faky F.S."
         },
         {
           "away": "Nunsys El Pilar",
@@ -1306,11 +1313,6 @@
           "home": "F.S. Ripollet \"A\""
         },
         {
-          "away": "C. Natacio Sabadell",
-          "date": null,
-          "home": "Ye Faky F.S."
-        },
-        {
           "away": "Les Corts EF \"A\"",
           "date": null,
           "home": "Sant Joan Despí CFS Cumsa"
@@ -1329,6 +1331,11 @@
           "away": "Hospitalet Bellsport F.S.",
           "date": "2026-11-07T16:00:00",
           "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "C. Natacio Sabadell",
+          "date": "2026-11-07T18:00:00",
+          "home": "Ye Faky F.S."
         }
       ],
       "9": [
@@ -2169,7 +2176,7 @@
         },
         {
           "away": "Barça Atlètic",
-          "date": "2026-10-24T18:00:00",
+          "date": "2026-10-24T17:00:00",
           "home": "Gasifred Atlético Ibiza"
         },
         {
