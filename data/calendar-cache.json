@@ -768,11 +768,6 @@
           "home": "Stellae Leis Pontevedra F.S."
         },
         {
-          "away": "Grupo FORMA-T Vilalba F.S.",
-          "date": null,
-          "home": "Racing de Mieres"
-        },
-        {
           "away": "F.S. Salamanca Energía Duero",
           "date": null,
           "home": "5 Coruña F.S."
@@ -781,6 +776,11 @@
           "away": "C.D. Tierno Galván",
           "date": null,
           "home": "ADC Lugo Sala"
+        },
+        {
+          "away": "Grupo FORMA-T Vilalba F.S.",
+          "date": "2026-09-26T18:00:00",
+          "home": "Racing de Mieres"
         },
         {
           "away": "Caja Rural River Sala Zamora",
@@ -1464,6 +1464,178 @@
           "away": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
           "date": null,
           "home": "Inter JP Financial F.S."
+        }
+      ]
+    },
+    "33836163|33836168": {
+      "1": [
+        {
+          "away": "AD Duggi-San Fernando",
+          "date": "2026-09-17T20:30:00",
+          "home": "La Salle San Ildelfonso"
+        },
+        {
+          "away": "Suntryp Agüimes FS",
+          "date": "2026-09-18T21:00:00",
+          "home": "NovoComunidades-Bugedo FS"
+        },
+        {
+          "away": "C.F.S. Casa Juv. La Matanza",
+          "date": "2026-09-18T21:00:00",
+          "home": "F.S. Los Pinos"
+        },
+        {
+          "away": "Malta 97",
+          "date": "2026-09-18T21:00:00",
+          "home": "Doctoral FS"
+        },
+        {
+          "away": "C.D. Cisneros Alter",
+          "date": "2026-09-19T17:00:00",
+          "home": "Basilea Futbol Sala C.D."
+        },
+        {
+          "away": "C.D. Salesianos Tenerife",
+          "date": "2026-09-19T19:00:00",
+          "home": "Las Cuevecitas FS"
+        },
+        {
+          "away": "Aguas de Teror",
+          "date": "2026-09-19T19:30:00",
+          "home": "Gran Canaria FS"
+        },
+        {
+          "away": "C.D. Chinguaro \"A\"",
+          "date": "2026-09-20T12:00:00",
+          "home": "C.D. Tenerife Iberia Toscal"
+        }
+      ],
+      "2": [
+        {
+          "away": "Gran Canaria FS",
+          "date": "2026-09-25T20:00:00",
+          "home": "Malta 97"
+        },
+        {
+          "away": "La Salle San Ildelfonso",
+          "date": "2026-09-25T21:00:00",
+          "home": "C.D. Salesianos Tenerife"
+        },
+        {
+          "away": "Las Cuevecitas FS",
+          "date": "2026-09-25T21:00:00",
+          "home": "C.D. Chinguaro \"A\""
+        },
+        {
+          "away": "C.D. Tenerife Iberia Toscal",
+          "date": "2026-09-25T21:00:00",
+          "home": "C.F.S. Casa Juv. La Matanza"
+        },
+        {
+          "away": "Doctoral FS",
+          "date": "2026-09-25T21:15:00",
+          "home": "Suntryp Agüimes FS"
+        },
+        {
+          "away": "NovoComunidades-Bugedo FS",
+          "date": "2026-09-26T15:00:00",
+          "home": "C.D. Cisneros Alter"
+        },
+        {
+          "away": "Basilea Futbol Sala C.D.",
+          "date": "2026-09-26T15:00:00",
+          "home": "AD Duggi-San Fernando"
+        },
+        {
+          "away": "F.S. Los Pinos",
+          "date": "2026-09-26T16:00:00",
+          "home": "Aguas de Teror"
+        }
+      ]
+    },
+    "33836163|33836169": {
+      "1": [
+        {
+          "away": "C.D. Sporting FS Almería Biocampojoyma",
+          "date": null,
+          "home": "Dos Hermanas F.S. C.D. \"A\""
+        },
+        {
+          "away": "Melilla Ciudad del Deporte Nueva Era",
+          "date": null,
+          "home": "Cdb Salvatierra Fs"
+        },
+        {
+          "away": "Crevillent Futsal Starts \"A\"",
+          "date": null,
+          "home": "Joasan Construcciones CFS Pinatar \"B\""
+        },
+        {
+          "away": "GH Distribución Moral FS",
+          "date": null,
+          "home": "Sima Granada FS"
+        },
+        {
+          "away": "FLEXLIVING JUMILLA FS",
+          "date": "2026-09-19T16:00:00",
+          "home": "Imperio Los Rosales"
+        },
+        {
+          "away": "C.D. Malacitano Futsal",
+          "date": "2026-09-19T18:00:00",
+          "home": "C.D. Bujalance F.S. Beconet"
+        },
+        {
+          "away": "Oleoinnova Mengibar FS",
+          "date": "2026-09-19T20:55:00",
+          "home": "Jimbee Cartagena Futbol Sala"
+        },
+        {
+          "away": "Nawter Blanca FS",
+          "date": "2026-09-20T12:00:00",
+          "home": "CD Virgili Cádiz \"A\""
+        }
+      ],
+      "2": [
+        {
+          "away": "Sima Granada FS",
+          "date": null,
+          "home": "C.D. Malacitano Futsal"
+        },
+        {
+          "away": "C.D. Bujalance F.S. Beconet",
+          "date": null,
+          "home": "C.D. Sporting FS Almería Biocampojoyma"
+        },
+        {
+          "away": "Dos Hermanas F.S. C.D. \"A\"",
+          "date": null,
+          "home": "Nawter Blanca FS"
+        },
+        {
+          "away": "Cdb Salvatierra Fs",
+          "date": null,
+          "home": "Crevillent Futsal Starts \"A\""
+        },
+        {
+          "away": "Joasan Construcciones CFS Pinatar \"B\"",
+          "date": null,
+          "home": "Oleoinnova Mengibar FS"
+        },
+        {
+          "away": "Jimbee Cartagena Futbol Sala",
+          "date": null,
+          "home": "FLEXLIVING JUMILLA FS"
+        },
+        {
+          "away": "Imperio Los Rosales",
+          "date": null,
+          "home": "GH Distribución Moral FS"
+        },
+        {
+          "away": "CD Virgili Cádiz \"A\"",
+          "date": "2026-09-26T16:00:00",
+          "home": "Melilla Ciudad del Deporte Nueva Era"
         }
       ]
     },
