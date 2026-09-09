@@ -1,9 +1,9 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-08T11:21:53+00:00",
+  "lastUpdated": "2026-09-09T11:03:29+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
-    "rfef: la PNFG rate-limitó 9 jornada/s y se abandonaron 9 grupo/s; esas jornadas salen de la caché o del JSON anterior",
+    "rfef: la PNFG rate-limitó 8 jornada/s y se abandonaron 8 grupo/s; esas jornadas salen de la caché o del JSON anterior",
     "fcf-1cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-2cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-3cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
@@ -47,7 +47,7 @@
             },
             {
               "name": "Palma Futsal",
-              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/30.png",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20219/22/a0a331b21b72e658cbc6a1e0c801da7a.jpg",
               "officialName": "Illes Balears Palma Futsal"
             },
             {
@@ -3045,7 +3045,6 @@
                   "officialName": "Stellae Leis Pontevedra F.S."
                 }
               ],
-              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -3138,7 +3137,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30
             },
             {
               "id": "g2",
@@ -3220,6 +3220,7 @@
                   "officialName": "Vulcanizados Ruiz Tafa FS"
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -4602,8 +4603,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g3",
@@ -4665,7 +4665,7 @@
                 },
                 {
                   "name": "Palma Futsal B",
-                  "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/30.png",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20219/22/a0a331b21b72e658cbc6a1e0c801da7a.jpg",
                   "officialName": "Illes Balears Palma Futsal"
                 },
                 {
@@ -4689,6 +4689,7 @@
                   "officialName": "Ye Faky F.S."
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -5921,8 +5922,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g4",
@@ -6188,8 +6188,8 @@
                   "officialName": "Sima Granada FS"
                 }
               ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario"
+              "teamsSource": "calendario",
+              "jornadasTotal": 30
             },
             {
               "id": "g6",
@@ -6273,8 +6273,8 @@
                   "officialName": "Suntryp Agüimes FS"
                 }
               ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario"
+              "teamsSource": "calendario",
+              "jornadasTotal": 30
             }
           ]
         },
@@ -6363,6 +6363,7 @@
               "officialName": "Wanapix Aldelis InterSala 10 Zaragoza"
             }
           ],
+          "jornadasTotal": 30,
           "teamsSource": "calendario",
           "calendar": [
             {
@@ -6524,8 +6525,7 @@
                 }
               ]
             }
-          ],
-          "jornadasTotal": 30
+          ]
         },
         {
           "id": "rfef-segunda-fs-fem",
@@ -6614,6 +6614,7 @@
                   "officialName": "Valdetires Ferrol F.S.F."
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -7996,8 +7997,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g2",
