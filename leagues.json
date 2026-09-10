@@ -1,6 +1,6 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-09T11:03:29+00:00",
+  "lastUpdated": "2026-09-10T10:56:28+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
     "rfef: la PNFG rate-limitó 8 jornada/s y se abandonaron 8 grupo/s; esas jornadas salen de la caché o del JSON anterior",
@@ -67,7 +67,7 @@
             },
             {
               "name": "Noia Portus Apostoli",
-              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/10.png"
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20232/28/160c4e28cbc9b1d67f0143f61c2a543e.jpg"
             },
             {
               "name": "O Parrulo Ferrol",
@@ -3017,7 +3017,7 @@
                 },
                 {
                   "name": "Noia Portus B",
-                  "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/10.png",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20232/28/160c4e28cbc9b1d67f0143f61c2a543e.jpg",
                   "officialName": "Noia Portus Apostoli"
                 },
                 {
@@ -3045,6 +3045,7 @@
                   "officialName": "Stellae Leis Pontevedra F.S."
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -3137,8 +3138,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g2",
@@ -4689,7 +4689,6 @@
                   "officialName": "Ye Faky F.S."
                 }
               ],
-              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -5922,7 +5921,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30
             },
             {
               "id": "g4",
@@ -6363,7 +6363,6 @@
               "officialName": "Wanapix Aldelis InterSala 10 Zaragoza"
             }
           ],
-          "jornadasTotal": 30,
           "teamsSource": "calendario",
           "calendar": [
             {
@@ -6525,7 +6524,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "jornadasTotal": 30
         },
         {
           "id": "rfef-segunda-fs-fem",
@@ -8030,7 +8030,7 @@
                 {
                   "name": "San Pablo-Eivisa",
                   "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079016525_WhatsApp_Image_2025_12_12_at_15.07.37.jpeg",
-                  "officialName": "Club Deportivo San Pablo-Eivis"
+                  "officialName": "Club Deportivo San Pablo Ibiza"
                 },
                 {
                   "name": "Entrerrios Automatización",
@@ -8081,6 +8081,7 @@
                   "officialName": "Somriu Futbol Sala Ripollet"
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -8173,8 +8174,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g3",
