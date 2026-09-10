@@ -736,14 +736,14 @@
           "home": "Caja Rural River Sala Zamora"
         },
         {
-          "away": "CD Albense FS",
-          "date": null,
-          "home": "C.D. Tierno Galván"
+          "away": "ADC Lugo Sala",
+          "date": "2026-09-19T18:30:00",
+          "home": "Deporcyl - Guardo FS"
         },
         {
-          "away": "ADC Lugo Sala",
-          "date": null,
-          "home": "Deporcyl - Guardo FS"
+          "away": "CD Albense FS",
+          "date": "2026-09-19T19:30:00",
+          "home": "C.D. Tierno Galván"
         }
       ],
       "2": [
@@ -807,11 +807,6 @@
           "home": "Coras Futsal Zaragoza"
         },
         {
-          "away": "A.D. San Juan",
-          "date": null,
-          "home": "Vulcanizados Ruiz Tafa FS"
-        },
-        {
           "away": "A.D. Rioja Sala",
           "date": "2026-09-19T16:00:00",
           "home": "Acontebro Tauste FS"
@@ -825,6 +820,11 @@
           "away": "EMD. Cadrete Forjas Casado",
           "date": "2026-09-19T18:00:00",
           "home": "Antiguoko KE Estudio Dental Barrenechea"
+        },
+        {
+          "away": "A.D. San Juan",
+          "date": "2026-09-19T18:00:00",
+          "home": "Vulcanizados Ruiz Tafa FS"
         },
         {
           "away": "CMO Valves Lauburu Ibarra",
@@ -842,11 +842,6 @@
           "away": "Pinseque A.D.",
           "date": null,
           "home": "CDF Zierbena"
-        },
-        {
-          "away": "Mondrate C.D.",
-          "date": null,
-          "home": "CMO Valves Lauburu Ibarra"
         },
         {
           "away": "Sala Quinto CD",
@@ -867,6 +862,11 @@
           "away": "Antiguoko KE Estudio Dental Barrenechea",
           "date": null,
           "home": "A.D. San Juan"
+        },
+        {
+          "away": "Mondrate C.D.",
+          "date": "2026-09-26T18:00:00",
+          "home": "CMO Valves Lauburu Ibarra"
         },
         {
           "away": "Vulcanizados Ruiz Tafa FS",
@@ -1738,11 +1738,6 @@
           "home": "ENCE Marín Futsal"
         },
         {
-          "away": "Valdetires Ferrol F.S.F.",
-          "date": null,
-          "home": "Bembrive"
-        },
-        {
           "away": "El Gaitero Rodiles FSF",
           "date": "2026-09-19T18:00:00",
           "home": "U.D.C. Txantrea K.K.E."
@@ -1751,6 +1746,11 @@
           "away": "C.D. Segosala",
           "date": "2026-09-19T19:00:00",
           "home": "C.D. Juventud del Círculo Católico"
+        },
+        {
+          "away": "Valdetires Ferrol F.S.F.",
+          "date": "2026-09-19T19:00:00",
+          "home": "Bembrive"
         },
         {
           "away": "FC Meigas",
@@ -1814,34 +1814,14 @@
     "33836181|33836183": {
       "1": [
         {
-          "away": "Club Deportivo Nou Turia FSF \"A\"",
-          "date": null,
-          "home": "AECS L Hospitalet"
-        },
-        {
-          "away": "CFS Autoescola Urgell Linyola",
-          "date": null,
-          "home": "SolarMon-Les Glories 2014 CD La Concordia"
-        },
-        {
-          "away": "Entrerrios Automatización",
-          "date": null,
-          "home": "La Villa"
-        },
-        {
           "away": "Futsal Cartonajes Pans Mataró",
           "date": null,
           "home": "Feme Castellón C.F.S."
         },
         {
-          "away": "Les Corts, A.E. \"B\"",
-          "date": null,
-          "home": "Club Deportivo San Pablo-Eivis"
-        },
-        {
-          "away": "C.D. Parque Col. Santa Ana",
-          "date": null,
-          "home": "Somriu Futbol Sala Ripollet"
+          "away": "Entrerrios Automatización",
+          "date": "2026-09-19T16:00:00",
+          "home": "La Villa"
         },
         {
           "away": "Grupo Reciclarte Cesar Augusta",
@@ -1849,9 +1829,29 @@
           "home": "AE Penya Esplugues Salvat Logística \"A\""
         },
         {
+          "away": "Les Corts, A.E. \"B\"",
+          "date": "2026-09-19T16:00:00",
+          "home": "Club Deportivo San Pablo Ibiza"
+        },
+        {
+          "away": "Club Deportivo Nou Turia FSF \"A\"",
+          "date": "2026-09-19T18:30:00",
+          "home": "AECS L Hospitalet"
+        },
+        {
           "away": "Lainco Esportiu Rubi F.S.",
           "date": "2026-09-19T20:00:00",
           "home": "F.S. Sabadell"
+        },
+        {
+          "away": "CFS Autoescola Urgell Linyola",
+          "date": "2026-09-20T12:30:00",
+          "home": "SolarMon-Les Glories 2014 CD La Concordia"
+        },
+        {
+          "away": "C.D. Parque Col. Santa Ana",
+          "date": "2026-09-20T13:30:00",
+          "home": "Somriu Futbol Sala Ripollet"
         }
       ],
       "2": [
@@ -1886,7 +1886,7 @@
           "home": "C.D. Parque Col. Santa Ana"
         },
         {
-          "away": "Club Deportivo San Pablo-Eivis",
+          "away": "Club Deportivo San Pablo Ibiza",
           "date": "2026-09-26T16:00:00",
           "home": "Lainco Esportiu Rubi F.S."
         },
