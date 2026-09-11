@@ -1,6 +1,6 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-10T10:56:28+00:00",
+  "lastUpdated": "2026-09-11T10:53:16+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
     "rfef: la PNFG rate-limitó 8 jornada/s y se abandonaron 8 grupo/s; esas jornadas salen de la caché o del JSON anterior",
@@ -3045,7 +3045,6 @@
                   "officialName": "Stellae Leis Pontevedra F.S."
                 }
               ],
-              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -3138,7 +3137,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30
             },
             {
               "id": "g2",
@@ -3220,7 +3220,6 @@
                   "officialName": "Vulcanizados Ruiz Tafa FS"
                 }
               ],
-              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -4603,7 +4602,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30
             },
             {
               "id": "g3",
@@ -4689,6 +4689,7 @@
                   "officialName": "Ye Faky F.S."
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -5921,13 +5922,17 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g4",
               "name": "Grupo 4",
               "teams": [
+                {
+                  "name": "Athletic Móstoles",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079039709_2026_Logo_Athletic_Mostoles.png",
+                  "officialName": "Athletic Club Móstoles"
+                },
                 {
                   "name": "CD Albacete FS",
                   "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/1415/DOCS/201410/5/c44ab32d3034b9b1c315995904be88bd_7iTQskyY.jpg"
@@ -5936,11 +5941,6 @@
                   "name": "Cobisa FS",
                   "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/aeb0c9e1e0d5a01f03e3b837884c9817.jpg",
                   "officialName": "CD Cobisa FS \"A\""
-                },
-                {
-                  "name": "Athletic Móstoles",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079011290_Escudo.png",
-                  "officialName": "C.D.E. Mostoles Futsal"
                 },
                 {
                   "name": "CDU Loeches FS",
@@ -6008,6 +6008,7 @@
                   "officialName": "Unión Tres Cantos FS"
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -6100,8 +6101,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g5",
@@ -6614,7 +6614,6 @@
                   "officialName": "Valdetires Ferrol F.S.F."
                 }
               ],
-              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -7997,7 +7996,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30
             },
             {
               "id": "g2",
@@ -8258,6 +8258,7 @@
                   "officialName": "UDAF Afanion \"A\""
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -8350,8 +8351,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             }
           ]
         }
