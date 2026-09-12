@@ -205,6 +205,7 @@
   "33836159|33892849|J2|jimbeecartagenacostacalida|wanapix": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697016&NPcd_Pdf=1",
   "33836159|33892849|J2|oparruloferrolfs|catgasenergiasantacoloma": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697021&NPcd_Pdf=1",
   "33836159|33892849|J2|vinaalbalivaldepenas|cdxotafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697022&NPcd_Pdf=1",
+  "33836163|33836165|J1|vulcanizadosruiztafafs|adsanjuan": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702246&NPcd_Pdf=1",
   "33836179|33836180|J1|arrivaadalcorconfsf|cdguadalcacinfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696746&NPcd_Pdf=1",
   "33836179|33836180|J1|estrelarevoltosaverinfsf|fsfcastrobloquescando": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696748&NPcd_Pdf=1",
   "33836179|33836180|J1|lbtlfutsalalcantarilla|ceutaagrupaciondeportiva": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696747&NPcd_Pdf=1",
@@ -373,6 +374,11 @@
           "home": "O Parrulo Ferrol F.S."
         },
         {
+          "away": "Servigroup Peñiscola FS",
+          "date": "2026-09-18T21:00:00",
+          "home": "Barça"
+        },
+        {
           "away": "ElPozo Murcia Costa Cálida",
           "date": "2026-09-19T12:00:00",
           "home": "Illes Balears Palma Futsal"
@@ -399,13 +405,8 @@
         },
         {
           "away": "CD Xota FS",
-          "date": "2026-09-20T16:30:00",
+          "date": "2026-09-20T19:00:00",
           "home": "Viña Albali Valdepeñas"
-        },
-        {
-          "away": "Servigroup Peñiscola FS",
-          "date": "2026-09-21T20:30:00",
-          "home": "Barça"
         }
       ],
       "3": [
@@ -706,33 +707,18 @@
     "33836163|33836164": {
       "1": [
         {
-          "away": "C.D. COMPOSALA",
-          "date": null,
-          "home": "Sibuscascoche Ribeira Fútbol Sala"
-        },
-        {
           "away": "Caja Rural Atlético Benavente FS",
-          "date": null,
+          "date": "2026-09-19T18:00:00",
           "home": "Noia Portus Apostoli"
         },
         {
-          "away": "S.D. Xove F.S.",
-          "date": null,
-          "home": "O Esteo F.S."
-        },
-        {
           "away": "Stellae Leis Pontevedra F.S.",
-          "date": null,
+          "date": "2026-09-19T18:30:00",
           "home": "Grupo FORMA-T Vilalba F.S."
         },
         {
-          "away": "Racing de Mieres",
-          "date": null,
-          "home": "F.S. Salamanca Energía Duero"
-        },
-        {
           "away": "5 Coruña F.S.",
-          "date": null,
+          "date": "2026-09-19T18:30:00",
           "home": "Caja Rural River Sala Zamora"
         },
         {
@@ -741,9 +727,24 @@
           "home": "Deporcyl - Guardo FS"
         },
         {
+          "away": "S.D. Xove F.S.",
+          "date": "2026-09-19T19:00:00",
+          "home": "O Esteo F.S."
+        },
+        {
+          "away": "Racing de Mieres",
+          "date": "2026-09-19T19:00:00",
+          "home": "F.S. Salamanca Energía Duero"
+        },
+        {
           "away": "CD Albense FS",
           "date": "2026-09-19T19:30:00",
           "home": "C.D. Tierno Galván"
+        },
+        {
+          "away": "C.D. COMPOSALA",
+          "date": "2026-09-19T20:00:00",
+          "home": "Sibuscascoche Ribeira Fútbol Sala"
         }
       ],
       "2": [
@@ -763,11 +764,6 @@
           "home": "S.D. Xove F.S."
         },
         {
-          "away": "O Esteo F.S.",
-          "date": null,
-          "home": "Stellae Leis Pontevedra F.S."
-        },
-        {
           "away": "F.S. Salamanca Energía Duero",
           "date": null,
           "home": "5 Coruña F.S."
@@ -776,6 +772,11 @@
           "away": "C.D. Tierno Galván",
           "date": null,
           "home": "ADC Lugo Sala"
+        },
+        {
+          "away": "O Esteo F.S.",
+          "date": "2026-09-26T17:00:00",
+          "home": "Stellae Leis Pontevedra F.S."
         },
         {
           "away": "Grupo FORMA-T Vilalba F.S.",
@@ -792,16 +793,6 @@
     "33836163|33836165": {
       "1": [
         {
-          "away": "C.D. Juventud del Círculo Católico",
-          "date": null,
-          "home": "Otxartabe C.D."
-        },
-        {
-          "away": "CDF Zierbena",
-          "date": null,
-          "home": "Mondrate C.D."
-        },
-        {
           "away": "Entrerrios Automatización",
           "date": null,
           "home": "Coras Futsal Zaragoza"
@@ -810,6 +801,11 @@
           "away": "A.D. Rioja Sala",
           "date": "2026-09-19T16:00:00",
           "home": "Acontebro Tauste FS"
+        },
+        {
+          "away": "CDF Zierbena",
+          "date": "2026-09-19T17:00:00",
+          "home": "Mondrate C.D."
         },
         {
           "away": "C.D.Ibararte",
@@ -825,6 +821,11 @@
           "away": "A.D. San Juan",
           "date": "2026-09-19T18:00:00",
           "home": "Vulcanizados Ruiz Tafa FS"
+        },
+        {
+          "away": "C.D. Juventud del Círculo Católico",
+          "date": "2026-09-19T18:15:00",
+          "home": "Otxartabe C.D."
         },
         {
           "away": "CMO Valves Lauburu Ibarra",
