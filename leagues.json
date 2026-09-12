@@ -1,9 +1,9 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-11T10:53:16+00:00",
+  "lastUpdated": "2026-09-12T10:24:31+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
-    "rfef: la PNFG rate-limitó 8 jornada/s y se abandonaron 8 grupo/s; esas jornadas salen de la caché o del JSON anterior",
+    "rfef: la PNFG rate-limitó 7 jornada/s y se abandonaron 7 grupo/s; esas jornadas salen de la caché o del JSON anterior",
     "fcf-1cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-2cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-3cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
@@ -25,7 +25,7 @@
           "teams": [
             {
               "name": "Barça",
-              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/18.png"
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206343_50x50.png"
             },
             {
               "name": "Industrias Santa Coloma",
@@ -43,11 +43,11 @@
             },
             {
               "name": "ElPozo Murcia Costa Cálida",
-              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/22.png"
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079009167_Pozo.png"
             },
             {
               "name": "Palma Futsal",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20219/22/a0a331b21b72e658cbc6a1e0c801da7a.jpg",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206407_50x50.png",
               "officialName": "Illes Balears Palma Futsal"
             },
             {
@@ -62,7 +62,7 @@
             },
             {
               "name": "Jimbee Cartagena",
-              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/21.png",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/208000_50x50.png",
               "officialName": "Jimbee Cartagena Costa Cálida"
             },
             {
@@ -91,14 +91,15 @@
             },
             {
               "name": "Viña Albali Valdepeñas",
-              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/32.png"
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205499_50x50.png"
             },
             {
               "name": "Wanapix Sala 10",
-              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/23.png",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008334_escudo.png",
               "officialName": "Wanapix"
             }
           ],
+          "jornadasTotal": 15,
           "teamsSource": "calendario",
           "calendar": [
             {
@@ -1279,8 +1280,7 @@
               ],
               "phase": "Clausura"
             }
-          ],
-          "jornadasTotal": 15
+          ]
         },
         {
           "id": "rfef-segunda-fs-masc",
@@ -3045,6 +3045,7 @@
                   "officialName": "Stellae Leis Pontevedra F.S."
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -3137,8 +3138,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g2",
@@ -3220,6 +3220,7 @@
                   "officialName": "Vulcanizados Ruiz Tafa FS"
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -4602,8 +4603,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g3",
@@ -4665,7 +4665,7 @@
                 },
                 {
                   "name": "Palma Futsal B",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20219/22/a0a331b21b72e658cbc6a1e0c801da7a.jpg",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206407_50x50.png",
                   "officialName": "Illes Balears Palma Futsal"
                 },
                 {
@@ -4689,7 +4689,6 @@
                   "officialName": "Ye Faky F.S."
                 }
               ],
-              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -5922,7 +5921,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30
             },
             {
               "id": "g4",
@@ -6008,7 +6008,6 @@
                   "officialName": "Unión Tres Cantos FS"
                 }
               ],
-              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -6101,7 +6100,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30
             },
             {
               "id": "g5",
@@ -6273,8 +6273,8 @@
                   "officialName": "Suntryp Agüimes FS"
                 }
               ],
-              "teamsSource": "calendario",
-              "jornadasTotal": 30
+              "jornadasTotal": 30,
+              "teamsSource": "calendario"
             }
           ]
         },
@@ -6363,6 +6363,7 @@
               "officialName": "Wanapix Aldelis InterSala 10 Zaragoza"
             }
           ],
+          "jornadasTotal": 30,
           "teamsSource": "calendario",
           "calendar": [
             {
@@ -6524,8 +6525,7 @@
                 }
               ]
             }
-          ],
-          "jornadasTotal": 30
+          ]
         },
         {
           "id": "rfef-segunda-fs-fem",
@@ -8081,7 +8081,6 @@
                   "officialName": "Somriu Futbol Sala Ripollet"
                 }
               ],
-              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -8174,7 +8173,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30
             },
             {
               "id": "g3",
@@ -8258,7 +8258,6 @@
                   "officialName": "UDAF Afanion \"A\""
                 }
               ],
-              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -8351,7 +8350,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30
             }
           ]
         }
