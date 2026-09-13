@@ -237,6 +237,7 @@
   "33918407|33918408|J2|elpozociudaddemurcia|gasifredatleticoibiza": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703454&NPcd_Pdf=1",
   "33918407|33918408|J2|entrerriosautomatizacion|mrbfsmostoles": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703449&NPcd_Pdf=1",
   "33918407|33918408|J2|reycoburelafs|cdleganesfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703448&NPcd_Pdf=1",
+  "33918407|33918408|J2|sala5martorellmcdgrup|avanzajaenparaisointerior": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703451&NPcd_Pdf=1",
   "33918407|33918408|J2|unionafricaceutia|xereztoyotanimauto": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703450&NPcd_Pdf=1",
   "33918407|33918408|J2|zambucfspinatarcerramientosabatibles|familycashalzirafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703453&NPcd_Pdf=1",
   "_calendars": {
@@ -1735,7 +1736,7 @@
         },
         {
           "away": "REYCO Burela FS",
-          "date": null,
+          "date": "2026-09-19T17:45:00",
           "home": "ENCE Marín Futsal"
         },
         {
@@ -2155,11 +2156,6 @@
       ],
       "2": [
         {
-          "away": "Avanza Jaén Paraíso Interior",
-          "date": null,
-          "home": "Sala 5 Martorell MCD Grup"
-        },
-        {
           "away": "Gasifred Atlético Ibiza",
           "date": "2026-09-26T16:30:00",
           "home": "ElPozo Ciudad de Murcia"
@@ -2173,6 +2169,11 @@
           "away": "Family Cash Alzira F.S.",
           "date": "2026-09-26T18:00:00",
           "home": "Zambú CFS Pinatar Cerramientos Abatibles"
+        },
+        {
+          "away": "Avanza Jaén Paraíso Interior",
+          "date": "2026-09-26T18:30:00",
+          "home": "Sala 5 Martorell MCD Grup"
         },
         {
           "away": "MRB FS Mostoles",
