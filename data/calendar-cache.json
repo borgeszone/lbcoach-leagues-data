@@ -206,6 +206,8 @@
   "33836159|33892849|J2|oparruloferrolfs|catgasenergiasantacoloma": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697021&NPcd_Pdf=1",
   "33836159|33892849|J2|vinaalbalivaldepenas|cdxotafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697022&NPcd_Pdf=1",
   "33836163|33836165|J1|vulcanizadosruiztafafs|adsanjuan": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702246&NPcd_Pdf=1",
+  "33836163|33836169|J1|cdvirgilicadiza|nawterblancafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702961&NPcd_Pdf=1",
+  "33836163|33836169|J1|doshermanasfscda|cdsportingfsalmeriabiocampojoyma": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702960&NPcd_Pdf=1",
   "33836179|33836180|J1|arrivaadalcorconfsf|cdguadalcacinfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696746&NPcd_Pdf=1",
   "33836179|33836180|J1|estrelarevoltosaverinfsf|fsfcastrobloquescando": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696748&NPcd_Pdf=1",
   "33836179|33836180|J1|lbtlfutsalalcantarilla|ceutaagrupaciondeportiva": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696747&NPcd_Pdf=1",
@@ -794,11 +796,6 @@
     "33836163|33836165": {
       "1": [
         {
-          "away": "Entrerrios Automatización",
-          "date": null,
-          "home": "Coras Futsal Zaragoza"
-        },
-        {
           "away": "A.D. Rioja Sala",
           "date": "2026-09-19T16:00:00",
           "home": "Acontebro Tauste FS"
@@ -829,8 +826,139 @@
           "home": "Otxartabe C.D."
         },
         {
+          "away": "Entrerrios Automatización",
+          "date": "2026-09-19T19:15:00",
+          "home": "Coras Futsal Zaragoza"
+        },
+        {
           "away": "CMO Valves Lauburu Ibarra",
           "date": "2026-09-20T12:00:00",
+          "home": "Sala Quinto CD"
+        }
+      ],
+      "10": [
+        {
+          "away": "Vulcanizados Ruiz Tafa FS",
+          "date": null,
+          "home": "Entrerrios Automatización"
+        },
+        {
+          "away": "CMO Valves Lauburu Ibarra",
+          "date": null,
+          "home": "A.D. Rioja Sala"
+        },
+        {
+          "away": "CDF Zierbena",
+          "date": null,
+          "home": "EMD. Cadrete Forjas Casado"
+        },
+        {
+          "away": "C.D.Ibararte",
+          "date": null,
+          "home": "A.D. San Juan"
+        },
+        {
+          "away": "C.D. Juventud del Círculo Católico",
+          "date": null,
+          "home": "Antiguoko KE Estudio Dental Barrenechea"
+        },
+        {
+          "away": "Otxartabe C.D.",
+          "date": null,
+          "home": "Acontebro Tauste FS"
+        },
+        {
+          "away": "Pinseque A.D.",
+          "date": null,
+          "home": "Coras Futsal Zaragoza"
+        },
+        {
+          "away": "Mondrate C.D.",
+          "date": "2026-11-21T18:00:00",
+          "home": "Sala Quinto CD"
+        }
+      ],
+      "11": [
+        {
+          "away": "A.D. Rioja Sala",
+          "date": null,
+          "home": "Entrerrios Automatización"
+        },
+        {
+          "away": "A.D. San Juan",
+          "date": null,
+          "home": "CDF Zierbena"
+        },
+        {
+          "away": "Antiguoko KE Estudio Dental Barrenechea",
+          "date": null,
+          "home": "C.D.Ibararte"
+        },
+        {
+          "away": "Coras Futsal Zaragoza",
+          "date": null,
+          "home": "Otxartabe C.D."
+        },
+        {
+          "away": "Sala Quinto CD",
+          "date": null,
+          "home": "Pinseque A.D."
+        },
+        {
+          "away": "Mondrate C.D.",
+          "date": null,
+          "home": "Vulcanizados Ruiz Tafa FS"
+        },
+        {
+          "away": "EMD. Cadrete Forjas Casado",
+          "date": "2026-11-28T18:00:00",
+          "home": "CMO Valves Lauburu Ibarra"
+        },
+        {
+          "away": "Acontebro Tauste FS",
+          "date": "2026-11-28T19:00:00",
+          "home": "C.D. Juventud del Círculo Católico"
+        }
+      ],
+      "12": [
+        {
+          "away": "Vulcanizados Ruiz Tafa FS",
+          "date": null,
+          "home": "A.D. Rioja Sala"
+        },
+        {
+          "away": "Entrerrios Automatización",
+          "date": null,
+          "home": "EMD. Cadrete Forjas Casado"
+        },
+        {
+          "away": "CMO Valves Lauburu Ibarra",
+          "date": null,
+          "home": "A.D. San Juan"
+        },
+        {
+          "away": "CDF Zierbena",
+          "date": null,
+          "home": "Antiguoko KE Estudio Dental Barrenechea"
+        },
+        {
+          "away": "C.D.Ibararte",
+          "date": null,
+          "home": "Acontebro Tauste FS"
+        },
+        {
+          "away": "C.D. Juventud del Círculo Católico",
+          "date": null,
+          "home": "Coras Futsal Zaragoza"
+        },
+        {
+          "away": "Pinseque A.D.",
+          "date": null,
+          "home": "Mondrate C.D."
+        },
+        {
+          "away": "Otxartabe C.D.",
+          "date": "2026-12-05T18:00:00",
           "home": "Sala Quinto CD"
         }
       ],
@@ -873,6 +1001,300 @@
         {
           "away": "Vulcanizados Ruiz Tafa FS",
           "date": "2026-09-26T19:00:00",
+          "home": "C.D. Juventud del Círculo Católico"
+        }
+      ],
+      "3": [
+        {
+          "away": "CDF Zierbena",
+          "date": null,
+          "home": "Otxartabe C.D."
+        },
+        {
+          "away": "CMO Valves Lauburu Ibarra",
+          "date": null,
+          "home": "Pinseque A.D."
+        },
+        {
+          "away": "Entrerrios Automatización",
+          "date": null,
+          "home": "Mondrate C.D."
+        },
+        {
+          "away": "EMD. Cadrete Forjas Casado",
+          "date": null,
+          "home": "Coras Futsal Zaragoza"
+        },
+        {
+          "away": "A.D. San Juan",
+          "date": null,
+          "home": "Acontebro Tauste FS"
+        },
+        {
+          "away": "Antiguoko KE Estudio Dental Barrenechea",
+          "date": null,
+          "home": "Vulcanizados Ruiz Tafa FS"
+        },
+        {
+          "away": "A.D. Rioja Sala",
+          "date": "2026-10-03T18:00:00",
+          "home": "Sala Quinto CD"
+        },
+        {
+          "away": "C.D.Ibararte",
+          "date": "2026-10-03T19:00:00",
+          "home": "C.D. Juventud del Círculo Católico"
+        }
+      ],
+      "4": [
+        {
+          "away": "Vulcanizados Ruiz Tafa FS",
+          "date": null,
+          "home": "C.D.Ibararte"
+        },
+        {
+          "away": "C.D. Juventud del Círculo Católico",
+          "date": null,
+          "home": "CDF Zierbena"
+        },
+        {
+          "away": "Pinseque A.D.",
+          "date": null,
+          "home": "Entrerrios Automatización"
+        },
+        {
+          "away": "Mondrate C.D.",
+          "date": null,
+          "home": "A.D. Rioja Sala"
+        },
+        {
+          "away": "Sala Quinto CD",
+          "date": null,
+          "home": "EMD. Cadrete Forjas Casado"
+        },
+        {
+          "away": "Coras Futsal Zaragoza",
+          "date": null,
+          "home": "A.D. San Juan"
+        },
+        {
+          "away": "Acontebro Tauste FS",
+          "date": null,
+          "home": "Antiguoko KE Estudio Dental Barrenechea"
+        },
+        {
+          "away": "Otxartabe C.D.",
+          "date": "2026-10-10T18:00:00",
+          "home": "CMO Valves Lauburu Ibarra"
+        }
+      ],
+      "5": [
+        {
+          "away": "CDF Zierbena",
+          "date": null,
+          "home": "C.D.Ibararte"
+        },
+        {
+          "away": "Entrerrios Automatización",
+          "date": null,
+          "home": "Otxartabe C.D."
+        },
+        {
+          "away": "A.D. Rioja Sala",
+          "date": null,
+          "home": "Pinseque A.D."
+        },
+        {
+          "away": "EMD. Cadrete Forjas Casado",
+          "date": null,
+          "home": "Mondrate C.D."
+        },
+        {
+          "away": "Antiguoko KE Estudio Dental Barrenechea",
+          "date": null,
+          "home": "Coras Futsal Zaragoza"
+        },
+        {
+          "away": "Acontebro Tauste FS",
+          "date": null,
+          "home": "Vulcanizados Ruiz Tafa FS"
+        },
+        {
+          "away": "A.D. San Juan",
+          "date": "2026-10-17T18:00:00",
+          "home": "Sala Quinto CD"
+        },
+        {
+          "away": "CMO Valves Lauburu Ibarra",
+          "date": "2026-10-17T19:00:00",
+          "home": "C.D. Juventud del Círculo Católico"
+        }
+      ],
+      "6": [
+        {
+          "away": "Vulcanizados Ruiz Tafa FS",
+          "date": null,
+          "home": "CDF Zierbena"
+        },
+        {
+          "away": "C.D. Juventud del Círculo Católico",
+          "date": null,
+          "home": "Entrerrios Automatización"
+        },
+        {
+          "away": "Otxartabe C.D.",
+          "date": null,
+          "home": "A.D. Rioja Sala"
+        },
+        {
+          "away": "Pinseque A.D.",
+          "date": null,
+          "home": "EMD. Cadrete Forjas Casado"
+        },
+        {
+          "away": "Mondrate C.D.",
+          "date": null,
+          "home": "A.D. San Juan"
+        },
+        {
+          "away": "Sala Quinto CD",
+          "date": null,
+          "home": "Antiguoko KE Estudio Dental Barrenechea"
+        },
+        {
+          "away": "Coras Futsal Zaragoza",
+          "date": null,
+          "home": "Acontebro Tauste FS"
+        },
+        {
+          "away": "C.D.Ibararte",
+          "date": "2026-10-24T18:00:00",
+          "home": "CMO Valves Lauburu Ibarra"
+        }
+      ],
+      "7": [
+        {
+          "away": "CMO Valves Lauburu Ibarra",
+          "date": null,
+          "home": "CDF Zierbena"
+        },
+        {
+          "away": "Entrerrios Automatización",
+          "date": null,
+          "home": "C.D.Ibararte"
+        },
+        {
+          "away": "EMD. Cadrete Forjas Casado",
+          "date": null,
+          "home": "Otxartabe C.D."
+        },
+        {
+          "away": "A.D. San Juan",
+          "date": null,
+          "home": "Pinseque A.D."
+        },
+        {
+          "away": "Antiguoko KE Estudio Dental Barrenechea",
+          "date": null,
+          "home": "Mondrate C.D."
+        },
+        {
+          "away": "Coras Futsal Zaragoza",
+          "date": null,
+          "home": "Vulcanizados Ruiz Tafa FS"
+        },
+        {
+          "away": "Acontebro Tauste FS",
+          "date": "2026-10-31T18:00:00",
+          "home": "Sala Quinto CD"
+        },
+        {
+          "away": "A.D. Rioja Sala",
+          "date": "2026-10-31T19:00:00",
+          "home": "C.D. Juventud del Círculo Católico"
+        }
+      ],
+      "8": [
+        {
+          "away": "CDF Zierbena",
+          "date": null,
+          "home": "Entrerrios Automatización"
+        },
+        {
+          "away": "C.D.Ibararte",
+          "date": null,
+          "home": "A.D. Rioja Sala"
+        },
+        {
+          "away": "C.D. Juventud del Círculo Católico",
+          "date": null,
+          "home": "EMD. Cadrete Forjas Casado"
+        },
+        {
+          "away": "Otxartabe C.D.",
+          "date": null,
+          "home": "A.D. San Juan"
+        },
+        {
+          "away": "Pinseque A.D.",
+          "date": null,
+          "home": "Antiguoko KE Estudio Dental Barrenechea"
+        },
+        {
+          "away": "Mondrate C.D.",
+          "date": null,
+          "home": "Acontebro Tauste FS"
+        },
+        {
+          "away": "Sala Quinto CD",
+          "date": null,
+          "home": "Coras Futsal Zaragoza"
+        },
+        {
+          "away": "Vulcanizados Ruiz Tafa FS",
+          "date": "2026-11-07T18:00:00",
+          "home": "CMO Valves Lauburu Ibarra"
+        }
+      ],
+      "9": [
+        {
+          "away": "A.D. Rioja Sala",
+          "date": null,
+          "home": "CDF Zierbena"
+        },
+        {
+          "away": "EMD. Cadrete Forjas Casado",
+          "date": null,
+          "home": "C.D.Ibararte"
+        },
+        {
+          "away": "Antiguoko KE Estudio Dental Barrenechea",
+          "date": null,
+          "home": "Otxartabe C.D."
+        },
+        {
+          "away": "Acontebro Tauste FS",
+          "date": null,
+          "home": "Pinseque A.D."
+        },
+        {
+          "away": "Coras Futsal Zaragoza",
+          "date": null,
+          "home": "Mondrate C.D."
+        },
+        {
+          "away": "Sala Quinto CD",
+          "date": null,
+          "home": "Vulcanizados Ruiz Tafa FS"
+        },
+        {
+          "away": "Entrerrios Automatización",
+          "date": "2026-11-14T18:30:00",
+          "home": "CMO Valves Lauburu Ibarra"
+        },
+        {
+          "away": "A.D. San Juan",
+          "date": "2026-11-14T19:00:00",
           "home": "C.D. Juventud del Círculo Católico"
         }
       ]
@@ -1558,26 +1980,6 @@
     "33836163|33836169": {
       "1": [
         {
-          "away": "C.D. Sporting FS Almería Biocampojoyma",
-          "date": null,
-          "home": "Dos Hermanas F.S. C.D. \"A\""
-        },
-        {
-          "away": "Melilla Ciudad del Deporte Nueva Era",
-          "date": null,
-          "home": "Cdb Salvatierra Fs"
-        },
-        {
-          "away": "Crevillent Futsal Starts \"A\"",
-          "date": null,
-          "home": "Joasan Construcciones CFS Pinatar \"B\""
-        },
-        {
-          "away": "GH Distribución Moral FS",
-          "date": null,
-          "home": "Sima Granada FS"
-        },
-        {
           "away": "FLEXLIVING JUMILLA FS",
           "date": "2026-09-19T16:00:00",
           "home": "Imperio Los Rosales"
@@ -1588,13 +1990,159 @@
           "home": "C.D. Bujalance F.S. Beconet"
         },
         {
+          "away": "C.D. Sporting FS Almería Biocampojoyma",
+          "date": "2026-09-19T18:00:00",
+          "home": "Dos Hermanas F.S. C.D. \"A\""
+        },
+        {
+          "away": "Melilla Ciudad del Deporte Nueva Era",
+          "date": "2026-09-19T19:00:00",
+          "home": "Cdb Salvatierra Fs"
+        },
+        {
           "away": "Oleoinnova Mengibar FS",
           "date": "2026-09-19T20:55:00",
           "home": "Jimbee Cartagena Futbol Sala"
         },
         {
+          "away": "Crevillent Futsal Starts \"A\"",
+          "date": "2026-09-20T11:45:00",
+          "home": "Joasan Construcciones CFS Pinatar \"B\""
+        },
+        {
           "away": "Nawter Blanca FS",
           "date": "2026-09-20T12:00:00",
+          "home": "CD Virgili Cádiz \"A\""
+        },
+        {
+          "away": "GH Distribución Moral FS",
+          "date": "2026-09-20T13:15:00",
+          "home": "Sima Granada FS"
+        }
+      ],
+      "10": [
+        {
+          "away": "Sima Granada FS",
+          "date": null,
+          "home": "Crevillent Futsal Starts \"A\""
+        },
+        {
+          "away": "Nawter Blanca FS",
+          "date": null,
+          "home": "FLEXLIVING JUMILLA FS"
+        },
+        {
+          "away": "C.D. Sporting FS Almería Biocampojoyma",
+          "date": null,
+          "home": "GH Distribución Moral FS"
+        },
+        {
+          "away": "C.D. Malacitano Futsal",
+          "date": null,
+          "home": "Imperio Los Rosales"
+        },
+        {
+          "away": "C.D. Bujalance F.S. Beconet",
+          "date": null,
+          "home": "Jimbee Cartagena Futbol Sala"
+        },
+        {
+          "away": "Dos Hermanas F.S. C.D. \"A\"",
+          "date": null,
+          "home": "Joasan Construcciones CFS Pinatar \"B\""
+        },
+        {
+          "away": "CD Virgili Cádiz \"A\"",
+          "date": null,
+          "home": "Cdb Salvatierra Fs"
+        },
+        {
+          "away": "Melilla Ciudad del Deporte Nueva Era",
+          "date": "2026-11-21T18:30:00",
+          "home": "Oleoinnova Mengibar FS"
+        }
+      ],
+      "11": [
+        {
+          "away": "Oleoinnova Mengibar FS",
+          "date": null,
+          "home": "Crevillent Futsal Starts \"A\""
+        },
+        {
+          "away": "GH Distribución Moral FS",
+          "date": null,
+          "home": "Nawter Blanca FS"
+        },
+        {
+          "away": "Imperio Los Rosales",
+          "date": null,
+          "home": "C.D. Sporting FS Almería Biocampojoyma"
+        },
+        {
+          "away": "Jimbee Cartagena Futbol Sala",
+          "date": null,
+          "home": "C.D. Malacitano Futsal"
+        },
+        {
+          "away": "Joasan Construcciones CFS Pinatar \"B\"",
+          "date": null,
+          "home": "C.D. Bujalance F.S. Beconet"
+        },
+        {
+          "away": "Cdb Salvatierra Fs",
+          "date": null,
+          "home": "Dos Hermanas F.S. C.D. \"A\""
+        },
+        {
+          "away": "CD Virgili Cádiz \"A\"",
+          "date": null,
+          "home": "Sima Granada FS"
+        },
+        {
+          "away": "FLEXLIVING JUMILLA FS",
+          "date": "2026-11-28T16:00:00",
+          "home": "Melilla Ciudad del Deporte Nueva Era"
+        }
+      ],
+      "12": [
+        {
+          "away": "Crevillent Futsal Starts \"A\"",
+          "date": null,
+          "home": "FLEXLIVING JUMILLA FS"
+        },
+        {
+          "away": "Melilla Ciudad del Deporte Nueva Era",
+          "date": null,
+          "home": "GH Distribución Moral FS"
+        },
+        {
+          "away": "Nawter Blanca FS",
+          "date": null,
+          "home": "Imperio Los Rosales"
+        },
+        {
+          "away": "C.D. Sporting FS Almería Biocampojoyma",
+          "date": null,
+          "home": "Jimbee Cartagena Futbol Sala"
+        },
+        {
+          "away": "C.D. Malacitano Futsal",
+          "date": null,
+          "home": "Joasan Construcciones CFS Pinatar \"B\""
+        },
+        {
+          "away": "C.D. Bujalance F.S. Beconet",
+          "date": null,
+          "home": "Cdb Salvatierra Fs"
+        },
+        {
+          "away": "Sima Granada FS",
+          "date": "2026-12-05T18:30:00",
+          "home": "Oleoinnova Mengibar FS"
+        },
+        {
+          "away": "Dos Hermanas F.S. C.D. \"A\"",
+          "date": null,
           "home": "CD Virgili Cádiz \"A\""
         }
       ],
@@ -1620,11 +2168,6 @@
           "home": "Crevillent Futsal Starts \"A\""
         },
         {
-          "away": "Joasan Construcciones CFS Pinatar \"B\"",
-          "date": null,
-          "home": "Oleoinnova Mengibar FS"
-        },
-        {
           "away": "Jimbee Cartagena Futbol Sala",
           "date": null,
           "home": "FLEXLIVING JUMILLA FS"
@@ -1638,6 +2181,305 @@
           "away": "CD Virgili Cádiz \"A\"",
           "date": "2026-09-26T16:00:00",
           "home": "Melilla Ciudad del Deporte Nueva Era"
+        },
+        {
+          "away": "Joasan Construcciones CFS Pinatar \"B\"",
+          "date": "2026-09-26T18:30:00",
+          "home": "Oleoinnova Mengibar FS"
+        }
+      ],
+      "3": [
+        {
+          "away": "Melilla Ciudad del Deporte Nueva Era",
+          "date": "2026-10-02T20:30:00",
+          "home": "Dos Hermanas F.S. C.D. \"A\""
+        },
+        {
+          "away": "C.D. Sporting FS Almería Biocampojoyma",
+          "date": null,
+          "home": "C.D. Malacitano Futsal"
+        },
+        {
+          "away": "Nawter Blanca FS",
+          "date": null,
+          "home": "C.D. Bujalance F.S. Beconet"
+        },
+        {
+          "away": "Oleoinnova Mengibar FS",
+          "date": null,
+          "home": "Cdb Salvatierra Fs"
+        },
+        {
+          "away": "FLEXLIVING JUMILLA FS",
+          "date": null,
+          "home": "Joasan Construcciones CFS Pinatar \"B\""
+        },
+        {
+          "away": "GH Distribución Moral FS",
+          "date": null,
+          "home": "Jimbee Cartagena Futbol Sala"
+        },
+        {
+          "away": "Imperio Los Rosales",
+          "date": null,
+          "home": "Sima Granada FS"
+        },
+        {
+          "away": "Crevillent Futsal Starts \"A\"",
+          "date": "2026-10-04T12:00:00",
+          "home": "CD Virgili Cádiz \"A\""
+        }
+      ],
+      "4": [
+        {
+          "away": "Sima Granada FS",
+          "date": null,
+          "home": "C.D. Sporting FS Almería Biocampojoyma"
+        },
+        {
+          "away": "C.D. Malacitano Futsal",
+          "date": null,
+          "home": "Nawter Blanca FS"
+        },
+        {
+          "away": "Dos Hermanas F.S. C.D. \"A\"",
+          "date": null,
+          "home": "Crevillent Futsal Starts \"A\""
+        },
+        {
+          "away": "Cdb Salvatierra Fs",
+          "date": null,
+          "home": "FLEXLIVING JUMILLA FS"
+        },
+        {
+          "away": "Joasan Construcciones CFS Pinatar \"B\"",
+          "date": null,
+          "home": "GH Distribución Moral FS"
+        },
+        {
+          "away": "Jimbee Cartagena Futbol Sala",
+          "date": null,
+          "home": "Imperio Los Rosales"
+        },
+        {
+          "away": "C.D. Bujalance F.S. Beconet",
+          "date": "2026-10-10T16:00:00",
+          "home": "Melilla Ciudad del Deporte Nueva Era"
+        },
+        {
+          "away": "CD Virgili Cádiz \"A\"",
+          "date": "2026-10-10T18:30:00",
+          "home": "Oleoinnova Mengibar FS"
+        }
+      ],
+      "5": [
+        {
+          "away": "Nawter Blanca FS",
+          "date": null,
+          "home": "C.D. Sporting FS Almería Biocampojoyma"
+        },
+        {
+          "away": "Melilla Ciudad del Deporte Nueva Era",
+          "date": null,
+          "home": "C.D. Malacitano Futsal"
+        },
+        {
+          "away": "Crevillent Futsal Starts \"A\"",
+          "date": null,
+          "home": "C.D. Bujalance F.S. Beconet"
+        },
+        {
+          "away": "Oleoinnova Mengibar FS",
+          "date": null,
+          "home": "Dos Hermanas F.S. C.D. \"A\""
+        },
+        {
+          "away": "GH Distribución Moral FS",
+          "date": null,
+          "home": "Cdb Salvatierra Fs"
+        },
+        {
+          "away": "Imperio Los Rosales",
+          "date": null,
+          "home": "Joasan Construcciones CFS Pinatar \"B\""
+        },
+        {
+          "away": "Jimbee Cartagena Futbol Sala",
+          "date": null,
+          "home": "Sima Granada FS"
+        },
+        {
+          "away": "FLEXLIVING JUMILLA FS",
+          "date": null,
+          "home": "CD Virgili Cádiz \"A\""
+        }
+      ],
+      "6": [
+        {
+          "away": "Sima Granada FS",
+          "date": null,
+          "home": "Nawter Blanca FS"
+        },
+        {
+          "away": "C.D. Malacitano Futsal",
+          "date": null,
+          "home": "Crevillent Futsal Starts \"A\""
+        },
+        {
+          "away": "Dos Hermanas F.S. C.D. \"A\"",
+          "date": null,
+          "home": "FLEXLIVING JUMILLA FS"
+        },
+        {
+          "away": "CD Virgili Cádiz \"A\"",
+          "date": null,
+          "home": "GH Distribución Moral FS"
+        },
+        {
+          "away": "Cdb Salvatierra Fs",
+          "date": null,
+          "home": "Imperio Los Rosales"
+        },
+        {
+          "away": "Joasan Construcciones CFS Pinatar \"B\"",
+          "date": null,
+          "home": "Jimbee Cartagena Futbol Sala"
+        },
+        {
+          "away": "C.D. Sporting FS Almería Biocampojoyma",
+          "date": "2026-10-24T16:00:00",
+          "home": "Melilla Ciudad del Deporte Nueva Era"
+        },
+        {
+          "away": "C.D. Bujalance F.S. Beconet",
+          "date": "2026-10-24T18:30:00",
+          "home": "Oleoinnova Mengibar FS"
+        }
+      ],
+      "7": [
+        {
+          "away": "Melilla Ciudad del Deporte Nueva Era",
+          "date": null,
+          "home": "Nawter Blanca FS"
+        },
+        {
+          "away": "Crevillent Futsal Starts \"A\"",
+          "date": null,
+          "home": "C.D. Sporting FS Almería Biocampojoyma"
+        },
+        {
+          "away": "Oleoinnova Mengibar FS",
+          "date": null,
+          "home": "C.D. Malacitano Futsal"
+        },
+        {
+          "away": "FLEXLIVING JUMILLA FS",
+          "date": null,
+          "home": "C.D. Bujalance F.S. Beconet"
+        },
+        {
+          "away": "GH Distribución Moral FS",
+          "date": null,
+          "home": "Dos Hermanas F.S. C.D. \"A\""
+        },
+        {
+          "away": "Jimbee Cartagena Futbol Sala",
+          "date": null,
+          "home": "Cdb Salvatierra Fs"
+        },
+        {
+          "away": "Joasan Construcciones CFS Pinatar \"B\"",
+          "date": null,
+          "home": "Sima Granada FS"
+        },
+        {
+          "away": "Imperio Los Rosales",
+          "date": null,
+          "home": "CD Virgili Cádiz \"A\""
+        }
+      ],
+      "8": [
+        {
+          "away": "Nawter Blanca FS",
+          "date": null,
+          "home": "Crevillent Futsal Starts \"A\""
+        },
+        {
+          "away": "C.D. Malacitano Futsal",
+          "date": null,
+          "home": "FLEXLIVING JUMILLA FS"
+        },
+        {
+          "away": "C.D. Bujalance F.S. Beconet",
+          "date": null,
+          "home": "GH Distribución Moral FS"
+        },
+        {
+          "away": "Dos Hermanas F.S. C.D. \"A\"",
+          "date": null,
+          "home": "Imperio Los Rosales"
+        },
+        {
+          "away": "CD Virgili Cádiz \"A\"",
+          "date": null,
+          "home": "Jimbee Cartagena Futbol Sala"
+        },
+        {
+          "away": "Cdb Salvatierra Fs",
+          "date": null,
+          "home": "Joasan Construcciones CFS Pinatar \"B\""
+        },
+        {
+          "away": "Sima Granada FS",
+          "date": "2026-11-07T16:00:00",
+          "home": "Melilla Ciudad del Deporte Nueva Era"
+        },
+        {
+          "away": "C.D. Sporting FS Almería Biocampojoyma",
+          "date": "2026-11-07T18:30:00",
+          "home": "Oleoinnova Mengibar FS"
+        }
+      ],
+      "9": [
+        {
+          "away": "Oleoinnova Mengibar FS",
+          "date": null,
+          "home": "Nawter Blanca FS"
+        },
+        {
+          "away": "FLEXLIVING JUMILLA FS",
+          "date": null,
+          "home": "C.D. Sporting FS Almería Biocampojoyma"
+        },
+        {
+          "away": "GH Distribución Moral FS",
+          "date": null,
+          "home": "C.D. Malacitano Futsal"
+        },
+        {
+          "away": "Imperio Los Rosales",
+          "date": null,
+          "home": "C.D. Bujalance F.S. Beconet"
+        },
+        {
+          "away": "Jimbee Cartagena Futbol Sala",
+          "date": null,
+          "home": "Dos Hermanas F.S. C.D. \"A\""
+        },
+        {
+          "away": "Cdb Salvatierra Fs",
+          "date": null,
+          "home": "Sima Granada FS"
+        },
+        {
+          "away": "Crevillent Futsal Starts \"A\"",
+          "date": "2026-11-14T16:00:00",
+          "home": "Melilla Ciudad del Deporte Nueva Era"
+        },
+        {
+          "away": "Joasan Construcciones CFS Pinatar \"B\"",
+          "date": null,
+          "home": "CD Virgili Cádiz \"A\""
         }
       ]
     },
