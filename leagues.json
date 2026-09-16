@@ -1,9 +1,9 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-15T11:17:52+00:00",
+  "lastUpdated": "2026-09-16T11:10:59+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
-    "rfef: la PNFG rate-limitó 7 jornada/s y se abandonaron 7 grupo/s; esas jornadas salen de la caché o del JSON anterior",
+    "rfef: la PNFG rate-limitó 8 jornada/s y se abandonaron 8 grupo/s; esas jornadas salen de la caché o del JSON anterior",
     "fcf-1cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-2cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-3cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
@@ -7093,7 +7093,6 @@
               "officialName": "Wanapix Aldelis InterSala 10 Zaragoza"
             }
           ],
-          "jornadasTotal": 30,
           "teamsSource": "calendario",
           "calendar": [
             {
@@ -7255,7 +7254,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "jornadasTotal": 30
         },
         {
           "id": "rfef-segunda-fs-fem",
