@@ -243,10 +243,14 @@
   "33836181|33836182|J1|udctxantreakke|elgaiterorodilesfsf": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697257&NPcd_Pdf=1",
   "33836181|33836183|J1|aecslhospitalet|clubdeportivonouturiafsfa": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697496&NPcd_Pdf=1",
   "33836181|33836183|J1|aepenyaespluguessalvatlogisticaa|gruporeciclartecesaraugusta": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697500&NPcd_Pdf=1",
+  "33836181|33836183|J1|clubdeportivosanpabloibiza|lescortsaeb": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697501&NPcd_Pdf=1",
   "33836181|33836183|J1|femecastelloncfs|futsalcartonajespansmataro": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697499&NPcd_Pdf=1",
   "33836181|33836183|J1|fssabadell|laincoesportiurubifs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697502&NPcd_Pdf=1",
+  "33836181|33836183|J1|lavilla|entrerriosautomatizacion": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697498&NPcd_Pdf=1",
   "33836181|33836183|J1|solarmonlesglories2014cdlaconcordia|cfsautoescolaurgelllinyola": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697497&NPcd_Pdf=1",
   "33836181|33836183|J1|somriufutbolsalaripollet|cdparquecolsantaana": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697503&NPcd_Pdf=1",
+  "33836181|33836184|J1|cfsfemeninosanfernando|cdlagarrovillafemenino": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70699436&NPcd_Pdf=1",
+  "33836181|33836184|J1|coviranuapogranadafsfemenino|udafafaniona": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697743&NPcd_Pdf=1",
   "33836181|33836184|J1|doshermanasfscd|atleticonavalcarnero": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697737&NPcd_Pdf=1",
   "33836181|33836184|J1|iesluisdecamoens|almagrofsf": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697742&NPcd_Pdf=1",
   "33836181|33836184|J1|melillaciudaddeldeportetorreblancacf|majadahondafsfafar4": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697739&NPcd_Pdf=1",
@@ -993,19 +997,9 @@
           "home": "C.D.Ibararte"
         },
         {
-          "away": "Pinseque A.D.",
-          "date": null,
-          "home": "CDF Zierbena"
-        },
-        {
           "away": "Sala Quinto CD",
           "date": null,
           "home": "Entrerrios Automatización"
-        },
-        {
-          "away": "Coras Futsal Zaragoza",
-          "date": null,
-          "home": "A.D. Rioja Sala"
         },
         {
           "away": "Acontebro Tauste FS",
@@ -1014,8 +1008,13 @@
         },
         {
           "away": "Antiguoko KE Estudio Dental Barrenechea",
-          "date": null,
+          "date": "2026-09-26T16:00:00",
           "home": "A.D. San Juan"
+        },
+        {
+          "away": "Coras Futsal Zaragoza",
+          "date": "2026-09-26T16:30:00",
+          "home": "A.D. Rioja Sala"
         },
         {
           "away": "Mondrate C.D.",
@@ -1026,6 +1025,11 @@
           "away": "Vulcanizados Ruiz Tafa FS",
           "date": "2026-09-26T19:00:00",
           "home": "C.D. Juventud del Círculo Católico"
+        },
+        {
+          "away": "Pinseque A.D.",
+          "date": "2026-09-27T12:00:00",
+          "home": "CDF Zierbena"
         }
       ],
       "3": [
@@ -1509,11 +1513,6 @@
           "home": "F.S. Picassent"
         },
         {
-          "away": "Catgas Energía Santa Coloma",
-          "date": null,
-          "home": "F.S. Ripollet \"A\""
-        },
-        {
           "away": "A.E. Llevant De Manacor Futsal \"A\"",
           "date": "2026-09-26T13:30:00",
           "home": "Club Deportivo Sporting la Nucía"
@@ -1527,6 +1526,11 @@
           "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
           "date": "2026-09-26T18:00:00",
           "home": "Ye Faky F.S."
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2026-09-26T18:30:00",
+          "home": "F.S. Ripollet \"A\""
         },
         {
           "away": "Les Corts EF \"A\"",
@@ -2724,11 +2728,6 @@
       ],
       "2": [
         {
-          "away": "AECS L Hospitalet",
-          "date": null,
-          "home": "CFS Autoescola Urgell Linyola"
-        },
-        {
           "away": "AE Penya Esplugues Salvat Logística \"A\"",
           "date": null,
           "home": "Les Corts, A.E. \"B\""
@@ -2744,6 +2743,11 @@
           "home": "Grupo Reciclarte Cesar Augusta"
         },
         {
+          "away": "AECS L Hospitalet",
+          "date": "2026-09-26T17:00:00",
+          "home": "CFS Autoescola Urgell Linyola"
+        },
+        {
           "away": "La Villa",
           "date": "2026-09-26T17:00:00",
           "home": "Futsal Cartonajes Pans Mataró"
@@ -2754,14 +2758,14 @@
           "home": "Club Deportivo Nou Turia FSF \"A\""
         },
         {
-          "away": "F.S. Sabadell",
-          "date": "2026-09-27T12:00:00",
-          "home": "C.D. Parque Col. Santa Ana"
-        },
-        {
           "away": "SolarMon-Les Glories 2014 CD La Concordia",
           "date": "2026-09-27T12:15:00",
           "home": "Entrerrios Automatización"
+        },
+        {
+          "away": "F.S. Sabadell",
+          "date": "2026-09-27T13:15:00",
+          "home": "C.D. Parque Col. Santa Ana"
         }
       ]
     },
@@ -2815,11 +2819,6 @@
           "home": "Martos FS Jaén Paraíso Interior"
         },
         {
-          "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
-          "date": null,
-          "home": "Ramón Y Cajal Féminas"
-        },
-        {
           "away": "C.D.E. Leganés F.S. Masdeporte",
           "date": null,
           "home": "CD La Garrovilla Femenino"
@@ -2833,6 +2832,11 @@
           "away": "I.E.S. Luis de Camoens",
           "date": null,
           "home": "UDAF Afanion \"A\""
+        },
+        {
+          "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
+          "date": "2026-09-26T16:00:00",
+          "home": "Ramón Y Cajal Féminas"
         },
         {
           "away": "Globalcaja Albacete F.S.",
