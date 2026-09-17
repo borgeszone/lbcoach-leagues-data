@@ -1,9 +1,9 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-16T11:10:59+00:00",
+  "lastUpdated": "2026-09-17T11:15:56+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
-    "rfef: la PNFG rate-limitó 8 jornada/s y se abandonaron 8 grupo/s; esas jornadas salen de la caché o del JSON anterior",
+    "rfef: la PNFG rate-limitó 7 jornada/s y se abandonaron 7 grupo/s; esas jornadas salen de la caché o del JSON anterior",
     "fcf-1cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-2cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-3cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
@@ -25,7 +25,7 @@
           "teams": [
             {
               "name": "Barça",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206343_50x50.png"
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/101001.png"
             },
             {
               "name": "Industrias Santa Coloma",
@@ -47,7 +47,7 @@
             },
             {
               "name": "Palma Futsal",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20219/22/a0a331b21b72e658cbc6a1e0c801da7a.jpg",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206407_50x50.png",
               "officialName": "Illes Balears Palma Futsal"
             },
             {
@@ -99,6 +99,7 @@
               "officialName": "Wanapix"
             }
           ],
+          "jornadasTotal": 15,
           "teamsSource": "calendario",
           "calendar": [
             {
@@ -1279,8 +1280,7 @@
               ],
               "phase": "Clausura"
             }
-          ],
-          "jornadasTotal": 15
+          ]
         },
         {
           "id": "rfef-segunda-fs-masc",
@@ -3045,6 +3045,7 @@
                   "officialName": "Stellae Leis Pontevedra F.S."
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -3137,8 +3138,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g2",
@@ -3156,7 +3156,7 @@
                 },
                 {
                   "name": "San Juan FS",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206431_50x50.png",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/1201037.png",
                   "officialName": "A.D. San Juan"
                 },
                 {
@@ -4665,7 +4665,7 @@
                 },
                 {
                   "name": "Palma Futsal B",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20219/22/a0a331b21b72e658cbc6a1e0c801da7a.jpg",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206407_50x50.png",
                   "officialName": "Illes Balears Palma Futsal"
                 },
                 {
@@ -4689,7 +4689,6 @@
                   "officialName": "Ye Faky F.S."
                 }
               ],
-              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -5922,7 +5921,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30
             },
             {
               "id": "g4",
@@ -6911,6 +6911,7 @@
                   "officialName": "Suntryp Agüimes FS"
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -7003,8 +7004,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             }
           ]
         },
@@ -7034,7 +7034,7 @@
             },
             {
               "name": "Ceuta AD",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206966_50x50.png",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/1301003.png",
               "officialName": "Ceuta Agrupación Deportiva"
             },
             {
@@ -7044,7 +7044,7 @@
             },
             {
               "name": "FSF Castro",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/209427_50x50.png",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/302385.png",
               "officialName": "F.S.F. Castro Bloques Cando"
             },
             {
@@ -7093,6 +7093,7 @@
               "officialName": "Wanapix Aldelis InterSala 10 Zaragoza"
             }
           ],
+          "jornadasTotal": 30,
           "teamsSource": "calendario",
           "calendar": [
             {
@@ -7254,8 +7255,7 @@
                 }
               ]
             }
-          ],
-          "jornadasTotal": 30
+          ]
         },
         {
           "id": "rfef-segunda-fs-fem",
@@ -8811,7 +8811,6 @@
                   "officialName": "Somriu Futbol Sala Ripollet"
                 }
               ],
-              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -8904,7 +8903,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30
             },
             {
               "id": "g3",
@@ -8988,7 +8988,6 @@
                   "officialName": "UDAF Afanion \"A\""
                 }
               ],
-              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -9081,7 +9080,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30
             }
           ]
         }
