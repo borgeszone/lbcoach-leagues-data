@@ -1,6 +1,6 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-17T11:15:56+00:00",
+  "lastUpdated": "2026-09-18T10:51:22+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
     "rfef: la PNFG rate-limitó 7 jornada/s y se abandonaron 7 grupo/s; esas jornadas salen de la caché o del JSON anterior",
@@ -99,7 +99,6 @@
               "officialName": "Wanapix"
             }
           ],
-          "jornadasTotal": 15,
           "teamsSource": "calendario",
           "calendar": [
             {
@@ -1280,7 +1279,8 @@
               ],
               "phase": "Clausura"
             }
-          ]
+          ],
+          "jornadasTotal": 15
         },
         {
           "id": "rfef-segunda-fs-masc",
@@ -6828,183 +6828,6 @@
                 }
               ],
               "jornadasTotal": 30
-            },
-            {
-              "id": "g6",
-              "name": "Grupo 6",
-              "teams": [
-                {
-                  "name": "AD Duggi Futsal",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/23/95c995c04b6ccbcd961915ebff787aff.jpg",
-                  "officialName": "AD Duggi-San Fernando"
-                },
-                {
-                  "name": "Aguas de Teror",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20222/10/b95b6b9f6209c1289a6232d8ef7981da.jpg"
-                },
-                {
-                  "name": "Basilea FS",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/209159_50x50.png",
-                  "officialName": "Basilea Futbol Sala C.D."
-                },
-                {
-                  "name": "CFS Chinguaro",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079009181_452863623_1054723105995301_2307298571245045947_n.jpg",
-                  "officialName": "C.D. Chinguaro \"A\""
-                },
-                {
-                  "name": "Cisneros",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079009184_513885065_18065318450277986_174411058388363996_n.jpg",
-                  "officialName": "C.D. Cisneros Alter"
-                },
-                {
-                  "name": "C.D. Salesianos Tenerife",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205463_50x50.png"
-                },
-                {
-                  "name": "Tenerife Iberia Toscal",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/208460_50x50.png",
-                  "officialName": "C.D. Tenerife Iberia Toscal"
-                },
-                {
-                  "name": "La Matanza FS",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/ee0f5db56615da8358ec4af7e6ab069d.jpg",
-                  "officialName": "C.F.S. Casa Juv. La Matanza"
-                },
-                {
-                  "name": "Doctoral Ludeservicios",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20224/19/5759f5cf802d12df4e3cbafbd04a9d77.jpg",
-                  "officialName": "Doctoral FS"
-                },
-                {
-                  "name": "Juv. Los Pinos",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079039299_cfs_los_pinos.png",
-                  "officialName": "F.S. Los Pinos"
-                },
-                {
-                  "name": "Gran Canaria",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205278_50x50.png",
-                  "officialName": "Gran Canaria FS"
-                },
-                {
-                  "name": "La Salle San Ildefonso",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0078999054_La_Salle_San_Ildefonso_Club_Deportivo.png",
-                  "officialName": "La Salle San Ildelfonso"
-                },
-                {
-                  "name": "Las Cuevecitas",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/fe5d9c54e875d341b8472444c58843b9.jpg",
-                  "officialName": "Las Cuevecitas FS"
-                },
-                {
-                  "name": "Malta 97",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008927_escudo_malta_97_2025.jpeg"
-                },
-                {
-                  "name": "FS Bugedo",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20224/19/bf0f23d21c1d4d9d21942da834d9621e.jpg",
-                  "officialName": "NovoComunidades-Bugedo FS"
-                },
-                {
-                  "name": "Agüimes",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20224/19/1544624e6cdbb7c894891799894bc645.jpg",
-                  "officialName": "Suntryp Agüimes FS"
-                }
-              ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario",
-              "calendar": [
-                {
-                  "jornada": 1,
-                  "matches": [
-                    {
-                      "away": "AD Duggi-San Fernando",
-                      "date": "2026-09-17T20:30:00",
-                      "home": "La Salle San Ildelfonso"
-                    },
-                    {
-                      "away": "Suntryp Agüimes FS",
-                      "date": "2026-09-18T21:00:00",
-                      "home": "NovoComunidades-Bugedo FS"
-                    },
-                    {
-                      "away": "C.F.S. Casa Juv. La Matanza",
-                      "date": "2026-09-18T21:00:00",
-                      "home": "F.S. Los Pinos"
-                    },
-                    {
-                      "away": "Malta 97",
-                      "date": "2026-09-18T21:00:00",
-                      "home": "Doctoral FS"
-                    },
-                    {
-                      "away": "C.D. Cisneros Alter",
-                      "date": "2026-09-19T17:00:00",
-                      "home": "Basilea Futbol Sala C.D."
-                    },
-                    {
-                      "away": "C.D. Salesianos Tenerife",
-                      "date": "2026-09-19T19:00:00",
-                      "home": "Las Cuevecitas FS"
-                    },
-                    {
-                      "away": "Aguas de Teror",
-                      "date": "2026-09-19T19:30:00",
-                      "home": "Gran Canaria FS"
-                    },
-                    {
-                      "away": "C.D. Chinguaro \"A\"",
-                      "date": "2026-09-20T12:00:00",
-                      "home": "C.D. Tenerife Iberia Toscal"
-                    }
-                  ]
-                },
-                {
-                  "jornada": 2,
-                  "matches": [
-                    {
-                      "away": "Gran Canaria FS",
-                      "date": "2026-09-25T20:00:00",
-                      "home": "Malta 97"
-                    },
-                    {
-                      "away": "La Salle San Ildelfonso",
-                      "date": "2026-09-25T21:00:00",
-                      "home": "C.D. Salesianos Tenerife"
-                    },
-                    {
-                      "away": "Las Cuevecitas FS",
-                      "date": "2026-09-25T21:00:00",
-                      "home": "C.D. Chinguaro \"A\""
-                    },
-                    {
-                      "away": "C.D. Tenerife Iberia Toscal",
-                      "date": "2026-09-25T21:00:00",
-                      "home": "C.F.S. Casa Juv. La Matanza"
-                    },
-                    {
-                      "away": "Doctoral FS",
-                      "date": "2026-09-25T21:15:00",
-                      "home": "Suntryp Agüimes FS"
-                    },
-                    {
-                      "away": "NovoComunidades-Bugedo FS",
-                      "date": "2026-09-26T15:00:00",
-                      "home": "C.D. Cisneros Alter"
-                    },
-                    {
-                      "away": "Basilea Futbol Sala C.D.",
-                      "date": "2026-09-26T15:00:00",
-                      "home": "AD Duggi-San Fernando"
-                    },
-                    {
-                      "away": "F.S. Los Pinos",
-                      "date": "2026-09-26T16:00:00",
-                      "home": "Aguas de Teror"
-                    }
-                  ]
-                }
-              ]
             }
           ]
         },
@@ -7344,6 +7167,7 @@
                   "officialName": "Valdetires Ferrol F.S.F."
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -8726,8 +8550,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g2",
