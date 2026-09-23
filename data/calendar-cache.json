@@ -279,6 +279,9 @@
   "33836181|33836182|J1|cfsgrancanariateldeportivo|grupoformatvilalbafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697259&NPcd_Pdf=1",
   "33836181|33836182|J1|encemarinfutsal|reycoburelafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697261&NPcd_Pdf=1",
   "33836181|33836182|J1|udctxantreakke|elgaiterorodilesfsf": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697257&NPcd_Pdf=1",
+  "33836181|33836182|J2|cdsegosala|cfsgrancanariateldeportivo": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697268&NPcd_Pdf=1",
+  "33836181|33836182|J2|clubdeportivoteidayaa|cdemusleragswa": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697264&NPcd_Pdf=1",
+  "33836181|33836182|J2|elgaiterorodilesfsf|admionofsf": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697265&NPcd_Pdf=1",
   "33836181|33836183|J1|aecslhospitalet|clubdeportivonouturiafsfa": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697496&NPcd_Pdf=1",
   "33836181|33836183|J1|aepenyaespluguessalvatlogisticaa|gruporeciclartecesaraugusta": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697500&NPcd_Pdf=1",
   "33836181|33836183|J1|clubdeportivosanpabloibiza|lescortsaeb": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697501&NPcd_Pdf=1",
@@ -1414,7 +1417,7 @@
         },
         {
           "away": "Ye Faky F.S.",
-          "date": "2026-09-20T12:00:00",
+          "date": "2026-09-20T12:04:00",
           "home": "Sant Joan Despí CFS Cumsa"
         },
         {
@@ -2688,7 +2691,7 @@
           "home": "CDE Muslera GSW \"A\""
         },
         {
-          "away": "CLUB DEPORTIVO TEIDAYA \" A \"",
+          "away": "CLUB DEPORTIVO TEIDAYA \"A\"",
           "date": "2026-09-20T13:30:00",
           "home": "A.D. Mioño FSF"
         }
@@ -2794,7 +2797,7 @@
           "home": "Grupo FORMA-T Vilalba F.S."
         },
         {
-          "away": "CDE Muslera GSW \" A \"",
+          "away": "CDE Muslera GSW \"A\"",
           "date": "2026-09-26T19:00:00",
           "home": "CLUB DEPORTIVO TEIDAYA \"A\""
         },
@@ -3744,7 +3747,7 @@
           "home": "Xerez Toyota Nimauto"
         },
         {
-          "away": "Unión África Ceutí \" A \"",
+          "away": "Unión África Ceutí \"A\"",
           "date": "2026-09-20T12:04:00",
           "home": "C.E. Futsal Gestoria Luis Mataró"
         }
@@ -3888,7 +3891,7 @@
         },
         {
           "away": "Ribera Navarra FS",
-          "date": "2026-09-26T17:00:00",
+          "date": null,
           "home": "Barça Atlètic"
         },
         {
