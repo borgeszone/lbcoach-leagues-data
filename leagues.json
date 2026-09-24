@@ -1,9 +1,9 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-23T11:05:17+00:00",
+  "lastUpdated": "2026-09-24T11:25:55+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
-    "rfef: la PNFG rate-limitó 7 jornada/s y se abandonaron 7 grupo/s; esas jornadas salen de la caché o del JSON anterior",
+    "rfef: la PNFG rate-limitó 8 jornada/s y se abandonaron 8 grupo/s; esas jornadas salen de la caché o del JSON anterior",
     "fcf-1cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-2cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-3cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
@@ -1306,7 +1306,7 @@
               "officialName": "C.D. Melistar"
             },
             {
-              "name": "Futsal Gestoria Luis Mataró",
+              "name": "Mataró Futsal",
               "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/70f2d7d910390790b0ee8a247317880e.jpg",
               "officialName": "C.E. Futsal Gestoria Luis Mataró"
             },
@@ -1363,7 +1363,6 @@
               "officialName": "Zambú CFS Pinatar Cerramientos Abatibles"
             }
           ],
-          "jornadasTotal": 30,
           "teamsSource": "calendario",
           "calendar": [
             {
@@ -2956,7 +2955,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "jornadasTotal": 30
         },
         {
           "id": "rfef-segunda-b-fs-masc",
@@ -6782,7 +6782,7 @@
                   "officialName": "C.D. Tenerife Iberia Toscal"
                 },
                 {
-                  "name": "La Matanza FS",
+                  "name": "Matanza Tenerife FS",
                   "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/ee0f5db56615da8358ec4af7e6ab069d.jpg",
                   "officialName": "C.F.S. Casa Juv. La Matanza"
                 },
@@ -6797,9 +6797,8 @@
                   "officialName": "F.S. Los Pinos"
                 },
                 {
-                  "name": "Gran Canaria",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205278_50x50.png",
-                  "officialName": "Gran Canaria FS"
+                  "name": "Gran Canaria FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/205278_50x50.png"
                 },
                 {
                   "name": "La Salle San Ildefonso",
@@ -7193,6 +7192,10 @@
                   "name": "AD Mioño",
                   "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/22/91afc7059c04b707fa8e3e7f63f213f3.jpg",
                   "officialName": "A.D. Mioño FSF"
+                },
+                {
+                  "name": "At. Arnoia",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079040085_IMG_0201.png"
                 },
                 {
                   "name": "At. Arnoya",
