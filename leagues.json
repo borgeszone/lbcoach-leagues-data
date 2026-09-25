@@ -1,9 +1,9 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-24T11:25:55+00:00",
+  "lastUpdated": "2026-09-25T11:25:54+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
-    "rfef: la PNFG rate-limitó 8 jornada/s y se abandonaron 8 grupo/s; esas jornadas salen de la caché o del JSON anterior",
+    "rfef: la PNFG rate-limitó 7 jornada/s y se abandonaron 7 grupo/s; esas jornadas salen de la caché o del JSON anterior",
     "fcf-1cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-2cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-3cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
@@ -3163,7 +3163,7 @@
                   "officialName": "A.D. Rioja Sala"
                 },
                 {
-                  "name": "San Juan FS",
+                  "name": "AD San Juan FS",
                   "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/1201037.png",
                   "officialName": "A.D. San Juan"
                 },
@@ -7269,7 +7269,6 @@
                   "officialName": "Valdetires Ferrol F.S.F."
                 }
               ],
-              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -8652,7 +8651,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30
             },
             {
               "id": "g2",
@@ -8680,7 +8680,7 @@
                 {
                   "name": "Nou Turia",
                   "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079007475_logo_nouturia_azul.png",
-                  "officialName": "Club Deportivo Nou Turia FSF \" A \""
+                  "officialName": "Club Deportivo Nou Turia FSF \"A\""
                 },
                 {
                   "name": "San Pablo-Eivisa",
@@ -8716,14 +8716,17 @@
                   "officialName": "Lainco Esportiu Rubi F.S."
                 },
                 {
+                  "name": "La Villa",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079039322_475432209_794430852880919_2482076283060241869_n.jpg"
+                },
+                {
                   "name": "La Villa Móstoles",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079039322_475432209_794430852880919_2482076283060241869_n.jpg",
-                  "officialName": "La Villa"
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079039322_475432209_794430852880919_2482076283060241869_n.jpg"
                 },
                 {
                   "name": "AE Les Corts B",
                   "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079025168_LOGO_50_COLOR.png",
-                  "officialName": "Les Corts, A.E. \" B \""
+                  "officialName": "Les Corts, A.E. \"B\""
                 },
                 {
                   "name": "CD La Concordia",
@@ -8736,6 +8739,7 @@
                   "officialName": "Somriu Futbol Sala Ripollet"
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -9374,8 +9378,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g3",
@@ -9455,10 +9458,11 @@
                 },
                 {
                   "name": "UDAF Afanion",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20223/21/cf91ee0d1f26ad625deecd344de7e135.jpg",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079039995_LOGO_UDAF.png",
                   "officialName": "UDAF Afanion \"A\""
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -9559,8 +9563,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             }
           ]
         }
