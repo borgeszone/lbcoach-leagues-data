@@ -213,8 +213,14 @@
   "33836163|33836164|J1|noiaportusapostoli|cajaruralatleticobenaventefs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702000&NPcd_Pdf=1",
   "33836163|33836164|J1|oesteofs|sdxovefs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702001&NPcd_Pdf=1",
   "33836163|33836164|J1|sibuscascocheribeirafutbolsala|cdcomposala": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70701999&NPcd_Pdf=1",
+  "33836163|33836164|J2|5corunafs|fssalamancaenergiaduero": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702012&NPcd_Pdf=1",
+  "33836163|33836164|J2|adclugosala|cdtiernogalvan": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702014&NPcd_Pdf=1",
   "33836163|33836164|J2|cajaruralatleticobenaventefs|sibuscascocheribeirafutbolsala": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702008&NPcd_Pdf=1",
   "33836163|33836164|J2|cdalbensefs|cajaruralriversalazamora": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702013&NPcd_Pdf=1",
+  "33836163|33836164|J2|cdcomposala|deporcylguardofs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702007&NPcd_Pdf=1",
+  "33836163|33836164|J2|racingdemieres|grupoformatvilalbafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702011&NPcd_Pdf=1",
+  "33836163|33836164|J2|sdxovefs|noiaportusapostoli": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702009&NPcd_Pdf=1",
+  "33836163|33836164|J2|stellaeleispontevedrafs|oesteofs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702010&NPcd_Pdf=1",
   "33836163|33836165|J1|acontebrotaustefs|adriojasala": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702244&NPcd_Pdf=1",
   "33836163|33836165|J1|antiguokokeestudiodentalbarrenechea|emdcadreteforjascasado": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702245&NPcd_Pdf=1",
   "33836163|33836165|J1|corasfutsalzaragoza|entrerriosautomatizacion": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702243&NPcd_Pdf=1",
@@ -870,14 +876,14 @@
           "home": "Stellae Leis Pontevedra F.S."
         },
         {
+          "away": "F.S. Salamanca Energía Duero",
+          "date": "2026-09-26T17:00:00",
+          "home": "5 Coruña F.S."
+        },
+        {
           "away": "C.D. Tierno Galván",
           "date": "2026-09-26T17:00:00",
           "home": "ADC Lugo Sala"
-        },
-        {
-          "away": "F.S. Salamanca Energía Duero",
-          "date": "2026-09-26T17:30:00",
-          "home": "5 Coruña F.S."
         },
         {
           "away": "Deporcyl - Guardo FS",
@@ -1093,7 +1099,7 @@
         },
         {
           "away": "Otxartabe C.D.",
-          "date": "2026-09-26T18:30:00",
+          "date": "2026-09-26T18:35:00",
           "home": "C.D.Ibararte"
         },
         {
@@ -1103,7 +1109,7 @@
         },
         {
           "away": "Sala Quinto CD",
-          "date": "2026-09-27T11:00:00",
+          "date": "2026-09-27T11:25:00",
           "home": "Entrerrios Automatización"
         },
         {
