@@ -1,9 +1,9 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-27T11:39:30+00:00",
+  "lastUpdated": "2026-09-28T12:55:34+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
-    "rfef: la PNFG rate-limitó 7 jornada/s y se abandonaron 7 grupo/s; esas jornadas salen de la caché o del JSON anterior",
+    "rfef: la PNFG rate-limitó 12 jornada/s y se abandonaron 6 grupo/s; agotado el presupuesto de 12 fallos, el resto del calendario no se pidió. Lo publicado sale de la caché y del JSON anterior",
     "fcf-1cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-2cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-3cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
@@ -28,13 +28,9 @@
               "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/101001.png"
             },
             {
-              "name": "Industrias Santa Coloma",
-              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png",
-              "officialName": "Catgas Energía Santa Coloma"
-            },
-            {
-              "name": "CD Xota FS",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/usr/local/projects/weblogic/repository/AS400/90/DOCS/201210/21/12041381.jpg"
+              "name": "Osasuna Magna",
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/20.png",
+              "officialName": "C.A. Osasuna Magna"
             },
             {
               "name": "Córdoba Patrimonio",
@@ -44,6 +40,10 @@
             {
               "name": "ElPozo Murcia Costa Cálida",
               "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079009167_Pozo.png"
+            },
+            {
+              "name": "FS García",
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png"
             },
             {
               "name": "Palma Futsal",
@@ -58,7 +58,7 @@
             {
               "name": "Jaén FS",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/25.png",
-              "officialName": "Jaen Paraiso Interior F.S."
+              "officialName": "Jaén Paraiso Interior FS."
             },
             {
               "name": "Jimbee Cartagena",
@@ -72,12 +72,12 @@
             {
               "name": "O Parrulo Ferrol",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/29.png",
-              "officialName": "O Parrulo Ferrol F.S."
+              "officialName": "O Parrulo Ferrol FS."
             },
             {
               "name": "Manzanares FS",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/9.png",
-              "officialName": "Quesos El Hidalgo Manzanares F.S."
+              "officialName": "Quesos El Hidalgo Manzanares FS"
             },
             {
               "name": "Peñíscola FS",
@@ -86,8 +86,8 @@
             },
             {
               "name": "El Ejido FS",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/209175_50x50.png",
-              "officialName": "Sur Seeds El Ejido F.S."
+              "logoUrl": null,
+              "officialName": "Sur Seed CD El Ejido Futsal"
             },
             {
               "name": "Viña Albali Valdepeñas",
@@ -95,12 +95,10 @@
             },
             {
               "name": "Wanapix Sala 10",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008334_escudo.png",
-              "officialName": "Wanapix"
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/23.png",
+              "officialName": "Wanapix AD Sala 10"
             }
           ],
-          "jornadasTotal": 15,
-          "teamsSource": "calendario",
           "calendar": [
             {
               "jornada": 1,
@@ -1280,7 +1278,9 @@
               ],
               "phase": "Clausura"
             }
-          ]
+          ],
+          "teamsSource": "calendario",
+          "jornadasTotal": 15
         },
         {
           "id": "rfef-segunda-fs-masc",
@@ -1363,7 +1363,6 @@
               "officialName": "Zambú CFS Pinatar Cerramientos Abatibles"
             }
           ],
-          "teamsSource": "calendario",
           "calendar": [
             {
               "jornada": 1,
@@ -2956,7 +2955,8 @@
               ]
             }
           ],
-          "jornadasTotal": 30
+          "jornadasTotal": 30,
+          "teamsSource": "calendario"
         },
         {
           "id": "rfef-segunda-b-fs-masc",
@@ -3045,58 +3045,56 @@
                   "officialName": "Stellae Leis Pontevedra F.S."
                 }
               ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
                   "matches": [
                     {
+                      "home": "Noia Portus Apostoli",
                       "away": "Caja Rural Atlético Benavente FS",
                       "date": "2026-09-19T18:00:00",
-                      "home": "Noia Portus Apostoli",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702000&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Grupo FORMA-T Vilalba F.S.",
                       "away": "Stellae Leis Pontevedra F.S.",
                       "date": "2026-09-19T18:30:00",
-                      "home": "Grupo FORMA-T Vilalba F.S.",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702002&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Caja Rural River Sala Zamora",
                       "away": "5 Coruña F.S.",
                       "date": "2026-09-19T18:30:00",
-                      "home": "Caja Rural River Sala Zamora",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702004&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Deporcyl - Guardo FS",
                       "away": "ADC Lugo Sala",
                       "date": "2026-09-19T18:30:00",
-                      "home": "Deporcyl - Guardo FS",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702006&NPcd_Pdf=1"
                     },
                     {
+                      "home": "O Esteo F.S.",
                       "away": "S.D. Xove F.S.",
                       "date": "2026-09-19T19:00:00",
-                      "home": "O Esteo F.S.",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702001&NPcd_Pdf=1"
                     },
                     {
+                      "home": "F.S. Salamanca Energía Duero",
                       "away": "Racing de Mieres",
                       "date": "2026-09-19T19:00:00",
-                      "home": "F.S. Salamanca Energía Duero",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702003&NPcd_Pdf=1"
                     },
                     {
+                      "home": "C.D. Tierno Galván",
                       "away": "CD Albense FS",
                       "date": "2026-09-19T19:30:00",
-                      "home": "C.D. Tierno Galván",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702005&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Sibuscascoche Ribeira Fútbol Sala",
                       "away": "C.D. COMPOSALA",
                       "date": "2026-09-19T20:00:00",
-                      "home": "Sibuscascoche Ribeira Fútbol Sala",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70701999&NPcd_Pdf=1"
                     }
                   ]
@@ -3105,48 +3103,588 @@
                   "jornada": 2,
                   "matches": [
                     {
-                      "away": "C.D. Tierno Galván",
-                      "date": null,
-                      "home": "ADC Lugo Sala"
-                    },
-                    {
+                      "home": "Stellae Leis Pontevedra F.S.",
                       "away": "O Esteo F.S.",
                       "date": "2026-09-26T17:00:00",
-                      "home": "Stellae Leis Pontevedra F.S."
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702010&NPcd_Pdf=1"
                     },
                     {
+                      "home": "5 Coruña F.S.",
                       "away": "F.S. Salamanca Energía Duero",
-                      "date": "2026-09-26T17:30:00",
-                      "home": "5 Coruña F.S."
+                      "date": "2026-09-26T17:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702012&NPcd_Pdf=1"
                     },
                     {
+                      "home": "ADC Lugo Sala",
+                      "away": "C.D. Tierno Galván",
+                      "date": "2026-09-26T17:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702014&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "C.D. COMPOSALA",
                       "away": "Deporcyl - Guardo FS",
                       "date": "2026-09-26T18:00:00",
-                      "home": "C.D. COMPOSALA"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702007&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Racing de Mieres",
                       "away": "Grupo FORMA-T Vilalba F.S.",
                       "date": "2026-09-26T18:00:00",
-                      "home": "Racing de Mieres"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702011&NPcd_Pdf=1"
                     },
                     {
+                      "home": "CD Albense FS",
                       "away": "Caja Rural River Sala Zamora",
                       "date": "2026-09-26T18:00:00",
-                      "home": "CD Albense FS"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702013&NPcd_Pdf=1"
                     },
                     {
+                      "home": "S.D. Xove F.S.",
+                      "away": "Noia Portus Apostoli",
+                      "date": "2026-09-26T18:45:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702009&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Caja Rural Atlético Benavente FS",
                       "away": "Sibuscascoche Ribeira Fútbol Sala",
                       "date": "2026-09-26T19:00:00",
-                      "home": "Caja Rural Atlético Benavente FS"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702008&NPcd_Pdf=1"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 3,
+                  "matches": [
+                    {
+                      "home": "Sibuscascoche Ribeira Fútbol Sala",
+                      "away": "S.D. Xove F.S.",
+                      "date": "2026-10-03T13:00:00",
+                      "actaUrl": null
                     },
                     {
+                      "home": "C.D. COMPOSALA",
+                      "away": "Caja Rural Atlético Benavente FS",
+                      "date": "2026-10-03T18:00:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Noia Portus Apostoli",
+                      "away": "Stellae Leis Pontevedra F.S.",
+                      "date": "2026-10-03T18:00:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "O Esteo F.S.",
+                      "away": "Racing de Mieres",
+                      "date": "2026-10-03T18:00:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Grupo FORMA-T Vilalba F.S.",
+                      "away": "5 Coruña F.S.",
+                      "date": "2026-10-03T18:30:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Deporcyl - Guardo FS",
+                      "away": "C.D. Tierno Galván",
+                      "date": "2026-10-03T18:30:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702022&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "F.S. Salamanca Energía Duero",
+                      "away": "CD Albense FS",
+                      "date": "2026-10-03T19:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702020&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Caja Rural River Sala Zamora",
+                      "away": "ADC Lugo Sala",
+                      "date": "2026-10-03T19:00:00",
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 4,
+                  "matches": [
+                    {
+                      "home": "C.D. Tierno Galván",
+                      "away": "Caja Rural River Sala Zamora",
+                      "date": "2026-10-09T20:15:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Caja Rural Atlético Benavente FS",
+                      "away": "Deporcyl - Guardo FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "S.D. Xove F.S.",
+                      "away": "C.D. COMPOSALA",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Stellae Leis Pontevedra F.S.",
+                      "away": "Sibuscascoche Ribeira Fútbol Sala",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "5 Coruña F.S.",
+                      "away": "O Esteo F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "ADC Lugo Sala",
+                      "away": "F.S. Salamanca Energía Duero",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Racing de Mieres",
                       "away": "Noia Portus Apostoli",
-                      "date": "2026-09-26T19:00:00",
-                      "home": "S.D. Xove F.S."
+                      "date": "2026-10-10T18:00:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "CD Albense FS",
+                      "away": "Grupo FORMA-T Vilalba F.S.",
+                      "date": "2026-10-10T18:00:00",
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 5,
+                  "matches": [
+                    {
+                      "home": "Caja Rural Atlético Benavente FS",
+                      "away": "S.D. Xove F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "C.D. COMPOSALA",
+                      "away": "Stellae Leis Pontevedra F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Sibuscascoche Ribeira Fútbol Sala",
+                      "away": "Racing de Mieres",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Noia Portus Apostoli",
+                      "away": "5 Coruña F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "O Esteo F.S.",
+                      "away": "CD Albense FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Grupo FORMA-T Vilalba F.S.",
+                      "away": "ADC Lugo Sala",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "F.S. Salamanca Energía Duero",
+                      "away": "C.D. Tierno Galván",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Deporcyl - Guardo FS",
+                      "away": "Caja Rural River Sala Zamora",
+                      "date": null,
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 6,
+                  "matches": [
+                    {
+                      "home": "S.D. Xove F.S.",
+                      "away": "Deporcyl - Guardo FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Stellae Leis Pontevedra F.S.",
+                      "away": "Caja Rural Atlético Benavente FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "5 Coruña F.S.",
+                      "away": "Sibuscascoche Ribeira Fútbol Sala",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "ADC Lugo Sala",
+                      "away": "O Esteo F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "C.D. Tierno Galván",
+                      "away": "Grupo FORMA-T Vilalba F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Caja Rural River Sala Zamora",
+                      "away": "F.S. Salamanca Energía Duero",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Racing de Mieres",
+                      "away": "C.D. COMPOSALA",
+                      "date": "2026-10-24T18:00:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "CD Albense FS",
+                      "away": "Noia Portus Apostoli",
+                      "date": "2026-10-24T18:00:00",
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 7,
+                  "matches": [
+                    {
+                      "home": "S.D. Xove F.S.",
+                      "away": "Stellae Leis Pontevedra F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Caja Rural Atlético Benavente FS",
+                      "away": "Racing de Mieres",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "C.D. COMPOSALA",
+                      "away": "5 Coruña F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Sibuscascoche Ribeira Fútbol Sala",
+                      "away": "CD Albense FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Noia Portus Apostoli",
+                      "away": "ADC Lugo Sala",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "O Esteo F.S.",
+                      "away": "C.D. Tierno Galván",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Grupo FORMA-T Vilalba F.S.",
+                      "away": "Caja Rural River Sala Zamora",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Deporcyl - Guardo FS",
+                      "away": "F.S. Salamanca Energía Duero",
+                      "date": null,
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 8,
+                  "matches": [
+                    {
+                      "home": "Stellae Leis Pontevedra F.S.",
+                      "away": "Deporcyl - Guardo FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "5 Coruña F.S.",
+                      "away": "Caja Rural Atlético Benavente FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "ADC Lugo Sala",
+                      "away": "Sibuscascoche Ribeira Fútbol Sala",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "C.D. Tierno Galván",
+                      "away": "Noia Portus Apostoli",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Caja Rural River Sala Zamora",
+                      "away": "O Esteo F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "F.S. Salamanca Energía Duero",
+                      "away": "Grupo FORMA-T Vilalba F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Racing de Mieres",
+                      "away": "S.D. Xove F.S.",
+                      "date": "2026-11-07T18:00:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "CD Albense FS",
+                      "away": "C.D. COMPOSALA",
+                      "date": "2026-11-07T18:00:00",
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 9,
+                  "matches": [
+                    {
+                      "home": "Stellae Leis Pontevedra F.S.",
+                      "away": "Racing de Mieres",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "S.D. Xove F.S.",
+                      "away": "5 Coruña F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Caja Rural Atlético Benavente FS",
+                      "away": "CD Albense FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "C.D. COMPOSALA",
+                      "away": "ADC Lugo Sala",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Sibuscascoche Ribeira Fútbol Sala",
+                      "away": "C.D. Tierno Galván",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Noia Portus Apostoli",
+                      "away": "Caja Rural River Sala Zamora",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "O Esteo F.S.",
+                      "away": "F.S. Salamanca Energía Duero",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Deporcyl - Guardo FS",
+                      "away": "Grupo FORMA-T Vilalba F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 10,
+                  "matches": [
+                    {
+                      "home": "5 Coruña F.S.",
+                      "away": "Stellae Leis Pontevedra F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "ADC Lugo Sala",
+                      "away": "Caja Rural Atlético Benavente FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "C.D. Tierno Galván",
+                      "away": "C.D. COMPOSALA",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Caja Rural River Sala Zamora",
+                      "away": "Sibuscascoche Ribeira Fútbol Sala",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "F.S. Salamanca Energía Duero",
+                      "away": "Noia Portus Apostoli",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Grupo FORMA-T Vilalba F.S.",
+                      "away": "O Esteo F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Racing de Mieres",
+                      "away": "Deporcyl - Guardo FS",
+                      "date": "2026-11-21T18:00:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "CD Albense FS",
+                      "away": "S.D. Xove F.S.",
+                      "date": "2026-11-21T18:00:00",
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 11,
+                  "matches": [
+                    {
+                      "home": "Stellae Leis Pontevedra F.S.",
+                      "away": "CD Albense FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "S.D. Xove F.S.",
+                      "away": "ADC Lugo Sala",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Caja Rural Atlético Benavente FS",
+                      "away": "C.D. Tierno Galván",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "C.D. COMPOSALA",
+                      "away": "Caja Rural River Sala Zamora",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Sibuscascoche Ribeira Fútbol Sala",
+                      "away": "F.S. Salamanca Energía Duero",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Noia Portus Apostoli",
+                      "away": "Grupo FORMA-T Vilalba F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Deporcyl - Guardo FS",
+                      "away": "O Esteo F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Racing de Mieres",
+                      "away": "5 Coruña F.S.",
+                      "date": "2026-11-28T18:00:00",
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 12,
+                  "matches": [
+                    {
+                      "home": "5 Coruña F.S.",
+                      "away": "Deporcyl - Guardo FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "ADC Lugo Sala",
+                      "away": "Stellae Leis Pontevedra F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "C.D. Tierno Galván",
+                      "away": "S.D. Xove F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Caja Rural River Sala Zamora",
+                      "away": "Caja Rural Atlético Benavente FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "F.S. Salamanca Energía Duero",
+                      "away": "C.D. COMPOSALA",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Grupo FORMA-T Vilalba F.S.",
+                      "away": "Sibuscascoche Ribeira Fútbol Sala",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "O Esteo F.S.",
+                      "away": "Noia Portus Apostoli",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "CD Albense FS",
+                      "away": "Racing de Mieres",
+                      "date": "2026-12-05T18:00:00",
+                      "actaUrl": null
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30,
+              "teamsSource": "calendario"
             },
             {
               "id": "g2",
@@ -3229,8 +3767,6 @@
                   "officialName": "Vulcanizados Ruiz Tafa FS"
                 }
               ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -4612,7 +5148,9 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "teamsSource": "calendario",
+              "jornadasTotal": 30
             },
             {
               "id": "g3",
@@ -4698,7 +5236,6 @@
                   "officialName": "Ye Faky F.S."
                 }
               ],
-              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -5931,6 +6468,7 @@
                   ]
                 }
               ],
+              "teamsSource": "calendario",
               "jornadasTotal": 30
             },
             {
@@ -5953,7 +6491,7 @@
                 },
                 {
                   "name": "CDU Loeches FS",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079009157_Escudo_de_Loeches.svg__66_pix_.png",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079040011_LOECHES.jpg",
                   "officialName": "Club Unión Deportiva Loeches"
                 },
                 {
@@ -6017,50 +6555,57 @@
                   "officialName": "Unión Tres Cantos FS"
                 }
               ],
-              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
                   "matches": [
                     {
+                      "home": "Grupo López Bolaños F.S. \"A\"",
                       "away": "Colegio El Valle C.D.",
                       "date": "2026-09-19T17:00:00",
-                      "home": "Grupo López Bolaños F.S. \"A\""
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702724&NPcd_Pdf=1"
                     },
                     {
+                      "home": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
                       "away": "Entreparéntesis - Enertel FS Talavera",
                       "date": "2026-09-19T17:00:00",
-                      "home": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702725&NPcd_Pdf=1"
                     },
                     {
+                      "home": "El Alamo F.S.",
                       "away": "Inter JP Financial F.S.",
                       "date": "2026-09-19T17:00:00",
-                      "home": "El Alamo F.S."
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702726&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Soliss A.D. Bargas",
                       "away": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
                       "date": "2026-09-19T17:30:00",
-                      "home": "Soliss A.D. Bargas"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702720&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Naturpellet San Cristóbal",
                       "away": "Club Unión Deportiva Loeches",
-                      "date": "2026-09-19T19:00:00",
-                      "home": "Naturpellet San Cristóbal"
+                      "date": "2026-09-19T19:25:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702722&NPcd_Pdf=1"
                     },
                     {
+                      "home": "CD Albacete FS",
                       "away": "Unión Tres Cantos FS",
                       "date": "2026-09-19T19:30:00",
-                      "home": "CD Albacete FS"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702719&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Athletic Club Móstoles",
                       "away": "Club Union Deportiva Rena",
                       "date": "2026-09-20T13:00:00",
-                      "home": "Athletic Club Móstoles"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702723&NPcd_Pdf=1"
                     },
                     {
+                      "home": "CD Cobisa FS \"A\"",
                       "away": "Serbis AD Alcorcón FS",
                       "date": "2026-09-20T18:00:00",
-                      "home": "CD Cobisa FS \"A\""
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702721&NPcd_Pdf=1"
                     }
                   ]
                 },
@@ -6068,49 +6613,588 @@
                   "jornada": 2,
                   "matches": [
                     {
+                      "home": "Club Union Deportiva Rena",
+                      "away": "Naturpellet San Cristóbal",
+                      "date": "2026-09-25T21:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702731&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Entreparéntesis - Enertel FS Talavera",
+                      "away": "Grupo López Bolaños F.S. \"A\"",
+                      "date": "2026-09-26T18:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702733&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Serbis AD Alcorcón FS",
+                      "away": "Soliss A.D. Bargas",
+                      "date": "2026-09-26T19:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702729&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Club Unión Deportiva Loeches",
+                      "away": "CD Cobisa FS \"A\"",
+                      "date": "2026-09-26T19:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702730&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
+                      "away": "CD Albacete FS",
+                      "date": "2026-09-26T19:10:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702728&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Colegio El Valle C.D.",
+                      "away": "Athletic Club Móstoles",
+                      "date": "2026-09-27T12:30:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702732&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Unión Tres Cantos FS",
+                      "away": "El Alamo F.S.",
+                      "date": "2026-09-27T13:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702727&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Inter JP Financial F.S.",
+                      "away": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
+                      "date": "2026-09-27T13:15:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702734&NPcd_Pdf=1"
+                    }
+                  ]
+                },
+                {
+                  "jornada": 3,
+                  "matches": [
+                    {
+                      "home": "Unión Tres Cantos FS",
+                      "away": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Grupo López Bolaños F.S. \"A\"",
+                      "away": "Inter JP Financial F.S.",
+                      "date": "2026-10-03T17:00:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Soliss A.D. Bargas",
+                      "away": "Club Unión Deportiva Loeches",
+                      "date": "2026-10-03T17:30:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "CD Cobisa FS \"A\"",
+                      "away": "Club Union Deportiva Rena",
+                      "date": "2026-10-03T18:30:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Naturpellet San Cristóbal",
+                      "away": "Colegio El Valle C.D.",
+                      "date": "2026-10-03T18:30:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702739&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "CD Albacete FS",
+                      "away": "Serbis AD Alcorcón FS",
+                      "date": "2026-10-03T19:30:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "El Alamo F.S.",
+                      "away": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
+                      "date": "2026-10-04T13:00:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Athletic Club Móstoles",
+                      "away": "Entreparéntesis - Enertel FS Talavera",
+                      "date": "2026-10-04T13:15:00",
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 4,
+                  "matches": [
+                    {
+                      "home": "Entreparéntesis - Enertel FS Talavera",
+                      "away": "Naturpellet San Cristóbal",
+                      "date": "2026-10-09T21:30:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
                       "away": "El Alamo F.S.",
                       "date": null,
-                      "home": "Unión Tres Cantos FS"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Serbis AD Alcorcón FS",
+                      "away": "Unión Tres Cantos FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Club Unión Deportiva Loeches",
                       "away": "CD Albacete FS",
                       "date": null,
-                      "home": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\""
+                      "actaUrl": null
                     },
                     {
+                      "home": "Club Union Deportiva Rena",
                       "away": "Soliss A.D. Bargas",
                       "date": null,
-                      "home": "Serbis AD Alcorcón FS"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Colegio El Valle C.D.",
                       "away": "CD Cobisa FS \"A\"",
                       "date": null,
-                      "home": "Club Unión Deportiva Loeches"
+                      "actaUrl": null
                     },
                     {
-                      "away": "Naturpellet San Cristóbal",
-                      "date": null,
-                      "home": "Club Union Deportiva Rena"
-                    },
-                    {
+                      "home": "Inter JP Financial F.S.",
                       "away": "Athletic Club Móstoles",
                       "date": null,
-                      "home": "Colegio El Valle C.D."
+                      "actaUrl": null
                     },
                     {
+                      "home": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
                       "away": "Grupo López Bolaños F.S. \"A\"",
                       "date": null,
-                      "home": "Entreparéntesis - Enertel FS Talavera"
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 5,
+                  "matches": [
+                    {
+                      "home": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
+                      "away": "Serbis AD Alcorcón FS",
+                      "date": null,
+                      "actaUrl": null
                     },
                     {
+                      "home": "Unión Tres Cantos FS",
+                      "away": "Club Unión Deportiva Loeches",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "CD Albacete FS",
+                      "away": "Club Union Deportiva Rena",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Soliss A.D. Bargas",
+                      "away": "Colegio El Valle C.D.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "CD Cobisa FS \"A\"",
+                      "away": "Entreparéntesis - Enertel FS Talavera",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Naturpellet San Cristóbal",
+                      "away": "Inter JP Financial F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Athletic Club Móstoles",
                       "away": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
                       "date": null,
-                      "home": "Inter JP Financial F.S."
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "El Alamo F.S.",
+                      "away": "Grupo López Bolaños F.S. \"A\"",
+                      "date": null,
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 6,
+                  "matches": [
+                    {
+                      "home": "Serbis AD Alcorcón FS",
+                      "away": "El Alamo F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Club Unión Deportiva Loeches",
+                      "away": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Club Union Deportiva Rena",
+                      "away": "Unión Tres Cantos FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Colegio El Valle C.D.",
+                      "away": "CD Albacete FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Entreparéntesis - Enertel FS Talavera",
+                      "away": "Soliss A.D. Bargas",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Inter JP Financial F.S.",
+                      "away": "CD Cobisa FS \"A\"",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
+                      "away": "Naturpellet San Cristóbal",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Grupo López Bolaños F.S. \"A\"",
+                      "away": "Athletic Club Móstoles",
+                      "date": null,
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 7,
+                  "matches": [
+                    {
+                      "home": "Serbis AD Alcorcón FS",
+                      "away": "Club Unión Deportiva Loeches",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
+                      "away": "Club Union Deportiva Rena",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Unión Tres Cantos FS",
+                      "away": "Colegio El Valle C.D.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "CD Albacete FS",
+                      "away": "Entreparéntesis - Enertel FS Talavera",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Soliss A.D. Bargas",
+                      "away": "Inter JP Financial F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "CD Cobisa FS \"A\"",
+                      "away": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Naturpellet San Cristóbal",
+                      "away": "Grupo López Bolaños F.S. \"A\"",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "El Alamo F.S.",
+                      "away": "Athletic Club Móstoles",
+                      "date": null,
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 8,
+                  "matches": [
+                    {
+                      "home": "Club Unión Deportiva Loeches",
+                      "away": "El Alamo F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Club Union Deportiva Rena",
+                      "away": "Serbis AD Alcorcón FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Colegio El Valle C.D.",
+                      "away": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Entreparéntesis - Enertel FS Talavera",
+                      "away": "Unión Tres Cantos FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Inter JP Financial F.S.",
+                      "away": "CD Albacete FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
+                      "away": "Soliss A.D. Bargas",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Grupo López Bolaños F.S. \"A\"",
+                      "away": "CD Cobisa FS \"A\"",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Athletic Club Móstoles",
+                      "away": "Naturpellet San Cristóbal",
+                      "date": null,
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 9,
+                  "matches": [
+                    {
+                      "home": "Club Unión Deportiva Loeches",
+                      "away": "Club Union Deportiva Rena",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Serbis AD Alcorcón FS",
+                      "away": "Colegio El Valle C.D.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
+                      "away": "Entreparéntesis - Enertel FS Talavera",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Unión Tres Cantos FS",
+                      "away": "Inter JP Financial F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "CD Albacete FS",
+                      "away": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Soliss A.D. Bargas",
+                      "away": "Grupo López Bolaños F.S. \"A\"",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "CD Cobisa FS \"A\"",
+                      "away": "Athletic Club Móstoles",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "El Alamo F.S.",
+                      "away": "Naturpellet San Cristóbal",
+                      "date": null,
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 10,
+                  "matches": [
+                    {
+                      "home": "Club Union Deportiva Rena",
+                      "away": "El Alamo F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Colegio El Valle C.D.",
+                      "away": "Club Unión Deportiva Loeches",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Entreparéntesis - Enertel FS Talavera",
+                      "away": "Serbis AD Alcorcón FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Inter JP Financial F.S.",
+                      "away": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
+                      "away": "Unión Tres Cantos FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Grupo López Bolaños F.S. \"A\"",
+                      "away": "CD Albacete FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Athletic Club Móstoles",
+                      "away": "Soliss A.D. Bargas",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Naturpellet San Cristóbal",
+                      "away": "CD Cobisa FS \"A\"",
+                      "date": null,
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 11,
+                  "matches": [
+                    {
+                      "home": "Club Union Deportiva Rena",
+                      "away": "Colegio El Valle C.D.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Club Unión Deportiva Loeches",
+                      "away": "Entreparéntesis - Enertel FS Talavera",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Serbis AD Alcorcón FS",
+                      "away": "Inter JP Financial F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
+                      "away": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Unión Tres Cantos FS",
+                      "away": "Grupo López Bolaños F.S. \"A\"",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "CD Albacete FS",
+                      "away": "Athletic Club Móstoles",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Soliss A.D. Bargas",
+                      "away": "Naturpellet San Cristóbal",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "El Alamo F.S.",
+                      "away": "CD Cobisa FS \"A\"",
+                      "date": null,
+                      "actaUrl": null
+                    }
+                  ]
+                },
+                {
+                  "jornada": 12,
+                  "matches": [
+                    {
+                      "home": "Colegio El Valle C.D.",
+                      "away": "El Alamo F.S.",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Entreparéntesis - Enertel FS Talavera",
+                      "away": "Club Union Deportiva Rena",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Inter JP Financial F.S.",
+                      "away": "Club Unión Deportiva Loeches",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
+                      "away": "Serbis AD Alcorcón FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Grupo López Bolaños F.S. \"A\"",
+                      "away": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Athletic Club Móstoles",
+                      "away": "Unión Tres Cantos FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Naturpellet San Cristóbal",
+                      "away": "CD Albacete FS",
+                      "date": null,
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "CD Cobisa FS \"A\"",
+                      "away": "Soliss A.D. Bargas",
+                      "date": null,
+                      "actaUrl": null
                     }
                   ]
                 }
               ],
-              "jornadasTotal": 30
+              "jornadasTotal": 30,
+              "teamsSource": "calendario"
             },
             {
               "id": "g5",
@@ -6197,7 +7281,6 @@
                   "officialName": "Sima Granada FS"
                 }
               ],
-              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -6742,6 +7825,7 @@
                   ]
                 }
               ],
+              "teamsSource": "calendario",
               "jornadasTotal": 30
             },
             {
@@ -6825,8 +7909,6 @@
                   "officialName": "Suntryp Agüimes FS"
                 }
               ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -6862,6 +7944,11 @@
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703203&NPcd_Pdf=1"
                     },
                     {
+                      "away": "Malta 97",
+                      "date": null,
+                      "home": "Doctoral FS"
+                    },
+                    {
                       "away": "C.D. Cisneros Alter",
                       "date": "2026-09-19T17:00:00",
                       "home": "Basilea Futbol Sala C.D.",
@@ -6872,11 +7959,6 @@
                       "date": "2026-09-19T19:00:00",
                       "home": "Las Cuevecitas FS",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703202&NPcd_Pdf=1"
-                    },
-                    {
-                      "away": "Malta 97",
-                      "date": "2026-09-22T21:00:00",
-                      "home": "Doctoral FS"
                     }
                   ]
                 },
@@ -6884,48 +7966,57 @@
                   "jornada": 2,
                   "matches": [
                     {
-                      "away": "Gran Canaria FS",
-                      "date": "2026-09-25T20:00:00",
-                      "home": "Malta 97"
-                    },
-                    {
                       "away": "La Salle San Ildelfonso",
                       "date": "2026-09-25T21:00:00",
-                      "home": "C.D. Salesianos Tenerife"
+                      "home": "C.D. Salesianos Tenerife",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703210&NPcd_Pdf=1"
                     },
                     {
                       "away": "Las Cuevecitas FS",
                       "date": "2026-09-25T21:00:00",
-                      "home": "C.D. Chinguaro \"A\""
+                      "home": "C.D. Chinguaro \"A\"",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703211&NPcd_Pdf=1"
                     },
                     {
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2026-09-25T21:00:00",
-                      "home": "C.F.S. Casa Juv. La Matanza"
+                      "home": "C.F.S. Casa Juv. La Matanza",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703212&NPcd_Pdf=1"
+                    },
+                    {
+                      "away": "Gran Canaria FS",
+                      "date": "2026-09-25T21:00:00",
+                      "home": "Malta 97",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703214&NPcd_Pdf=1"
                     },
                     {
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2026-09-26T15:00:00",
-                      "home": "C.D. Cisneros Alter"
+                      "home": "C.D. Cisneros Alter",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703208&NPcd_Pdf=1"
                     },
                     {
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2026-09-26T15:00:00",
-                      "home": "AD Duggi-San Fernando"
+                      "home": "AD Duggi-San Fernando",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703209&NPcd_Pdf=1"
                     },
                     {
                       "away": "F.S. Los Pinos",
                       "date": "2026-09-26T16:00:00",
-                      "home": "Aguas de Teror"
+                      "home": "Aguas de Teror",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703213&NPcd_Pdf=1"
                     },
                     {
                       "away": "Doctoral FS",
-                      "date": "2026-09-29T21:15:00",
+                      "date": null,
                       "home": "Suntryp Agüimes FS"
                     }
                   ]
                 }
-              ]
+              ],
+              "teamsSource": "calendario",
+              "jornadasTotal": 30
             }
           ]
         },
@@ -7014,8 +8105,6 @@
               "officialName": "Wanapix Aldelis InterSala 10 Zaragoza"
             }
           ],
-          "jornadasTotal": 30,
-          "teamsSource": "calendario",
           "calendar": [
             {
               "jornada": 1,
@@ -7176,7 +8265,9 @@
                 }
               ]
             }
-          ]
+          ],
+          "teamsSource": "calendario",
+          "jornadasTotal": 30
         },
         {
           "id": "rfef-segunda-fs-fem",
@@ -7269,7 +8360,6 @@
                   "officialName": "Valdetires Ferrol F.S.F."
                 }
               ],
-              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -8652,6 +9742,7 @@
                   ]
                 }
               ],
+              "teamsSource": "calendario",
               "jornadasTotal": 30
             },
             {
@@ -8739,57 +9830,56 @@
                   "officialName": "Somriu Futbol Sala Ripollet"
                 }
               ],
-              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
                   "matches": [
                     {
-                      "home": "La Villa",
                       "away": "Entrerrios Automatización",
                       "date": "2026-09-19T16:00:00",
+                      "home": "La Villa Móstoles",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697498&NPcd_Pdf=1"
                     },
                     {
-                      "home": "AE Penya Esplugues Salvat Logística \"A\"",
                       "away": "Grupo Reciclarte Cesar Augusta",
                       "date": "2026-09-19T16:00:00",
+                      "home": "AE Penya Esplugues Salvat Logística \"A\"",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697500&NPcd_Pdf=1"
                     },
                     {
-                      "home": "Club Deportivo San Pablo Ibiza",
-                      "away": "Les Corts, A.E. \" B \"",
+                      "away": "Les Corts, A.E. \"B\"",
                       "date": "2026-09-19T16:00:00",
+                      "home": "Club Deportivo San Pablo Ibiza",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697501&NPcd_Pdf=1"
                     },
                     {
-                      "home": "Feme Castellón C.F.S.",
                       "away": "Futsal Cartonajes Pans Mataró",
                       "date": "2026-09-19T16:08:00",
+                      "home": "Feme Castellón C.F.S.",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697499&NPcd_Pdf=1"
                     },
                     {
-                      "home": "AECS L Hospitalet",
-                      "away": "Club Deportivo Nou Turia FSF \" A \"",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
                       "date": "2026-09-19T18:45:00",
+                      "home": "AECS L Hospitalet",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697496&NPcd_Pdf=1"
                     },
                     {
-                      "home": "F.S. Sabadell",
                       "away": "Lainco Esportiu Rubi F.S.",
                       "date": "2026-09-19T20:00:00",
+                      "home": "F.S. Sabadell",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697502&NPcd_Pdf=1"
                     },
                     {
-                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
                       "away": "CFS Autoescola Urgell Linyola",
                       "date": "2026-09-20T12:30:00",
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697497&NPcd_Pdf=1"
                     },
                     {
-                      "home": "Somriu Futbol Sala Ripollet",
                       "away": "C.D. Parque Col. Santa Ana",
                       "date": "2026-09-20T13:30:00",
+                      "home": "Somriu Futbol Sala Ripollet",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697503&NPcd_Pdf=1"
                     }
                   ]
@@ -8798,51 +9888,51 @@
                   "jornada": 2,
                   "matches": [
                     {
-                      "home": "Lainco Esportiu Rubi F.S.",
                       "away": "Club Deportivo San Pablo Ibiza",
                       "date": "2026-09-26T16:00:00",
-                      "actaUrl": null
+                      "home": "Lainco Esportiu Rubi F.S.",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697510&NPcd_Pdf=1"
                     },
                     {
-                      "home": "Grupo Reciclarte Cesar Augusta",
                       "away": "Feme Castellón C.F.S.",
                       "date": "2026-09-26T16:15:00",
-                      "actaUrl": null
+                      "home": "Grupo Reciclarte Cesar Augusta",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697508&NPcd_Pdf=1"
                     },
                     {
-                      "home": "Futsal Cartonajes Pans Mataró",
-                      "away": "La Villa",
+                      "away": "La Villa Móstoles",
                       "date": "2026-09-26T16:30:00",
-                      "actaUrl": null
+                      "home": "Futsal Cartonajes Pans Mataró",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697507&NPcd_Pdf=1"
                     },
                     {
-                      "home": "CFS Autoescola Urgell Linyola",
                       "away": "AECS L Hospitalet",
                       "date": "2026-09-26T17:00:00",
-                      "actaUrl": null
+                      "home": "CFS Autoescola Urgell Linyola",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697505&NPcd_Pdf=1"
                     },
                     {
-                      "home": "Club Deportivo Nou Turia FSF \"A\"",
                       "away": "Somriu Futbol Sala Ripollet",
                       "date": "2026-09-26T18:00:00",
+                      "home": "Club Deportivo Nou Turia FSF \"A\"",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697504&NPcd_Pdf=1"
                     },
                     {
-                      "home": "Les Corts, A.E. \"B\"",
-                      "away": "AE Penya Esplugues Salvat Logística \" A \"",
+                      "away": "AE Penya Esplugues Salvat Logística \"A\"",
                       "date": "2026-09-26T19:30:00",
-                      "actaUrl": null
+                      "home": "Les Corts, A.E. \"B\"",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697509&NPcd_Pdf=1"
                     },
                     {
-                      "home": "Entrerrios Automatización",
                       "away": "SolarMon-Les Glories 2014 CD La Concordia",
                       "date": "2026-09-27T12:15:00",
-                      "actaUrl": null
+                      "home": "Entrerrios Automatización",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697506&NPcd_Pdf=1"
                     },
                     {
-                      "home": "C.D. Parque Col. Santa Ana",
                       "away": "F.S. Sabadell",
                       "date": "2026-09-27T13:15:00",
+                      "home": "C.D. Parque Col. Santa Ana",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697511&NPcd_Pdf=1"
                     }
                   ]
@@ -8851,52 +9941,44 @@
                   "jornada": 3,
                   "matches": [
                     {
-                      "home": "AECS L Hospitalet",
                       "away": "Entrerrios Automatización",
                       "date": null,
-                      "actaUrl": null
+                      "home": "AECS L Hospitalet"
                     },
                     {
-                      "home": "La Villa",
                       "away": "Grupo Reciclarte Cesar Augusta",
                       "date": null,
-                      "actaUrl": null
+                      "home": "La Villa"
                     },
                     {
-                      "home": "Feme Castellón C.F.S.",
                       "away": "Les Corts, A.E. \" B \"",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Feme Castellón C.F.S."
                     },
                     {
-                      "home": "Club Deportivo San Pablo Ibiza",
                       "away": "C.D. Parque Col. Santa Ana",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Club Deportivo San Pablo Ibiza"
                     },
                     {
-                      "home": "Somriu Futbol Sala Ripollet",
                       "away": "F.S. Sabadell",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Somriu Futbol Sala Ripollet"
                     },
                     {
-                      "home": "AE Penya Esplugues Salvat Logística \"A\"",
                       "away": "Lainco Esportiu Rubi F.S.",
                       "date": "2026-10-03T16:00:00",
-                      "actaUrl": null
+                      "home": "AE Penya Esplugues Salvat Logística \"A\""
                     },
                     {
-                      "home": "Club Deportivo Nou Turia FSF \"A\"",
                       "away": "CFS Autoescola Urgell Linyola",
                       "date": "2026-10-03T18:00:00",
-                      "actaUrl": null
+                      "home": "Club Deportivo Nou Turia FSF \"A\""
                     },
                     {
-                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
                       "away": "Futsal Cartonajes Pans Mataró",
                       "date": "2026-10-04T12:45:00",
-                      "actaUrl": null
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia"
                     }
                   ]
                 },
@@ -8904,52 +9986,44 @@
                   "jornada": 4,
                   "matches": [
                     {
-                      "home": "CFS Autoescola Urgell Linyola",
                       "away": "Somriu Futbol Sala Ripollet",
                       "date": null,
-                      "actaUrl": null
+                      "home": "CFS Autoescola Urgell Linyola"
                     },
                     {
-                      "home": "Entrerrios Automatización",
                       "away": "Club Deportivo Nou Turia FSF \" A \"",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Entrerrios Automatización"
                     },
                     {
-                      "home": "Grupo Reciclarte Cesar Augusta",
                       "away": "SolarMon-Les Glories 2014 CD La Concordia",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Grupo Reciclarte Cesar Augusta"
                     },
                     {
-                      "home": "Les Corts, A.E. \"B\"",
                       "away": "La Villa",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Les Corts, A.E. \"B\""
                     },
                     {
-                      "home": "Lainco Esportiu Rubi F.S.",
                       "away": "Feme Castellón C.F.S.",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Lainco Esportiu Rubi F.S."
                     },
                     {
-                      "home": "C.D. Parque Col. Santa Ana",
                       "away": "AE Penya Esplugues Salvat Logística \" A \"",
                       "date": null,
-                      "actaUrl": null
+                      "home": "C.D. Parque Col. Santa Ana"
                     },
                     {
-                      "home": "F.S. Sabadell",
                       "away": "Club Deportivo San Pablo Ibiza",
                       "date": null,
-                      "actaUrl": null
+                      "home": "F.S. Sabadell"
                     },
                     {
-                      "home": "Futsal Cartonajes Pans Mataró",
                       "away": "AECS L Hospitalet",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Futsal Cartonajes Pans Mataró"
                     }
                   ]
                 },
@@ -8957,52 +10031,44 @@
                   "jornada": 5,
                   "matches": [
                     {
-                      "home": "CFS Autoescola Urgell Linyola",
                       "away": "Entrerrios Automatización",
                       "date": null,
-                      "actaUrl": null
+                      "home": "CFS Autoescola Urgell Linyola"
                     },
                     {
-                      "home": "Club Deportivo Nou Turia FSF \"A\"",
                       "away": "Futsal Cartonajes Pans Mataró",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Club Deportivo Nou Turia FSF \"A\""
                     },
                     {
-                      "home": "AECS L Hospitalet",
                       "away": "Grupo Reciclarte Cesar Augusta",
                       "date": null,
-                      "actaUrl": null
+                      "home": "AECS L Hospitalet"
                     },
                     {
-                      "home": "La Villa",
                       "away": "Lainco Esportiu Rubi F.S.",
                       "date": null,
-                      "actaUrl": null
+                      "home": "La Villa"
                     },
                     {
-                      "home": "Feme Castellón C.F.S.",
                       "away": "C.D. Parque Col. Santa Ana",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Feme Castellón C.F.S."
                     },
                     {
-                      "home": "AE Penya Esplugues Salvat Logística \"A\"",
                       "away": "F.S. Sabadell",
                       "date": null,
-                      "actaUrl": null
+                      "home": "AE Penya Esplugues Salvat Logística \"A\""
                     },
                     {
-                      "home": "Somriu Futbol Sala Ripollet",
                       "away": "Club Deportivo San Pablo Ibiza",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Somriu Futbol Sala Ripollet"
                     },
                     {
-                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
                       "away": "Les Corts, A.E. \" B \"",
                       "date": "2026-10-18T12:45:00",
-                      "actaUrl": null
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia"
                     }
                   ]
                 },
@@ -9010,52 +10076,44 @@
                   "jornada": 6,
                   "matches": [
                     {
-                      "home": "Entrerrios Automatización",
                       "away": "Somriu Futbol Sala Ripollet",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Entrerrios Automatización"
                     },
                     {
-                      "home": "Grupo Reciclarte Cesar Augusta",
                       "away": "Club Deportivo Nou Turia FSF \" A \"",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Grupo Reciclarte Cesar Augusta"
                     },
                     {
-                      "home": "Les Corts, A.E. \"B\"",
                       "away": "AECS L Hospitalet",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Les Corts, A.E. \"B\""
                     },
                     {
-                      "home": "Lainco Esportiu Rubi F.S.",
                       "away": "SolarMon-Les Glories 2014 CD La Concordia",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Lainco Esportiu Rubi F.S."
                     },
                     {
-                      "home": "C.D. Parque Col. Santa Ana",
                       "away": "La Villa",
                       "date": null,
-                      "actaUrl": null
+                      "home": "C.D. Parque Col. Santa Ana"
                     },
                     {
-                      "home": "F.S. Sabadell",
                       "away": "Feme Castellón C.F.S.",
                       "date": null,
-                      "actaUrl": null
+                      "home": "F.S. Sabadell"
                     },
                     {
-                      "home": "Club Deportivo San Pablo Ibiza",
                       "away": "AE Penya Esplugues Salvat Logística \" A \"",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Club Deportivo San Pablo Ibiza"
                     },
                     {
-                      "home": "Futsal Cartonajes Pans Mataró",
                       "away": "CFS Autoescola Urgell Linyola",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Futsal Cartonajes Pans Mataró"
                     }
                   ]
                 },
@@ -9063,52 +10121,44 @@
                   "jornada": 7,
                   "matches": [
                     {
-                      "home": "Entrerrios Automatización",
                       "away": "Futsal Cartonajes Pans Mataró",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Entrerrios Automatización"
                     },
                     {
-                      "home": "CFS Autoescola Urgell Linyola",
                       "away": "Grupo Reciclarte Cesar Augusta",
                       "date": null,
-                      "actaUrl": null
+                      "home": "CFS Autoescola Urgell Linyola"
                     },
                     {
-                      "home": "Club Deportivo Nou Turia FSF \"A\"",
                       "away": "Les Corts, A.E. \" B \"",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Club Deportivo Nou Turia FSF \"A\""
                     },
                     {
-                      "home": "AECS L Hospitalet",
                       "away": "Lainco Esportiu Rubi F.S.",
                       "date": null,
-                      "actaUrl": null
+                      "home": "AECS L Hospitalet"
                     },
                     {
-                      "home": "La Villa",
                       "away": "F.S. Sabadell",
                       "date": null,
-                      "actaUrl": null
+                      "home": "La Villa"
                     },
                     {
-                      "home": "Feme Castellón C.F.S.",
                       "away": "Club Deportivo San Pablo Ibiza",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Feme Castellón C.F.S."
                     },
                     {
-                      "home": "Somriu Futbol Sala Ripollet",
                       "away": "AE Penya Esplugues Salvat Logística \" A \"",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Somriu Futbol Sala Ripollet"
                     },
                     {
-                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
                       "away": "C.D. Parque Col. Santa Ana",
                       "date": "2026-10-31T16:00:00",
-                      "actaUrl": null
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia"
                     }
                   ]
                 },
@@ -9116,52 +10166,44 @@
                   "jornada": 8,
                   "matches": [
                     {
-                      "home": "Grupo Reciclarte Cesar Augusta",
                       "away": "Entrerrios Automatización",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Grupo Reciclarte Cesar Augusta"
                     },
                     {
-                      "home": "Les Corts, A.E. \"B\"",
                       "away": "CFS Autoescola Urgell Linyola",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Les Corts, A.E. \"B\""
                     },
                     {
-                      "home": "Lainco Esportiu Rubi F.S.",
                       "away": "Club Deportivo Nou Turia FSF \" A \"",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Lainco Esportiu Rubi F.S."
                     },
                     {
-                      "home": "C.D. Parque Col. Santa Ana",
                       "away": "AECS L Hospitalet",
                       "date": null,
-                      "actaUrl": null
+                      "home": "C.D. Parque Col. Santa Ana"
                     },
                     {
-                      "home": "F.S. Sabadell",
                       "away": "SolarMon-Les Glories 2014 CD La Concordia",
                       "date": null,
-                      "actaUrl": null
+                      "home": "F.S. Sabadell"
                     },
                     {
-                      "home": "Club Deportivo San Pablo Ibiza",
                       "away": "La Villa",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Club Deportivo San Pablo Ibiza"
                     },
                     {
-                      "home": "AE Penya Esplugues Salvat Logística \"A\"",
                       "away": "Feme Castellón C.F.S.",
                       "date": null,
-                      "actaUrl": null
+                      "home": "AE Penya Esplugues Salvat Logística \"A\""
                     },
                     {
-                      "home": "Futsal Cartonajes Pans Mataró",
                       "away": "Somriu Futbol Sala Ripollet",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Futsal Cartonajes Pans Mataró"
                     }
                   ]
                 },
@@ -9169,52 +10211,44 @@
                   "jornada": 9,
                   "matches": [
                     {
-                      "home": "Entrerrios Automatización",
                       "away": "Les Corts, A.E. \" B \"",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Entrerrios Automatización"
                     },
                     {
-                      "home": "CFS Autoescola Urgell Linyola",
                       "away": "Lainco Esportiu Rubi F.S.",
                       "date": null,
-                      "actaUrl": null
+                      "home": "CFS Autoescola Urgell Linyola"
                     },
                     {
-                      "home": "Club Deportivo Nou Turia FSF \"A\"",
                       "away": "C.D. Parque Col. Santa Ana",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Club Deportivo Nou Turia FSF \"A\""
                     },
                     {
-                      "home": "AECS L Hospitalet",
                       "away": "F.S. Sabadell",
                       "date": null,
-                      "actaUrl": null
+                      "home": "AECS L Hospitalet"
                     },
                     {
-                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
                       "away": "Club Deportivo San Pablo Ibiza",
                       "date": null,
-                      "actaUrl": null
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia"
                     },
                     {
-                      "home": "La Villa",
                       "away": "AE Penya Esplugues Salvat Logística \" A \"",
                       "date": null,
-                      "actaUrl": null
+                      "home": "La Villa"
                     },
                     {
-                      "home": "Somriu Futbol Sala Ripollet",
                       "away": "Feme Castellón C.F.S.",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Somriu Futbol Sala Ripollet"
                     },
                     {
-                      "home": "Futsal Cartonajes Pans Mataró",
                       "away": "Grupo Reciclarte Cesar Augusta",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Futsal Cartonajes Pans Mataró"
                     }
                   ]
                 },
@@ -9222,52 +10256,44 @@
                   "jornada": 10,
                   "matches": [
                     {
-                      "home": "Grupo Reciclarte Cesar Augusta",
                       "away": "Somriu Futbol Sala Ripollet",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Grupo Reciclarte Cesar Augusta"
                     },
                     {
-                      "home": "Les Corts, A.E. \"B\"",
                       "away": "Futsal Cartonajes Pans Mataró",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Les Corts, A.E. \"B\""
                     },
                     {
-                      "home": "Lainco Esportiu Rubi F.S.",
                       "away": "Entrerrios Automatización",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Lainco Esportiu Rubi F.S."
                     },
                     {
-                      "home": "C.D. Parque Col. Santa Ana",
                       "away": "CFS Autoescola Urgell Linyola",
                       "date": null,
-                      "actaUrl": null
+                      "home": "C.D. Parque Col. Santa Ana"
                     },
                     {
-                      "home": "F.S. Sabadell",
                       "away": "Club Deportivo Nou Turia FSF \" A \"",
                       "date": null,
-                      "actaUrl": null
+                      "home": "F.S. Sabadell"
                     },
                     {
-                      "home": "Club Deportivo San Pablo Ibiza",
                       "away": "AECS L Hospitalet",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Club Deportivo San Pablo Ibiza"
                     },
                     {
-                      "home": "AE Penya Esplugues Salvat Logística \"A\"",
                       "away": "SolarMon-Les Glories 2014 CD La Concordia",
                       "date": null,
-                      "actaUrl": null
+                      "home": "AE Penya Esplugues Salvat Logística \"A\""
                     },
                     {
-                      "home": "Feme Castellón C.F.S.",
                       "away": "La Villa",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Feme Castellón C.F.S."
                     }
                   ]
                 },
@@ -9275,52 +10301,44 @@
                   "jornada": 11,
                   "matches": [
                     {
-                      "home": "Grupo Reciclarte Cesar Augusta",
                       "away": "Les Corts, A.E. \" B \"",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Grupo Reciclarte Cesar Augusta"
                     },
                     {
-                      "home": "Entrerrios Automatización",
                       "away": "C.D. Parque Col. Santa Ana",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Entrerrios Automatización"
                     },
                     {
-                      "home": "CFS Autoescola Urgell Linyola",
                       "away": "F.S. Sabadell",
                       "date": null,
-                      "actaUrl": null
+                      "home": "CFS Autoescola Urgell Linyola"
                     },
                     {
-                      "home": "Club Deportivo Nou Turia FSF \"A\"",
                       "away": "Club Deportivo San Pablo Ibiza",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Club Deportivo Nou Turia FSF \"A\""
                     },
                     {
-                      "home": "AECS L Hospitalet",
                       "away": "AE Penya Esplugues Salvat Logística \" A \"",
                       "date": null,
-                      "actaUrl": null
+                      "home": "AECS L Hospitalet"
                     },
                     {
-                      "home": "SolarMon-Les Glories 2014 CD La Concordia",
                       "away": "Feme Castellón C.F.S.",
                       "date": null,
-                      "actaUrl": null
+                      "home": "SolarMon-Les Glories 2014 CD La Concordia"
                     },
                     {
-                      "home": "Somriu Futbol Sala Ripollet",
                       "away": "La Villa",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Somriu Futbol Sala Ripollet"
                     },
                     {
-                      "home": "Futsal Cartonajes Pans Mataró",
                       "away": "Lainco Esportiu Rubi F.S.",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Futsal Cartonajes Pans Mataró"
                     }
                   ]
                 },
@@ -9328,56 +10346,49 @@
                   "jornada": 12,
                   "matches": [
                     {
-                      "home": "Les Corts, A.E. \"B\"",
                       "away": "Somriu Futbol Sala Ripollet",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Les Corts, A.E. \"B\""
                     },
                     {
-                      "home": "Lainco Esportiu Rubi F.S.",
                       "away": "Grupo Reciclarte Cesar Augusta",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Lainco Esportiu Rubi F.S."
                     },
                     {
-                      "home": "C.D. Parque Col. Santa Ana",
                       "away": "Futsal Cartonajes Pans Mataró",
                       "date": null,
-                      "actaUrl": null
+                      "home": "C.D. Parque Col. Santa Ana"
                     },
                     {
-                      "home": "F.S. Sabadell",
                       "away": "Entrerrios Automatización",
                       "date": null,
-                      "actaUrl": null
+                      "home": "F.S. Sabadell"
                     },
                     {
-                      "home": "Club Deportivo San Pablo Ibiza",
                       "away": "CFS Autoescola Urgell Linyola",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Club Deportivo San Pablo Ibiza"
                     },
                     {
-                      "home": "AE Penya Esplugues Salvat Logística \"A\"",
                       "away": "Club Deportivo Nou Turia FSF \" A \"",
                       "date": null,
-                      "actaUrl": null
+                      "home": "AE Penya Esplugues Salvat Logística \"A\""
                     },
                     {
-                      "home": "Feme Castellón C.F.S.",
                       "away": "AECS L Hospitalet",
                       "date": null,
-                      "actaUrl": null
+                      "home": "Feme Castellón C.F.S."
                     },
                     {
-                      "home": "La Villa",
                       "away": "SolarMon-Les Glories 2014 CD La Concordia",
                       "date": null,
-                      "actaUrl": null
+                      "home": "La Villa"
                     }
                   ]
                 }
               ],
+              "teamsSource": "calendario",
               "jornadasTotal": 30
             },
             {
@@ -9462,7 +10473,6 @@
                   "officialName": "UDAF Afanion \"A\""
                 }
               ],
-              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -9523,46 +10533,55 @@
                     {
                       "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
                       "date": "2026-09-26T16:00:00",
-                      "home": "Ramón Y Cajal Féminas"
+                      "home": "Ramón Y Cajal Féminas",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697748&NPcd_Pdf=1"
                     },
                     {
                       "away": "Globalcaja Albacete F.S.",
                       "date": "2026-09-26T18:00:00",
-                      "home": "Atletico Navalcarnero"
+                      "home": "Atletico Navalcarnero",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697745&NPcd_Pdf=1"
                     },
                     {
                       "away": "C.D.E. Leganés F.S. Masdeporte",
                       "date": "2026-09-26T19:00:00",
-                      "home": "CD La Garrovilla Femenino"
+                      "home": "CD La Garrovilla Femenino",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70699421&NPcd_Pdf=1"
                     },
                     {
                       "away": "C.F.S. Femenino San Fernando",
                       "date": "2026-09-26T19:30:00",
-                      "home": "Almagro F.S.F."
+                      "home": "Almagro F.S.F.",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697750&NPcd_Pdf=1"
                     },
                     {
                       "away": "CD Salesianos Puertollano",
                       "date": "2026-09-26T20:00:00",
-                      "home": "Majadahonda F.S.F./Afar 4"
+                      "home": "Majadahonda F.S.F./Afar 4",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697747&NPcd_Pdf=1"
                     },
                     {
                       "away": "I.E.S. Luis de Camoens",
                       "date": "2026-09-27T11:00:00",
-                      "home": "UDAF Afanion \"A\""
+                      "home": "UDAF Afanion \"A\"",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697751&NPcd_Pdf=1"
                     },
                     {
                       "away": "Dos Hermanas F.S. C.D.",
                       "date": "2026-09-27T12:00:00",
-                      "home": "Martos FS Jaén Paraíso Interior"
+                      "home": "Martos FS Jaén Paraíso Interior",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697746&NPcd_Pdf=1"
                     },
                     {
                       "away": "Coviran UAPO Granada FS Femenino",
                       "date": "2026-09-27T13:30:00",
-                      "home": "ARRIVA AD Alcorcón FSF"
+                      "home": "ARRIVA AD Alcorcón FSF",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697744&NPcd_Pdf=1"
                     }
                   ]
                 }
               ],
+              "teamsSource": "calendario",
               "jornadasTotal": 30
             }
           ]
