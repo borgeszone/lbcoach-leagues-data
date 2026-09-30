@@ -1,9 +1,9 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-09-29T12:28:33+00:00",
+  "lastUpdated": "2026-09-30T12:11:28+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
-    "rfef: la PNFG rate-limitó 8 jornada/s y se abandonaron 8 grupo/s; esas jornadas salen de la caché o del JSON anterior",
+    "rfef: la PNFG rate-limitó 7 jornada/s y se abandonaron 7 grupo/s; esas jornadas salen de la caché o del JSON anterior",
     "fcf-1cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-2cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-3cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
@@ -8360,7 +8360,6 @@
                   "officialName": "Valdetires Ferrol F.S.F."
                 }
               ],
-              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -9743,7 +9742,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "jornadasTotal": 30
             },
             {
               "id": "g2",
@@ -9830,6 +9830,7 @@
                   "officialName": "Somriu Futbol Sala Ripollet"
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -10388,8 +10389,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g3",
@@ -10473,6 +10473,7 @@
                   "officialName": "UDAF Afanion \"A\""
                 }
               ],
+              "jornadasTotal": 30,
               "teamsSource": "calendario",
               "calendar": [
                 {
@@ -10581,8 +10582,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30
+              ]
             }
           ]
         }
