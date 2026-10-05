@@ -10,6 +10,13 @@ name: Medir cupo de la PNFG
 
 on:
   workflow_dispatch:
+    inputs:
+      experimento:
+        description: 'recarga (¿se recarga el cupo parando antes?) o ciclos (¿escalan los cortes si se esperan en silencio?)'
+        required: true
+        default: 'recarga'
+        type: choice
+        options: ['recarga', 'ciclos']
 
 permissions:
   contents: read
@@ -17,16 +24,13 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: 240
     strategy:
       fail-fast: false
       matrix:
-        plan:
-          - 'ritmo:60:40'        # 1 cada minuto, 40 min
-          - 'ritmo:120:30'       # 1 cada 2 min, 60 min
-          - 'rafaga:6:300:8'     # 6 seguidas, 5 min de pausa
-          - 'rafaga:10:600:4'    # 10 seguidas, 10 min de pausa
-          - 'rafaga:10:1800:2'   # 10 seguidas, 30 min de pausa
+        # recarga: 1/min · 1 cada 2 min · 6+5 min · 10+10 min · 10+30 min
+        # ciclos:  6 cortes esperando 330 s · 6 cortes esperando 600 s
+        plan: ${{ fromJSON(inputs.experimento == 'ciclos' && '["ciclos:6:330","ciclos:6:600"]' || '["ritmo:60:40","ritmo:120:30","rafaga:6:300:8","rafaga:10:600:4","rafaga:10:1800:2"]') }}
     env:
       PYTHONUNBUFFERED: '1'
     steps:

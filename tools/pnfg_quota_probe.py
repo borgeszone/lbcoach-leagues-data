@@ -16,6 +16,12 @@ una IP sin castigo previo, y termina.
 
     python tools/pnfg_quota_probe.py ritmo:60:40
     python tools/pnfg_quota_probe.py rafaga:10:600:4
+    python tools/pnfg_quota_probe.py ciclos:6:330
+
+`ciclos:N:espera` es el que valida el diseño del scraper: gasta el cupo hasta el
+corte, espera `espera` segundos **en silencio**, pregunta UNA vez y, si sigue
+cerrado, vuelve a esperar lo mismo. Repite N cortes y apunta cuánto dura cada
+uno. Si no escalan, "gastar el cupo y esperar" es viable; si escalan, no.
 """
 from __future__ import annotations
 
@@ -112,6 +118,31 @@ def main() -> None:
                     time.sleep(5)
                 if not pedir(s, siguiente()):
                     return medir_corte(s)
+    elif tipo == "ciclos":
+        ciclos, espera = int(nums[0]), float(nums[1])
+        duraciones = []
+        for c in range(1, ciclos + 1):
+            buenas = 0
+            while pedir(s, siguiente()):
+                buenas += 1
+                time.sleep(5)
+            inicio = time.time()
+            log(f"CICLO {c}: corte tras {buenas} buenas")
+            esperas = 0
+            while True:
+                time.sleep(espera)
+                esperas += 1
+                if pedir(s, siguiente()):
+                    break
+                if esperas >= 8:
+                    log(f"CICLO {c}: sigue cerrado tras {esperas} esperas; se para")
+                    log(f"RESUMEN cortes(s)={duraciones} + >{time.time() - inicio:.0f}")
+                    return
+            duraciones.append(round(time.time() - inicio))
+            log(f"CICLO {c}: corte levantado a los {duraciones[-1]}s "
+                f"({esperas} espera/s)")
+        log(f"RESUMEN cortes(s)={duraciones}")
+        return
     else:
         raise SystemExit(f"plan desconocido: {plan}")
     log(f"SIN CORTE: {n_ok} peticiones buenas ({n_total} en total)")
