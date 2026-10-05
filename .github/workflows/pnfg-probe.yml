@@ -1,0 +1,38 @@
+name: Medir cupo de la PNFG
+
+# Experimento, no producción: sólo se lanza a mano. Mide a qué ritmo se recarga
+# el cupo de resultados.rfef.es sin llegar a cortarlo (tools/pnfg_quota_probe.py,
+# CLAUDE.md §6.55). Cada estrategia es un job aparte para que tenga su propia IP
+# limpia: el corte es por IP y escala con cada exceso, así que dos estrategias
+# en la misma IP se contaminarían entre sí.
+#
+# No toca datos ni publica nada. Unas 30-50 peticiones por job.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      matrix:
+        plan:
+          - 'ritmo:60:40'        # 1 cada minuto, 40 min
+          - 'ritmo:120:30'       # 1 cada 2 min, 60 min
+          - 'rafaga:6:300:8'     # 6 seguidas, 5 min de pausa
+          - 'rafaga:10:600:4'    # 10 seguidas, 10 min de pausa
+          - 'rafaga:10:1800:2'   # 10 seguidas, 30 min de pausa
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - run: python tools/pnfg_quota_probe.py '${{ matrix.plan }}'
