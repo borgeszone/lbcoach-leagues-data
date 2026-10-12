@@ -1,6 +1,6 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-10-05T14:00:56+00:00",
+  "lastUpdated": "2026-10-12T14:51:30+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
     "rfef: la PNFG rate-limitó 12 jornada/s y se abandonaron 6 grupo/s; agotado el presupuesto de 12 fallos, el resto del calendario no se pidió. Lo publicado sale de la caché y del JSON anterior",
@@ -47,7 +47,7 @@
             },
             {
               "name": "Palma Futsal",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206407_50x50.png",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20219/22/a0a331b21b72e658cbc6a1e0c801da7a.jpg",
               "officialName": "Illes Balears Palma Futsal"
             },
             {
@@ -2955,8 +2955,8 @@
               ]
             }
           ],
-          "teamsSource": "calendario",
-          "jornadasTotal": 30
+          "jornadasTotal": 30,
+          "teamsSource": "calendario"
         },
         {
           "id": "rfef-segunda-b-fs-masc",
@@ -5134,7 +5134,7 @@
                 },
                 {
                   "name": "Palma Futsal B",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206407_50x50.png",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20219/22/a0a331b21b72e658cbc6a1e0c801da7a.jpg",
                   "officialName": "Illes Balears Palma Futsal"
                 },
                 {
@@ -6390,8 +6390,8 @@
                   ]
                 }
               ],
-              "teamsSource": "calendario",
-              "jornadasTotal": 30
+              "jornadasTotal": 30,
+              "teamsSource": "calendario"
             },
             {
               "id": "g4",
@@ -7953,51 +7953,51 @@
               "jornada": 1,
               "matches": [
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "F.S.F. Castro Bloques Cando",
                   "date": "2026-09-04T21:00:00",
+                  "home": "Estrela Revoltosa Verín FSF",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696748&NPcd_Pdf=1"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "STV Roldán F.S",
                   "date": "2026-09-05T11:03:00",
+                  "home": "MRB Móstoles FSF",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696750&NPcd_Pdf=1"
                 },
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2026-09-05T12:30:00",
+                  "home": "LBTL Futsal Alcantarilla",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696747&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "Nueces de Ronda Atlético Torcal FS",
                   "date": "2026-09-05T13:00:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696749&NPcd_Pdf=1"
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "C.D. Guadalcacín F.S.",
                   "date": "2026-09-05T16:38:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696746&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "AE Les Corts UBAE",
                   "date": "2026-09-05T17:00:00",
+                  "home": "Ourense Ontime",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696751&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "Poio Pescamar FS",
                   "date": "2026-09-05T18:00:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696753&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "Atlético Navalcarnero",
                   "date": "2026-09-05T18:30:00",
+                  "home": "Rodiles F.S. \"A\"",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696752&NPcd_Pdf=1"
                 }
               ]
@@ -8006,51 +8006,51 @@
               "jornada": 2,
               "matches": [
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "ARRIVA AD Alcorcón FSF",
                   "date": "2026-09-12T10:00:00",
+                  "home": "Atlético Navalcarnero",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696758&NPcd_Pdf=1"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "date": "2026-09-12T12:00:00",
+                  "home": "AE Les Corts UBAE",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696755&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "F.S.F. Castro Bloques Cando",
                   "date": "2026-09-12T13:00:00",
+                  "home": "Ceuta Agrupación Deportiva",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696754&NPcd_Pdf=1"
                 },
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "Ourense Ontime",
                   "date": "2026-09-12T17:00:00",
+                  "home": "C.D. Guadalcacín F.S.",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696756&NPcd_Pdf=1"
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "date": "2026-09-12T18:00:00",
+                  "home": "STV Roldán F.S",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696760&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "Estrela Revoltosa Verín FSF",
                   "date": "2026-09-12T18:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696761&NPcd_Pdf=1"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "LBTL Futsal Alcantarilla",
                   "date": "2026-09-12T18:30:00",
+                  "home": "MRB Móstoles FSF",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696757&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "Rodiles F.S. \"A\"",
                   "date": "2026-09-12T18:30:00",
+                  "home": "Poio Pescamar FS",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696759&NPcd_Pdf=1"
                 }
               ]
@@ -8059,51 +8059,51 @@
               "jornada": 3,
               "matches": [
                 {
-                  "home": "STV Roldán F.S",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2026-09-19T12:00:00",
+                  "home": "STV Roldán F.S",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696768&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "MRB Móstoles FSF",
                   "date": "2026-09-19T12:45:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696766&NPcd_Pdf=1"
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "Poio Pescamar FS",
                   "date": "2026-09-19T13:00:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696762&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "AE Les Corts UBAE",
                   "date": "2026-09-19T17:30:00",
+                  "home": "Estrela Revoltosa Verín FSF",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696765&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "Nueces de Ronda Atlético Torcal FS",
                   "date": "2026-09-19T18:30:00",
+                  "home": "Rodiles F.S. \"A\"",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696767&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "Atlético Navalcarnero",
                   "date": "2026-09-19T19:03:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696769&NPcd_Pdf=1"
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "C.D. Guadalcacín F.S.",
                   "date": "2026-09-19T19:30:00",
+                  "home": "F.S.F. Castro Bloques Cando",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696764&NPcd_Pdf=1"
                 },
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "Ourense Ontime",
                   "date": "2026-09-20T12:00:00",
+                  "home": "LBTL Futsal Alcantarilla",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696763&NPcd_Pdf=1"
                 }
               ]
@@ -8112,52 +8112,44 @@
               "jornada": 4,
               "matches": [
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "LBTL Futsal Alcantarilla",
                   "date": "2026-10-17T16:00:00",
-                  "actaUrl": null
+                  "home": "AE Les Corts UBAE"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "date": "2026-10-17T16:00:00",
-                  "actaUrl": null
+                  "home": "Poio Pescamar FS"
                 },
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "STV Roldán F.S",
                   "date": "2026-10-17T17:00:00",
-                  "actaUrl": null
+                  "home": "C.D. Guadalcacín F.S."
                 },
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "ARRIVA AD Alcorcón FSF",
                   "date": "2026-10-17T18:00:00",
-                  "actaUrl": null
+                  "home": "Ceuta Agrupación Deportiva"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "date": "2026-10-17T18:00:00",
-                  "actaUrl": null
+                  "home": "Nueces de Ronda Atlético Torcal FS"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "F.S.F. Castro Bloques Cando",
                   "date": "2026-10-17T18:30:00",
-                  "actaUrl": null
+                  "home": "MRB Móstoles FSF"
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "Rodiles F.S. \"A\"",
                   "date": "2026-10-17T19:30:00",
-                  "actaUrl": null
+                  "home": "Ourense Ontime"
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "Estrela Revoltosa Verín FSF",
                   "date": "2026-10-18T11:30:00",
-                  "actaUrl": null
+                  "home": "Atlético Navalcarnero"
                 }
               ]
             },
@@ -8165,51 +8157,51 @@
               "jornada": 5,
               "matches": [
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2026-10-24T13:00:00",
+                  "home": "Poio Pescamar FS",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696782&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "STV Roldán F.S",
                   "date": "2026-10-24T17:00:00",
+                  "home": "Ourense Ontime",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696781&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "MRB Móstoles FSF",
                   "date": "2026-10-24T17:30:00",
+                  "home": "Estrela Revoltosa Verín FSF",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696780&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "Atlético Navalcarnero",
                   "date": "2026-10-24T18:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696784&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "AE Les Corts UBAE",
                   "date": "2026-10-24T19:00:00",
+                  "home": "Rodiles F.S. \"A\"",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696783&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "C.D. Guadalcacín F.S.",
                   "date": "2026-10-24T19:00:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696785&NPcd_Pdf=1"
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "LBTL Futsal Alcantarilla",
                   "date": "2026-10-24T19:30:00",
+                  "home": "F.S.F. Castro Bloques Cando",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696779&NPcd_Pdf=1"
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "date": "2026-10-25T10:30:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696778&NPcd_Pdf=1"
                 }
               ]
@@ -8218,52 +8210,44 @@
               "jornada": 6,
               "matches": [
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "date": "2026-10-31T00:00:00",
-                  "actaUrl": null
+                  "home": "Ceuta Agrupación Deportiva"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "F.S.F. Castro Bloques Cando",
                   "date": "2026-10-31T00:00:00",
-                  "actaUrl": null
+                  "home": "AE Les Corts UBAE"
                 },
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "Poio Pescamar FS",
                   "date": "2026-10-31T11:00:00",
-                  "actaUrl": null
+                  "home": "C.D. Guadalcacín F.S."
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "Estrela Revoltosa Verín FSF",
                   "date": "2026-10-31T16:00:00",
-                  "actaUrl": null
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F."
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "Nueces de Ronda Atlético Torcal FS",
                   "date": "2026-10-31T16:30:00",
-                  "actaUrl": null
+                  "home": "MRB Móstoles FSF"
                 },
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "ARRIVA AD Alcorcón FSF",
                   "date": "2026-10-31T18:00:00",
-                  "actaUrl": null
+                  "home": "LBTL Futsal Alcantarilla"
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "Ourense Ontime",
                   "date": "2026-10-31T18:00:00",
-                  "actaUrl": null
+                  "home": "Atlético Navalcarnero"
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "Rodiles F.S. \"A\"",
                   "date": "2026-10-31T18:00:00",
-                  "actaUrl": null
+                  "home": "STV Roldán F.S"
                 }
               ]
             },
@@ -8271,52 +8255,44 @@
               "jornada": 7,
               "matches": [
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "Atlético Navalcarnero",
                   "date": "2026-11-07T11:00:00",
-                  "actaUrl": null
+                  "home": "LBTL Futsal Alcantarilla"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2026-11-07T12:00:00",
-                  "actaUrl": null
+                  "home": "Estrela Revoltosa Verín FSF"
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "MRB Móstoles FSF",
                   "date": "2026-11-07T17:00:00",
-                  "actaUrl": null
+                  "home": "Ourense Ontime"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "AE Les Corts UBAE",
                   "date": "2026-11-07T18:30:00",
-                  "actaUrl": null
+                  "home": "Poio Pescamar FS"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "C.D. Guadalcacín F.S.",
                   "date": "2026-11-07T18:30:00",
-                  "actaUrl": null
+                  "home": "Rodiles F.S. \"A\""
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "date": "2026-11-07T19:00:00",
-                  "actaUrl": null
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza"
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "Nueces de Ronda Atlético Torcal FS",
                   "date": "2026-11-07T19:30:00",
-                  "actaUrl": null
+                  "home": "F.S.F. Castro Bloques Cando"
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "STV Roldán F.S",
                   "date": "2026-11-08T11:00:00",
-                  "actaUrl": null
+                  "home": "ARRIVA AD Alcorcón FSF"
                 }
               ]
             },
@@ -8324,52 +8300,44 @@
               "jornada": 8,
               "matches": [
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "Ourense Ontime",
                   "date": "2026-11-14T00:00:00",
-                  "actaUrl": null
+                  "home": "Ceuta Agrupación Deportiva"
                 },
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "Estrela Revoltosa Verín FSF",
                   "date": "2026-11-14T00:00:00",
-                  "actaUrl": null
+                  "home": "C.D. Guadalcacín F.S."
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "Poio Pescamar FS",
                   "date": "2026-11-14T11:00:00",
-                  "actaUrl": null
+                  "home": "STV Roldán F.S"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "ARRIVA AD Alcorcón FSF",
                   "date": "2026-11-14T16:00:00",
-                  "actaUrl": null
+                  "home": "Nueces de Ronda Atlético Torcal FS"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "AE Les Corts UBAE",
                   "date": "2026-11-14T16:30:00",
-                  "actaUrl": null
+                  "home": "MRB Móstoles FSF"
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "F.S.F. Castro Bloques Cando",
                   "date": "2026-11-14T18:00:00",
-                  "actaUrl": null
+                  "home": "Atlético Navalcarnero"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "LBTL Futsal Alcantarilla",
                   "date": "2026-11-14T19:00:00",
-                  "actaUrl": null
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "Rodiles F.S. \"A\"",
                   "date": "2026-11-14T19:30:00",
-                  "actaUrl": null
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F."
                 }
               ]
             },
@@ -8377,52 +8345,44 @@
               "jornada": 9,
               "matches": [
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2026-11-28T00:00:00",
-                  "actaUrl": null
+                  "home": "AE Les Corts UBAE"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "STV Roldán F.S",
                   "date": "2026-11-28T00:00:00",
-                  "actaUrl": null
+                  "home": "Estrela Revoltosa Verín FSF"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "Atlético Navalcarnero",
                   "date": "2026-11-28T11:00:00",
-                  "actaUrl": null
+                  "home": "Poio Pescamar FS"
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "date": "2026-11-28T16:30:00",
-                  "actaUrl": null
+                  "home": "ARRIVA AD Alcorcón FSF"
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "Nueces de Ronda Atlético Torcal FS",
                   "date": "2026-11-28T17:00:00",
-                  "actaUrl": null
+                  "home": "Ourense Ontime"
                 },
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "C.D. Guadalcacín F.S.",
                   "date": "2026-11-28T18:00:00",
-                  "actaUrl": null
+                  "home": "LBTL Futsal Alcantarilla"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "MRB Móstoles FSF",
                   "date": "2026-11-28T19:00:00",
-                  "actaUrl": null
+                  "home": "Rodiles F.S. \"A\""
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "date": "2026-11-28T19:30:00",
-                  "actaUrl": null
+                  "home": "F.S.F. Castro Bloques Cando"
                 }
               ]
             },
@@ -8430,52 +8390,44 @@
               "jornada": 10,
               "matches": [
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "AE Les Corts UBAE",
                   "date": "2026-12-05T00:00:00",
-                  "actaUrl": null
+                  "home": "C.D. Guadalcacín F.S."
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "date": "2026-12-05T00:00:00",
-                  "actaUrl": null
+                  "home": "Ourense Ontime"
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2026-12-05T12:00:00",
-                  "actaUrl": null
+                  "home": "Atlético Navalcarnero"
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "Estrela Revoltosa Verín FSF",
                   "date": "2026-12-05T16:30:00",
-                  "actaUrl": null
+                  "home": "ARRIVA AD Alcorcón FSF"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "LBTL Futsal Alcantarilla",
                   "date": "2026-12-05T18:00:00",
-                  "actaUrl": null
+                  "home": "Nueces de Ronda Atlético Torcal FS"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "Poio Pescamar FS",
                   "date": "2026-12-05T18:30:00",
-                  "actaUrl": null
+                  "home": "MRB Móstoles FSF"
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "Rodiles F.S. \"A\"",
                   "date": "2026-12-05T19:30:00",
-                  "actaUrl": null
+                  "home": "F.S.F. Castro Bloques Cando"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "STV Roldán F.S",
                   "date": "2026-12-05T19:30:00",
-                  "actaUrl": null
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F."
                 }
               ]
             },
@@ -8483,58 +8435,50 @@
               "jornada": 11,
               "matches": [
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "Estrela Revoltosa Verín FSF",
                   "date": "2026-12-08T00:00:00",
-                  "actaUrl": null
+                  "home": "LBTL Futsal Alcantarilla"
                 },
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "MRB Móstoles FSF",
                   "date": "2026-12-08T00:00:00",
-                  "actaUrl": null
+                  "home": "Ceuta Agrupación Deportiva"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "Atlético Navalcarnero",
                   "date": "2026-12-08T00:00:00",
-                  "actaUrl": null
+                  "home": "AE Les Corts UBAE"
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "Nueces de Ronda Atlético Torcal FS",
                   "date": "2026-12-08T00:00:00",
-                  "actaUrl": null
+                  "home": "STV Roldán F.S"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "F.S.F. Castro Bloques Cando",
                   "date": "2026-12-08T00:00:00",
-                  "actaUrl": null
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza"
                 },
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "date": "2026-12-08T20:00:00",
-                  "actaUrl": null
+                  "home": "C.D. Guadalcacín F.S."
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "Ourense Ontime",
                   "date": "2026-12-08T20:00:00",
-                  "actaUrl": null
+                  "home": "Poio Pescamar FS"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "ARRIVA AD Alcorcón FSF",
                   "date": "2026-12-08T20:00:00",
-                  "actaUrl": null
+                  "home": "Rodiles F.S. \"A\""
                 }
               ]
             }
           ],
-          "jornadasTotal": 30,
-          "teamsSource": "calendario"
+          "teamsSource": "calendario",
+          "jornadasTotal": 30
         },
         {
           "id": "rfef-segunda-fs-fem",
@@ -10005,8 +9949,8 @@
                   ]
                 }
               ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario"
+              "teamsSource": "calendario",
+              "jornadasTotal": 30
             },
             {
               "id": "g2",
