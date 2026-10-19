@@ -1,6 +1,6 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-10-12T14:51:30+00:00",
+  "lastUpdated": "2026-10-19T12:31:57+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
     "rfef: la PNFG rate-limitó 12 jornada/s y se abandonaron 6 grupo/s; agotado el presupuesto de 12 fallos, el resto del calendario no se pidió. Lo publicado sale de la caché y del JSON anterior",
@@ -28,13 +28,9 @@
               "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/101001.png"
             },
             {
-              "name": "Catgas Energia",
-              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png",
-              "officialName": "Catgas Energía Santa Coloma"
-            },
-            {
-              "name": "CD Xota FS",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/usr/local/projects/weblogic/repository/AS400/90/DOCS/201210/21/12041381.jpg"
+              "name": "Osasuna Magna",
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/20.png",
+              "officialName": "C.A. Osasuna Magna"
             },
             {
               "name": "Córdoba Patrimonio",
@@ -44,6 +40,10 @@
             {
               "name": "ElPozo Murcia Costa Cálida",
               "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079009167_Pozo.png"
+            },
+            {
+              "name": "FS García",
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png"
             },
             {
               "name": "Palma Futsal",
@@ -58,7 +58,7 @@
             {
               "name": "Jaén FS",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/25.png",
-              "officialName": "Jaen Paraiso Interior F.S."
+              "officialName": "Jaén Paraiso Interior FS."
             },
             {
               "name": "Jimbee Cartagena",
@@ -67,17 +67,17 @@
             },
             {
               "name": "Noia Portus Apostoli",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206140_50x50.png"
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20232/28/160c4e28cbc9b1d67f0143f61c2a543e.jpg"
             },
             {
               "name": "O Parrulo Ferrol",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/29.png",
-              "officialName": "O Parrulo Ferrol F.S."
+              "officialName": "O Parrulo Ferrol FS."
             },
             {
               "name": "Manzanares FS",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/9.png",
-              "officialName": "Quesos El Hidalgo Manzanares F.S."
+              "officialName": "Quesos El Hidalgo Manzanares FS"
             },
             {
               "name": "Peñíscola FS",
@@ -86,8 +86,8 @@
             },
             {
               "name": "El Ejido FS",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/209175_50x50.png",
-              "officialName": "Sur Seeds El Ejido F.S."
+              "logoUrl": null,
+              "officialName": "Sur Seed CD El Ejido Futsal"
             },
             {
               "name": "Viña Albali Valdepeñas",
@@ -95,8 +95,8 @@
             },
             {
               "name": "Wanapix Sala 10",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008334_escudo.png",
-              "officialName": "Wanapix"
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/23.png",
+              "officialName": "Wanapix AD Sala 10"
             }
           ],
           "calendar": [
@@ -192,11 +192,13 @@
               "matches": [
                 {
                   "home": "Barça",
-                  "away": "Jimbee Cartagena Costa Cálida"
+                  "away": "Jimbee Cartagena Costa Cálida",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697023&NPcd_Pdf=1"
                 },
                 {
                   "home": "Jaén Paraiso Interior FS.",
-                  "away": "Inter JP Financial"
+                  "away": "Inter JP Financial",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697024&NPcd_Pdf=1"
                 },
                 {
                   "home": "Quesos El Hidalgo Manzanares FS",
@@ -212,11 +214,13 @@
                 },
                 {
                   "home": "Servigroup Peñiscola FS",
-                  "away": "Viña Albali Valdepeñas"
+                  "away": "Viña Albali Valdepeñas",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697028&NPcd_Pdf=1"
                 },
                 {
                   "home": "ElPozo Murcia Costa Cálida",
-                  "away": "Córdoba Patrimonio De La Humanidad"
+                  "away": "Córdoba Patrimonio De La Humanidad",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697029&NPcd_Pdf=1"
                 },
                 {
                   "home": "Wanapix AD Sala 10",
@@ -231,7 +235,8 @@
               "matches": [
                 {
                   "home": "Córdoba Patrimonio De La Humanidad",
-                  "away": "Jaén Paraiso Interior FS."
+                  "away": "Jaén Paraiso Interior FS.",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697031&NPcd_Pdf=1"
                 },
                 {
                   "home": "Sur Seed CD El Ejido Futsal",
@@ -243,23 +248,28 @@
                 },
                 {
                   "home": "Inter JP Financial",
-                  "away": "ElPozo Murcia Costa Cálida"
+                  "away": "ElPozo Murcia Costa Cálida",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697034&NPcd_Pdf=1"
                 },
                 {
                   "home": "Quesos El Hidalgo Manzanares FS",
-                  "away": "Jimbee Cartagena Costa Cálida"
+                  "away": "Jimbee Cartagena Costa Cálida",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697035&NPcd_Pdf=1"
                 },
                 {
                   "home": "Noia Portus Apostoli",
-                  "away": "Barça"
+                  "away": "Barça",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70705261&NPcd_Pdf=1"
                 },
                 {
                   "home": "Illes Balears Palma Futsal",
-                  "away": "Servigroup Peñiscola FS"
+                  "away": "Servigroup Peñiscola FS",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697037&NPcd_Pdf=1"
                 },
                 {
                   "home": "O Parrulo Ferrol FS.",
-                  "away": "Viña Albali Valdepeñas"
+                  "away": "Viña Albali Valdepeñas",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697038&NPcd_Pdf=1"
                 }
               ],
               "phase": "Apertura"
@@ -274,7 +284,8 @@
                 },
                 {
                   "home": "Jimbee Cartagena Costa Cálida",
-                  "away": "Noia Portus Apostoli"
+                  "away": "Noia Portus Apostoli",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697040&NPcd_Pdf=1"
                 },
                 {
                   "home": "Jaén Paraiso Interior FS.",
@@ -282,15 +293,18 @@
                 },
                 {
                   "home": "Illes Balears Palma Futsal",
-                  "away": "O Parrulo Ferrol FS."
+                  "away": "O Parrulo Ferrol FS.",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697042&NPcd_Pdf=1"
                 },
                 {
                   "home": "Servigroup Peñiscola FS",
-                  "away": "Córdoba Patrimonio De La Humanidad"
+                  "away": "Córdoba Patrimonio De La Humanidad",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697043&NPcd_Pdf=1"
                 },
                 {
                   "home": "ElPozo Murcia Costa Cálida",
-                  "away": "Quesos El Hidalgo Manzanares FS"
+                  "away": "Quesos El Hidalgo Manzanares FS",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697044&NPcd_Pdf=1"
                 },
                 {
                   "home": "Viña Albali Valdepeñas",
@@ -309,7 +323,8 @@
               "matches": [
                 {
                   "home": "Córdoba Patrimonio De La Humanidad",
-                  "away": "Jimbee Cartagena Costa Cálida"
+                  "away": "Jimbee Cartagena Costa Cálida",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697047&NPcd_Pdf=1"
                 },
                 {
                   "home": "Sur Seed CD El Ejido Futsal",
@@ -321,15 +336,18 @@
                 },
                 {
                   "home": "Inter JP Financial",
-                  "away": "Viña Albali Valdepeñas"
+                  "away": "Viña Albali Valdepeñas",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697050&NPcd_Pdf=1"
                 },
                 {
                   "home": "Quesos El Hidalgo Manzanares FS",
-                  "away": "Illes Balears Palma Futsal"
+                  "away": "Illes Balears Palma Futsal",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697051&NPcd_Pdf=1"
                 },
                 {
                   "home": "Noia Portus Apostoli",
-                  "away": "Servigroup Peñiscola FS"
+                  "away": "Servigroup Peñiscola FS",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697052&NPcd_Pdf=1"
                 },
                 {
                   "home": "C.A. Osasuna Magna",
@@ -337,7 +355,8 @@
                 },
                 {
                   "home": "O Parrulo Ferrol FS.",
-                  "away": "Jaén Paraiso Interior FS."
+                  "away": "Jaén Paraiso Interior FS.",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697054&NPcd_Pdf=1"
                 }
               ],
               "phase": "Apertura"
@@ -348,7 +367,8 @@
               "matches": [
                 {
                   "home": "Barça",
-                  "away": "O Parrulo Ferrol FS."
+                  "away": "O Parrulo Ferrol FS.",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697055&NPcd_Pdf=1"
                 },
                 {
                   "home": "Jimbee Cartagena Costa Cálida",
@@ -356,7 +376,8 @@
                 },
                 {
                   "home": "Jaén Paraiso Interior FS.",
-                  "away": "Quesos El Hidalgo Manzanares FS"
+                  "away": "Quesos El Hidalgo Manzanares FS",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697057&NPcd_Pdf=1"
                 },
                 {
                   "home": "C.A. Osasuna Magna",
@@ -368,11 +389,13 @@
                 },
                 {
                   "home": "Servigroup Peñiscola FS",
-                  "away": "Inter JP Financial"
+                  "away": "Inter JP Financial",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697060&NPcd_Pdf=1"
                 },
                 {
                   "home": "Viña Albali Valdepeñas",
-                  "away": "Córdoba Patrimonio De La Humanidad"
+                  "away": "Córdoba Patrimonio De La Humanidad",
+                  "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697061&NPcd_Pdf=1"
                 },
                 {
                   "home": "Wanapix AD Sala 10",
@@ -1279,8 +1302,8 @@
               "phase": "Clausura"
             }
           ],
-          "jornadasTotal": 15,
-          "teamsSource": "calendario"
+          "teamsSource": "calendario",
+          "jornadasTotal": 15
         },
         {
           "id": "rfef-segunda-fs-masc",
@@ -2955,8 +2978,8 @@
               ]
             }
           ],
-          "jornadasTotal": 30,
-          "teamsSource": "calendario"
+          "teamsSource": "calendario",
+          "jornadasTotal": 30
         },
         {
           "id": "rfef-segunda-b-fs-masc",
@@ -2994,7 +3017,7 @@
                 },
                 {
                   "name": "C.D. COMPOSALA",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079039300_449692278_1173240227460346_5063438521756555111_n.jpg"
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079041392_escudo_granate_sin_letras.png"
                 },
                 {
                   "name": "C.D. Tierno Galván",
@@ -3017,7 +3040,7 @@
                 },
                 {
                   "name": "Noia Portus B",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206140_50x50.png",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20232/28/160c4e28cbc9b1d67f0143f61c2a543e.jpg",
                   "officialName": "Noia Portus Apostoli"
                 },
                 {
@@ -3050,51 +3073,51 @@
                   "jornada": 1,
                   "matches": [
                     {
+                      "home": "Noia Portus Apostoli",
                       "away": "Caja Rural Atlético Benavente FS",
                       "date": "2026-09-19T18:00:00",
-                      "home": "Noia Portus Apostoli",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702000&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Grupo FORMA-T Vilalba F.S.",
                       "away": "Stellae Leis Pontevedra F.S.",
                       "date": "2026-09-19T18:30:00",
-                      "home": "Grupo FORMA-T Vilalba F.S.",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702002&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Caja Rural River Sala Zamora",
                       "away": "5 Coruña F.S.",
                       "date": "2026-09-19T18:30:00",
-                      "home": "Caja Rural River Sala Zamora",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702004&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Deporcyl - Guardo FS",
                       "away": "ADC Lugo Sala",
                       "date": "2026-09-19T18:30:00",
-                      "home": "Deporcyl - Guardo FS",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702006&NPcd_Pdf=1"
                     },
                     {
+                      "home": "O Esteo F.S.",
                       "away": "S.D. Xove F.S.",
                       "date": "2026-09-19T19:00:00",
-                      "home": "O Esteo F.S.",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702001&NPcd_Pdf=1"
                     },
                     {
+                      "home": "F.S. Salamanca Energía Duero",
                       "away": "Racing de Mieres",
                       "date": "2026-09-19T19:00:00",
-                      "home": "F.S. Salamanca Energía Duero",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702003&NPcd_Pdf=1"
                     },
                     {
+                      "home": "C.D. Tierno Galván",
                       "away": "CD Albense FS",
                       "date": "2026-09-19T19:30:00",
-                      "home": "C.D. Tierno Galván",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702005&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Sibuscascoche Ribeira Fútbol Sala",
                       "away": "C.D. COMPOSALA",
                       "date": "2026-09-19T20:00:00",
-                      "home": "Sibuscascoche Ribeira Fútbol Sala",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70701999&NPcd_Pdf=1"
                     }
                   ]
@@ -3103,51 +3126,51 @@
                   "jornada": 2,
                   "matches": [
                     {
+                      "home": "Stellae Leis Pontevedra F.S.",
                       "away": "O Esteo F.S.",
                       "date": "2026-09-26T17:00:00",
-                      "home": "Stellae Leis Pontevedra F.S.",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702010&NPcd_Pdf=1"
                     },
                     {
+                      "home": "5 Coruña F.S.",
                       "away": "F.S. Salamanca Energía Duero",
                       "date": "2026-09-26T17:00:00",
-                      "home": "5 Coruña F.S.",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702012&NPcd_Pdf=1"
                     },
                     {
+                      "home": "ADC Lugo Sala",
                       "away": "C.D. Tierno Galván",
                       "date": "2026-09-26T17:00:00",
-                      "home": "ADC Lugo Sala",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702014&NPcd_Pdf=1"
                     },
                     {
+                      "home": "C.D. COMPOSALA",
                       "away": "Deporcyl - Guardo FS",
                       "date": "2026-09-26T18:00:00",
-                      "home": "C.D. COMPOSALA",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702007&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Racing de Mieres",
                       "away": "Grupo FORMA-T Vilalba F.S.",
                       "date": "2026-09-26T18:00:00",
-                      "home": "Racing de Mieres",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702011&NPcd_Pdf=1"
                     },
                     {
+                      "home": "CD Albense FS",
                       "away": "Caja Rural River Sala Zamora",
                       "date": "2026-09-26T18:00:00",
-                      "home": "CD Albense FS",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702013&NPcd_Pdf=1"
                     },
                     {
+                      "home": "S.D. Xove F.S.",
                       "away": "Noia Portus Apostoli",
                       "date": "2026-09-26T18:45:00",
-                      "home": "S.D. Xove F.S.",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702009&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Caja Rural Atlético Benavente FS",
                       "away": "Sibuscascoche Ribeira Fútbol Sala",
                       "date": "2026-09-26T19:00:00",
-                      "home": "Caja Rural Atlético Benavente FS",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702008&NPcd_Pdf=1"
                     }
                   ]
@@ -3156,46 +3179,52 @@
                   "jornada": 3,
                   "matches": [
                     {
+                      "home": "Sibuscascoche Ribeira Fútbol Sala",
                       "away": "S.D. Xove F.S.",
                       "date": "2026-10-03T13:00:00",
-                      "home": "Sibuscascoche Ribeira Fútbol Sala"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702016&NPcd_Pdf=1"
                     },
                     {
+                      "home": "C.D. COMPOSALA",
                       "away": "Caja Rural Atlético Benavente FS",
                       "date": "2026-10-03T18:00:00",
-                      "home": "C.D. COMPOSALA"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702015&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Noia Portus Apostoli",
                       "away": "Stellae Leis Pontevedra F.S.",
                       "date": "2026-10-03T18:00:00",
-                      "home": "Noia Portus Apostoli"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702017&NPcd_Pdf=1"
                     },
                     {
+                      "home": "O Esteo F.S.",
                       "away": "Racing de Mieres",
                       "date": "2026-10-03T18:00:00",
-                      "home": "O Esteo F.S."
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702018&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Grupo FORMA-T Vilalba F.S.",
                       "away": "5 Coruña F.S.",
                       "date": "2026-10-03T18:30:00",
-                      "home": "Grupo FORMA-T Vilalba F.S."
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702019&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Deporcyl - Guardo FS",
                       "away": "C.D. Tierno Galván",
                       "date": "2026-10-03T18:30:00",
-                      "home": "Deporcyl - Guardo FS",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702022&NPcd_Pdf=1"
                     },
                     {
+                      "home": "F.S. Salamanca Energía Duero",
                       "away": "CD Albense FS",
                       "date": "2026-10-03T19:00:00",
-                      "home": "F.S. Salamanca Energía Duero",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702020&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Caja Rural River Sala Zamora",
                       "away": "ADC Lugo Sala",
                       "date": "2026-10-03T19:00:00",
-                      "home": "Caja Rural River Sala Zamora"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702021&NPcd_Pdf=1"
                     }
                   ]
                 },
@@ -3203,44 +3232,52 @@
                   "jornada": 4,
                   "matches": [
                     {
+                      "home": "C.D. Tierno Galván",
                       "away": "Caja Rural River Sala Zamora",
                       "date": "2026-10-09T20:15:00",
-                      "home": "C.D. Tierno Galván"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702030&NPcd_Pdf=1"
                     },
                     {
-                      "away": "Deporcyl - Guardo FS",
-                      "date": null,
-                      "home": "Caja Rural Atlético Benavente FS"
+                      "home": "CD Albense FS",
+                      "away": "Grupo FORMA-T Vilalba F.S.",
+                      "date": "2026-10-10T16:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702028&NPcd_Pdf=1"
                     },
                     {
-                      "away": "C.D. COMPOSALA",
-                      "date": null,
-                      "home": "S.D. Xove F.S."
-                    },
-                    {
+                      "home": "Stellae Leis Pontevedra F.S.",
                       "away": "Sibuscascoche Ribeira Fútbol Sala",
-                      "date": null,
-                      "home": "Stellae Leis Pontevedra F.S."
+                      "date": "2026-10-10T17:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702025&NPcd_Pdf=1"
                     },
                     {
+                      "home": "5 Coruña F.S.",
                       "away": "O Esteo F.S.",
-                      "date": null,
-                      "home": "5 Coruña F.S."
+                      "date": "2026-10-10T17:30:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702027&NPcd_Pdf=1"
                     },
                     {
-                      "away": "F.S. Salamanca Energía Duero",
-                      "date": null,
-                      "home": "ADC Lugo Sala"
-                    },
-                    {
+                      "home": "Racing de Mieres",
                       "away": "Noia Portus Apostoli",
                       "date": "2026-10-10T18:00:00",
-                      "home": "Racing de Mieres"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702026&NPcd_Pdf=1"
                     },
                     {
-                      "away": "Grupo FORMA-T Vilalba F.S.",
-                      "date": "2026-10-10T18:00:00",
-                      "home": "CD Albense FS"
+                      "home": "S.D. Xove F.S.",
+                      "away": "C.D. COMPOSALA",
+                      "date": "2026-10-10T18:15:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702024&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Caja Rural Atlético Benavente FS",
+                      "away": "Deporcyl - Guardo FS",
+                      "date": "2026-10-10T19:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702023&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "ADC Lugo Sala",
+                      "away": "F.S. Salamanca Energía Duero",
+                      "date": "2026-10-11T13:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702029&NPcd_Pdf=1"
                     }
                   ]
                 },
@@ -3248,44 +3285,52 @@
                   "jornada": 5,
                   "matches": [
                     {
-                      "away": "S.D. Xove F.S.",
-                      "date": null,
-                      "home": "Caja Rural Atlético Benavente FS"
-                    },
-                    {
+                      "home": "C.D. COMPOSALA",
                       "away": "Stellae Leis Pontevedra F.S.",
-                      "date": null,
-                      "home": "C.D. COMPOSALA"
+                      "date": "2026-10-17T18:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702032&NPcd_Pdf=1"
                     },
                     {
-                      "away": "Racing de Mieres",
-                      "date": null,
-                      "home": "Sibuscascoche Ribeira Fútbol Sala"
-                    },
-                    {
-                      "away": "5 Coruña F.S.",
-                      "date": null,
-                      "home": "Noia Portus Apostoli"
-                    },
-                    {
+                      "home": "O Esteo F.S.",
                       "away": "CD Albense FS",
-                      "date": null,
-                      "home": "O Esteo F.S."
+                      "date": "2026-10-17T18:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702035&NPcd_Pdf=1"
                     },
                     {
-                      "away": "ADC Lugo Sala",
-                      "date": null,
-                      "home": "Grupo FORMA-T Vilalba F.S."
-                    },
-                    {
-                      "away": "C.D. Tierno Galván",
-                      "date": null,
-                      "home": "F.S. Salamanca Energía Duero"
-                    },
-                    {
+                      "home": "Deporcyl - Guardo FS",
                       "away": "Caja Rural River Sala Zamora",
-                      "date": null,
-                      "home": "Deporcyl - Guardo FS"
+                      "date": "2026-10-17T18:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702038&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Grupo FORMA-T Vilalba F.S.",
+                      "away": "ADC Lugo Sala",
+                      "date": "2026-10-17T18:30:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702036&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Caja Rural Atlético Benavente FS",
+                      "away": "S.D. Xove F.S.",
+                      "date": "2026-10-17T19:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702031&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Noia Portus Apostoli",
+                      "away": "5 Coruña F.S.",
+                      "date": "2026-10-18T12:45:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702034&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Sibuscascoche Ribeira Fútbol Sala",
+                      "away": "Racing de Mieres",
+                      "date": "2026-10-18T13:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702033&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "F.S. Salamanca Energía Duero",
+                      "away": "C.D. Tierno Galván",
+                      "date": "2026-10-18T18:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702037&NPcd_Pdf=1"
                     }
                   ]
                 },
@@ -3293,44 +3338,52 @@
                   "jornada": 6,
                   "matches": [
                     {
-                      "away": "Deporcyl - Guardo FS",
-                      "date": null,
-                      "home": "S.D. Xove F.S."
-                    },
-                    {
+                      "home": "Stellae Leis Pontevedra F.S.",
                       "away": "Caja Rural Atlético Benavente FS",
-                      "date": null,
-                      "home": "Stellae Leis Pontevedra F.S."
+                      "date": "2026-10-24T17:00:00",
+                      "actaUrl": null
                     },
                     {
-                      "away": "Sibuscascoche Ribeira Fútbol Sala",
-                      "date": null,
-                      "home": "5 Coruña F.S."
-                    },
-                    {
+                      "home": "ADC Lugo Sala",
                       "away": "O Esteo F.S.",
-                      "date": null,
-                      "home": "ADC Lugo Sala"
+                      "date": "2026-10-24T17:30:00",
+                      "actaUrl": null
                     },
                     {
-                      "away": "Grupo FORMA-T Vilalba F.S.",
-                      "date": null,
-                      "home": "C.D. Tierno Galván"
-                    },
-                    {
-                      "away": "F.S. Salamanca Energía Duero",
-                      "date": null,
-                      "home": "Caja Rural River Sala Zamora"
-                    },
-                    {
+                      "home": "Racing de Mieres",
                       "away": "C.D. COMPOSALA",
                       "date": "2026-10-24T18:00:00",
-                      "home": "Racing de Mieres"
+                      "actaUrl": null
                     },
                     {
+                      "home": "CD Albense FS",
                       "away": "Noia Portus Apostoli",
                       "date": "2026-10-24T18:00:00",
-                      "home": "CD Albense FS"
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "S.D. Xove F.S.",
+                      "away": "Deporcyl - Guardo FS",
+                      "date": "2026-10-24T18:15:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Caja Rural River Sala Zamora",
+                      "away": "F.S. Salamanca Energía Duero",
+                      "date": "2026-10-24T18:45:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702046&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "5 Coruña F.S.",
+                      "away": "Sibuscascoche Ribeira Fútbol Sala",
+                      "date": "2026-10-24T19:15:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "C.D. Tierno Galván",
+                      "away": "Grupo FORMA-T Vilalba F.S.",
+                      "date": "2026-10-24T19:30:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702045&NPcd_Pdf=1"
                     }
                   ]
                 },
@@ -3338,44 +3391,52 @@
                   "jornada": 7,
                   "matches": [
                     {
-                      "away": "Stellae Leis Pontevedra F.S.",
-                      "date": null,
-                      "home": "S.D. Xove F.S."
-                    },
-                    {
-                      "away": "Racing de Mieres",
-                      "date": null,
-                      "home": "Caja Rural Atlético Benavente FS"
-                    },
-                    {
+                      "home": "C.D. COMPOSALA",
                       "away": "5 Coruña F.S.",
                       "date": null,
-                      "home": "C.D. COMPOSALA"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Sibuscascoche Ribeira Fútbol Sala",
                       "away": "CD Albense FS",
                       "date": null,
-                      "home": "Sibuscascoche Ribeira Fútbol Sala"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Noia Portus Apostoli",
                       "away": "ADC Lugo Sala",
                       "date": null,
-                      "home": "Noia Portus Apostoli"
+                      "actaUrl": null
                     },
                     {
+                      "home": "O Esteo F.S.",
                       "away": "C.D. Tierno Galván",
                       "date": null,
-                      "home": "O Esteo F.S."
+                      "actaUrl": null
                     },
                     {
+                      "home": "Grupo FORMA-T Vilalba F.S.",
                       "away": "Caja Rural River Sala Zamora",
                       "date": null,
-                      "home": "Grupo FORMA-T Vilalba F.S."
+                      "actaUrl": null
                     },
                     {
+                      "home": "Deporcyl - Guardo FS",
                       "away": "F.S. Salamanca Energía Duero",
-                      "date": null,
-                      "home": "Deporcyl - Guardo FS"
+                      "date": "2026-10-31T18:00:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "S.D. Xove F.S.",
+                      "away": "Stellae Leis Pontevedra F.S.",
+                      "date": "2026-10-31T18:15:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Caja Rural Atlético Benavente FS",
+                      "away": "Racing de Mieres",
+                      "date": "2026-10-31T19:00:00",
+                      "actaUrl": null
                     }
                   ]
                 },
@@ -3383,44 +3444,52 @@
                   "jornada": 8,
                   "matches": [
                     {
+                      "home": "Stellae Leis Pontevedra F.S.",
                       "away": "Deporcyl - Guardo FS",
                       "date": null,
-                      "home": "Stellae Leis Pontevedra F.S."
+                      "actaUrl": null
                     },
                     {
+                      "home": "5 Coruña F.S.",
                       "away": "Caja Rural Atlético Benavente FS",
                       "date": null,
-                      "home": "5 Coruña F.S."
+                      "actaUrl": null
                     },
                     {
+                      "home": "ADC Lugo Sala",
                       "away": "Sibuscascoche Ribeira Fútbol Sala",
                       "date": null,
-                      "home": "ADC Lugo Sala"
+                      "actaUrl": null
                     },
                     {
+                      "home": "C.D. Tierno Galván",
                       "away": "Noia Portus Apostoli",
                       "date": null,
-                      "home": "C.D. Tierno Galván"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Caja Rural River Sala Zamora",
                       "away": "O Esteo F.S.",
                       "date": null,
-                      "home": "Caja Rural River Sala Zamora"
+                      "actaUrl": null
                     },
                     {
+                      "home": "F.S. Salamanca Energía Duero",
                       "away": "Grupo FORMA-T Vilalba F.S.",
                       "date": null,
-                      "home": "F.S. Salamanca Energía Duero"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Racing de Mieres",
                       "away": "S.D. Xove F.S.",
                       "date": "2026-11-07T18:00:00",
-                      "home": "Racing de Mieres"
+                      "actaUrl": null
                     },
                     {
+                      "home": "CD Albense FS",
                       "away": "C.D. COMPOSALA",
                       "date": "2026-11-07T18:00:00",
-                      "home": "CD Albense FS"
+                      "actaUrl": null
                     }
                   ]
                 },
@@ -3428,44 +3497,52 @@
                   "jornada": 9,
                   "matches": [
                     {
+                      "home": "Stellae Leis Pontevedra F.S.",
                       "away": "Racing de Mieres",
                       "date": null,
-                      "home": "Stellae Leis Pontevedra F.S."
+                      "actaUrl": null
                     },
                     {
+                      "home": "S.D. Xove F.S.",
                       "away": "5 Coruña F.S.",
                       "date": null,
-                      "home": "S.D. Xove F.S."
+                      "actaUrl": null
                     },
                     {
+                      "home": "Caja Rural Atlético Benavente FS",
                       "away": "CD Albense FS",
                       "date": null,
-                      "home": "Caja Rural Atlético Benavente FS"
+                      "actaUrl": null
                     },
                     {
+                      "home": "C.D. COMPOSALA",
                       "away": "ADC Lugo Sala",
                       "date": null,
-                      "home": "C.D. COMPOSALA"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Sibuscascoche Ribeira Fútbol Sala",
                       "away": "C.D. Tierno Galván",
                       "date": null,
-                      "home": "Sibuscascoche Ribeira Fútbol Sala"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Noia Portus Apostoli",
                       "away": "Caja Rural River Sala Zamora",
                       "date": null,
-                      "home": "Noia Portus Apostoli"
+                      "actaUrl": null
                     },
                     {
+                      "home": "O Esteo F.S.",
                       "away": "F.S. Salamanca Energía Duero",
                       "date": null,
-                      "home": "O Esteo F.S."
+                      "actaUrl": null
                     },
                     {
+                      "home": "Deporcyl - Guardo FS",
                       "away": "Grupo FORMA-T Vilalba F.S.",
-                      "date": null,
-                      "home": "Deporcyl - Guardo FS"
+                      "date": "2026-11-14T18:00:00",
+                      "actaUrl": null
                     }
                   ]
                 },
@@ -3473,44 +3550,52 @@
                   "jornada": 10,
                   "matches": [
                     {
+                      "home": "5 Coruña F.S.",
                       "away": "Stellae Leis Pontevedra F.S.",
                       "date": null,
-                      "home": "5 Coruña F.S."
+                      "actaUrl": null
                     },
                     {
+                      "home": "ADC Lugo Sala",
                       "away": "Caja Rural Atlético Benavente FS",
                       "date": null,
-                      "home": "ADC Lugo Sala"
+                      "actaUrl": null
                     },
                     {
+                      "home": "C.D. Tierno Galván",
                       "away": "C.D. COMPOSALA",
                       "date": null,
-                      "home": "C.D. Tierno Galván"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Caja Rural River Sala Zamora",
                       "away": "Sibuscascoche Ribeira Fútbol Sala",
                       "date": null,
-                      "home": "Caja Rural River Sala Zamora"
+                      "actaUrl": null
                     },
                     {
+                      "home": "F.S. Salamanca Energía Duero",
                       "away": "Noia Portus Apostoli",
                       "date": null,
-                      "home": "F.S. Salamanca Energía Duero"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Grupo FORMA-T Vilalba F.S.",
                       "away": "O Esteo F.S.",
                       "date": null,
-                      "home": "Grupo FORMA-T Vilalba F.S."
+                      "actaUrl": null
                     },
                     {
+                      "home": "Racing de Mieres",
                       "away": "Deporcyl - Guardo FS",
                       "date": "2026-11-21T18:00:00",
-                      "home": "Racing de Mieres"
+                      "actaUrl": null
                     },
                     {
+                      "home": "CD Albense FS",
                       "away": "S.D. Xove F.S.",
                       "date": "2026-11-21T18:00:00",
-                      "home": "CD Albense FS"
+                      "actaUrl": null
                     }
                   ]
                 },
@@ -3518,44 +3603,52 @@
                   "jornada": 11,
                   "matches": [
                     {
+                      "home": "Stellae Leis Pontevedra F.S.",
                       "away": "CD Albense FS",
                       "date": null,
-                      "home": "Stellae Leis Pontevedra F.S."
+                      "actaUrl": null
                     },
                     {
+                      "home": "S.D. Xove F.S.",
                       "away": "ADC Lugo Sala",
                       "date": null,
-                      "home": "S.D. Xove F.S."
+                      "actaUrl": null
                     },
                     {
+                      "home": "Caja Rural Atlético Benavente FS",
                       "away": "C.D. Tierno Galván",
                       "date": null,
-                      "home": "Caja Rural Atlético Benavente FS"
+                      "actaUrl": null
                     },
                     {
+                      "home": "C.D. COMPOSALA",
                       "away": "Caja Rural River Sala Zamora",
                       "date": null,
-                      "home": "C.D. COMPOSALA"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Sibuscascoche Ribeira Fútbol Sala",
                       "away": "F.S. Salamanca Energía Duero",
                       "date": null,
-                      "home": "Sibuscascoche Ribeira Fútbol Sala"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Noia Portus Apostoli",
                       "away": "Grupo FORMA-T Vilalba F.S.",
                       "date": null,
-                      "home": "Noia Portus Apostoli"
+                      "actaUrl": null
                     },
                     {
-                      "away": "O Esteo F.S.",
-                      "date": null,
-                      "home": "Deporcyl - Guardo FS"
-                    },
-                    {
+                      "home": "Racing de Mieres",
                       "away": "5 Coruña F.S.",
                       "date": "2026-11-28T18:00:00",
-                      "home": "Racing de Mieres"
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Deporcyl - Guardo FS",
+                      "away": "O Esteo F.S.",
+                      "date": "2026-11-28T18:00:00",
+                      "actaUrl": null
                     }
                   ]
                 },
@@ -3605,8 +3698,8 @@
                   ]
                 }
               ],
-              "teamsSource": "calendario",
-              "jornadasTotal": 30
+              "jornadasTotal": 30,
+              "teamsSource": "calendario"
             },
             {
               "id": "g2",
@@ -5071,8 +5164,8 @@
                   ]
                 }
               ],
-              "teamsSource": "calendario",
-              "jornadasTotal": 30
+              "jornadasTotal": 30,
+              "teamsSource": "calendario"
             },
             {
               "id": "g3",
@@ -6390,8 +6483,8 @@
                   ]
                 }
               ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario"
+              "teamsSource": "calendario",
+              "jornadasTotal": 30
             },
             {
               "id": "g4",
@@ -7075,7 +7168,7 @@
                 },
                 {
                   "name": "Dos Hermanas FS",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/anterior/1314/DOCS/20137/25/faf5fde51678349d33806a754ccd303a_oloUcgqD.jpg",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079041465_Dise_o_sin_t_tulo_20261008_031918_0000.png",
                   "officialName": "Dos Hermanas F.S. C.D. \"A\""
                 },
                 {
@@ -7129,46 +7222,52 @@
                   "jornada": 1,
                   "matches": [
                     {
+                      "home": "Imperio Los Rosales",
                       "away": "FLEXLIVING JUMILLA FS",
                       "date": "2026-09-19T16:00:00",
-                      "home": "Imperio Los Rosales"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702965&NPcd_Pdf=1"
                     },
                     {
+                      "home": "C.D. Bujalance F.S. Beconet",
                       "away": "C.D. Malacitano Futsal",
                       "date": "2026-09-19T18:00:00",
-                      "home": "C.D. Bujalance F.S. Beconet"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702959&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Dos Hermanas F.S. C.D. \"A\"",
                       "away": "C.D. Sporting FS Almería Biocampojoyma",
                       "date": "2026-09-19T18:00:00",
-                      "home": "Dos Hermanas F.S. C.D. \"A\"",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702960&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Cdb Salvatierra Fs",
                       "away": "Melilla Ciudad del Deporte Nueva Era",
                       "date": "2026-09-19T19:00:00",
-                      "home": "Cdb Salvatierra Fs"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702962&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Jimbee Cartagena Futbol Sala",
                       "away": "Oleoinnova Mengibar FS",
                       "date": "2026-09-19T20:55:00",
-                      "home": "Jimbee Cartagena Futbol Sala"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702964&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Joasan Construcciones CFS Pinatar \"B\"",
                       "away": "Crevillent Futsal Starts \"A\"",
                       "date": "2026-09-20T11:45:00",
-                      "home": "Joasan Construcciones CFS Pinatar \"B\""
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702963&NPcd_Pdf=1"
                     },
                     {
-                      "away": "Nawter Blanca FS",
-                      "date": "2026-09-20T12:00:00",
                       "home": "CD Virgili Cádiz \"A\"",
+                      "away": "Nawter Blanca FS",
+                      "date": "2026-09-20T12:05:00",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702961&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Sima Granada FS",
                       "away": "GH Distribución Moral FS",
                       "date": "2026-09-20T13:15:00",
-                      "home": "Sima Granada FS"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702966&NPcd_Pdf=1"
                     }
                   ]
                 },
@@ -7176,44 +7275,52 @@
                   "jornada": 2,
                   "matches": [
                     {
+                      "home": "C.D. Malacitano Futsal",
                       "away": "Sima Granada FS",
-                      "date": null,
-                      "home": "C.D. Malacitano Futsal"
+                      "date": "2026-09-25T20:30:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702967&NPcd_Pdf=1"
                     },
                     {
-                      "away": "C.D. Bujalance F.S. Beconet",
-                      "date": null,
-                      "home": "C.D. Sporting FS Almería Biocampojoyma"
-                    },
-                    {
-                      "away": "Dos Hermanas F.S. C.D. \"A\"",
-                      "date": null,
-                      "home": "Nawter Blanca FS"
-                    },
-                    {
-                      "away": "Cdb Salvatierra Fs",
-                      "date": null,
-                      "home": "Crevillent Futsal Starts \"A\""
-                    },
-                    {
-                      "away": "Jimbee Cartagena Futbol Sala",
-                      "date": null,
-                      "home": "FLEXLIVING JUMILLA FS"
-                    },
-                    {
+                      "home": "GH Distribución Moral FS",
                       "away": "Imperio Los Rosales",
-                      "date": null,
-                      "home": "GH Distribución Moral FS"
+                      "date": "2026-09-26T13:30:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702974&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Melilla Ciudad del Deporte Nueva Era",
                       "away": "CD Virgili Cádiz \"A\"",
                       "date": "2026-09-26T16:00:00",
-                      "home": "Melilla Ciudad del Deporte Nueva Era"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702970&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Crevillent Futsal Starts \"A\"",
+                      "away": "Cdb Salvatierra Fs",
+                      "date": "2026-09-26T17:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702971&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Oleoinnova Mengibar FS",
                       "away": "Joasan Construcciones CFS Pinatar \"B\"",
                       "date": "2026-09-26T18:30:00",
-                      "home": "Oleoinnova Mengibar FS"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702972&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Nawter Blanca FS",
+                      "away": "Dos Hermanas F.S. C.D. \"A\"",
+                      "date": "2026-09-27T11:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702969&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "C.D. Sporting FS Almería Biocampojoyma",
+                      "away": "C.D. Bujalance F.S. Beconet",
+                      "date": "2026-09-27T13:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702968&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "FLEXLIVING JUMILLA FS",
+                      "away": "Jimbee Cartagena Futbol Sala",
+                      "date": "2026-09-27T18:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702973&NPcd_Pdf=1"
                     }
                   ]
                 },
@@ -7221,44 +7328,52 @@
                   "jornada": 3,
                   "matches": [
                     {
+                      "home": "C.D. Malacitano Futsal",
+                      "away": "C.D. Sporting FS Almería Biocampojoyma",
+                      "date": "2026-10-02T19:40:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702975&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Dos Hermanas F.S. C.D. \"A\"",
                       "away": "Melilla Ciudad del Deporte Nueva Era",
                       "date": "2026-10-02T20:30:00",
-                      "home": "Dos Hermanas F.S. C.D. \"A\""
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702977&NPcd_Pdf=1"
                     },
                     {
-                      "away": "C.D. Sporting FS Almería Biocampojoyma",
-                      "date": null,
-                      "home": "C.D. Malacitano Futsal"
-                    },
-                    {
-                      "away": "Nawter Blanca FS",
-                      "date": null,
-                      "home": "C.D. Bujalance F.S. Beconet"
-                    },
-                    {
-                      "away": "Oleoinnova Mengibar FS",
-                      "date": null,
-                      "home": "Cdb Salvatierra Fs"
-                    },
-                    {
-                      "away": "FLEXLIVING JUMILLA FS",
-                      "date": null,
-                      "home": "Joasan Construcciones CFS Pinatar \"B\""
-                    },
-                    {
-                      "away": "GH Distribución Moral FS",
-                      "date": null,
-                      "home": "Jimbee Cartagena Futbol Sala"
-                    },
-                    {
+                      "home": "Sima Granada FS",
                       "away": "Imperio Los Rosales",
-                      "date": null,
-                      "home": "Sima Granada FS"
+                      "date": "2026-10-03T15:45:00",
+                      "actaUrl": null
                     },
                     {
+                      "home": "C.D. Bujalance F.S. Beconet",
+                      "away": "Nawter Blanca FS",
+                      "date": "2026-10-03T18:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702976&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Joasan Construcciones CFS Pinatar \"B\"",
+                      "away": "FLEXLIVING JUMILLA FS",
+                      "date": "2026-10-03T18:30:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702980&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Cdb Salvatierra Fs",
+                      "away": "Oleoinnova Mengibar FS",
+                      "date": "2026-10-03T19:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702979&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "CD Virgili Cádiz \"A\"",
                       "away": "Crevillent Futsal Starts \"A\"",
                       "date": "2026-10-04T12:00:00",
-                      "home": "CD Virgili Cádiz \"A\""
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702978&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Jimbee Cartagena Futbol Sala",
+                      "away": "GH Distribución Moral FS",
+                      "date": "2026-10-04T13:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702981&NPcd_Pdf=1"
                     }
                   ]
                 },
@@ -7266,44 +7381,52 @@
                   "jornada": 4,
                   "matches": [
                     {
-                      "away": "Sima Granada FS",
-                      "date": null,
-                      "home": "C.D. Sporting FS Almería Biocampojoyma"
-                    },
-                    {
-                      "away": "C.D. Malacitano Futsal",
-                      "date": null,
-                      "home": "Nawter Blanca FS"
-                    },
-                    {
-                      "away": "Dos Hermanas F.S. C.D. \"A\"",
-                      "date": null,
-                      "home": "Crevillent Futsal Starts \"A\""
-                    },
-                    {
-                      "away": "Cdb Salvatierra Fs",
-                      "date": null,
-                      "home": "FLEXLIVING JUMILLA FS"
-                    },
-                    {
-                      "away": "Joasan Construcciones CFS Pinatar \"B\"",
-                      "date": null,
-                      "home": "GH Distribución Moral FS"
-                    },
-                    {
+                      "home": "Imperio Los Rosales",
                       "away": "Jimbee Cartagena Futbol Sala",
-                      "date": null,
-                      "home": "Imperio Los Rosales"
+                      "date": "2026-10-09T19:30:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702990&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Melilla Ciudad del Deporte Nueva Era",
                       "away": "C.D. Bujalance F.S. Beconet",
                       "date": "2026-10-10T16:00:00",
-                      "home": "Melilla Ciudad del Deporte Nueva Era"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702985&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Nawter Blanca FS",
+                      "away": "C.D. Malacitano Futsal",
+                      "date": "2026-10-10T18:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702984&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Oleoinnova Mengibar FS",
                       "away": "CD Virgili Cádiz \"A\"",
                       "date": "2026-10-10T18:30:00",
-                      "home": "Oleoinnova Mengibar FS"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702987&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "C.D. Sporting FS Almería Biocampojoyma",
+                      "away": "Sima Granada FS",
+                      "date": "2026-10-10T19:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702983&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "FLEXLIVING JUMILLA FS",
+                      "away": "Cdb Salvatierra Fs",
+                      "date": "2026-10-10T19:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702988&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "GH Distribución Moral FS",
+                      "away": "Joasan Construcciones CFS Pinatar \"B\"",
+                      "date": "2026-10-10T20:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702989&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Crevillent Futsal Starts \"A\"",
+                      "away": "Dos Hermanas F.S. C.D. \"A\"",
+                      "date": "2026-10-11T11:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702986&NPcd_Pdf=1"
                     }
                   ]
                 },
@@ -7311,44 +7434,52 @@
                   "jornada": 5,
                   "matches": [
                     {
-                      "away": "Nawter Blanca FS",
-                      "date": null,
-                      "home": "C.D. Sporting FS Almería Biocampojoyma"
-                    },
-                    {
+                      "home": "C.D. Malacitano Futsal",
                       "away": "Melilla Ciudad del Deporte Nueva Era",
-                      "date": null,
-                      "home": "C.D. Malacitano Futsal"
+                      "date": "2026-10-16T20:20:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702992&NPcd_Pdf=1"
                     },
                     {
-                      "away": "Crevillent Futsal Starts \"A\"",
-                      "date": null,
-                      "home": "C.D. Bujalance F.S. Beconet"
-                    },
-                    {
-                      "away": "Oleoinnova Mengibar FS",
-                      "date": null,
-                      "home": "Dos Hermanas F.S. C.D. \"A\""
-                    },
-                    {
-                      "away": "GH Distribución Moral FS",
-                      "date": null,
-                      "home": "Cdb Salvatierra Fs"
-                    },
-                    {
+                      "home": "Joasan Construcciones CFS Pinatar \"B\"",
                       "away": "Imperio Los Rosales",
-                      "date": null,
-                      "home": "Joasan Construcciones CFS Pinatar \"B\""
+                      "date": "2026-10-17T12:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702997&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Dos Hermanas F.S. C.D. \"A\"",
+                      "away": "Oleoinnova Mengibar FS",
+                      "date": "2026-10-17T16:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702994&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "C.D. Bujalance F.S. Beconet",
+                      "away": "Crevillent Futsal Starts \"A\"",
+                      "date": "2026-10-17T18:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702993&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Cdb Salvatierra Fs",
+                      "away": "GH Distribución Moral FS",
+                      "date": "2026-10-17T18:30:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702996&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "Sima Granada FS",
                       "away": "Jimbee Cartagena Futbol Sala",
-                      "date": null,
-                      "home": "Sima Granada FS"
+                      "date": "2026-10-17T18:30:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702998&NPcd_Pdf=1"
                     },
                     {
+                      "home": "C.D. Sporting FS Almería Biocampojoyma",
+                      "away": "Nawter Blanca FS",
+                      "date": "2026-10-17T19:00:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "CD Virgili Cádiz \"A\"",
                       "away": "FLEXLIVING JUMILLA FS",
-                      "date": null,
-                      "home": "CD Virgili Cádiz \"A\""
+                      "date": "2026-10-17T20:00:00",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702995&NPcd_Pdf=1"
                     }
                   ]
                 },
@@ -7356,44 +7487,52 @@
                   "jornada": 6,
                   "matches": [
                     {
-                      "away": "Sima Granada FS",
-                      "date": null,
-                      "home": "Nawter Blanca FS"
-                    },
-                    {
-                      "away": "C.D. Malacitano Futsal",
-                      "date": null,
-                      "home": "Crevillent Futsal Starts \"A\""
-                    },
-                    {
-                      "away": "Dos Hermanas F.S. C.D. \"A\"",
-                      "date": null,
-                      "home": "FLEXLIVING JUMILLA FS"
-                    },
-                    {
-                      "away": "CD Virgili Cádiz \"A\"",
-                      "date": null,
-                      "home": "GH Distribución Moral FS"
-                    },
-                    {
+                      "home": "Imperio Los Rosales",
                       "away": "Cdb Salvatierra Fs",
-                      "date": null,
-                      "home": "Imperio Los Rosales"
+                      "date": "2026-10-24T12:00:00",
+                      "actaUrl": null
                     },
                     {
+                      "home": "Jimbee Cartagena Futbol Sala",
                       "away": "Joasan Construcciones CFS Pinatar \"B\"",
-                      "date": null,
-                      "home": "Jimbee Cartagena Futbol Sala"
+                      "date": "2026-10-24T13:00:00",
+                      "actaUrl": null
                     },
                     {
+                      "home": "Melilla Ciudad del Deporte Nueva Era",
                       "away": "C.D. Sporting FS Almería Biocampojoyma",
                       "date": "2026-10-24T16:00:00",
-                      "home": "Melilla Ciudad del Deporte Nueva Era"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Crevillent Futsal Starts \"A\"",
+                      "away": "C.D. Malacitano Futsal",
+                      "date": "2026-10-24T18:00:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Nawter Blanca FS",
+                      "away": "Sima Granada FS",
+                      "date": "2026-10-24T18:30:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Oleoinnova Mengibar FS",
                       "away": "C.D. Bujalance F.S. Beconet",
                       "date": "2026-10-24T18:30:00",
-                      "home": "Oleoinnova Mengibar FS"
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703002&NPcd_Pdf=1"
+                    },
+                    {
+                      "home": "FLEXLIVING JUMILLA FS",
+                      "away": "Dos Hermanas F.S. C.D. \"A\"",
+                      "date": "2026-10-24T19:00:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "GH Distribución Moral FS",
+                      "away": "CD Virgili Cádiz \"A\"",
+                      "date": "2026-10-24T20:00:00",
+                      "actaUrl": null
                     }
                   ]
                 },
@@ -7401,44 +7540,52 @@
                   "jornada": 7,
                   "matches": [
                     {
+                      "home": "Nawter Blanca FS",
                       "away": "Melilla Ciudad del Deporte Nueva Era",
                       "date": null,
-                      "home": "Nawter Blanca FS"
+                      "actaUrl": null
                     },
                     {
+                      "home": "C.D. Sporting FS Almería Biocampojoyma",
                       "away": "Crevillent Futsal Starts \"A\"",
                       "date": null,
-                      "home": "C.D. Sporting FS Almería Biocampojoyma"
+                      "actaUrl": null
                     },
                     {
+                      "home": "C.D. Malacitano Futsal",
                       "away": "Oleoinnova Mengibar FS",
                       "date": null,
-                      "home": "C.D. Malacitano Futsal"
+                      "actaUrl": null
                     },
                     {
-                      "away": "FLEXLIVING JUMILLA FS",
-                      "date": null,
-                      "home": "C.D. Bujalance F.S. Beconet"
-                    },
-                    {
+                      "home": "Dos Hermanas F.S. C.D. \"A\"",
                       "away": "GH Distribución Moral FS",
                       "date": null,
-                      "home": "Dos Hermanas F.S. C.D. \"A\""
+                      "actaUrl": null
                     },
                     {
+                      "home": "Cdb Salvatierra Fs",
                       "away": "Jimbee Cartagena Futbol Sala",
                       "date": null,
-                      "home": "Cdb Salvatierra Fs"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Sima Granada FS",
                       "away": "Joasan Construcciones CFS Pinatar \"B\"",
                       "date": null,
-                      "home": "Sima Granada FS"
+                      "actaUrl": null
                     },
                     {
+                      "home": "CD Virgili Cádiz \"A\"",
                       "away": "Imperio Los Rosales",
-                      "date": null,
-                      "home": "CD Virgili Cádiz \"A\""
+                      "date": "2026-10-31T16:45:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "C.D. Bujalance F.S. Beconet",
+                      "away": "FLEXLIVING JUMILLA FS",
+                      "date": "2026-10-31T18:30:00",
+                      "actaUrl": null
                     }
                   ]
                 },
@@ -7446,44 +7593,52 @@
                   "jornada": 8,
                   "matches": [
                     {
+                      "home": "Crevillent Futsal Starts \"A\"",
                       "away": "Nawter Blanca FS",
                       "date": null,
-                      "home": "Crevillent Futsal Starts \"A\""
+                      "actaUrl": null
                     },
                     {
+                      "home": "FLEXLIVING JUMILLA FS",
                       "away": "C.D. Malacitano Futsal",
                       "date": null,
-                      "home": "FLEXLIVING JUMILLA FS"
+                      "actaUrl": null
                     },
                     {
+                      "home": "GH Distribución Moral FS",
                       "away": "C.D. Bujalance F.S. Beconet",
                       "date": null,
-                      "home": "GH Distribución Moral FS"
+                      "actaUrl": null
                     },
                     {
-                      "away": "Dos Hermanas F.S. C.D. \"A\"",
-                      "date": null,
-                      "home": "Imperio Los Rosales"
-                    },
-                    {
+                      "home": "Jimbee Cartagena Futbol Sala",
                       "away": "CD Virgili Cádiz \"A\"",
                       "date": null,
-                      "home": "Jimbee Cartagena Futbol Sala"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Joasan Construcciones CFS Pinatar \"B\"",
                       "away": "Cdb Salvatierra Fs",
                       "date": null,
-                      "home": "Joasan Construcciones CFS Pinatar \"B\""
+                      "actaUrl": null
                     },
                     {
+                      "home": "Melilla Ciudad del Deporte Nueva Era",
                       "away": "Sima Granada FS",
                       "date": "2026-11-07T16:00:00",
-                      "home": "Melilla Ciudad del Deporte Nueva Era"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Imperio Los Rosales",
+                      "away": "Dos Hermanas F.S. C.D. \"A\"",
+                      "date": "2026-11-07T16:00:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "Oleoinnova Mengibar FS",
                       "away": "C.D. Sporting FS Almería Biocampojoyma",
                       "date": "2026-11-07T18:30:00",
-                      "home": "Oleoinnova Mengibar FS"
+                      "actaUrl": null
                     }
                   ]
                 },
@@ -7491,44 +7646,52 @@
                   "jornada": 9,
                   "matches": [
                     {
+                      "home": "Nawter Blanca FS",
                       "away": "Oleoinnova Mengibar FS",
                       "date": null,
-                      "home": "Nawter Blanca FS"
+                      "actaUrl": null
                     },
                     {
+                      "home": "C.D. Sporting FS Almería Biocampojoyma",
                       "away": "FLEXLIVING JUMILLA FS",
                       "date": null,
-                      "home": "C.D. Sporting FS Almería Biocampojoyma"
+                      "actaUrl": null
                     },
                     {
+                      "home": "C.D. Malacitano Futsal",
                       "away": "GH Distribución Moral FS",
                       "date": null,
-                      "home": "C.D. Malacitano Futsal"
+                      "actaUrl": null
                     },
                     {
-                      "away": "Imperio Los Rosales",
-                      "date": null,
-                      "home": "C.D. Bujalance F.S. Beconet"
-                    },
-                    {
+                      "home": "Dos Hermanas F.S. C.D. \"A\"",
                       "away": "Jimbee Cartagena Futbol Sala",
                       "date": null,
-                      "home": "Dos Hermanas F.S. C.D. \"A\""
+                      "actaUrl": null
                     },
                     {
+                      "home": "Sima Granada FS",
                       "away": "Cdb Salvatierra Fs",
                       "date": null,
-                      "home": "Sima Granada FS"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Melilla Ciudad del Deporte Nueva Era",
                       "away": "Crevillent Futsal Starts \"A\"",
                       "date": "2026-11-14T16:00:00",
-                      "home": "Melilla Ciudad del Deporte Nueva Era"
+                      "actaUrl": null
                     },
                     {
+                      "home": "C.D. Bujalance F.S. Beconet",
+                      "away": "Imperio Los Rosales",
+                      "date": "2026-11-14T18:00:00",
+                      "actaUrl": null
+                    },
+                    {
+                      "home": "CD Virgili Cádiz \"A\"",
                       "away": "Joasan Construcciones CFS Pinatar \"B\"",
                       "date": null,
-                      "home": "CD Virgili Cádiz \"A\""
+                      "actaUrl": null
                     }
                   ]
                 },
@@ -7536,44 +7699,52 @@
                   "jornada": 10,
                   "matches": [
                     {
+                      "home": "Crevillent Futsal Starts \"A\"",
                       "away": "Sima Granada FS",
                       "date": null,
-                      "home": "Crevillent Futsal Starts \"A\""
+                      "actaUrl": null
                     },
                     {
+                      "home": "FLEXLIVING JUMILLA FS",
                       "away": "Nawter Blanca FS",
                       "date": null,
-                      "home": "FLEXLIVING JUMILLA FS"
+                      "actaUrl": null
                     },
                     {
+                      "home": "GH Distribución Moral FS",
                       "away": "C.D. Sporting FS Almería Biocampojoyma",
                       "date": null,
-                      "home": "GH Distribución Moral FS"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Imperio Los Rosales",
                       "away": "C.D. Malacitano Futsal",
                       "date": null,
-                      "home": "Imperio Los Rosales"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Jimbee Cartagena Futbol Sala",
                       "away": "C.D. Bujalance F.S. Beconet",
                       "date": null,
-                      "home": "Jimbee Cartagena Futbol Sala"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Joasan Construcciones CFS Pinatar \"B\"",
                       "away": "Dos Hermanas F.S. C.D. \"A\"",
                       "date": null,
-                      "home": "Joasan Construcciones CFS Pinatar \"B\""
+                      "actaUrl": null
                     },
                     {
+                      "home": "Cdb Salvatierra Fs",
                       "away": "CD Virgili Cádiz \"A\"",
                       "date": null,
-                      "home": "Cdb Salvatierra Fs"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Oleoinnova Mengibar FS",
                       "away": "Melilla Ciudad del Deporte Nueva Era",
                       "date": "2026-11-21T18:30:00",
-                      "home": "Oleoinnova Mengibar FS"
+                      "actaUrl": null
                     }
                   ]
                 },
@@ -7581,44 +7752,52 @@
                   "jornada": 11,
                   "matches": [
                     {
+                      "home": "Crevillent Futsal Starts \"A\"",
                       "away": "Oleoinnova Mengibar FS",
                       "date": null,
-                      "home": "Crevillent Futsal Starts \"A\""
+                      "actaUrl": null
                     },
                     {
+                      "home": "Nawter Blanca FS",
                       "away": "GH Distribución Moral FS",
                       "date": null,
-                      "home": "Nawter Blanca FS"
+                      "actaUrl": null
                     },
                     {
+                      "home": "C.D. Sporting FS Almería Biocampojoyma",
                       "away": "Imperio Los Rosales",
                       "date": null,
-                      "home": "C.D. Sporting FS Almería Biocampojoyma"
+                      "actaUrl": null
                     },
                     {
+                      "home": "C.D. Malacitano Futsal",
                       "away": "Jimbee Cartagena Futbol Sala",
                       "date": null,
-                      "home": "C.D. Malacitano Futsal"
+                      "actaUrl": null
                     },
                     {
+                      "home": "C.D. Bujalance F.S. Beconet",
                       "away": "Joasan Construcciones CFS Pinatar \"B\"",
                       "date": null,
-                      "home": "C.D. Bujalance F.S. Beconet"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Dos Hermanas F.S. C.D. \"A\"",
                       "away": "Cdb Salvatierra Fs",
                       "date": null,
-                      "home": "Dos Hermanas F.S. C.D. \"A\""
+                      "actaUrl": null
                     },
                     {
+                      "home": "Sima Granada FS",
                       "away": "CD Virgili Cádiz \"A\"",
                       "date": null,
-                      "home": "Sima Granada FS"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Melilla Ciudad del Deporte Nueva Era",
                       "away": "FLEXLIVING JUMILLA FS",
                       "date": "2026-11-28T16:00:00",
-                      "home": "Melilla Ciudad del Deporte Nueva Era"
+                      "actaUrl": null
                     }
                   ]
                 },
@@ -7626,50 +7805,58 @@
                   "jornada": 12,
                   "matches": [
                     {
+                      "home": "FLEXLIVING JUMILLA FS",
                       "away": "Crevillent Futsal Starts \"A\"",
                       "date": null,
-                      "home": "FLEXLIVING JUMILLA FS"
+                      "actaUrl": null
                     },
                     {
+                      "home": "GH Distribución Moral FS",
                       "away": "Melilla Ciudad del Deporte Nueva Era",
                       "date": null,
-                      "home": "GH Distribución Moral FS"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Imperio Los Rosales",
                       "away": "Nawter Blanca FS",
                       "date": null,
-                      "home": "Imperio Los Rosales"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Jimbee Cartagena Futbol Sala",
                       "away": "C.D. Sporting FS Almería Biocampojoyma",
                       "date": null,
-                      "home": "Jimbee Cartagena Futbol Sala"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Joasan Construcciones CFS Pinatar \"B\"",
                       "away": "C.D. Malacitano Futsal",
                       "date": null,
-                      "home": "Joasan Construcciones CFS Pinatar \"B\""
+                      "actaUrl": null
                     },
                     {
+                      "home": "Cdb Salvatierra Fs",
                       "away": "C.D. Bujalance F.S. Beconet",
                       "date": null,
-                      "home": "Cdb Salvatierra Fs"
+                      "actaUrl": null
                     },
                     {
+                      "home": "Oleoinnova Mengibar FS",
                       "away": "Sima Granada FS",
                       "date": "2026-12-05T18:30:00",
-                      "home": "Oleoinnova Mengibar FS"
+                      "actaUrl": null
                     },
                     {
+                      "home": "CD Virgili Cádiz \"A\"",
                       "away": "Dos Hermanas F.S. C.D. \"A\"",
                       "date": null,
-                      "home": "CD Virgili Cádiz \"A\""
+                      "actaUrl": null
                     }
                   ]
                 }
               ],
-              "teamsSource": "calendario",
-              "jornadasTotal": 30
+              "jornadasTotal": 30,
+              "teamsSource": "calendario"
             },
             {
               "id": "g6",
