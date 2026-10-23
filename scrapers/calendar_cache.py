@@ -58,6 +58,7 @@ from __future__ import annotations
 import json
 import re
 import unicodedata
+from datetime import date, timedelta
 from pathlib import Path
 
 DATA_DIR = Path(__file__).parent.parent / "data"
@@ -160,6 +161,59 @@ def lookup_jornadas(comp: str | int, grupo: str | int) -> dict[int, list[dict]]:
     assert _calendars is not None
     stored = _calendars.get(_group_key(str(comp), str(grupo)), {})
     return {int(num): [dict(m) for m in matches] for num, matches in stored.items()}
+
+
+def settled_jornadas(
+    comp: str | int,
+    grupo: str | int,
+    *,
+    today: date,
+    min_age_days: int = 7,
+) -> set[int]:
+    """Jornadas cacheadas que **ya no pueden cambiar**, y que por tanto no hace
+    falta volver a pedir a la PNFG.
+
+    ## Por qué existe
+
+    La PNFG admite ~12 peticiones por IP en una ventana de varios minutos
+    (`pnfg_pacer`), así que cada petición cuesta casi un minuto de run. Un
+    completo pedía las ~30 jornadas de los 12 grupos **cada lunes**, aunque en
+    marzo veinte de ellas sean partidos jugados con su acta publicada desde
+    hace meses. Con el ritmo bueno eso son horas para traer lo que ya había.
+
+    ## Qué cuenta como cerrada — las tres cosas a la vez
+
+    - **Todos sus partidos tienen fecha**, y la más reciente tiene al menos
+      `min_age_days` días. Un aplazamiento cambia la fecha de un partido que
+      todavía no se ha jugado; uno de hace una semana ya no se mueve.
+    - **Todos tienen acta en caché.** El acta es lo único que llega *después*
+      del partido, y es por lo que se volvía a pedir una jornada jugada. Si
+      falta una, la jornada se sigue pidiendo hasta que aparezca.
+    - Una jornada sin partidos o con una fecha ilegible **no** está cerrada: en
+      la duda se pide, que es el lado barato del error.
+
+    Lo que se salta no se pierde: `_merge_calendar_cache` la rellena desde aquí
+    y `_merge_acta_cache` le devuelve las actas.
+    """
+    out: set[int] = set()
+    limite = today - timedelta(days=min_age_days)
+    for num, matches in lookup_jornadas(comp, grupo).items():
+        if not matches:
+            continue
+        cerrada = True
+        for m in matches:
+            raw = (m.get("date") or "")[:10]
+            try:
+                dia = date.fromisoformat(raw)
+            except ValueError:
+                cerrada = False
+                break
+            if dia > limite or not lookup(comp, grupo, num, m["home"], m["away"]):
+                cerrada = False
+                break
+        if cerrada:
+            out.add(num)
+    return out
 
 
 def store_jornadas(comp: str | int, grupo: str | int, calendar: list[dict]) -> int:
