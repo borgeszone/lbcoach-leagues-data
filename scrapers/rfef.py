@@ -39,6 +39,7 @@ from __future__ import annotations
 
 import io
 import json
+import os
 import re
 import time
 import unicodedata
@@ -1395,7 +1396,10 @@ def _attach_calendars(
     """
     by_id = {d["id"]: d for d in out_divisions}
     pdf_cache: dict[str, bytes | None] = {}
-    breaker = RateLimitBreaker()
+    # Tope de tiempo de esta fase: el job de Actions muere a las 6 h sin
+    # publicar, y antes y después de aquí quedan equipos, escudos y la
+    # publicación. `PNFG_CALENDAR_MINUTES` lo cambia sin tocar código.
+    breaker = RateLimitBreaker(time_budget_s=60 * _calendar_minutes())
     # Los escudos que traen las filas del calendario, de todos los grupos.
     # Se inyectan **al final y una sola vez**: `_fill_teams` corre después de
     # esta función, así que para cuando resuelva ya está el mapa completo.
@@ -1508,6 +1512,14 @@ def _attach_calendars(
             warnings.append(resumen)
 
 
+def _calendar_minutes() -> float:
+    raw = os.environ.get("PNFG_CALENDAR_MINUTES", "")
+    try:
+        return max(1.0, float(raw)) if raw else 250.0
+    except ValueError:
+        return 250.0
+
+
 def _note_total(nodo: dict, meta: dict, label: str) -> None:
     """Anota `jornadasTotal`: cuántas jornadas tiene la competición **de verdad**.
 
@@ -1563,6 +1575,9 @@ def _calendar_for_group(
     fresh = fetch_division_calendar(
         comp_code, group_code, temporada_code=season_code,
         max_jornadas=max_jornadas, breaker=breaker, meta=meta,
+        have=frozenset(calendar_cache.lookup_jornadas(comp_code, group_code)),
+        skip=frozenset(calendar_cache.settled_jornadas(
+            comp_code, group_code, today=date.today())),
     )
     if fresh:
         n = calendar_cache.store_jornadas(comp_code, group_code, fresh)

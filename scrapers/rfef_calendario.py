@@ -38,6 +38,7 @@ from scrapers.rfef_clasificacion import (
     make_session,
     _norm,
 )
+from scrapers import pnfg_pacer
 from scrapers.rfef_discovery import resolve_season_code
 
 CAL_PATH = "/pnfg/NPcd/NFG_CmpJornada"
@@ -90,20 +91,48 @@ class RateLimitBreaker:
     pagar 225 s en la jornada siguiente es lo que convierte un run de 26 min en
     uno de seis horas. Una sola respuesta buena lo restaura, así que un corte
     transitorio no degrada el resto del run.
+
+    **Desde octubre de 2026 esto es la segunda red, no la primera.** El corte
+    tiene una causa medida —un cupo de ~12 peticiones por IP, vayan al ritmo que
+    vayan— y lo que lo atraviesa es esperarlo en silencio
+    (`pnfg_pacer.wait_out_block`). Así un corte normal se resuelve dentro de la
+    misma jornada y no cuenta aquí. Si este cortacircuitos vuelve a saltar con
+    eso puesto, lo que hay que mirar es si la federación ha alargado el corte.
     """
 
-    def __init__(self, *, per_group: int = 3, run_budget: int = 12) -> None:
+    def __init__(
+        self,
+        *,
+        per_group: int = 3,
+        run_budget: int = 12,
+        time_budget_s: float | None = None,
+        clock=time.monotonic,
+    ) -> None:
         self.per_group = per_group
         self.run_budget = run_budget
         self.failures = 0
         self.groups_abandoned = 0
         self._consecutive = 0
         self._label = ""
+        # **El tope de tiempo.** Con el ritmo que exige la PNFG cada petición
+        # cuesta casi un minuto, y un run completo puede acercarse al corte de
+        # 6 h de Actions — que mata el job **sin publicar nada**. Mejor parar a
+        # tiempo y publicar lo que haya: lo que falte lo rellenan la caché y el
+        # JSON anterior, y como se pide primero lo que falta, el run siguiente
+        # sigue por donde se quedó.
+        self._clock = clock
+        self._deadline = None if time_budget_s is None else clock() + time_budget_s
+        self.time_budget_s = time_budget_s
+
+    @property
+    def out_of_time(self) -> bool:
+        return self._deadline is not None and self._clock() >= self._deadline
 
     @property
     def blocked(self) -> bool:
-        """El run agotó su presupuesto: no se pide nada más a la PNFG."""
-        return self.failures >= self.run_budget
+        """El run agotó su presupuesto —de fallos o de tiempo—: no se pide nada
+        más a la PNFG."""
+        return self.failures >= self.run_budget or self.out_of_time
 
     @property
     def group_tripped(self) -> bool:
@@ -138,6 +167,12 @@ class RateLimitBreaker:
         "la federación no lo ha publicado" y "nos bloquearon" es un recuento de
         jornadas que nadie mira.
         """
+        if self.out_of_time:
+            return (f"se acabó el tiempo de la fase de calendario "
+                    f"({int(self.time_budget_s // 60)} min) con "
+                    f"{self.failures} jornada/s rate-limitada/s; lo que no se pidió "
+                    f"sale de la caché y del JSON anterior, y el próximo run "
+                    f"empieza por lo que falta")
         if not self.failures:
             return None
         parte = (f"la PNFG rate-limitó {self.failures} jornada/s"
@@ -203,8 +238,23 @@ def fetch_division_calendar(
     max_jornadas: int | None = None,
     breaker: "RateLimitBreaker | None" = None,
     meta: dict | None = None,
+    have: "set[int] | frozenset[int] | None" = None,
+    skip: "set[int] | frozenset[int] | None" = None,
 ) -> list[dict]:
     """Devuelve `[{"jornada": N, "matches": [{"home","away","date"}]}]`.
+
+    `have` son las jornadas que ya están en `calendar_cache`. Se piden **las
+    que faltan primero** y después el resto. Hasta ahora se pedía siempre de la
+    J1 en adelante, y como la PNFG corta tras ~12 peticiones, cada run volvía a
+    bajar J1-J12 —que ya teníamos— y no llegaba nunca a la J13: la caché
+    prometía cobertura creciente y se quedaba clavada. Pidiendo primero lo que
+    falta, un run cortado sigue añadiendo jornadas nuevas. La lista que se
+    devuelve va igualmente ordenada por número.
+
+    `skip` son jornadas que no se piden en absoluto, porque ya no pueden cambiar
+    (`calendar_cache.settled_jornadas`). No salen en lo que se devuelve: quien
+    llama las rellena desde la caché. La J1 se pide siempre igual, porque es la
+    que trae el `<select>` con cuántas jornadas hay.
 
     `max_jornadas` corta tras las N primeras. Existe para el modo "solo
     equipos" (`scrape.py --teams-only`): la plantilla de un grupo se deduce de
@@ -257,7 +307,19 @@ def fetch_division_calendar(
         meta["total"] = len(jornada_nums)
 
     if max_jornadas is not None:
+        # Modo solo-equipos: J1 y J2 seguidas, por el equipo que descansa. El
+        # orden de "lo que falta primero" no aplica aquí.
         jornada_nums = jornada_nums[:max_jornadas]
+    else:
+        if skip:
+            saltadas = [n for n in jornada_nums if n != 1 and n in skip]
+            if saltadas:
+                print(f"  [rfef-cal] {label}: {len(saltadas)} jornadas cerradas "
+                      f"no se piden (salen de la caché)")
+            jornada_nums = [n for n in jornada_nums if n == 1 or n not in skip]
+        if have:
+            jornada_nums = ([n for n in jornada_nums if n not in have]
+                            + [n for n in jornada_nums if n in have])
 
     out: list[dict] = []
     for num in jornada_nums:
@@ -293,6 +355,7 @@ def fetch_division_calendar(
         if meta is not None:
             meta.setdefault("badges", {}).update(parse_jornada_badges(html))
 
+    out.sort(key=lambda j: j["jornada"])
     print(f"  [rfef-cal] {label}: {len(out)} jornadas con partidos")
     return out
 
@@ -305,12 +368,22 @@ def _fetch_jornada_html(
     temporada_code: str | None,
     retries: int,
 ) -> str | None:
-    """GET de una jornada con reintentos ante body vacío / error de red
-    (mismo patrón que `rfef_clasificacion.fetch_division_teams`). Renueva la
-    sesión entre reintentos para forzar una `JSESSIONID` nueva.
+    """GET de una jornada. Devuelve el HTML o None.
 
-    NOTA: muta `session` no es posible (es local del caller), así que ante
-    fallo creamos una sesión nueva local y reintentamos con ella."""
+    **Los dos fallos se tratan distinto, porque son cosas distintas:**
+
+    - **200 con el cuerpo vacío es el corte de la PNFG**: la IP agotó su cupo
+      de ~12 peticiones (medido, ver `pnfg_pacer`). Se espera **en silencio** y
+      con la **misma** sesión (`pnfg_pacer.wait_out_block`). Antes se
+      reintentaba a los 15/30/60/120 s con sesión nueva: cinco peticiones más
+      dentro del corte, que es justo lo que lo alarga, y la sesión no importa.
+    - **Error de red** (RFEF cierra la conexión bajo carga): backoff corto y
+      sesión nueva, como siempre — ahí sí puede estar rota la conexión.
+
+    `retries` acota las dos cosas por separado: los reintentos por error de
+    red, y cuántas esperas de corte se admiten (como mucho las de
+    `pnfg_pacer.BLOCK_WAITS`). Tras un fallo el cortacircuitos baja `retries`
+    a 1, así que una racha mala cuesta una espera por jornada y no dos."""
     params = {
         "cod_primaria": COD_PRIMARIA,
         "CodCompeticion": str(cod_competicion),
@@ -322,12 +395,15 @@ def _fetch_jornada_html(
 
     url = BASE_URL + CAL_PATH
     s = session
-    for attempt in range(retries + 1):
+    block_waits = 0
+    net_attempt = 0
+    while True:
         try:
             r = s.get(url, params=params, timeout=20)
         except requests.RequestException as e:
-            if attempt < retries:
-                backoff = _BACKOFFS[min(attempt, len(_BACKOFFS) - 1)]
+            if net_attempt < retries:
+                backoff = _BACKOFFS[min(net_attempt, len(_BACKOFFS) - 1)]
+                net_attempt += 1
                 time.sleep(backoff)
                 s = make_session()
                 continue
@@ -339,12 +415,11 @@ def _fetch_jornada_html(
             return None
         if r.content:
             return r.content.decode("iso-8859-15", errors="replace")
-        # 200 con body vacío → rate-limit / sesión perdida.
-        if attempt < retries:
-            backoff = _BACKOFFS[min(attempt, len(_BACKOFFS) - 1)]
-            time.sleep(backoff)
-            s = make_session()
-    return None
+        # 200 con body vacío → la IP agotó su cupo.
+        if not pnfg_pacer.wait_out_block(block_waits, label=f"J{jornada}",
+                                         limit=retries):
+            return None
+        block_waits += 1
 
 
 def _parse_jornada_numbers(html: str) -> list[int]:

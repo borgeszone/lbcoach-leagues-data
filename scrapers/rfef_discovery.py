@@ -59,6 +59,7 @@ from dataclasses import dataclass
 import requests
 from bs4 import BeautifulSoup
 
+from scrapers import pnfg_pacer
 from scrapers.rfef_clasificacion import BASE_URL, COD_PRIMARIA, make_session
 
 CAL_PATH = "/pnfg/NPcd/NFG_CmpJornada"
@@ -341,9 +342,10 @@ def parse_groups(script: str) -> list[Group]:
 # rate-limit que el resto de fetchers, y no la tuvo de entrada — un smoke test
 # en vivo se lo comió a la primera.
 #
-# La PNFG rate-limita por IP devolviendo **200 con el cuerpo vacío**, no un 429.
-# Se sale de ahí con una `JSESSIONID` nueva y esperando: los backoffs largos son
-# a propósito, el bloqueo dura más que un retry corto.
+# La PNFG corta por IP devolviendo **200 con el cuerpo vacío**, no un 429, tras
+# un cupo de ~12 peticiones. Ese corte se espera en silencio y con la misma
+# sesión (`pnfg_pacer.wait_out_block`). Estos backoffs son sólo para el error de
+# red, donde sí puede hacer falta una conexión nueva.
 
 _BACKOFFS = (15, 30, 60, 120)
 
@@ -364,6 +366,7 @@ class Fetcher:
     ) -> str | None:
         tag = label or path
         err = "desconocido"
+        block_waits = 0
         for attempt in range(retries + 1):
             try:
                 r = self._session.get(BASE_URL + path, params=params,
@@ -378,7 +381,16 @@ class Fetcher:
                     return None
                 if r.content:
                     return r.content.decode("iso-8859-15", errors="replace")
-                err = "respuesta vacía (rate-limit o sesión perdida)"
+                # Cuerpo vacío = corte de la PNFG por cupo de la IP. Se espera
+                # en silencio y con la MISMA sesión: la sesión no importa y el
+                # GET de siembra de una nueva es una petición más dentro del
+                # corte, que es lo que lo alarga (ver `pnfg_pacer`).
+                err = "respuesta vacía (corte de la PNFG)"
+                if not pnfg_pacer.wait_out_block(block_waits, label=tag,
+                                                 limit=retries):
+                    break
+                block_waits += 1
+                continue
 
             if attempt < retries:
                 backoff = _BACKOFFS[min(attempt, len(_BACKOFFS) - 1)]

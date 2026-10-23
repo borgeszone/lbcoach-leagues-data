@@ -30,6 +30,8 @@ from typing import Iterable
 import requests
 from bs4 import BeautifulSoup
 
+from scrapers import pnfg_pacer
+
 BASE_URL = "https://resultados.rfef.es"
 CLAS_PATH = "/pnfg/NPcd/NFG_VisClasificacion"
 COD_PRIMARIA = "1000120"  # Estable para todas las competiciones FS
@@ -51,11 +53,29 @@ class ScrapedTeam:
     logo_url: str | None
 
 
+class PacedSession(requests.Session):
+    """`Session` que respeta el ritmo de la PNFG en cada petición a su host.
+
+    Va aquí, en la sesión, porque todas las peticiones del scraper a
+    `resultados.rfef.es` salen de `make_session()` — descubrimiento,
+    clasificación y calendario — y el cupo es de la IP: ver `pnfg_pacer`.
+    """
+
+    def request(self, method, url, *args, **kwargs):
+        if pnfg_pacer.is_pnfg(url):
+            pnfg_pacer.PACER.wait()
+        return super().request(method, url, *args, **kwargs)
+
+
 def make_session() -> requests.Session:
     """Crea una `Session` con cookies + headers preparados. Hace un GET inicial
     a la home para sembrar la `JSESSIONID` que el endpoint de clasificación
-    requiere para devolver contenido."""
-    s = requests.Session()
+    requiere para devolver contenido.
+
+    Ese GET **gasta cupo** como cualquier otro (ver `pnfg_pacer`), así que crear
+    sesiones nuevas para "despistar" al rate-limit no solo no sirve —el límite
+    es por IP— sino que adelanta el siguiente bloqueo."""
+    s = PacedSession()
     s.headers.update(_HEADERS)
     try:
         s.get(BASE_URL + "/", timeout=15, allow_redirects=True)
@@ -92,13 +112,11 @@ def fetch_division_teams(
     url = BASE_URL + CLAS_PATH
     label = f"{cod_competicion}/{cod_grupo}"
 
-    # Backoffs largos a propósito: el rate-limit por IP de RFEF dura más
-    # que un retry corto (en pruebas, ~1-2 min entre rachas). Con
-    # 15/30/60/120s cubrimos hasta ~3.5 min de espera. En el último run
-    # de Actions el 4º intento tras 60s rescató el grupo G1 de Segunda
-    # Fem; el 5º (con 120s extra) debería rescatar también Primera Fem
-    # y G3 que ahora se quedan en el fallback PDF sin escudos.
+    # Backoffs para el error de RED. El cuerpo vacío es otra cosa —el corte de
+    # la PNFG por cupo de la IP— y se espera en silencio con
+    # `pnfg_pacer.wait_out_block`, sin sesión nueva: ver ese módulo.
     backoffs = [15, 30, 60, 120]
+    block_waits = 0
     last_error: str | None = None
     for attempt in range(retries + 1):
         try:
@@ -132,16 +150,13 @@ def fetch_division_teams(
                 f"clasificación ({len(r.content)} bytes)"
             )
             return []
-        # 200 con body vacío → rate-limit / sesión perdida. Reintentar
-        # con sesión nueva.
-        if attempt < retries:
-            backoff = backoffs[min(attempt, len(backoffs) - 1)]
-            print(
-                f"  [rfef-clas] {label}: respuesta vacía, reintentando "
-                f"en {backoff}s con sesión nueva ({attempt + 1}/{retries})"
-            )
-            time.sleep(backoff)
-            s = make_session()
+        # 200 con body vacío → corte de la PNFG (cupo de la IP agotado). Se
+        # espera en silencio y con la misma sesión; reintentar con sesión nueva
+        # a los pocos segundos era lo que alargaba el corte.
+        if not pnfg_pacer.wait_out_block(block_waits, label=label,
+                                         limit=retries):
+            break
+        block_waits += 1
 
     if last_error:
         print(f"  [rfef-clas] {label}: agotados reintentos ({last_error})")
