@@ -3,10 +3,14 @@ name: Scrape leagues data
 on:
   # Dos trabajos con cadencias distintas, porque cuestan cosas muy distintas:
   #
-  #   solo equipos  ~1 min   2 jornadas por grupo. Es lo que cambia en agosto,
+  #   solo equipos  ~40 min  2 jornadas por grupo. Es lo que cambia en agosto,
   #                          cuando las divisiones van abriendo de una en una.
-  #   completo      ~3 h     las ~30 jornadas de cada grupo, contra el
-  #                          rate-limit de la PNFG. El calendario de una
+  #   completo      ~4-5 h   las ~30 jornadas de cada grupo. La PNFG da un cupo
+  #                          de ~12 peticiones por IP y después corta ~6 min,
+  #                          vaya el scraper al ritmo que vaya
+  #                          (scrapers/pnfg_pacer.py): eso ES la duración. Las
+  #                          jornadas ya cerradas no se vuelven a pedir, así
+  #                          que el run se acorta según avanza la temporada. El calendario de una
   #                          temporada apenas cambia; lo que cambia dentro son
   #                          las actas, y esas ya tienen caché acumulativa.
   #
@@ -32,7 +36,7 @@ on:
         default: false
         type: boolean
       mode:
-        description: 'completo (equipos + calendario, ~3h) o equipos (~1 min)'
+        description: 'completo (equipos + calendario, ~4-5h) o equipos (~40 min)'
         required: false
         default: 'completo'
         type: choice
@@ -44,6 +48,20 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    env:
+      # Sin esto Python escribe a un pipe con buffer y todo el log del scraper
+      # sale con la marca de tiempo del final: el run del 2026-09-28 tenía
+      # 38 minutos de trabajo estampados en el mismo segundo, y así no se podía
+      # medir cuánto duraba un bloqueo de la PNFG.
+      PYTHONUNBUFFERED: '1'
+      # Segundos entre peticiones a resultados.rfef.es. Es cortesía, no lo que
+      # evita el corte: la PNFG corta tras ~12 peticiones vayan al ritmo que
+      # vayan (medido, ver scrapers/pnfg_pacer.py). Subirlo sólo alarga el run.
+      PNFG_INTERVAL: '6'
+      # Tope de la fase de calendario. El job muere a las 6 h sin publicar;
+      # mejor parar antes y publicar lo que haya. El run siguiente empieza por
+      # las jornadas que falten.
+      PNFG_CALENDAR_MINUTES: '250'
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
