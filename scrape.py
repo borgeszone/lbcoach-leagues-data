@@ -18,6 +18,7 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 
 from scrapers import calendar_cache, fcf, logo_resolver, rfef, rfef_shields
+from scrapers.team_renames import merge_renamed_in_categories
 
 ROOT = Path(__file__).parent
 OUTPUT_DIR = ROOT / "output"
@@ -498,6 +499,12 @@ def main() -> int:
         print(f"[scrape] Nodos con equipos heredados del publicado: {n}")
         n = inherit_calendars(categories, published)
         print(f"[scrape] Calendarios heredados del publicado: {n}")
+
+    # Después de heredar, con el calendario más completo que hay: un equipo que
+    # se cambia de nombre a mitad de temporada sale dos veces del calendario, y
+    # sólo se ve que es uno comparando las jornadas en que juega cada nombre.
+    for msg in merge_renamed_in_categories(categories):
+        print(f"[scrape] Un equipo con dos nombres: {msg}")
 
     # Va después de heredar: lo que sobreviva a la herencia y siga vacío es una
     # plantilla que nadie ha rellenado, no un run malo.
