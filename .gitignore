@@ -10,3 +10,6 @@ venv/
 # Output generado por scrape.py — se publica en gh-pages, no se versiona en main
 output/
 
+
+# Generado por graphify
+graphify-out/
