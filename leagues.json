@@ -1,9 +1,9 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-10-19T12:31:57+00:00",
+  "lastUpdated": "2026-10-24T01:21:11+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
-    "rfef: la PNFG rate-limitó 12 jornada/s y se abandonaron 6 grupo/s; agotado el presupuesto de 12 fallos, el resto del calendario no se pidió. Lo publicado sale de la caché y del JSON anterior",
+    "rfef: la PNFG rate-limitó 1 jornada/s y se abandonaron 1 grupo/s; esas jornadas salen de la caché o del JSON anterior",
     "fcf-1cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-2cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
     "fcf-3cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
@@ -28,9 +28,13 @@
               "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/101001.png"
             },
             {
-              "name": "Osasuna Magna",
-              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/20.png",
-              "officialName": "C.A. Osasuna Magna"
+              "name": "Catgas Energia",
+              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png",
+              "officialName": "Catgas Energía Santa Coloma"
+            },
+            {
+              "name": "CD Xota FS",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/usr/local/projects/weblogic/repository/AS400/90/DOCS/201210/21/12041381.jpg"
             },
             {
               "name": "Córdoba Patrimonio",
@@ -42,12 +46,8 @@
               "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079009167_Pozo.png"
             },
             {
-              "name": "FS García",
-              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/24.png"
-            },
-            {
               "name": "Palma Futsal",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20219/22/a0a331b21b72e658cbc6a1e0c801da7a.jpg",
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206407_50x50.png",
               "officialName": "Illes Balears Palma Futsal"
             },
             {
@@ -58,7 +58,7 @@
             {
               "name": "Jaén FS",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/25.png",
-              "officialName": "Jaén Paraiso Interior FS."
+              "officialName": "Jaen Paraiso Interior F.S."
             },
             {
               "name": "Jimbee Cartagena",
@@ -67,17 +67,17 @@
             },
             {
               "name": "Noia Portus Apostoli",
-              "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20232/28/160c4e28cbc9b1d67f0143f61c2a543e.jpg"
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206140_50x50.png"
             },
             {
               "name": "O Parrulo Ferrol",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/29.png",
-              "officialName": "O Parrulo Ferrol FS."
+              "officialName": "O Parrulo Ferrol F.S."
             },
             {
               "name": "Manzanares FS",
               "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/9.png",
-              "officialName": "Quesos El Hidalgo Manzanares FS"
+              "officialName": "Quesos El Hidalgo Manzanares F.S."
             },
             {
               "name": "Peñíscola FS",
@@ -86,8 +86,8 @@
             },
             {
               "name": "El Ejido FS",
-              "logoUrl": null,
-              "officialName": "Sur Seed CD El Ejido Futsal"
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/209175_50x50.png",
+              "officialName": "Sur Seeds El Ejido F.S."
             },
             {
               "name": "Viña Albali Valdepeñas",
@@ -95,10 +95,12 @@
             },
             {
               "name": "Wanapix Sala 10",
-              "logoUrl": "https://futsal.rfef.es/media/lnfs/shields_futsal/png/23.png",
-              "officialName": "Wanapix AD Sala 10"
+              "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079008334_escudo.png",
+              "officialName": "Wanapix"
             }
           ],
+          "jornadasTotal": 15,
+          "teamsSource": "calendario",
           "calendar": [
             {
               "jornada": 1,
@@ -124,11 +126,11 @@
                 },
                 {
                   "home": "C.A. Osasuna Magna",
-                  "away": "Jaén Paraiso Interior FS."
+                  "away": "Jaen Paraiso Interior F.S."
                 },
                 {
-                  "home": "O Parrulo Ferrol FS.",
-                  "away": "Quesos El Hidalgo Manzanares FS",
+                  "home": "O Parrulo Ferrol F.S.",
+                  "away": "Quesos El Hidalgo Manzanares F.S.",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697012&NPcd_Pdf=1"
                 },
                 {
@@ -158,7 +160,7 @@
                 },
                 {
                   "home": "Córdoba Patrimonio De La Humanidad",
-                  "away": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Quesos El Hidalgo Manzanares F.S.",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697017&NPcd_Pdf=1"
                 },
                 {
@@ -166,7 +168,7 @@
                   "away": "Sur Seed CD El Ejido Futsal"
                 },
                 {
-                  "home": "Jaén Paraiso Interior FS.",
+                  "home": "Jaen Paraiso Interior F.S.",
                   "away": "Noia Portus Apostoli",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697019&NPcd_Pdf=1"
                 },
@@ -176,7 +178,7 @@
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697020&NPcd_Pdf=1"
                 },
                 {
-                  "home": "O Parrulo Ferrol FS.",
+                  "home": "O Parrulo Ferrol F.S.",
                   "away": "FS García"
                 },
                 {
@@ -196,12 +198,12 @@
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697023&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Jaén Paraiso Interior FS.",
+                  "home": "Jaen Paraiso Interior F.S.",
                   "away": "Inter JP Financial",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697024&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "home": "Quesos El Hidalgo Manzanares F.S.",
                   "away": "FS García"
                 },
                 {
@@ -224,7 +226,7 @@
                 },
                 {
                   "home": "Wanapix AD Sala 10",
-                  "away": "O Parrulo Ferrol FS."
+                  "away": "O Parrulo Ferrol F.S."
                 }
               ],
               "phase": "Apertura"
@@ -235,7 +237,7 @@
               "matches": [
                 {
                   "home": "Córdoba Patrimonio De La Humanidad",
-                  "away": "Jaén Paraiso Interior FS.",
+                  "away": "Jaen Paraiso Interior F.S.",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697031&NPcd_Pdf=1"
                 },
                 {
@@ -252,7 +254,7 @@
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697034&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "home": "Quesos El Hidalgo Manzanares F.S.",
                   "away": "Jimbee Cartagena Costa Cálida",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697035&NPcd_Pdf=1"
                 },
@@ -267,7 +269,7 @@
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697037&NPcd_Pdf=1"
                 },
                 {
-                  "home": "O Parrulo Ferrol FS.",
+                  "home": "O Parrulo Ferrol F.S.",
                   "away": "Viña Albali Valdepeñas",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697038&NPcd_Pdf=1"
                 }
@@ -288,12 +290,12 @@
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697040&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Jaén Paraiso Interior FS.",
+                  "home": "Jaen Paraiso Interior F.S.",
                   "away": "Sur Seed CD El Ejido Futsal"
                 },
                 {
                   "home": "Illes Balears Palma Futsal",
-                  "away": "O Parrulo Ferrol FS.",
+                  "away": "O Parrulo Ferrol F.S.",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697042&NPcd_Pdf=1"
                 },
                 {
@@ -303,7 +305,7 @@
                 },
                 {
                   "home": "ElPozo Murcia Costa Cálida",
-                  "away": "Quesos El Hidalgo Manzanares FS",
+                  "away": "Quesos El Hidalgo Manzanares F.S.",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697044&NPcd_Pdf=1"
                 },
                 {
@@ -340,7 +342,7 @@
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697050&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "home": "Quesos El Hidalgo Manzanares F.S.",
                   "away": "Illes Balears Palma Futsal",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697051&NPcd_Pdf=1"
                 },
@@ -354,8 +356,8 @@
                   "away": "Wanapix AD Sala 10"
                 },
                 {
-                  "home": "O Parrulo Ferrol FS.",
-                  "away": "Jaén Paraiso Interior FS.",
+                  "home": "O Parrulo Ferrol F.S.",
+                  "away": "Jaen Paraiso Interior F.S.",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697054&NPcd_Pdf=1"
                 }
               ],
@@ -367,7 +369,7 @@
               "matches": [
                 {
                   "home": "Barça",
-                  "away": "O Parrulo Ferrol FS.",
+                  "away": "O Parrulo Ferrol F.S.",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697055&NPcd_Pdf=1"
                 },
                 {
@@ -375,8 +377,8 @@
                   "away": "FS García"
                 },
                 {
-                  "home": "Jaén Paraiso Interior FS.",
-                  "away": "Quesos El Hidalgo Manzanares FS",
+                  "home": "Jaen Paraiso Interior F.S.",
+                  "away": "Quesos El Hidalgo Manzanares F.S.",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697057&NPcd_Pdf=1"
                 },
                 {
@@ -418,14 +420,14 @@
                 },
                 {
                   "home": "FS García",
-                  "away": "Jaén Paraiso Interior FS."
+                  "away": "Jaen Paraiso Interior F.S."
                 },
                 {
                   "home": "Inter JP Financial",
                   "away": "C.A. Osasuna Magna"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "home": "Quesos El Hidalgo Manzanares F.S.",
                   "away": "Viña Albali Valdepeñas"
                 },
                 {
@@ -433,7 +435,7 @@
                   "away": "Illes Balears Palma Futsal"
                 },
                 {
-                  "home": "O Parrulo Ferrol FS.",
+                  "home": "O Parrulo Ferrol F.S.",
                   "away": "Servigroup Peñiscola FS"
                 },
                 {
@@ -453,7 +455,7 @@
                 },
                 {
                   "home": "Jimbee Cartagena Costa Cálida",
-                  "away": "Jaén Paraiso Interior FS."
+                  "away": "Jaen Paraiso Interior F.S."
                 },
                 {
                   "home": "Sur Seed CD El Ejido Futsal",
@@ -461,7 +463,7 @@
                 },
                 {
                   "home": "C.A. Osasuna Magna",
-                  "away": "O Parrulo Ferrol FS."
+                  "away": "O Parrulo Ferrol F.S."
                 },
                 {
                   "home": "Illes Balears Palma Futsal",
@@ -477,7 +479,7 @@
                 },
                 {
                   "home": "Wanapix AD Sala 10",
-                  "away": "Quesos El Hidalgo Manzanares FS"
+                  "away": "Quesos El Hidalgo Manzanares F.S."
                 }
               ],
               "phase": "Apertura"
@@ -495,11 +497,11 @@
                   "away": "Noia Portus Apostoli"
                 },
                 {
-                  "home": "Jaén Paraiso Interior FS.",
+                  "home": "Jaen Paraiso Interior F.S.",
                   "away": "Wanapix AD Sala 10"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "home": "Quesos El Hidalgo Manzanares F.S.",
                   "away": "Barça"
                 },
                 {
@@ -507,7 +509,7 @@
                   "away": "Viña Albali Valdepeñas"
                 },
                 {
-                  "home": "O Parrulo Ferrol FS.",
+                  "home": "O Parrulo Ferrol F.S.",
                   "away": "Córdoba Patrimonio De La Humanidad"
                 },
                 {
@@ -527,7 +529,7 @@
               "matches": [
                 {
                   "home": "Barça",
-                  "away": "Jaén Paraiso Interior FS."
+                  "away": "Jaen Paraiso Interior F.S."
                 },
                 {
                   "home": "Jimbee Cartagena Costa Cálida",
@@ -539,7 +541,7 @@
                 },
                 {
                   "home": "Sur Seed CD El Ejido Futsal",
-                  "away": "O Parrulo Ferrol FS."
+                  "away": "O Parrulo Ferrol F.S."
                 },
                 {
                   "home": "Inter JP Financial",
@@ -547,7 +549,7 @@
                 },
                 {
                   "home": "Noia Portus Apostoli",
-                  "away": "Quesos El Hidalgo Manzanares FS"
+                  "away": "Quesos El Hidalgo Manzanares F.S."
                 },
                 {
                   "home": "C.A. Osasuna Magna",
@@ -573,11 +575,11 @@
                   "away": "Noia Portus Apostoli"
                 },
                 {
-                  "home": "Jaén Paraiso Interior FS.",
+                  "home": "Jaen Paraiso Interior F.S.",
                   "away": "Servigroup Peñiscola FS"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "home": "Quesos El Hidalgo Manzanares F.S.",
                   "away": "Inter JP Financial"
                 },
                 {
@@ -585,7 +587,7 @@
                   "away": "Barça"
                 },
                 {
-                  "home": "O Parrulo Ferrol FS.",
+                  "home": "O Parrulo Ferrol F.S.",
                   "away": "Jimbee Cartagena Costa Cálida"
                 },
                 {
@@ -613,11 +615,11 @@
                 },
                 {
                   "home": "Sur Seed CD El Ejido Futsal",
-                  "away": "Quesos El Hidalgo Manzanares FS"
+                  "away": "Quesos El Hidalgo Manzanares F.S."
                 },
                 {
                   "home": "Inter JP Financial",
-                  "away": "O Parrulo Ferrol FS."
+                  "away": "O Parrulo Ferrol F.S."
                 },
                 {
                   "home": "Noia Portus Apostoli",
@@ -633,7 +635,7 @@
                 },
                 {
                   "home": "Viña Albali Valdepeñas",
-                  "away": "Jaén Paraiso Interior FS."
+                  "away": "Jaen Paraiso Interior F.S."
                 }
               ],
               "phase": "Apertura"
@@ -651,7 +653,7 @@
                   "away": "FS García"
                 },
                 {
-                  "home": "Jaén Paraiso Interior FS.",
+                  "home": "Jaen Paraiso Interior F.S.",
                   "away": "ElPozo Murcia Costa Cálida"
                 },
                 {
@@ -659,12 +661,12 @@
                   "away": "Jimbee Cartagena Costa Cálida"
                 },
                 {
-                  "home": "O Parrulo Ferrol FS.",
+                  "home": "O Parrulo Ferrol F.S.",
                   "away": "Noia Portus Apostoli"
                 },
                 {
                   "home": "Servigroup Peñiscola FS",
-                  "away": "Quesos El Hidalgo Manzanares FS"
+                  "away": "Quesos El Hidalgo Manzanares F.S."
                 },
                 {
                   "home": "Viña Albali Valdepeñas",
@@ -698,7 +700,7 @@
                   "away": "Córdoba Patrimonio De La Humanidad"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "home": "Quesos El Hidalgo Manzanares F.S.",
                   "away": "C.A. Osasuna Magna"
                 },
                 {
@@ -707,11 +709,11 @@
                 },
                 {
                   "home": "Illes Balears Palma Futsal",
-                  "away": "Jaén Paraiso Interior FS."
+                  "away": "Jaen Paraiso Interior F.S."
                 },
                 {
                   "home": "ElPozo Murcia Costa Cálida",
-                  "away": "O Parrulo Ferrol FS."
+                  "away": "O Parrulo Ferrol F.S."
                 }
               ],
               "phase": "Apertura"
@@ -726,15 +728,15 @@
                 },
                 {
                   "home": "Jimbee Cartagena Costa Cálida",
-                  "away": "Quesos El Hidalgo Manzanares FS"
+                  "away": "Quesos El Hidalgo Manzanares F.S."
                 },
                 {
                   "home": "Córdoba Patrimonio De La Humanidad",
                   "away": "ElPozo Murcia Costa Cálida"
                 },
                 {
-                  "home": "Jaén Paraiso Interior FS.",
-                  "away": "O Parrulo Ferrol FS."
+                  "home": "Jaen Paraiso Interior F.S.",
+                  "away": "O Parrulo Ferrol F.S."
                 },
                 {
                   "home": "C.A. Osasuna Magna",
@@ -772,8 +774,8 @@
                   "away": "Viña Albali Valdepeñas"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares FS",
-                  "away": "Jaén Paraiso Interior FS."
+                  "home": "Quesos El Hidalgo Manzanares F.S.",
+                  "away": "Jaen Paraiso Interior F.S."
                 },
                 {
                   "home": "Noia Portus Apostoli",
@@ -784,7 +786,7 @@
                   "away": "C.A. Osasuna Magna"
                 },
                 {
-                  "home": "O Parrulo Ferrol FS.",
+                  "home": "O Parrulo Ferrol F.S.",
                   "away": "Barça"
                 },
                 {
@@ -811,11 +813,11 @@
                   "away": "Illes Balears Palma Futsal"
                 },
                 {
-                  "home": "Jaén Paraiso Interior FS.",
+                  "home": "Jaen Paraiso Interior F.S.",
                   "away": "FS García"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "home": "Quesos El Hidalgo Manzanares F.S.",
                   "away": "Córdoba Patrimonio De La Humanidad"
                 },
                 {
@@ -823,7 +825,7 @@
                   "away": "Viña Albali Valdepeñas"
                 },
                 {
-                  "home": "O Parrulo Ferrol FS.",
+                  "home": "O Parrulo Ferrol F.S.",
                   "away": "Wanapix AD Sala 10"
                 },
                 {
@@ -842,7 +844,7 @@
                   "away": "Sur Seed CD El Ejido Futsal"
                 },
                 {
-                  "home": "Jaén Paraiso Interior FS.",
+                  "home": "Jaen Paraiso Interior F.S.",
                   "away": "Córdoba Patrimonio De La Humanidad"
                 },
                 {
@@ -855,7 +857,7 @@
                 },
                 {
                   "home": "Illes Balears Palma Futsal",
-                  "away": "Quesos El Hidalgo Manzanares FS"
+                  "away": "Quesos El Hidalgo Manzanares F.S."
                 },
                 {
                   "home": "ElPozo Murcia Costa Cálida",
@@ -863,7 +865,7 @@
                 },
                 {
                   "home": "Viña Albali Valdepeñas",
-                  "away": "O Parrulo Ferrol FS."
+                  "away": "O Parrulo Ferrol F.S."
                 },
                 {
                   "home": "Wanapix AD Sala 10",
@@ -890,14 +892,14 @@
                 },
                 {
                   "home": "Inter JP Financial",
-                  "away": "Jaén Paraiso Interior FS."
+                  "away": "Jaen Paraiso Interior F.S."
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "home": "Quesos El Hidalgo Manzanares F.S.",
                   "away": "Noia Portus Apostoli"
                 },
                 {
-                  "home": "O Parrulo Ferrol FS.",
+                  "home": "O Parrulo Ferrol F.S.",
                   "away": "Illes Balears Palma Futsal"
                 },
                 {
@@ -921,11 +923,11 @@
                 },
                 {
                   "home": "Jimbee Cartagena Costa Cálida",
-                  "away": "O Parrulo Ferrol FS."
+                  "away": "O Parrulo Ferrol F.S."
                 },
                 {
                   "home": "Noia Portus Apostoli",
-                  "away": "Jaén Paraiso Interior FS."
+                  "away": "Jaen Paraiso Interior F.S."
                 },
                 {
                   "home": "C.A. Osasuna Magna",
@@ -945,7 +947,7 @@
                 },
                 {
                   "home": "Viña Albali Valdepeñas",
-                  "away": "Quesos El Hidalgo Manzanares FS"
+                  "away": "Quesos El Hidalgo Manzanares F.S."
                 }
               ],
               "phase": "Clausura"
@@ -971,12 +973,12 @@
                   "away": "Jimbee Cartagena Costa Cálida"
                 },
                 {
-                  "home": "Jaén Paraiso Interior FS.",
+                  "home": "Jaen Paraiso Interior F.S.",
                   "away": "C.A. Osasuna Magna"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares FS",
-                  "away": "O Parrulo Ferrol FS."
+                  "home": "Quesos El Hidalgo Manzanares F.S.",
+                  "away": "O Parrulo Ferrol F.S."
                 },
                 {
                   "home": "ElPozo Murcia Costa Cálida",
@@ -995,7 +997,7 @@
               "matches": [
                 {
                   "home": "Barça",
-                  "away": "Quesos El Hidalgo Manzanares FS"
+                  "away": "Quesos El Hidalgo Manzanares F.S."
                 },
                 {
                   "home": "Jimbee Cartagena Costa Cálida",
@@ -1014,12 +1016,12 @@
                   "away": "Wanapix AD Sala 10"
                 },
                 {
-                  "home": "O Parrulo Ferrol FS.",
+                  "home": "O Parrulo Ferrol F.S.",
                   "away": "Sur Seed CD El Ejido Futsal"
                 },
                 {
                   "home": "Servigroup Peñiscola FS",
-                  "away": "Jaén Paraiso Interior FS."
+                  "away": "Jaen Paraiso Interior F.S."
                 },
                 {
                   "home": "Viña Albali Valdepeñas",
@@ -1042,18 +1044,18 @@
                 },
                 {
                   "home": "FS García",
-                  "away": "O Parrulo Ferrol FS."
+                  "away": "O Parrulo Ferrol F.S."
                 },
                 {
                   "home": "Inter JP Financial",
                   "away": "Barça"
                 },
                 {
-                  "home": "Jaén Paraiso Interior FS.",
+                  "home": "Jaen Paraiso Interior F.S.",
                   "away": "Illes Balears Palma Futsal"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "home": "Quesos El Hidalgo Manzanares F.S.",
                   "away": "Servigroup Peñiscola FS"
                 },
                 {
@@ -1073,7 +1075,7 @@
               "matches": [
                 {
                   "home": "Sur Seed CD El Ejido Futsal",
-                  "away": "Jaén Paraiso Interior FS."
+                  "away": "Jaen Paraiso Interior F.S."
                 },
                 {
                   "home": "FS García",
@@ -1081,14 +1083,14 @@
                 },
                 {
                   "home": "C.A. Osasuna Magna",
-                  "away": "Quesos El Hidalgo Manzanares FS"
+                  "away": "Quesos El Hidalgo Manzanares F.S."
                 },
                 {
                   "home": "Illes Balears Palma Futsal",
                   "away": "Noia Portus Apostoli"
                 },
                 {
-                  "home": "O Parrulo Ferrol FS.",
+                  "home": "O Parrulo Ferrol F.S.",
                   "away": "ElPozo Murcia Costa Cálida"
                 },
                 {
@@ -1127,16 +1129,16 @@
                   "away": "Servigroup Peñiscola FS"
                 },
                 {
-                  "home": "Jaén Paraiso Interior FS.",
+                  "home": "Jaen Paraiso Interior F.S.",
                   "away": "Viña Albali Valdepeñas"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "home": "Quesos El Hidalgo Manzanares F.S.",
                   "away": "Wanapix AD Sala 10"
                 },
                 {
                   "home": "Noia Portus Apostoli",
-                  "away": "O Parrulo Ferrol FS."
+                  "away": "O Parrulo Ferrol F.S."
                 },
                 {
                   "home": "ElPozo Murcia Costa Cálida",
@@ -1158,7 +1160,7 @@
                   "away": "Inter JP Financial"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "home": "Quesos El Hidalgo Manzanares F.S.",
                   "away": "Sur Seed CD El Ejido Futsal"
                 },
                 {
@@ -1175,11 +1177,11 @@
                 },
                 {
                   "home": "Servigroup Peñiscola FS",
-                  "away": "O Parrulo Ferrol FS."
+                  "away": "O Parrulo Ferrol F.S."
                 },
                 {
                   "home": "Wanapix AD Sala 10",
-                  "away": "Jaén Paraiso Interior FS."
+                  "away": "Jaen Paraiso Interior F.S."
                 }
               ],
               "phase": "Clausura"
@@ -1202,14 +1204,14 @@
                 },
                 {
                   "home": "Inter JP Financial",
-                  "away": "Quesos El Hidalgo Manzanares FS"
+                  "away": "Quesos El Hidalgo Manzanares F.S."
                 },
                 {
-                  "home": "Jaén Paraiso Interior FS.",
+                  "home": "Jaen Paraiso Interior F.S.",
                   "away": "Barça"
                 },
                 {
-                  "home": "O Parrulo Ferrol FS.",
+                  "home": "O Parrulo Ferrol F.S.",
                   "away": "C.A. Osasuna Magna"
                 },
                 {
@@ -1233,18 +1235,18 @@
                 },
                 {
                   "home": "Córdoba Patrimonio De La Humanidad",
-                  "away": "O Parrulo Ferrol FS."
+                  "away": "O Parrulo Ferrol F.S."
                 },
                 {
                   "home": "Inter JP Financial",
                   "away": "Wanapix AD Sala 10"
                 },
                 {
-                  "home": "Jaén Paraiso Interior FS.",
+                  "home": "Jaen Paraiso Interior F.S.",
                   "away": "Jimbee Cartagena Costa Cálida"
                 },
                 {
-                  "home": "Quesos El Hidalgo Manzanares FS",
+                  "home": "Quesos El Hidalgo Manzanares F.S.",
                   "away": "ElPozo Murcia Costa Cálida"
                 },
                 {
@@ -1276,19 +1278,19 @@
                 },
                 {
                   "home": "FS García",
-                  "away": "Quesos El Hidalgo Manzanares FS"
+                  "away": "Quesos El Hidalgo Manzanares F.S."
                 },
                 {
                   "home": "C.A. Osasuna Magna",
                   "away": "Córdoba Patrimonio De La Humanidad"
                 },
                 {
-                  "home": "O Parrulo Ferrol FS.",
+                  "home": "O Parrulo Ferrol F.S.",
                   "away": "Inter JP Financial"
                 },
                 {
                   "home": "ElPozo Murcia Costa Cálida",
-                  "away": "Jaén Paraiso Interior FS."
+                  "away": "Jaen Paraiso Interior F.S."
                 },
                 {
                   "home": "Viña Albali Valdepeñas",
@@ -1301,9 +1303,7 @@
               ],
               "phase": "Clausura"
             }
-          ],
-          "teamsSource": "calendario",
-          "jornadasTotal": 15
+          ]
         },
         {
           "id": "rfef-segunda-fs-masc",
@@ -1386,6 +1386,8 @@
               "officialName": "Zambú CFS Pinatar Cerramientos Abatibles"
             }
           ],
+          "jornadasTotal": 30,
+          "teamsSource": "calendario",
           "calendar": [
             {
               "jornada": 1,
@@ -2977,9 +2979,7 @@
                 }
               ]
             }
-          ],
-          "teamsSource": "calendario",
-          "jornadasTotal": 30
+          ]
         },
         {
           "id": "rfef-segunda-b-fs-masc",
@@ -3040,7 +3040,7 @@
                 },
                 {
                   "name": "Noia Portus B",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2223/DOCS/20232/28/160c4e28cbc9b1d67f0143f61c2a543e.jpg",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206140_50x50.png",
                   "officialName": "Noia Portus Apostoli"
                 },
                 {
@@ -3068,6 +3068,8 @@
                   "officialName": "Stellae Leis Pontevedra F.S."
                 }
               ],
+              "jornadasTotal": 30,
+              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -3697,9 +3699,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario"
+              ]
             },
             {
               "id": "g2",
@@ -3782,6 +3782,8 @@
                   "officialName": "Vulcanizados Ruiz Tafa FS"
                 }
               ],
+              "jornadasTotal": 30,
+              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -5163,9 +5165,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario"
+              ]
             },
             {
               "id": "g3",
@@ -5227,7 +5227,7 @@
                 },
                 {
                   "name": "Palma Futsal B",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20219/22/a0a331b21b72e658cbc6a1e0c801da7a.jpg",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/escudos_nuevos/206407_50x50.png",
                   "officialName": "Illes Balears Palma Futsal"
                 },
                 {
@@ -5251,6 +5251,8 @@
                   "officialName": "Ye Faky F.S."
                 }
               ],
+              "jornadasTotal": 30,
+              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -6482,9 +6484,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "calendario",
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g4",
@@ -6570,6 +6570,8 @@
                   "officialName": "Unión Tres Cantos FS"
                 }
               ],
+              "jornadasTotal": 30,
+              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -7128,9 +7130,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "calendario",
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g5",
@@ -7217,6 +7217,8 @@
                   "officialName": "Sima Granada FS"
                 }
               ],
+              "jornadasTotal": 30,
+              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -7854,9 +7856,7 @@
                     }
                   ]
                 }
-              ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario"
+              ]
             },
             {
               "id": "g6",
@@ -7901,9 +7901,8 @@
                   "officialName": "C.F.S. Casa Juv. La Matanza"
                 },
                 {
-                  "name": "Doctoral Ludeservicios",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20224/19/5759f5cf802d12df4e3cbafbd04a9d77.jpg",
-                  "officialName": "Doctoral FS"
+                  "name": "Doctoral FS",
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/var/docs/2122/DOCS/20224/19/5759f5cf802d12df4e3cbafbd04a9d77.jpg"
                 },
                 {
                   "name": "Juv. Los Pinos",
@@ -7939,6 +7938,8 @@
                   "officialName": "Suntryp Agüimes FS"
                 }
               ],
+              "jornadasTotal": 30,
+              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -8044,9 +8045,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "calendario",
-              "jornadasTotal": 30
+              ]
             }
           ]
         },
@@ -8135,6 +8134,8 @@
               "officialName": "Wanapix Aldelis InterSala 10 Zaragoza"
             }
           ],
+          "jornadasTotal": 30,
+          "teamsSource": "calendario",
           "calendar": [
             {
               "jornada": 1,
@@ -8663,9 +8664,7 @@
                 }
               ]
             }
-          ],
-          "teamsSource": "calendario",
-          "jornadasTotal": 30
+          ]
         },
         {
           "id": "rfef-segunda-fs-fem",
@@ -8754,6 +8753,8 @@
                   "officialName": "Valdetires Ferrol F.S.F."
                 }
               ],
+              "jornadasTotal": 30,
+              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -10135,9 +10136,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "calendario",
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g2",
@@ -10202,11 +10201,10 @@
                 },
                 {
                   "name": "La Villa",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079039322_475432209_794430852880919_2482076283060241869_n.jpg"
-                },
-                {
-                  "name": "La Villa Móstoles",
-                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079039322_475432209_794430852880919_2482076283060241869_n.jpg"
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Equipos/00100_0079039322_475432209_794430852880919_2482076283060241869_n.jpg",
+                  "aliases": [
+                    "La Villa Móstoles"
+                  ]
                 },
                 {
                   "name": "AE Les Corts B",
@@ -10224,6 +10222,8 @@
                   "officialName": "Somriu Futbol Sala Ripollet"
                 }
               ],
+              "jornadasTotal": 30,
+              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -10345,7 +10345,7 @@
                       "home": "La Villa"
                     },
                     {
-                      "away": "Les Corts, A.E. \" B \"",
+                      "away": "Les Corts, A.E. \"B\"",
                       "date": null,
                       "home": "Feme Castellón C.F.S."
                     },
@@ -10385,7 +10385,7 @@
                       "home": "CFS Autoescola Urgell Linyola"
                     },
                     {
-                      "away": "Club Deportivo Nou Turia FSF \" A \"",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
                       "date": null,
                       "home": "Entrerrios Automatización"
                     },
@@ -10405,7 +10405,7 @@
                       "home": "Lainco Esportiu Rubi F.S."
                     },
                     {
-                      "away": "AE Penya Esplugues Salvat Logística \" A \"",
+                      "away": "AE Penya Esplugues Salvat Logística \"A\"",
                       "date": null,
                       "home": "C.D. Parque Col. Santa Ana"
                     },
@@ -10460,7 +10460,7 @@
                       "home": "Somriu Futbol Sala Ripollet"
                     },
                     {
-                      "away": "Les Corts, A.E. \" B \"",
+                      "away": "Les Corts, A.E. \"B\"",
                       "date": "2026-10-18T12:45:00",
                       "home": "SolarMon-Les Glories 2014 CD La Concordia"
                     }
@@ -10475,7 +10475,7 @@
                       "home": "Entrerrios Automatización"
                     },
                     {
-                      "away": "Club Deportivo Nou Turia FSF \" A \"",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
                       "date": null,
                       "home": "Grupo Reciclarte Cesar Augusta"
                     },
@@ -10500,7 +10500,7 @@
                       "home": "F.S. Sabadell"
                     },
                     {
-                      "away": "AE Penya Esplugues Salvat Logística \" A \"",
+                      "away": "AE Penya Esplugues Salvat Logística \"A\"",
                       "date": null,
                       "home": "Club Deportivo San Pablo Ibiza"
                     },
@@ -10525,7 +10525,7 @@
                       "home": "CFS Autoescola Urgell Linyola"
                     },
                     {
-                      "away": "Les Corts, A.E. \" B \"",
+                      "away": "Les Corts, A.E. \"B\"",
                       "date": null,
                       "home": "Club Deportivo Nou Turia FSF \"A\""
                     },
@@ -10545,7 +10545,7 @@
                       "home": "Feme Castellón C.F.S."
                     },
                     {
-                      "away": "AE Penya Esplugues Salvat Logística \" A \"",
+                      "away": "AE Penya Esplugues Salvat Logística \"A\"",
                       "date": null,
                       "home": "Somriu Futbol Sala Ripollet"
                     },
@@ -10570,7 +10570,7 @@
                       "home": "Les Corts, A.E. \"B\""
                     },
                     {
-                      "away": "Club Deportivo Nou Turia FSF \" A \"",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
                       "date": null,
                       "home": "Lainco Esportiu Rubi F.S."
                     },
@@ -10605,7 +10605,7 @@
                   "jornada": 9,
                   "matches": [
                     {
-                      "away": "Les Corts, A.E. \" B \"",
+                      "away": "Les Corts, A.E. \"B\"",
                       "date": null,
                       "home": "Entrerrios Automatización"
                     },
@@ -10630,7 +10630,7 @@
                       "home": "SolarMon-Les Glories 2014 CD La Concordia"
                     },
                     {
-                      "away": "AE Penya Esplugues Salvat Logística \" A \"",
+                      "away": "AE Penya Esplugues Salvat Logística \"A\"",
                       "date": null,
                       "home": "La Villa"
                     },
@@ -10670,7 +10670,7 @@
                       "home": "C.D. Parque Col. Santa Ana"
                     },
                     {
-                      "away": "Club Deportivo Nou Turia FSF \" A \"",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
                       "date": null,
                       "home": "F.S. Sabadell"
                     },
@@ -10695,7 +10695,7 @@
                   "jornada": 11,
                   "matches": [
                     {
-                      "away": "Les Corts, A.E. \" B \"",
+                      "away": "Les Corts, A.E. \"B\"",
                       "date": null,
                       "home": "Grupo Reciclarte Cesar Augusta"
                     },
@@ -10715,7 +10715,7 @@
                       "home": "Club Deportivo Nou Turia FSF \"A\""
                     },
                     {
-                      "away": "AE Penya Esplugues Salvat Logística \" A \"",
+                      "away": "AE Penya Esplugues Salvat Logística \"A\"",
                       "date": null,
                       "home": "AECS L Hospitalet"
                     },
@@ -10765,7 +10765,7 @@
                       "home": "Club Deportivo San Pablo Ibiza"
                     },
                     {
-                      "away": "Club Deportivo Nou Turia FSF \" A \"",
+                      "away": "Club Deportivo Nou Turia FSF \"A\"",
                       "date": null,
                       "home": "AE Penya Esplugues Salvat Logística \"A\""
                     },
@@ -10781,9 +10781,7 @@
                     }
                   ]
                 }
-              ],
-              "teamsSource": "calendario",
-              "jornadasTotal": 30
+              ]
             },
             {
               "id": "g3",
@@ -10867,6 +10865,7 @@
                   "officialName": "UDAF Afanion \"A\""
                 }
               ],
+              "teamsSource": "calendario",
               "calendar": [
                 {
                   "jornada": 1,
@@ -10975,7 +10974,6 @@
                   ]
                 }
               ],
-              "teamsSource": "calendario",
               "jornadasTotal": 30
             }
           ]
