@@ -1,6 +1,6 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-10-28T20:07:05+00:00",
+  "lastUpdated": "2026-10-28T21:14:04+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
     "rfef: la PNFG cortó a mitad de run y no se le pidió nada más; lo que falta sale de la caché y del JSON anterior, y lo pide el run siguiente",
@@ -5466,16 +5466,16 @@
                       "venue": "Pabellón Joaquin Lasala de Tauste (PIS)"
                     },
                     {
-                      "home": "CMO Valves Lauburu Ibarra",
-                      "away": "Vulcanizados Ruiz Tafa FS",
-                      "date": "2026-11-07T18:00:00",
-                      "venue": "Polid. Belabieta (T)"
-                    },
-                    {
                       "home": "Antiguoko KE Estudio Dental Barrenechea",
                       "away": "Pinseque A.D.",
                       "date": "2026-11-07T18:00:00",
                       "venue": "Polideportivo Pio Baroja (T)"
+                    },
+                    {
+                      "home": "CMO Valves Lauburu Ibarra",
+                      "away": "Vulcanizados Ruiz Tafa FS",
+                      "date": "2026-11-07T18:15:00",
+                      "venue": "Polid. Belabieta (T)"
                     },
                     {
                       "home": "A.D. Rioja Sala",
@@ -7176,11 +7176,6 @@
                       "date": "2026-11-07"
                     },
                     {
-                      "home": "Sant Joan Despí CFS Cumsa",
-                      "away": "Les Corts EF \"A\"",
-                      "date": "2026-11-07"
-                    },
-                    {
                       "home": "Illes Balears Palma Futsal",
                       "away": "Hospitalet Bellsport F.S.",
                       "date": "2026-11-07T16:00:00",
@@ -7203,6 +7198,12 @@
                       "away": "C. Natacio Sabadell",
                       "date": "2026-11-07T18:00:00",
                       "venue": "Pabellon Mpal. de Cocentaina (POL)"
+                    },
+                    {
+                      "home": "Sant Joan Despí CFS Cumsa",
+                      "away": "Les Corts EF \"A\"",
+                      "date": "2026-11-07T18:00:00",
+                      "venue": "Centre Esportiu Municipal Ugalde (CEM Ugalde) (PIS)"
                     }
                   ],
                   "date": "2026-11-07"
@@ -8683,49 +8684,57 @@
                       "home": "Unión Tres Cantos FS",
                       "away": "Club Unión Deportiva Loeches",
                       "date": "2026-10-17T16:00:00",
-                      "venue": "Pab. Mun. de la Luz (POL)"
+                      "venue": "Pab. Mun. de la Luz (POL)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702752&NPcd_Pdf=1"
                     },
                     {
                       "home": "CD Albacete FS",
                       "away": "Club Union Deportiva Rena",
                       "date": "2026-10-17T17:00:00",
-                      "venue": "Pabellón Universitario Albacete"
+                      "venue": "Pabellón Universitario Albacete",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702753&NPcd_Pdf=1"
                     },
                     {
                       "home": "Soliss A.D. Bargas",
                       "away": "Colegio El Valle C.D.",
                       "date": "2026-10-17T17:30:00",
-                      "venue": "P.M. El Balcón (POL)"
+                      "venue": "P.M. El Balcón (POL)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702754&NPcd_Pdf=1"
                     },
                     {
                       "home": "CD Cobisa FS \"A\"",
                       "away": "Entreparéntesis - Enertel FS Talavera",
                       "date": "2026-10-17T18:30:00",
-                      "venue": "P.M. DE COBISA (POL)"
+                      "venue": "P.M. DE COBISA (POL)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702755&NPcd_Pdf=1"
                     },
                     {
                       "home": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
                       "away": "Serbis AD Alcorcón FS",
                       "date": "2026-10-17T18:35:00",
-                      "venue": "Polideportivo Municipal de Navahonda (PIS)"
+                      "venue": "Polideportivo Municipal de Navahonda (PIS)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702751&NPcd_Pdf=1"
                     },
                     {
                       "home": "Naturpellet San Cristóbal",
                       "away": "Inter JP Financial F.S.",
                       "date": "2026-10-17T19:00:00",
-                      "venue": "P.M. San Cristóbal (PIS)"
+                      "venue": "P.M. San Cristóbal (PIS)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702756&NPcd_Pdf=1"
                     },
                     {
                       "home": "El Alamo F.S.",
                       "away": "Grupo López Bolaños F.S. \"A\"",
                       "date": "2026-10-17T19:00:00",
-                      "venue": "Pabellón Municipal IES El Álamo (PIS)"
+                      "venue": "Pabellón Municipal IES El Álamo (PIS)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702758&NPcd_Pdf=1"
                     },
                     {
                       "home": "Athletic Club Móstoles",
                       "away": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
                       "date": "2026-10-18T13:30:00",
-                      "venue": "Pabellón Eva Manguan (POL)"
+                      "venue": "Pabellón Eva Manguan (POL)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702757&NPcd_Pdf=1"
                     }
                   ],
                   "date": "2026-10-17"
@@ -8737,49 +8746,57 @@
                       "home": "Serbis AD Alcorcón FS",
                       "away": "El Alamo F.S.",
                       "date": "2026-10-24T16:15:00",
-                      "venue": "P.M. Los Cantos (POL)"
+                      "venue": "P.M. Los Cantos (POL)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702759&NPcd_Pdf=1"
                     },
                     {
                       "home": "Colegio El Valle C.D.",
                       "away": "CD Albacete FS",
                       "date": "2026-10-24T17:00:00",
-                      "venue": "P. Colegio El Valle Sanchinarro (T)"
+                      "venue": "P. Colegio El Valle Sanchinarro (T)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702762&NPcd_Pdf=1"
                     },
                     {
                       "home": "Grupo López Bolaños F.S. \"A\"",
                       "away": "Athletic Club Móstoles",
                       "date": "2026-10-24T17:00:00",
-                      "venue": "Pabellón P. Francisco Javier López Sayago (POL)"
+                      "venue": "Pabellón P. Francisco Javier López Sayago (POL)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702766&NPcd_Pdf=1"
                     },
                     {
                       "home": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
                       "away": "Naturpellet San Cristóbal",
                       "date": "2026-10-24T17:07:00",
-                      "venue": "Pab. Javier Limones (POL)"
+                      "venue": "Pab. Javier Limones (POL)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702765&NPcd_Pdf=1"
                     },
                     {
                       "home": "Entreparéntesis - Enertel FS Talavera",
                       "away": "Soliss A.D. Bargas",
                       "date": "2026-10-24T17:30:00",
-                      "venue": "Pab. Mun. 1º de Mayo (POL)"
+                      "venue": "Pab. Mun. 1º de Mayo (POL)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702763&NPcd_Pdf=1"
                     },
                     {
                       "home": "Club Unión Deportiva Loeches",
                       "away": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
                       "date": "2026-10-24T19:00:00",
-                      "venue": "Pabellón Deportivo Municipal José Rodríguez (PIS)"
+                      "venue": "Pabellón Deportivo Municipal José Rodríguez (PIS)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702760&NPcd_Pdf=1"
                     },
                     {
                       "home": "Club Union Deportiva Rena",
                       "away": "Unión Tres Cantos FS",
                       "date": "2026-10-24T19:30:00",
-                      "venue": "P.M. de Rena (POL)"
+                      "venue": "P.M. de Rena (POL)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702761&NPcd_Pdf=1"
                     },
                     {
                       "home": "Inter JP Financial F.S.",
                       "away": "CD Cobisa FS \"A\"",
                       "date": "2026-10-25T13:15:00",
-                      "venue": "P.M. Espartales (POL)"
+                      "venue": "P.M. Espartales (POL)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702764&NPcd_Pdf=1"
                     }
                   ],
                   "date": "2026-10-24"
@@ -10055,7 +10072,7 @@
               "teams": [
                 {
                   "name": "CDB Salvatierra",
-                  "logoUrl": null,
+                  "logoUrl": "https://rfef.filesnovanet.es/pnfg/pimg/Clubes/00100_0079039566_Post_de_Facebook_alineaci__n_de_equipo_de_futbol_deportivo_moderno_azul_20260626_112932_0000.png",
                   "officialName": "Cdb Salvatierra FS Construciones Vianri"
                 },
                 {
@@ -10445,31 +10462,36 @@
                       "home": "Imperio Los Rosales",
                       "away": "Cdb Salvatierra FS Construciones Vianri",
                       "date": "2026-10-24T12:00:00",
-                      "venue": "CD Guillermo Molina Ríos (POL)"
+                      "venue": "CD Guillermo Molina Ríos (POL)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703005&NPcd_Pdf=1"
                     },
                     {
                       "home": "Jimbee Cartagena Futbol Sala",
                       "away": "Joasan Construcciones CFS Pinatar \"B\"",
                       "date": "2026-10-24T13:00:00",
-                      "venue": "Palacio de los Deportes de Cartagena (POL)"
+                      "venue": "Palacio de los Deportes de Cartagena (POL)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703006&NPcd_Pdf=1"
                     },
                     {
                       "home": "Melilla Ciudad del Deporte Nueva Era",
                       "away": "C.D. Sporting FS Almería Biocampojoyma",
                       "date": "2026-10-24T16:00:00",
-                      "venue": "Pabellón Guillermo García Pezzi (PIS)"
+                      "venue": "Pabellón Guillermo García Pezzi (PIS)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703000&NPcd_Pdf=1"
                     },
                     {
                       "home": "Crevillent Futsal Starts \"A\"",
                       "away": "C.D. Malacitano Futsal",
                       "date": "2026-10-24T18:00:00",
-                      "venue": "Pabellón ABRETS de Crevillente (PIS)"
+                      "venue": "Pabellón ABRETS de Crevillente (PIS)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703001&NPcd_Pdf=1"
                     },
                     {
                       "home": "Nawter Blanca FS",
                       "away": "Sima Granada FS",
                       "date": "2026-10-24T18:30:00",
-                      "venue": "Pabellón Miguel Angel Cano Mellado (POL)"
+                      "venue": "Pabellón Miguel Angel Cano Mellado (POL)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702999&NPcd_Pdf=1"
                     },
                     {
                       "home": "Oleoinnova Mengibar FS",
@@ -10482,13 +10504,15 @@
                       "home": "FLEXLIVING JUMILLA FS",
                       "away": "Dos Hermanas F.S. C.D. \"A\"",
                       "date": "2026-10-24T19:00:00",
-                      "venue": "P.M. Carlos García (POL)"
+                      "venue": "P.M. Carlos García (POL)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703003&NPcd_Pdf=1"
                     },
                     {
                       "home": "GH Distribución Moral FS",
                       "away": "CD Virgili Cádiz \"A\"",
                       "date": "2026-10-24T20:00:00",
-                      "venue": "P.M. de Moral de Calatrava (POL)"
+                      "venue": "P.M. de Moral de Calatrava (POL)",
+                      "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703004&NPcd_Pdf=1"
                     }
                   ],
                   "date": "2026-10-24"
@@ -11804,1609 +11828,1579 @@
                   "jornada": 1,
                   "matches": [
                     {
-                      "home": "La Salle San Ildelfonso",
                       "away": "AD Duggi-San Fernando",
                       "date": "2026-09-17T20:30:00",
+                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703201&NPcd_Pdf=1"
                     },
                     {
-                      "home": "Gran Canaria FS",
                       "away": "Aguas de Teror",
                       "date": "2026-09-18T20:00:00",
+                      "home": "Gran Canaria FS",
                       "venue": "CD Gran Canaria Martin Freire",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703205&NPcd_Pdf=1"
                     },
                     {
-                      "home": "NovoComunidades-Bugedo FS",
                       "away": "Suntryp Agüimes FS",
                       "date": "2026-09-18T21:00:00",
+                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Félix Santana",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703199&NPcd_Pdf=1"
                     },
                     {
-                      "home": "F.S. Los Pinos",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2026-09-18T21:00:00",
+                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703204&NPcd_Pdf=1"
                     },
                     {
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2026-09-18T21:15:00",
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703203&NPcd_Pdf=1"
                     },
                     {
-                      "home": "Doctoral FS",
                       "away": "Malta 97",
-                      "date": "2026-09-19"
+                      "date": "2026-09-19",
+                      "home": "Doctoral FS"
                     },
                     {
-                      "home": "Basilea Futbol Sala C.D.",
                       "away": "C.D. Cisneros Alter",
                       "date": "2026-09-19T17:00:00",
+                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703200&NPcd_Pdf=1"
                     },
                     {
-                      "home": "Las Cuevecitas FS",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2026-09-19T19:00:00",
+                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703202&NPcd_Pdf=1"
                     }
-                  ],
-                  "date": "2026-09-19"
+                  ]
                 },
                 {
                   "jornada": 2,
                   "matches": [
                     {
-                      "home": "C.D. Salesianos Tenerife",
                       "away": "La Salle San Ildelfonso",
                       "date": "2026-09-25T21:00:00",
+                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703210&NPcd_Pdf=1"
                     },
                     {
-                      "home": "C.D. Chinguaro \"A\"",
                       "away": "Las Cuevecitas FS",
                       "date": "2026-09-25T21:00:00",
+                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703211&NPcd_Pdf=1"
                     },
                     {
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2026-09-25T21:00:00",
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703212&NPcd_Pdf=1"
                     },
                     {
-                      "home": "Malta 97",
                       "away": "Gran Canaria FS",
                       "date": "2026-09-25T21:00:00",
+                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703214&NPcd_Pdf=1"
                     },
                     {
-                      "home": "C.D. Cisneros Alter",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2026-09-26T15:00:00",
+                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703208&NPcd_Pdf=1"
                     },
                     {
-                      "home": "AD Duggi-San Fernando",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2026-09-26T15:00:00",
+                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703209&NPcd_Pdf=1"
                     },
                     {
-                      "home": "Aguas de Teror",
                       "away": "F.S. Los Pinos",
                       "date": "2026-09-26T16:00:00",
+                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703213&NPcd_Pdf=1"
                     },
                     {
-                      "home": "Suntryp Agüimes FS",
                       "away": "Doctoral FS",
-                      "date": "2026-09-26"
+                      "date": "2026-09-26",
+                      "home": "Suntryp Agüimes FS"
                     }
-                  ],
-                  "date": "2026-09-26"
+                  ]
                 },
                 {
                   "jornada": 3,
                   "matches": [
                     {
-                      "home": "Las Cuevecitas FS",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2026-10-01T20:00:00",
+                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
-                      "home": "Doctoral FS",
                       "away": "Gran Canaria FS",
-                      "date": "2026-10-03"
+                      "date": "2026-10-03",
+                      "home": "Doctoral FS"
                     },
                     {
-                      "home": "F.S. Los Pinos",
                       "away": "Malta 97",
                       "date": "2026-10-03T12:00:00",
+                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
-                      "home": "La Salle San Ildelfonso",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2026-10-03T16:00:00",
+                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
-                      "home": "Suntryp Agüimes FS",
                       "away": "C.D. Cisneros Alter",
                       "date": "2026-10-03T16:30:00",
+                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
-                      "home": "NovoComunidades-Bugedo FS",
                       "away": "AD Duggi-San Fernando",
                       "date": "2026-10-03T16:30:00",
+                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
-                      "home": "Basilea Futbol Sala C.D.",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2026-10-03T17:00:00",
+                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     },
                     {
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "Aguas de Teror",
                       "date": "2026-10-04T12:00:00",
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. de la Salud (POL)"
                     }
-                  ],
-                  "date": "2026-10-03"
+                  ]
                 },
                 {
                   "jornada": 4,
                   "matches": [
                     {
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "La Salle San Ildelfonso",
                       "date": "2026-10-09T21:00:00",
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
-                      "home": "Gran Canaria FS",
                       "away": "F.S. Los Pinos",
                       "date": "2026-10-10T12:00:00",
+                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     },
                     {
-                      "home": "C.D. Cisneros Alter",
                       "away": "Doctoral FS",
-                      "date": "2026-10-10"
+                      "date": "2026-10-10",
+                      "home": "C.D. Cisneros Alter"
                     },
                     {
-                      "home": "AD Duggi-San Fernando",
                       "away": "Suntryp Agüimes FS",
                       "date": "2026-10-10T15:00:00",
+                      "home": "AD Duggi-San Fernando",
                       "venue": "P.M. de la Salud (POL)"
                     },
                     {
-                      "home": "C.D. Chinguaro \"A\"",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2026-10-10T16:00:00",
+                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
-                      "home": "Aguas de Teror",
                       "away": "Las Cuevecitas FS",
                       "date": "2026-10-10T16:00:00",
+                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
-                      "home": "C.D. Salesianos Tenerife",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2026-10-10T16:30:00",
+                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
-                      "home": "Malta 97",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2026-10-10T17:00:00",
+                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     }
-                  ],
-                  "date": "2026-10-10"
+                  ]
                 },
                 {
                   "jornada": 5,
                   "matches": [
                     {
-                      "home": "Doctoral FS",
                       "away": "F.S. Los Pinos",
-                      "date": "2026-10-17"
+                      "date": "2026-10-17",
+                      "home": "Doctoral FS"
                     },
                     {
-                      "home": "C.D. Cisneros Alter",
                       "away": "AD Duggi-San Fernando",
                       "date": "2026-10-17T15:00:00",
+                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
-                      "home": "Las Cuevecitas FS",
                       "away": "Malta 97",
                       "date": "2026-10-17T15:00:00",
+                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
-                      "home": "La Salle San Ildelfonso",
                       "away": "Aguas de Teror",
                       "date": "2026-10-17T16:00:00",
+                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
-                      "home": "Suntryp Agüimes FS",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2026-10-17T16:30:00",
+                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
-                      "home": "NovoComunidades-Bugedo FS",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2026-10-17T16:30:00",
+                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
-                      "home": "Basilea Futbol Sala C.D.",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2026-10-17T17:00:00",
+                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     },
                     {
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "Gran Canaria FS",
                       "date": "2026-10-18T12:00:00",
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     }
-                  ],
-                  "date": "2026-10-17"
+                  ]
                 },
                 {
                   "jornada": 6,
                   "matches": [
                     {
-                      "home": "C.D. Salesianos Tenerife",
                       "away": "C.D. Cisneros Alter",
                       "date": "2026-10-23T21:00:00",
+                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
-                      "home": "Aguas de Teror",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2026-10-23T21:00:00",
+                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
-                      "home": "F.S. Los Pinos",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2026-10-23T21:00:00",
+                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
-                      "home": "AD Duggi-San Fernando",
                       "away": "Doctoral FS",
-                      "date": "2026-10-24"
+                      "date": "2026-10-24",
+                      "home": "AD Duggi-San Fernando"
                     },
                     {
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2026-10-24T15:00:00",
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
-                      "home": "Malta 97",
                       "away": "La Salle San Ildelfonso",
                       "date": "2026-10-24T17:00:00",
+                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
-                      "home": "Gran Canaria FS",
                       "away": "Las Cuevecitas FS",
                       "date": "2026-10-24T17:00:00",
+                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     },
                     {
-                      "home": "C.D. Chinguaro \"A\"",
                       "away": "Suntryp Agüimes FS",
                       "date": "2026-10-25T12:00:00",
+                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     }
-                  ],
-                  "date": "2026-10-24"
+                  ]
                 },
                 {
                   "jornada": 7,
                   "matches": [
                     {
-                      "home": "AD Duggi-San Fernando",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2026-10-30T21:00:00",
+                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
-                      "home": "NovoComunidades-Bugedo FS",
                       "away": "Aguas de Teror",
                       "date": "2026-10-30T21:00:00",
+                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
-                      "home": "Basilea Futbol Sala C.D.",
                       "away": "Malta 97",
                       "date": "2026-10-30T21:00:00",
+                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     },
                     {
-                      "home": "Las Cuevecitas FS",
                       "away": "F.S. Los Pinos",
                       "date": "2026-10-30T21:00:00",
+                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
-                      "home": "Doctoral FS",
                       "away": "C.D. Tenerife Iberia Toscal",
-                      "date": "2026-10-31"
+                      "date": "2026-10-31",
+                      "home": "Doctoral FS"
                     },
                     {
-                      "home": "C.D. Cisneros Alter",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2026-10-31T15:00:00",
+                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
-                      "home": "La Salle San Ildelfonso",
                       "away": "Gran Canaria FS",
                       "date": "2026-10-31T16:00:00",
+                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
-                      "home": "Suntryp Agüimes FS",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2026-10-31T16:30:00",
+                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     }
-                  ],
-                  "date": "2026-10-31"
+                  ]
                 },
                 {
                   "jornada": 8,
                   "matches": [
                     {
-                      "home": "C.D. Chinguaro \"A\"",
                       "away": "AD Duggi-San Fernando",
                       "date": "2026-11-06T21:00:00",
+                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "C.D. Cisneros Alter",
                       "date": "2026-11-06T21:00:00",
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
-                      "home": "Aguas de Teror",
                       "away": "Suntryp Agüimes FS",
                       "date": "2026-11-06T21:00:00",
+                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
-                      "home": "Malta 97",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2026-11-06T21:00:00",
+                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
-                      "home": "F.S. Los Pinos",
                       "away": "La Salle San Ildelfonso",
                       "date": "2026-11-06T21:00:00",
+                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
-                      "home": "C.D. Salesianos Tenerife",
                       "away": "Doctoral FS",
-                      "date": "2026-11-07"
+                      "date": "2026-11-07",
+                      "home": "C.D. Salesianos Tenerife"
                     },
                     {
-                      "home": "Gran Canaria FS",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2026-11-07T20:00:00",
+                      "home": "Gran Canaria FS",
                       "venue": "CD Gran Canaria Martin Freire"
                     },
                     {
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "Las Cuevecitas FS",
                       "date": "2026-11-08T12:00:00",
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     }
-                  ],
-                  "date": "2026-11-07"
+                  ]
                 },
                 {
                   "jornada": 9,
                   "matches": [
                     {
-                      "home": "C.D. Salesianos Tenerife",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2026-11-13T21:00:00",
+                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
-                      "home": "AD Duggi-San Fernando",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2026-11-13T21:00:00",
+                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
-                      "home": "Suntryp Agüimes FS",
                       "away": "Malta 97",
                       "date": "2026-11-13T21:00:00",
+                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
-                      "home": "Doctoral FS",
                       "away": "Las Cuevecitas FS",
-                      "date": "2026-11-14"
+                      "date": "2026-11-14",
+                      "home": "Doctoral FS"
                     },
                     {
-                      "home": "C.D. Cisneros Alter",
                       "away": "Aguas de Teror",
                       "date": "2026-11-14T15:00:00",
+                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
-                      "home": "La Salle San Ildelfonso",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2026-11-14T16:00:00",
+                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
-                      "home": "Basilea Futbol Sala C.D.",
                       "away": "F.S. Los Pinos",
                       "date": "2026-11-14T17:00:00",
+                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     },
                     {
-                      "home": "NovoComunidades-Bugedo FS",
                       "away": "Gran Canaria FS",
                       "date": "2026-11-14T21:00:00",
+                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     }
-                  ],
-                  "date": "2026-11-14"
+                  ]
                 },
                 {
                   "jornada": 10,
                   "matches": [
                     {
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2026-11-20T21:00:00",
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
-                      "home": "F.S. Los Pinos",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2026-11-21T12:00:00",
+                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
-                      "home": "C.D. Chinguaro \"A\"",
                       "away": "Doctoral FS",
-                      "date": "2026-11-21"
+                      "date": "2026-11-21",
+                      "home": "C.D. Chinguaro \"A\""
                     },
                     {
-                      "home": "Aguas de Teror",
                       "away": "AD Duggi-San Fernando",
                       "date": "2026-11-21T16:00:00",
+                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
-                      "home": "Malta 97",
                       "away": "C.D. Cisneros Alter",
                       "date": "2026-11-21T17:00:00",
+                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
-                      "home": "Las Cuevecitas FS",
                       "away": "La Salle San Ildelfonso",
                       "date": "2026-11-21T19:00:00",
+                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
-                      "home": "Gran Canaria FS",
                       "away": "Suntryp Agüimes FS",
                       "date": "2026-11-21T19:30:00",
+                      "home": "Gran Canaria FS",
                       "venue": "CD Gran Canaria Martin Freire"
                     },
                     {
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2026-11-22T12:00:00",
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. de la Salud (POL)"
                     }
-                  ],
-                  "date": "2026-11-21"
+                  ]
                 },
                 {
                   "jornada": 11,
                   "matches": [
                     {
-                      "home": "C.D. Chinguaro \"A\"",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2026-11-27T21:00:00",
+                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
-                      "home": "Doctoral FS",
                       "away": "La Salle San Ildelfonso",
-                      "date": "2026-11-28"
+                      "date": "2026-11-28",
+                      "home": "Doctoral FS"
                     },
                     {
-                      "home": "AD Duggi-San Fernando",
                       "away": "Malta 97",
                       "date": "2026-11-28T15:00:00",
+                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
-                      "home": "C.D. Cisneros Alter",
                       "away": "Gran Canaria FS",
                       "date": "2026-11-28T15:00:00",
+                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
-                      "home": "C.D. Salesianos Tenerife",
                       "away": "Aguas de Teror",
                       "date": "2026-11-28T16:30:00",
+                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
-                      "home": "Suntryp Agüimes FS",
                       "away": "F.S. Los Pinos",
                       "date": "2026-11-28T16:30:00",
+                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
-                      "home": "NovoComunidades-Bugedo FS",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2026-11-28T16:30:00",
+                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
-                      "home": "Basilea Futbol Sala C.D.",
                       "away": "Las Cuevecitas FS",
                       "date": "2026-11-28T17:00:00",
+                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     }
-                  ],
-                  "date": "2026-11-28"
+                  ]
                 },
                 {
                   "jornada": 12,
                   "matches": [
                     {
-                      "home": "F.S. Los Pinos",
                       "away": "C.D. Cisneros Alter",
                       "date": "2026-12-04T21:00:00",
+                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "Doctoral FS",
-                      "date": "2026-12-05"
+                      "date": "2026-12-05",
+                      "home": "C.F.S. Casa Juv. La Matanza"
                     },
                     {
-                      "home": "Aguas de Teror",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2026-12-05T16:00:00",
+                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
-                      "home": "Las Cuevecitas FS",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2026-12-05T16:00:00",
+                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
-                      "home": "La Salle San Ildelfonso",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2026-12-05T16:00:00",
+                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
-                      "home": "Malta 97",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2026-12-05T17:00:00",
+                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
-                      "home": "Gran Canaria FS",
                       "away": "AD Duggi-San Fernando",
                       "date": "2026-12-05T17:00:00",
+                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     },
                     {
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "Suntryp Agüimes FS",
                       "date": "2026-12-06T12:00:00",
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. de la Salud (POL)"
                     }
-                  ],
-                  "date": "2026-12-05"
+                  ]
                 },
                 {
                   "jornada": 13,
                   "matches": [
                     {
-                      "home": "AD Duggi-San Fernando",
                       "away": "F.S. Los Pinos",
                       "date": "2026-12-11T21:00:00",
+                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
-                      "home": "Doctoral FS",
                       "away": "Basilea Futbol Sala C.D.",
-                      "date": "2026-12-12"
+                      "date": "2026-12-12",
+                      "home": "Doctoral FS"
                     },
                     {
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "Aguas de Teror",
                       "date": "2026-12-12T15:00:00",
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
-                      "home": "C.D. Cisneros Alter",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2026-12-12T15:00:00",
+                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
-                      "home": "C.D. Chinguaro \"A\"",
                       "away": "Malta 97",
                       "date": "2026-12-12T16:00:00",
+                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
-                      "home": "C.D. Salesianos Tenerife",
                       "away": "Gran Canaria FS",
                       "date": "2026-12-12T16:30:00",
+                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
-                      "home": "Suntryp Agüimes FS",
                       "away": "Las Cuevecitas FS",
                       "date": "2026-12-12T16:30:00",
+                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
-                      "home": "NovoComunidades-Bugedo FS",
                       "away": "La Salle San Ildelfonso",
                       "date": "2026-12-12T16:30:00",
+                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     }
-                  ],
-                  "date": "2026-12-12"
+                  ]
                 },
                 {
                   "jornada": 14,
                   "matches": [
                     {
-                      "home": "F.S. Los Pinos",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2026-12-18T21:00:00",
+                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
-                      "home": "Basilea Futbol Sala C.D.",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2026-12-18T21:00:00",
+                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     },
                     {
-                      "home": "Doctoral FS",
                       "away": "Aguas de Teror",
-                      "date": "2026-12-19"
+                      "date": "2026-12-19",
+                      "home": "Doctoral FS"
                     },
                     {
-                      "home": "La Salle San Ildelfonso",
                       "away": "Suntryp Agüimes FS",
                       "date": "2026-12-19T16:00:00",
+                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
-                      "home": "Malta 97",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2026-12-19T17:00:00",
+                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
-                      "home": "Gran Canaria FS",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2026-12-19T17:00:00",
+                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     },
                     {
-                      "home": "Las Cuevecitas FS",
                       "away": "C.D. Cisneros Alter",
                       "date": "2026-12-19T19:00:00",
+                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "AD Duggi-San Fernando",
                       "date": "2026-12-20T12:00:00",
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     }
-                  ],
-                  "date": "2026-12-19"
+                  ]
                 },
                 {
                   "jornada": 15,
                   "matches": [
                     {
-                      "home": "Aguas de Teror",
                       "away": "Malta 97",
                       "date": "2027-01-08T21:00:00",
+                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
-                      "home": "C.D. Salesianos Tenerife",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2027-01-08T21:00:00",
+                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
-                      "home": "AD Duggi-San Fernando",
                       "away": "Las Cuevecitas FS",
                       "date": "2027-01-08T21:00:00",
+                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
-                      "home": "NovoComunidades-Bugedo FS",
                       "away": "Doctoral FS",
-                      "date": "2027-01-09"
+                      "date": "2027-01-09",
+                      "home": "NovoComunidades-Bugedo FS"
                     },
                     {
-                      "home": "Suntryp Agüimes FS",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2027-01-08T21:15:00",
+                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "Gran Canaria FS",
                       "date": "2027-01-09T15:00:00",
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
-                      "home": "C.D. Cisneros Alter",
                       "away": "La Salle San Ildelfonso",
                       "date": "2027-01-09T15:00:00",
+                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
-                      "home": "C.D. Chinguaro \"A\"",
                       "away": "F.S. Los Pinos",
                       "date": "2027-01-09T16:00:00",
+                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     }
-                  ],
-                  "date": "2027-01-09"
+                  ]
                 },
                 {
                   "jornada": 16,
                   "matches": [
                     {
-                      "home": "AD Duggi-San Fernando",
                       "away": "La Salle San Ildelfonso",
                       "date": "2027-01-15T21:00:00",
+                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
-                      "home": "C.D. Salesianos Tenerife",
                       "away": "Las Cuevecitas FS",
                       "date": "2027-01-15T21:00:00",
+                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
-                      "home": "C.D. Chinguaro \"A\"",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2027-01-15T21:00:00",
+                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "F.S. Los Pinos",
                       "date": "2027-01-15T21:00:00",
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
-                      "home": "Aguas de Teror",
                       "away": "Gran Canaria FS",
                       "date": "2027-01-15T21:00:00",
+                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
-                      "home": "Malta 97",
                       "away": "Doctoral FS",
-                      "date": "2027-01-16"
+                      "date": "2027-01-16",
+                      "home": "Malta 97"
                     },
                     {
-                      "home": "Suntryp Agüimes FS",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2027-01-15T21:15:00",
+                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
-                      "home": "C.D. Cisneros Alter",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2027-01-16T15:00:00",
+                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     }
-                  ],
-                  "date": "2027-01-16"
+                  ]
                 },
                 {
                   "jornada": 17,
                   "matches": [
                     {
-                      "home": "Doctoral FS",
                       "away": "Suntryp Agüimes FS",
-                      "date": "2027-01-23"
+                      "date": "2027-01-23",
+                      "home": "Doctoral FS"
                     },
                     {
-                      "home": "F.S. Los Pinos",
                       "away": "Aguas de Teror",
                       "date": "2027-01-23T12:00:00",
+                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
-                      "home": "La Salle San Ildelfonso",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2027-01-23T16:00:00",
+                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
-                      "home": "NovoComunidades-Bugedo FS",
                       "away": "C.D. Cisneros Alter",
                       "date": "2027-01-23T16:30:00",
+                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
-                      "home": "Basilea Futbol Sala C.D.",
                       "away": "AD Duggi-San Fernando",
                       "date": "2027-01-23T17:00:00",
+                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     },
                     {
-                      "home": "Las Cuevecitas FS",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2027-01-23T19:00:00",
+                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
-                      "home": "Gran Canaria FS",
                       "away": "Malta 97",
                       "date": "2027-01-23T19:30:00",
+                      "home": "Gran Canaria FS",
                       "venue": "CD Gran Canaria Martin Freire"
                     },
                     {
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2027-01-24T12:00:00",
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     }
-                  ],
-                  "date": "2027-01-23"
+                  ]
                 },
                 {
                   "jornada": 18,
                   "matches": [
                     {
-                      "home": "C.D. Chinguaro \"A\"",
                       "away": "La Salle San Ildelfonso",
                       "date": "2027-01-29T21:00:00",
+                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "Las Cuevecitas FS",
                       "date": "2027-01-29T21:00:00",
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
-                      "home": "C.D. Cisneros Alter",
                       "away": "Suntryp Agüimes FS",
                       "date": "2027-01-30T15:00:00",
+                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
-                      "home": "AD Duggi-San Fernando",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2027-01-30T15:00:00",
+                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
-                      "home": "Aguas de Teror",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2027-01-30T16:00:00",
+                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
-                      "home": "C.D. Salesianos Tenerife",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2027-01-30T16:30:00",
+                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
-                      "home": "Malta 97",
                       "away": "F.S. Los Pinos",
                       "date": "2027-01-30T17:00:00",
+                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
-                      "home": "Gran Canaria FS",
                       "away": "Doctoral FS",
-                      "date": "2027-01-30"
+                      "date": "2027-01-30",
+                      "home": "Gran Canaria FS"
                     }
-                  ],
-                  "date": "2027-01-30"
+                  ]
                 },
                 {
                   "jornada": 19,
                   "matches": [
                     {
-                      "home": "Doctoral FS",
                       "away": "C.D. Cisneros Alter",
-                      "date": "2027-02-06"
+                      "date": "2027-02-06",
+                      "home": "Doctoral FS"
                     },
                     {
-                      "home": "F.S. Los Pinos",
                       "away": "Gran Canaria FS",
                       "date": "2027-02-06T12:00:00",
+                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
-                      "home": "La Salle San Ildelfonso",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2027-02-06T16:00:00",
+                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
-                      "home": "Las Cuevecitas FS",
                       "away": "Aguas de Teror",
                       "date": "2027-02-06T16:00:00",
+                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
-                      "home": "Suntryp Agüimes FS",
                       "away": "AD Duggi-San Fernando",
                       "date": "2027-02-06T16:30:00",
+                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
-                      "home": "NovoComunidades-Bugedo FS",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2027-02-06T16:30:00",
+                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
-                      "home": "Basilea Futbol Sala C.D.",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2027-02-06T17:00:00",
+                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     },
                     {
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "Malta 97",
                       "date": "2027-02-07T12:00:00",
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     }
-                  ],
-                  "date": "2027-02-06"
+                  ]
                 },
                 {
                   "jornada": 20,
                   "matches": [
                     {
-                      "home": "AD Duggi-San Fernando",
                       "away": "C.D. Cisneros Alter",
                       "date": "2027-02-12T21:00:00",
+                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
-                      "home": "F.S. Los Pinos",
                       "away": "Doctoral FS",
-                      "date": "2027-02-13"
+                      "date": "2027-02-13",
+                      "home": "F.S. Los Pinos"
                     },
                     {
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2027-02-13T15:00:00",
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
-                      "home": "C.D. Chinguaro \"A\"",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2027-02-13T16:00:00",
+                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
-                      "home": "Aguas de Teror",
                       "away": "La Salle San Ildelfonso",
                       "date": "2027-02-13T16:00:00",
+                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
-                      "home": "C.D. Salesianos Tenerife",
                       "away": "Suntryp Agüimes FS",
                       "date": "2027-02-13T16:30:00",
+                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
-                      "home": "Malta 97",
                       "away": "Las Cuevecitas FS",
                       "date": "2027-02-13T17:00:00",
+                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
-                      "home": "Gran Canaria FS",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2027-02-13T17:00:00",
+                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     }
-                  ],
-                  "date": "2027-02-13"
+                  ]
                 },
                 {
                   "jornada": 21,
                   "matches": [
                     {
-                      "home": "Basilea Futbol Sala C.D.",
                       "away": "Aguas de Teror",
                       "date": "2027-02-19T21:00:00",
+                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     },
                     {
-                      "home": "Doctoral FS",
                       "away": "AD Duggi-San Fernando",
-                      "date": "2027-02-20"
+                      "date": "2027-02-20",
+                      "home": "Doctoral FS"
                     },
                     {
-                      "home": "C.D. Cisneros Alter",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2027-02-20T15:00:00",
+                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
-                      "home": "La Salle San Ildelfonso",
                       "away": "Malta 97",
                       "date": "2027-02-20T16:00:00",
+                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
-                      "home": "Las Cuevecitas FS",
                       "away": "Gran Canaria FS",
                       "date": "2027-02-20T16:00:00",
+                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
-                      "home": "Suntryp Agüimes FS",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2027-02-20T16:30:00",
+                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
-                      "home": "NovoComunidades-Bugedo FS",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2027-02-20T16:30:00",
+                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "F.S. Los Pinos",
                       "date": "2027-02-21T12:00:00",
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     }
-                  ],
-                  "date": "2027-02-20"
+                  ]
                 },
                 {
                   "jornada": 22,
                   "matches": [
                     {
-                      "home": "C.D. Salesianos Tenerife",
                       "away": "AD Duggi-San Fernando",
                       "date": "2027-02-26T21:00:00",
+                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
-                      "home": "C.D. Chinguaro \"A\"",
                       "away": "C.D. Cisneros Alter",
                       "date": "2027-02-26T21:00:00",
+                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
-                      "home": "Aguas de Teror",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2027-02-26T21:00:00",
+                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
-                      "home": "Malta 97",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2027-02-26T21:00:00",
+                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
-                      "home": "F.S. Los Pinos",
                       "away": "Las Cuevecitas FS",
                       "date": "2027-02-26T21:00:00",
+                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "Suntryp Agüimes FS",
                       "date": "2027-02-27T15:00:00",
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
-                      "home": "Gran Canaria FS",
                       "away": "La Salle San Ildelfonso",
                       "date": "2027-02-27T17:00:00",
+                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     },
                     {
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "Doctoral FS",
-                      "date": "2027-02-27"
+                      "date": "2027-02-27",
+                      "home": "C.D. Tenerife Iberia Toscal"
                     }
-                  ],
-                  "date": "2027-02-27"
+                  ]
                 },
                 {
                   "jornada": 23,
                   "matches": [
                     {
-                      "home": "AD Duggi-San Fernando",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2027-03-05T21:00:00",
+                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
-                      "home": "NovoComunidades-Bugedo FS",
                       "away": "Malta 97",
                       "date": "2027-03-05T21:00:00",
+                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
-                      "home": "Basilea Futbol Sala C.D.",
                       "away": "Gran Canaria FS",
                       "date": "2027-03-05T21:00:00",
+                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     },
                     {
-                      "home": "Suntryp Agüimes FS",
                       "away": "Aguas de Teror",
                       "date": "2027-03-05T21:15:00",
+                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
-                      "home": "Doctoral FS",
                       "away": "C.D. Salesianos Tenerife",
-                      "date": "2027-03-06"
+                      "date": "2027-03-06",
+                      "home": "Doctoral FS"
                     },
                     {
-                      "home": "C.D. Cisneros Alter",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2027-03-06T15:00:00",
+                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
-                      "home": "La Salle San Ildelfonso",
                       "away": "F.S. Los Pinos",
                       "date": "2027-03-06T16:00:00",
+                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
-                      "home": "Las Cuevecitas FS",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2027-03-06T19:00:00",
+                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     }
-                  ],
-                  "date": "2027-03-06"
+                  ]
                 },
                 {
                   "jornada": 24,
                   "matches": [
                     {
-                      "home": "C.D. Chinguaro \"A\"",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2027-03-19T21:00:00",
+                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "AD Duggi-San Fernando",
                       "date": "2027-03-19T21:00:00",
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
-                      "home": "Malta 97",
                       "away": "Suntryp Agüimes FS",
                       "date": "2027-03-19T21:00:00",
+                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
-                      "home": "F.S. Los Pinos",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2027-03-20T12:00:00",
+                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
-                      "home": "Las Cuevecitas FS",
                       "away": "Doctoral FS",
-                      "date": "2027-03-20"
+                      "date": "2027-03-20",
+                      "home": "Las Cuevecitas FS"
                     },
                     {
-                      "home": "Aguas de Teror",
                       "away": "C.D. Cisneros Alter",
                       "date": "2027-03-20T16:00:00",
+                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
-                      "home": "Gran Canaria FS",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2027-03-20T19:30:00",
+                      "home": "Gran Canaria FS",
                       "venue": "CD Gran Canaria Martin Freire"
                     },
                     {
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "La Salle San Ildelfonso",
                       "date": "2027-03-21T12:00:00",
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     }
-                  ],
-                  "date": "2027-03-20"
+                  ]
                 },
                 {
                   "jornada": 25,
                   "matches": [
                     {
-                      "home": "C.D. Salesianos Tenerife",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2027-04-02T21:00:00",
+                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
-                      "home": "Suntryp Agüimes FS",
                       "away": "Gran Canaria FS",
                       "date": "2027-04-02T21:15:00",
+                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
-                      "home": "Doctoral FS",
                       "away": "C.D. Chinguaro \"A\"",
-                      "date": "2027-04-03"
+                      "date": "2027-04-03",
+                      "home": "Doctoral FS"
                     },
                     {
-                      "home": "AD Duggi-San Fernando",
                       "away": "Aguas de Teror",
                       "date": "2027-04-03T15:00:00",
+                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
-                      "home": "C.D. Cisneros Alter",
                       "away": "Malta 97",
                       "date": "2027-04-03T15:00:00",
+                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
-                      "home": "La Salle San Ildelfonso",
                       "away": "Las Cuevecitas FS",
                       "date": "2027-04-03T16:00:00",
+                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
-                      "home": "NovoComunidades-Bugedo FS",
                       "away": "F.S. Los Pinos",
                       "date": "2027-04-03T16:30:00",
+                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
-                      "home": "Basilea Futbol Sala C.D.",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2027-04-03T17:00:00",
+                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     }
-                  ],
-                  "date": "2027-04-03"
+                  ]
                 },
                 {
                   "jornada": 26,
                   "matches": [
                     {
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2027-04-09T21:00:00",
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
-                      "home": "F.S. Los Pinos",
                       "away": "Suntryp Agüimes FS",
                       "date": "2027-04-10T12:00:00",
+                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
-                      "home": "Aguas de Teror",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2027-04-10T16:00:00",
+                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
-                      "home": "Las Cuevecitas FS",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2027-04-10T16:00:00",
+                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
-                      "home": "La Salle San Ildelfonso",
                       "away": "Doctoral FS",
-                      "date": "2027-04-10"
+                      "date": "2027-04-10",
+                      "home": "La Salle San Ildelfonso"
                     },
                     {
-                      "home": "Malta 97",
                       "away": "AD Duggi-San Fernando",
                       "date": "2027-04-10T17:00:00",
+                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
-                      "home": "Gran Canaria FS",
                       "away": "C.D. Cisneros Alter",
                       "date": "2027-04-10T17:00:00",
+                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     },
                     {
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2027-04-11T12:00:00",
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     }
-                  ],
-                  "date": "2027-04-10"
+                  ]
                 },
                 {
                   "jornada": 27,
                   "matches": [
                     {
-                      "home": "Doctoral FS",
                       "away": "C.F.S. Casa Juv. La Matanza",
-                      "date": "2027-04-17"
+                      "date": "2027-04-17",
+                      "home": "Doctoral FS"
                     },
                     {
-                      "home": "AD Duggi-San Fernando",
                       "away": "Gran Canaria FS",
                       "date": "2027-04-17T15:00:00",
+                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
-                      "home": "C.D. Cisneros Alter",
                       "away": "F.S. Los Pinos",
                       "date": "2027-04-17T15:00:00",
+                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
-                      "home": "C.D. Chinguaro \"A\"",
                       "away": "Aguas de Teror",
                       "date": "2027-04-17T16:00:00",
+                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
-                      "home": "C.D. Salesianos Tenerife",
                       "away": "Malta 97",
                       "date": "2027-04-17T16:30:00",
+                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
-                      "home": "Suntryp Agüimes FS",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2027-04-17T16:30:00",
+                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
-                      "home": "NovoComunidades-Bugedo FS",
                       "away": "Las Cuevecitas FS",
                       "date": "2027-04-17T16:30:00",
+                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
-                      "home": "Basilea Futbol Sala C.D.",
                       "away": "La Salle San Ildelfonso",
                       "date": "2027-04-17T17:00:00",
+                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     }
-                  ],
-                  "date": "2027-04-17"
+                  ]
                 },
                 {
                   "jornada": 28,
                   "matches": [
                     {
-                      "home": "F.S. Los Pinos",
                       "away": "AD Duggi-San Fernando",
                       "date": "2027-04-23T21:00:00",
+                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
-                      "home": "Aguas de Teror",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2027-04-24T16:00:00",
+                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
-                      "home": "Las Cuevecitas FS",
                       "away": "Suntryp Agüimes FS",
                       "date": "2027-04-24T16:00:00",
+                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
-                      "home": "La Salle San Ildelfonso",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2027-04-24T16:00:00",
+                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
-                      "home": "Malta 97",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2027-04-24T17:00:00",
+                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
-                      "home": "Gran Canaria FS",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2027-04-24T17:00:00",
+                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     },
                     {
-                      "home": "Basilea Futbol Sala C.D.",
                       "away": "Doctoral FS",
-                      "date": "2027-04-24"
+                      "date": "2027-04-24",
+                      "home": "Basilea Futbol Sala C.D."
                     },
                     {
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "C.D. Cisneros Alter",
                       "date": "2027-04-25T12:00:00",
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     }
-                  ],
-                  "date": "2027-04-24"
+                  ]
                 },
                 {
                   "jornada": 29,
                   "matches": [
                     {
-                      "home": "Aguas de Teror",
                       "away": "Doctoral FS",
-                      "date": "2027-05-01"
+                      "date": "2027-05-01",
+                      "home": "Aguas de Teror"
                     },
                     {
-                      "home": "C.D. Salesianos Tenerife",
                       "away": "F.S. Los Pinos",
                       "date": "2027-04-30T21:00:00",
+                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
-                      "home": "AD Duggi-San Fernando",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2027-04-30T21:00:00",
+                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "Malta 97",
                       "date": "2027-05-01T15:00:00",
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
-                      "home": "C.D. Cisneros Alter",
                       "away": "Las Cuevecitas FS",
                       "date": "2027-05-01T15:00:00",
+                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
-                      "home": "C.D. Chinguaro \"A\"",
                       "away": "Gran Canaria FS",
                       "date": "2027-05-01T16:00:00",
+                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
-                      "home": "Suntryp Agüimes FS",
                       "away": "La Salle San Ildelfonso",
                       "date": "2027-05-01T16:30:00",
+                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
-                      "home": "NovoComunidades-Bugedo FS",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2027-05-01T16:30:00",
+                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     }
-                  ],
-                  "date": "2027-05-01"
+                  ]
                 },
                 {
                   "jornada": 30,
                   "matches": [
                     {
-                      "home": "Doctoral FS",
                       "away": "NovoComunidades-Bugedo FS",
-                      "date": "2027-05-08"
+                      "date": "2027-05-08",
+                      "home": "Doctoral FS"
                     },
                     {
-                      "home": "Malta 97",
                       "away": "Aguas de Teror",
                       "date": "2027-05-08T17:00:00",
+                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
-                      "home": "Gran Canaria FS",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2027-05-08T17:00:00",
+                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     },
                     {
-                      "home": "F.S. Los Pinos",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2027-05-08T17:00:00",
+                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2027-05-08T17:00:00",
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
-                      "home": "Las Cuevecitas FS",
                       "away": "AD Duggi-San Fernando",
                       "date": "2027-05-08T17:00:00",
+                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
-                      "home": "La Salle San Ildelfonso",
                       "away": "C.D. Cisneros Alter",
                       "date": "2027-05-08T17:00:00",
+                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
-                      "home": "Basilea Futbol Sala C.D.",
                       "away": "Suntryp Agüimes FS",
                       "date": "2027-05-08T17:00:00",
+                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     }
-                  ],
-                  "date": "2027-05-08"
+                  ]
                 }
               ],
-              "jornadasTotal": 30,
-              "teamsSource": "calendario"
+              "teamsSource": "calendario",
+              "jornadasTotal": 30
             }
           ]
         },
@@ -13500,1551 +13494,1521 @@
               "jornada": 1,
               "matches": [
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "F.S.F. Castro Bloques Cando",
                   "date": "2026-09-04T21:00:00",
+                  "home": "Estrela Revoltosa Verín FSF",
                   "venue": "Pabellón Municipal de Verín (PIS)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696748&NPcd_Pdf=1"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "STV Roldán F.S",
                   "date": "2026-09-05T11:03:00",
+                  "home": "MRB Móstoles FSF",
                   "venue": "Pabellón Eva Manguan (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696750&NPcd_Pdf=1"
                 },
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2026-09-05T12:30:00",
+                  "home": "LBTL Futsal Alcantarilla",
                   "venue": "P.M. Amigos del Fútbol Sala Jara Carrillo (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696747&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "Nueces de Ronda Atlético Torcal FS",
                   "date": "2026-09-05T13:00:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "venue": "Pab. Javier Imbroda Ortiz (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696749&NPcd_Pdf=1"
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "C.D. Guadalcacín F.S.",
                   "date": "2026-09-05T16:38:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "venue": "P.M. Los Cantos (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696746&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "AE Les Corts UBAE",
                   "date": "2026-09-05T17:00:00",
+                  "home": "Ourense Ontime",
                   "venue": "Pab. de Los Remedios (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696751&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "Poio Pescamar FS",
                   "date": "2026-09-05T18:00:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "venue": "C.D.M. La Granja (T)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696753&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "Atlético Navalcarnero",
                   "date": "2026-09-05T18:30:00",
+                  "home": "Rodiles F.S. \"A\"",
                   "venue": "P.M. Manuel Busto (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696752&NPcd_Pdf=1"
                 }
-              ],
-              "date": "2026-09-05"
+              ]
             },
             {
               "jornada": 2,
               "matches": [
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "ARRIVA AD Alcorcón FSF",
                   "date": "2026-09-12T10:00:00",
+                  "home": "Atlético Navalcarnero",
                   "venue": "P.M. La Estación (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696758&NPcd_Pdf=1"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "date": "2026-09-12T12:00:00",
+                  "home": "AE Les Corts UBAE",
                   "venue": "Pavelló Municipal L´Illa (PIS)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696755&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "F.S.F. Castro Bloques Cando",
                   "date": "2026-09-12T13:00:00",
+                  "home": "Ceuta Agrupación Deportiva",
                   "venue": "P.M. Guillermo Molina Ríos (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696754&NPcd_Pdf=1"
                 },
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "Ourense Ontime",
                   "date": "2026-09-12T17:00:00",
+                  "home": "C.D. Guadalcacín F.S.",
                   "venue": "Pabellón Jerónimo Osorio García (PIS)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696756&NPcd_Pdf=1"
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "date": "2026-09-12T18:00:00",
+                  "home": "STV Roldán F.S",
                   "venue": "P.M. Gabriel Pérez Sánchez (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696760&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "Estrela Revoltosa Verín FSF",
                   "date": "2026-09-12T18:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "venue": "P.M. Guadaljaire (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696761&NPcd_Pdf=1"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "LBTL Futsal Alcantarilla",
                   "date": "2026-09-12T18:30:00",
+                  "home": "MRB Móstoles FSF",
                   "venue": "Pabellón Eva Manguan (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696757&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "Rodiles F.S. \"A\"",
                   "date": "2026-09-12T18:30:00",
+                  "home": "Poio Pescamar FS",
                   "venue": "Pab. Mun. de Poio (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696759&NPcd_Pdf=1"
                 }
-              ],
-              "date": "2026-09-12"
+              ]
             },
             {
               "jornada": 3,
               "matches": [
                 {
-                  "home": "STV Roldán F.S",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2026-09-19T12:00:00",
+                  "home": "STV Roldán F.S",
                   "venue": "P.M. Gabriel Pérez Sánchez (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696768&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "MRB Móstoles FSF",
                   "date": "2026-09-19T12:45:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "venue": "Pab. Javier Imbroda Ortiz (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696766&NPcd_Pdf=1"
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "Poio Pescamar FS",
                   "date": "2026-09-19T13:00:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "venue": "P.M. Los Cantos (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696762&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "AE Les Corts UBAE",
                   "date": "2026-09-19T17:30:00",
+                  "home": "Estrela Revoltosa Verín FSF",
                   "venue": "Pabellón Municipal de Verín (PIS)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696765&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "Nueces de Ronda Atlético Torcal FS",
                   "date": "2026-09-19T18:30:00",
+                  "home": "Rodiles F.S. \"A\"",
                   "venue": "P.M. Manuel Busto (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696767&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "Atlético Navalcarnero",
                   "date": "2026-09-19T19:03:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "venue": "C.D.M. La Granja (T)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696769&NPcd_Pdf=1"
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "C.D. Guadalcacín F.S.",
                   "date": "2026-09-19T19:30:00",
+                  "home": "F.S.F. Castro Bloques Cando",
                   "venue": "P.M. Riberas de Lea (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696764&NPcd_Pdf=1"
                 },
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "Ourense Ontime",
                   "date": "2026-09-20T12:00:00",
+                  "home": "LBTL Futsal Alcantarilla",
                   "venue": "P.M. Amigos del Fútbol Sala Jara Carrillo (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696763&NPcd_Pdf=1"
                 }
-              ],
-              "date": "2026-09-19"
+              ]
             },
             {
               "jornada": 4,
               "matches": [
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "ARRIVA AD Alcorcón FSF",
                   "date": "2026-10-17T12:00:00",
+                  "home": "Ceuta Agrupación Deportiva",
                   "venue": "CD Guillermo Molina Ríos (POL)"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "date": "2026-10-17T16:00:00",
+                  "home": "Poio Pescamar FS",
                   "venue": "Pab. Mun. de Poio (POL)"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "LBTL Futsal Alcantarilla",
                   "date": "2026-10-17T16:02:00",
+                  "home": "AE Les Corts UBAE",
                   "venue": "Pabellón Municipal La Illa Diagonal (PIS)"
                 },
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "STV Roldán F.S",
                   "date": "2026-10-17T17:00:00",
+                  "home": "C.D. Guadalcacín F.S.",
                   "venue": "Pabellón Jerónimo Osorio García (PIS)"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "date": "2026-10-17T18:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "venue": "P.M. Guadaljaire (POL)"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "F.S.F. Castro Bloques Cando",
                   "date": "2026-10-17T18:30:00",
+                  "home": "MRB Móstoles FSF",
                   "venue": "Pabellón Eva Manguan (POL)"
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "Rodiles F.S. \"A\"",
                   "date": "2026-10-17T19:30:00",
+                  "home": "Ourense Ontime",
                   "venue": "Pab. de Los Remedios (POL)"
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "Estrela Revoltosa Verín FSF",
                   "date": "2026-10-18T11:30:00",
+                  "home": "Atlético Navalcarnero",
                   "venue": "Ciudad Deportiva RFFM - Torrejón de Ardoz (PIS)"
                 }
-              ],
-              "date": "2026-10-17"
+              ]
             },
             {
               "jornada": 5,
               "matches": [
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2026-10-24T13:00:00",
+                  "home": "Poio Pescamar FS",
                   "venue": "Pab. Mun. de Poio (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696782&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "STV Roldán F.S",
                   "date": "2026-10-24T17:00:00",
+                  "home": "Ourense Ontime",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696781&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "MRB Móstoles FSF",
                   "date": "2026-10-24T17:30:00",
+                  "home": "Estrela Revoltosa Verín FSF",
                   "venue": "Pabellón Municipal de Verín (PIS)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696780&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "Atlético Navalcarnero",
                   "date": "2026-10-24T18:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "venue": "P.M. Guadaljaire (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696784&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "AE Les Corts UBAE",
                   "date": "2026-10-24T19:00:00",
+                  "home": "Rodiles F.S. \"A\"",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696783&NPcd_Pdf=1"
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "LBTL Futsal Alcantarilla",
                   "date": "2026-10-24T19:30:00",
+                  "home": "F.S.F. Castro Bloques Cando",
                   "venue": "P.M. Riberas de Lea (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696779&NPcd_Pdf=1"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "C.D. Guadalcacín F.S.",
                   "date": "2026-10-24T19:30:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "venue": "C.D.M. La Granja (T)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696785&NPcd_Pdf=1"
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "date": "2026-10-25T10:30:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "venue": "P.M. La Canaleja (POL)",
                   "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696778&NPcd_Pdf=1"
                 }
-              ],
-              "date": "2026-10-24"
+              ]
             },
             {
               "jornada": 6,
               "matches": [
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "Poio Pescamar FS",
                   "date": "2026-10-31T11:00:00",
+                  "home": "C.D. Guadalcacín F.S.",
                   "venue": "Palacio de los Deportes de Chapín (PIS)"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "F.S.F. Castro Bloques Cando",
                   "date": "2026-10-31T16:00:00",
+                  "home": "AE Les Corts UBAE",
                   "venue": "Pavelló Municipal L´Illa (PIS)"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "Nueces de Ronda Atlético Torcal FS",
                   "date": "2026-10-31T16:30:00",
+                  "home": "MRB Móstoles FSF",
                   "venue": "Pabellón Eva Manguan (POL)"
                 },
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "ARRIVA AD Alcorcón FSF",
                   "date": "2026-10-31T16:45:00",
+                  "home": "LBTL Futsal Alcantarilla",
                   "venue": "P.M. Amigos del Fútbol Sala Jara Carrillo (POL)"
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "Ourense Ontime",
                   "date": "2026-10-31T18:00:00",
+                  "home": "Atlético Navalcarnero",
                   "venue": "P.M. La Estación (POL)"
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "Rodiles F.S. \"A\"",
                   "date": "2026-10-31T18:00:00",
+                  "home": "STV Roldán F.S",
                   "venue": "P.M. Gabriel Pérez Sánchez (POL)"
                 },
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "date": "2026-10-31T19:00:00",
+                  "home": "Ceuta Agrupación Deportiva",
                   "venue": "P.M. Guillermo Molina Ríos (POL)"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "Estrela Revoltosa Verín FSF",
                   "date": "2026-11-01T18:00:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "venue": "Pab. Javier Imbroda Ortiz (POL)"
                 }
-              ],
-              "date": "2026-10-31"
+              ]
             },
             {
               "jornada": 7,
               "matches": [
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "Atlético Navalcarnero",
                   "date": "2026-11-07T11:00:00",
+                  "home": "LBTL Futsal Alcantarilla",
                   "venue": "P.M. Amigos del Fútbol Sala Jara Carrillo (POL)"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2026-11-07T12:00:00",
+                  "home": "Estrela Revoltosa Verín FSF",
                   "venue": "Pabellón Municipal de Verín (PIS)"
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "MRB Móstoles FSF",
                   "date": "2026-11-07T17:00:00",
+                  "home": "Ourense Ontime",
                   "venue": "Pab. de Los Remedios (POL)"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "AE Les Corts UBAE",
                   "date": "2026-11-07T18:30:00",
+                  "home": "Poio Pescamar FS",
                   "venue": "Pab. Mun. de Poio (POL)"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "C.D. Guadalcacín F.S.",
-                  "date": "2026-11-07T18:30:00"
+                  "date": "2026-11-07T18:30:00",
+                  "home": "Rodiles F.S. \"A\""
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "date": "2026-11-07T19:00:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "venue": "C.D.M. La Granja (T)"
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "Nueces de Ronda Atlético Torcal FS",
                   "date": "2026-11-07T19:30:00",
+                  "home": "F.S.F. Castro Bloques Cando",
                   "venue": "P.M. Riberas de Lea (POL)"
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "STV Roldán F.S",
                   "date": "2026-11-08T11:00:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "venue": "P.M. Los Cantos (POL)"
                 }
-              ],
-              "date": "2026-11-07"
+              ]
             },
             {
               "jornada": 8,
               "matches": [
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "Estrela Revoltosa Verín FSF",
-                  "date": "2026-11-14"
+                  "date": "2026-11-14",
+                  "home": "C.D. Guadalcacín F.S."
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "Poio Pescamar FS",
                   "date": "2026-11-14T11:00:00",
+                  "home": "STV Roldán F.S",
                   "venue": "P.M. Gabriel Pérez Sánchez (POL)"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "ARRIVA AD Alcorcón FSF",
                   "date": "2026-11-14T16:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "venue": "P.M. Guadaljaire (POL)"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "AE Les Corts UBAE",
                   "date": "2026-11-14T16:30:00",
+                  "home": "MRB Móstoles FSF",
                   "venue": "Pabellón Eva Manguan (POL)"
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "F.S.F. Castro Bloques Cando",
                   "date": "2026-11-14T18:00:00",
+                  "home": "Atlético Navalcarnero",
                   "venue": "P.M. La Estación (POL)"
                 },
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "Ourense Ontime",
                   "date": "2026-11-14T19:00:00",
+                  "home": "Ceuta Agrupación Deportiva",
                   "venue": "P.M. Guillermo Molina Ríos (POL)"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "LBTL Futsal Alcantarilla",
                   "date": "2026-11-14T19:00:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "venue": "C.D.M. La Granja (T)"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "Rodiles F.S. \"A\"",
                   "date": "2026-11-14T19:30:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "venue": "Pab. Javier Imbroda Ortiz (POL)"
                 }
-              ],
-              "date": "2026-11-14"
+              ]
             },
             {
               "jornada": 9,
               "matches": [
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "Atlético Navalcarnero",
                   "date": "2026-11-28T11:00:00",
+                  "home": "Poio Pescamar FS",
                   "venue": "Pab. Mun. de Poio (POL)"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2026-11-28T12:30:00",
+                  "home": "AE Les Corts UBAE",
                   "venue": "Pabellón Municipal La Illa Diagonal (PIS)"
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "date": "2026-11-28T16:30:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "venue": "P.M. Los Cantos (POL)"
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "Nueces de Ronda Atlético Torcal FS",
-                  "date": "2026-11-28T17:00:00"
+                  "date": "2026-11-28T17:00:00",
+                  "home": "Ourense Ontime"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "STV Roldán F.S",
                   "date": "2026-11-28T17:30:00",
+                  "home": "Estrela Revoltosa Verín FSF",
                   "venue": "Pabellón Municipal de Verín (PIS)"
                 },
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "C.D. Guadalcacín F.S.",
                   "date": "2026-11-28T18:00:00",
+                  "home": "LBTL Futsal Alcantarilla",
                   "venue": "P.M. Amigos del Fútbol Sala Jara Carrillo (POL)"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "MRB Móstoles FSF",
-                  "date": "2026-11-28T19:00:00"
+                  "date": "2026-11-28T19:00:00",
+                  "home": "Rodiles F.S. \"A\""
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "date": "2026-11-28T19:30:00",
+                  "home": "F.S.F. Castro Bloques Cando",
                   "venue": "P.M. Riberas de Lea (POL)"
                 }
-              ],
-              "date": "2026-11-28"
+              ]
             },
             {
               "jornada": 10,
               "matches": [
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "AE Les Corts UBAE",
-                  "date": "2026-12-05"
+                  "date": "2026-12-05",
+                  "home": "C.D. Guadalcacín F.S."
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
-                  "date": "2026-12-05"
+                  "date": "2026-12-05",
+                  "home": "Ourense Ontime"
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2026-12-05T12:00:00",
+                  "home": "Atlético Navalcarnero",
                   "venue": "P.M. La Estación (POL)"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "STV Roldán F.S",
                   "date": "2026-12-05T12:30:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "venue": "Pab. Javier Imbroda Ortiz (POL)"
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "Estrela Revoltosa Verín FSF",
                   "date": "2026-12-05T16:30:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "venue": "P.M. Los Cantos (POL)"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "LBTL Futsal Alcantarilla",
                   "date": "2026-12-05T18:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "venue": "P.M. Guadaljaire (POL)"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "Poio Pescamar FS",
                   "date": "2026-12-05T18:30:00",
+                  "home": "MRB Móstoles FSF",
                   "venue": "Pabellón Eva Manguan (POL)"
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "Rodiles F.S. \"A\"",
                   "date": "2026-12-05T19:30:00",
+                  "home": "F.S.F. Castro Bloques Cando",
                   "venue": "P.M. Riberas de Lea (POL)"
                 }
-              ],
-              "date": "2026-12-05"
+              ]
             },
             {
               "jornada": 11,
               "matches": [
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "Estrela Revoltosa Verín FSF",
-                  "date": "2026-12-08"
+                  "date": "2026-12-08",
+                  "home": "LBTL Futsal Alcantarilla"
                 },
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "MRB Móstoles FSF",
-                  "date": "2026-12-08"
+                  "date": "2026-12-08",
+                  "home": "Ceuta Agrupación Deportiva"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "Atlético Navalcarnero",
-                  "date": "2026-12-08"
+                  "date": "2026-12-08",
+                  "home": "AE Les Corts UBAE"
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "Nueces de Ronda Atlético Torcal FS",
-                  "date": "2026-12-08"
+                  "date": "2026-12-08",
+                  "home": "STV Roldán F.S"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "F.S.F. Castro Bloques Cando",
-                  "date": "2026-12-08"
+                  "date": "2026-12-08",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza"
                 },
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "date": "2026-12-08T20:00:00",
+                  "home": "C.D. Guadalcacín F.S.",
                   "venue": "P.M.de Guadalcacín (POL)"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "Ourense Ontime",
                   "date": "2026-12-08T20:00:00",
+                  "home": "Poio Pescamar FS",
                   "venue": "Pab. Mun. de Poio (POL)"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "ARRIVA AD Alcorcón FSF",
-                  "date": "2026-12-08T20:00:00"
+                  "date": "2026-12-08T20:00:00",
+                  "home": "Rodiles F.S. \"A\""
                 }
-              ],
-              "date": "2026-12-08"
+              ]
             },
             {
               "jornada": 12,
               "matches": [
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "Rodiles F.S. \"A\"",
-                  "date": "2026-12-12"
+                  "date": "2026-12-12",
+                  "home": "Ceuta Agrupación Deportiva"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
-                  "date": "2026-12-12"
+                  "date": "2026-12-12",
+                  "home": "Estrela Revoltosa Verín FSF"
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "F.S.F. Castro Bloques Cando",
-                  "date": "2026-12-12"
+                  "date": "2026-12-12",
+                  "home": "Ourense Ontime"
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "AE Les Corts UBAE",
-                  "date": "2026-12-12"
+                  "date": "2026-12-12",
+                  "home": "STV Roldán F.S"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "LBTL Futsal Alcantarilla",
                   "date": "2026-12-12T16:30:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "venue": "Pab. Javier Imbroda Ortiz (POL)"
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "C.D. Guadalcacín F.S.",
                   "date": "2026-12-12T18:00:00",
+                  "home": "Atlético Navalcarnero",
                   "venue": "P.M. La Estación (POL)"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "Poio Pescamar FS",
                   "date": "2026-12-12T18:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "venue": "P.M. Guadaljaire (POL)"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "ARRIVA AD Alcorcón FSF",
                   "date": "2026-12-12T18:30:00",
+                  "home": "MRB Móstoles FSF",
                   "venue": "Pabellón Eva Manguan (POL)"
                 }
-              ],
-              "date": "2026-12-12"
+              ]
             },
             {
               "jornada": 13,
               "matches": [
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "Atlético Navalcarnero",
                   "date": "2026-11-10T16:00:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "venue": "Pab. Javier Imbroda Ortiz (POL)"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "Nueces de Ronda Atlético Torcal FS",
-                  "date": "2026-12-19"
+                  "date": "2026-12-19",
+                  "home": "AE Les Corts UBAE"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "Poio Pescamar FS",
-                  "date": "2026-12-19"
+                  "date": "2026-12-19",
+                  "home": "Estrela Revoltosa Verín FSF"
                 },
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "Ceuta Agrupación Deportiva",
-                  "date": "2026-12-19"
+                  "date": "2026-12-19",
+                  "home": "C.D. Guadalcacín F.S."
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "Ourense Ontime",
                   "date": "2026-12-19T16:30:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "venue": "P.M. Los Cantos (POL)"
                 },
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "Rodiles F.S. \"A\"",
                   "date": "2026-12-19T18:00:00",
+                  "home": "LBTL Futsal Alcantarilla",
                   "venue": "P.M. Amigos del Fútbol Sala Jara Carrillo (POL)"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "MRB Móstoles FSF",
                   "date": "2026-12-19T19:00:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "venue": "C.D.M. La Granja (T)"
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "STV Roldán F.S",
                   "date": "2026-12-19T19:30:00",
+                  "home": "F.S.F. Castro Bloques Cando",
                   "venue": "P.M. Riberas de Lea (POL)"
                 }
-              ],
-              "date": "2026-12-19"
+              ]
             },
             {
               "jornada": 14,
               "matches": [
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
-                  "date": "2027-01-05"
+                  "date": "2027-01-05",
+                  "home": "Ceuta Agrupación Deportiva"
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "MRB Móstoles FSF",
-                  "date": "2027-01-05"
+                  "date": "2027-01-05",
+                  "home": "Atlético Navalcarnero"
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "Estrela Revoltosa Verín FSF",
-                  "date": "2027-01-05"
+                  "date": "2027-01-05",
+                  "home": "Ourense Ontime"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
-                  "date": "2027-01-05"
+                  "date": "2027-01-05",
+                  "home": "Rodiles F.S. \"A\""
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "LBTL Futsal Alcantarilla",
-                  "date": "2027-01-05"
+                  "date": "2027-01-05",
+                  "home": "STV Roldán F.S"
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "AE Les Corts UBAE",
                   "date": "2027-01-05T16:30:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "venue": "P.M. Los Cantos (POL)"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "C.D. Guadalcacín F.S.",
                   "date": "2027-01-05T18:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "venue": "P.M. Guadaljaire (POL)"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "F.S.F. Castro Bloques Cando",
                   "date": "2027-01-05T20:00:00",
+                  "home": "Poio Pescamar FS",
                   "venue": "Pab. Mun. de Poio (POL)"
                 }
-              ],
-              "date": "2027-01-05"
+              ]
             },
             {
               "jornada": 15,
               "matches": [
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "ARRIVA AD Alcorcón FSF",
-                  "date": "2027-01-09"
+                  "date": "2027-01-09",
+                  "home": "F.S.F. Castro Bloques Cando"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
-                  "date": "2027-01-09"
+                  "date": "2027-01-09",
+                  "home": "AE Les Corts UBAE"
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "STV Roldán F.S",
-                  "date": "2027-01-09"
+                  "date": "2027-01-09",
+                  "home": "Atlético Navalcarnero"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "Estrela Revoltosa Verín FSF",
-                  "date": "2027-01-09"
+                  "date": "2027-01-09",
+                  "home": "Rodiles F.S. \"A\""
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2027-01-09T18:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "venue": "Polid. Guadaljaire (T)"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "C.D. Guadalcacín F.S.",
                   "date": "2027-01-09T18:30:00",
+                  "home": "MRB Móstoles FSF",
                   "venue": "Pabellón Eva Manguan (POL)"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "LBTL Futsal Alcantarilla",
                   "date": "2027-01-09T18:30:00",
+                  "home": "Poio Pescamar FS",
                   "venue": "Pab. Mun. de Poio (POL)"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "Ourense Ontime",
                   "date": "2027-01-09T19:30:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "venue": "Pab. Javier Imbroda Ortiz (POL)"
                 }
-              ],
-              "date": "2027-01-09"
+              ]
             },
             {
               "jornada": 16,
               "matches": [
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "Poio Pescamar FS",
-                  "date": "2027-01-16"
+                  "date": "2027-01-16",
+                  "home": "Ceuta Agrupación Deportiva"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "Rodiles F.S. \"A\"",
-                  "date": "2027-01-16"
+                  "date": "2027-01-16",
+                  "home": "AE Les Corts UBAE"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
-                  "date": "2027-01-16"
+                  "date": "2027-01-16",
+                  "home": "Estrela Revoltosa Verín FSF"
                 },
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "ARRIVA AD Alcorcón FSF",
-                  "date": "2027-01-16"
+                  "date": "2027-01-16",
+                  "home": "C.D. Guadalcacín F.S."
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "Atlético Navalcarnero",
-                  "date": "2027-01-16"
+                  "date": "2027-01-16",
+                  "home": "Ourense Ontime"
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "MRB Móstoles FSF",
-                  "date": "2027-01-16"
+                  "date": "2027-01-16",
+                  "home": "STV Roldán F.S"
                 },
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "F.S.F. Castro Bloques Cando",
                   "date": "2027-01-16T18:00:00",
+                  "home": "LBTL Futsal Alcantarilla",
                   "venue": "P.M. Amigos del Fútbol Sala Jara Carrillo (POL)"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "Nueces de Ronda Atlético Torcal FS",
                   "date": "2027-01-16T19:00:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "venue": "C.D.M. La Granja (T)"
                 }
-              ],
-              "date": "2027-01-16"
+              ]
             },
             {
               "jornada": 17,
               "matches": [
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "AE Les Corts UBAE",
-                  "date": "2027-01-23"
+                  "date": "2027-01-23",
+                  "home": "LBTL Futsal Alcantarilla"
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "Ceuta Agrupación Deportiva",
-                  "date": "2027-01-23"
+                  "date": "2027-01-23",
+                  "home": "F.S.F. Castro Bloques Cando"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "Nueces de Ronda Atlético Torcal FS",
-                  "date": "2027-01-23"
+                  "date": "2027-01-23",
+                  "home": "Estrela Revoltosa Verín FSF"
                 },
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "Rodiles F.S. \"A\"",
-                  "date": "2027-01-23"
+                  "date": "2027-01-23",
+                  "home": "C.D. Guadalcacín F.S."
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "Atlético Navalcarnero",
                   "date": "2027-01-23T16:30:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "venue": "P.M. Los Cantos (POL)"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "Poio Pescamar FS",
                   "date": "2027-01-23T16:30:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "venue": "Pab. Javier Imbroda Ortiz (POL)"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "Ourense Ontime",
                   "date": "2027-01-23T18:30:00",
+                  "home": "MRB Móstoles FSF",
                   "venue": "Pabellón Eva Manguan (POL)"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "STV Roldán F.S",
                   "date": "2027-01-23T19:00:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "venue": "C.D.M. La Granja (T)"
                 }
-              ],
-              "date": "2027-01-23"
+              ]
             },
             {
               "jornada": 18,
               "matches": [
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "Estrela Revoltosa Verín FSF",
-                  "date": "2027-02-06"
+                  "date": "2027-02-06",
+                  "home": "Ceuta Agrupación Deportiva"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "MRB Móstoles FSF",
-                  "date": "2027-02-06"
+                  "date": "2027-02-06",
+                  "home": "AE Les Corts UBAE"
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "LBTL Futsal Alcantarilla",
-                  "date": "2027-02-06"
+                  "date": "2027-02-06",
+                  "home": "Atlético Navalcarnero"
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "C.D. Guadalcacín F.S.",
-                  "date": "2027-02-06"
+                  "date": "2027-02-06",
+                  "home": "Ourense Ontime"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
-                  "date": "2027-02-06"
+                  "date": "2027-02-06",
+                  "home": "Rodiles F.S. \"A\""
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "ARRIVA AD Alcorcón FSF",
-                  "date": "2027-02-06"
+                  "date": "2027-02-06",
+                  "home": "STV Roldán F.S"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "F.S.F. Castro Bloques Cando",
                   "date": "2027-02-06T18:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "venue": "P.M. Guadaljaire (POL)"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "date": "2027-02-06T18:30:00",
+                  "home": "Poio Pescamar FS",
                   "venue": "Pab. Mun. de Poio (POL)"
                 }
-              ],
-              "date": "2027-02-06"
+              ]
             },
             {
               "jornada": 19,
               "matches": [
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "Nueces de Ronda Atlético Torcal FS",
-                  "date": "2027-02-13"
+                  "date": "2027-02-13",
+                  "home": "LBTL Futsal Alcantarilla"
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "AE Les Corts UBAE",
-                  "date": "2027-02-13"
+                  "date": "2027-02-13",
+                  "home": "F.S.F. Castro Bloques Cando"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "C.D. Guadalcacín F.S.",
-                  "date": "2027-02-13"
+                  "date": "2027-02-13",
+                  "home": "Estrela Revoltosa Verín FSF"
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "Rodiles F.S. \"A\"",
-                  "date": "2027-02-13"
+                  "date": "2027-02-13",
+                  "home": "Atlético Navalcarnero"
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2027-02-13T16:30:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "venue": "P.M. Los Cantos (POL)"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "date": "2027-02-13T18:30:00",
+                  "home": "MRB Móstoles FSF",
                   "venue": "Pabellón Eva Manguan (POL)"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "STV Roldán F.S",
                   "date": "2027-02-13T18:30:00",
+                  "home": "Poio Pescamar FS",
                   "venue": "Pab. Mun. de Poio (POL)"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "Ourense Ontime",
                   "date": "2027-02-13T19:00:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "venue": "C.D.M. La Granja (T)"
                 }
-              ],
-              "date": "2027-02-13"
+              ]
             },
             {
               "jornada": 20,
               "matches": [
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "Atlético Navalcarnero",
-                  "date": "2027-02-20"
+                  "date": "2027-02-20",
+                  "home": "Ceuta Agrupación Deportiva"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "Poio Pescamar FS",
-                  "date": "2027-02-20"
+                  "date": "2027-02-20",
+                  "home": "AE Les Corts UBAE"
                 },
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
-                  "date": "2027-02-20"
+                  "date": "2027-02-20",
+                  "home": "C.D. Guadalcacín F.S."
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "LBTL Futsal Alcantarilla",
-                  "date": "2027-02-20"
+                  "date": "2027-02-20",
+                  "home": "Ourense Ontime"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "F.S.F. Castro Bloques Cando",
-                  "date": "2027-02-20"
+                  "date": "2027-02-20",
+                  "home": "Rodiles F.S. \"A\""
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "Estrela Revoltosa Verín FSF",
-                  "date": "2027-02-20"
+                  "date": "2027-02-20",
+                  "home": "STV Roldán F.S"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "MRB Móstoles FSF",
                   "date": "2027-02-20T18:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "venue": "P.M. Guadaljaire (POL)"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "ARRIVA AD Alcorcón FSF",
                   "date": "2027-02-20T19:30:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "venue": "Pab. Javier Imbroda Ortiz (POL)"
                 }
-              ],
-              "date": "2027-02-20"
+              ]
             },
             {
               "jornada": 21,
               "matches": [
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
-                  "date": "2027-02-27"
+                  "date": "2027-02-27",
+                  "home": "LBTL Futsal Alcantarilla"
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "Ourense Ontime",
-                  "date": "2027-02-27"
+                  "date": "2027-02-27",
+                  "home": "F.S.F. Castro Bloques Cando"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "ARRIVA AD Alcorcón FSF",
-                  "date": "2027-02-27"
+                  "date": "2027-02-27",
+                  "home": "Estrela Revoltosa Verín FSF"
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "AE Les Corts UBAE",
-                  "date": "2027-02-27"
+                  "date": "2027-02-27",
+                  "home": "Atlético Navalcarnero"
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "C.D. Guadalcacín F.S.",
-                  "date": "2027-02-27"
+                  "date": "2027-02-27",
+                  "home": "STV Roldán F.S"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "Rodiles F.S. \"A\"",
                   "date": "2027-02-27T18:30:00",
+                  "home": "MRB Móstoles FSF",
                   "venue": "Pabellón Eva Manguan (POL)"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "Nueces de Ronda Atlético Torcal FS",
                   "date": "2027-02-27T18:30:00",
+                  "home": "Poio Pescamar FS",
                   "venue": "Pab. Mun. de Poio (POL)"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2027-02-27T19:00:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "venue": "C.D.M. La Granja (T)"
                 }
-              ],
-              "date": "2027-02-27"
+              ]
             },
             {
               "jornada": 22,
               "matches": [
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "Estrela Revoltosa Verín FSF",
-                  "date": "2027-03-27"
+                  "date": "2027-03-27",
+                  "home": "AE Les Corts UBAE"
                 },
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "Atlético Navalcarnero",
-                  "date": "2027-03-27"
+                  "date": "2027-03-27",
+                  "home": "C.D. Guadalcacín F.S."
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "Ceuta Agrupación Deportiva",
-                  "date": "2027-03-27"
+                  "date": "2027-03-27",
+                  "home": "Ourense Ontime"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "Poio Pescamar FS",
-                  "date": "2027-03-27"
+                  "date": "2027-03-27",
+                  "home": "Rodiles F.S. \"A\""
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "LBTL Futsal Alcantarilla",
                   "date": "2027-03-27T16:30:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "venue": "P.M. Los Cantos (POL)"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "STV Roldán F.S",
                   "date": "2027-03-27T18:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "venue": "P.M. Guadaljaire (POL)"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "date": "2027-03-27T18:30:00",
+                  "home": "MRB Móstoles FSF",
                   "venue": "Pabellón Eva Manguan (POL)"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "F.S.F. Castro Bloques Cando",
                   "date": "2027-03-27T19:00:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "venue": "Pab. Javier Imbroda Ortiz (POL)"
                 }
-              ],
-              "date": "2027-03-27"
+              ]
             },
             {
               "jornada": 23,
               "matches": [
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "MRB Móstoles FSF",
-                  "date": "2027-04-03"
+                  "date": "2027-04-03",
+                  "home": "F.S.F. Castro Bloques Cando"
                 },
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "LBTL Futsal Alcantarilla",
-                  "date": "2027-04-03"
+                  "date": "2027-04-03",
+                  "home": "Ceuta Agrupación Deportiva"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "ARRIVA AD Alcorcón FSF",
-                  "date": "2027-04-03"
+                  "date": "2027-04-03",
+                  "home": "AE Les Corts UBAE"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "Atlético Navalcarnero",
-                  "date": "2027-04-03"
+                  "date": "2027-04-03",
+                  "home": "Estrela Revoltosa Verín FSF"
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
-                  "date": "2027-04-03"
+                  "date": "2027-04-03",
+                  "home": "STV Roldán F.S"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "Ourense Ontime",
                   "date": "2027-04-03T18:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "venue": "P.M. Guadaljaire (POL)"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "C.D. Guadalcacín F.S.",
                   "date": "2027-04-03T18:30:00",
+                  "home": "Poio Pescamar FS",
                   "venue": "Pab. Mun. de Poio (POL)"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "Rodiles F.S. \"A\"",
                   "date": "2027-04-03T19:00:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "venue": "C.D.M. La Granja (T)"
                 }
-              ],
-              "date": "2027-04-03"
+              ]
             },
             {
               "jornada": 24,
               "matches": [
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
-                  "date": "2027-04-10"
+                  "date": "2027-04-10",
+                  "home": "LBTL Futsal Alcantarilla"
                 },
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "AE Les Corts UBAE",
-                  "date": "2027-04-10"
+                  "date": "2027-04-10",
+                  "home": "Ceuta Agrupación Deportiva"
                 },
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "Nueces de Ronda Atlético Torcal FS",
-                  "date": "2027-04-10"
+                  "date": "2027-04-10",
+                  "home": "C.D. Guadalcacín F.S."
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
-                  "date": "2027-04-10"
+                  "date": "2027-04-10",
+                  "home": "Atlético Navalcarnero"
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "Poio Pescamar FS",
-                  "date": "2027-04-10"
+                  "date": "2027-04-10",
+                  "home": "Ourense Ontime"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "STV Roldán F.S",
-                  "date": "2027-04-10"
+                  "date": "2027-04-10",
+                  "home": "Rodiles F.S. \"A\""
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "F.S.F. Castro Bloques Cando",
                   "date": "2027-04-10T16:30:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "venue": "P.M. Los Cantos (POL)"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "Estrela Revoltosa Verín FSF",
                   "date": "2027-04-10T18:30:00",
+                  "home": "MRB Móstoles FSF",
                   "venue": "Pabellón Eva Manguan (POL)"
                 }
-              ],
-              "date": "2027-04-10"
+              ]
             },
             {
               "jornada": 25,
               "matches": [
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "Atlético Navalcarnero",
-                  "date": "2027-04-24"
+                  "date": "2027-04-24",
+                  "home": "F.S.F. Castro Bloques Cando"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "C.D. Guadalcacín F.S.",
-                  "date": "2027-04-24"
+                  "date": "2027-04-24",
+                  "home": "AE Les Corts UBAE"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "LBTL Futsal Alcantarilla",
-                  "date": "2027-04-24"
+                  "date": "2027-04-24",
+                  "home": "Estrela Revoltosa Verín FSF"
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "Ourense Ontime",
-                  "date": "2027-04-24"
+                  "date": "2027-04-24",
+                  "home": "STV Roldán F.S"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2027-04-24T16:30:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "venue": "Pab. Javier Imbroda Ortiz (POL)"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "Rodiles F.S. \"A\"",
                   "date": "2027-04-24T18:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "venue": "P.M. Guadaljaire (POL)"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "MRB Móstoles FSF",
                   "date": "2027-04-24T18:30:00",
+                  "home": "Poio Pescamar FS",
                   "venue": "Pab. Mun. de Poio (POL)"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "ARRIVA AD Alcorcón FSF",
                   "date": "2027-04-24T19:00:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "venue": "C.D.M. La Granja (T)"
                 }
-              ],
-              "date": "2027-04-24"
+              ]
             },
             {
               "jornada": 26,
               "matches": [
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "Poio Pescamar FS",
-                  "date": "2027-05-01"
+                  "date": "2027-05-01",
+                  "home": "LBTL Futsal Alcantarilla"
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "Estrela Revoltosa Verín FSF",
-                  "date": "2027-05-01"
+                  "date": "2027-05-01",
+                  "home": "F.S.F. Castro Bloques Cando"
                 },
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "STV Roldán F.S",
-                  "date": "2027-05-01"
+                  "date": "2027-05-01",
+                  "home": "Ceuta Agrupación Deportiva"
                 },
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "MRB Móstoles FSF",
-                  "date": "2027-05-01"
+                  "date": "2027-05-01",
+                  "home": "C.D. Guadalcacín F.S."
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
-                  "date": "2027-05-01"
+                  "date": "2027-05-01",
+                  "home": "Atlético Navalcarnero"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "Ourense Ontime",
-                  "date": "2027-05-01"
+                  "date": "2027-05-01",
+                  "home": "Rodiles F.S. \"A\""
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "Nueces de Ronda Atlético Torcal FS",
                   "date": "2027-05-01T16:30:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "venue": "P.M. Los Cantos (POL)"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "AE Les Corts UBAE",
                   "date": "2027-05-01T18:30:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "venue": "Pab. Javier Imbroda Ortiz (POL)"
                 }
-              ],
-              "date": "2027-05-01"
+              ]
             },
             {
               "jornada": 27,
               "matches": [
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "LBTL Futsal Alcantarilla",
-                  "date": "2027-05-08"
+                  "date": "2027-05-08",
+                  "home": "C.D. Guadalcacín F.S."
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
-                  "date": "2027-05-08"
+                  "date": "2027-05-08",
+                  "home": "Ourense Ontime"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "Ceuta Agrupación Deportiva",
-                  "date": "2027-05-08"
+                  "date": "2027-05-08",
+                  "home": "Rodiles F.S. \"A\""
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "F.S.F. Castro Bloques Cando",
-                  "date": "2027-05-08"
+                  "date": "2027-05-08",
+                  "home": "STV Roldán F.S"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "AE Les Corts UBAE",
                   "date": "2027-05-08T18:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "venue": "P.M. Guadaljaire (POL)"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "Atlético Navalcarnero",
                   "date": "2027-05-08T18:30:00",
+                  "home": "MRB Móstoles FSF",
                   "venue": "Pabellón Eva Manguan (POL)"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "ARRIVA AD Alcorcón FSF",
                   "date": "2027-05-08T18:30:00",
+                  "home": "Poio Pescamar FS",
                   "venue": "Pab. Mun. de Poio (POL)"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "Estrela Revoltosa Verín FSF",
                   "date": "2027-05-08T19:00:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "venue": "C.D.M. La Granja (T)"
                 }
-              ],
-              "date": "2027-05-08"
+              ]
             },
             {
               "jornada": 28,
               "matches": [
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "STV Roldán F.S",
-                  "date": "2027-05-15"
+                  "date": "2027-05-15",
+                  "home": "LBTL Futsal Alcantarilla"
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
-                  "date": "2027-05-15"
+                  "date": "2027-05-15",
+                  "home": "F.S.F. Castro Bloques Cando"
                 },
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "Nueces de Ronda Atlético Torcal FS",
-                  "date": "2027-05-15"
+                  "date": "2027-05-15",
+                  "home": "Ceuta Agrupación Deportiva"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "Ourense Ontime",
-                  "date": "2027-05-15"
+                  "date": "2027-05-15",
+                  "home": "AE Les Corts UBAE"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "Rodiles F.S. \"A\"",
-                  "date": "2027-05-15"
+                  "date": "2027-05-15",
+                  "home": "Estrela Revoltosa Verín FSF"
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "Poio Pescamar FS",
-                  "date": "2027-05-15"
+                  "date": "2027-05-15",
+                  "home": "Atlético Navalcarnero"
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "MRB Móstoles FSF",
                   "date": "2027-05-15T16:30:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "venue": "P.M. Los Cantos (POL)"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "C.D. Guadalcacín F.S.",
                   "date": "2027-05-15T18:30:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "venue": "Pab. Javier Imbroda Ortiz (POL)"
                 }
-              ],
-              "date": "2027-05-15"
+              ]
             },
             {
               "jornada": 29,
               "matches": [
                 {
-                  "home": "C.D. Guadalcacín F.S.",
                   "away": "F.S.F. Castro Bloques Cando",
-                  "date": "2027-05-22"
+                  "date": "2027-05-22",
+                  "home": "C.D. Guadalcacín F.S."
                 },
                 {
-                  "home": "Ourense Ontime",
                   "away": "ARRIVA AD Alcorcón FSF",
-                  "date": "2027-05-22"
+                  "date": "2027-05-22",
+                  "home": "Ourense Ontime"
                 },
                 {
-                  "home": "Rodiles F.S. \"A\"",
                   "away": "LBTL Futsal Alcantarilla",
-                  "date": "2027-05-22"
+                  "date": "2027-05-22",
+                  "home": "Rodiles F.S. \"A\""
                 },
                 {
-                  "home": "STV Roldán F.S",
                   "away": "Atlético Navalcarnero",
-                  "date": "2027-05-22"
+                  "date": "2027-05-22",
+                  "home": "STV Roldán F.S"
                 },
                 {
-                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "date": "2027-05-22T18:00:00",
+                  "home": "Nueces de Ronda Atlético Torcal FS",
                   "venue": "P.M. Guadaljaire (POL)"
                 },
                 {
-                  "home": "MRB Móstoles FSF",
                   "away": "Ceuta Agrupación Deportiva",
                   "date": "2027-05-22T18:30:00",
+                  "home": "MRB Móstoles FSF",
                   "venue": "Pabellón Eva Manguan (POL)"
                 },
                 {
-                  "home": "Poio Pescamar FS",
                   "away": "Estrela Revoltosa Verín FSF",
                   "date": "2027-05-22T18:30:00",
+                  "home": "Poio Pescamar FS",
                   "venue": "Pab. Mun. de Poio (POL)"
                 },
                 {
-                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "away": "AE Les Corts UBAE",
                   "date": "2027-05-22T19:00:00",
+                  "home": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "venue": "C.D.M. La Granja (T)"
                 }
-              ],
-              "date": "2027-05-22"
+              ]
             },
             {
               "jornada": 30,
               "matches": [
                 {
-                  "home": "LBTL Futsal Alcantarilla",
                   "away": "MRB Móstoles FSF",
-                  "date": "2027-05-29"
+                  "date": "2027-05-29",
+                  "home": "LBTL Futsal Alcantarilla"
                 },
                 {
-                  "home": "F.S.F. Castro Bloques Cando",
                   "away": "Poio Pescamar FS",
-                  "date": "2027-05-29"
+                  "date": "2027-05-29",
+                  "home": "F.S.F. Castro Bloques Cando"
                 },
                 {
-                  "home": "Ceuta Agrupación Deportiva",
                   "away": "C.D. Guadalcacín F.S.",
-                  "date": "2027-05-29"
+                  "date": "2027-05-29",
+                  "home": "Ceuta Agrupación Deportiva"
                 },
                 {
-                  "home": "AE Les Corts UBAE",
                   "away": "STV Roldán F.S",
-                  "date": "2027-05-29"
+                  "date": "2027-05-29",
+                  "home": "AE Les Corts UBAE"
                 },
                 {
-                  "home": "Estrela Revoltosa Verín FSF",
                   "away": "Ourense Ontime",
-                  "date": "2027-05-29"
+                  "date": "2027-05-29",
+                  "home": "Estrela Revoltosa Verín FSF"
                 },
                 {
-                  "home": "Atlético Navalcarnero",
                   "away": "Nueces de Ronda Atlético Torcal FS",
-                  "date": "2027-05-29"
+                  "date": "2027-05-29",
+                  "home": "Atlético Navalcarnero"
                 },
                 {
-                  "home": "ARRIVA AD Alcorcón FSF",
                   "away": "Rodiles F.S. \"A\"",
                   "date": "2027-05-29T16:30:00",
+                  "home": "ARRIVA AD Alcorcón FSF",
                   "venue": "P.M. Los Cantos (POL)"
                 },
                 {
-                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "away": "Wanapix Aldelis InterSala 10 Zaragoza",
                   "date": "2027-05-29T18:30:00",
+                  "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
                   "venue": "Pab. Javier Imbroda Ortiz (POL)"
                 }
-              ],
-              "date": "2027-05-29"
+              ]
             }
           ],
-          "jornadasTotal": 30,
-          "teamsSource": "calendario"
+          "teamsSource": "calendario",
+          "jornadasTotal": 30
         },
         {
           "id": "rfef-segunda-fs-fem",
