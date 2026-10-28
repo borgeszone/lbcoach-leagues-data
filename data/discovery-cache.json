@@ -1,0 +1,141 @@
+{
+  "_comment": "Generado por scrapers.rfef.save_discovery. Qué divisiones y grupos tiene la temporada en la PNFG, para no volver a preguntarlo cada día. Si algo no cuadra, bórralo: el próximo run lo vuelve a descubrir.",
+  "season": "2026-2027",
+  "seasonCode": "22",
+  "date": "2026-10-28",
+  "divisions": [
+    {
+      "id": "rfef-segunda-fs-masc",
+      "name": "Segunda División FS",
+      "gender": "masculino",
+      "competition": {
+        "code": "33918407",
+        "name": "Segunda División Fútbol Sala Masculino"
+      },
+      "flat": true,
+      "groups": [
+        {
+          "id": "g1",
+          "code": "33918408",
+          "name": "Único"
+        }
+      ],
+      "pdf_id": "2Div_Sala"
+    },
+    {
+      "id": "rfef-segunda-b-fs-masc",
+      "name": "Segunda División FS B",
+      "gender": "masculino",
+      "competition": {
+        "code": "33836163",
+        "name": "Segunda División B Fútbol Sala"
+      },
+      "flat": false,
+      "groups": [
+        {
+          "id": "g1",
+          "code": "33836164",
+          "name": "Grupo 1"
+        },
+        {
+          "id": "g2",
+          "code": "33836165",
+          "name": "Grupo 2"
+        },
+        {
+          "id": "g3",
+          "code": "33836166",
+          "name": "Grupo 3"
+        },
+        {
+          "id": "g4",
+          "code": "33836167",
+          "name": "Grupo 4"
+        },
+        {
+          "id": "g5",
+          "code": "33836169",
+          "name": "Grupo 5"
+        },
+        {
+          "id": "g6",
+          "code": "33836168",
+          "name": "Grupo 6"
+        }
+      ]
+    },
+    {
+      "id": "rfef-primera-fs-fem",
+      "name": "Primera División FS Femenina",
+      "gender": "femenino",
+      "competition": {
+        "code": "33836179",
+        "name": "Primera División Fútbol Sala Femenino"
+      },
+      "flat": true,
+      "groups": [
+        {
+          "id": "g1",
+          "code": "33836180",
+          "name": "Primera División Fútbol Sala Femenino 2026-27"
+        }
+      ],
+      "pdf_id": "1DivFem_Sala"
+    },
+    {
+      "id": "rfef-segunda-fs-fem",
+      "name": "Segunda División FS Femenina",
+      "gender": "femenino",
+      "competition": {
+        "code": "33836181",
+        "name": "Segunda División Fútbol Sala Femenino"
+      },
+      "flat": false,
+      "groups": [
+        {
+          "id": "g1",
+          "code": "33836182",
+          "name": "Grupo 1"
+        },
+        {
+          "id": "g2",
+          "code": "33836183",
+          "name": "Grupo 2"
+        },
+        {
+          "id": "g3",
+          "code": "33836184",
+          "name": "Grupo 3"
+        }
+      ],
+      "groups_url_pattern": "https://rfef.es/sites/default/files/calendario_grupo_{n}_segunda_femenina_futbol_sala.pdf",
+      "max_groups": 10
+    },
+    {
+      "id": "rfef-primera-fs-masc",
+      "name": "Primera División FS",
+      "gender": "masculino",
+      "competition": {
+        "code": "33836159",
+        "name": "Liga Prime Futsal"
+      },
+      "flat": true,
+      "groups": [
+        {
+          "id": "g1",
+          "code": "33892849",
+          "name": "Torneo Apertura"
+        },
+        {
+          "id": "g2",
+          "code": "33892850",
+          "name": "Torneo Clausura"
+        }
+      ],
+      "pdf_id": "1Div_Sala",
+      "pdf_urls": {
+        "2026-2027": "https://rfef.es/sites/default/files/2026-06/Liga_Prime_Futsal.pdf"
+      }
+    }
+  ]
+}
