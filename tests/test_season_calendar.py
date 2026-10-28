@@ -292,7 +292,9 @@ class CadaRunSigueDondeLoDejoElAnterior(_CacheTemporal):
         out, vista, actas = self._run(self._cal())
         vista.assert_not_called()
         self.assertEqual(len(out), 3)
-        actas.assert_called_once()  # las actas sí: es lo que cambia
+        # Las actas tampoco: se pidieron en el run que lo bajó, y repetirlas
+        # cada 4 h gasta el cupo en actas que la federación aún no ha subido.
+        actas.assert_not_called()
 
     def test_pasadas_las_horas_se_vuelve_a_pedir(self):
         self._run(self._cal())

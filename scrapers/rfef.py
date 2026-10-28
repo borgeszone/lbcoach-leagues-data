@@ -1742,7 +1742,11 @@ def _calendar_for_group(
        como 14 porque el fallback mira si la lista está vacía, no si está
        completa.
     """
-    # Bajado hace poco por otro run: sale de la caché y solo se piden sus actas.
+    # Bajado hace poco por otro run: sale de la caché, **y sus actas también**.
+    # Se pidieron en ese run; volver a pedirlas cada 4 h gastaba el cupo en
+    # jornadas cuya acta la federación aún no ha publicado (medido el
+    # 2026-10-28: las mismas dos, dos runs seguidos, ninguna nueva), y los
+    # grupos que faltaban se quedaban sin turno. Se piden al día siguiente.
     horas = _refresh_hours()
     if max_jornadas is None and calendar_cache.fetched_within(
             comp_code, group_code, now=datetime.now(timezone.utc), hours=horas):
@@ -1752,9 +1756,6 @@ def _calendar_for_group(
                   f"de la caché")
             if meta is not None:
                 meta["total"] = len(cached)
-            _with_recent_actas(cached, comp_code, group_code, season_code, breaker,
-                               label=label, meta=meta, session=session,
-                               budget=actas)
             return cached
 
     full = fetch_season_calendar(comp_code, group_code, temporada_code=season_code,
