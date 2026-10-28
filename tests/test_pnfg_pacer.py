@@ -1,8 +1,9 @@
-"""Tests del ritmo contra la PNFG y de cómo se espera un bloqueo.
+"""Tests del ritmo contra la PNFG y de qué se hace si aun así corta.
 
 El límite que motiva todo se midió el 2026-10-04 (ver `scrapers/pnfg_pacer.py`):
-~12 peticiones por IP cada 5 minutos, y el bloqueo es de la IP, no de la sesión.
-Por eso cada grupo del calendario moría siempre entre la J12 y la J15.
+~12 peticiones por IP, y el bloqueo es de la IP, no de la sesión. El
+2026-10-25 se midió el otro lado: 9 seguidas, 15 minutos sin pedir nada y 7
+más, sin ningún corte. De ahí las tandas, y de ahí que un corte pare el run.
 
 Ninguno toca la red ni duerme de verdad.
 
@@ -59,42 +60,77 @@ class ElRitmo(unittest.TestCase):
         self.p.wait()
         self.assertEqual(self.r.dormido, [])
 
-    def test_tras_esperar_un_bloqueo_no_se_suma_el_intervalo(self):
-        self.p.wait()
-        self.p.note_block()
-        self.p.wait()
+
+
+
+class LasTandas(unittest.TestCase):
+    """Tandas de `burst` peticiones con `rest` segundos de silencio: lo medido el
+    2026-10-25 (9 seguidas, 15 min, 7 más, sin ningún corte)."""
+
+    def setUp(self) -> None:
+        self.r = _Reloj()
+        self.p = Pacer(0, burst=8, rest=900, clock=self.r.clock, sleep=self.r.sleep)
+
+    def test_ocho_seguidas_y_la_novena_descansa(self):
+        for _ in range(8):
+            self.p.wait()
         self.assertEqual(self.r.dormido, [])
+        self.p.wait()
+        self.assertEqual(self.r.dormido, [900])
+
+    def test_tras_el_descanso_vuelve_a_contar(self):
+        for _ in range(17):
+            self.p.wait()
+        self.assertEqual(self.r.dormido, [900, 900])
+
+    def test_las_redirecciones_cuentan(self):
+        """Una redirección es una petición más contra el cupo."""
+        for _ in range(4):
+            self.p.wait()
+            self.p.count(1)
+        self.p.wait()
+        self.assertEqual(self.r.dormido, [900])
+
+    def test_lo_que_va_en_produccion_cabe_en_el_cupo(self):
+        """El corte llega hacia la 12ª seguida: la tanda tiene que quedarse por
+        debajo, y el descanso no puede ser más corto que lo medido."""
+        self.assertLess(pnfg_pacer.DEFAULT_BURST, 11)
+        self.assertGreaterEqual(pnfg_pacer.DEFAULT_REST, 900)
 
 
+class AlPrimerCorteSePara(unittest.TestCase):
+    """Cada petición dentro del corte lo alarga y lo hace escalar."""
 
-class LaEsperaDelCorte(unittest.TestCase):
-    """`wait_out_block`: escalonada, en silencio, y con tope."""
+    def setUp(self) -> None:
+        pnfg_pacer.reset()
+        self.addCleanup(pnfg_pacer.reset)
 
-    def test_escalones_y_tope(self):
-        with mock.patch.object(pnfg_pacer, "_sleep") as dormir:
-            for n in range(len(pnfg_pacer.BLOCK_WAITS)):
-                self.assertTrue(pnfg_pacer.wait_out_block(n))
-            self.assertFalse(pnfg_pacer.wait_out_block(len(pnfg_pacer.BLOCK_WAITS)))
-        self.assertEqual([c.args[0] for c in dormir.call_args_list],
-                         list(pnfg_pacer.BLOCK_WAITS))
+    def test_no_espera_y_marca_el_run(self):
+        with mock.patch("time.sleep") as dormir:
+            self.assertFalse(pnfg_pacer.wait_out_block(0, label="x"))
+        dormir.assert_not_called()
+        self.assertTrue(pnfg_pacer.stopped())
 
-    def test_el_limite_de_quien_llama_manda(self):
-        """Tras un fallo el cortacircuitos baja `retries` a 1: una espera."""
-        with mock.patch.object(pnfg_pacer, "_sleep") as dormir:
-            self.assertTrue(pnfg_pacer.wait_out_block(0, limit=1))
-            self.assertFalse(pnfg_pacer.wait_out_block(1, limit=1))
-            self.assertFalse(pnfg_pacer.wait_out_block(0, limit=0))
-        self.assertEqual(dormir.call_count, 1)
+    def test_tras_el_corte_la_sesion_no_sale_a_la_red(self):
+        pnfg_pacer.wait_out_block()
+        s = rfef_clasificacion.PacedSession()
+        with mock.patch("requests.Session.request") as red:
+            r = s.get("https://resultados.rfef.es/pnfg/NPcd/NFG_CmpJornada")
+        red.assert_not_called()
+        self.assertEqual((r.status_code, r.content), (200, b""))
 
-    def test_la_primera_espera_cubre_el_corte_medido(self):
-        """Medido: a los 295 s seguía cerrado y a los 356 abría."""
-        self.assertGreater(pnfg_pacer.BLOCK_WAITS[0], 356)
+    def test_otros_hosts_siguen_funcionando(self):
+        pnfg_pacer.wait_out_block()
+        s = rfef_clasificacion.PacedSession()
+        with mock.patch("requests.Session.request", return_value="ok") as red:
+            s.get("https://rfef.es/competiciones")
+        red.assert_called_once()
 
-    def test_las_esperas_crecen(self):
-        """El corte escala con la reincidencia: esperar lo mismo otra vez es
-        volver a pedir dentro del mismo corte."""
-        w = pnfg_pacer.BLOCK_WAITS
-        self.assertEqual(list(w), sorted(set(w)))
+    def test_el_cortacircuitos_lo_ve(self):
+        b = rfef_calendario.RateLimitBreaker()
+        pnfg_pacer.wait_out_block()
+        self.assertTrue(b.blocked)
+        self.assertIn("cortó", b.summary())
 
 
 class ElTopeDeTiempo(unittest.TestCase):
@@ -144,36 +180,23 @@ class _Resp:
         self.status_code = status
 
 
-class ElBloqueoSeEspera(unittest.TestCase):
-    """`_fetch_jornada_html` ante 200 con el cuerpo vacío."""
+class ElCorteNoSeReintenta(unittest.TestCase):
+    """Los tres módulos que piden, ante 200 con el cuerpo vacío: una petición
+    y se rinden, sin dormir y sin sesión nueva."""
 
-    def _fetch(self, respuestas, retries=4):
+    def setUp(self) -> None:
+        pnfg_pacer.reset()
+        self.addCleanup(pnfg_pacer.reset)
+
+    def test_el_calendario(self):
         sesion = mock.Mock()
-        sesion.get.side_effect = respuestas
-        with mock.patch.object(pnfg_pacer, "_sleep") as dormir,              mock.patch.object(rfef_calendario.time, "sleep"),              mock.patch.object(rfef_calendario, "make_session") as nueva:
-            html = rfef_calendario._fetch_jornada_html(
-                sesion, "C", "G", 12, "22", retries)
-        return html, sesion, dormir, nueva
-
-    def test_espera_en_silencio_y_con_la_misma_sesion(self):
-        html, sesion, dormir, nueva = self._fetch([_Resp(b""), _Resp(b"<html>")])
-        self.assertEqual(html, "<html>")
-        dormir.assert_called_once_with(pnfg_pacer.BLOCK_WAITS[0])
-        nueva.assert_not_called()  # la sesión no importa: el cupo es de la IP
-        self.assertEqual(sesion.get.call_count, 2)
-
-    def test_si_sigue_cerrado_escala_una_vez_y_se_rinde(self):
-        """Una petición entre cada espera, no cinco reintentos seguidos: cada
-        petición dentro del corte lo alarga."""
-        html, sesion, dormir, _ = self._fetch([_Resp(b"")] * 5)
+        sesion.get.side_effect = [_Resp(b""), _Resp(b"<html>")]
+        with mock.patch.object(rfef_calendario.time, "sleep") as dormir,              mock.patch.object(rfef_calendario, "make_session") as nueva:
+            html = rfef_calendario._fetch_jornada_html(sesion, "C", "G", 12, "22", 4)
         self.assertIsNone(html)
-        self.assertEqual(dormir.call_count, len(pnfg_pacer.BLOCK_WAITS))
-        self.assertEqual(sesion.get.call_count, len(pnfg_pacer.BLOCK_WAITS) + 1)
-
-    def test_tras_un_fallo_solo_una_espera(self):
-        html, sesion, dormir, _ = self._fetch([_Resp(b"")] * 5, retries=1)
-        self.assertIsNone(html)
-        self.assertEqual(dormir.call_count, 1)
+        self.assertEqual(sesion.get.call_count, 1)
+        dormir.assert_not_called()
+        nueva.assert_not_called()
 
     def test_un_error_de_red_si_cambia_de_sesion(self):
         import requests
@@ -181,36 +204,31 @@ class ElBloqueoSeEspera(unittest.TestCase):
         sesion.get.side_effect = requests.ConnectionError("cerrada")
         otra = mock.Mock()
         otra.get.return_value = _Resp(b"<html>")
-        with mock.patch.object(rfef_calendario.time, "sleep"), \
-             mock.patch.object(rfef_calendario, "make_session", return_value=otra):
+        with mock.patch.object(rfef_calendario.time, "sleep"),              mock.patch.object(rfef_calendario, "make_session", return_value=otra):
             html = rfef_calendario._fetch_jornada_html(sesion, "C", "G", 3, "22", 4)
         self.assertEqual(html, "<html>")
-
-
-class LosOtrosModulosTambienEsperan(unittest.TestCase):
-    """Descubrimiento y clasificación gastan del mismo cupo. Si reintentan con
-    sesión nueva a los 15 s, alargan el corte para el calendario que viene
-    después."""
 
     def test_el_descubrimiento(self):
         from scrapers import rfef_discovery
         sesion = mock.Mock()
         sesion.get.side_effect = [_Resp(b""), _Resp(b"<html>")]
-        with mock.patch.object(pnfg_pacer, "_sleep") as dormir,              mock.patch.object(rfef_discovery.time, "sleep"),              mock.patch.object(rfef_discovery, "make_session") as nueva:
+        with mock.patch.object(rfef_discovery.time, "sleep") as dormir,              mock.patch.object(rfef_discovery, "make_session") as nueva:
             html = rfef_discovery.Fetcher(sesion).get("/x", {})
-        self.assertEqual(html, "<html>")
-        dormir.assert_called_once_with(pnfg_pacer.BLOCK_WAITS[0])
+        self.assertIsNone(html)
+        self.assertEqual(sesion.get.call_count, 1)
+        dormir.assert_not_called()
         nueva.assert_not_called()
 
     def test_la_clasificacion(self):
         sesion = mock.Mock()
         sesion.get.side_effect = [_Resp(b"")] * 5
-        with mock.patch.object(pnfg_pacer, "_sleep") as dormir,              mock.patch.object(rfef_clasificacion.time, "sleep"),              mock.patch.object(rfef_clasificacion, "make_session") as nueva:
-            equipos = rfef_clasificacion.fetch_division_teams(
-                "C", "G", session=sesion, retries=1)
+        with mock.patch.object(rfef_clasificacion.time, "sleep") as dormir,              mock.patch.object(rfef_clasificacion, "make_session") as nueva:
+            equipos = rfef_clasificacion.fetch_division_teams("C", "G", session=sesion)
         self.assertEqual(equipos, [])
-        self.assertEqual(dormir.call_count, 1)
+        self.assertEqual(sesion.get.call_count, 1)
+        dormir.assert_not_called()
         nueva.assert_not_called()
+
 
 
 class LoQueFaltaPrimero(unittest.TestCase):

@@ -344,6 +344,7 @@ class SoloSeCacheaLoDeLaPnfg(unittest.TestCase):
         del_pdf = [{"jornada": 1,
                     "matches": [{"home": "A", "away": "B", "date": "2026-09-19"}]}]
         with mock.patch.object(rfef, "fetch_division_calendar", return_value=[]), \
+             mock.patch.object(rfef, "fetch_season_calendar", return_value=None), \
              mock.patch.object(rfef.time, "sleep"):
             out = rfef._calendar_for_group(
                 "C", "G", "22", None, RateLimitBreaker(),
@@ -357,10 +358,56 @@ class SoloSeCacheaLoDeLaPnfg(unittest.TestCase):
                    "matches": [{"home": "A", "away": "B",
                                 "date": "2026-09-19T19:30:00"}]}]
         with mock.patch.object(rfef, "fetch_division_calendar", return_value=fresco), \
+             mock.patch.object(rfef, "fetch_season_calendar", return_value=None), \
              mock.patch.object(rfef.time, "sleep"):
             rfef._calendar_for_group("C", "G", "22", None, RateLimitBreaker(),
                                      label="x", pdf=lambda: [])
         self.assertEqual(len(calendar_cache.lookup_jornadas("C", "G")), 1)
+
+
+class ElPdfCompletaLoQueElCupoDejoAMedias(unittest.TestCase):
+    """`_fill_from_pdf`: el PDF no gasta cupo de la PNFG y trae las 30."""
+
+    def _m(self, home, away, date=None):
+        return {"home": home, "away": away, "date": date}
+
+    def test_anade_las_jornadas_que_faltan(self):
+        pnfg = [{"jornada": n, "matches": [self._m("A", "B", "2026-09-19T18:00:00")]}
+                for n in (1, 2)]
+        pdf = [{"jornada": n, "matches": [self._m("A", "B", "2026-10-01")]}
+               for n in (1, 2, 3, 4)]
+        out = rfef._fill_from_pdf(pnfg, lambda: pdf, label="x")
+        self.assertEqual([j["jornada"] for j in out], [1, 2, 3, 4])
+
+    def test_nunca_pisa_una_fecha_de_la_pnfg(self):
+        pnfg = [{"jornada": 1, "matches": [self._m("A", "B", "2026-09-19T18:00:00")]}]
+        pdf = [{"jornada": 1, "matches": [self._m("A", "B", "2026-09-12")]},
+               {"jornada": 2, "matches": [self._m("C", "D", "2026-09-26")]}]
+        out = rfef._fill_from_pdf(pnfg, lambda: pdf, label="x")
+        self.assertEqual(out[0]["matches"][0]["date"], "2026-09-19T18:00:00")
+
+    def test_da_fecha_al_partido_que_no_la_tiene(self):
+        pnfg = [{"jornada": 4, "matches": [self._m("Futsal Mataró", "Ripollet")]}]
+        pdf = [{"jornada": 4, "matches": [self._m("Futsal Mataró", "Ripollet",
+                                                  "2026-10-11")]}]
+        out = rfef._fill_from_pdf(pnfg, lambda: pdf, label="x")
+        self.assertEqual(out[0]["matches"][0]["date"], "2026-10-11")
+
+    def test_sin_pdf_devuelve_lo_mismo(self):
+        pnfg = [{"jornada": 1, "matches": [self._m("A", "B")]}]
+        self.assertIs(rfef._fill_from_pdf(pnfg, lambda: [], label="x"), pnfg)
+
+    def test_las_fases_se_dejan_como_estan(self):
+        pnfg = [{"jornada": 1, "phase": "Apertura", "matches": [self._m("A", "B")]}]
+        pdf = [{"jornada": 2, "matches": [self._m("C", "D", "2026-09-26")]}]
+        self.assertIs(rfef._fill_from_pdf(pnfg, lambda: pdf, label="x"), pnfg)
+
+    def test_un_fallo_del_pdf_no_tumba_el_calendario(self):
+        pnfg = [{"jornada": 1, "matches": [self._m("A", "B")]}]
+
+        def boom():
+            raise RuntimeError("x")
+        self.assertIs(rfef._fill_from_pdf(pnfg, boom, label="x"), pnfg)
 
 
 if __name__ == "__main__":

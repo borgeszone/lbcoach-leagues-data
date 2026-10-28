@@ -237,7 +237,8 @@ def store_jornadas(comp: str | int, grupo: str | int, calendar: list[dict]) -> i
         matches = jornada.get("matches") or []
         if not isinstance(num, int) or not matches:
             continue
-        rows = [{"home": m["home"], "away": m["away"], "date": m.get("date")}
+        rows = [{"home": m["home"], "away": m["away"], "date": m.get("date"),
+                 **({"venue": m["venue"]} if m.get("venue") else {})}
                 for m in matches if m.get("home") and m.get("away")]
         if not rows:
             continue

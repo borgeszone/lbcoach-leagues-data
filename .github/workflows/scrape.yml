@@ -1,28 +1,17 @@
 name: Scrape leagues data
 
 on:
-  # Dos trabajos con cadencias distintas, porque cuestan cosas muy distintas:
+  # Completo cada día, todo el año. Desde octubre de 2026 el calendario de un
+  # grupo entero es UNA petición (`NFG_VisCalendario_Vis`) y a `NFG_CmpJornada`
+  # solo se le piden las jornadas recién jugadas que no tienen acta. Un run son
+  # unas 40-60 peticiones en tandas de 8 con 15 min de silencio entre ellas
+  # (`scrapers/pnfg_pacer.py`), así que dura 1-2 h y casi todo es esperar. Antes
+  # eran ~360 peticiones, el cupo de ~12 de la PNFG cortaba siempre hacia la
+  # J12, y por eso el completo solo corría los lunes.
   #
-  #   solo equipos  ~40 min  2 jornadas por grupo. Es lo que cambia en agosto,
-  #                          cuando las divisiones van abriendo de una en una.
-  #   completo      ~4-5 h   las ~30 jornadas de cada grupo. La PNFG da un cupo
-  #                          de ~12 peticiones por IP y después corta ~6 min,
-  #                          vaya el scraper al ritmo que vaya
-  #                          (scrapers/pnfg_pacer.py): eso ES la duración. Las
-  #                          jornadas ya cerradas no se vuelven a pedir, así
-  #                          que el run se acorta según avanza la temporada. El calendario de una
-  #                          temporada apenas cambia; lo que cambia dentro son
-  #                          las actas, y esas ya tienen caché acumulativa.
-  #
-  # Hacer el completo a diario en pretemporada era pegarle hora y media al día
-  # a la federación desde la misma IP — provocando en parte los bloqueos que
-  # luego hacen perder jornadas.
-  #
-  # Los meses NO se solapan a propósito: si los dos cron casaran el mismo día,
-  # GitHub lanzaría dos runs a la vez y competirían por publicar.
+  # El modo `equipos` se queda para lanzarlo a mano.
   schedule:
-    - cron: '0 6 * 7-9 *'            # jul-sep: diario
-    - cron: '0 6 * 1-6,10-12 1'      # oct-jun: solo lunes
+    - cron: '0 6 * * *'
   # Manual: trigger desde la pestaña Actions
   workflow_dispatch:
     inputs:
@@ -36,7 +25,7 @@ on:
         default: false
         type: boolean
       mode:
-        description: 'completo (equipos + calendario, ~4-5h) o equipos (~40 min)'
+        description: 'completo (equipos + calendario + actas, 1-2 h) o equipos'
         required: false
         default: 'completo'
         type: choice
@@ -47,7 +36,14 @@ permissions:
 
 jobs:
   scrape:
-    runs-on: ubuntu-latest
+    # PLAN B (docs/plan-b-runner-casa.md): si algún día la PNFG bloquea las IP
+    # de GitHub, se pone la variable del repo SCRAPER_RUNNER=self-hosted y el
+    # mismo workflow corre en un PC de casa, con su IP. Sin la variable, aquí.
+    runs-on: ${{ vars.SCRAPER_RUNNER || 'ubuntu-latest' }}
+    # bash también en el PC de casa (Windows con Git Bash): los pasos lo usan.
+    defaults:
+      run:
+        shell: bash
     env:
       # Sin esto Python escribe a un pipe con buffer y todo el log del scraper
       # sale con la marca de tiempo del final: el run del 2026-09-28 tenía
@@ -58,6 +54,15 @@ jobs:
       # evita el corte: la PNFG corta tras ~12 peticiones vayan al ritmo que
       # vayan (medido, ver scrapers/pnfg_pacer.py). Subirlo sólo alarga el run.
       PNFG_INTERVAL: '6'
+      # Lo que SÍ evita el corte (scrapers/pnfg_pacer.py, medido en octubre de
+      # 2026): el cupo de ~11 es de NFG_CmpJornada y no se recarga en 15 min,
+      # así que esa página solo se usa para actas y con tope por run (2 por
+      # grupo, 8 en total); lo demás va en tandas de 6 con 900 s de silencio.
+      # Si algún día corta, bajar PNFG_ACTAS_MAX antes que nada.
+      PNFG_BURST: '6'
+      PNFG_REST: '900'
+      PNFG_ACTAS_MAX: '8'
+      PNFG_ACTAS_GROUP: '2'
       # Tope de la fase de calendario. El job muere a las 6 h sin publicar;
       # mejor parar antes y publicar lo que haya. El run siguiente empieza por
       # las jornadas que falten.
@@ -84,18 +89,14 @@ jobs:
 
       # Qué modo toca:
       #   - workflow_dispatch → lo que haya elegido quien lo lanza.
-      #   - cron              → completo los lunes, solo-equipos el resto.
-      #     Con el cron de oct-jun eso siempre es lunes = siempre completo; en
-      #     jul-sep sale un completo semanal y seis rápidos.
+      #   - cron              → siempre completo.
       - name: Decidir modo
         id: modo
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             MODE="${{ github.event.inputs.mode }}"
-          elif [ "$(date -u +%u)" = "1" ]; then
-            MODE="completo"
           else
-            MODE="equipos"
+            MODE="completo"
           fi
           echo "mode=$MODE" >> "$GITHUB_OUTPUT"
           echo "Modo: $MODE"
@@ -113,6 +114,15 @@ jobs:
             ARGS="$ARGS --teams-only"
           fi
           python scrape.py $ARGS
+
+      # Si la PNFG cortó, el run publica igual —lo que falta sale de la caché y
+      # del JSON anterior— pero tiene que verse: es la señal de que el cupo ha
+      # cambiado o de que bloquean estas IP, y de que toca mirar el plan B.
+      - name: Avisar si la PNFG cortó
+        run: |
+          if grep -q "la PNFG cortó a mitad de run" output/leagues.json; then
+            echo "::warning title=La PNFG ha cortado::El run se paró al primer corte y publicó lo que tenía. Si se repite, ver docs/plan-b-runner-casa.md"
+          fi
 
       - name: Show diff
         run: |

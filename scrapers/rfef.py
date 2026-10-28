@@ -58,9 +58,14 @@ from scrapers.logo_resolver import (
 from scrapers.rfef_clasificacion import ScrapedTeam, fetch_division_teams
 from scrapers.rfef_calendario import (
     RateLimitBreaker,
+    acta_jornadas,
+    attach_actas,
     fetch_division_calendar,
+    fetch_jornada_matches,
+    fetch_season_calendar,
     teams_from_calendar,
 )
+from scrapers.rfef_clasificacion import make_session
 from scrapers.rfef_discovery import (
     COMP_LEAGUE,
     COMP_UNKNOWN,
@@ -1451,6 +1456,11 @@ def _attach_calendars(
                 return calendar
         return []
 
+    # Una sesión para toda la fase: cada sesión nueva hace un GET de siembra a
+    # la portada, y ese GET también gasta cupo de la PNFG (`pnfg_pacer`).
+    session = _SharedSession()
+    actas = _acta_budget()
+
     for cfg in divisions_cfg:
         div = by_id.get(cfg["id"])
         if div is None:
@@ -1459,17 +1469,35 @@ def _attach_calendars(
         comp_code = cfg["competition"]["code"]
 
         if cfg["flat"]:
-            group = cfg["groups"][0]
-            meta: dict = {}
-            calendar = _calendar_for_group(
-                comp_code, group.code, season_code, max_jornadas, breaker,
-                label=cfg["id"], pdf=lambda: _pdf_calendar_for(cfg), meta=meta,
-            )
+            # Plana con más de un "grupo" = fases (Apertura y Clausura, ver
+            # `discover_divisions`). Cada fase tiene su código y su J1, así que
+            # se pide cada una y se publican seguidas con su `phase`, que es
+            # como la app las separa. Antes solo se tomaba la primera, y a
+            # partir de enero faltaban las quince del Clausura.
+            fases = len(cfg["groups"]) > 1
+            calendar: list[dict] = []
+            total = 0
+            for group in cfg["groups"]:
+                fase = _phase_name(group.name) if fases else None
+                label = f"{cfg['id']}/{fase}" if fase else cfg["id"]
+                meta: dict = {}
+                parte = _calendar_for_group(
+                    comp_code, group.code, season_code, max_jornadas, breaker,
+                    label=label, meta=meta, session=session, actas=actas,
+                    pdf=lambda cfg=cfg, fase=fase: _only_phase(
+                        _pdf_calendar_for(cfg), fase),
+                )
+                if parte:
+                    _merge_acta_cache(parte, comp_code, group.code, label=label)
+                    for j in parte:
+                        if fase:
+                            j["phase"] = fase
+                    calendar.extend(parte)
+                total += meta.get("total") or 0
+                escudos.update(meta.get("badges") or {})
             if calendar:
-                _merge_acta_cache(calendar, comp_code, group.code, label=cfg["id"])
                 div["calendar"] = calendar
-            _note_total(div, meta, cfg["id"])
-            escudos.update(meta.get("badges") or {})
+            _note_total(div, {"total": total} if total else {}, cfg["id"])
             time.sleep(10)
             continue
 
@@ -1489,6 +1517,8 @@ def _attach_calendars(
                     group_id=group.id,
                 ),
                 meta=meta,
+                session=session,
+                actas=actas,
             )
             if calendar:
                 _merge_acta_cache(calendar, comp_code, group.code,
@@ -1510,6 +1540,43 @@ def _attach_calendars(
         print(f"[rfef-cal] AVISO: {resumen}")
         if warnings is not None:
             warnings.append(resumen)
+
+
+class _SharedSession:
+    """La sesión de la fase de calendario, creada en la **primera** petición.
+
+    Crearla antes haría su GET de siembra aunque no se pidiera nada —por
+    ejemplo, en un test que simula todos los fetchers—, y eso es una petición
+    real a la PNFG.
+    """
+
+    def __init__(self) -> None:
+        self._s = None
+
+    def get(self, *args, **kwargs):
+        if self._s is None:
+            self._s = make_session()
+        return self._s.get(*args, **kwargs)
+
+
+def _phase_name(name: str) -> str:
+    """"Torneo Apertura" → "Apertura": el nombre con el que el PDF y la app
+    llaman a la fase."""
+    return re.sub(r"(?i)^\s*torneo\s+", "", name).strip().title()
+
+
+def _only_phase(calendar: list[dict], fase: str | None) -> list[dict]:
+    """Del calendario del PDF, solo las jornadas de esa fase, y sin la marca.
+
+    El PDF de Liga Prime trae las dos fases juntas. Sin filtrar, el respaldo de
+    cada fase traería también las jornadas de la otra; y sin quitar la marca,
+    `_fill_from_pdf` lo daría por un calendario por fases y no completaría
+    nada. La marca se la vuelve a poner quien llama.
+    """
+    if not fase:
+        return calendar
+    return [{k: v for k, v in j.items() if k != "phase"}
+            for j in calendar if (j.get("phase") or "").lower() == fase.lower()]
 
 
 def _calendar_minutes() -> float:
@@ -1556,10 +1623,20 @@ def _calendar_for_group(
     label: str,
     pdf,
     meta: dict | None = None,
+    session=None,
+    actas: "_ActaBudget | None" = None,
 ) -> list[dict]:
     """El calendario de un grupo: PNFG, si no PDF, y la caché por encima.
 
-    El orden no es negociable y cada paso tiene su motivo:
+    0. **La vista de calendario completo** (`fetch_season_calendar`): las 30
+       jornadas con fecha, hora y pabellón en **una** petición. Si sale, el
+       calendario es ése y solo se piden a `NFG_CmpJornada` las jornadas
+       recién jugadas a las que les falta el acta (`_with_recent_actas`). Un
+       run entero pasa así de ~360 peticiones a unas 30-40, y cabe en el cupo
+       de la PNFG sin llegar nunca al corte (`pnfg_pacer`). Si no sale, todo lo
+       de abajo sigue como estaba: es el respaldo.
+
+    El orden de lo de abajo no es negociable y cada paso tiene su motivo:
 
     1. **PNFG.** Lo único que trae hora y `CodActa`.
     2. **Se guarda en caché lo que haya traído la PNFG, y solo eso.** Si aquí
@@ -1572,8 +1649,24 @@ def _calendar_for_group(
        como 14 porque el fallback mira si la lista está vacía, no si está
        completa.
     """
+    full = fetch_season_calendar(comp_code, group_code, temporada_code=season_code,
+                                 session=session, breaker=breaker)
+    if full:
+        if meta is not None:
+            meta["total"] = len(full)
+        if max_jornadas is not None:
+            # Solo equipos: el calendario no se publica, basta con el plantel.
+            return full[:max_jornadas]
+        _with_recent_actas(full, comp_code, group_code, season_code, breaker,
+                           label=label, meta=meta, session=session,
+                           budget=actas)
+        n = calendar_cache.store_jornadas(comp_code, group_code, full)
+        if n:
+            print(f"  [rfef-cal] {label}: {n} jornadas guardadas en caché")
+        return full
+
     fresh = fetch_division_calendar(
-        comp_code, group_code, temporada_code=season_code,
+        comp_code, group_code, temporada_code=season_code, session=session,
         max_jornadas=max_jornadas, breaker=breaker, meta=meta,
         have=frozenset(calendar_cache.lookup_jornadas(comp_code, group_code)),
         skip=frozenset(calendar_cache.settled_jornadas(
@@ -1589,8 +1682,137 @@ def _calendar_for_group(
         calendar = pdf()
         if calendar:
             print(f"  [rfef-cal] {label}: fallback PDF -> {len(calendar)} jornadas")
+        return _merge_calendar_cache(calendar, comp_code, group_code, label=label)
 
-    return _merge_calendar_cache(calendar, comp_code, group_code, label=label)
+    # 5. **El PDF completa lo que el cupo de la PNFG dejó a medias.** El PDF
+    #    oficial viene de rfef.es, no de la PNFG, así que no gasta su cupo y trae
+    #    las 30 jornadas de golpe. Antes solo se miraba si la PNFG no daba nada
+    #    (`if not calendar`), y con 12 de 30 jornadas nunca se consultaba.
+    calendar = _merge_calendar_cache(calendar, comp_code, group_code, label=label)
+    return _fill_from_pdf(calendar, pdf, label=label)
+
+
+def _with_recent_actas(
+    calendar: list[dict],
+    comp_code: str | int,
+    group_code: str | int,
+    season_code: str,
+    breaker: RateLimitBreaker,
+    *,
+    label: str,
+    meta: dict | None,
+    session=None,
+    budget: "_ActaBudget | None" = None,
+) -> None:
+    """Pone a las jornadas recién jugadas el `actaUrl` que la vista completa no trae.
+
+    Primero la caché, que ya tiene las de los runs anteriores, y solo después la
+    PNFG, una petición por jornada que siga sin ella (`acta_jornadas`: jugadas,
+    de los últimos 45 días, la más reciente primero) y **dentro del tope del
+    run** (`_ActaBudget`). Lo que no quepa lo pide el run de mañana.
+    """
+    _merge_acta_cache(calendar, comp_code, group_code, label=label)
+    todas = acta_jornadas(calendar, lambda _n, _m: False, today=date.today())
+    nums = budget.take(todas) if budget is not None else todas
+    if len(nums) < len(todas):
+        print(f"  [rfef-cal] {label}: {len(todas) - len(nums)} jornada/s sin acta "
+              f"quedan para el próximo run (tope de NFG_CmpJornada)")
+    if not nums:
+        return
+    got = fetch_jornada_matches(comp_code, group_code, nums,
+                                temporada_code=season_code, session=session,
+                                breaker=breaker, meta=meta)
+    por_num = {j["jornada"]: j for j in calendar}
+    nuevas = sum(attach_actas(por_num[n]["matches"], ms) for n, ms in got.items()
+                 if n in por_num)
+    print(f"  [rfef-cal] {label}: actas -> {len(got)} de {len(nums)} jornada/s "
+          f"pedidas, {nuevas} acta/s nuevas")
+
+
+class _ActaBudget:
+    """Cuántas páginas de `NFG_CmpJornada` se piden en un run, por grupo y en total.
+
+    Es la página cuyo cupo se ha medido (~11 por IP, y no se recarga en 15 min:
+    ver `pnfg_pacer`), y ahora solo sirve para las actas. Una semana normal es
+    una jornada nueva por grupo, así que el tope sobra; lo que hace es que un
+    atraso grande —el primer run, o una semana sin correr— se reparta en varios
+    días en vez de provocar el corte.
+    """
+
+    def __init__(self, total: int, per_group: int) -> None:
+        self.left = total
+        self.per_group = per_group
+
+    def take(self, nums: list[int]) -> list[int]:
+        n = max(0, min(len(nums), self.per_group, self.left))
+        self.left -= n
+        return nums[:n]
+
+
+def _acta_budget() -> _ActaBudget:
+    def _env(name: str, default: int) -> int:
+        try:
+            return max(0, int(os.environ.get(name) or default))
+        except ValueError:
+            return default
+    return _ActaBudget(_env("PNFG_ACTAS_MAX", 8), _env("PNFG_ACTAS_GROUP", 2))
+
+
+def _match_key(m: dict) -> tuple[str, str]:
+    return (rfef_web.norm(m.get("home") or ""), rfef_web.norm(m.get("away") or ""))
+
+
+def _fill_from_pdf(calendar: list[dict], pdf, *, label: str) -> list[dict]:
+    """Completa `calendar` con el PDF: jornadas que faltan y fechas que faltan.
+
+    Reglas, y la primera es la que protege lo que ya estaba bien:
+
+    - **Lo de la PNFG manda siempre.** Solo se rellena donde no hay nada: una
+      jornada ausente, o un partido sin fecha (se casa por local y visitante).
+      Nunca se pisa una fecha, y menos una con hora por una sin ella.
+    - **Las competiciones por fases se dejan**: el número de jornada no identifica
+      un partido (hay dos J1), igual que en `_merge_calendar_cache`.
+    - El PDF es el calendario inicial: una fecha suya puede estar aplazada. Es el
+      mismo riesgo de cualquier calendario que ya se publicaba desde el PDF, y
+      peor es tener la jornada sin día.
+    """
+    if any(j.get("phase") for j in calendar):
+        return calendar
+    nums = {j["jornada"] for j in calendar if isinstance(j.get("jornada"), int)}
+    undated = any(not m.get("date") for j in calendar for m in j.get("matches", []))
+    try:
+        from_pdf = pdf()
+    except Exception as e:  # noqa: BLE001 - best-effort
+        print(f"  [rfef-cal] {label}: PDF no disponible para completar ({e})")
+        return calendar
+    if not from_pdf or any(j.get("phase") for j in from_pdf):
+        return calendar
+    if not undated and all(j.get("jornada") in nums for j in from_pdf):
+        return calendar
+
+    por_num = {j["jornada"]: j for j in calendar if isinstance(j.get("jornada"), int)}
+    added, dated = 0, 0
+    for pj in from_pdf:
+        n = pj.get("jornada")
+        if not isinstance(n, int):
+            continue
+        actual = por_num.get(n)
+        if actual is None:
+            por_num[n] = pj
+            added += 1
+            continue
+        pdf_dates = {_match_key(m): m.get("date") for m in pj.get("matches", [])
+                     if m.get("date")}
+        if not pdf_dates and pj.get("date"):
+            pdf_dates = {_match_key(m): pj["date"] for m in pj.get("matches", [])}
+        for m in actual.get("matches", []):
+            if not m.get("date") and pdf_dates.get(_match_key(m)):
+                m["date"] = pdf_dates[_match_key(m)]
+                dated += 1
+    if added or dated:
+        print(f"  [rfef-cal] {label}: PDF completa el calendario -> "
+              f"{added} jornada/s nuevas, {dated} partido/s con fecha")
+    return [por_num[n] for n in sorted(por_num)]
 
 
 def _timed_matches(matches: list[dict]) -> int:

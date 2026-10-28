@@ -62,9 +62,20 @@ class PacedSession(requests.Session):
     """
 
     def request(self, method, url, *args, **kwargs):
-        if pnfg_pacer.is_pnfg(url):
-            pnfg_pacer.PACER.wait()
-        return super().request(method, url, *args, **kwargs)
+        if not pnfg_pacer.is_pnfg(url):
+            return super().request(method, url, *args, **kwargs)
+        if pnfg_pacer.stopped():
+            # Tras un corte no sale nada a la red: ver `pnfg_pacer`.
+            return pnfg_pacer.empty_response(url)
+        pnfg_pacer.PACER.wait()
+        r = super().request(method, url, *args, **kwargs)
+        # Cada redirección a la PNFG es una petición más contra el cupo; las
+        # que se van a otro dominio (la portada redirige fuera), no.
+        hops = list(getattr(r, "history", None) or ()) + [r]
+        extra = sum(1 for h in hops if pnfg_pacer.is_pnfg(getattr(h, "url", "") or "")) - 1
+        if extra > 0:
+            pnfg_pacer.PACER.count(extra)
+        return r
 
 
 def make_session() -> requests.Session:

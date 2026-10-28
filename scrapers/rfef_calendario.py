@@ -21,13 +21,20 @@ Tolerante: ante rate-limit / cambio de estructura devuelve `[]`. El calendario
 es best-effort: si falla, la división se publica sin él y la app cae al
 formulario manual.
 
-`NFG_VisCalendario_Vis` (vista de calendario completo) se descartó: es un
-shell que carga los datos por AJAX → no es scrapeable de forma estática.
+**Desde octubre de 2026 la fuente principal es otra**: `NFG_VisCalendario_Vis`
+con `CDetalle=1` (`fetch_season_calendar`), que trae el grupo entero —las 30
+jornadas, con fecha, hora y pabellón de cada partido— en **una** petición.
+Una nota anterior la daba por descartada ("un shell que carga los datos por
+AJAX"): no lo es. Sin la cookie de sesión la primera respuesta es un 302, y
+probablemente eso fue lo que se vio. Comprobado el 2026-10-25 en los 12 grupos
+de 2026-27 (CLAUDE.md §6.86). `NFG_CmpJornada` se queda para lo único que esa
+vista no trae —el `CodActa`— y como respaldo si la vista falla.
 """
 from __future__ import annotations
 
 import re
 import time
+from datetime import date, timedelta
 
 import requests
 from bs4 import BeautifulSoup
@@ -130,9 +137,10 @@ class RateLimitBreaker:
 
     @property
     def blocked(self) -> bool:
-        """El run agotó su presupuesto —de fallos o de tiempo—: no se pide nada
-        más a la PNFG."""
-        return self.failures >= self.run_budget or self.out_of_time
+        """El run agotó su presupuesto —de fallos o de tiempo— o la PNFG ya
+        cortó: no se pide nada más."""
+        return (self.failures >= self.run_budget or self.out_of_time
+                or pnfg_pacer.stopped())
 
     @property
     def group_tripped(self) -> bool:
@@ -167,6 +175,10 @@ class RateLimitBreaker:
         "la federación no lo ha publicado" y "nos bloquearon" es un recuento de
         jornadas que nadie mira.
         """
+        if pnfg_pacer.stopped():
+            return ("la PNFG cortó a mitad de run y no se le pidió nada más; lo "
+                    "que falta sale de la caché y del JSON anterior, y lo pide el "
+                    "run siguiente")
         if self.out_of_time:
             return (f"se acabó el tiempo de la fase de calendario "
                     f"({int(self.time_budget_s // 60)} min) con "
@@ -373,17 +385,12 @@ def _fetch_jornada_html(
     **Los dos fallos se tratan distinto, porque son cosas distintas:**
 
     - **200 con el cuerpo vacío es el corte de la PNFG**: la IP agotó su cupo
-      de ~12 peticiones (medido, ver `pnfg_pacer`). Se espera **en silencio** y
-      con la **misma** sesión (`pnfg_pacer.wait_out_block`). Antes se
-      reintentaba a los 15/30/60/120 s con sesión nueva: cinco peticiones más
-      dentro del corte, que es justo lo que lo alarga, y la sesión no importa.
+      (medido, ver `pnfg_pacer`). No se reintenta: `pnfg_pacer.wait_out_block`
+      para el run entero, porque cada petición dentro del corte lo alarga.
     - **Error de red** (RFEF cierra la conexión bajo carga): backoff corto y
       sesión nueva, como siempre — ahí sí puede estar rota la conexión.
 
-    `retries` acota las dos cosas por separado: los reintentos por error de
-    red, y cuántas esperas de corte se admiten (como mucho las de
-    `pnfg_pacer.BLOCK_WAITS`). Tras un fallo el cortacircuitos baja `retries`
-    a 1, así que una racha mala cuesta una espera por jornada y no dos."""
+    `retries` acota los reintentos por error de red."""
     params = {
         "cod_primaria": COD_PRIMARIA,
         "CodCompeticion": str(cod_competicion),
@@ -561,3 +568,228 @@ def _parse_matches(html: str) -> list[dict]:
 
 def _clean(name: str) -> str:
     return re.sub(r"\s+", " ", name).strip()
+
+
+# ── Calendario completo en una petición (desde octubre de 2026) ─────────────
+
+SEASON_PATH = "/pnfg/NPcd/NFG_VisCalendario_Vis"
+_JORNADA_TITLE_RE = re.compile(r"Jornada\s+(\d+)")
+# "19-09-2026 - 17:45", o "07-11-2026" a secas si aún no hay hora.
+_SEASON_DT_RE = re.compile(r"(\d{2})-(\d{2})-(\d{4})(?:\s*-\s*(\d{2}):(\d{2}))?")
+_VENUE_PENDING = "pendiente de asignar"
+
+
+def _season_match_info(text: str) -> tuple[str | None, str | None]:
+    """`(fecha, pabellón)` del bloque de la derecha de un partido.
+
+    **`00:00` no es medianoche, es "sin hora"**: la PNFG lo pone en los
+    partidos que aún no tienen hora asignada. Esos se publican con el día a
+    secas, que es como la app sabe decir "hora por confirmar" (§6.42) y como
+    `_merge_calendar_cache` distingue un partido con hora de uno sin ella.
+    """
+    text = " ".join(text.replace("\xa0", " ").split())
+    m = _SEASON_DT_RE.search(text)
+    if not m:
+        return None, None
+    dd, mm, yyyy, hh, mn = m.groups()
+    day = f"{yyyy}-{mm}-{dd}"
+    when = f"{day}T{hh}:{mn}:00" if hh and (hh, mn) != ("00", "00") else day
+    venue = text[:m.start()].strip(" -") or None
+    if venue and venue.lower().startswith(_VENUE_PENDING):
+        venue = None
+    return when, venue
+
+
+def parse_season_calendar(html: str) -> list[dict]:
+    """Las jornadas de la vista `NFG_VisCalendario_Vis?CDetalle=1`.
+
+    Cada jornada es una tarjeta (`div.card-body`) con su título
+    `Jornada N (DD-MM-YYYY)` y una fila por partido: una tabla con local,
+    marcador y visitante, y a su derecha el pabellón y la fecha con hora.
+
+    **El marcador no se lee, a propósito**: viene ofuscado con CSS, un `eval` de
+    JavaScript y un número señuelo oculto que no es el real. Nada de lo que se
+    publica lo necesita, y leerlo mal sería peor que no tenerlo.
+
+    `date` lleva hora (`…T19:30:00`) si la federación la ha asignado, y el día a
+    secas si no; sin día en la fila, el de la jornada. `venue` solo si está
+    asignado.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    out: list[dict] = []
+    for card in soup.find_all("div", class_="card-body"):
+        title = card.find("h5", class_="card-title")
+        m = _JORNADA_TITLE_RE.search(title.get_text(" ")) if title else None
+        if not m:
+            continue
+        entry: dict = {"jornada": int(m.group(1)), "matches": []}
+        jd = _SEASON_DT_RE.search(title.get_text(" "))
+        if jd:
+            entry["date"] = f"{jd.group(3)}-{jd.group(2)}-{jd.group(1)}"
+        seen: set[tuple[str, str]] = set()
+        for row in card.find_all("div", class_="row", recursive=False):
+            tds = row.find_all("td")
+            if len(tds) < 3:
+                continue
+            home = _clean(tds[0].get_text(" ", strip=True))
+            away = _clean(tds[-1].get_text(" ", strip=True))
+            if not home or not away:
+                continue
+            key = (_norm(home), _norm(away))
+            if key in seen:
+                continue
+            seen.add(key)
+            info = row.find("div", class_="right")
+            when, venue = _season_match_info(info.get_text(" ") if info else "")
+            match = {"home": home, "away": away, "date": when or entry.get("date")}
+            if venue:
+                match["venue"] = venue
+            entry["matches"].append(match)
+        if entry["matches"]:
+            out.append(entry)
+    out.sort(key=lambda j: j["jornada"])
+    return out
+
+
+def fetch_season_calendar(
+    cod_competicion: str | int,
+    cod_grupo: str | int,
+    *,
+    temporada_code: str | None,
+    session: requests.Session | None = None,
+    breaker: "RateLimitBreaker | None" = None,
+) -> list[dict] | None:
+    """El calendario entero de un grupo en una petición. None si no se pudo.
+
+    None cubre tres cosas, y las tres hacen lo mismo río arriba —caer al camino
+    de jornada en jornada, que a su vez se para si la PNFG ha cortado—: el
+    corte, un error de red, y una página que ya no tiene la forma esperada.
+    No se reintenta aquí: el respaldo existe para eso.
+    """
+    label = f"{cod_competicion}/{cod_grupo}"
+    if breaker is not None and breaker.blocked:
+        return None
+    s = session or make_session()
+    params = {
+        "cod_primaria": COD_PRIMARIA,
+        "codcompeticion": str(cod_competicion),
+        "codgrupo": str(cod_grupo),
+        "CDetalle": "1",
+    }
+    if temporada_code:
+        params["codtemporada"] = temporada_code
+    try:
+        r = s.get(BASE_URL + SEASON_PATH, params=params, timeout=30)
+    except requests.RequestException as e:
+        print(f"  [rfef-cal] {label}: calendario completo, error de red ({e})")
+        return None
+    if r.status_code != 200:
+        print(f"  [rfef-cal] {label}: calendario completo, HTTP {r.status_code}")
+        return None
+    if not r.content:
+        pnfg_pacer.wait_out_block(label=label)
+        if breaker is not None:
+            breaker.note_failure()
+        return None
+    calendar = parse_season_calendar(r.content.decode("iso-8859-15", errors="replace"))
+    if not calendar:
+        print(f"  [rfef-cal] {label}: la vista de calendario completo no trae "
+              f"jornadas ({len(r.content)} bytes); ¿ha cambiado la página?")
+        return None
+    print(f"  [rfef-cal] {label}: calendario completo -> {len(calendar)} jornadas")
+    return calendar
+
+
+def fetch_jornada_matches(
+    cod_competicion: str | int,
+    cod_grupo: str | int,
+    jornadas: list[int],
+    *,
+    temporada_code: str | None,
+    session: requests.Session | None = None,
+    breaker: "RateLimitBreaker | None" = None,
+    meta: dict | None = None,
+) -> dict[int, list[dict]]:
+    """Los partidos de `NFG_CmpJornada` de esas jornadas, para sacar sus actas.
+
+    Es la única página que trae el `CodActa`. Se piden **solo** las jornadas que
+    lo necesitan (las elige quien llama) y en ese orden. Los escudos de sus
+    filas se acumulan en `meta["badges"]`, como en `fetch_division_calendar`.
+    """
+    s = session or make_session()
+    br = breaker or RateLimitBreaker()
+    br.start_group(f"{cod_competicion}/{cod_grupo} actas")
+    out: dict[int, list[dict]] = {}
+    for num in jornadas:
+        if br.blocked:
+            break
+        html = _fetch_jornada_html(s, cod_competicion, cod_grupo, num,
+                                   temporada_code, br.retries_for(2))
+        if html is None:
+            br.note_failure()
+            if br.group_tripped:
+                break
+            continue
+        br.note_success()
+        out[num] = _parse_matches(html)
+        if meta is not None:
+            meta.setdefault("badges", {}).update(parse_jornada_badges(html))
+    return out
+
+
+def attach_actas(matches: list[dict], pnfg_matches: list[dict]) -> int:
+    """Copia el `actaUrl` de las filas de `NFG_CmpJornada` a los partidos.
+
+    Se casa por local y visitante y, si no, por **un** solo lado: las dos
+    páginas de la PNFG no siempre escriben igual al mismo equipo ("At. Arnoya"
+    en una y "At. Arnoia" en la otra, 2026-10-25). Con un lado basta porque en
+    una jornada cada equipo juega un partido; si un lado casara con dos, no se
+    afirma nada.
+    """
+    by_pair = {(_norm(m["home"]), _norm(m["away"])): m for m in pnfg_matches}
+    n = 0
+    for m in matches:
+        if m.get("actaUrl"):
+            continue
+        h, a = _norm(m.get("home") or ""), _norm(m.get("away") or "")
+        src = by_pair.get((h, a))
+        if src is None:
+            cands = [p for (ph, pa), p in by_pair.items() if ph == h or pa == a]
+            src = cands[0] if len(cands) == 1 else None
+        if src and src.get("actaUrl"):
+            m["actaUrl"] = src["actaUrl"]
+            n += 1
+    return n
+
+
+def acta_jornadas(calendar: list[dict], has_acta, *, today: date,
+                  lookback_days: int = 45) -> list[int]:
+    """Qué jornadas hay que pedir a `NFG_CmpJornada` para tener sus actas.
+
+    Las que tienen algún partido **ya jugado** —anterior a hoy— y **reciente**
+    —de los últimos `lookback_days`— que todavía no tenga acta
+    (`has_acta(jornada, partido)`). La más reciente primero, porque es la que
+    acaba de publicarse.
+
+    El tope de días no es por prudencia: un partido aplazado se queda con su
+    fecha vieja en el pasado y sin acta hasta que se juegue, y sin el tope se
+    pediría en cada run para siempre.
+    """
+    desde = today - timedelta(days=lookback_days)
+    out: list[tuple[date, int]] = []
+    for j in calendar:
+        num = j.get("jornada")
+        if not isinstance(num, int):
+            continue
+        dias = []
+        for m in j.get("matches", []):
+            raw = (m.get("date") or "")[:10]
+            try:
+                d = date.fromisoformat(raw)
+            except ValueError:
+                continue
+            if desde <= d < today and not m.get("actaUrl") and not has_acta(num, m):
+                dias.append(d)
+        if dias:
+            out.append((max(dias), num))
+    return [num for _, num in sorted(out, reverse=True)]

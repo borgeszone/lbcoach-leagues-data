@@ -416,6 +416,7 @@ class HerenciaDeCalendarios(unittest.TestCase):
         with mock.patch.object(rfef, "resolve_season", return_value=("22", "ok")), \
              mock.patch.object(rfef, "Fetcher"), \
              mock.patch.object(rfef, "discover_divisions", return_value=[cfg]), \
+             mock.patch.object(rfef, "fetch_season_calendar", return_value=None), \
              mock.patch.object(rfef, "fetch_division_calendar", return_value=cal), \
              mock.patch.object(rfef, "fetch_division_teams", return_value=[]), \
              mock.patch.object(rfef, "fetch_web_sources", return_value={}), \
