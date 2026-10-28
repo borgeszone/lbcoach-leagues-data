@@ -141,6 +141,9 @@ jobs:
           # Solo committeamos cambios en los ficheros de caché. El resto del repo
           # queda intacto.
           git add data/badges-cache.json data/calendar-cache.json
+          # El descubrimiento guardado (scrapers/rfef.py, load_discovery): solo
+          # existe si algún run descubrió entero.
+          if [ -f data/discovery-cache.json ]; then git add data/discovery-cache.json; fi
           if git diff --cached --quiet; then
             echo "Sin cambios en las cachés"
           else

@@ -455,7 +455,8 @@ def main() -> int:
         logo_resolver.inject_rfef_shields(shields)
 
     rfef_cat = rfef.scrape(season=season, resolve_badges=not args.no_badges,
-                           teams_only=args.teams_only)
+                           teams_only=args.teams_only,
+                           discovery_cache=rfef.DATA_DIR / "discovery-cache.json")
     fcf_cat = fcf.load_manual()
 
     # ── Guard de temporada ───────────────────────────────────────────────

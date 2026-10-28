@@ -37,6 +37,7 @@ publicada una mentira con fecha de hoy. La segunda es peor y es la que ocurrió.
 """
 from __future__ import annotations
 
+import dataclasses
 import io
 import json
 import os
@@ -73,6 +74,7 @@ from scrapers.rfef_discovery import (
     DIVISION_NAMES,
     SEASON_NOT_PUBLISHED,
     Fetcher,
+    Group,
     classify_competition,
     is_phase,
     list_competitions,
@@ -722,7 +724,8 @@ def discover_divisions(season_code: str, *, session=None,
 
 
 def scrape(season: str, resolve_badges: bool = True,
-           teams_only: bool = False) -> dict:
+           teams_only: bool = False,
+           discovery_cache: Path | None = None) -> dict:
     """Devuelve la categoría RFEF lista para incluir en leagues.json.
 
     ## El orden importa y no es el de antes
@@ -788,7 +791,16 @@ def scrape(season: str, resolve_badges: bool = True,
             "seasonPending": pending, "warnings": warnings + [msg],
         }
 
-    season_code, status = resolve_season(season, session=session)
+    # El descubrimiento guardado (`load_discovery`): sin él son 7 peticiones de
+    # la familia `NFG_CmpJornada` —la del cupo de la PNFG— en cada run.
+    guardado = (load_discovery(discovery_cache, season, date.today())
+                if discovery_cache else None)
+    if guardado is not None:
+        print(f"[rfef] descubrimiento guardado de {season}: no se pregunta a la "
+              f"PNFG qué divisiones hay")
+        season_code, status = guardado[0], "guardado"
+    else:
+        season_code, status = resolve_season(season, session=session)
     if status == SEASON_NOT_PUBLISHED:
         return _nothing(
             f"la PNFG todavía no ha creado la temporada {season}; no hay nada "
@@ -806,9 +818,15 @@ def scrape(season: str, resolve_badges: bool = True,
     # meterlas en el mismo saco es lo que hace que una avería se lea como una
     # decisión de la federación.
     unresolved: set[str] = set()
-    divisions_cfg = discover_divisions(season_code, session=session,
-                                       warnings=warnings,
-                                       unresolved=unresolved)
+    if guardado is not None:
+        divisions_cfg = guardado[1]
+    else:
+        divisions_cfg = discover_divisions(season_code, session=session,
+                                           warnings=warnings,
+                                           unresolved=unresolved)
+        if discovery_cache and divisions_cfg and not unresolved:
+            save_discovery(discovery_cache, season, season_code, divisions_cfg,
+                           date.today())
     if divisions_cfg is None:
         return _nothing(
             f"no se pudo consultar el catálogo de competiciones de {season}",
@@ -861,9 +879,12 @@ def scrape(season: str, resolve_badges: bool = True,
     # J1) y además descubre de qué PDF sale el calendario de cada grupo.
     web = fetch_web_sources(divisions_cfg, season, warnings)
 
+    # El día que se descubre, esas 7 peticiones ya han gastado cupo de la
+    # familia `NFG_CmpJornada`: las actas se quedan con lo que queda.
     _attach_calendars(out_divisions, season, divisions_cfg, season_code,
                       max_jornadas=2 if teams_only else None, web=web,
-                      warnings=warnings)
+                      warnings=warnings,
+                      acta_total=None if guardado is not None else 3)
 
     # 3. Equipos.
     _fill_teams(out_divisions, divisions_cfg, fb_divisions, season,
@@ -1366,6 +1387,7 @@ def _attach_calendars(
     max_jornadas: int | None = None,
     web: dict[str, dict] | None = None,
     warnings: list[str] | None = None,
+    acta_total: int | None = None,
 ) -> None:
     """Añade `calendar` a cada división/grupo de `out_divisions`.
 
@@ -1459,7 +1481,7 @@ def _attach_calendars(
     # Una sesión para toda la fase: cada sesión nueva hace un GET de siembra a
     # la portada, y ese GET también gasta cupo de la PNFG (`pnfg_pacer`).
     session = _SharedSession()
-    actas = _acta_budget()
+    actas = _acta_budget(acta_total)
 
     for cfg in divisions_cfg:
         div = by_id.get(cfg["id"])
@@ -1540,6 +1562,68 @@ def _attach_calendars(
         print(f"[rfef-cal] AVISO: {resumen}")
         if warnings is not None:
             warnings.append(resumen)
+
+
+def _discovery_max_days(today: date) -> int:
+    """Cuántos días vale un descubrimiento guardado: ninguno en julio-septiembre,
+    cuando las divisiones van abriendo de una en una, y una semana el resto."""
+    return 0 if today.month in (7, 8, 9) else 6
+
+
+def load_discovery(path: Path, season: str, today: date):
+    """`(CodTemporada, cfgs)` del descubrimiento guardado, o None si no vale.
+
+    ## Por qué existe
+
+    Descubrir son 7 peticiones —la temporada, el catálogo y los grupos de cada
+    división— a `NFG_CmpJornada` y `NFG_CmpJornada_Exec`, y esa familia es la del
+    cupo de la PNFG: medido en Actions el 2026-10-28, trece bien y la
+    decimocuarta cortada (`pnfg_pacer`). Y lo que devuelven no cambia en toda la
+    temporada salvo cuando abre una división, así que pedirlo cada día era
+    gastar más de la mitad del cupo en una respuesta que ya teníamos.
+
+    Solo vale si es **de la misma temporada** y reciente
+    (`_discovery_max_days`): fuera de eso se descubre como siempre. Lo guardado
+    viene de un descubrimiento que ya pasó el guard de temporada (§6.32), así
+    que no reabre aquel fallo: un fichero de otra temporada se ignora.
+    """
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if data.get("season") != season:
+            return None
+        if (today - date.fromisoformat(data["date"])).days > _discovery_max_days(today):
+            return None
+        cfgs = [{**c, "groups": [Group(**g) for g in c["groups"]]}
+                for c in data["divisions"]]
+        code = str(data["seasonCode"])
+    except (OSError, ValueError, KeyError, TypeError):
+        return None
+    if not cfgs:
+        return None
+    orden = scrape_order(DIVISION_ORDER)
+    by_id = {c["id"]: c for c in cfgs}
+    return code, [by_id[d] for d in orden if d in by_id]
+
+
+def save_discovery(path: Path, season: str, season_code: str,
+                   cfgs: list[dict], today: date) -> None:
+    """Guarda un descubrimiento completo. Lo commitea el workflow con las cachés."""
+    data = {
+        "_comment": ("Generado por scrapers.rfef.save_discovery. Qué divisiones "
+                     "y grupos tiene la temporada en la PNFG, para no volver a "
+                     "preguntarlo cada día. Si algo no cuadra, bórralo: el "
+                     "próximo run lo vuelve a descubrir."),
+        "season": season,
+        "seasonCode": season_code,
+        "date": today.isoformat(),
+        "divisions": [{**c, "groups": [dataclasses.asdict(g) for g in c["groups"]]}
+                      for c in cfgs],
+    }
+    try:
+        path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+                        encoding="utf-8")
+    except OSError as e:
+        print(f"[rfef] no se pudo guardar el descubrimiento ({e})")
 
 
 class _SharedSession:
@@ -1749,13 +1833,18 @@ class _ActaBudget:
         return nums[:n]
 
 
-def _acta_budget() -> _ActaBudget:
+def _acta_budget(total: int | None = None) -> _ActaBudget:
+    """El tope del run. `total` lo baja (nunca lo sube): el día que se
+    descubren las divisiones, esas peticiones ya han gastado del mismo cupo."""
     def _env(name: str, default: int) -> int:
         try:
             return max(0, int(os.environ.get(name) or default))
         except ValueError:
             return default
-    return _ActaBudget(_env("PNFG_ACTAS_MAX", 8), _env("PNFG_ACTAS_GROUP", 2))
+    tope = _env("PNFG_ACTAS_MAX", 8)
+    if total is not None:
+        tope = min(tope, total)
+    return _ActaBudget(tope, _env("PNFG_ACTAS_GROUP", 2))
 
 
 def _match_key(m: dict) -> tuple[str, str]:

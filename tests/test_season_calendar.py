@@ -340,5 +340,68 @@ class LigaPrimeConSusDosFases(_CacheTemporal):
         self.assertEqual(rfef._phase_name("Torneo Clausura"), "Clausura")
 
 
+class ElDescubrimientoGuardado(unittest.TestCase):
+    """Descubrir son 7 peticiones de la familia del cupo: en Actions, el
+    2026-10-28, la decimocuarta de esa familia se cortó."""
+
+    CFG = {"id": "rfef-primera-fs-fem", "name": "1a Fem", "gender": "femenino",
+           "competition": {"code": "1", "name": "X"}, "flat": True,
+           "groups": [Group(id="g1", code="2", name="G")]}
+
+    def setUp(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        self.path = pathlib.Path(tmp.name) / "discovery-cache.json"
+
+    def test_ida_y_vuelta(self):
+        rfef.save_discovery(self.path, "2026-2027", "22", [self.CFG], date(2026, 10, 28))
+        code, cfgs = rfef.load_discovery(self.path, "2026-2027", date(2026, 11, 2))
+        self.assertEqual(code, "22")
+        self.assertEqual(cfgs[0]["groups"][0], Group(id="g1", code="2", name="G"))
+
+    def test_caduca_a_la_semana(self):
+        rfef.save_discovery(self.path, "2026-2027", "22", [self.CFG], date(2026, 10, 28))
+        self.assertIsNone(rfef.load_discovery(self.path, "2026-2027", date(2026, 11, 4)))
+
+    def test_en_verano_vale_solo_el_mismo_dia(self):
+        """En agosto las divisiones van abriendo de una en una."""
+        rfef.save_discovery(self.path, "2026-2027", "22", [self.CFG], date(2026, 8, 10))
+        self.assertIsNotNone(rfef.load_discovery(self.path, "2026-2027", date(2026, 8, 10)))
+        self.assertIsNone(rfef.load_discovery(self.path, "2026-2027", date(2026, 8, 11)))
+
+    def test_otra_temporada_no_vale(self):
+        """El guard de temporada de §6.32: nunca códigos de otro año."""
+        rfef.save_discovery(self.path, "2025-2026", "21", [self.CFG], date(2026, 10, 28))
+        self.assertIsNone(rfef.load_discovery(self.path, "2026-2027", date(2026, 10, 28)))
+
+    def test_roto_o_ausente_se_ignora(self):
+        self.assertIsNone(rfef.load_discovery(self.path, "2026-2027", date(2026, 10, 28)))
+        self.path.write_text("{no es json", encoding="utf-8")
+        self.assertIsNone(rfef.load_discovery(self.path, "2026-2027", date(2026, 10, 28)))
+
+    def _scrape(self, **kw):
+        with mock.patch.object(rfef, "resolve_season", return_value=("22", "ok")) as res,              mock.patch.object(rfef, "Fetcher"),              mock.patch.object(rfef, "discover_divisions", return_value=[self.CFG]) as disc,              mock.patch.object(rfef, "_attach_calendars") as cal,              mock.patch.object(rfef, "fetch_division_teams", return_value=[]),              mock.patch.object(rfef, "fetch_web_sources", return_value={}),              mock.patch.object(rfef, "time"),              mock.patch.object(rfef, "_load_fallback",
+                               return_value={"season": "2026-2027", "divisions": {}}):
+            rfef.scrape("2026-2027", resolve_badges=False, **kw)
+        return res, disc, cal
+
+    def test_con_lo_guardado_no_se_pregunta_y_las_actas_tienen_el_cupo(self):
+        rfef.save_discovery(self.path, "2026-2027", "22", [self.CFG], date.today())
+        res, disc, cal = self._scrape(discovery_cache=self.path)
+        res.assert_not_called()
+        disc.assert_not_called()
+        self.assertIsNone(cal.call_args.kwargs["acta_total"])
+
+    def test_el_dia_que_se_descubre_las_actas_bajan_y_se_guarda(self):
+        res, disc, cal = self._scrape(discovery_cache=self.path)
+        disc.assert_called_once()
+        self.assertEqual(cal.call_args.kwargs["acta_total"], 3)
+        self.assertIsNotNone(rfef.load_discovery(self.path, "2026-2027", date.today()))
+
+    def test_el_tope_reducido_no_sube_el_de_produccion(self):
+        with mock.patch.dict("os.environ", {"PNFG_ACTAS_MAX": "2"}):
+            self.assertEqual(rfef._acta_budget(3).left, 2)
+
+
 if __name__ == "__main__":
     unittest.main()
