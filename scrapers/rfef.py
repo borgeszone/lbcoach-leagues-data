@@ -44,7 +44,7 @@ import os
 import re
 import time
 import unicodedata
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 import requests
@@ -1663,6 +1663,15 @@ def _only_phase(calendar: list[dict], fase: str | None) -> list[dict]:
             for j in calendar if (j.get("phase") or "").lower() == fase.lower()]
 
 
+def _refresh_hours() -> float:
+    """Cada cuánto se vuelve a bajar el calendario entero de un grupo. Ver
+    `calendar_cache.fetched_within`."""
+    try:
+        return max(0.0, float(os.environ.get("PNFG_CAL_REFRESH_HOURS") or 20))
+    except ValueError:
+        return 20.0
+
+
 def _calendar_minutes() -> float:
     raw = os.environ.get("PNFG_CALENDAR_MINUTES", "")
     try:
@@ -1733,9 +1742,25 @@ def _calendar_for_group(
        como 14 porque el fallback mira si la lista está vacía, no si está
        completa.
     """
+    # Bajado hace poco por otro run: sale de la caché y solo se piden sus actas.
+    horas = _refresh_hours()
+    if max_jornadas is None and calendar_cache.fetched_within(
+            comp_code, group_code, now=datetime.now(timezone.utc), hours=horas):
+        cached = _merge_calendar_cache([], comp_code, group_code, label=label)
+        if cached:
+            print(f"  [rfef-cal] {label}: bajado hace menos de {horas:g} h, sale "
+                  f"de la caché")
+            if meta is not None:
+                meta["total"] = len(cached)
+            _with_recent_actas(cached, comp_code, group_code, season_code, breaker,
+                               label=label, meta=meta, session=session,
+                               budget=actas)
+            return cached
+
     full = fetch_season_calendar(comp_code, group_code, temporada_code=season_code,
                                  session=session, breaker=breaker)
     if full:
+        calendar_cache.mark_fetched(comp_code, group_code, datetime.now(timezone.utc))
         if meta is not None:
             meta["total"] = len(full)
         if max_jornadas is not None:

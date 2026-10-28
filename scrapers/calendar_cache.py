@@ -58,7 +58,7 @@ from __future__ import annotations
 import json
 import re
 import unicodedata
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 DATA_DIR = Path(__file__).parent.parent / "data"
@@ -69,9 +69,13 @@ CACHE_PATH = DATA_DIR / "calendar-cache.json"
 # que no son cadena, así que las dos cachés conviven en el mismo fichero plano
 # sin migrarlo y sin romperle el fichero a una versión anterior del scraper.
 CALENDARS_KEY = "_calendars"
+# Cuándo se bajó entero el calendario de cada grupo (ISO, UTC). Ver
+# `fetched_within`: con eso cada run sigue donde lo dejó el anterior.
+FETCHED_KEY = "_fetched"
 
 _cache: dict[str, str] | None = None
 _calendars: dict[str, dict[str, list[dict]]] | None = None
+_fetched: dict[str, str] | None = None
 
 
 def _norm(s: str) -> str:
@@ -88,7 +92,7 @@ def _group_key(comp: str, grupo: str) -> str:
 
 
 def _ensure_loaded() -> None:
-    global _cache, _calendars
+    global _cache, _calendars, _fetched
     if _cache is not None and _calendars is not None:
         return
     raw: dict = {}
@@ -102,6 +106,9 @@ def _ensure_loaded() -> None:
     _cache = {k: v for k, v in raw.items()
               if not k.startswith("_") and isinstance(v, str)}
     _calendars = _load_calendars(raw.get(CALENDARS_KEY))
+    fetched = raw.get(FETCHED_KEY)
+    _fetched = ({k: v for k, v in fetched.items() if isinstance(v, str)}
+                if isinstance(fetched, dict) else {})
 
 
 def _load_calendars(raw) -> dict[str, dict[str, list[dict]]]:
@@ -216,6 +223,36 @@ def settled_jornadas(
     return out
 
 
+def mark_fetched(comp: str | int, grupo: str | int, when: datetime) -> None:
+    """Anota que el calendario entero de este grupo se acaba de bajar."""
+    _ensure_loaded()
+    assert _fetched is not None
+    _fetched[_group_key(str(comp), str(grupo))] = when.isoformat(timespec="seconds")
+
+
+def fetched_within(comp: str | int, grupo: str | int, *, now: datetime,
+                   hours: float) -> bool:
+    """¿Se bajó el calendario entero de este grupo hace menos de `hours`?
+
+    ## Por qué existe
+
+    Cada IP aguanta unas 15-20 peticiones a la PNFG antes del corte, haya pausas
+    o no (medido en Actions el 2026-10-28), y un día entero son unas 35. Así que
+    el trabajo se reparte en varios runs —cada uno sale por una IP nueva de
+    GitHub— y cada run se salta los grupos que otro ya bajó: sin esto, todos
+    empezarían por los mismos y los del final no llegarían nunca. Un calendario
+    no cambia de una hora a otra; lo que cambia, las actas, se pide aparte.
+    """
+    _ensure_loaded()
+    assert _fetched is not None
+    raw = _fetched.get(_group_key(str(comp), str(grupo)))
+    try:
+        cuando = datetime.fromisoformat(raw) if raw else None
+    except ValueError:
+        return False
+    return cuando is not None and now - cuando < timedelta(hours=hours)
+
+
 def store_jornadas(comp: str | int, grupo: str | int, calendar: list[dict]) -> int:
     """Guarda las jornadas **recién bajadas de la PNFG**. Devuelve cuántas.
 
@@ -267,6 +304,7 @@ def save_cache() -> None:
         ),
         **{k: v for k, v in (_cache or {}).items()},
         CALENDARS_KEY: _calendars or {},
+        FETCHED_KEY: _fetched or {},
     }
     CACHE_PATH.write_text(
         json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=True) + "\n",

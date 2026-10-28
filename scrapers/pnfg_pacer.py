@@ -20,36 +20,38 @@ O sea: **no es un límite de ritmo, es un cupo**. Unas 11-12 peticiones,
 vayan a la velocidad que vayan, y después un corte de varios minutos que
 **se alarga si se sigue pidiendo durante él y escala con cada reincidencia**.
 
-## Y lo que sí funciona: no llegar nunca al corte (2026-10-25)
+## Y lo que sí funciona: no llegar nunca al corte (octubre de 2026)
 
 Esperar el corte en silencio no bastaba: la prueba de punta a punta del
 2026-10-05 se quedó en 11 de 30 jornadas, porque el castigo escala con cada
-corte y un run viejo provocaba unos treinta. Lo que se midió después es el
-otro lado, **cuánto se recarga el cupo si no se llega a agotar**:
+corte y un run viejo provocaba unos treinta. Lo medido después:
 
-    25 oct, 20:50   16 de la vista completa en 18 min (una pausa de 15)   ningún corte
-    28 oct, 17:56   4 · 15 min · 8 · 15 min · 3                           corte en la última
+    25 oct, casa      ~20 peticiones en 25 min (una pausa de 15)       sin corte
+    28 oct, casa      4 · 15 min · 8 · 15 min · 3                      corte en la 15ª
+    28 oct, Actions   ~20 en 50 min, dos pausas de 15     corte en una página de jornada
+    28 oct, Actions   ~20 en 50 min, dos pausas de 15     corte en una vista completa
 
-Lo que separa los dos días es **qué página** se pedía. El 28 fueron diez
-`NFG_CmpJornada` bien y la undécima cortada, con dos pausas de 15 min en medio;
-el 25, ninguna. O sea: el cupo de ~11 de 2026-10-04 —que siempre se midió con
-`NFG_CmpJornada`— **es de esa página y no se recarga en 15 minutos**, y la vista
-de calendario completo no parece gastarlo. Con dos días no se puede afirmar del
-todo, así que el diseño aguanta las dos lecturas:
+O sea: **cada IP aguanta unas 15-20 peticiones, sean de la página que sean, y
+las pausas de 15 minutos apenas las recargan**. Un día entero son unas 35, así
+que no caben en un run, pero cada run de Actions sale por una IP nueva. De ahí:
 
-1. **El calendario sale de la vista completa** (una petición por grupo) y a
-   `NFG_CmpJornada` solo se le piden actas, **con tope por run**: 2 por grupo y
-   8 en total (`PNFG_ACTAS_GROUP`, `PNFG_ACTAS_MAX`, ver `rfef._acta_budget`).
-2. **Tandas de `PNFG_BURST` (6) y `PNFG_REST` (900 s) de silencio entre una y
-   la siguiente**, para todo lo demás. Se cuentan también las redirecciones
-   que se quedan en la PNFG, que son peticiones como las demás.
-3. **Al primer corte, el run deja de pedir.** Si llega uno es que el cupo ha
+1. **Pocas peticiones**: el calendario de un grupo es una sola
+   (`rfef_calendario.fetch_season_calendar`), las actas tienen tope (2 por grupo
+   y 8 por run, `rfef._acta_budget`), y las divisiones se descubren una vez por
+   semana (`rfef.load_discovery`).
+2. **Varios runs al día que se reparten el trabajo**: cada uno se salta los
+   grupos que otro bajó en las últimas 20 h (`calendar_cache.fetched_within`).
+   El cron es cada 4 horas.
+3. Tandas de `PNFG_BURST` (6) y `PNFG_REST` (900 s) de silencio entre ellas: no
+   es lo que evita el corte, pero no cuesta nada y aleja las peticiones entre
+   sí. Se cuentan también las redirecciones que se quedan en la PNFG.
+4. **Al primer corte, el run deja de pedir.** Si llega uno es que el cupo ha
    cambiado, y cualquier petición dentro de él lo alarga y lo hace escalar.
    Desde ese momento `PacedSession` contesta "vacío" sin salir a la red, así
    que los tres módulos que piden —descubrimiento, clasificación y calendario—
    lo tratan como el corte que es y se rinden por sus caminos de siempre. Lo
    que falte lo ponen la caché y el JSON anterior, y lo pide el run siguiente.
-4. Un **intervalo corto** entre peticiones (`PNFG_INTERVAL`), por cortesía.
+5. Un **intervalo corto** entre peticiones (`PNFG_INTERVAL`), por cortesía.
 
 Vive en la sesión (`make_session()` devuelve una `PacedSession`) porque el cupo
 es de la IP: descubrimiento, clasificación y calendario gastan del mismo, y un

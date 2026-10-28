@@ -1,17 +1,18 @@
 name: Scrape leagues data
 
 on:
-  # Completo cada día, todo el año. Desde octubre de 2026 el calendario de un
-  # grupo entero es UNA petición (`NFG_VisCalendario_Vis`) y a `NFG_CmpJornada`
-  # solo se le piden las jornadas recién jugadas que no tienen acta. Un run son
-  # unas 40-60 peticiones en tandas de 8 con 15 min de silencio entre ellas
-  # (`scrapers/pnfg_pacer.py`), así que dura 1-2 h y casi todo es esperar. Antes
-  # eran ~360 peticiones, el cupo de ~12 de la PNFG cortaba siempre hacia la
-  # J12, y por eso el completo solo corría los lunes.
+  # Completo cada 4 horas, todo el año. Cada IP aguanta unas 15-20 peticiones
+  # a la PNFG antes del corte, haya pausas o no (medido en Actions el
+  # 2026-10-28), y un día entero son unas 35: el calendario de cada grupo en una
+  # (`NFG_VisCalendario_Vis`), las actas de lo recién jugado y, una vez por
+  # semana, qué divisiones hay. Así que se reparte: cada run sale por una IP
+  # nueva de GitHub, hace lo que quepa y se para al primer corte, y el siguiente
+  # se salta los grupos bajados en las últimas 20 h (`PNFG_CAL_REFRESH_HOURS`,
+  # `calendar_cache.fetched_within`). Casi todos los runs acaban en minutos.
   #
   # El modo `equipos` se queda para lanzarlo a mano.
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '17 */4 * * *'
   # Manual: trigger desde la pestaña Actions
   workflow_dispatch:
     inputs:
@@ -30,6 +31,11 @@ on:
         default: 'completo'
         type: choice
         options: ['completo', 'equipos']
+
+# Un run a la vez: dos publicando y commiteando las cachés se pisarían.
+concurrency:
+  group: scrape-leagues
+  cancel-in-progress: false
 
 permissions:
   contents: write

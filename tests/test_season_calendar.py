@@ -267,6 +267,58 @@ class ElGrupo(_CacheTemporal):
         self.assertEqual(tope.left, 6)
 
 
+class CadaRunSigueDondeLoDejoElAnterior(_CacheTemporal):
+    """Cada IP aguanta 15-20 peticiones: el día se reparte en varios runs, y un
+    grupo bajado hace poco no se vuelve a pedir."""
+
+    def _cal(self):
+        hoy = date.today()
+        return [{"jornada": n, "matches": [{"home": f"L{n}", "away": f"V{n}",
+                 "date": (hoy + timedelta(days=d)).isoformat()}]}
+                for n, d in ((1, -9), (2, -2), (3, 5))]
+
+    def _run(self, completo):
+        with mock.patch.object(rfef, "fetch_season_calendar",
+                               return_value=completo) as vista, \
+             mock.patch.object(rfef, "fetch_division_calendar", return_value=[]), \
+             mock.patch.object(rfef, "fetch_jornada_matches", return_value={}) as actas, \
+             mock.patch.object(rfef.time, "sleep"):
+            out = rfef._calendar_for_group("C", "G", "22", None, RateLimitBreaker(),
+                                           label="x", pdf=lambda: [])
+        return out, vista, actas
+
+    def test_el_segundo_run_no_vuelve_a_pedir_el_calendario(self):
+        self._run(self._cal())
+        out, vista, actas = self._run(self._cal())
+        vista.assert_not_called()
+        self.assertEqual(len(out), 3)
+        actas.assert_called_once()  # las actas sí: es lo que cambia
+
+    def test_pasadas_las_horas_se_vuelve_a_pedir(self):
+        self._run(self._cal())
+        with mock.patch.dict("os.environ", {"PNFG_CAL_REFRESH_HOURS": "0"}):
+            _, vista, _ = self._run(self._cal())
+        vista.assert_called_once()
+
+    def test_si_no_se_pudo_bajar_no_cuenta_como_bajado(self):
+        """Con la caché llena de un run viejo: si el fallo contara como bajado,
+        el grupo se quedaría 20 h con datos viejos."""
+        calendar_cache.store_jornadas("C", "G", self._cal())
+        self._run(None)
+        _, vista, _ = self._run(self._cal())
+        vista.assert_called_once()
+
+    def test_la_marca_sobrevive_al_fichero(self):
+        from datetime import datetime, timezone
+        ahora = datetime.now(timezone.utc)
+        calendar_cache.mark_fetched("C", "G", ahora)
+        calendar_cache.save_cache()
+        self._reset()
+        self.assertTrue(calendar_cache.fetched_within("C", "G", now=ahora, hours=1))
+        self.assertFalse(calendar_cache.fetched_within(
+            "C", "G", now=ahora + timedelta(hours=2), hours=1))
+
+
 class ElTopeDeActas(unittest.TestCase):
     def test_por_grupo_y_en_total(self):
         tope = rfef._ActaBudget(total=3, per_group=2)
