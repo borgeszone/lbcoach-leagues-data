@@ -1454,6 +1454,638 @@
         }
       ]
     },
+    "33836159|33892850": {
+      "1": [
+        {
+          "away": "Noia Portus Apostoli",
+          "date": "2027-01-09",
+          "home": "Barça"
+        },
+        {
+          "away": "Quesos El Hidalgo Manzanares F.S.",
+          "date": "2027-01-09",
+          "home": "Jimbee Cartagena Costa Cálida"
+        },
+        {
+          "away": "ElPozo Murcia Costa Cálida",
+          "date": "2027-01-09",
+          "home": "Córdoba Patrimonio De La Humanidad"
+        },
+        {
+          "away": "O Parrulo Ferrol F.S.",
+          "date": "2027-01-09",
+          "home": "Jaen Paraiso Interior F.S."
+        },
+        {
+          "away": "Sur Seeds El Ejido F.S.",
+          "date": "2027-01-09",
+          "home": "CD Xota FS"
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2027-01-09",
+          "home": "Servigroup Peñiscola FS"
+        },
+        {
+          "away": "Inter JP Financial",
+          "date": "2027-01-09",
+          "home": "Viña Albali Valdepeñas"
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2027-01-09",
+          "home": "Wanapix"
+        }
+      ],
+      "10": [
+        {
+          "away": "Jaen Paraiso Interior F.S.",
+          "date": "2027-03-27",
+          "home": "Sur Seeds El Ejido F.S."
+        },
+        {
+          "away": "Inter JP Financial",
+          "date": "2027-03-27",
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "Quesos El Hidalgo Manzanares F.S.",
+          "date": "2027-03-27",
+          "home": "CD Xota FS"
+        },
+        {
+          "away": "Noia Portus Apostoli",
+          "date": "2027-03-27",
+          "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "ElPozo Murcia Costa Cálida",
+          "date": "2027-03-27",
+          "home": "O Parrulo Ferrol F.S."
+        },
+        {
+          "away": "Barça",
+          "date": "2027-03-27",
+          "home": "Servigroup Peñiscola FS"
+        },
+        {
+          "away": "Jimbee Cartagena Costa Cálida",
+          "date": "2027-03-27",
+          "home": "Viña Albali Valdepeñas"
+        },
+        {
+          "away": "Córdoba Patrimonio De La Humanidad",
+          "date": "2027-03-27",
+          "home": "Wanapix"
+        }
+      ],
+      "11": [
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2027-04-03",
+          "home": "Barça"
+        },
+        {
+          "away": "CD Xota FS",
+          "date": "2027-04-03",
+          "home": "Jimbee Cartagena Costa Cálida"
+        },
+        {
+          "away": "Sur Seeds El Ejido F.S.",
+          "date": "2027-04-03",
+          "home": "Córdoba Patrimonio De La Humanidad"
+        },
+        {
+          "away": "Servigroup Peñiscola FS",
+          "date": "2027-04-03",
+          "home": "Inter JP Financial"
+        },
+        {
+          "away": "Viña Albali Valdepeñas",
+          "date": "2027-04-03",
+          "home": "Jaen Paraiso Interior F.S."
+        },
+        {
+          "away": "Wanapix",
+          "date": "2027-04-03",
+          "home": "Quesos El Hidalgo Manzanares F.S."
+        },
+        {
+          "away": "O Parrulo Ferrol F.S.",
+          "date": "2027-04-03",
+          "home": "Noia Portus Apostoli"
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2027-04-03",
+          "home": "ElPozo Murcia Costa Cálida"
+        }
+      ],
+      "12": [
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2027-04-10",
+          "home": "Barça"
+        },
+        {
+          "away": "Inter JP Financial",
+          "date": "2027-04-10",
+          "home": "Córdoba Patrimonio De La Humanidad"
+        },
+        {
+          "away": "Sur Seeds El Ejido F.S.",
+          "date": "2027-04-10",
+          "home": "Quesos El Hidalgo Manzanares F.S."
+        },
+        {
+          "away": "Viña Albali Valdepeñas",
+          "date": "2027-04-10",
+          "home": "Noia Portus Apostoli"
+        },
+        {
+          "away": "ElPozo Murcia Costa Cálida",
+          "date": "2027-04-10",
+          "home": "CD Xota FS"
+        },
+        {
+          "away": "Jimbee Cartagena Costa Cálida",
+          "date": "2027-04-10",
+          "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "O Parrulo Ferrol F.S.",
+          "date": "2027-04-10",
+          "home": "Servigroup Peñiscola FS"
+        },
+        {
+          "away": "Jaen Paraiso Interior F.S.",
+          "date": "2027-04-10",
+          "home": "Wanapix"
+        }
+      ],
+      "13": [
+        {
+          "away": "Servigroup Peñiscola FS",
+          "date": "2027-04-24",
+          "home": "Jimbee Cartagena Costa Cálida"
+        },
+        {
+          "away": "Wanapix",
+          "date": "2027-04-24",
+          "home": "Sur Seeds El Ejido F.S."
+        },
+        {
+          "away": "Córdoba Patrimonio De La Humanidad",
+          "date": "2027-04-24",
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "Quesos El Hidalgo Manzanares F.S.",
+          "date": "2027-04-24",
+          "home": "Inter JP Financial"
+        },
+        {
+          "away": "Barça",
+          "date": "2027-04-24",
+          "home": "Jaen Paraiso Interior F.S."
+        },
+        {
+          "away": "CD Xota FS",
+          "date": "2027-04-24",
+          "home": "O Parrulo Ferrol F.S."
+        },
+        {
+          "away": "Noia Portus Apostoli",
+          "date": "2027-04-24",
+          "home": "ElPozo Murcia Costa Cálida"
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2027-04-24",
+          "home": "Viña Albali Valdepeñas"
+        }
+      ],
+      "14": [
+        {
+          "away": "Viña Albali Valdepeñas",
+          "date": "2027-05-01",
+          "home": "Barça"
+        },
+        {
+          "away": "O Parrulo Ferrol F.S.",
+          "date": "2027-05-01",
+          "home": "Córdoba Patrimonio De La Humanidad"
+        },
+        {
+          "away": "Wanapix",
+          "date": "2027-05-01",
+          "home": "Inter JP Financial"
+        },
+        {
+          "away": "Jimbee Cartagena Costa Cálida",
+          "date": "2027-05-01",
+          "home": "Jaen Paraiso Interior F.S."
+        },
+        {
+          "away": "ElPozo Murcia Costa Cálida",
+          "date": "2027-05-01",
+          "home": "Quesos El Hidalgo Manzanares F.S."
+        },
+        {
+          "away": "CD Xota FS",
+          "date": "2027-05-01",
+          "home": "Noia Portus Apostoli"
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2027-05-01",
+          "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "Sur Seeds El Ejido F.S.",
+          "date": "2027-05-01",
+          "home": "Servigroup Peñiscola FS"
+        }
+      ],
+      "15": [
+        {
+          "away": "Barça",
+          "date": "2027-05-15",
+          "home": "Jimbee Cartagena Costa Cálida"
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2027-05-15",
+          "home": "Sur Seeds El Ejido F.S."
+        },
+        {
+          "away": "Quesos El Hidalgo Manzanares F.S.",
+          "date": "2027-05-15",
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "Córdoba Patrimonio De La Humanidad",
+          "date": "2027-05-15",
+          "home": "CD Xota FS"
+        },
+        {
+          "away": "Inter JP Financial",
+          "date": "2027-05-15",
+          "home": "O Parrulo Ferrol F.S."
+        },
+        {
+          "away": "Jaen Paraiso Interior F.S.",
+          "date": "2027-05-15",
+          "home": "ElPozo Murcia Costa Cálida"
+        },
+        {
+          "away": "Servigroup Peñiscola FS",
+          "date": "2027-05-15",
+          "home": "Viña Albali Valdepeñas"
+        },
+        {
+          "away": "Noia Portus Apostoli",
+          "date": "2027-05-15",
+          "home": "Wanapix"
+        }
+      ],
+      "2": [
+        {
+          "away": "Servigroup Peñiscola FS",
+          "date": "2027-01-16",
+          "home": "Córdoba Patrimonio De La Humanidad"
+        },
+        {
+          "away": "Inter JP Financial",
+          "date": "2027-01-16",
+          "home": "Sur Seeds El Ejido F.S."
+        },
+        {
+          "away": "Viña Albali Valdepeñas",
+          "date": "2027-01-16",
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "Jaen Paraiso Interior F.S.",
+          "date": "2027-01-16",
+          "home": "Quesos El Hidalgo Manzanares F.S."
+        },
+        {
+          "away": "Jimbee Cartagena Costa Cálida",
+          "date": "2027-01-16",
+          "home": "Noia Portus Apostoli"
+        },
+        {
+          "away": "CD Xota FS",
+          "date": "2027-01-16",
+          "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "Barça",
+          "date": "2027-01-16",
+          "home": "O Parrulo Ferrol F.S."
+        },
+        {
+          "away": "Wanapix",
+          "date": "2027-01-16",
+          "home": "ElPozo Murcia Costa Cálida"
+        }
+      ],
+      "3": [
+        {
+          "away": "ElPozo Murcia Costa Cálida",
+          "date": "2027-01-23",
+          "home": "Barça"
+        },
+        {
+          "away": "Sur Seeds El Ejido F.S.",
+          "date": "2027-01-23",
+          "home": "Jimbee Cartagena Costa Cálida"
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2027-01-23",
+          "home": "Inter JP Financial"
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2027-01-23",
+          "home": "Jaen Paraiso Interior F.S."
+        },
+        {
+          "away": "Córdoba Patrimonio De La Humanidad",
+          "date": "2027-01-23",
+          "home": "Quesos El Hidalgo Manzanares F.S."
+        },
+        {
+          "away": "Viña Albali Valdepeñas",
+          "date": "2027-01-23",
+          "home": "CD Xota FS"
+        },
+        {
+          "away": "Wanapix",
+          "date": "2027-01-23",
+          "home": "O Parrulo Ferrol F.S."
+        },
+        {
+          "away": "Noia Portus Apostoli",
+          "date": "2027-01-23",
+          "home": "Servigroup Peñiscola FS"
+        }
+      ],
+      "4": [
+        {
+          "away": "Sur Seeds El Ejido F.S.",
+          "date": "2027-01-30",
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "Córdoba Patrimonio De La Humanidad",
+          "date": "2027-01-30",
+          "home": "Jaen Paraiso Interior F.S."
+        },
+        {
+          "away": "Inter JP Financial",
+          "date": "2027-01-30",
+          "home": "Noia Portus Apostoli"
+        },
+        {
+          "away": "Barça",
+          "date": "2027-01-30",
+          "home": "CD Xota FS"
+        },
+        {
+          "away": "Quesos El Hidalgo Manzanares F.S.",
+          "date": "2027-01-30",
+          "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "Servigroup Peñiscola FS",
+          "date": "2027-01-30",
+          "home": "ElPozo Murcia Costa Cálida"
+        },
+        {
+          "away": "O Parrulo Ferrol F.S.",
+          "date": "2027-01-30",
+          "home": "Viña Albali Valdepeñas"
+        },
+        {
+          "away": "Jimbee Cartagena Costa Cálida",
+          "date": "2027-01-30",
+          "home": "Wanapix"
+        }
+      ],
+      "5": [
+        {
+          "away": "Barça",
+          "date": "2027-02-06",
+          "home": "Córdoba Patrimonio De La Humanidad"
+        },
+        {
+          "away": "ElPozo Murcia Costa Cálida",
+          "date": "2027-02-06",
+          "home": "Sur Seeds El Ejido F.S."
+        },
+        {
+          "away": "Jimbee Cartagena Costa Cálida",
+          "date": "2027-02-06",
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "Jaen Paraiso Interior F.S.",
+          "date": "2027-02-06",
+          "home": "Inter JP Financial"
+        },
+        {
+          "away": "Noia Portus Apostoli",
+          "date": "2027-02-06",
+          "home": "Quesos El Hidalgo Manzanares F.S."
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2027-02-06",
+          "home": "O Parrulo Ferrol F.S."
+        },
+        {
+          "away": "CD Xota FS",
+          "date": "2027-02-06",
+          "home": "Servigroup Peñiscola FS"
+        },
+        {
+          "away": "Viña Albali Valdepeñas",
+          "date": "2027-02-06",
+          "home": "Wanapix"
+        }
+      ],
+      "6": [
+        {
+          "away": "Sur Seeds El Ejido F.S.",
+          "date": "2027-02-13",
+          "home": "Barça"
+        },
+        {
+          "away": "O Parrulo Ferrol F.S.",
+          "date": "2027-02-13",
+          "home": "Jimbee Cartagena Costa Cálida"
+        },
+        {
+          "away": "Jaen Paraiso Interior F.S.",
+          "date": "2027-02-13",
+          "home": "Noia Portus Apostoli"
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2027-02-13",
+          "home": "CD Xota FS"
+        },
+        {
+          "away": "Córdoba Patrimonio De La Humanidad",
+          "date": "2027-02-13",
+          "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "Wanapix",
+          "date": "2027-02-13",
+          "home": "Servigroup Peñiscola FS"
+        },
+        {
+          "away": "Inter JP Financial",
+          "date": "2027-02-13",
+          "home": "ElPozo Murcia Costa Cálida"
+        },
+        {
+          "away": "Quesos El Hidalgo Manzanares F.S.",
+          "date": "2027-02-13",
+          "home": "Viña Albali Valdepeñas"
+        }
+      ],
+      "7": [
+        {
+          "away": "Viña Albali Valdepeñas",
+          "date": "2027-02-20",
+          "home": "Córdoba Patrimonio De La Humanidad"
+        },
+        {
+          "away": "Noia Portus Apostoli",
+          "date": "2027-02-20",
+          "home": "Sur Seeds El Ejido F.S."
+        },
+        {
+          "away": "Servigroup Peñiscola FS",
+          "date": "2027-02-20",
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "Jimbee Cartagena Costa Cálida",
+          "date": "2027-02-20",
+          "home": "Inter JP Financial"
+        },
+        {
+          "away": "CD Xota FS",
+          "date": "2027-02-20",
+          "home": "Jaen Paraiso Interior F.S."
+        },
+        {
+          "away": "O Parrulo Ferrol F.S.",
+          "date": "2027-02-20",
+          "home": "Quesos El Hidalgo Manzanares F.S."
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2027-02-20",
+          "home": "ElPozo Murcia Costa Cálida"
+        },
+        {
+          "away": "Barça",
+          "date": "2027-02-20",
+          "home": "Wanapix"
+        }
+      ],
+      "8": [
+        {
+          "away": "Quesos El Hidalgo Manzanares F.S.",
+          "date": "2027-03-06",
+          "home": "Barça"
+        },
+        {
+          "away": "Córdoba Patrimonio De La Humanidad",
+          "date": "2027-03-06",
+          "home": "Jimbee Cartagena Costa Cálida"
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2027-03-06",
+          "home": "Noia Portus Apostoli"
+        },
+        {
+          "away": "Inter JP Financial",
+          "date": "2027-03-06",
+          "home": "CD Xota FS"
+        },
+        {
+          "away": "Wanapix",
+          "date": "2027-03-06",
+          "home": "Illes Balears Palma Futsal"
+        },
+        {
+          "away": "Sur Seeds El Ejido F.S.",
+          "date": "2027-03-06",
+          "home": "O Parrulo Ferrol F.S."
+        },
+        {
+          "away": "Jaen Paraiso Interior F.S.",
+          "date": "2027-03-06",
+          "home": "Servigroup Peñiscola FS"
+        },
+        {
+          "away": "ElPozo Murcia Costa Cálida",
+          "date": "2027-03-06",
+          "home": "Viña Albali Valdepeñas"
+        }
+      ],
+      "9": [
+        {
+          "away": "Noia Portus Apostoli",
+          "date": "2027-03-20",
+          "home": "Córdoba Patrimonio De La Humanidad"
+        },
+        {
+          "away": "Viña Albali Valdepeñas",
+          "date": "2027-03-20",
+          "home": "Sur Seeds El Ejido F.S."
+        },
+        {
+          "away": "O Parrulo Ferrol F.S.",
+          "date": "2027-03-20",
+          "home": "Catgas Energía Santa Coloma"
+        },
+        {
+          "away": "Barça",
+          "date": "2027-03-20",
+          "home": "Inter JP Financial"
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2027-03-20",
+          "home": "Jaen Paraiso Interior F.S."
+        },
+        {
+          "away": "Servigroup Peñiscola FS",
+          "date": "2027-03-20",
+          "home": "Quesos El Hidalgo Manzanares F.S."
+        },
+        {
+          "away": "Jimbee Cartagena Costa Cálida",
+          "date": "2027-03-20",
+          "home": "ElPozo Murcia Costa Cálida"
+        },
+        {
+          "away": "CD Xota FS",
+          "date": "2027-03-20",
+          "home": "Wanapix"
+        }
+      ]
+    },
     "33836163|33836164": {
       "1": [
         {
@@ -17380,6 +18012,7 @@
   "_comment": "Cache persistente del calendario auto-generada por scrapers.calendar_cache. NO editar a mano. Las claves planas son actaUrls por partido; la seccion _calendars guarda las jornadas enteras tal y como las devolvio la PNFG. Cada run fusiona lo fresco con esta cache para que un rate-limit no borre datos que ya teniamos. Si una entrada deja de ser valida, borrala y la proxima ejecucion la volvera a resolver. Las claves llevan dentro el codigo de competicion, que cambia cada temporada, asi que las entradas de temporadas pasadas quedan inertes (no se podan solas).",
   "_fetched": {
     "33836159|33892849": "2026-10-28T21:50:55+00:00",
+    "33836159|33892850": "2026-10-29T05:57:08+00:00",
     "33836163|33836164": "2026-10-28T20:55:36+00:00",
     "33836163|33836165": "2026-10-28T20:55:47+00:00",
     "33836163|33836166": "2026-10-28T20:55:58+00:00",
