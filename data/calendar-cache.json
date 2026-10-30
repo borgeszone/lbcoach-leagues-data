@@ -11164,11 +11164,6 @@
           "home": "Atlético Navalcarnero"
         },
         {
-          "away": "Estrela Revoltosa Verín FSF",
-          "date": "2027-01-09",
-          "home": "Rodiles F.S. \"A\""
-        },
-        {
           "away": "Ceuta Agrupación Deportiva",
           "date": "2027-01-09T18:00:00",
           "home": "Nueces de Ronda Atlético Torcal FS",
@@ -11185,6 +11180,11 @@
           "date": "2027-01-09T18:30:00",
           "home": "Poio Pescamar FS",
           "venue": "Pab. Mun. de Poio (POL)"
+        },
+        {
+          "away": "Estrela Revoltosa Verín FSF",
+          "date": "2027-01-09T19:00:00",
+          "home": "Rodiles F.S. \"A\""
         },
         {
           "away": "Ourense Ontime",
@@ -12132,7 +12132,7 @@
           "away": "MRB Móstoles FSF",
           "date": "2026-11-07T17:00:00",
           "home": "Ourense Ontime",
-          "venue": "Pab. de Los Remedios (POL)"
+          "venue": "P.M. de Cea (POL)"
         },
         {
           "away": "AE Les Corts UBAE",
@@ -12446,16 +12446,16 @@
           "home": "CD Lacturale Orvina"
         },
         {
-          "away": "CLUB DEPORTIVO TEIDAYA \"A\"",
-          "date": "2026-12-05T18:00:00",
-          "home": "C.D. Juventud del Círculo Católico",
-          "venue": "P.M. Carlos Serna (POL)"
-        },
-        {
           "away": "CDE Muslera GSW \"A\"",
           "date": "2026-12-05T20:00:00",
           "home": "REYCO Burela FS",
           "venue": "P.M. Vista Alegre (POL)"
+        },
+        {
+          "away": "CLUB DEPORTIVO TEIDAYA \"A\"",
+          "date": "2026-12-05T20:00:00",
+          "home": "C.D. Juventud del Círculo Católico",
+          "venue": "P.M. Carlos Serna (POL)"
         }
       ],
       "13": [
@@ -12579,15 +12579,15 @@
           "home": "Grupo FORMA-T Vilalba F.S."
         },
         {
-          "away": "CD Lacturale Orvina",
-          "date": "2027-01-09",
-          "home": "El Gaitero Rodiles FSF",
-          "venue": "P.M. Manuel Busto (POL)"
-        },
-        {
           "away": "U.D.C. Txantrea K.K.E.",
           "date": "2027-01-09",
           "home": "CLUB DEPORTIVO TEIDAYA \"A\""
+        },
+        {
+          "away": "CD Lacturale Orvina",
+          "date": "2027-01-09T16:30:00",
+          "home": "El Gaitero Rodiles FSF",
+          "venue": "P.M. Manuel Busto (POL)"
         },
         {
           "away": "CFS Gran Canaria Teldeportivo",
@@ -12607,12 +12607,6 @@
           "away": "A.D. Mioño FSF",
           "date": "2027-01-16",
           "home": "CLUB DEPORTIVO TEIDAYA \"A\""
-        },
-        {
-          "away": "U.D.C. Txantrea K.K.E.",
-          "date": "2027-01-16",
-          "home": "El Gaitero Rodiles FSF",
-          "venue": "P.M. Manuel Busto (POL)"
         },
         {
           "away": "CFS Gran Canaria Teldeportivo",
@@ -12641,6 +12635,12 @@
           "away": "CDE Muslera GSW \"A\"",
           "date": "2027-01-16",
           "home": "At. Arnoia"
+        },
+        {
+          "away": "U.D.C. Txantrea K.K.E.",
+          "date": "2027-01-16T18:45:00",
+          "home": "El Gaitero Rodiles FSF",
+          "venue": "P.M. Manuel Busto (POL)"
         },
         {
           "away": "CD Lacturale Orvina",
@@ -13629,18 +13629,6 @@
           "home": "Grupo FORMA-T Vilalba F.S."
         },
         {
-          "away": "CLUB DEPORTIVO TEIDAYA \"A\"",
-          "date": "2026-11-07",
-          "home": "Valdetires Ferrol F.S.F.",
-          "venue": "Pab. de Esteiro (POL)"
-        },
-        {
-          "away": "U.D.C. Txantrea K.K.E.",
-          "date": "2026-11-07",
-          "home": "Bembrive",
-          "venue": "Pabellón Vicente Álvarez Núñez (PIS)"
-        },
-        {
           "away": "CD Lacturale Orvina",
           "date": "2026-11-07",
           "home": "ENCE Marín Futsal",
@@ -13665,10 +13653,22 @@
           "venue": "P.M. Vista Alegre (POL)"
         },
         {
+          "away": "U.D.C. Txantrea K.K.E.",
+          "date": "2026-11-07T19:00:00",
+          "home": "Bembrive",
+          "venue": "Pabellón Vicente Álvarez Núñez (PIS)"
+        },
+        {
           "away": "CFS Gran Canaria Teldeportivo",
           "date": "2026-11-07T19:00:00",
           "home": "C.D. Juventud del Círculo Católico",
           "venue": "P.M. Carlos Serna (POL)"
+        },
+        {
+          "away": "CLUB DEPORTIVO TEIDAYA \"A\"",
+          "date": "2026-11-07T20:00:00",
+          "home": "Valdetires Ferrol F.S.F.",
+          "venue": "Pab. de Esteiro (POL)"
         }
       ],
       "9": [
@@ -16462,20 +16462,10 @@
       ],
       "8": [
         {
-          "away": "Atletico Navalcarnero",
-          "date": "2026-11-07",
-          "home": "CD La Garrovilla Femenino"
-        },
-        {
           "away": "ARRIVA AD Alcorcón FSF",
           "date": "2026-11-07",
           "home": "Almagro F.S.F.",
           "venue": "P.M. Gemma Arenas Alcazar (POL)"
-        },
-        {
-          "away": "Globalcaja Albacete F.S.",
-          "date": "2026-11-07",
-          "home": "UDAF Afanion \"A\""
         },
         {
           "away": "CD Salesianos Puertollano",
@@ -16496,10 +16486,22 @@
           "venue": "Pab. La Fortuna (POL)"
         },
         {
+          "away": "Atletico Navalcarnero",
+          "date": "2026-11-07T18:00:00",
+          "home": "CD La Garrovilla Femenino",
+          "venue": "polideportivo Municipal Diego Ortiz López (PIS)"
+        },
+        {
           "away": "Coviran UAPO Granada FS Femenino",
           "date": "2026-11-07T20:00:00",
           "home": "Majadahonda F.S.F./Afar 4",
           "venue": "P.M. La Granadilla (POL)"
+        },
+        {
+          "away": "Globalcaja Albacete F.S.",
+          "date": "2026-11-08T13:00:00",
+          "home": "UDAF Afanion \"A\"",
+          "venue": "Pabellón Municipal Cocheras -Lepanto (POL)"
         },
         {
           "away": "Dos Hermanas F.S. C.D.",
@@ -16665,7 +16667,7 @@
           "away": "Avanza Jaén Paraíso Interior",
           "date": "2026-11-28",
           "home": "ElPozo Ciudad de Murcia",
-          "venue": "Palacio de los Deportes (POL)"
+          "venue": "Pab. José Mª Cagigal (POL)"
         },
         {
           "away": "Unión África Ceutí \"A\"",
@@ -18030,18 +18032,18 @@
   },
   "_comment": "Cache persistente del calendario auto-generada por scrapers.calendar_cache. NO editar a mano. Las claves planas son actaUrls por partido; la seccion _calendars guarda las jornadas enteras tal y como las devolvio la PNFG. Cada run fusiona lo fresco con esta cache para que un rate-limit no borre datos que ya teniamos. Si una entrada deja de ser valida, borrala y la proxima ejecucion la volvera a resolver. Las claves llevan dentro el codigo de competicion, que cambia cada temporada, asi que las entradas de temporadas pasadas quedan inertes (no se podan solas).",
   "_fetched": {
-    "33836159|33892849": "2026-10-28T21:50:55+00:00",
-    "33836159|33892850": "2026-10-29T05:57:08+00:00",
+    "33836159|33892849": "2026-10-30T06:11:46+00:00",
+    "33836159|33892850": "2026-10-30T06:11:52+00:00",
     "33836163|33836164": "2026-10-29T21:12:33+00:00",
     "33836163|33836165": "2026-10-29T21:12:44+00:00",
     "33836163|33836166": "2026-10-29T21:27:55+00:00",
     "33836163|33836167": "2026-10-29T21:28:06+00:00",
     "33836163|33836168": "2026-10-29T21:43:46+00:00",
     "33836163|33836169": "2026-10-29T21:28:29+00:00",
-    "33836179|33836180": "2026-10-28T21:34:57+00:00",
-    "33836181|33836182": "2026-10-28T21:35:14+00:00",
-    "33836181|33836183": "2026-10-28T21:35:26+00:00",
-    "33836181|33836184": "2026-10-28T21:50:44+00:00",
-    "33918407|33918408": "2026-10-28T20:40:19+00:00"
+    "33836179|33836180": "2026-10-30T05:56:02+00:00",
+    "33836181|33836182": "2026-10-30T05:56:13+00:00",
+    "33836181|33836183": "2026-10-30T06:11:24+00:00",
+    "33836181|33836184": "2026-10-30T06:11:35+00:00",
+    "33918407|33918408": "2026-10-30T06:12:03+00:00"
   }
 }
