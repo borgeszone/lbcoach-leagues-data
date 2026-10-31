@@ -10934,11 +10934,6 @@
       ],
       "10": [
         {
-          "away": "AE Les Corts UBAE",
-          "date": "2026-12-05",
-          "home": "C.D. Guadalcacín F.S."
-        },
-        {
           "away": "Wanapix Aldelis InterSala 10 Zaragoza",
           "date": "2026-12-05",
           "home": "Ourense Ontime"
@@ -10956,16 +10951,21 @@
           "venue": "Pab. Javier Imbroda Ortiz (POL)"
         },
         {
+          "away": "LBTL Futsal Alcantarilla",
+          "date": "2026-12-05T14:30:00",
+          "home": "Nueces de Ronda Atlético Torcal FS"
+        },
+        {
           "away": "Estrela Revoltosa Verín FSF",
           "date": "2026-12-05T16:30:00",
           "home": "ARRIVA AD Alcorcón FSF",
           "venue": "P.M. Los Cantos (POL)"
         },
         {
-          "away": "LBTL Futsal Alcantarilla",
-          "date": "2026-12-05T18:00:00",
-          "home": "Nueces de Ronda Atlético Torcal FS",
-          "venue": "P.M. Guadaljaire (POL)"
+          "away": "AE Les Corts UBAE",
+          "date": "2026-12-05T18:30:00",
+          "home": "C.D. Guadalcacín F.S.",
+          "venue": "P.M.de Guadalcacín (POL)"
         },
         {
           "away": "Poio Pescamar FS",
@@ -11007,10 +11007,10 @@
           "home": "Wanapix Aldelis InterSala 10 Zaragoza"
         },
         {
-          "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
-          "date": "2026-12-08T20:00:00",
-          "home": "C.D. Guadalcacín F.S.",
-          "venue": "P.M.de Guadalcacín (POL)"
+          "away": "ARRIVA AD Alcorcón FSF",
+          "date": "2026-12-08T11:00:00",
+          "home": "Rodiles F.S. \"A\"",
+          "venue": "P.M. Manuel Busto (POL)"
         },
         {
           "away": "Ourense Ontime",
@@ -11019,9 +11019,10 @@
           "venue": "Pab. Mun. de Poio (POL)"
         },
         {
-          "away": "ARRIVA AD Alcorcón FSF",
-          "date": "2026-12-08T20:00:00",
-          "home": "Rodiles F.S. \"A\""
+          "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
+          "date": "2026-12-08T20:30:00",
+          "home": "C.D. Guadalcacín F.S.",
+          "venue": "P.M.de Guadalcacín (POL)"
         }
       ],
       "12": [
@@ -13639,17 +13640,6 @@
       ],
       "8": [
         {
-          "away": "CDE Muslera GSW \"A\"",
-          "date": "2026-11-07",
-          "home": "Grupo FORMA-T Vilalba F.S."
-        },
-        {
-          "away": "CD Lacturale Orvina",
-          "date": "2026-11-07",
-          "home": "ENCE Marín Futsal",
-          "venue": "Pab. A Raña (PIS)"
-        },
-        {
           "away": "A.D. Mioño FSF",
           "date": "2026-11-07T16:30:00",
           "home": "At. Arnoia",
@@ -13660,6 +13650,18 @@
           "date": "2026-11-07T17:00:00",
           "home": "C.D. Segosala",
           "venue": "P.M. Pedro Delgado (POL)"
+        },
+        {
+          "away": "CD Lacturale Orvina",
+          "date": "2026-11-07T17:00:00",
+          "home": "ENCE Marín Futsal",
+          "venue": "Pab. A Raña (PIS)"
+        },
+        {
+          "away": "CDE Muslera GSW \"A\"",
+          "date": "2026-11-07T18:00:00",
+          "home": "Grupo FORMA-T Vilalba F.S.",
+          "venue": "Municipal de Vilalba (HN)"
         },
         {
           "away": "El Gaitero Rodiles FSF",
@@ -15044,11 +15046,6 @@
       ],
       "8": [
         {
-          "away": "CFS Autoescola Urgell Linyola",
-          "date": "2026-11-07",
-          "home": "Les Corts, A.E. \"B\""
-        },
-        {
           "away": "Feme Castellón C.F.S.",
           "date": "2026-11-07T16:00:00",
           "home": "AE Penya Esplugues Salvat Logística \"A\"",
@@ -15067,15 +15064,16 @@
           "venue": "Pabellón Can Balsach (PIS)"
         },
         {
-          "away": "Somriu Futbol Sala Ripollet",
-          "date": "2026-11-08",
-          "home": "Futsal Cartonajes Pans Mataró"
-        },
-        {
           "away": "Club Deportivo Nou Turia FSF \"A\"",
           "date": "2026-11-08T13:00:00",
           "home": "Lainco Esportiu Rubi F.S.",
           "venue": "La Llana (T)"
+        },
+        {
+          "away": "CFS Autoescola Urgell Linyola",
+          "date": "2026-11-08T13:30:00",
+          "home": "Les Corts, A.E. \"B\"",
+          "venue": "Pavelló Municipal L´Illa (PIS)"
         },
         {
           "away": "AECS L Hospitalet",
@@ -15088,6 +15086,12 @@
           "date": "2026-11-08T16:00:00",
           "home": "Club Deportivo San Pablo Ibiza",
           "venue": "Pabellón Municipal Es Viver (PIS)"
+        },
+        {
+          "away": "Somriu Futbol Sala Ripollet",
+          "date": "2026-11-10T21:30:00",
+          "home": "Futsal Cartonajes Pans Mataró",
+          "venue": "P.M. Teresa Mª Roca (POL)"
         }
       ],
       "9": [
@@ -16477,18 +16481,6 @@
       ],
       "8": [
         {
-          "away": "ARRIVA AD Alcorcón FSF",
-          "date": "2026-11-07",
-          "home": "Almagro F.S.F.",
-          "venue": "P.M. Gemma Arenas Alcazar (POL)"
-        },
-        {
-          "away": "CD Salesianos Puertollano",
-          "date": "2026-11-07",
-          "home": "C.F.S. Femenino San Fernando",
-          "venue": "Pab. Justo Gómez Salto (POL)"
-        },
-        {
           "away": "Martos FS Jaén Paraíso Interior",
           "date": "2026-11-07T13:00:00",
           "home": "Ramón Y Cajal Féminas",
@@ -16507,10 +16499,22 @@
           "venue": "polideportivo Municipal Diego Ortiz López (PIS)"
         },
         {
+          "away": "CD Salesianos Puertollano",
+          "date": "2026-11-07T18:00:00",
+          "home": "C.F.S. Femenino San Fernando",
+          "venue": "Pab. Justo Gómez Salto (POL)"
+        },
+        {
           "away": "Coviran UAPO Granada FS Femenino",
           "date": "2026-11-07T20:00:00",
           "home": "Majadahonda F.S.F./Afar 4",
           "venue": "P.M. La Granadilla (POL)"
+        },
+        {
+          "away": "ARRIVA AD Alcorcón FSF",
+          "date": "2026-11-08T12:00:00",
+          "home": "Almagro F.S.F.",
+          "venue": "P.M. Gemma Arenas Alcazar (POL)"
         },
         {
           "away": "Globalcaja Albacete F.S.",
@@ -18047,18 +18051,18 @@
   },
   "_comment": "Cache persistente del calendario auto-generada por scrapers.calendar_cache. NO editar a mano. Las claves planas son actaUrls por partido; la seccion _calendars guarda las jornadas enteras tal y como las devolvio la PNFG. Cada run fusiona lo fresco con esta cache para que un rate-limit no borre datos que ya teniamos. Si una entrada deja de ser valida, borrala y la proxima ejecucion la volvera a resolver. Las claves llevan dentro el codigo de competicion, que cambia cada temporada, asi que las entradas de temporadas pasadas quedan inertes (no se podan solas).",
   "_fetched": {
-    "33836159|33892849": "2026-10-30T06:11:46+00:00",
-    "33836159|33892850": "2026-10-30T06:11:52+00:00",
+    "33836159|33892849": "2026-10-31T06:07:37+00:00",
+    "33836159|33892850": "2026-10-31T06:07:42+00:00",
     "33836163|33836164": "2026-10-30T20:53:14+00:00",
     "33836163|33836165": "2026-10-30T20:53:25+00:00",
     "33836163|33836166": "2026-10-30T21:08:36+00:00",
     "33836163|33836167": "2026-10-30T21:08:47+00:00",
     "33836163|33836168": "2026-10-30T21:24:28+00:00",
     "33836163|33836169": "2026-10-30T21:09:05+00:00",
-    "33836179|33836180": "2026-10-30T05:56:02+00:00",
-    "33836181|33836182": "2026-10-30T05:56:13+00:00",
-    "33836181|33836183": "2026-10-30T06:11:24+00:00",
-    "33836181|33836184": "2026-10-30T06:11:35+00:00",
-    "33918407|33918408": "2026-10-30T06:12:03+00:00"
+    "33836179|33836180": "2026-10-31T06:24:17+00:00",
+    "33836181|33836182": "2026-10-31T05:52:03+00:00",
+    "33836181|33836183": "2026-10-31T05:52:14+00:00",
+    "33836181|33836184": "2026-10-31T06:07:26+00:00",
+    "33918407|33918408": "2026-10-31T06:07:54+00:00"
   }
 }
