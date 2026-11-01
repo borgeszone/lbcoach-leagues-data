@@ -759,6 +759,13 @@
   "33836181|33836184|J6|martosfsjaenparaisointerior|coviranuapogranadafsfemenino": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697776&NPcd_Pdf=1",
   "33836181|33836184|J6|ramonycajalfeminas|arrivaadalcorconfsf": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697778&NPcd_Pdf=1",
   "33836181|33836184|J6|udafafaniona|cdsalesianospuertollano": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697781&NPcd_Pdf=1",
+  "33836181|33836184|J7|arrivaadalcorconfsf|cdlagarrovillafemenino": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70699439&NPcd_Pdf=1",
+  "33836181|33836184|J7|atleticonavalcarnero|ramonycajalfeminas": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697785&NPcd_Pdf=1",
+  "33836181|33836184|J7|cdsalesianospuertollano|iesluisdecamoens": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697789&NPcd_Pdf=1",
+  "33836181|33836184|J7|coviranuapogranadafsfemenino|cdeleganesfsmasdeporte": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697791&NPcd_Pdf=1",
+  "33836181|33836184|J7|doshermanasfscd|udafafaniona": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697788&NPcd_Pdf=1",
+  "33836181|33836184|J7|globalcajaalbacetefs|almagrofsf": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697787&NPcd_Pdf=1",
+  "33836181|33836184|J7|martosfsjaenparaisointerior|majadahondafsfafar4": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697784&NPcd_Pdf=1",
   "33918407|33918408|J11|sala5martorellmcdgrup|cefutsalgestorialuismataro": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703521&NPcd_Pdf=1",
   "33918407|33918408|J1|cdmelistar|zambucfspinatarcerramientosabatibles": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703443&NPcd_Pdf=1",
   "33918407|33918408|J1|cefutsalgestorialuismataro|unionafricaceutia": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703442&NPcd_Pdf=1",
@@ -16478,12 +16485,6 @@
       ],
       "7": [
         {
-          "away": "C.F.S. Femenino San Fernando",
-          "date": "2026-10-31T16:00:00",
-          "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
-          "venue": "Pab. Javier Imbroda Ortiz (POL)"
-        },
-        {
           "away": "Almagro F.S.F.",
           "date": "2026-10-31T16:15:00",
           "home": "Globalcaja Albacete F.S.",
@@ -16524,6 +16525,12 @@
           "date": "2026-11-01T12:30:00",
           "home": "Dos Hermanas F.S. C.D.",
           "venue": "Pabellón Municipal Francisco de Dios Jiménez (POL)"
+        },
+        {
+          "away": "C.F.S. Femenino San Fernando",
+          "date": "2026-11-02T16:00:00",
+          "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
+          "venue": "Pab. Javier Imbroda Ortiz (POL)"
         }
       ],
       "8": [
@@ -18109,7 +18116,7 @@
     "33836179|33836180": "2026-11-01T06:32:25+00:00",
     "33836181|33836182": "2026-11-01T06:32:42+00:00",
     "33836181|33836183": "2026-11-01T06:47:54+00:00",
-    "33836181|33836184": "2026-10-31T06:07:26+00:00",
+    "33836181|33836184": "2026-11-01T15:17:46+00:00",
     "33918407|33918408": "2026-11-01T06:31:02+00:00"
   }
 }
