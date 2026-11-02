@@ -13770,11 +13770,6 @@
           "home": "CLUB DEPORTIVO TEIDAYA \"A\""
         },
         {
-          "away": "C.D. Juventud del Círculo Católico",
-          "date": "2026-11-14",
-          "home": "CD Lacturale Orvina"
-        },
-        {
           "away": "CFS Gran Canaria Teldeportivo",
           "date": "2026-11-14",
           "home": "CDE Muslera GSW \"A\"",
@@ -13785,6 +13780,12 @@
           "date": "2026-11-14T18:30:00",
           "home": "U.D.C. Txantrea K.K.E.",
           "venue": "Polideportivo Arrosadia (T)"
+        },
+        {
+          "away": "C.D. Juventud del Círculo Católico",
+          "date": "2026-11-14T18:30:00",
+          "home": "CD Lacturale Orvina",
+          "venue": "Polideportivo Ezcaba (T)"
         },
         {
           "away": "Valdetires Ferrol F.S.F.",
@@ -18121,18 +18122,18 @@
   },
   "_comment": "Cache persistente del calendario auto-generada por scrapers.calendar_cache. NO editar a mano. Las claves planas son actaUrls por partido; la seccion _calendars guarda las jornadas enteras tal y como las devolvio la PNFG. Cada run fusiona lo fresco con esta cache para que un rate-limit no borre datos que ya teniamos. Si una entrada deja de ser valida, borrala y la proxima ejecucion la volvera a resolver. Las claves llevan dentro el codigo de competicion, que cambia cada temporada, asi que las entradas de temporadas pasadas quedan inertes (no se podan solas).",
   "_fetched": {
-    "33836159|33892849": "2026-11-01T06:15:45+00:00",
-    "33836159|33892850": "2026-11-01T06:15:51+00:00",
+    "33836159|33892849": "2026-11-02T06:34:07+00:00",
+    "33836159|33892850": "2026-11-02T06:34:13+00:00",
     "33836163|33836164": "2026-11-01T20:33:42+00:00",
     "33836163|33836165": "2026-11-01T20:33:53+00:00",
     "33836163|33836166": "2026-11-01T20:49:05+00:00",
     "33836163|33836167": "2026-11-01T20:49:22+00:00",
     "33836163|33836168": "2026-11-01T20:49:44+00:00",
     "33836163|33836169": "2026-11-01T20:49:33+00:00",
-    "33836179|33836180": "2026-11-01T06:32:25+00:00",
-    "33836181|33836182": "2026-11-01T06:32:42+00:00",
-    "33836181|33836183": "2026-11-01T06:47:54+00:00",
+    "33836179|33836180": "2026-11-02T06:33:24+00:00",
+    "33836181|33836182": "2026-11-02T06:33:35+00:00",
+    "33836181|33836183": "2026-11-02T06:33:46+00:00",
     "33836181|33836184": "2026-11-01T15:17:46+00:00",
-    "33918407|33918408": "2026-11-01T06:31:02+00:00"
+    "33918407|33918408": "2026-11-02T06:17:07+00:00"
   }
 }
