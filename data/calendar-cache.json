@@ -5082,12 +5082,6 @@
           "venue": "Pol. Valle de Esteribar (Zubiri) (T)"
         },
         {
-          "away": "Antiguoko KE Estudio Dental Barrenechea",
-          "date": "2026-11-14",
-          "home": "Otxartabe C.D.",
-          "venue": "Polid. Txurdinaga (T)"
-        },
-        {
           "away": "Sala Quinto CD",
           "date": "2026-11-14",
           "home": "Vulcanizados Ruiz Tafa FS",
@@ -5116,6 +5110,12 @@
           "date": "2026-11-14T19:00:00",
           "home": "C.D. Juventud del Círculo Católico",
           "venue": "Polideportivo Círculo Católico (PIS)"
+        },
+        {
+          "away": "Antiguoko KE Estudio Dental Barrenechea",
+          "date": "2026-11-14T20:00:00",
+          "home": "Otxartabe C.D.",
+          "venue": "Polid. Txurdinaga (T)"
         }
       ]
     },
@@ -8001,11 +8001,6 @@
       ],
       "9": [
         {
-          "away": "Club Union Deportiva Rena",
-          "date": "2026-11-14",
-          "home": "Club Unión Deportiva Loeches"
-        },
-        {
           "away": "Colegio El Valle C.D.",
           "date": "2026-11-14",
           "home": "Serbis AD Alcorcón FS",
@@ -8016,12 +8011,6 @@
           "date": "2026-11-14",
           "home": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
           "venue": "Polideportivo Municipal de Navahonda (PIS)"
-        },
-        {
-          "away": "Inter JP Financial F.S.",
-          "date": "2026-11-14",
-          "home": "Unión Tres Cantos FS",
-          "venue": "Pab. Mun. de la Luz (POL)"
         },
         {
           "away": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
@@ -8042,10 +8031,22 @@
           "venue": "P.M. DE COBISA (POL)"
         },
         {
+          "away": "Inter JP Financial F.S.",
+          "date": "2026-11-14T16:00:00",
+          "home": "Unión Tres Cantos FS",
+          "venue": "Pab. Mun. de la Luz (POL)"
+        },
+        {
           "away": "Naturpellet San Cristóbal",
           "date": "2026-11-14T18:00:00",
           "home": "El Alamo F.S.",
           "venue": "Pabellón Municipal IES El Álamo (PIS)"
+        },
+        {
+          "away": "Club Union Deportiva Rena",
+          "date": "2026-11-14T19:00:00",
+          "home": "Club Unión Deportiva Loeches",
+          "venue": "Pabellón Deportivo Municipal José Rodríguez (PIS)"
         }
       ]
     },
@@ -16547,7 +16548,7 @@
           "away": "C.F.S. Femenino San Fernando",
           "date": "2026-11-02T16:00:00",
           "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
-          "venue": "Pab. Javier Imbroda Ortiz (POL)"
+          "venue": "Pab. Lázaro Fernández (POL)"
         }
       ],
       "8": [
@@ -18124,16 +18125,16 @@
   "_fetched": {
     "33836159|33892849": "2026-11-02T06:34:07+00:00",
     "33836159|33892850": "2026-11-02T06:34:13+00:00",
-    "33836163|33836164": "2026-11-01T20:33:42+00:00",
-    "33836163|33836165": "2026-11-01T20:33:53+00:00",
-    "33836163|33836166": "2026-11-01T20:49:05+00:00",
-    "33836163|33836167": "2026-11-01T20:49:22+00:00",
-    "33836163|33836168": "2026-11-01T20:49:44+00:00",
-    "33836163|33836169": "2026-11-01T20:49:33+00:00",
+    "33836163|33836164": "2026-11-02T18:28:19+00:00",
+    "33836163|33836165": "2026-11-02T18:28:30+00:00",
+    "33836163|33836166": "2026-11-02T18:43:41+00:00",
+    "33836163|33836167": "2026-11-02T18:43:52+00:00",
+    "33836163|33836168": "2026-11-02T18:44:14+00:00",
+    "33836163|33836169": "2026-11-02T18:44:03+00:00",
     "33836179|33836180": "2026-11-02T06:33:24+00:00",
     "33836181|33836182": "2026-11-02T06:33:35+00:00",
     "33836181|33836183": "2026-11-02T06:33:46+00:00",
-    "33836181|33836184": "2026-11-01T15:17:46+00:00",
+    "33836181|33836184": "2026-11-02T19:00:07+00:00",
     "33918407|33918408": "2026-11-02T06:17:07+00:00"
   }
 }
