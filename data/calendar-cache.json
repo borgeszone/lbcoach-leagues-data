@@ -12222,7 +12222,7 @@
         },
         {
           "away": "AE Les Corts UBAE",
-          "date": "2026-11-07T18:30:00",
+          "date": "2026-11-07T17:30:00",
           "home": "Poio Pescamar FS",
           "venue": "Pab. Mun. de Poio (POL)"
         },
@@ -13771,12 +13771,6 @@
           "home": "CLUB DEPORTIVO TEIDAYA \"A\""
         },
         {
-          "away": "CFS Gran Canaria Teldeportivo",
-          "date": "2026-11-14",
-          "home": "CDE Muslera GSW \"A\"",
-          "venue": "Pab. Guillermo Cortés (POL)"
-        },
-        {
           "away": "ENCE Marín Futsal",
           "date": "2026-11-14T18:30:00",
           "home": "U.D.C. Txantrea K.K.E.",
@@ -13805,6 +13799,12 @@
           "date": "2026-11-14T19:30:00",
           "home": "A.D. Mioño FSF",
           "venue": "Pab. Peru Zaballa (POL)"
+        },
+        {
+          "away": "CFS Gran Canaria Teldeportivo",
+          "date": "2026-11-14T20:00:00",
+          "home": "CDE Muslera GSW \"A\"",
+          "venue": "Pab. Guillermo Cortés (POL)"
         }
       ]
     },
@@ -13872,12 +13872,6 @@
           "home": "Les Corts, A.E. \"B\""
         },
         {
-          "away": "Entrerrios Automatización",
-          "date": "2026-11-21",
-          "home": "Lainco Esportiu Rubi F.S.",
-          "venue": "La Llana (T)"
-        },
-        {
           "away": "CFS Autoescola Urgell Linyola",
           "date": "2026-11-21",
           "home": "C.D. Parque Col. Santa Ana"
@@ -13903,6 +13897,12 @@
           "date": "2026-11-21T16:00:00",
           "home": "AE Penya Esplugues Salvat Logística \"A\"",
           "venue": "C.E.M. Les Moreres (T)"
+        },
+        {
+          "away": "Entrerrios Automatización",
+          "date": "2026-11-21T17:15:00",
+          "home": "Lainco Esportiu Rubi F.S.",
+          "venue": "La Llana (T)"
         }
       ],
       "11": [
@@ -15195,12 +15195,6 @@
           "home": "SolarMon-Les Glories 2014 CD La Concordia"
         },
         {
-          "away": "Feme Castellón C.F.S.",
-          "date": "2026-11-14",
-          "home": "Somriu Futbol Sala Ripollet",
-          "venue": "P.M.D. Joan Creus (POL)"
-        },
-        {
           "away": "AE Penya Esplugues Salvat Logística \"A\"",
           "date": "2026-11-14T18:30:00",
           "home": "La Villa Móstoles",
@@ -15211,6 +15205,12 @@
           "date": "2026-11-15T12:30:00",
           "home": "Futsal Cartonajes Pans Mataró",
           "venue": "P.M. Teresa Mª Roca (POL)"
+        },
+        {
+          "away": "Feme Castellón C.F.S.",
+          "date": "2026-11-15T13:30:00",
+          "home": "Somriu Futbol Sala Ripollet",
+          "venue": "P.M.D. Joan Creus (POL)"
         }
       ]
     },
@@ -18123,17 +18123,17 @@
   },
   "_comment": "Cache persistente del calendario auto-generada por scrapers.calendar_cache. NO editar a mano. Las claves planas son actaUrls por partido; la seccion _calendars guarda las jornadas enteras tal y como las devolvio la PNFG. Cada run fusiona lo fresco con esta cache para que un rate-limit no borre datos que ya teniamos. Si una entrada deja de ser valida, borrala y la proxima ejecucion la volvera a resolver. Las claves llevan dentro el codigo de competicion, que cambia cada temporada, asi que las entradas de temporadas pasadas quedan inertes (no se podan solas).",
   "_fetched": {
-    "33836159|33892849": "2026-11-02T06:34:07+00:00",
-    "33836159|33892850": "2026-11-02T06:34:13+00:00",
+    "33836159|33892849": "2026-11-03T12:16:46+00:00",
+    "33836159|33892850": "2026-11-03T12:16:52+00:00",
     "33836163|33836164": "2026-11-02T18:28:19+00:00",
     "33836163|33836165": "2026-11-02T18:28:30+00:00",
     "33836163|33836166": "2026-11-02T18:43:41+00:00",
     "33836163|33836167": "2026-11-02T18:43:52+00:00",
     "33836163|33836168": "2026-11-02T18:44:14+00:00",
     "33836163|33836169": "2026-11-02T18:44:03+00:00",
-    "33836179|33836180": "2026-11-02T06:33:24+00:00",
-    "33836181|33836182": "2026-11-02T06:33:35+00:00",
-    "33836181|33836183": "2026-11-02T06:33:46+00:00",
+    "33836179|33836180": "2026-11-03T12:01:02+00:00",
+    "33836181|33836182": "2026-11-03T12:01:14+00:00",
+    "33836181|33836183": "2026-11-03T12:16:25+00:00",
     "33836181|33836184": "2026-11-02T19:00:07+00:00",
     "33918407|33918408": "2026-11-03T02:26:34+00:00"
   }
