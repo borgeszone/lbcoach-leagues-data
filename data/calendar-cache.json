@@ -16729,16 +16729,16 @@
           "venue": "P.M. Villafontana (POL)"
         },
         {
-          "away": "C.D. Leganés F.S.",
-          "date": "2026-11-21T18:45:00",
-          "home": "Xerez Toyota Nimauto",
-          "venue": "Pab.Jose Mª Ruiz Mateos (HA)"
-        },
-        {
           "away": "Family Cash Alzira F.S.",
           "date": "2026-11-21T19:00:00",
           "home": "Entrerrios Automatización",
           "venue": "C.D.M. La Granja (T)"
+        },
+        {
+          "away": "C.D. Leganés F.S.",
+          "date": "2026-11-21T19:00:00",
+          "home": "Xerez Toyota Nimauto",
+          "venue": "Pab.Jose Mª Ruiz Mateos (HA)"
         },
         {
           "away": "C.D. Melistar",
@@ -16804,15 +16804,15 @@
           "venue": "P.D. Olivo Arena (T)"
         },
         {
-          "away": "Unión África Ceutí \"A\"",
-          "date": "2026-12-05",
-          "home": "Barça Atlètic",
-          "venue": "Ciutat Esportiva Pabellón Futsal (PIS)"
-        },
-        {
           "away": "C.D. Melistar",
           "date": "2026-12-05",
           "home": "Ribera Navarra FS"
+        },
+        {
+          "away": "Unión África Ceutí \"A\"",
+          "date": "2026-12-05T16:00:00",
+          "home": "Barça Atlètic",
+          "venue": "Ciutat Esportiva Pabellón Futsal (PIS)"
         },
         {
           "away": "MRB FS Mostoles",
@@ -18029,12 +18029,6 @@
           "venue": "Pabellon La Salobreja (POL)"
         },
         {
-          "away": "Entrerrios Automatización",
-          "date": "2026-11-07T17:00:00",
-          "home": "Gasifred Atlético Ibiza",
-          "venue": "Poliesportiu Insular Blancadona (POL)"
-        },
-        {
           "away": "C.D. Leganés F.S.",
           "date": "2026-11-07T17:00:00",
           "home": "ElPozo Ciudad de Murcia",
@@ -18045,6 +18039,12 @@
           "date": "2026-11-07T18:00:00",
           "home": "Barça Atlètic",
           "venue": "Pabellón Ciutat Sportiva Joan Gamper (PIS)"
+        },
+        {
+          "away": "Entrerrios Automatización",
+          "date": "2026-11-07T18:00:00",
+          "home": "Gasifred Atlético Ibiza",
+          "venue": "Poliesportiu Insular Blancadona (POL)"
         },
         {
           "away": "Sala 5 Martorell MCD Grup",
@@ -18135,6 +18135,6 @@
     "33836181|33836182": "2026-11-02T06:33:35+00:00",
     "33836181|33836183": "2026-11-02T06:33:46+00:00",
     "33836181|33836184": "2026-11-02T19:00:07+00:00",
-    "33918407|33918408": "2026-11-02T06:17:07+00:00"
+    "33918407|33918408": "2026-11-03T02:26:34+00:00"
   }
 }
