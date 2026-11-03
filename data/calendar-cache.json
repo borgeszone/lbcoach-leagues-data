@@ -782,6 +782,7 @@
   "33836181|33836184|J7|doshermanasfscd|udafafaniona": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697788&NPcd_Pdf=1",
   "33836181|33836184|J7|globalcajaalbacetefs|almagrofsf": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697787&NPcd_Pdf=1",
   "33836181|33836184|J7|martosfsjaenparaisointerior|majadahondafsfafar4": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697784&NPcd_Pdf=1",
+  "33836181|33836184|J7|melillaciudaddeldeportetorreblancacf|cfsfemeninosanfernando": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697790&NPcd_Pdf=1",
   "33918407|33918408|J11|sala5martorellmcdgrup|cefutsalgestorialuismataro": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703521&NPcd_Pdf=1",
   "33918407|33918408|J1|cdmelistar|zambucfspinatarcerramientosabatibles": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703443&NPcd_Pdf=1",
   "33918407|33918408|J1|cefutsalgestorialuismataro|unionafricaceutia": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703442&NPcd_Pdf=1",
@@ -5257,8 +5258,9 @@
         },
         {
           "away": "A.E. Llevant De Manacor Futsal \"A\"",
-          "date": "2026-11-28",
-          "home": "Nunsys El Pilar"
+          "date": "2026-11-28T13:15:00",
+          "home": "Nunsys El Pilar",
+          "venue": "Pabellón Colegio El Pilar (PIS)"
         },
         {
           "away": "Illes Balears Palma Futsal",
@@ -5286,7 +5288,7 @@
         },
         {
           "away": "Club Deportivo Sporting la Nucía",
-          "date": "2026-12-05T16:00:00",
+          "date": "2026-12-05T13:00:00",
           "home": "Illes Balears Palma Futsal",
           "venue": "Pab. Borja Moll (Polig de Levante) (PIS)"
         },
@@ -6544,12 +6546,6 @@
           "venue": "Pabellon Rubén Plaza (POL)"
         },
         {
-          "away": "Sant Joan Despí CFS Cumsa",
-          "date": "2026-11-14",
-          "home": "Hospitalet Bellsport F.S.",
-          "venue": "P.M. De Bellvitge Sergio Manzano (POL)"
-        },
-        {
           "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
           "date": "2026-11-14",
           "home": "Les Corts EF \"A\"",
@@ -6571,6 +6567,12 @@
           "date": "2026-11-14T17:00:00",
           "home": "C. Natacio Sabadell",
           "venue": "P.M. del Nord (POL)"
+        },
+        {
+          "away": "Sant Joan Despí CFS Cumsa",
+          "date": "2026-11-14T18:30:00",
+          "home": "Hospitalet Bellsport F.S.",
+          "venue": "P.M. Sán Feliú (POL)"
         },
         {
           "away": "F.S. Ripollet \"A\"",
@@ -8001,6 +8003,12 @@
       ],
       "9": [
         {
+          "away": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
+          "date": "2026-11-13T21:00:00",
+          "home": "CD Albacete FS",
+          "venue": "Pabellón Universitario Albacete"
+        },
+        {
           "away": "Colegio El Valle C.D.",
           "date": "2026-11-14",
           "home": "Serbis AD Alcorcón FS",
@@ -8011,12 +8019,6 @@
           "date": "2026-11-14",
           "home": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
           "venue": "Polideportivo Municipal de Navahonda (PIS)"
-        },
-        {
-          "away": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
-          "date": "2026-11-14",
-          "home": "CD Albacete FS",
-          "venue": "Pabellón Municipal Cocheras -Lepanto (POL)"
         },
         {
           "away": "Grupo López Bolaños F.S. \"A\"",
@@ -10920,12 +10922,6 @@
           "venue": "Pabellón Municipal Francisco de Dios Jiménez (POL)"
         },
         {
-          "away": "Cdb Salvatierra FS Construciones Vianri",
-          "date": "2026-11-14",
-          "home": "Sima Granada FS",
-          "venue": "Complejo.Deportivo Nuñez Blanca (PIS)"
-        },
-        {
           "away": "Crevillent Futsal Starts \"A\"",
           "date": "2026-11-14T16:00:00",
           "home": "Melilla Ciudad del Deporte Nueva Era",
@@ -10942,6 +10938,12 @@
           "date": "2026-11-14T19:30:00",
           "home": "C.D. Malacitano Futsal",
           "venue": "P.M. Tiro de Pichón (POL)"
+        },
+        {
+          "away": "Cdb Salvatierra FS Construciones Vianri",
+          "date": "2026-11-14T20:00:00",
+          "home": "Sima Granada FS",
+          "venue": "Complejo.Deportivo Nuñez Blanca (PIS)"
         },
         {
           "away": "Joasan Construcciones CFS Pinatar \"B\"",
@@ -15342,9 +15344,9 @@
         },
         {
           "away": "Almagro F.S.F.",
-          "date": "2026-11-28T20:00:00",
+          "date": "2026-11-28T19:00:00",
           "home": "Majadahonda F.S.F./Afar 4",
-          "venue": "P.M. La Granadilla (POL)"
+          "venue": "Polideportivo Navaarmado Patricia García (PIS)"
         },
         {
           "away": "CD La Garrovilla Femenino",
@@ -16626,8 +16628,9 @@
         },
         {
           "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
-          "date": "2026-11-14",
-          "home": "Coviran UAPO Granada FS Femenino"
+          "date": "2026-11-14T13:00:00",
+          "home": "Coviran UAPO Granada FS Femenino",
+          "venue": "Complejo.Deportivo Nuñez Blanca (PIS)"
         },
         {
           "away": "Ramón Y Cajal Féminas",
@@ -18125,16 +18128,16 @@
   "_fetched": {
     "33836159|33892849": "2026-11-03T12:16:46+00:00",
     "33836159|33892850": "2026-11-03T12:16:52+00:00",
-    "33836163|33836164": "2026-11-02T18:28:19+00:00",
-    "33836163|33836165": "2026-11-02T18:28:30+00:00",
-    "33836163|33836166": "2026-11-02T18:43:41+00:00",
-    "33836163|33836167": "2026-11-02T18:43:52+00:00",
-    "33836163|33836168": "2026-11-02T18:44:14+00:00",
-    "33836163|33836169": "2026-11-02T18:44:03+00:00",
+    "33836163|33836164": "2026-11-03T19:32:54+00:00",
+    "33836163|33836165": "2026-11-03T19:33:05+00:00",
+    "33836163|33836166": "2026-11-03T19:48:16+00:00",
+    "33836163|33836167": "2026-11-03T19:48:27+00:00",
+    "33836163|33836168": "2026-11-03T19:48:50+00:00",
+    "33836163|33836169": "2026-11-03T19:48:38+00:00",
     "33836179|33836180": "2026-11-03T12:01:02+00:00",
     "33836181|33836182": "2026-11-03T12:01:14+00:00",
     "33836181|33836183": "2026-11-03T12:16:25+00:00",
-    "33836181|33836184": "2026-11-02T19:00:07+00:00",
+    "33836181|33836184": "2026-11-03T20:04:42+00:00",
     "33918407|33918408": "2026-11-03T02:26:34+00:00"
   }
 }
