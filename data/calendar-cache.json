@@ -16758,21 +16758,15 @@
           "venue": "P.M. Villafontana (POL)"
         },
         {
-          "away": "Avanza Jaén Paraíso Interior",
+          "away": "Xerez Toyota Nimauto",
           "date": "2026-11-28",
-          "home": "ElPozo Ciudad de Murcia",
-          "venue": "Pab. José Mª Cagigal (POL)"
+          "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+          "venue": "Pab Príncipe de Asturias (PIS)"
         },
         {
           "away": "Unión África Ceutí \"A\"",
           "date": "2026-11-28",
           "home": "Ribera Navarra FS"
-        },
-        {
-          "away": "Xerez Toyota Nimauto",
-          "date": "2026-11-28T18:00:00",
-          "home": "Zambú CFS Pinatar Cerramientos Abatibles",
-          "venue": "Pab Príncipe de Asturias (PIS)"
         },
         {
           "away": "C.E. Futsal Gestoria Luis Mataró",
@@ -16791,6 +16785,12 @@
           "date": "2026-11-28T19:30:00",
           "home": "C.D. Leganés F.S.",
           "venue": "Pab. La Fortuna (POL)"
+        },
+        {
+          "away": "Avanza Jaén Paraíso Interior",
+          "date": "2026-11-28T20:00:00",
+          "home": "ElPozo Ciudad de Murcia",
+          "venue": "Palacio de los Deportes de Murcia (POL)"
         },
         {
           "away": "Barça Atlètic",
@@ -16850,6 +16850,12 @@
       ],
       "13": [
         {
+          "away": "ElPozo Ciudad de Murcia",
+          "date": "2026-12-11T20:30:00",
+          "home": "C.D. Melistar",
+          "venue": "Pab. Javier Imbroda Ortiz (POL)"
+        },
+        {
           "away": "REYCO Burela FS",
           "date": "2026-12-12",
           "home": "C.E. Futsal Gestoria Luis Mataró",
@@ -16889,12 +16895,6 @@
           "date": "2026-12-12T19:30:00",
           "home": "C.D. Leganés F.S.",
           "venue": "Pab. La Fortuna (POL)"
-        },
-        {
-          "away": "ElPozo Ciudad de Murcia",
-          "date": "2026-12-12T19:30:00",
-          "home": "C.D. Melistar",
-          "venue": "Pab. Javier Imbroda Ortiz (POL)"
         }
       ],
       "14": [
@@ -18098,16 +18098,16 @@
           "venue": "Pab Príncipe de Asturias (PIS)"
         },
         {
-          "away": "Xerez Toyota Nimauto",
-          "date": "2026-11-14T18:30:00",
-          "home": "Family Cash Alzira F.S.",
-          "venue": "Palau D?Esports de Alzira (T)"
-        },
-        {
           "away": "ElPozo Ciudad de Murcia",
           "date": "2026-11-14T18:30:00",
           "home": "Sala 5 Martorell MCD Grup",
           "venue": "P.M. de Martorell (POL)"
+        },
+        {
+          "away": "Xerez Toyota Nimauto",
+          "date": "2026-11-14T19:00:00",
+          "home": "Family Cash Alzira F.S.",
+          "venue": "Palau D?Esports de Alzira (T)"
         },
         {
           "away": "Gasifred Atlético Ibiza",
@@ -18138,6 +18138,6 @@
     "33836181|33836182": "2026-11-03T12:01:14+00:00",
     "33836181|33836183": "2026-11-03T12:16:25+00:00",
     "33836181|33836184": "2026-11-03T20:04:42+00:00",
-    "33918407|33918408": "2026-11-03T02:26:34+00:00"
+    "33918407|33918408": "2026-11-04T00:56:07+00:00"
   }
 }
