@@ -556,11 +556,13 @@
   "33836163|33836169|J6|crevillentfutsalstartsa|cdmalacitanofutsal": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703001&NPcd_Pdf=1",
   "33836163|33836169|J6|flexlivingjumillafs|doshermanasfscda": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703003&NPcd_Pdf=1",
   "33836163|33836169|J6|ghdistribucionmoralfs|cdvirgilicadiza": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703004&NPcd_Pdf=1",
+  "33836163|33836169|J6|imperiolosrosales|cdbsalvatierrafsconstruccionesvianri": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703005&NPcd_Pdf=1",
   "33836163|33836169|J6|imperiolosrosales|cdbsalvatierrafsconstrucionesvianri": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703005&NPcd_Pdf=1",
   "33836163|33836169|J6|jimbeecartagenafutbolsala|joasanconstruccionescfspinatarb": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703006&NPcd_Pdf=1",
   "33836163|33836169|J6|melillaciudaddeldeportenuevaera|cdsportingfsalmeriabiocampojoyma": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703000&NPcd_Pdf=1",
   "33836163|33836169|J6|nawterblancafs|simagranadafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702999&NPcd_Pdf=1",
   "33836163|33836169|J6|oleoinnovamengibarfs|cdbujalancefsbeconet": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703002&NPcd_Pdf=1",
+  "33836163|33836169|J7|cdbsalvatierrafsconstruccionesvianri|jimbeecartagenafutbolsala": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703013&NPcd_Pdf=1",
   "33836163|33836169|J7|cdbsalvatierrafsconstrucionesvianri|jimbeecartagenafutbolsala": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703013&NPcd_Pdf=1",
   "33836163|33836169|J7|cdbujalancefsbeconet|flexlivingjumillafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703010&NPcd_Pdf=1",
   "33836163|33836169|J7|cdmalacitanofutsal|oleoinnovamengibarfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703009&NPcd_Pdf=1",
@@ -3611,12 +3613,6 @@
       ],
       "9": [
         {
-          "away": "Racing de Mieres",
-          "date": "2026-11-14",
-          "home": "Stellae Leis Pontevedra F.S.",
-          "venue": "Pabellón Municipal de Deportes de Pontevedra (PIS)"
-        },
-        {
           "away": "5 Coruña F.S.",
           "date": "2026-11-14",
           "home": "S.D. Xove F.S.",
@@ -3638,6 +3634,12 @@
           "date": "2026-11-14",
           "home": "O Esteo F.S.",
           "venue": "Pabellón Municipal de A Fraga (PIS)"
+        },
+        {
+          "away": "Racing de Mieres",
+          "date": "2026-11-14T17:00:00",
+          "home": "Stellae Leis Pontevedra F.S.",
+          "venue": "P. Monte Carrasco Marcón (T)"
         },
         {
           "away": "Grupo FORMA-T Vilalba F.S.",
@@ -5085,16 +5087,16 @@
           "venue": "P.M. de Ziérbena (PIS)"
         },
         {
-          "away": "EMD. Cadrete Forjas Casado",
-          "date": "2026-11-14",
-          "home": "C.D.Ibararte",
-          "venue": "Pol. Valle de Esteribar (Zubiri) (T)"
-        },
-        {
           "away": "Sala Quinto CD",
           "date": "2026-11-14",
           "home": "Vulcanizados Ruiz Tafa FS",
           "venue": "IES Politécnico Tafalla (T)"
+        },
+        {
+          "away": "EMD. Cadrete Forjas Casado",
+          "date": "2026-11-14T17:00:00",
+          "home": "C.D.Ibararte",
+          "venue": "Pol. Valle de Esteribar (Zubiri) (T)"
         },
         {
           "away": "Coras Futsal Zaragoza",
@@ -6548,12 +6550,6 @@
           "venue": "Pavelló Municipal Camilo Cano (T)"
         },
         {
-          "away": "Ye Faky F.S.",
-          "date": "2026-11-14",
-          "home": "C.F.S. Futsal IBI - Juypal Hogar",
-          "venue": "Pabellon Rubén Plaza (POL)"
-        },
-        {
           "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
           "date": "2026-11-14",
           "home": "Les Corts EF \"A\"",
@@ -6575,6 +6571,12 @@
           "date": "2026-11-14T17:00:00",
           "home": "C. Natacio Sabadell",
           "venue": "P.M. del Nord (POL)"
+        },
+        {
+          "away": "Ye Faky F.S.",
+          "date": "2026-11-14T18:00:00",
+          "home": "C.F.S. Futsal IBI - Juypal Hogar",
+          "venue": "Pabellon Rubén Plaza (POL)"
         },
         {
           "away": "Sant Joan Despí CFS Cumsa",
@@ -7968,7 +7970,7 @@
         },
         {
           "away": "Naturpellet San Cristóbal",
-          "date": "2026-11-07T16:30:00",
+          "date": "2026-11-07T16:15:00",
           "home": "Athletic Club Móstoles",
           "venue": "Pabellón Eva Manguan (POL)"
         },
@@ -9555,7 +9557,7 @@
         {
           "away": "Melilla Ciudad del Deporte Nueva Era",
           "date": "2026-09-19T19:00:00",
-          "home": "Cdb Salvatierra FS Construciones Vianri",
+          "home": "Cdb Salvatierra FS Construcciones Vianri",
           "venue": "Pabellón Municipal Calzada de Calatrava (PIS)"
         },
         {
@@ -9614,7 +9616,7 @@
         {
           "away": "CD Virgili Cádiz \"A\"",
           "date": "2026-11-21",
-          "home": "Cdb Salvatierra FS Construciones Vianri"
+          "home": "Cdb Salvatierra FS Construcciones Vianri"
         },
         {
           "away": "Melilla Ciudad del Deporte Nueva Era",
@@ -9647,7 +9649,7 @@
           "venue": "P. José Pérez Pozuelo (T)"
         },
         {
-          "away": "Cdb Salvatierra FS Construciones Vianri",
+          "away": "Cdb Salvatierra FS Construcciones Vianri",
           "date": "2026-11-28",
           "home": "Dos Hermanas F.S. C.D. \"A\"",
           "venue": "Pabellón Municipal Francisco de Dios Jiménez (POL)"
@@ -9703,7 +9705,7 @@
         {
           "away": "C.D. Bujalance F.S. Beconet",
           "date": "2026-12-05",
-          "home": "Cdb Salvatierra FS Construciones Vianri"
+          "home": "Cdb Salvatierra FS Construcciones Vianri"
         },
         {
           "away": "Nawter Blanca FS",
@@ -9742,7 +9744,7 @@
           "venue": "Pabellón José Antonio Segura (POL)"
         },
         {
-          "away": "Cdb Salvatierra FS Construciones Vianri",
+          "away": "Cdb Salvatierra FS Construcciones Vianri",
           "date": "2026-12-12",
           "home": "C.D. Malacitano Futsal"
         },
@@ -9802,7 +9804,7 @@
         {
           "away": "C.D. Sporting FS Almería Biocampojoyma",
           "date": "2026-12-19",
-          "home": "Cdb Salvatierra FS Construciones Vianri"
+          "home": "Cdb Salvatierra FS Construcciones Vianri"
         },
         {
           "away": "C.D. Bujalance F.S. Beconet",
@@ -9836,7 +9838,7 @@
           "home": "Crevillent Futsal Starts \"A\""
         },
         {
-          "away": "Cdb Salvatierra FS Construciones Vianri",
+          "away": "Cdb Salvatierra FS Construcciones Vianri",
           "date": "2027-01-09",
           "home": "Nawter Blanca FS"
         },
@@ -9905,7 +9907,7 @@
           "venue": "P.M. de Moral de Calatrava (POL)"
         },
         {
-          "away": "Cdb Salvatierra FS Construciones Vianri",
+          "away": "Cdb Salvatierra FS Construcciones Vianri",
           "date": "2027-01-16T16:00:00",
           "home": "Melilla Ciudad del Deporte Nueva Era",
           "venue": "Pabellón Guillermo García Pezzi (PIS)"
@@ -9933,7 +9935,7 @@
         {
           "away": "Crevillent Futsal Starts \"A\"",
           "date": "2027-01-23",
-          "home": "Cdb Salvatierra FS Construciones Vianri"
+          "home": "Cdb Salvatierra FS Construcciones Vianri"
         },
         {
           "away": "Oleoinnova Mengibar FS",
@@ -9975,7 +9977,7 @@
           "home": "Crevillent Futsal Starts \"A\""
         },
         {
-          "away": "Cdb Salvatierra FS Construciones Vianri",
+          "away": "Cdb Salvatierra FS Construcciones Vianri",
           "date": "2027-01-30",
           "home": "Oleoinnova Mengibar FS",
           "venue": "P.M. Sebastián Moya Lorca (POL)"
@@ -10031,7 +10033,7 @@
         {
           "away": "FLEXLIVING JUMILLA FS",
           "date": "2027-02-06",
-          "home": "Cdb Salvatierra FS Construciones Vianri"
+          "home": "Cdb Salvatierra FS Construcciones Vianri"
         },
         {
           "away": "GH Distribución Moral FS",
@@ -10070,7 +10072,7 @@
           "venue": "Pabellón Guillermo García Pezzi (PIS)"
         },
         {
-          "away": "Cdb Salvatierra FS Construciones Vianri",
+          "away": "Cdb Salvatierra FS Construcciones Vianri",
           "date": "2026-09-26T17:00:00",
           "home": "Crevillent Futsal Starts \"A\"",
           "venue": "Pabellón ABRETS de Crevillente (PIS)"
@@ -10124,7 +10126,7 @@
           "venue": "P.M. Carlos García (POL)"
         },
         {
-          "away": "Cdb Salvatierra FS Construciones Vianri",
+          "away": "Cdb Salvatierra FS Construcciones Vianri",
           "date": "2027-02-13",
           "home": "GH Distribución Moral FS",
           "venue": "P.M. de Moral de Calatrava (POL)"
@@ -10179,7 +10181,7 @@
         {
           "away": "Imperio Los Rosales",
           "date": "2027-02-20",
-          "home": "Cdb Salvatierra FS Construciones Vianri"
+          "home": "Cdb Salvatierra FS Construcciones Vianri"
         },
         {
           "away": "Jimbee Cartagena Futbol Sala",
@@ -10223,7 +10225,7 @@
           "home": "Imperio Los Rosales"
         },
         {
-          "away": "Cdb Salvatierra FS Construciones Vianri",
+          "away": "Cdb Salvatierra FS Construcciones Vianri",
           "date": "2027-02-27",
           "home": "Jimbee Cartagena Futbol Sala"
         },
@@ -10277,7 +10279,7 @@
         {
           "away": "Joasan Construcciones CFS Pinatar \"B\"",
           "date": "2027-03-06",
-          "home": "Cdb Salvatierra FS Construciones Vianri"
+          "home": "Cdb Salvatierra FS Construcciones Vianri"
         },
         {
           "away": "Jimbee Cartagena Futbol Sala",
@@ -10328,7 +10330,7 @@
         {
           "away": "Sima Granada FS",
           "date": "2027-03-20",
-          "home": "Cdb Salvatierra FS Construciones Vianri"
+          "home": "Cdb Salvatierra FS Construcciones Vianri"
         }
       ],
       "25": [
@@ -10373,7 +10375,7 @@
           "venue": "Pabellón Guillermo García Pezzi (PIS)"
         },
         {
-          "away": "Cdb Salvatierra FS Construciones Vianri",
+          "away": "Cdb Salvatierra FS Construcciones Vianri",
           "date": "2027-04-04",
           "home": "CD Virgili Cádiz \"A\"",
           "venue": "Complejo Dpvo. Ciudad de Cádiz (PIS)"
@@ -10416,7 +10418,7 @@
         {
           "away": "Dos Hermanas F.S. C.D. \"A\"",
           "date": "2027-04-10",
-          "home": "Cdb Salvatierra FS Construciones Vianri"
+          "home": "Cdb Salvatierra FS Construcciones Vianri"
         },
         {
           "away": "Sima Granada FS",
@@ -10454,7 +10456,7 @@
           "home": "C.D. Malacitano Futsal"
         },
         {
-          "away": "Cdb Salvatierra FS Construciones Vianri",
+          "away": "Cdb Salvatierra FS Construcciones Vianri",
           "date": "2027-04-17",
           "home": "C.D. Bujalance F.S. Beconet",
           "venue": "P. José Pérez Pozuelo (T)"
@@ -10503,7 +10505,7 @@
         {
           "away": "C.D. Malacitano Futsal",
           "date": "2027-04-24",
-          "home": "Cdb Salvatierra FS Construciones Vianri"
+          "home": "Cdb Salvatierra FS Construcciones Vianri"
         },
         {
           "away": "Sima Granada FS",
@@ -10542,7 +10544,7 @@
           "home": "Nawter Blanca FS"
         },
         {
-          "away": "Cdb Salvatierra FS Construciones Vianri",
+          "away": "Cdb Salvatierra FS Construcciones Vianri",
           "date": "2027-05-01",
           "home": "C.D. Sporting FS Almería Biocampojoyma",
           "venue": "Pabellón José Antonio Segura (POL)"
@@ -10593,7 +10595,7 @@
         {
           "away": "Oleoinnova Mengibar FS",
           "date": "2026-10-03T19:00:00",
-          "home": "Cdb Salvatierra FS Construciones Vianri",
+          "home": "Cdb Salvatierra FS Construcciones Vianri",
           "venue": "Pabellón Municipal Calzada de Calatrava (PIS)"
         },
         {
@@ -10640,7 +10642,7 @@
         {
           "away": "Nawter Blanca FS",
           "date": "2027-05-08",
-          "home": "Cdb Salvatierra FS Construciones Vianri"
+          "home": "Cdb Salvatierra FS Construcciones Vianri"
         },
         {
           "away": "C.D. Malacitano Futsal",
@@ -10693,7 +10695,7 @@
           "venue": "Pabellón José Antonio Segura (POL)"
         },
         {
-          "away": "Cdb Salvatierra FS Construciones Vianri",
+          "away": "Cdb Salvatierra FS Construcciones Vianri",
           "date": "2026-10-10T19:00:00",
           "home": "FLEXLIVING JUMILLA FS",
           "venue": "P.M. Carlos García (POL)"
@@ -10739,7 +10741,7 @@
         {
           "away": "GH Distribución Moral FS",
           "date": "2026-10-17T18:30:00",
-          "home": "Cdb Salvatierra FS Construciones Vianri",
+          "home": "Cdb Salvatierra FS Construcciones Vianri",
           "venue": "Pabellón Municipal Calzada de Calatrava (PIS)"
         },
         {
@@ -10763,7 +10765,7 @@
       ],
       "6": [
         {
-          "away": "Cdb Salvatierra FS Construciones Vianri",
+          "away": "Cdb Salvatierra FS Construcciones Vianri",
           "date": "2026-10-24T12:00:00",
           "home": "Imperio Los Rosales",
           "venue": "CD Guillermo Molina Ríos (POL)"
@@ -10839,7 +10841,7 @@
         {
           "away": "Jimbee Cartagena Futbol Sala",
           "date": "2026-10-31T18:30:00",
-          "home": "Cdb Salvatierra FS Construciones Vianri",
+          "home": "Cdb Salvatierra FS Construcciones Vianri",
           "venue": "Pabellón Municipal Calzada de Calatrava (PIS)"
         },
         {
@@ -10881,7 +10883,7 @@
           "venue": "Palacio de los Deportes de Cartagena (POL)"
         },
         {
-          "away": "Cdb Salvatierra FS Construciones Vianri",
+          "away": "Cdb Salvatierra FS Construcciones Vianri",
           "date": "2026-11-07T17:00:00",
           "home": "Joasan Construcciones CFS Pinatar \"B\"",
           "venue": "Pab Príncipe de Asturias (PIS)"
@@ -10924,12 +10926,6 @@
           "venue": "Pabellón José Antonio Segura (POL)"
         },
         {
-          "away": "Jimbee Cartagena Futbol Sala",
-          "date": "2026-11-14",
-          "home": "Dos Hermanas F.S. C.D. \"A\"",
-          "venue": "Pabellón Municipal Francisco de Dios Jiménez (POL)"
-        },
-        {
           "away": "Crevillent Futsal Starts \"A\"",
           "date": "2026-11-14T16:00:00",
           "home": "Melilla Ciudad del Deporte Nueva Era",
@@ -10942,13 +10938,19 @@
           "venue": "P. José Pérez Pozuelo (T)"
         },
         {
+          "away": "Jimbee Cartagena Futbol Sala",
+          "date": "2026-11-14T18:30:00",
+          "home": "Dos Hermanas F.S. C.D. \"A\"",
+          "venue": "Pabellón Municipal Francisco de Dios Jiménez (POL)"
+        },
+        {
           "away": "GH Distribución Moral FS",
-          "date": "2026-11-14T19:30:00",
+          "date": "2026-11-14T20:00:00",
           "home": "C.D. Malacitano Futsal",
           "venue": "P.M. Tiro de Pichón (POL)"
         },
         {
-          "away": "Cdb Salvatierra FS Construciones Vianri",
+          "away": "Cdb Salvatierra FS Construcciones Vianri",
           "date": "2026-11-14T20:00:00",
           "home": "Sima Granada FS",
           "venue": "Complejo.Deportivo Nuñez Blanca (PIS)"
@@ -16620,16 +16622,6 @@
           "venue": "P.M. de la Juventud (POL)"
         },
         {
-          "away": "I.E.S. Luis de Camoens",
-          "date": "2026-11-14",
-          "home": "Globalcaja Albacete F.S."
-        },
-        {
-          "away": "C.F.S. Femenino San Fernando",
-          "date": "2026-11-14",
-          "home": "Dos Hermanas F.S. C.D."
-        },
-        {
           "away": "C.D.E. Leganés F.S. Masdeporte",
           "date": "2026-11-14",
           "home": "CD Salesianos Puertollano",
@@ -16642,9 +16634,21 @@
           "venue": "Complejo.Deportivo Nuñez Blanca (PIS)"
         },
         {
+          "away": "C.F.S. Femenino San Fernando",
+          "date": "2026-11-14T16:00:00",
+          "home": "Dos Hermanas F.S. C.D.",
+          "venue": "Pabellón Municipal Francisco de Dios Jiménez (POL)"
+        },
+        {
           "away": "Ramón Y Cajal Féminas",
           "date": "2026-11-15",
           "home": "Majadahonda F.S.F./Afar 4"
+        },
+        {
+          "away": "I.E.S. Luis de Camoens",
+          "date": "2026-11-15T11:00:00",
+          "home": "Globalcaja Albacete F.S.",
+          "venue": "Pabellón Municipal Cocheras -Lepanto (POL)"
         },
         {
           "away": "Almagro F.S.F.",
@@ -18137,16 +18141,16 @@
   "_fetched": {
     "33836159|33892849": "2026-11-04T12:29:54+00:00",
     "33836159|33892850": "2026-11-04T12:30:00+00:00",
-    "33836163|33836164": "2026-11-03T19:32:54+00:00",
-    "33836163|33836165": "2026-11-03T19:33:05+00:00",
-    "33836163|33836166": "2026-11-03T19:48:16+00:00",
-    "33836163|33836167": "2026-11-03T19:48:27+00:00",
-    "33836163|33836168": "2026-11-03T19:48:50+00:00",
-    "33836163|33836169": "2026-11-03T19:48:38+00:00",
+    "33836163|33836164": "2026-11-04T19:54:00+00:00",
+    "33836163|33836165": "2026-11-04T20:09:11+00:00",
+    "33836163|33836166": "2026-11-04T20:09:22+00:00",
+    "33836163|33836167": "2026-11-04T20:09:33+00:00",
+    "33836163|33836168": "2026-11-04T20:25:07+00:00",
+    "33836163|33836169": "2026-11-04T20:09:44+00:00",
     "33836179|33836180": "2026-11-04T12:14:10+00:00",
     "33836181|33836182": "2026-11-04T12:14:21+00:00",
     "33836181|33836183": "2026-11-04T12:29:33+00:00",
-    "33836181|33836184": "2026-11-03T20:04:42+00:00",
+    "33836181|33836184": "2026-11-04T19:53:29+00:00",
     "33918407|33918408": "2026-11-04T00:56:07+00:00"
   }
 }
