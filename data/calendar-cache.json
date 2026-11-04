@@ -935,49 +935,57 @@
           "away": "Wanapix",
           "date": "2026-11-29T17:00:00",
           "home": "Jaen Paraiso Interior F.S.",
-          "venue": "Pab. Jorge Garbajosa (POL)"
+          "venue": "P.D. Olivo Arena (T)"
         }
       ],
       "11": [
         {
-          "away": "Jaen Paraiso Interior F.S.",
-          "date": "2026-12-05",
-          "home": "Barça"
-        },
-        {
-          "away": "ElPozo Murcia Costa Cálida",
-          "date": "2026-12-05",
-          "home": "Jimbee Cartagena Costa Cálida"
-        },
-        {
-          "away": "Illes Balears Palma Futsal",
-          "date": "2026-12-05",
-          "home": "Córdoba Patrimonio De La Humanidad"
+          "away": "Servigroup Peñiscola FS",
+          "date": "2026-12-04T19:30:00",
+          "home": "CD Xota FS",
+          "venue": "Pabellón Anaitasuna (POL)"
         },
         {
           "away": "O Parrulo Ferrol F.S.",
-          "date": "2026-12-05",
-          "home": "Sur Seeds El Ejido F.S."
-        },
-        {
-          "away": "Catgas Energía Santa Coloma",
-          "date": "2026-12-05",
-          "home": "Inter JP Financial"
+          "date": "2026-12-04T21:15:00",
+          "home": "Sur Seeds El Ejido F.S.",
+          "venue": "P.M. de El Ejido (POL)"
         },
         {
           "away": "Quesos El Hidalgo Manzanares F.S.",
-          "date": "2026-12-05",
-          "home": "Noia Portus Apostoli"
-        },
-        {
-          "away": "Servigroup Peñiscola FS",
-          "date": "2026-12-05",
-          "home": "CD Xota FS"
+          "date": "2026-12-05T14:30:00",
+          "home": "Noia Portus Apostoli",
+          "venue": "Pab. Agustín Mouris (POL)"
         },
         {
           "away": "Wanapix",
-          "date": "2026-12-05",
-          "home": "Viña Albali Valdepeñas"
+          "date": "2026-12-05T17:00:00",
+          "home": "Viña Albali Valdepeñas",
+          "venue": "P.C.D.Virgen de la Cabeza (T)"
+        },
+        {
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2026-12-05T18:45:00",
+          "home": "Inter JP Financial",
+          "venue": "Pab. Jorge Garbajosa (POL)"
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2026-12-05T20:30:00",
+          "home": "Córdoba Patrimonio De La Humanidad",
+          "venue": "P.M.D. Vista Alegre (POL)"
+        },
+        {
+          "away": "Jaen Paraiso Interior F.S.",
+          "date": "2026-12-15T20:30:00",
+          "home": "Barça",
+          "venue": "Palau Blaugrana (T)"
+        },
+        {
+          "away": "ElPozo Murcia Costa Cálida",
+          "date": "2026-12-16T20:30:00",
+          "home": "Jimbee Cartagena Costa Cálida",
+          "venue": "Palacio de los Deportes de Cartagena (POL)"
         }
       ],
       "12": [
@@ -11011,6 +11019,12 @@
           "home": "Ourense Ontime"
         },
         {
+          "away": "LBTL Futsal Alcantarilla",
+          "date": "2026-12-05T10:00:00",
+          "home": "Nueces de Ronda Atlético Torcal FS",
+          "venue": "Pabellón de Casabermeja (PIS)"
+        },
+        {
           "away": "Ceuta Agrupación Deportiva",
           "date": "2026-12-05T12:00:00",
           "home": "Atlético Navalcarnero",
@@ -11021,11 +11035,6 @@
           "date": "2026-12-05T12:30:00",
           "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
           "venue": "Pab. Javier Imbroda Ortiz (POL)"
-        },
-        {
-          "away": "LBTL Futsal Alcantarilla",
-          "date": "2026-12-05T14:30:00",
-          "home": "Nueces de Ronda Atlético Torcal FS"
         },
         {
           "away": "Estrela Revoltosa Verín FSF",
@@ -12462,12 +12471,6 @@
           "home": "CLUB DEPORTIVO TEIDAYA \"A\""
         },
         {
-          "away": "CFS Gran Canaria Teldeportivo",
-          "date": "2026-11-28",
-          "home": "U.D.C. Txantrea K.K.E.",
-          "venue": "Polideportivo Arrosadia (T)"
-        },
-        {
           "away": "CD Lacturale Orvina",
           "date": "2026-11-28",
           "home": "CDE Muslera GSW \"A\"",
@@ -12490,6 +12493,12 @@
           "date": "2026-11-28T18:00:00",
           "home": "A.D. Mioño FSF",
           "venue": "Pab. Peru Zaballa (POL)"
+        },
+        {
+          "away": "CFS Gran Canaria Teldeportivo",
+          "date": "2026-11-28T18:30:00",
+          "home": "U.D.C. Txantrea K.K.E.",
+          "venue": "Polideportivo Arrosadia (T)"
         },
         {
           "away": "At. Arnoia",
@@ -12589,9 +12598,9 @@
         },
         {
           "away": "CD Lacturale Orvina",
-          "date": "2026-12-13",
+          "date": "2026-12-12T19:00:00",
           "home": "A.D. Mioño FSF",
-          "venue": "P. Portus Amanus (T)"
+          "venue": "Pab. Peru Zaballa (POL)"
         }
       ],
       "14": [
@@ -13773,16 +13782,16 @@
           "home": "CLUB DEPORTIVO TEIDAYA \"A\""
         },
         {
+          "away": "C.D. Juventud del Círculo Católico",
+          "date": "2026-11-14T16:30:00",
+          "home": "CD Lacturale Orvina",
+          "venue": "Polideportivo Ezcaba (T)"
+        },
+        {
           "away": "ENCE Marín Futsal",
           "date": "2026-11-14T18:30:00",
           "home": "U.D.C. Txantrea K.K.E.",
           "venue": "Polideportivo Arrosadia (T)"
-        },
-        {
-          "away": "C.D. Juventud del Círculo Católico",
-          "date": "2026-11-14T18:30:00",
-          "home": "CD Lacturale Orvina",
-          "venue": "Polideportivo Ezcaba (T)"
         },
         {
           "away": "Valdetires Ferrol F.S.F.",
@@ -18126,17 +18135,17 @@
   },
   "_comment": "Cache persistente del calendario auto-generada por scrapers.calendar_cache. NO editar a mano. Las claves planas son actaUrls por partido; la seccion _calendars guarda las jornadas enteras tal y como las devolvio la PNFG. Cada run fusiona lo fresco con esta cache para que un rate-limit no borre datos que ya teniamos. Si una entrada deja de ser valida, borrala y la proxima ejecucion la volvera a resolver. Las claves llevan dentro el codigo de competicion, que cambia cada temporada, asi que las entradas de temporadas pasadas quedan inertes (no se podan solas).",
   "_fetched": {
-    "33836159|33892849": "2026-11-03T12:16:46+00:00",
-    "33836159|33892850": "2026-11-03T12:16:52+00:00",
+    "33836159|33892849": "2026-11-04T12:29:54+00:00",
+    "33836159|33892850": "2026-11-04T12:30:00+00:00",
     "33836163|33836164": "2026-11-03T19:32:54+00:00",
     "33836163|33836165": "2026-11-03T19:33:05+00:00",
     "33836163|33836166": "2026-11-03T19:48:16+00:00",
     "33836163|33836167": "2026-11-03T19:48:27+00:00",
     "33836163|33836168": "2026-11-03T19:48:50+00:00",
     "33836163|33836169": "2026-11-03T19:48:38+00:00",
-    "33836179|33836180": "2026-11-03T12:01:02+00:00",
-    "33836181|33836182": "2026-11-03T12:01:14+00:00",
-    "33836181|33836183": "2026-11-03T12:16:25+00:00",
+    "33836179|33836180": "2026-11-04T12:14:10+00:00",
+    "33836181|33836182": "2026-11-04T12:14:21+00:00",
+    "33836181|33836183": "2026-11-04T12:29:33+00:00",
     "33836181|33836184": "2026-11-03T20:04:42+00:00",
     "33918407|33918408": "2026-11-04T00:56:07+00:00"
   }
