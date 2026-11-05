@@ -16782,6 +16782,12 @@
           "home": "Ribera Navarra FS"
         },
         {
+          "away": "Barça Atlètic",
+          "date": "2026-11-28T18:00:00",
+          "home": "Family Cash Alzira F.S.",
+          "venue": "Palau D?Esports de Alzira (T)"
+        },
+        {
           "away": "C.E. Futsal Gestoria Luis Mataró",
           "date": "2026-11-28T18:30:00",
           "home": "Sala 5 Martorell MCD Grup",
@@ -16804,12 +16810,6 @@
           "date": "2026-11-28T20:00:00",
           "home": "ElPozo Ciudad de Murcia",
           "venue": "Palacio de los Deportes de Murcia (POL)"
-        },
-        {
-          "away": "Barça Atlètic",
-          "date": "2026-11-29T18:00:00",
-          "home": "Family Cash Alzira F.S.",
-          "venue": "Palau D?Esports de Alzira (T)"
         }
       ],
       "12": [
@@ -17402,12 +17402,6 @@
       ],
       "23": [
         {
-          "away": "Zambú CFS Pinatar Cerramientos Abatibles",
-          "date": "2027-03-05T20:30:00",
-          "home": "REYCO Burela FS",
-          "venue": "P.M. Vista Alegre (POL)"
-        },
-        {
           "away": "Entrerrios Automatización",
           "date": "2027-03-06",
           "home": "Barça Atlètic",
@@ -17447,6 +17441,12 @@
           "date": "2027-03-06T12:30:00",
           "home": "C.D. Melistar",
           "venue": "Pabellón Guillermo García Pezzi (PIS)"
+        },
+        {
+          "away": "Zambú CFS Pinatar Cerramientos Abatibles",
+          "date": "2027-03-06T18:45:00",
+          "home": "REYCO Burela FS",
+          "venue": "P.M. Vista Alegre (POL)"
         }
       ],
       "24": [
@@ -18151,6 +18151,6 @@
     "33836181|33836182": "2026-11-04T12:14:21+00:00",
     "33836181|33836183": "2026-11-04T12:29:33+00:00",
     "33836181|33836184": "2026-11-04T19:53:29+00:00",
-    "33918407|33918408": "2026-11-04T00:56:07+00:00"
+    "33918407|33918408": "2026-11-05T00:57:11+00:00"
   }
 }
