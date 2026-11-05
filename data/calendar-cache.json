@@ -15192,20 +15192,21 @@
           "venue": "Pabellón Municipal del Linyola (PIS)"
         },
         {
-          "away": "C.D. Parque Col. Santa Ana",
+          "away": "Club Deportivo San Pablo Ibiza",
           "date": "2026-11-14",
-          "home": "Club Deportivo Nou Turia FSF \"A\""
+          "home": "SolarMon-Les Glories 2014 CD La Concordia"
         },
         {
           "away": "F.S. Sabadell",
-          "date": "2026-11-14",
+          "date": "2026-11-14T16:30:00",
           "home": "AECS L Hospitalet",
           "venue": "P.M. Sán Feliú (POL)"
         },
         {
-          "away": "Club Deportivo San Pablo Ibiza",
-          "date": "2026-11-14",
-          "home": "SolarMon-Les Glories 2014 CD La Concordia"
+          "away": "C.D. Parque Col. Santa Ana",
+          "date": "2026-11-14T18:00:00",
+          "home": "Club Deportivo Nou Turia FSF \"A\"",
+          "venue": "Pabellon Mpal. Alfafar SUMA (POL)"
         },
         {
           "away": "AE Penya Esplugues Salvat Logística \"A\"",
@@ -18139,17 +18140,17 @@
   },
   "_comment": "Cache persistente del calendario auto-generada por scrapers.calendar_cache. NO editar a mano. Las claves planas son actaUrls por partido; la seccion _calendars guarda las jornadas enteras tal y como las devolvio la PNFG. Cada run fusiona lo fresco con esta cache para que un rate-limit no borre datos que ya teniamos. Si una entrada deja de ser valida, borrala y la proxima ejecucion la volvera a resolver. Las claves llevan dentro el codigo de competicion, que cambia cada temporada, asi que las entradas de temporadas pasadas quedan inertes (no se podan solas).",
   "_fetched": {
-    "33836159|33892849": "2026-11-04T12:29:54+00:00",
-    "33836159|33892850": "2026-11-04T12:30:00+00:00",
+    "33836159|33892849": "2026-11-05T12:43:05+00:00",
+    "33836159|33892850": "2026-11-05T12:43:11+00:00",
     "33836163|33836164": "2026-11-04T19:54:00+00:00",
     "33836163|33836165": "2026-11-04T20:09:11+00:00",
     "33836163|33836166": "2026-11-04T20:09:22+00:00",
     "33836163|33836167": "2026-11-04T20:09:33+00:00",
     "33836163|33836168": "2026-11-04T20:25:07+00:00",
     "33836163|33836169": "2026-11-04T20:09:44+00:00",
-    "33836179|33836180": "2026-11-04T12:14:10+00:00",
-    "33836181|33836182": "2026-11-04T12:14:21+00:00",
-    "33836181|33836183": "2026-11-04T12:29:33+00:00",
+    "33836179|33836180": "2026-11-05T12:44:32+00:00",
+    "33836181|33836182": "2026-11-05T12:27:33+00:00",
+    "33836181|33836183": "2026-11-05T12:27:44+00:00",
     "33836181|33836184": "2026-11-04T19:53:29+00:00",
     "33918407|33918408": "2026-11-05T00:57:11+00:00"
   }
