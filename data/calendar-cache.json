@@ -510,6 +510,13 @@
   "33836163|33836168|J7|lascuevecitasfs|fslospinos": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703253&NPcd_Pdf=1",
   "33836163|33836168|J7|novocomunidadesbugedofs|aguasdeteror": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703250&NPcd_Pdf=1",
   "33836163|33836168|J7|suntrypaguimesfs|cfscasajuvlamatanza": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703249&NPcd_Pdf=1",
+  "33836163|33836168|J8|aguasdeteror|suntrypaguimesfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703258&NPcd_Pdf=1",
+  "33836163|33836168|J8|cdchinguaroa|adduggisanfernando": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703256&NPcd_Pdf=1",
+  "33836163|33836168|J8|cdtenerifeiberiatoscal|lascuevecitasfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703262&NPcd_Pdf=1",
+  "33836163|33836168|J8|cfscasajuvlamatanza|cdcisnerosalter": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703257&NPcd_Pdf=1",
+  "33836163|33836168|J8|fslospinos|lasallesanildelfonso": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703261&NPcd_Pdf=1",
+  "33836163|33836168|J8|grancanariafs|basileafutbolsalacd": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703260&NPcd_Pdf=1",
+  "33836163|33836168|J8|malta97|novocomunidadesbugedofs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703259&NPcd_Pdf=1",
   "33836163|33836169|J1|cdbsalvatierrafsconstrucionesvianri|melillaciudaddeldeportenuevaera": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702962&NPcd_Pdf=1",
   "33836163|33836169|J1|cdbsalvatierrafs|melillaciudaddeldeportenuevaera": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702962&NPcd_Pdf=1",
   "33836163|33836169|J1|cdbujalancefsbeconet|cdmalacitanofutsal": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702959&NPcd_Pdf=1",
@@ -9508,6 +9515,12 @@
           "venue": "Pab. Las Crucitas"
         },
         {
+          "away": "Gran Canaria FS",
+          "date": "2026-11-13T21:00:00",
+          "home": "NovoComunidades-Bugedo FS",
+          "venue": "Pab. Juan Beltrán"
+        },
+        {
           "away": "Las Cuevecitas FS",
           "date": "2026-11-14",
           "home": "Doctoral FS"
@@ -9529,12 +9542,6 @@
           "date": "2026-11-14T17:00:00",
           "home": "Basilea Futbol Sala C.D.",
           "venue": "Pabellón Chano Melián"
-        },
-        {
-          "away": "Gran Canaria FS",
-          "date": "2026-11-14T21:00:00",
-          "home": "NovoComunidades-Bugedo FS",
-          "venue": "Pab. Juan Beltrán"
         }
       ]
     },
@@ -18150,7 +18157,7 @@
     "33836163|33836165": "2026-11-05T22:21:30+00:00",
     "33836163|33836166": "2026-11-05T22:21:41+00:00",
     "33836163|33836167": "2026-11-05T22:21:52+00:00",
-    "33836163|33836168": "2026-11-04T20:25:07+00:00",
+    "33836163|33836168": "2026-11-06T06:56:43+00:00",
     "33836163|33836169": "2026-11-05T22:37:03+00:00",
     "33836179|33836180": "2026-11-05T12:44:32+00:00",
     "33836181|33836182": "2026-11-05T12:27:33+00:00",
