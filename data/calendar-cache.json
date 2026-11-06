@@ -529,12 +529,14 @@
   "33836163|33836169|J2|cdmalacitanofutsal|simagranadafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702967&NPcd_Pdf=1",
   "33836163|33836169|J2|cdsportingfsalmeriabiocampojoyma|cdbujalancefsbeconet": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702968&NPcd_Pdf=1",
   "33836163|33836169|J2|crevillentfutsalstartsa|cdbsalvatierrafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702971&NPcd_Pdf=1",
+  "33836163|33836169|J2|crevillentfutsalstartsa|cdbsalvatierrafsconstruccionesvianri": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702971&NPcd_Pdf=1",
   "33836163|33836169|J2|crevillentfutsalstartsa|cdbsalvatierrafsconstrucionesvianri": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702971&NPcd_Pdf=1",
   "33836163|33836169|J2|flexlivingjumillafs|jimbeecartagenafutbolsala": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702973&NPcd_Pdf=1",
   "33836163|33836169|J2|ghdistribucionmoralfs|imperiolosrosales": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702974&NPcd_Pdf=1",
   "33836163|33836169|J2|melillaciudaddeldeportenuevaera|cdvirgilicadiza": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702970&NPcd_Pdf=1",
   "33836163|33836169|J2|nawterblancafs|doshermanasfscda": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702969&NPcd_Pdf=1",
   "33836163|33836169|J2|oleoinnovamengibarfs|joasanconstruccionescfspinatarb": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702972&NPcd_Pdf=1",
+  "33836163|33836169|J3|cdbsalvatierrafsconstruccionesvianri|oleoinnovamengibarfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702979&NPcd_Pdf=1",
   "33836163|33836169|J3|cdbsalvatierrafsconstrucionesvianri|oleoinnovamengibarfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702979&NPcd_Pdf=1",
   "33836163|33836169|J3|cdbsalvatierrafs|oleoinnovamengibarfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702979&NPcd_Pdf=1",
   "33836163|33836169|J3|cdbujalancefsbeconet|nawterblancafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702976&NPcd_Pdf=1",
@@ -3622,18 +3624,6 @@
       ],
       "9": [
         {
-          "away": "C.D. Tierno Galván",
-          "date": "2026-11-14",
-          "home": "Sibuscascoche Ribeira Fútbol Sala",
-          "venue": "Pabellón Municipal de Lugo (POL)"
-        },
-        {
-          "away": "F.S. Salamanca Energía Duero",
-          "date": "2026-11-14",
-          "home": "O Esteo F.S.",
-          "venue": "Pabellón Municipal de A Fraga (PIS)"
-        },
-        {
           "away": "Racing de Mieres",
           "date": "2026-11-14T17:00:00",
           "home": "Stellae Leis Pontevedra F.S.",
@@ -3650,6 +3640,18 @@
           "date": "2026-11-14T18:00:00",
           "home": "C.D. COMPOSALA",
           "venue": "Pabellón Santa Isabel (POL)"
+        },
+        {
+          "away": "C.D. Tierno Galván",
+          "date": "2026-11-14T18:00:00",
+          "home": "Sibuscascoche Ribeira Fútbol Sala",
+          "venue": "P. M. O Palomar (PIS)"
+        },
+        {
+          "away": "F.S. Salamanca Energía Duero",
+          "date": "2026-11-14T18:00:00",
+          "home": "O Esteo F.S.",
+          "venue": "Pabellón Municipal de A Fraga (PIS)"
         },
         {
           "away": "Grupo FORMA-T Vilalba F.S.",
@@ -3752,15 +3754,15 @@
           "venue": "Polideportivo Pio Baroja (T)"
         },
         {
-          "away": "Otxartabe C.D.",
-          "date": "2026-11-21",
-          "home": "Acontebro Tauste FS",
-          "venue": "Pabellón Joaquin Lasala de Tauste (PIS)"
-        },
-        {
           "away": "Pinseque A.D.",
           "date": "2026-11-21",
           "home": "Coras Futsal Zaragoza"
+        },
+        {
+          "away": "Otxartabe C.D.",
+          "date": "2026-11-21T17:30:00",
+          "home": "Acontebro Tauste FS",
+          "venue": "Pabellón Joaquin Lasala de Tauste (PIS)"
         },
         {
           "away": "Mondrate C.D.",
@@ -6554,12 +6556,6 @@
       ],
       "9": [
         {
-          "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
-          "date": "2026-11-14",
-          "home": "Les Corts EF \"A\"",
-          "venue": "Campus DiagonalNord Edifici PE (T)"
-        },
-        {
           "away": "Catgas Energía Santa Coloma",
           "date": "2026-11-14T14:00:00",
           "home": "A.E. Llevant De Manacor Futsal \"A\"",
@@ -6600,6 +6596,12 @@
           "date": "2026-11-14T19:00:00",
           "home": "Canet F.S.",
           "venue": "Pab. Mun. D'Esports (POL)"
+        },
+        {
+          "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
+          "date": "2026-11-14T20:00:00",
+          "home": "Les Corts EF \"A\"",
+          "venue": "Pavelló Municipal L´Illa (PIS)"
         }
       ]
     },
@@ -9672,16 +9674,16 @@
           "venue": "Complejo.Deportivo Nuñez Blanca (PIS)"
         },
         {
-          "away": "FLEXLIVING JUMILLA FS",
-          "date": "2026-11-28T16:00:00",
-          "home": "Melilla Ciudad del Deporte Nueva Era",
-          "venue": "Pabellón Guillermo García Pezzi (PIS)"
-        },
-        {
           "away": "Imperio Los Rosales",
           "date": "2026-11-28T16:00:00",
           "home": "C.D. Sporting FS Almería Biocampojoyma",
           "venue": "Pabellón José Antonio Segura (POL)"
+        },
+        {
+          "away": "FLEXLIVING JUMILLA FS",
+          "date": "2026-11-28T19:00:00",
+          "home": "Melilla Ciudad del Deporte Nueva Era",
+          "venue": "Pabellón Guillermo García Pezzi (PIS)"
         },
         {
           "away": "Jimbee Cartagena Futbol Sala",
@@ -10926,33 +10928,34 @@
       ],
       "9": [
         {
-          "away": "Oleoinnova Mengibar FS",
-          "date": "2026-11-14",
-          "home": "Nawter Blanca FS"
-        },
-        {
-          "away": "FLEXLIVING JUMILLA FS",
-          "date": "2026-11-14",
-          "home": "C.D. Sporting FS Almería Biocampojoyma",
-          "venue": "Pabellón José Antonio Segura (POL)"
-        },
-        {
-          "away": "Crevillent Futsal Starts \"A\"",
-          "date": "2026-11-14T16:00:00",
-          "home": "Melilla Ciudad del Deporte Nueva Era",
-          "venue": "Pabellón Guillermo García Pezzi (PIS)"
-        },
-        {
           "away": "Imperio Los Rosales",
           "date": "2026-11-14T16:30:00",
           "home": "C.D. Bujalance F.S. Beconet",
           "venue": "P. José Pérez Pozuelo (T)"
         },
         {
+          "away": "Crevillent Futsal Starts \"A\"",
+          "date": "2026-11-14T16:45:00",
+          "home": "Melilla Ciudad del Deporte Nueva Era",
+          "venue": "Pabellón Guillermo García Pezzi (PIS)"
+        },
+        {
+          "away": "Oleoinnova Mengibar FS",
+          "date": "2026-11-14T18:00:00",
+          "home": "Nawter Blanca FS",
+          "venue": "Pabellón Miguel Angel Cano Mellado (POL)"
+        },
+        {
           "away": "Jimbee Cartagena Futbol Sala",
           "date": "2026-11-14T18:30:00",
           "home": "Dos Hermanas F.S. C.D. \"A\"",
           "venue": "Pabellón Municipal Francisco de Dios Jiménez (POL)"
+        },
+        {
+          "away": "FLEXLIVING JUMILLA FS",
+          "date": "2026-11-14T19:00:00",
+          "home": "C.D. Sporting FS Almería Biocampojoyma",
+          "venue": "Pabellón José Antonio Segura (POL)"
         },
         {
           "away": "GH Distribución Moral FS",
@@ -15471,8 +15474,9 @@
         },
         {
           "away": "I.E.S. Luis de Camoens",
-          "date": "2026-12-13",
-          "home": "Majadahonda F.S.F./Afar 4"
+          "date": "2026-12-12T19:00:00",
+          "home": "Majadahonda F.S.F./Afar 4",
+          "venue": "P.M. La Granadilla (POL)"
         },
         {
           "away": "C.D.E. Leganés F.S. Masdeporte",
@@ -15505,12 +15509,6 @@
           "venue": "Pab. Justo Gómez Salto (POL)"
         },
         {
-          "away": "Atletico Navalcarnero",
-          "date": "2026-12-19",
-          "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
-          "venue": "Pab. Lázaro Fernández (POL)"
-        },
-        {
           "away": "ARRIVA AD Alcorcón FSF",
           "date": "2026-12-19",
           "home": "CD Salesianos Puertollano",
@@ -15520,6 +15518,12 @@
           "away": "Globalcaja Albacete F.S.",
           "date": "2026-12-19",
           "home": "Dos Hermanas F.S. C.D."
+        },
+        {
+          "away": "Atletico Navalcarnero",
+          "date": "2026-12-19T16:00:00",
+          "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
+          "venue": "Pab. Lázaro Fernández (POL)"
         },
         {
           "away": "Martos FS Jaén Paraíso Interior",
@@ -15617,7 +15621,7 @@
         },
         {
           "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
-          "date": "2027-01-16T20:00:00",
+          "date": "2027-01-16T19:00:00",
           "home": "Majadahonda F.S.F./Afar 4",
           "venue": "P.M. La Granadilla (POL)"
         }
@@ -16632,18 +16636,6 @@
       ],
       "9": [
         {
-          "away": "CD La Garrovilla Femenino",
-          "date": "2026-11-14",
-          "home": "Martos FS Jaén Paraíso Interior",
-          "venue": "P.M. de la Juventud (POL)"
-        },
-        {
-          "away": "C.D.E. Leganés F.S. Masdeporte",
-          "date": "2026-11-14",
-          "home": "CD Salesianos Puertollano",
-          "venue": "P.M. Santiago Cañizares (POL)"
-        },
-        {
           "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
           "date": "2026-11-14T13:00:00",
           "home": "Coviran UAPO Granada FS Femenino",
@@ -16656,9 +16648,22 @@
           "venue": "Pabellón Municipal Francisco de Dios Jiménez (POL)"
         },
         {
+          "away": "CD La Garrovilla Femenino",
+          "date": "2026-11-14T18:00:00",
+          "home": "Martos FS Jaén Paraíso Interior",
+          "venue": "P.M. de la Juventud (POL)"
+        },
+        {
           "away": "Ramón Y Cajal Féminas",
-          "date": "2026-11-15",
-          "home": "Majadahonda F.S.F./Afar 4"
+          "date": "2026-11-14T19:00:00",
+          "home": "Majadahonda F.S.F./Afar 4",
+          "venue": "P.M. La Granadilla (POL)"
+        },
+        {
+          "away": "C.D.E. Leganés F.S. Masdeporte",
+          "date": "2026-11-14T19:00:00",
+          "home": "CD Salesianos Puertollano",
+          "venue": "P.M. Santiago Cañizares (POL)"
         },
         {
           "away": "I.E.S. Luis de Camoens",
@@ -16787,12 +16792,6 @@
           "venue": "P.M. Villafontana (POL)"
         },
         {
-          "away": "Xerez Toyota Nimauto",
-          "date": "2026-11-28",
-          "home": "Zambú CFS Pinatar Cerramientos Abatibles",
-          "venue": "Pab Príncipe de Asturias (PIS)"
-        },
-        {
           "away": "Unión África Ceutí \"A\"",
           "date": "2026-11-28",
           "home": "Ribera Navarra FS"
@@ -16802,6 +16801,12 @@
           "date": "2026-11-28T18:00:00",
           "home": "Family Cash Alzira F.S.",
           "venue": "Palau D?Esports de Alzira (T)"
+        },
+        {
+          "away": "Xerez Toyota Nimauto",
+          "date": "2026-11-28T18:00:00",
+          "home": "Zambú CFS Pinatar Cerramientos Abatibles",
+          "venue": "Pab Príncipe de Asturias (PIS)"
         },
         {
           "away": "C.E. Futsal Gestoria Luis Mataró",
@@ -18157,16 +18162,16 @@
   "_fetched": {
     "33836159|33892849": "2026-11-06T14:44:35+00:00",
     "33836159|33892850": "2026-11-06T14:44:41+00:00",
-    "33836163|33836164": "2026-11-05T22:21:19+00:00",
-    "33836163|33836165": "2026-11-05T22:21:30+00:00",
-    "33836163|33836166": "2026-11-05T22:21:41+00:00",
-    "33836163|33836167": "2026-11-05T22:21:52+00:00",
+    "33836163|33836164": "2026-11-06T21:49:22+00:00",
+    "33836163|33836165": "2026-11-06T21:49:33+00:00",
+    "33836163|33836166": "2026-11-06T21:49:44+00:00",
+    "33836163|33836167": "2026-11-06T21:49:55+00:00",
     "33836163|33836168": "2026-11-06T06:56:43+00:00",
-    "33836163|33836169": "2026-11-05T22:37:03+00:00",
+    "33836163|33836169": "2026-11-06T21:50:06+00:00",
     "33836179|33836180": "2026-11-06T15:01:02+00:00",
     "33836181|33836182": "2026-11-06T15:01:13+00:00",
     "33836181|33836183": "2026-11-06T15:01:24+00:00",
-    "33836181|33836184": "2026-11-05T22:05:39+00:00",
-    "33918407|33918408": "2026-11-05T22:06:00+00:00"
+    "33836181|33836184": "2026-11-06T22:06:04+00:00",
+    "33918407|33918408": "2026-11-06T21:34:05+00:00"
   }
 }
