@@ -19,6 +19,7 @@ from pathlib import Path
 
 from scrapers import calendar_cache, fcf, logo_resolver, rfef, rfef_shields
 from scrapers.team_renames import merge_renamed_in_categories
+from scrapers import former_names
 
 ROOT = Path(__file__).parent
 OUTPUT_DIR = ROOT / "output"
@@ -507,6 +508,16 @@ def main() -> int:
     for msg in merge_renamed_in_categories(categories):
         print(f"[scrape] Un equipo con dos nombres: {msg}")
 
+    # Y los nombres que un club tuvo antes en esta temporada y que el JSON de
+    # hoy ya no lleva: la app los tenía guardados como rival y, sin ellos, los
+    # enseña en todos los equipos. Se aprende comparando con el publicado y se
+    # recuerda entre runs en data/former-names.json.
+    former_store = former_names.load_store(season)
+    if published is not None:
+        former_names.learn(former_store, published.get("categories", []), categories)
+    for msg in former_names.apply(former_store, categories):
+        print(f"[scrape] Nombres de antes: {msg}")
+
     # Va después de heredar: lo que sobreviva a la herencia y siga vacío es una
     # plantilla que nadie ha rellenado, no un run malo.
     pruned = drop_unfilled_divisions(categories)
@@ -553,6 +564,7 @@ def main() -> int:
     # funcionar.
     logo_resolver.save_cache()
     calendar_cache.save_cache()
+    former_names.save_store(former_store, season)
 
     def _count_teams(cat: dict) -> int:
         n = 0

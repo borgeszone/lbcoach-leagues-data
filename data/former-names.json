@@ -1,0 +1,949 @@
+{
+  "_comment": "Nombres que cada club ha tenido esta temporada, aprendidos comparando cada JSON publicado con el siguiente (scrapers/former_names.py). Se publican como `aliases`. Se regenera solo; una línea mala se borra a mano.",
+  "season": "2026-2027",
+  "nodes": {
+    "rfef-primera-fs-fem": [
+      [
+        "AD Alcorcón",
+        "ARRIVA AD Alcorcón FSF"
+      ],
+      [
+        "AE Les Corts",
+        "AE Les Corts UBAE"
+      ],
+      [
+        "Atlético Navalcarnero"
+      ],
+      [
+        "C.D. Guadalcacín F.S.",
+        "Guadalcacín"
+      ],
+      [
+        "Ceuta AD",
+        "Ceuta Agrupación Deportiva"
+      ],
+      [
+        "Estrela Revoltosa Verín FSF",
+        "Estrela Verín"
+      ],
+      [
+        "F.S.F. Castro Bloques Cando",
+        "FSF Castro"
+      ],
+      [
+        "FSF Móstoles",
+        "MRB Móstoles FSF"
+      ],
+      [
+        "Intersala Zaragoza",
+        "Wanapix Aldelis InterSala 10 Zaragoza"
+      ],
+      [
+        "LBTL Alcantarilla",
+        "LBTL Futsal Alcantarilla"
+      ],
+      [
+        "MSC Torreblanca FS",
+        "Melilla Ciudad del Deporte Torreblanca C. F."
+      ],
+      [
+        "Nueces de Ronda Atl. Torcal",
+        "Nueces de Ronda Atlético Torcal FS"
+      ],
+      [
+        "Ourense FSF",
+        "Ourense Ontime"
+      ],
+      [
+        "Poio FS",
+        "Poio Pescamar FS"
+      ],
+      [
+        "Rodiles F.S. \"A\"",
+        "Rodiles FS"
+      ],
+      [
+        "Roldán FSF",
+        "STV Roldán F.S"
+      ]
+    ],
+    "rfef-primera-fs-masc": [
+      [
+        "Barça"
+      ],
+      [
+        "C.A. Osasuna Magna",
+        "CD Xota FS",
+        "Osasuna Magna"
+      ],
+      [
+        "Catgas Energia",
+        "Catgas Energía Santa Coloma",
+        "FS García",
+        "Industrias Santa Coloma"
+      ],
+      [
+        "Córdoba Patrimonio",
+        "Córdoba Patrimonio De La Humanidad"
+      ],
+      [
+        "El Ejido FS",
+        "Inagroup El Ejido",
+        "Sur Seed CD El Ejido Futsal",
+        "Sur Seeds El Ejido F.S."
+      ],
+      [
+        "ElPozo Murcia Costa Cálida"
+      ],
+      [
+        "Illes Balears Palma Futsal",
+        "Palma Futsal"
+      ],
+      [
+        "Inter FS",
+        "Inter JP Financial"
+      ],
+      [
+        "Jaen Paraiso Interior F.S.",
+        "Jaén FS"
+      ],
+      [
+        "Jimbee Cartagena",
+        "Jimbee Cartagena Costa Cálida"
+      ],
+      [
+        "Manzanares FS",
+        "Quesos El Hidalgo Manzanares F.S."
+      ],
+      [
+        "Noia Portus Apostoli"
+      ],
+      [
+        "O Parrulo Ferrol",
+        "O Parrulo Ferrol F.S."
+      ],
+      [
+        "Peñíscola FS",
+        "Servigroup Peñiscola FS"
+      ],
+      [
+        "Viña Albali Valdepeñas"
+      ],
+      [
+        "Wanapix",
+        "Wanapix AD Sala 10",
+        "Wanapix Sala 10"
+      ]
+    ],
+    "rfef-primera-fs-masc/g1": [
+      [
+        "Barça"
+      ],
+      [
+        "CD Xota FS"
+      ],
+      [
+        "Catgas Energía Santa Coloma"
+      ],
+      [
+        "Córdoba Patrimonio De La Humanidad"
+      ],
+      [
+        "ElPozo Murcia Costa Cálida"
+      ],
+      [
+        "Illes Balears Palma Futsal"
+      ],
+      [
+        "Inter JP Financial"
+      ],
+      [
+        "Jaen Paraiso Interior F.S."
+      ],
+      [
+        "Jimbee Cartagena Costa Cálida"
+      ],
+      [
+        "Noia Portus Apostoli"
+      ],
+      [
+        "O Parrulo Ferrol F.S."
+      ],
+      [
+        "Quesos El Hidalgo Manzanares F.S."
+      ],
+      [
+        "Servigroup Peñiscola FS"
+      ],
+      [
+        "Sur Seeds El Ejido F.S."
+      ],
+      [
+        "Viña Albali Valdepeñas"
+      ],
+      [
+        "Wanapix"
+      ]
+    ],
+    "rfef-primera-fs-masc/g2": [
+      [
+        "Barça"
+      ],
+      [
+        "CD Xota FS"
+      ],
+      [
+        "Catgas Energía Santa Coloma"
+      ],
+      [
+        "Córdoba Patrimonio De La Humanidad"
+      ],
+      [
+        "ElPozo Murcia Costa Cálida"
+      ],
+      [
+        "Illes Balears Palma Futsal"
+      ],
+      [
+        "Inter JP Financial"
+      ],
+      [
+        "Jaen Paraiso Interior F.S."
+      ],
+      [
+        "Jimbee Cartagena Costa Cálida"
+      ],
+      [
+        "Noia Portus Apostoli"
+      ],
+      [
+        "O Parrulo Ferrol F.S."
+      ],
+      [
+        "Quesos El Hidalgo Manzanares F.S."
+      ],
+      [
+        "Servigroup Peñiscola FS"
+      ],
+      [
+        "Sur Seeds El Ejido F.S."
+      ],
+      [
+        "Viña Albali Valdepeñas"
+      ],
+      [
+        "Wanapix"
+      ]
+    ],
+    "rfef-segunda-b-fs-masc/g1": [
+      [
+        "5 Coruña F.S."
+      ],
+      [
+        "ADC Lugo Sala",
+        "CD Lugo Sala"
+      ],
+      [
+        "Albense",
+        "CD Albense FS"
+      ],
+      [
+        "Atletico Benavente FS",
+        "Caja Rural Atlético Benavente FS"
+      ],
+      [
+        "C.D. COMPOSALA"
+      ],
+      [
+        "C.D. Tierno Galván"
+      ],
+      [
+        "Caja Rural River Sala Zamora",
+        "River Zamora FS"
+      ],
+      [
+        "Deporcyl - Guardo FS",
+        "Guardo"
+      ],
+      [
+        "F.S. Salamanca Energía Duero",
+        "FS Salamanca"
+      ],
+      [
+        "Grupo FORMA-T Vilalba F.S.",
+        "Vilalba FS"
+      ],
+      [
+        "Leis Pontevedra",
+        "Stellae Leis Pontevedra F.S."
+      ],
+      [
+        "Noia Portus Apostoli",
+        "Noia Portus B"
+      ],
+      [
+        "O Esteo",
+        "O Esteo F.S."
+      ],
+      [
+        "Racing de Mieres"
+      ],
+      [
+        "Ribeira De Piquin",
+        "Sibuscascoche Ribeira Fútbol Sala"
+      ],
+      [
+        "S.D. Xove F.S.",
+        "SD Xove"
+      ]
+    ],
+    "rfef-segunda-b-fs-masc/g2": [
+      [
+        "A.D. Rioja Sala",
+        "Rioja Sala"
+      ],
+      [
+        "A.D. San Juan",
+        "AD San Juan FS",
+        "San Juan FS"
+      ],
+      [
+        "Acontebro Tauste FS",
+        "Tauste FS"
+      ],
+      [
+        "Antiguoko KE Estudio Dental Barrenechea",
+        "Antiguoko Ke"
+      ],
+      [
+        "C.D. Juventud del Círculo Católico",
+        "Juv. del Circulo Católico"
+      ],
+      [
+        "C.D.Ibararte",
+        "Ibararte FS"
+      ],
+      [
+        "CD Pinseque",
+        "Pinseque A.D."
+      ],
+      [
+        "CD Tafa FS",
+        "Vulcanizados Ruiz Tafa FS"
+      ],
+      [
+        "CDF Zierbena",
+        "Zierbena CDF"
+      ],
+      [
+        "CMO Valves Lauburu Ibarra",
+        "Lauburu Ke Ibarra"
+      ],
+      [
+        "Club Nuestra Señora del Portal"
+      ],
+      [
+        "Coras FS",
+        "Coras Futsal Zaragoza"
+      ],
+      [
+        "EMD. Cadrete Forjas Casado"
+      ],
+      [
+        "Entrerrios Automatización"
+      ],
+      [
+        "Mondrate C.D."
+      ],
+      [
+        "Otxartabe C.D."
+      ],
+      [
+        "Sala Quinto CD",
+        "Sala Quinto Cd Futsal"
+      ]
+    ],
+    "rfef-segunda-b-fs-masc/g3": [
+      [
+        "A.E. Llevant De Manacor Futsal \"A\"",
+        "Llevant De Manacor FS"
+      ],
+      [
+        "AE Les Corts FS",
+        "Les Corts EF \"A\""
+      ],
+      [
+        "C. Natacio Sabadell",
+        "Natacio Sabadell"
+      ],
+      [
+        "C.F.S. Futsal IBI - Juypal Hogar",
+        "CFS Ibi"
+      ],
+      [
+        "CCR Castelldefels",
+        "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A"
+      ],
+      [
+        "Canet F.S."
+      ],
+      [
+        "Catgas Energía Santa Coloma",
+        "Industrias Santa Coloma B"
+      ],
+      [
+        "Club Deportivo Sporting la Nucía",
+        "La Nucia"
+      ],
+      [
+        "Club Manresa FS",
+        "Covisa Manresa"
+      ],
+      [
+        "Colegio El Pilar Valencia",
+        "Nunsys El Pilar"
+      ],
+      [
+        "F.S. Picassent",
+        "Picassent"
+      ],
+      [
+        "F.S. Ripollet \"A\"",
+        "Ripollet"
+      ],
+      [
+        "Hospitalet Bellsport",
+        "Hospitalet Bellsport F.S."
+      ],
+      [
+        "Illes Balears Palma Futsal",
+        "Palma Futsal B"
+      ],
+      [
+        "Sant Joan Despi Futbol Sala 20 \"A\"",
+        "Sant Joan Despí CFS",
+        "Sant Joan Despí CFS Cumsa"
+      ],
+      [
+        "Ye Faky",
+        "Ye Faky F.S."
+      ]
+    ],
+    "rfef-segunda-b-fs-masc/g4": [
+      [
+        "AD Alcorcón FS",
+        "Serbis AD Alcorcón FS"
+      ],
+      [
+        "Athletic Club Móstoles",
+        "Athletic Móstoles",
+        "C.D.E. Mostoles Futsal"
+      ],
+      [
+        "Bambatan Rena FS",
+        "Club Union Deportiva Rena"
+      ],
+      [
+        "Bargas CD",
+        "Soliss A.D. Bargas"
+      ],
+      [
+        "C.D. Sierra San Vicente Fútbol Sala \"A\"",
+        "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
+        "Sierra San Vicente FS"
+      ],
+      [
+        "CD Albacete FS"
+      ],
+      [
+        "CD Cobisa FS \"A\"",
+        "Cobisa FS"
+      ],
+      [
+        "CD El Valle",
+        "Colegio El Valle C.D."
+      ],
+      [
+        "CD San Cristóbal Nuñez",
+        "Naturpellet San Cristóbal"
+      ],
+      [
+        "CDU Loeches FS",
+        "Club Unión Deportiva Loeches"
+      ],
+      [
+        "Ciudad de Torrejón",
+        "E.F.S. Ciudad de Torrejón -Redpiso Torrejón"
+      ],
+      [
+        "El Alamo F.S.",
+        "FS El Álamo"
+      ],
+      [
+        "Entreparéntesis - Enertel FS Talavera",
+        "FS Talavera"
+      ],
+      [
+        "Grupo Lopez Bolaños",
+        "Grupo López Bolaños F.S. \"A\""
+      ],
+      [
+        "Inter JP Financial F.S.",
+        "Inter JP Financial FS B"
+      ],
+      [
+        "Unión Tres Cantos",
+        "Unión Tres Cantos FS"
+      ]
+    ],
+    "rfef-segunda-b-fs-masc/g5": [
+      [
+        "Atlético Mengíbar FS",
+        "Oleoinnova Mengibar FS"
+      ],
+      [
+        "Blanca FS",
+        "Nawter Blanca FS"
+      ],
+      [
+        "Bujalance FS",
+        "C.D. Bujalance F.S. Beconet"
+      ],
+      [
+        "C.D. Malacitano Futsal",
+        "Malacitano Futsal"
+      ],
+      [
+        "C.D. Sporting FS Almería Biocampojoyma",
+        "Sporting FS Almería"
+      ],
+      [
+        "CD Virgili Cádiz \"A\"",
+        "Virgili de Cadiz"
+      ],
+      [
+        "CDB Salvatierra",
+        "Cdb Salvatierra FS Construcciones Vianri",
+        "Cdb Salvatierra FS Construciones Vianri",
+        "Cdb Salvatierra Fs"
+      ],
+      [
+        "CFS Pinatar B",
+        "Joasan Construcciones CFS Pinatar \"B\""
+      ],
+      [
+        "Crevillent FS",
+        "Crevillent Futsal Starts \"A\""
+      ],
+      [
+        "Dos Hermanas F.S. C.D. \"A\"",
+        "Dos Hermanas FS"
+      ],
+      [
+        "FLEXLIVING JUMILLA FS",
+        "Jumilla FS"
+      ],
+      [
+        "GH Distribución Moral FS",
+        "Moral FS"
+      ],
+      [
+        "Granada FS",
+        "Sima Granada FS"
+      ],
+      [
+        "Imperio Los Rosales",
+        "Imperio Los Rosales FS"
+      ],
+      [
+        "Jimbee Cartagena B",
+        "Jimbee Cartagena Futbol Sala"
+      ],
+      [
+        "Melilla Ciudad del Deporte Nueva Era",
+        "Nueva Era Melilla FS"
+      ]
+    ],
+    "rfef-segunda-b-fs-masc/g6": [
+      [
+        "AD Duggi Futsal",
+        "AD Duggi-San Fernando"
+      ],
+      [
+        "Aguas de Teror"
+      ],
+      [
+        "Agüimes",
+        "Suntryp Agüimes FS"
+      ],
+      [
+        "Basilea FS",
+        "Basilea Futbol Sala C.D."
+      ],
+      [
+        "C.D. Chinguaro \"A\"",
+        "CFS Chinguaro"
+      ],
+      [
+        "C.D. Cisneros Alter",
+        "Cisneros"
+      ],
+      [
+        "C.D. Salesianos Tenerife"
+      ],
+      [
+        "C.D. Tenerife Iberia Toscal",
+        "Tenerife Iberia Toscal"
+      ],
+      [
+        "C.F.S. Casa Juv. La Matanza",
+        "La Matanza FS",
+        "Matanza Tenerife FS"
+      ],
+      [
+        "Doctoral FS",
+        "Doctoral Ludeservicios"
+      ],
+      [
+        "F.S. Los Pinos",
+        "Juv. Los Pinos"
+      ],
+      [
+        "FS Bugedo",
+        "NovoComunidades-Bugedo FS"
+      ],
+      [
+        "Gran Canaria",
+        "Gran Canaria FS"
+      ],
+      [
+        "La Salle San Ildefonso",
+        "La Salle San Ildelfonso"
+      ],
+      [
+        "Las Cuevecitas",
+        "Las Cuevecitas FS"
+      ],
+      [
+        "Malta 97"
+      ]
+    ],
+    "rfef-segunda-fs-fem/g1": [
+      [
+        "A.D. Mioño FSF",
+        "AD Mioño"
+      ],
+      [
+        "AD Teldeportivo",
+        "CFS Gran Canaria Teldeportivo"
+      ],
+      [
+        "At. Arnoia"
+      ],
+      [
+        "At. Arnoya"
+      ],
+      [
+        "Bembrive"
+      ],
+      [
+        "Burela FS",
+        "REYCO Burela FS"
+      ],
+      [
+        "C.D. Colegio San José"
+      ],
+      [
+        "C.D. Juventud del Círculo Católico",
+        "Juventud Círculo Católico"
+      ],
+      [
+        "C.D. Segosala",
+        "Segosala"
+      ],
+      [
+        "CD Lacturale Orvina",
+        "CD Orvina"
+      ],
+      [
+        "CDE Muslera",
+        "CDE Muslera GSW \"A\""
+      ],
+      [
+        "CFSF Teidaya",
+        "CLUB DEPORTIVO TEIDAYA \"A\""
+      ],
+      [
+        "Caja Rural River Zamora"
+      ],
+      [
+        "Club Deportivo Nou Turia FSF \"A\""
+      ],
+      [
+        "Club Deportivo San Pablo-Eivis"
+      ],
+      [
+        "ENCE Marín Futsal",
+        "Marín Fútsal"
+      ],
+      [
+        "El Gaitero Rodiles FSF",
+        "Rodiles FS B"
+      ],
+      [
+        "Estrela Futsal"
+      ],
+      [
+        "FC Meigas"
+      ],
+      [
+        "Futbol Sala Atlético Mercadal \"A\""
+      ],
+      [
+        "Grupo FORMA-T Vilalba F.S.",
+        "Vilalba FS"
+      ],
+      [
+        "Ourense Ontime"
+      ],
+      [
+        "U.D.C. Txantrea K.K.E."
+      ],
+      [
+        "Valdetires Ferrol",
+        "Valdetires Ferrol F.S.F."
+      ]
+    ],
+    "rfef-segunda-fs-fem/g2": [
+      [
+        "AE Les Corts B",
+        "Les Corts, A.E. \"B\""
+      ],
+      [
+        "AE Penya Esplugues",
+        "AE Penya Esplugues \"A\"",
+        "AE Penya Esplugues Salvat Logística \"A\""
+      ],
+      [
+        "AECS L Hospitalet"
+      ],
+      [
+        "Avenida Algón FS"
+      ],
+      [
+        "Bisontes Castellón",
+        "Feme Castellón C.F.S."
+      ],
+      [
+        "C.D. Parque Col. Santa Ana",
+        "Parque Col. Santa Ana"
+      ],
+      [
+        "C.E. Futsal Mataro"
+      ],
+      [
+        "CD La Concordia",
+        "SolarMon-Les Glories 2014 CD La Concordia"
+      ],
+      [
+        "CD Lacturale Orvina"
+      ],
+      [
+        "CFS Autoescola Urgell Linyola",
+        "CFS Linyola"
+      ],
+      [
+        "CN Caldes"
+      ],
+      [
+        "Club Deportivo Nou Turia FSF \"A\"",
+        "Nou Turia"
+      ],
+      [
+        "Club Deportivo San Pablo Ibiza",
+        "Club Deportivo San Pablo-Eivis",
+        "San Pablo-Eivisa"
+      ],
+      [
+        "Entrerrios Automatización"
+      ],
+      [
+        "F.S. Sabadell"
+      ],
+      [
+        "FS Ripollet",
+        "Somriu Futbol Sala Ripollet"
+      ],
+      [
+        "FSF César Augusta",
+        "Grupo Reciclarte Cesar Augusta"
+      ],
+      [
+        "Futsal Cartonajes Pans Mataró",
+        "Futsal Mataró"
+      ],
+      [
+        "La Villa",
+        "La Villa Móstoles"
+      ],
+      [
+        "Lainco Esportiu Rubi F.S.",
+        "Rubí FS"
+      ],
+      [
+        "SD Hispania Yecla"
+      ],
+      [
+        "U.D.C. Txantrea K.K.E."
+      ],
+      [
+        "Wanapix Aldelis InterSala 10 Zaragoza"
+      ]
+    ],
+    "rfef-segunda-fs-fem/g3": [
+      [
+        "AD Alcorcón B",
+        "ARRIVA AD Alcorcón FSF"
+      ],
+      [
+        "Albacete FS",
+        "Globalcaja Albacete F.S."
+      ],
+      [
+        "Almagro F.S.F."
+      ],
+      [
+        "Atletico Navalcarnero"
+      ],
+      [
+        "C.D.E. Leganés F.S. Masdeporte",
+        "CD Leganés"
+      ],
+      [
+        "C.F.S. Femenino San Fernando",
+        "FS San Fernando"
+      ],
+      [
+        "CD Camoens",
+        "I.E.S. Luis de Camoens"
+      ],
+      [
+        "CD La Garrovilla Femenino",
+        "Sporting Club Garrovilla",
+        "Sporting Garrovilla"
+      ],
+      [
+        "CD Salesianos Puertollano"
+      ],
+      [
+        "Club Deportivo Basico Rivas Futsal"
+      ],
+      [
+        "Coviran UAPO Granada FS Femenino",
+        "Fundación UAPO Granada FS Femenino",
+        "Granada FS"
+      ],
+      [
+        "Deportivo Cordoba FS. / Cajasur"
+      ],
+      [
+        "Dos Hermanas",
+        "Dos Hermanas F.S. C.D."
+      ],
+      [
+        "GLOBALCAJA ALBACETE FS. FEMENINA"
+      ],
+      [
+        "Granada FS Femenino"
+      ],
+      [
+        "MSC Torreblanca FS B",
+        "Melilla Ciudad del Deporte Torreblanca C. F."
+      ],
+      [
+        "Majadahonda F.S.F./Afar 4",
+        "Rayo Majadahonda FS"
+      ],
+      [
+        "Martos FS",
+        "Martos FS Jaén Paraíso Interior"
+      ],
+      [
+        "Ramón Y Cajal Féminas",
+        "Ramón y Cajal"
+      ],
+      [
+        "Torrejón Sala Five Play"
+      ],
+      [
+        "UD Azuqueca FS"
+      ],
+      [
+        "UDAF Afanion",
+        "UDAF Afanion \"A\""
+      ]
+    ],
+    "rfef-segunda-fs-masc": [
+      [
+        "Alzira FS",
+        "Family Cash Alzira F.S."
+      ],
+      [
+        "Avanza Jaén Paraíso Interior",
+        "CD Avanza Jaén"
+      ],
+      [
+        "Barça Atlètic"
+      ],
+      [
+        "Burela FS",
+        "REYCO Burela FS"
+      ],
+      [
+        "C.D. Leganés F.S."
+      ],
+      [
+        "C.D. Melistar",
+        "Melistar Futsal"
+      ],
+      [
+        "C.E. Futsal Gestoria Luis Mataró",
+        "Futsal Gestoria Luis Mataró",
+        "Mataró Futsal"
+      ],
+      [
+        "Ciudad de Móstoles FS",
+        "MRB FS Mostoles"
+      ],
+      [
+        "ElPozo Ciudad de Murcia"
+      ],
+      [
+        "Entrerrios Automatización",
+        "Entrerríos Zaragoza"
+      ],
+      [
+        "Gasifred Atlético",
+        "Gasifred Atlético Ibiza"
+      ],
+      [
+        "Ribera Navarra FS"
+      ],
+      [
+        "Sala 5 Martorell",
+        "Sala 5 Martorell MCD Grup"
+      ],
+      [
+        "Union África Ceutí",
+        "Unión África Ceutí \"A\""
+      ],
+      [
+        "Xerez Toyota Nimauto"
+      ],
+      [
+        "Zambu Pinatar",
+        "Zambú CFS Pinatar Cerramientos Abatibles"
+      ]
+    ]
+  }
+}
