@@ -475,6 +475,14 @@
   "33836163|33836167|J7|serbisadalcorconfs|clubuniondeportivaloeches": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702767&NPcd_Pdf=1",
   "33836163|33836167|J7|solissadbargas|interjpfinancialfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702771&NPcd_Pdf=1",
   "33836163|33836167|J7|uniontrescantosfs|colegioelvallecd": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702769&NPcd_Pdf=1",
+  "33836163|33836167|J8|athleticclubmostoles|naturpelletsancristobal": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702782&NPcd_Pdf=1",
+  "33836163|33836167|J8|clubuniondeportivaloeches|elalamofs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702775&NPcd_Pdf=1",
+  "33836163|33836167|J8|clubuniondeportivarena|serbisadalcorconfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702776&NPcd_Pdf=1",
+  "33836163|33836167|J8|colegioelvallecd|grupopulidocdsierrasanvicentefutbolsalaa": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702777&NPcd_Pdf=1",
+  "33836163|33836167|J8|efsciudaddetorrejonredpisotorrejon|solissadbargas": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702780&NPcd_Pdf=1",
+  "33836163|33836167|J8|entreparentesisenertelfstalavera|uniontrescantosfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702778&NPcd_Pdf=1",
+  "33836163|33836167|J8|grupolopezbolanosfsa|cdcobisafsa": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702781&NPcd_Pdf=1",
+  "33836163|33836167|J8|interjpfinancialfs|cdalbacetefs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702779&NPcd_Pdf=1",
   "33836163|33836168|J1|basileafutbolsalacd|cdcisnerosalter": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703200&NPcd_Pdf=1",
   "33836163|33836168|J1|cdtenerifeiberiatoscal|cdchinguaroa": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703203&NPcd_Pdf=1",
   "33836163|33836168|J1|fslospinos|cfscasajuvlamatanza": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703204&NPcd_Pdf=1",
@@ -3605,7 +3613,7 @@
         },
         {
           "away": "Noia Portus Apostoli",
-          "date": "2026-11-07T18:30:00",
+          "date": "2026-11-07T18:32:00",
           "home": "C.D. Tierno Galván",
           "venue": "P.M. Lalo García (POL)"
         },
@@ -6519,7 +6527,7 @@
         },
         {
           "away": "Covisa Manresa",
-          "date": "2026-11-07T16:30:00",
+          "date": "2026-11-07T16:35:00",
           "home": "Catgas Energía Santa Coloma",
           "venue": "Pabellón Nou (POL)"
         },
@@ -8032,12 +8040,6 @@
           "venue": "Pabellón Universitario Albacete"
         },
         {
-          "away": "Entreparéntesis - Enertel FS Talavera",
-          "date": "2026-11-14",
-          "home": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
-          "venue": "Polideportivo Municipal de Navahonda (PIS)"
-        },
-        {
           "away": "Grupo López Bolaños F.S. \"A\"",
           "date": "2026-11-14",
           "home": "Soliss A.D. Bargas",
@@ -8066,6 +8068,12 @@
           "date": "2026-11-14T19:00:00",
           "home": "Club Unión Deportiva Loeches",
           "venue": "Pabellón Deportivo Municipal José Rodríguez (PIS)"
+        },
+        {
+          "away": "Entreparéntesis - Enertel FS Talavera",
+          "date": "2026-11-14T19:00:00",
+          "home": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
+          "venue": "Polideportivo Municipal de Navahonda (PIS)"
         },
         {
           "away": "Colegio El Valle C.D.",
@@ -10971,7 +10979,7 @@
         },
         {
           "away": "Joasan Construcciones CFS Pinatar \"B\"",
-          "date": "2026-11-15",
+          "date": "2026-11-15T12:30:00",
           "home": "CD Virgili Cádiz \"A\"",
           "venue": "Complejo Dpvo. Ciudad de Cádiz (PIS)"
         }
@@ -16595,7 +16603,7 @@
         },
         {
           "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
-          "date": "2026-11-07T13:30:00",
+          "date": "2026-11-07T13:35:00",
           "home": "C.D.E. Leganés F.S. Masdeporte",
           "venue": "Pab. La Fortuna (POL)"
         },
@@ -18164,16 +18172,16 @@
   "_fetched": {
     "33836159|33892849": "2026-11-07T15:13:31+00:00",
     "33836159|33892850": "2026-11-07T15:13:37+00:00",
-    "33836163|33836164": "2026-11-06T21:49:22+00:00",
-    "33836163|33836165": "2026-11-06T21:49:33+00:00",
-    "33836163|33836166": "2026-11-06T21:49:44+00:00",
-    "33836163|33836167": "2026-11-06T21:49:55+00:00",
+    "33836163|33836164": "2026-11-07T20:32:07+00:00",
+    "33836163|33836165": "2026-11-07T20:32:18+00:00",
+    "33836163|33836166": "2026-11-07T20:32:30+00:00",
+    "33836163|33836167": "2026-11-07T20:32:43+00:00",
     "33836163|33836168": "2026-11-07T06:07:44+00:00",
-    "33836163|33836169": "2026-11-06T21:50:06+00:00",
+    "33836163|33836169": "2026-11-07T20:47:58+00:00",
     "33836179|33836180": "2026-11-07T14:57:47+00:00",
     "33836181|33836182": "2026-11-07T14:57:59+00:00",
     "33836181|33836183": "2026-11-07T15:13:10+00:00",
-    "33836181|33836184": "2026-11-06T22:06:04+00:00",
-    "33918407|33918408": "2026-11-06T21:34:05+00:00"
+    "33836181|33836184": "2026-11-07T20:48:50+00:00",
+    "33918407|33918408": "2026-11-07T20:16:48+00:00"
   }
 }
