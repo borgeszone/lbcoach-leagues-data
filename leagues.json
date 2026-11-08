@@ -1,6 +1,6 @@
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-11-08T00:00:31+00:00",
+  "lastUpdated": "2026-11-08T07:00:03+00:00",
   "warnings": [
     "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (no se rellenan divisiones con equipos de otra temporada)",
     "fcf-1cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
@@ -11934,1603 +11934,1633 @@
                   "jornada": 1,
                   "matches": [
                     {
+                      "home": "La Salle San Ildelfonso",
                       "away": "AD Duggi-San Fernando",
                       "date": "2026-09-17T20:30:00",
-                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703201&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Gran Canaria FS",
                       "away": "Aguas de Teror",
                       "date": "2026-09-18T20:00:00",
-                      "home": "Gran Canaria FS",
                       "venue": "CD Gran Canaria Martin Freire",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703205&NPcd_Pdf=1"
                     },
                     {
+                      "home": "NovoComunidades-Bugedo FS",
                       "away": "Suntryp Agüimes FS",
                       "date": "2026-09-18T21:00:00",
-                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Félix Santana",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703199&NPcd_Pdf=1"
                     },
                     {
+                      "home": "F.S. Los Pinos",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2026-09-18T21:00:00",
-                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703204&NPcd_Pdf=1"
                     },
                     {
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2026-09-18T21:15:00",
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703203&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Doctoral FS",
                       "away": "Malta 97",
-                      "date": "2026-09-19",
-                      "home": "Doctoral FS"
+                      "date": "2026-09-19"
                     },
                     {
+                      "home": "Basilea Futbol Sala C.D.",
                       "away": "C.D. Cisneros Alter",
                       "date": "2026-09-19T17:00:00",
-                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703200&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Las Cuevecitas FS",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2026-09-19T19:00:00",
-                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703202&NPcd_Pdf=1"
                     }
-                  ]
+                  ],
+                  "date": "2026-09-19"
                 },
                 {
                   "jornada": 2,
                   "matches": [
                     {
+                      "home": "C.D. Salesianos Tenerife",
                       "away": "La Salle San Ildelfonso",
                       "date": "2026-09-25T21:00:00",
-                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703210&NPcd_Pdf=1"
                     },
                     {
+                      "home": "C.D. Chinguaro \"A\"",
                       "away": "Las Cuevecitas FS",
                       "date": "2026-09-25T21:00:00",
-                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703211&NPcd_Pdf=1"
                     },
                     {
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2026-09-25T21:00:00",
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703212&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Malta 97",
                       "away": "Gran Canaria FS",
                       "date": "2026-09-25T21:00:00",
-                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703214&NPcd_Pdf=1"
                     },
                     {
+                      "home": "C.D. Cisneros Alter",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2026-09-26T15:00:00",
-                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703208&NPcd_Pdf=1"
                     },
                     {
+                      "home": "AD Duggi-San Fernando",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2026-09-26T15:00:00",
-                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703209&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Aguas de Teror",
                       "away": "F.S. Los Pinos",
                       "date": "2026-09-26T16:00:00",
-                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703213&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Suntryp Agüimes FS",
                       "away": "Doctoral FS",
-                      "date": "2026-09-26",
-                      "home": "Suntryp Agüimes FS"
+                      "date": "2026-09-26"
                     }
-                  ]
+                  ],
+                  "date": "2026-09-26"
                 },
                 {
                   "jornada": 3,
                   "matches": [
                     {
+                      "home": "Las Cuevecitas FS",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2026-10-01T20:00:00",
-                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
+                      "home": "Doctoral FS",
                       "away": "Gran Canaria FS",
-                      "date": "2026-10-03",
-                      "home": "Doctoral FS"
+                      "date": "2026-10-03"
                     },
                     {
+                      "home": "F.S. Los Pinos",
                       "away": "Malta 97",
                       "date": "2026-10-03T12:00:00",
-                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
+                      "home": "La Salle San Ildelfonso",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2026-10-03T16:00:00",
-                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
+                      "home": "Suntryp Agüimes FS",
                       "away": "C.D. Cisneros Alter",
                       "date": "2026-10-03T16:30:00",
-                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
+                      "home": "NovoComunidades-Bugedo FS",
                       "away": "AD Duggi-San Fernando",
                       "date": "2026-10-03T16:30:00",
-                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
+                      "home": "Basilea Futbol Sala C.D.",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2026-10-03T17:00:00",
-                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     },
                     {
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "Aguas de Teror",
                       "date": "2026-10-04T12:00:00",
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. de la Salud (POL)"
                     }
-                  ]
+                  ],
+                  "date": "2026-10-03"
                 },
                 {
                   "jornada": 4,
                   "matches": [
                     {
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "La Salle San Ildelfonso",
                       "date": "2026-10-09T21:00:00",
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
+                      "home": "Gran Canaria FS",
                       "away": "F.S. Los Pinos",
                       "date": "2026-10-10T12:00:00",
-                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     },
                     {
+                      "home": "C.D. Cisneros Alter",
                       "away": "Doctoral FS",
-                      "date": "2026-10-10",
-                      "home": "C.D. Cisneros Alter"
+                      "date": "2026-10-10"
                     },
                     {
+                      "home": "AD Duggi-San Fernando",
                       "away": "Suntryp Agüimes FS",
                       "date": "2026-10-10T15:00:00",
-                      "home": "AD Duggi-San Fernando",
                       "venue": "P.M. de la Salud (POL)"
                     },
                     {
+                      "home": "C.D. Chinguaro \"A\"",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2026-10-10T16:00:00",
-                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
+                      "home": "Aguas de Teror",
                       "away": "Las Cuevecitas FS",
                       "date": "2026-10-10T16:00:00",
-                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
+                      "home": "C.D. Salesianos Tenerife",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2026-10-10T16:30:00",
-                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
+                      "home": "Malta 97",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2026-10-10T17:00:00",
-                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     }
-                  ]
+                  ],
+                  "date": "2026-10-10"
                 },
                 {
                   "jornada": 5,
                   "matches": [
                     {
+                      "home": "Doctoral FS",
                       "away": "F.S. Los Pinos",
-                      "date": "2026-10-17",
-                      "home": "Doctoral FS"
+                      "date": "2026-10-17"
                     },
                     {
+                      "home": "C.D. Cisneros Alter",
                       "away": "AD Duggi-San Fernando",
                       "date": "2026-10-17T15:00:00",
-                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703231&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Las Cuevecitas FS",
                       "away": "Malta 97",
                       "date": "2026-10-17T15:00:00",
-                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703236&NPcd_Pdf=1"
                     },
                     {
+                      "home": "La Salle San Ildelfonso",
                       "away": "Aguas de Teror",
                       "date": "2026-10-17T16:00:00",
-                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703235&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Suntryp Agüimes FS",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2026-10-17T16:30:00",
-                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703232&NPcd_Pdf=1"
                     },
                     {
+                      "home": "NovoComunidades-Bugedo FS",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2026-10-17T16:30:00",
-                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703233&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Basilea Futbol Sala C.D.",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2026-10-17T17:00:00",
-                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703234&NPcd_Pdf=1"
                     },
                     {
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "Gran Canaria FS",
                       "date": "2026-10-18T12:00:00",
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703237&NPcd_Pdf=1"
                     }
-                  ]
+                  ],
+                  "date": "2026-10-17"
                 },
                 {
                   "jornada": 6,
                   "matches": [
                     {
+                      "home": "C.D. Salesianos Tenerife",
                       "away": "C.D. Cisneros Alter",
                       "date": "2026-10-23T21:00:00",
-                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703240&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Aguas de Teror",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2026-10-23T21:00:00",
-                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703243&NPcd_Pdf=1"
                     },
                     {
+                      "home": "F.S. Los Pinos",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2026-10-23T21:00:00",
-                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703246&NPcd_Pdf=1"
                     },
                     {
+                      "home": "AD Duggi-San Fernando",
                       "away": "Doctoral FS",
-                      "date": "2026-10-24",
-                      "home": "AD Duggi-San Fernando"
+                      "date": "2026-10-24"
                     },
                     {
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2026-10-24T15:00:00",
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703242&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Malta 97",
                       "away": "La Salle San Ildelfonso",
                       "date": "2026-10-24T17:00:00",
-                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703244&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Gran Canaria FS",
                       "away": "Las Cuevecitas FS",
                       "date": "2026-10-24T17:00:00",
-                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703245&NPcd_Pdf=1"
                     },
                     {
+                      "home": "C.D. Chinguaro \"A\"",
                       "away": "Suntryp Agüimes FS",
                       "date": "2026-10-25T12:00:00",
-                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703241&NPcd_Pdf=1"
                     }
-                  ]
+                  ],
+                  "date": "2026-10-24"
                 },
                 {
                   "jornada": 7,
                   "matches": [
                     {
+                      "home": "AD Duggi-San Fernando",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2026-10-30T21:00:00",
-                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703247&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Basilea Futbol Sala C.D.",
                       "away": "Malta 97",
                       "date": "2026-10-30T21:00:00",
-                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703251&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Las Cuevecitas FS",
                       "away": "F.S. Los Pinos",
                       "date": "2026-10-30T21:00:00",
-                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703253&NPcd_Pdf=1"
                     },
                     {
+                      "home": "NovoComunidades-Bugedo FS",
                       "away": "Aguas de Teror",
                       "date": "2026-10-30T21:12:00",
-                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703250&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Doctoral FS",
                       "away": "C.D. Tenerife Iberia Toscal",
-                      "date": "2026-10-31",
-                      "home": "Doctoral FS"
+                      "date": "2026-10-31"
                     },
                     {
+                      "home": "C.D. Cisneros Alter",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2026-10-31T15:00:00",
-                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703248&NPcd_Pdf=1"
                     },
                     {
+                      "home": "La Salle San Ildelfonso",
                       "away": "Gran Canaria FS",
                       "date": "2026-10-31T16:00:00",
-                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703252&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Suntryp Agüimes FS",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2026-10-31T16:30:00",
-                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703249&NPcd_Pdf=1"
                     }
-                  ]
+                  ],
+                  "date": "2026-10-31"
                 },
                 {
                   "jornada": 8,
                   "matches": [
                     {
+                      "home": "F.S. Los Pinos",
                       "away": "La Salle San Ildelfonso",
                       "date": "2026-11-05T21:15:00",
-                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703261&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Gran Canaria FS",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2026-11-06T20:00:00",
-                      "home": "Gran Canaria FS",
                       "venue": "CD Gran Canaria Martin Freire",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703260&NPcd_Pdf=1"
                     },
                     {
+                      "home": "C.D. Chinguaro \"A\"",
                       "away": "AD Duggi-San Fernando",
                       "date": "2026-11-06T21:00:00",
-                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703256&NPcd_Pdf=1"
                     },
                     {
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "C.D. Cisneros Alter",
                       "date": "2026-11-06T21:00:00",
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703257&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Aguas de Teror",
                       "away": "Suntryp Agüimes FS",
                       "date": "2026-11-06T21:00:00",
-                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703258&NPcd_Pdf=1"
                     },
                     {
+                      "home": "Malta 97",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2026-11-06T21:00:00",
-                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703259&NPcd_Pdf=1"
                     },
                     {
+                      "home": "C.D. Salesianos Tenerife",
                       "away": "Doctoral FS",
-                      "date": "2026-11-07",
-                      "home": "C.D. Salesianos Tenerife"
+                      "date": "2026-11-07"
                     },
                     {
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "Las Cuevecitas FS",
                       "date": "2026-11-08T12:00:00",
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera",
                       "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703262&NPcd_Pdf=1"
                     }
-                  ]
+                  ],
+                  "date": "2026-11-07"
                 },
                 {
                   "jornada": 9,
                   "matches": [
                     {
+                      "home": "La Salle San Ildelfonso",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2026-11-12T20:30:00",
-                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
+                      "home": "C.D. Salesianos Tenerife",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2026-11-13T21:00:00",
-                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
+                      "home": "AD Duggi-San Fernando",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2026-11-13T21:00:00",
-                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
+                      "home": "Suntryp Agüimes FS",
                       "away": "Malta 97",
                       "date": "2026-11-13T21:00:00",
-                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
+                      "home": "NovoComunidades-Bugedo FS",
                       "away": "Gran Canaria FS",
                       "date": "2026-11-13T21:00:00",
-                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
+                      "home": "Doctoral FS",
                       "away": "Las Cuevecitas FS",
-                      "date": "2026-11-14",
-                      "home": "Doctoral FS"
+                      "date": "2026-11-14"
                     },
                     {
+                      "home": "C.D. Cisneros Alter",
                       "away": "Aguas de Teror",
                       "date": "2026-11-14T15:00:00",
-                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
+                      "home": "Basilea Futbol Sala C.D.",
                       "away": "F.S. Los Pinos",
                       "date": "2026-11-14T17:00:00",
-                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     }
-                  ]
+                  ],
+                  "date": "2026-11-14"
                 },
                 {
                   "jornada": 10,
                   "matches": [
                     {
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2026-11-20T21:00:00",
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
+                      "home": "F.S. Los Pinos",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2026-11-21T12:00:00",
-                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
+                      "home": "C.D. Chinguaro \"A\"",
                       "away": "Doctoral FS",
-                      "date": "2026-11-21",
-                      "home": "C.D. Chinguaro \"A\""
+                      "date": "2026-11-21"
                     },
                     {
+                      "home": "Aguas de Teror",
                       "away": "AD Duggi-San Fernando",
                       "date": "2026-11-21T16:00:00",
-                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
+                      "home": "Malta 97",
                       "away": "C.D. Cisneros Alter",
                       "date": "2026-11-21T17:00:00",
-                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
+                      "home": "Las Cuevecitas FS",
                       "away": "La Salle San Ildelfonso",
                       "date": "2026-11-21T19:00:00",
-                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
+                      "home": "Gran Canaria FS",
                       "away": "Suntryp Agüimes FS",
                       "date": "2026-11-21T19:30:00",
-                      "home": "Gran Canaria FS",
                       "venue": "CD Gran Canaria Martin Freire"
                     },
                     {
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2026-11-22T12:00:00",
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. de la Salud (POL)"
                     }
-                  ]
+                  ],
+                  "date": "2026-11-21"
                 },
                 {
                   "jornada": 11,
                   "matches": [
                     {
+                      "home": "C.D. Chinguaro \"A\"",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2026-11-27T21:00:00",
-                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
+                      "home": "Doctoral FS",
                       "away": "La Salle San Ildelfonso",
-                      "date": "2026-11-28",
-                      "home": "Doctoral FS"
+                      "date": "2026-11-28"
                     },
                     {
+                      "home": "AD Duggi-San Fernando",
                       "away": "Malta 97",
                       "date": "2026-11-28T15:00:00",
-                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
+                      "home": "C.D. Cisneros Alter",
                       "away": "Gran Canaria FS",
                       "date": "2026-11-28T15:00:00",
-                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
+                      "home": "C.D. Salesianos Tenerife",
                       "away": "Aguas de Teror",
                       "date": "2026-11-28T16:30:00",
-                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
+                      "home": "Suntryp Agüimes FS",
                       "away": "F.S. Los Pinos",
                       "date": "2026-11-28T16:30:00",
-                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
+                      "home": "NovoComunidades-Bugedo FS",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2026-11-28T16:30:00",
-                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
+                      "home": "Basilea Futbol Sala C.D.",
                       "away": "Las Cuevecitas FS",
                       "date": "2026-11-28T17:00:00",
-                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     }
-                  ]
+                  ],
+                  "date": "2026-11-28"
                 },
                 {
                   "jornada": 12,
                   "matches": [
                     {
+                      "home": "F.S. Los Pinos",
                       "away": "C.D. Cisneros Alter",
                       "date": "2026-12-04T21:00:00",
-                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "Doctoral FS",
-                      "date": "2026-12-05",
-                      "home": "C.F.S. Casa Juv. La Matanza"
+                      "date": "2026-12-05"
                     },
                     {
+                      "home": "Aguas de Teror",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2026-12-05T16:00:00",
-                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
+                      "home": "Las Cuevecitas FS",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2026-12-05T16:00:00",
-                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
+                      "home": "La Salle San Ildelfonso",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2026-12-05T16:00:00",
-                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
+                      "home": "Malta 97",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2026-12-05T17:00:00",
-                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
+                      "home": "Gran Canaria FS",
                       "away": "AD Duggi-San Fernando",
                       "date": "2026-12-05T17:00:00",
-                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     },
                     {
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "Suntryp Agüimes FS",
                       "date": "2026-12-06T12:00:00",
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. de la Salud (POL)"
                     }
-                  ]
+                  ],
+                  "date": "2026-12-05"
                 },
                 {
                   "jornada": 13,
                   "matches": [
                     {
+                      "home": "AD Duggi-San Fernando",
                       "away": "F.S. Los Pinos",
                       "date": "2026-12-11T21:00:00",
-                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
+                      "home": "Doctoral FS",
                       "away": "Basilea Futbol Sala C.D.",
-                      "date": "2026-12-12",
-                      "home": "Doctoral FS"
+                      "date": "2026-12-12"
                     },
                     {
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "Aguas de Teror",
                       "date": "2026-12-12T15:00:00",
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
+                      "home": "C.D. Cisneros Alter",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2026-12-12T15:00:00",
-                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
+                      "home": "C.D. Chinguaro \"A\"",
                       "away": "Malta 97",
                       "date": "2026-12-12T16:00:00",
-                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
+                      "home": "C.D. Salesianos Tenerife",
                       "away": "Gran Canaria FS",
                       "date": "2026-12-12T16:30:00",
-                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
+                      "home": "Suntryp Agüimes FS",
                       "away": "Las Cuevecitas FS",
                       "date": "2026-12-12T16:30:00",
-                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
+                      "home": "NovoComunidades-Bugedo FS",
                       "away": "La Salle San Ildelfonso",
                       "date": "2026-12-12T16:30:00",
-                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     }
-                  ]
+                  ],
+                  "date": "2026-12-12"
                 },
                 {
                   "jornada": 14,
                   "matches": [
                     {
+                      "home": "F.S. Los Pinos",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2026-12-18T21:00:00",
-                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
+                      "home": "Basilea Futbol Sala C.D.",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2026-12-18T21:00:00",
-                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     },
                     {
+                      "home": "Doctoral FS",
                       "away": "Aguas de Teror",
-                      "date": "2026-12-19",
-                      "home": "Doctoral FS"
+                      "date": "2026-12-19"
                     },
                     {
+                      "home": "La Salle San Ildelfonso",
                       "away": "Suntryp Agüimes FS",
                       "date": "2026-12-19T16:00:00",
-                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
+                      "home": "Malta 97",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2026-12-19T17:00:00",
-                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
+                      "home": "Gran Canaria FS",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2026-12-19T17:00:00",
-                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     },
                     {
+                      "home": "Las Cuevecitas FS",
                       "away": "C.D. Cisneros Alter",
                       "date": "2026-12-19T19:00:00",
-                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "AD Duggi-San Fernando",
                       "date": "2026-12-20T12:00:00",
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     }
-                  ]
+                  ],
+                  "date": "2026-12-19"
                 },
                 {
                   "jornada": 15,
                   "matches": [
                     {
+                      "home": "Aguas de Teror",
                       "away": "Malta 97",
                       "date": "2027-01-08T21:00:00",
-                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
+                      "home": "C.D. Salesianos Tenerife",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2027-01-08T21:00:00",
-                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
+                      "home": "AD Duggi-San Fernando",
                       "away": "Las Cuevecitas FS",
                       "date": "2027-01-08T21:00:00",
-                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
+                      "home": "NovoComunidades-Bugedo FS",
                       "away": "Doctoral FS",
-                      "date": "2027-01-09",
-                      "home": "NovoComunidades-Bugedo FS"
+                      "date": "2027-01-09"
                     },
                     {
+                      "home": "Suntryp Agüimes FS",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2027-01-08T21:15:00",
-                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "Gran Canaria FS",
                       "date": "2027-01-09T15:00:00",
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
+                      "home": "C.D. Cisneros Alter",
                       "away": "La Salle San Ildelfonso",
                       "date": "2027-01-09T15:00:00",
-                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
+                      "home": "C.D. Chinguaro \"A\"",
                       "away": "F.S. Los Pinos",
                       "date": "2027-01-09T16:00:00",
-                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     }
-                  ]
+                  ],
+                  "date": "2027-01-09"
                 },
                 {
                   "jornada": 16,
                   "matches": [
                     {
+                      "home": "AD Duggi-San Fernando",
                       "away": "La Salle San Ildelfonso",
                       "date": "2027-01-15T21:00:00",
-                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
+                      "home": "C.D. Salesianos Tenerife",
                       "away": "Las Cuevecitas FS",
                       "date": "2027-01-15T21:00:00",
-                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
+                      "home": "C.D. Chinguaro \"A\"",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2027-01-15T21:00:00",
-                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "F.S. Los Pinos",
                       "date": "2027-01-15T21:00:00",
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
+                      "home": "Aguas de Teror",
                       "away": "Gran Canaria FS",
                       "date": "2027-01-15T21:00:00",
-                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
+                      "home": "Malta 97",
                       "away": "Doctoral FS",
-                      "date": "2027-01-16",
-                      "home": "Malta 97"
+                      "date": "2027-01-16"
                     },
                     {
+                      "home": "Suntryp Agüimes FS",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2027-01-15T21:15:00",
-                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
+                      "home": "C.D. Cisneros Alter",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2027-01-16T15:00:00",
-                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     }
-                  ]
+                  ],
+                  "date": "2027-01-16"
                 },
                 {
                   "jornada": 17,
                   "matches": [
                     {
+                      "home": "Doctoral FS",
                       "away": "Suntryp Agüimes FS",
-                      "date": "2027-01-23",
-                      "home": "Doctoral FS"
+                      "date": "2027-01-23"
                     },
                     {
+                      "home": "F.S. Los Pinos",
                       "away": "Aguas de Teror",
                       "date": "2027-01-23T12:00:00",
-                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
+                      "home": "La Salle San Ildelfonso",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2027-01-23T16:00:00",
-                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
+                      "home": "NovoComunidades-Bugedo FS",
                       "away": "C.D. Cisneros Alter",
                       "date": "2027-01-23T16:30:00",
-                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
+                      "home": "Basilea Futbol Sala C.D.",
                       "away": "AD Duggi-San Fernando",
                       "date": "2027-01-23T17:00:00",
-                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     },
                     {
+                      "home": "Las Cuevecitas FS",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2027-01-23T19:00:00",
-                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
+                      "home": "Gran Canaria FS",
                       "away": "Malta 97",
                       "date": "2027-01-23T19:30:00",
-                      "home": "Gran Canaria FS",
                       "venue": "CD Gran Canaria Martin Freire"
                     },
                     {
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2027-01-24T12:00:00",
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     }
-                  ]
+                  ],
+                  "date": "2027-01-23"
                 },
                 {
                   "jornada": 18,
                   "matches": [
                     {
+                      "home": "C.D. Chinguaro \"A\"",
                       "away": "La Salle San Ildelfonso",
                       "date": "2027-01-29T21:00:00",
-                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "Las Cuevecitas FS",
                       "date": "2027-01-29T21:00:00",
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
+                      "home": "C.D. Cisneros Alter",
                       "away": "Suntryp Agüimes FS",
                       "date": "2027-01-30T15:00:00",
-                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
+                      "home": "AD Duggi-San Fernando",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2027-01-30T15:00:00",
-                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
+                      "home": "Aguas de Teror",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2027-01-30T16:00:00",
-                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
+                      "home": "C.D. Salesianos Tenerife",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2027-01-30T16:30:00",
-                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
+                      "home": "Malta 97",
                       "away": "F.S. Los Pinos",
                       "date": "2027-01-30T17:00:00",
-                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
+                      "home": "Gran Canaria FS",
                       "away": "Doctoral FS",
-                      "date": "2027-01-30",
-                      "home": "Gran Canaria FS"
+                      "date": "2027-01-30"
                     }
-                  ]
+                  ],
+                  "date": "2027-01-30"
                 },
                 {
                   "jornada": 19,
                   "matches": [
                     {
+                      "home": "Doctoral FS",
                       "away": "C.D. Cisneros Alter",
-                      "date": "2027-02-06",
-                      "home": "Doctoral FS"
+                      "date": "2027-02-06"
                     },
                     {
+                      "home": "F.S. Los Pinos",
                       "away": "Gran Canaria FS",
                       "date": "2027-02-06T12:00:00",
-                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
+                      "home": "La Salle San Ildelfonso",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2027-02-06T16:00:00",
-                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
+                      "home": "Las Cuevecitas FS",
                       "away": "Aguas de Teror",
                       "date": "2027-02-06T16:00:00",
-                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
+                      "home": "Suntryp Agüimes FS",
                       "away": "AD Duggi-San Fernando",
                       "date": "2027-02-06T16:30:00",
-                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
+                      "home": "NovoComunidades-Bugedo FS",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2027-02-06T16:30:00",
-                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
+                      "home": "Basilea Futbol Sala C.D.",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2027-02-06T17:00:00",
-                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     },
                     {
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "Malta 97",
                       "date": "2027-02-07T12:00:00",
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     }
-                  ]
+                  ],
+                  "date": "2027-02-06"
                 },
                 {
                   "jornada": 20,
                   "matches": [
                     {
+                      "home": "AD Duggi-San Fernando",
                       "away": "C.D. Cisneros Alter",
                       "date": "2027-02-12T21:00:00",
-                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
+                      "home": "F.S. Los Pinos",
                       "away": "Doctoral FS",
-                      "date": "2027-02-13",
-                      "home": "F.S. Los Pinos"
+                      "date": "2027-02-13"
                     },
                     {
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2027-02-13T15:00:00",
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
+                      "home": "C.D. Chinguaro \"A\"",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2027-02-13T16:00:00",
-                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
+                      "home": "Aguas de Teror",
                       "away": "La Salle San Ildelfonso",
                       "date": "2027-02-13T16:00:00",
-                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
+                      "home": "C.D. Salesianos Tenerife",
                       "away": "Suntryp Agüimes FS",
                       "date": "2027-02-13T16:30:00",
-                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
+                      "home": "Malta 97",
                       "away": "Las Cuevecitas FS",
                       "date": "2027-02-13T17:00:00",
-                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
+                      "home": "Gran Canaria FS",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2027-02-13T17:00:00",
-                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     }
-                  ]
+                  ],
+                  "date": "2027-02-13"
                 },
                 {
                   "jornada": 21,
                   "matches": [
                     {
+                      "home": "Basilea Futbol Sala C.D.",
                       "away": "Aguas de Teror",
                       "date": "2027-02-19T21:00:00",
-                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     },
                     {
+                      "home": "Doctoral FS",
                       "away": "AD Duggi-San Fernando",
-                      "date": "2027-02-20",
-                      "home": "Doctoral FS"
+                      "date": "2027-02-20"
                     },
                     {
+                      "home": "C.D. Cisneros Alter",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2027-02-20T15:00:00",
-                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
+                      "home": "La Salle San Ildelfonso",
                       "away": "Malta 97",
                       "date": "2027-02-20T16:00:00",
-                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
+                      "home": "Las Cuevecitas FS",
                       "away": "Gran Canaria FS",
                       "date": "2027-02-20T16:00:00",
-                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
+                      "home": "Suntryp Agüimes FS",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2027-02-20T16:30:00",
-                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
+                      "home": "NovoComunidades-Bugedo FS",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2027-02-20T16:30:00",
-                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "F.S. Los Pinos",
                       "date": "2027-02-21T12:00:00",
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     }
-                  ]
+                  ],
+                  "date": "2027-02-20"
                 },
                 {
                   "jornada": 22,
                   "matches": [
                     {
+                      "home": "C.D. Salesianos Tenerife",
                       "away": "AD Duggi-San Fernando",
                       "date": "2027-02-26T21:00:00",
-                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
+                      "home": "C.D. Chinguaro \"A\"",
                       "away": "C.D. Cisneros Alter",
                       "date": "2027-02-26T21:00:00",
-                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
+                      "home": "Aguas de Teror",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2027-02-26T21:00:00",
-                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
+                      "home": "Malta 97",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2027-02-26T21:00:00",
-                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
+                      "home": "F.S. Los Pinos",
                       "away": "Las Cuevecitas FS",
                       "date": "2027-02-26T21:00:00",
-                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "Suntryp Agüimes FS",
                       "date": "2027-02-27T15:00:00",
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
+                      "home": "Gran Canaria FS",
                       "away": "La Salle San Ildelfonso",
                       "date": "2027-02-27T17:00:00",
-                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     },
                     {
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "Doctoral FS",
-                      "date": "2027-02-27",
-                      "home": "C.D. Tenerife Iberia Toscal"
+                      "date": "2027-02-27"
                     }
-                  ]
+                  ],
+                  "date": "2027-02-27"
                 },
                 {
                   "jornada": 23,
                   "matches": [
                     {
+                      "home": "AD Duggi-San Fernando",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2027-03-05T21:00:00",
-                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
+                      "home": "NovoComunidades-Bugedo FS",
                       "away": "Malta 97",
                       "date": "2027-03-05T21:00:00",
-                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
+                      "home": "Basilea Futbol Sala C.D.",
                       "away": "Gran Canaria FS",
                       "date": "2027-03-05T21:00:00",
-                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     },
                     {
+                      "home": "Suntryp Agüimes FS",
                       "away": "Aguas de Teror",
                       "date": "2027-03-05T21:15:00",
-                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
+                      "home": "Doctoral FS",
                       "away": "C.D. Salesianos Tenerife",
-                      "date": "2027-03-06",
-                      "home": "Doctoral FS"
+                      "date": "2027-03-06"
                     },
                     {
+                      "home": "C.D. Cisneros Alter",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2027-03-06T15:00:00",
-                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
+                      "home": "La Salle San Ildelfonso",
                       "away": "F.S. Los Pinos",
                       "date": "2027-03-06T16:00:00",
-                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
+                      "home": "Las Cuevecitas FS",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2027-03-06T19:00:00",
-                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     }
-                  ]
+                  ],
+                  "date": "2027-03-06"
                 },
                 {
                   "jornada": 24,
                   "matches": [
                     {
+                      "home": "C.D. Chinguaro \"A\"",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2027-03-19T21:00:00",
-                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "AD Duggi-San Fernando",
                       "date": "2027-03-19T21:00:00",
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
+                      "home": "Malta 97",
                       "away": "Suntryp Agüimes FS",
                       "date": "2027-03-19T21:00:00",
-                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
+                      "home": "F.S. Los Pinos",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2027-03-20T12:00:00",
-                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
+                      "home": "Las Cuevecitas FS",
                       "away": "Doctoral FS",
-                      "date": "2027-03-20",
-                      "home": "Las Cuevecitas FS"
+                      "date": "2027-03-20"
                     },
                     {
+                      "home": "Aguas de Teror",
                       "away": "C.D. Cisneros Alter",
                       "date": "2027-03-20T16:00:00",
-                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
+                      "home": "Gran Canaria FS",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2027-03-20T19:30:00",
-                      "home": "Gran Canaria FS",
                       "venue": "CD Gran Canaria Martin Freire"
                     },
                     {
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "La Salle San Ildelfonso",
                       "date": "2027-03-21T12:00:00",
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     }
-                  ]
+                  ],
+                  "date": "2027-03-20"
                 },
                 {
                   "jornada": 25,
                   "matches": [
                     {
+                      "home": "C.D. Salesianos Tenerife",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2027-04-02T21:00:00",
-                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
+                      "home": "Suntryp Agüimes FS",
                       "away": "Gran Canaria FS",
                       "date": "2027-04-02T21:15:00",
-                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
+                      "home": "Doctoral FS",
                       "away": "C.D. Chinguaro \"A\"",
-                      "date": "2027-04-03",
-                      "home": "Doctoral FS"
+                      "date": "2027-04-03"
                     },
                     {
+                      "home": "AD Duggi-San Fernando",
                       "away": "Aguas de Teror",
                       "date": "2027-04-03T15:00:00",
-                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
+                      "home": "C.D. Cisneros Alter",
                       "away": "Malta 97",
                       "date": "2027-04-03T15:00:00",
-                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
+                      "home": "La Salle San Ildelfonso",
                       "away": "Las Cuevecitas FS",
                       "date": "2027-04-03T16:00:00",
-                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
+                      "home": "NovoComunidades-Bugedo FS",
                       "away": "F.S. Los Pinos",
                       "date": "2027-04-03T16:30:00",
-                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
+                      "home": "Basilea Futbol Sala C.D.",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2027-04-03T17:00:00",
-                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     }
-                  ]
+                  ],
+                  "date": "2027-04-03"
                 },
                 {
                   "jornada": 26,
                   "matches": [
                     {
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2027-04-09T21:00:00",
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
+                      "home": "F.S. Los Pinos",
                       "away": "Suntryp Agüimes FS",
                       "date": "2027-04-10T12:00:00",
-                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
+                      "home": "Aguas de Teror",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2027-04-10T16:00:00",
-                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
+                      "home": "Las Cuevecitas FS",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2027-04-10T16:00:00",
-                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
+                      "home": "La Salle San Ildelfonso",
                       "away": "Doctoral FS",
-                      "date": "2027-04-10",
-                      "home": "La Salle San Ildelfonso"
+                      "date": "2027-04-10"
                     },
                     {
+                      "home": "Malta 97",
                       "away": "AD Duggi-San Fernando",
                       "date": "2027-04-10T17:00:00",
-                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
+                      "home": "Gran Canaria FS",
                       "away": "C.D. Cisneros Alter",
                       "date": "2027-04-10T17:00:00",
-                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     },
                     {
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2027-04-11T12:00:00",
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     }
-                  ]
+                  ],
+                  "date": "2027-04-10"
                 },
                 {
                   "jornada": 27,
                   "matches": [
                     {
+                      "home": "Doctoral FS",
                       "away": "C.F.S. Casa Juv. La Matanza",
-                      "date": "2027-04-17",
-                      "home": "Doctoral FS"
+                      "date": "2027-04-17"
                     },
                     {
+                      "home": "AD Duggi-San Fernando",
                       "away": "Gran Canaria FS",
                       "date": "2027-04-17T15:00:00",
-                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
+                      "home": "C.D. Cisneros Alter",
                       "away": "F.S. Los Pinos",
                       "date": "2027-04-17T15:00:00",
-                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
+                      "home": "C.D. Chinguaro \"A\"",
                       "away": "Aguas de Teror",
                       "date": "2027-04-17T16:00:00",
-                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
+                      "home": "C.D. Salesianos Tenerife",
                       "away": "Malta 97",
                       "date": "2027-04-17T16:30:00",
-                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
+                      "home": "Suntryp Agüimes FS",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2027-04-17T16:30:00",
-                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
+                      "home": "NovoComunidades-Bugedo FS",
                       "away": "Las Cuevecitas FS",
                       "date": "2027-04-17T16:30:00",
-                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     },
                     {
+                      "home": "Basilea Futbol Sala C.D.",
                       "away": "La Salle San Ildelfonso",
                       "date": "2027-04-17T17:00:00",
-                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     }
-                  ]
+                  ],
+                  "date": "2027-04-17"
                 },
                 {
                   "jornada": 28,
                   "matches": [
                     {
+                      "home": "F.S. Los Pinos",
                       "away": "AD Duggi-San Fernando",
                       "date": "2027-04-23T21:00:00",
-                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
+                      "home": "Aguas de Teror",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2027-04-24T16:00:00",
-                      "home": "Aguas de Teror",
                       "venue": "P.Polid. de Teror (T)"
                     },
                     {
+                      "home": "Las Cuevecitas FS",
                       "away": "Suntryp Agüimes FS",
                       "date": "2027-04-24T16:00:00",
-                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
+                      "home": "La Salle San Ildelfonso",
                       "away": "NovoComunidades-Bugedo FS",
                       "date": "2027-04-24T16:00:00",
-                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
+                      "home": "Malta 97",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2027-04-24T17:00:00",
-                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
+                      "home": "Gran Canaria FS",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2027-04-24T17:00:00",
-                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     },
                     {
+                      "home": "Basilea Futbol Sala C.D.",
                       "away": "Doctoral FS",
-                      "date": "2027-04-24",
-                      "home": "Basilea Futbol Sala C.D."
+                      "date": "2027-04-24"
                     },
                     {
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "C.D. Cisneros Alter",
                       "date": "2027-04-25T12:00:00",
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     }
-                  ]
+                  ],
+                  "date": "2027-04-24"
                 },
                 {
                   "jornada": 29,
                   "matches": [
                     {
+                      "home": "Aguas de Teror",
                       "away": "Doctoral FS",
-                      "date": "2027-05-01",
-                      "home": "Aguas de Teror"
+                      "date": "2027-05-01"
                     },
                     {
+                      "home": "C.D. Salesianos Tenerife",
                       "away": "F.S. Los Pinos",
                       "date": "2027-04-30T21:00:00",
-                      "home": "C.D. Salesianos Tenerife",
                       "venue": "Pab. Quiquirá"
                     },
                     {
+                      "home": "AD Duggi-San Fernando",
                       "away": "C.D. Tenerife Iberia Toscal",
                       "date": "2027-04-30T21:00:00",
-                      "home": "AD Duggi-San Fernando",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
+                      "home": "C.F.S. Casa Juv. La Matanza",
                       "away": "Malta 97",
                       "date": "2027-05-01T15:00:00",
-                      "home": "C.F.S. Casa Juv. La Matanza",
                       "venue": "P.M. de La Matanza (POL)"
                     },
                     {
+                      "home": "C.D. Cisneros Alter",
                       "away": "Las Cuevecitas FS",
                       "date": "2027-05-01T15:00:00",
-                      "home": "C.D. Cisneros Alter",
                       "venue": "Pab. Islas Canarias (POL)"
                     },
                     {
+                      "home": "C.D. Chinguaro \"A\"",
                       "away": "Gran Canaria FS",
                       "date": "2027-05-01T16:00:00",
-                      "home": "C.D. Chinguaro \"A\"",
                       "venue": "Pabellón Municipal de Tasagaya (POL)"
                     },
                     {
+                      "home": "Suntryp Agüimes FS",
                       "away": "La Salle San Ildelfonso",
                       "date": "2027-05-01T16:30:00",
-                      "home": "Suntryp Agüimes FS",
                       "venue": "Pab. Las Crucitas"
                     },
                     {
+                      "home": "NovoComunidades-Bugedo FS",
                       "away": "Basilea Futbol Sala C.D.",
                       "date": "2027-05-01T16:30:00",
-                      "home": "NovoComunidades-Bugedo FS",
                       "venue": "Pab. Juan Beltrán"
                     }
-                  ]
+                  ],
+                  "date": "2027-05-01"
                 },
                 {
                   "jornada": 30,
                   "matches": [
                     {
+                      "home": "Doctoral FS",
                       "away": "NovoComunidades-Bugedo FS",
-                      "date": "2027-05-08",
-                      "home": "Doctoral FS"
+                      "date": "2027-05-08"
                     },
                     {
+                      "home": "Malta 97",
                       "away": "Aguas de Teror",
                       "date": "2027-05-08T17:00:00",
-                      "home": "Malta 97",
                       "venue": "Pab. Félix Santana"
                     },
                     {
+                      "home": "Gran Canaria FS",
                       "away": "C.F.S. Casa Juv. La Matanza",
                       "date": "2027-05-08T17:00:00",
-                      "home": "Gran Canaria FS",
                       "venue": "Pabellón de Agaete (POL)"
                     },
                     {
+                      "home": "F.S. Los Pinos",
                       "away": "C.D. Chinguaro \"A\"",
                       "date": "2027-05-08T17:00:00",
-                      "home": "F.S. Los Pinos",
                       "venue": "Pabellón Mpal. Manuel de Falla (PIS)"
                     },
                     {
+                      "home": "C.D. Tenerife Iberia Toscal",
                       "away": "C.D. Salesianos Tenerife",
                       "date": "2027-05-08T17:00:00",
-                      "home": "C.D. Tenerife Iberia Toscal",
                       "venue": "Pab. Quico Cabrera"
                     },
                     {
+                      "home": "Las Cuevecitas FS",
                       "away": "AD Duggi-San Fernando",
                       "date": "2027-05-08T17:00:00",
-                      "home": "Las Cuevecitas FS",
                       "venue": "Pab. Brito Guanche"
                     },
                     {
+                      "home": "La Salle San Ildelfonso",
                       "away": "C.D. Cisneros Alter",
                       "date": "2027-05-08T17:00:00",
-                      "home": "La Salle San Ildelfonso",
                       "venue": "Pab. Colegio La Salle"
                     },
                     {
+                      "home": "Basilea Futbol Sala C.D.",
                       "away": "Suntryp Agüimes FS",
                       "date": "2027-05-08T17:00:00",
-                      "home": "Basilea Futbol Sala C.D.",
                       "venue": "Pabellón Chano Melián"
                     }
-                  ]
+                  ],
+                  "date": "2027-05-08"
                 }
               ],
               "jornadasTotal": 30,
