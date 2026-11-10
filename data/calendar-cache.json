@@ -5291,12 +5291,6 @@
           "home": "Sant Joan Despí CFS Cumsa"
         },
         {
-          "away": "Les Corts EF \"A\"",
-          "date": "2026-11-21",
-          "home": "Catgas Energía Santa Coloma",
-          "venue": "Pabellón Nou (POL)"
-        },
-        {
           "away": "A.E. Llevant De Manacor Futsal \"A\"",
           "date": "2026-11-21T13:30:00",
           "home": "Covisa Manresa",
@@ -5307,6 +5301,12 @@
           "date": "2026-11-21T16:00:00",
           "home": "Illes Balears Palma Futsal",
           "venue": "Pab. Borja Moll (Polig de Levante) (PIS)"
+        },
+        {
+          "away": "Les Corts EF \"A\"",
+          "date": "2026-11-21T16:30:00",
+          "home": "Catgas Energía Santa Coloma",
+          "venue": "Pabellón Nou (POL)"
         },
         {
           "away": "Canet F.S.",
@@ -8151,7 +8151,7 @@
           "away": "Colegio El Valle C.D.",
           "date": "2026-11-15T11:00:00",
           "home": "Serbis AD Alcorcón FS",
-          "venue": "P.M. Los Cantos (POL)"
+          "venue": "P.M. La Canaleja (POL)"
         }
       ]
     },
@@ -9697,11 +9697,6 @@
           "venue": "P.M. de Moral de Calatrava (POL)"
         },
         {
-          "away": "C.D. Bujalance F.S. Beconet",
-          "date": "2026-11-21",
-          "home": "Jimbee Cartagena Futbol Sala"
-        },
-        {
           "away": "Dos Hermanas F.S. C.D. \"A\"",
           "date": "2026-11-21",
           "home": "Joasan Construcciones CFS Pinatar \"B\""
@@ -9710,6 +9705,12 @@
           "away": "CD Virgili Cádiz \"A\"",
           "date": "2026-11-21",
           "home": "Cdb Salvatierra FS Construcciones Vianri"
+        },
+        {
+          "away": "C.D. Bujalance F.S. Beconet",
+          "date": "2026-11-21T17:00:00",
+          "home": "Jimbee Cartagena Futbol Sala",
+          "venue": "P.M. Wssell de Guimbarda (POL)"
         },
         {
           "away": "Melilla Ciudad del Deporte Nueva Era",
@@ -12337,7 +12338,8 @@
         {
           "away": "C.D. Guadalcacín F.S.",
           "date": "2026-11-07T18:30:00",
-          "home": "Rodiles F.S. \"A\""
+          "home": "Rodiles F.S. \"A\"",
+          "venue": "Pabellón Jerónimo Osorio García (PIS)"
         },
         {
           "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
@@ -12510,12 +12512,6 @@
       ],
       "10": [
         {
-          "away": "FC Meigas",
-          "date": "2026-11-21",
-          "home": "Valdetires Ferrol F.S.F.",
-          "venue": "Pab. de Esteiro (POL)"
-        },
-        {
           "away": "CLUB DEPORTIVO TEIDAYA \"A\"",
           "date": "2026-11-21",
           "home": "Bembrive",
@@ -12550,6 +12546,12 @@
           "date": "2026-11-21T17:00:00",
           "home": "At. Arnoia",
           "venue": "Pabellón Municipal A Queixeira (POL)"
+        },
+        {
+          "away": "FC Meigas",
+          "date": "2026-11-21T18:00:00",
+          "home": "Valdetires Ferrol F.S.F.",
+          "venue": "Pab. de Esteiro (POL)"
         },
         {
           "away": "U.D.C. Txantrea K.K.E.",
@@ -15384,11 +15386,6 @@
       ],
       "10": [
         {
-          "away": "Coviran UAPO Granada FS Femenino",
-          "date": "2026-11-21",
-          "home": "Ramón Y Cajal Féminas"
-        },
-        {
           "away": "Majadahonda F.S.F./Afar 4",
           "date": "2026-11-21",
           "home": "CD La Garrovilla Femenino"
@@ -15405,16 +15402,16 @@
           "home": "UDAF Afanion \"A\""
         },
         {
-          "away": "ARRIVA AD Alcorcón FSF",
-          "date": "2026-11-21",
-          "home": "I.E.S. Luis de Camoens",
-          "venue": "CD Guillermo Molina Ríos (POL)"
-        },
-        {
           "away": "Globalcaja Albacete F.S.",
           "date": "2026-11-21",
           "home": "C.F.S. Femenino San Fernando",
           "venue": "Pab. Justo Gómez Salto (POL)"
+        },
+        {
+          "away": "Coviran UAPO Granada FS Femenino",
+          "date": "2026-11-21T13:00:00",
+          "home": "Ramón Y Cajal Féminas",
+          "venue": "CD Guillermo Molina Ríos (POL)"
         },
         {
           "away": "CD Salesianos Puertollano",
@@ -15427,6 +15424,12 @@
           "date": "2026-11-21T19:30:00",
           "home": "C.D.E. Leganés F.S. Masdeporte",
           "venue": "Pab. La Fortuna (POL)"
+        },
+        {
+          "away": "ARRIVA AD Alcorcón FSF",
+          "date": "2026-11-22T12:00:00",
+          "home": "I.E.S. Luis de Camoens",
+          "venue": "CD Guillermo Molina Ríos (POL)"
         }
       ],
       "11": [
@@ -18245,18 +18248,18 @@
   },
   "_comment": "Cache persistente del calendario auto-generada por scrapers.calendar_cache. NO editar a mano. Las claves planas son actaUrls por partido; la seccion _calendars guarda las jornadas enteras tal y como las devolvio la PNFG. Cada run fusiona lo fresco con esta cache para que un rate-limit no borre datos que ya teniamos. Si una entrada deja de ser valida, borrala y la proxima ejecucion la volvera a resolver. Las claves llevan dentro el codigo de competicion, que cambia cada temporada, asi que las entradas de temporadas pasadas quedan inertes (no se podan solas).",
   "_fetched": {
-    "33836159|33892849": "2026-11-09T19:08:44+00:00",
-    "33836159|33892850": "2026-11-09T19:08:50+00:00",
-    "33836163|33836164": "2026-11-09T19:09:12+00:00",
-    "33836163|33836165": "2026-11-09T19:09:23+00:00",
-    "33836163|33836166": "2026-11-09T19:24:34+00:00",
-    "33836163|33836167": "2026-11-09T19:24:45+00:00",
+    "33836159|33892849": "2026-11-10T22:06:27+00:00",
+    "33836159|33892850": "2026-11-10T22:06:33+00:00",
+    "33836163|33836164": "2026-11-10T22:06:54+00:00",
+    "33836163|33836165": "2026-11-10T22:07:05+00:00",
+    "33836163|33836166": "2026-11-10T22:07:16+00:00",
+    "33836163|33836167": "2026-11-10T22:22:28+00:00",
     "33836163|33836168": "2026-11-10T03:03:13+00:00",
-    "33836163|33836169": "2026-11-09T19:24:57+00:00",
-    "33836179|33836180": "2026-11-09T18:53:00+00:00",
-    "33836181|33836182": "2026-11-09T18:53:11+00:00",
-    "33836181|33836183": "2026-11-09T19:08:22+00:00",
-    "33836181|33836184": "2026-11-09T19:08:33+00:00",
+    "33836163|33836169": "2026-11-10T22:22:39+00:00",
+    "33836179|33836180": "2026-11-10T22:23:00+00:00",
+    "33836181|33836182": "2026-11-10T21:50:54+00:00",
+    "33836181|33836183": "2026-11-10T21:51:05+00:00",
+    "33836181|33836184": "2026-11-10T22:06:16+00:00",
     "33918407|33918408": "2026-11-10T02:47:05+00:00"
   }
 }
