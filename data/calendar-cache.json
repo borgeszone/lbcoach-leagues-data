@@ -623,6 +623,7 @@
   "33836163|33836169|J8|joasanconstruccionescfspinatarb|cdbsalvatierrafsconstruccionesvianri": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703022&NPcd_Pdf=1",
   "33836163|33836169|J8|melillaciudaddeldeportenuevaera|simagranadafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703015&NPcd_Pdf=1",
   "33836163|33836169|J8|oleoinnovamengibarfs|cdsportingfsalmeriabiocampojoyma": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703017&NPcd_Pdf=1",
+  "33836179|33836180|J13|melillaciudaddeldeportetorreblancacf|atleticonavalcarnero": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696848&NPcd_Pdf=1",
   "33836179|33836180|J1|arrivaadalcorconfsf|cdguadalcacinfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696746&NPcd_Pdf=1",
   "33836179|33836180|J1|estrelarevoltosaverinfsf|fsfcastrobloquescando": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696748&NPcd_Pdf=1",
   "33836179|33836180|J1|lbtlfutsalalcantarilla|ceutaagrupaciondeportiva": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70696747&NPcd_Pdf=1",
@@ -1083,171 +1084,202 @@
       ],
       "12": [
         {
-          "away": "CD Xota FS",
-          "date": "2026-12-12",
-          "home": "Córdoba Patrimonio De La Humanidad"
-        },
-        {
-          "away": "Noia Portus Apostoli",
-          "date": "2026-12-12",
-          "home": "Catgas Energía Santa Coloma"
-        },
-        {
-          "away": "Servigroup Peñiscola FS",
-          "date": "2026-12-12",
-          "home": "Jaen Paraiso Interior F.S."
-        },
-        {
-          "away": "Inter JP Financial",
-          "date": "2026-12-12",
-          "home": "Quesos El Hidalgo Manzanares F.S."
+          "away": "Viña Albali Valdepeñas",
+          "date": "2026-12-12T13:00:00",
+          "home": "ElPozo Murcia Costa Cálida",
+          "venue": "Palacio de los Deportes de Murcia (POL)"
         },
         {
           "away": "Barça",
-          "date": "2026-12-12",
-          "home": "Illes Balears Palma Futsal"
+          "date": "2026-12-12T17:00:00",
+          "home": "Illes Balears Palma Futsal",
+          "venue": "Pab. Son Moix (POL)"
+        },
+        {
+          "away": "Servigroup Peñiscola FS",
+          "date": "2026-12-12T18:45:00",
+          "home": "Jaen Paraiso Interior F.S.",
+          "venue": "P.D. Olivo Arena (T)"
         },
         {
           "away": "Jimbee Cartagena Costa Cálida",
-          "date": "2026-12-12",
-          "home": "O Parrulo Ferrol F.S."
+          "date": "2026-12-12T20:30:00",
+          "home": "O Parrulo Ferrol F.S.",
+          "venue": "P.M. A'Malata (POL)"
         },
         {
-          "away": "Viña Albali Valdepeñas",
-          "date": "2026-12-12",
-          "home": "ElPozo Murcia Costa Cálida"
+          "away": "Inter JP Financial",
+          "date": "2026-12-13T13:00:00",
+          "home": "Quesos El Hidalgo Manzanares F.S.",
+          "venue": "Pabellón Manzanares Arenas"
+        },
+        {
+          "away": "Noia Portus Apostoli",
+          "date": "2026-12-13T16:30:00",
+          "home": "Catgas Energía Santa Coloma",
+          "venue": "Pab. Mun. de Santa Coloma (POL)"
+        },
+        {
+          "away": "CD Xota FS",
+          "date": "2026-12-13T18:15:00",
+          "home": "Córdoba Patrimonio De La Humanidad",
+          "venue": "P.M.D. Vista Alegre (POL)"
         },
         {
           "away": "Sur Seeds El Ejido F.S.",
-          "date": "2026-12-12",
-          "home": "Wanapix"
+          "date": "2026-12-13T20:00:00",
+          "home": "Wanapix",
+          "venue": "Pab. Siglo XXI (POL)"
         }
       ],
       "13": [
         {
-          "away": "Illes Balears Palma Futsal",
-          "date": "2026-12-19",
-          "home": "Jimbee Cartagena Costa Cálida"
-        },
-        {
-          "away": "Quesos El Hidalgo Manzanares F.S.",
-          "date": "2026-12-19",
-          "home": "Sur Seeds El Ejido F.S."
+          "away": "Catgas Energía Santa Coloma",
+          "date": "2026-12-18T19:30:00",
+          "home": "Servigroup Peñiscola FS",
+          "venue": "Pabellon Mpal. de Peñiscola (POL)"
         },
         {
           "away": "O Parrulo Ferrol F.S.",
-          "date": "2026-12-19",
-          "home": "Inter JP Financial"
+          "date": "2026-12-18T21:15:00",
+          "home": "Inter JP Financial",
+          "venue": "Pab. Jorge Garbajosa (POL)"
+        },
+        {
+          "away": "Illes Balears Palma Futsal",
+          "date": "2026-12-19T12:00:00",
+          "home": "Jimbee Cartagena Costa Cálida",
+          "venue": "Palacio de los Deportes de Cartagena (POL)"
         },
         {
           "away": "Córdoba Patrimonio De La Humanidad",
-          "date": "2026-12-19",
-          "home": "Noia Portus Apostoli"
-        },
-        {
-          "away": "Catgas Energía Santa Coloma",
-          "date": "2026-12-19",
-          "home": "Servigroup Peñiscola FS"
-        },
-        {
-          "away": "CD Xota FS",
-          "date": "2026-12-19",
-          "home": "ElPozo Murcia Costa Cálida"
+          "date": "2026-12-19T17:00:00",
+          "home": "Noia Portus Apostoli",
+          "venue": "Pab. Agustín Mouris (POL)"
         },
         {
           "away": "Jaen Paraiso Interior F.S.",
-          "date": "2026-12-19",
-          "home": "Viña Albali Valdepeñas"
+          "date": "2026-12-19T18:45:00",
+          "home": "Viña Albali Valdepeñas",
+          "venue": "P.C.D.Virgen de la Cabeza (T)"
+        },
+        {
+          "away": "Quesos El Hidalgo Manzanares F.S.",
+          "date": "2026-12-19T20:30:00",
+          "home": "Sur Seeds El Ejido F.S.",
+          "venue": "P.M. de El Ejido (POL)"
         },
         {
           "away": "Wanapix",
           "date": "2026-12-20T12:30:00",
           "home": "Barça",
           "venue": "Palau Blaugrana (T)"
+        },
+        {
+          "away": "CD Xota FS",
+          "date": "2026-12-20T17:00:00",
+          "home": "ElPozo Murcia Costa Cálida",
+          "venue": "Palacio de los Deportes de Murcia (POL)"
         }
       ],
       "14": [
         {
           "away": "Inter JP Financial",
-          "date": "2026-12-26",
-          "home": "Barça"
+          "date": "2026-12-27T18:00:00",
+          "home": "Barça",
+          "venue": "Palau Blaugrana (T)"
         },
         {
           "away": "Catgas Energía Santa Coloma",
-          "date": "2026-12-26",
-          "home": "Córdoba Patrimonio De La Humanidad"
+          "date": "2026-12-27T18:00:00",
+          "home": "Córdoba Patrimonio De La Humanidad",
+          "venue": "P.M.D. Vista Alegre (POL)"
         },
         {
           "away": "ElPozo Murcia Costa Cálida",
-          "date": "2026-12-26",
-          "home": "Jaen Paraiso Interior F.S."
+          "date": "2026-12-27T18:00:00",
+          "home": "Jaen Paraiso Interior F.S.",
+          "venue": "P.D. Olivo Arena (T)"
         },
         {
           "away": "Jimbee Cartagena Costa Cálida",
-          "date": "2026-12-26",
-          "home": "CD Xota FS"
+          "date": "2026-12-27T18:00:00",
+          "home": "CD Xota FS",
+          "venue": "Pabellón Anaitasuna (POL)"
         },
         {
           "away": "Noia Portus Apostoli",
-          "date": "2026-12-26",
-          "home": "O Parrulo Ferrol F.S."
+          "date": "2026-12-27T18:00:00",
+          "home": "O Parrulo Ferrol F.S.",
+          "venue": "P.M.A'Malata (POL)"
         },
         {
           "away": "Quesos El Hidalgo Manzanares F.S.",
-          "date": "2026-12-26",
-          "home": "Servigroup Peñiscola FS"
+          "date": "2026-12-27T18:00:00",
+          "home": "Servigroup Peñiscola FS",
+          "venue": "Pabellon Mpal. de Peñiscola (POL)"
         },
         {
           "away": "Sur Seeds El Ejido F.S.",
-          "date": "2026-12-26",
-          "home": "Viña Albali Valdepeñas"
+          "date": "2026-12-27T18:00:00",
+          "home": "Viña Albali Valdepeñas",
+          "venue": "P.C.D.Virgen de la Cabeza (T)"
         },
         {
           "away": "Illes Balears Palma Futsal",
-          "date": "2026-12-26",
-          "home": "Wanapix"
+          "date": "2026-12-27T18:00:00",
+          "home": "Wanapix",
+          "venue": "Pab. Siglo XXI (POL)"
         }
       ],
       "15": [
         {
           "away": "Viña Albali Valdepeñas",
-          "date": "2026-12-30",
-          "home": "Jimbee Cartagena Costa Cálida"
+          "date": "2026-12-30T20:30:00",
+          "home": "Jimbee Cartagena Costa Cálida",
+          "venue": "Palacio de los Deportes de Cartagena (POL)"
         },
         {
           "away": "Servigroup Peñiscola FS",
-          "date": "2026-12-30",
-          "home": "Sur Seeds El Ejido F.S."
+          "date": "2026-12-30T20:30:00",
+          "home": "Sur Seeds El Ejido F.S.",
+          "venue": "P.M. de El Ejido (POL)"
         },
         {
           "away": "Barça",
-          "date": "2026-12-30",
-          "home": "Catgas Energía Santa Coloma"
+          "date": "2026-12-30T20:30:00",
+          "home": "Catgas Energía Santa Coloma",
+          "venue": "Pab. Mun. de Santa Coloma (POL)"
         },
         {
           "away": "Córdoba Patrimonio De La Humanidad",
-          "date": "2026-12-30",
-          "home": "Inter JP Financial"
+          "date": "2026-12-30T20:30:00",
+          "home": "Inter JP Financial",
+          "venue": "Pab. Jorge Garbajosa (POL)"
         },
         {
           "away": "CD Xota FS",
-          "date": "2026-12-30",
-          "home": "Quesos El Hidalgo Manzanares F.S."
+          "date": "2026-12-30T20:30:00",
+          "home": "Quesos El Hidalgo Manzanares F.S.",
+          "venue": "Pabellón Manzanares Arenas"
         },
         {
           "away": "Wanapix",
-          "date": "2026-12-30",
-          "home": "Noia Portus Apostoli"
+          "date": "2026-12-30T20:30:00",
+          "home": "Noia Portus Apostoli",
+          "venue": "Pab. Agustín Mouris (POL)"
         },
         {
           "away": "Jaen Paraiso Interior F.S.",
-          "date": "2026-12-30",
-          "home": "Illes Balears Palma Futsal"
+          "date": "2026-12-30T20:30:00",
+          "home": "Illes Balears Palma Futsal",
+          "venue": "Pab. Son Moix (POL)"
         },
         {
           "away": "O Parrulo Ferrol F.S.",
-          "date": "2026-12-30",
-          "home": "ElPozo Murcia Costa Cálida"
+          "date": "2026-12-30T20:30:00",
+          "home": "ElPozo Murcia Costa Cálida",
+          "venue": "Palacio de los Deportes de Murcia (POL)"
         }
       ],
       "2": [
@@ -2347,17 +2379,6 @@
           "venue": "Pabellón Municipal de Lugo (POL)"
         },
         {
-          "away": "C.D. COMPOSALA",
-          "date": "2026-11-21",
-          "home": "C.D. Tierno Galván",
-          "venue": "P.M. Lalo García (POL)"
-        },
-        {
-          "away": "Sibuscascoche Ribeira Fútbol Sala",
-          "date": "2026-11-21",
-          "home": "Caja Rural River Sala Zamora"
-        },
-        {
           "away": "Noia Portus Apostoli",
           "date": "2026-11-21",
           "home": "F.S. Salamanca Energía Duero",
@@ -2370,6 +2391,12 @@
           "venue": "Municipal de Vilalba (HN)"
         },
         {
+          "away": "Sibuscascoche Ribeira Fútbol Sala",
+          "date": "2026-11-21T17:00:00",
+          "home": "Caja Rural River Sala Zamora",
+          "venue": "P.M. Angel Nieto (POL)"
+        },
+        {
           "away": "Deporcyl - Guardo FS",
           "date": "2026-11-21T18:00:00",
           "home": "Racing de Mieres",
@@ -2380,6 +2407,12 @@
           "date": "2026-11-21T18:00:00",
           "home": "CD Albense FS",
           "venue": "P.M. Alba de Tormes (POL)"
+        },
+        {
+          "away": "C.D. COMPOSALA",
+          "date": "2026-11-21T18:30:00",
+          "home": "C.D. Tierno Galván",
+          "venue": "P.M. Lalo García (POL)"
         }
       ],
       "11": [
@@ -3704,6 +3737,12 @@
       ],
       "9": [
         {
+          "away": "C.D. Tierno Galván",
+          "date": "2026-11-14T13:00:00",
+          "home": "Sibuscascoche Ribeira Fútbol Sala",
+          "venue": "Pabellón Municipal de Lugo (POL)"
+        },
+        {
           "away": "Racing de Mieres",
           "date": "2026-11-14T17:00:00",
           "home": "Stellae Leis Pontevedra F.S.",
@@ -3720,12 +3759,6 @@
           "date": "2026-11-14T18:00:00",
           "home": "C.D. COMPOSALA",
           "venue": "Pabellón Santa Isabel (POL)"
-        },
-        {
-          "away": "C.D. Tierno Galván",
-          "date": "2026-11-14T18:00:00",
-          "home": "Sibuscascoche Ribeira Fútbol Sala",
-          "venue": "P. M. O Palomar (PIS)"
         },
         {
           "away": "F.S. Salamanca Energía Duero",
@@ -3812,20 +3845,9 @@
           "venue": "C.D.M. La Granja (T)"
         },
         {
-          "away": "CMO Valves Lauburu Ibarra",
-          "date": "2026-11-21",
-          "home": "A.D. Rioja Sala"
-        },
-        {
           "away": "CDF Zierbena",
           "date": "2026-11-21",
           "home": "EMD. Cadrete Forjas Casado"
-        },
-        {
-          "away": "C.D.Ibararte",
-          "date": "2026-11-21",
-          "home": "A.D. San Juan",
-          "venue": "A.D. San Juan (HA)"
         },
         {
           "away": "C.D. Juventud del Círculo Católico",
@@ -3839,10 +3861,22 @@
           "home": "Coras Futsal Zaragoza"
         },
         {
+          "away": "CMO Valves Lauburu Ibarra",
+          "date": "2026-11-21T16:30:00",
+          "home": "A.D. Rioja Sala",
+          "venue": "Pabellón Municipal Valdegastea (PIS)"
+        },
+        {
           "away": "Mondrate C.D.",
           "date": "2026-11-21T17:15:00",
           "home": "Sala Quinto CD",
           "venue": "Pabellón Municipal de Quinto (PIS)"
+        },
+        {
+          "away": "C.D.Ibararte",
+          "date": "2026-11-21T17:30:00",
+          "home": "A.D. San Juan",
+          "venue": "Pabellón A.D. San Juan (POL)"
         },
         {
           "away": "Otxartabe C.D.",
@@ -6761,12 +6795,6 @@
           "venue": "P.M. Espartales (POL)"
         },
         {
-          "away": "Unión Tres Cantos FS",
-          "date": "2026-11-21",
-          "home": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
-          "venue": "Pabellón Joaquín Blume (PIS)"
-        },
-        {
           "away": "CD Albacete FS",
           "date": "2026-11-21",
           "home": "Grupo López Bolaños F.S. \"A\"",
@@ -6778,8 +6806,14 @@
           "home": "Athletic Club Móstoles"
         },
         {
+          "away": "Unión Tres Cantos FS",
+          "date": "2026-11-21T17:00:00",
+          "home": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
+          "venue": "Pab. Javier Limones (POL)"
+        },
+        {
           "away": "CD Cobisa FS \"A\"",
-          "date": "2026-11-21",
+          "date": "2026-11-21T19:00:00",
           "home": "Naturpellet San Cristóbal",
           "venue": "P.M. San Cristóbal (PIS)"
         }
@@ -10706,7 +10740,7 @@
         },
         {
           "away": "Imperio Los Rosales",
-          "date": "2026-12-22T20:45:00",
+          "date": "2026-12-08T15:45:00",
           "home": "Sima Granada FS",
           "venue": "Complejo.Deportivo Nuñez Blanca (PIS)"
         }
@@ -11160,16 +11194,6 @@
       ],
       "11": [
         {
-          "away": "Estrela Revoltosa Verín FSF",
-          "date": "2026-12-08",
-          "home": "LBTL Futsal Alcantarilla"
-        },
-        {
-          "away": "MRB Móstoles FSF",
-          "date": "2026-12-08",
-          "home": "Ceuta Agrupación Deportiva"
-        },
-        {
           "away": "Nueces de Ronda Atlético Torcal FS",
           "date": "2026-12-08",
           "home": "STV Roldán F.S"
@@ -11184,6 +11208,17 @@
           "date": "2026-12-08T11:00:00",
           "home": "Rodiles F.S. \"A\"",
           "venue": "P.M. Manuel Busto (POL)"
+        },
+        {
+          "away": "Estrela Revoltosa Verín FSF",
+          "date": "2026-12-08T12:00:00",
+          "home": "LBTL Futsal Alcantarilla",
+          "venue": "CD Guillermo Molina Ríos (POL)"
+        },
+        {
+          "away": "MRB Móstoles FSF",
+          "date": "2026-12-08T12:00:00",
+          "home": "Ceuta Agrupación Deportiva"
         },
         {
           "away": "Atlético Navalcarnero",
@@ -11269,8 +11304,9 @@
         },
         {
           "away": "Ceuta Agrupación Deportiva",
-          "date": "2026-12-19",
-          "home": "C.D. Guadalcacín F.S."
+          "date": "2026-12-19T12:30:00",
+          "home": "C.D. Guadalcacín F.S.",
+          "venue": "P.M.de Guadalcacín (POL)"
         },
         {
           "away": "Ourense Ontime",
@@ -11410,14 +11446,15 @@
           "home": "C.D. Guadalcacín F.S."
         },
         {
-          "away": "Atlético Navalcarnero",
-          "date": "2027-01-16",
-          "home": "Ourense Ontime"
-        },
-        {
           "away": "MRB Móstoles FSF",
           "date": "2027-01-16",
           "home": "STV Roldán F.S"
+        },
+        {
+          "away": "Atlético Navalcarnero",
+          "date": "2027-01-16T17:00:00",
+          "home": "Ourense Ontime",
+          "venue": "Pab. de Los Remedios (POL)"
         },
         {
           "away": "F.S.F. Castro Bloques Cando",
@@ -11495,11 +11532,6 @@
           "home": "Atlético Navalcarnero"
         },
         {
-          "away": "C.D. Guadalcacín F.S.",
-          "date": "2027-02-06",
-          "home": "Ourense Ontime"
-        },
-        {
           "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
           "date": "2027-02-06",
           "home": "Rodiles F.S. \"A\""
@@ -11508,6 +11540,12 @@
           "away": "ARRIVA AD Alcorcón FSF",
           "date": "2027-02-06",
           "home": "STV Roldán F.S"
+        },
+        {
+          "away": "C.D. Guadalcacín F.S.",
+          "date": "2027-02-06T17:00:00",
+          "home": "Ourense Ontime",
+          "venue": "Pab. de Los Remedios (POL)"
         },
         {
           "away": "F.S.F. Castro Bloques Cando",
@@ -11635,11 +11673,6 @@
           "home": "C.D. Guadalcacín F.S."
         },
         {
-          "away": "LBTL Futsal Alcantarilla",
-          "date": "2027-02-20",
-          "home": "Ourense Ontime"
-        },
-        {
           "away": "F.S.F. Castro Bloques Cando",
           "date": "2027-02-20",
           "home": "Rodiles F.S. \"A\""
@@ -11648,6 +11681,12 @@
           "away": "Estrela Revoltosa Verín FSF",
           "date": "2027-02-20",
           "home": "STV Roldán F.S"
+        },
+        {
+          "away": "LBTL Futsal Alcantarilla",
+          "date": "2027-02-20T17:00:00",
+          "home": "Ourense Ontime",
+          "venue": "Pab. de Los Remedios (POL)"
         },
         {
           "away": "MRB Móstoles FSF",
@@ -11719,11 +11758,6 @@
           "home": "C.D. Guadalcacín F.S."
         },
         {
-          "away": "Ceuta Agrupación Deportiva",
-          "date": "2027-03-27",
-          "home": "Ourense Ontime"
-        },
-        {
           "away": "Poio Pescamar FS",
           "date": "2027-03-27",
           "home": "Rodiles F.S. \"A\""
@@ -11733,6 +11767,12 @@
           "date": "2027-03-27T16:30:00",
           "home": "ARRIVA AD Alcorcón FSF",
           "venue": "P.M. Los Cantos (POL)"
+        },
+        {
+          "away": "Ceuta Agrupación Deportiva",
+          "date": "2027-03-27T17:00:00",
+          "home": "Ourense Ontime",
+          "venue": "Pab. de Los Remedios (POL)"
         },
         {
           "away": "STV Roldán F.S",
@@ -11820,11 +11860,6 @@
           "home": "Atlético Navalcarnero"
         },
         {
-          "away": "Poio Pescamar FS",
-          "date": "2027-04-10",
-          "home": "Ourense Ontime"
-        },
-        {
           "away": "STV Roldán F.S",
           "date": "2027-04-10",
           "home": "Rodiles F.S. \"A\""
@@ -11834,6 +11869,12 @@
           "date": "2027-04-10T16:30:00",
           "home": "ARRIVA AD Alcorcón FSF",
           "venue": "P.M. Los Cantos (POL)"
+        },
+        {
+          "away": "Poio Pescamar FS",
+          "date": "2027-04-10T17:00:00",
+          "home": "Ourense Ontime",
+          "venue": "Pab. de Los Remedios (POL)"
         },
         {
           "away": "Estrela Revoltosa Verín FSF",
@@ -11939,11 +11980,6 @@
           "home": "C.D. Guadalcacín F.S."
         },
         {
-          "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
-          "date": "2027-05-08",
-          "home": "Ourense Ontime"
-        },
-        {
           "away": "Ceuta Agrupación Deportiva",
           "date": "2027-05-08",
           "home": "Rodiles F.S. \"A\""
@@ -11952,6 +11988,12 @@
           "away": "F.S.F. Castro Bloques Cando",
           "date": "2027-05-08",
           "home": "STV Roldán F.S"
+        },
+        {
+          "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
+          "date": "2027-05-08T17:00:00",
+          "home": "Ourense Ontime",
+          "venue": "Pab. de Los Remedios (POL)"
         },
         {
           "away": "AE Les Corts UBAE",
@@ -12029,11 +12071,6 @@
           "home": "C.D. Guadalcacín F.S."
         },
         {
-          "away": "ARRIVA AD Alcorcón FSF",
-          "date": "2027-05-22",
-          "home": "Ourense Ontime"
-        },
-        {
           "away": "LBTL Futsal Alcantarilla",
           "date": "2027-05-22",
           "home": "Rodiles F.S. \"A\""
@@ -12042,6 +12079,12 @@
           "away": "Atlético Navalcarnero",
           "date": "2027-05-22",
           "home": "STV Roldán F.S"
+        },
+        {
+          "away": "ARRIVA AD Alcorcón FSF",
+          "date": "2027-05-22T17:00:00",
+          "home": "Ourense Ontime",
+          "venue": "Pab. de Los Remedios (POL)"
         },
         {
           "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
@@ -12392,16 +12435,16 @@
           "venue": "Pabellón Jerónimo Osorio García (PIS)"
         },
         {
-          "away": "Ourense Ontime",
-          "date": "2026-11-14T19:00:00",
-          "home": "Ceuta Agrupación Deportiva",
-          "venue": "P.M. Guillermo Molina Ríos (POL)"
-        },
-        {
           "away": "LBTL Futsal Alcantarilla",
           "date": "2026-11-14T19:00:00",
           "home": "Wanapix Aldelis InterSala 10 Zaragoza",
           "venue": "C.D.M. La Granja (T)"
+        },
+        {
+          "away": "Ourense Ontime",
+          "date": "2026-11-14T19:30:00",
+          "home": "Ceuta Agrupación Deportiva",
+          "venue": "P.M. Guillermo Molina Ríos (POL)"
         },
         {
           "away": "Rodiles F.S. \"A\"",
@@ -14983,8 +15026,9 @@
         },
         {
           "away": "Entrerrios Automatización",
-          "date": "2026-12-19T18:45:00",
-          "home": "AECS L Hospitalet"
+          "date": "2026-11-27T20:45:00",
+          "home": "AECS L Hospitalet",
+          "venue": "P.M. Sán Feliú (POL)"
         }
       ],
       "30": [
@@ -18248,17 +18292,17 @@
   },
   "_comment": "Cache persistente del calendario auto-generada por scrapers.calendar_cache. NO editar a mano. Las claves planas son actaUrls por partido; la seccion _calendars guarda las jornadas enteras tal y como las devolvio la PNFG. Cada run fusiona lo fresco con esta cache para que un rate-limit no borre datos que ya teniamos. Si una entrada deja de ser valida, borrala y la proxima ejecucion la volvera a resolver. Las claves llevan dentro el codigo de competicion, que cambia cada temporada, asi que las entradas de temporadas pasadas quedan inertes (no se podan solas).",
   "_fetched": {
-    "33836159|33892849": "2026-11-10T22:06:27+00:00",
-    "33836159|33892850": "2026-11-10T22:06:33+00:00",
-    "33836163|33836164": "2026-11-10T22:06:54+00:00",
-    "33836163|33836165": "2026-11-10T22:07:05+00:00",
-    "33836163|33836166": "2026-11-10T22:07:16+00:00",
-    "33836163|33836167": "2026-11-10T22:22:28+00:00",
+    "33836159|33892849": "2026-11-11T22:48:19+00:00",
+    "33836159|33892850": "2026-11-11T22:48:25+00:00",
+    "33836163|33836164": "2026-11-11T23:03:46+00:00",
+    "33836163|33836165": "2026-11-11T23:03:57+00:00",
+    "33836163|33836166": "2026-11-11T23:04:08+00:00",
+    "33836163|33836167": "2026-11-11T23:04:19+00:00",
     "33836163|33836168": "2026-11-11T07:07:28+00:00",
-    "33836163|33836169": "2026-11-10T22:22:39+00:00",
-    "33836179|33836180": "2026-11-10T22:23:00+00:00",
-    "33836181|33836182": "2026-11-10T21:50:54+00:00",
-    "33836181|33836183": "2026-11-10T21:51:05+00:00",
+    "33836163|33836169": "2026-11-11T23:04:30+00:00",
+    "33836179|33836180": "2026-11-11T23:04:51+00:00",
+    "33836181|33836182": "2026-11-11T23:20:04+00:00",
+    "33836181|33836183": "2026-11-11T23:20:15+00:00",
     "33836181|33836184": "2026-11-10T22:06:16+00:00",
     "33918407|33918408": "2026-11-11T06:51:20+00:00"
   }
