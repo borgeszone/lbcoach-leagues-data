@@ -550,6 +550,13 @@
   "33836163|33836168|J8|fslospinos|lasallesanildelfonso": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703261&NPcd_Pdf=1",
   "33836163|33836168|J8|grancanariafs|basileafutbolsalacd": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703260&NPcd_Pdf=1",
   "33836163|33836168|J8|malta97|novocomunidadesbugedofs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703259&NPcd_Pdf=1",
+  "33836163|33836168|J9|adduggisanfernando|cfscasajuvlamatanza": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703264&NPcd_Pdf=1",
+  "33836163|33836168|J9|basileafutbolsalacd|fslospinos": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703268&NPcd_Pdf=1",
+  "33836163|33836168|J9|cdcisnerosalter|aguasdeteror": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703265&NPcd_Pdf=1",
+  "33836163|33836168|J9|cdsalesianostenerife|cdchinguaroa": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703263&NPcd_Pdf=1",
+  "33836163|33836168|J9|lasallesanildelfonso|cdtenerifeiberiatoscal": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703269&NPcd_Pdf=1",
+  "33836163|33836168|J9|novocomunidadesbugedofs|grancanariafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703267&NPcd_Pdf=1",
+  "33836163|33836168|J9|suntrypaguimesfs|malta97": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703266&NPcd_Pdf=1",
   "33836163|33836169|J1|cdbsalvatierrafsconstrucionesvianri|melillaciudaddeldeportenuevaera": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702962&NPcd_Pdf=1",
   "33836163|33836169|J1|cdbsalvatierrafs|melillaciudaddeldeportenuevaera": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702962&NPcd_Pdf=1",
   "33836163|33836169|J1|cdbujalancefsbeconet|cdmalacitanofutsal": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702959&NPcd_Pdf=1",
@@ -8266,7 +8273,7 @@
           "away": "AD Duggi-San Fernando",
           "date": "2026-11-21T16:00:00",
           "home": "Aguas de Teror",
-          "venue": "P.Polid. de Teror (T)"
+          "venue": "CEIP MONSEÑOR SOCORRO LANTIGUA (POL)"
         },
         {
           "away": "C.D. Cisneros Alter",
@@ -15984,11 +15991,6 @@
           "venue": "P.M. Gemma Arenas Alcazar (POL)"
         },
         {
-          "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
-          "date": "2027-02-20",
-          "home": "UDAF Afanion \"A\""
-        },
-        {
           "away": "C.D.E. Leganés F.S. Masdeporte",
           "date": "2027-02-20",
           "home": "I.E.S. Luis de Camoens",
@@ -15999,6 +16001,12 @@
           "date": "2027-02-20",
           "home": "C.F.S. Femenino San Fernando",
           "venue": "Pab. Justo Gómez Salto (POL)"
+        },
+        {
+          "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
+          "date": "2027-02-20T17:00:00",
+          "home": "UDAF Afanion \"A\"",
+          "venue": "Pabellón Municipal Cocheras -Lepanto (POL)"
         },
         {
           "away": "ARRIVA AD Alcorcón FSF",
@@ -16929,15 +16937,15 @@
       ],
       "11": [
         {
-          "away": "REYCO Burela FS",
-          "date": "2026-11-28",
-          "home": "MRB FS Mostoles",
-          "venue": "P.M. Villafontana (POL)"
-        },
-        {
           "away": "Unión África Ceutí \"A\"",
           "date": "2026-11-28",
           "home": "Ribera Navarra FS"
+        },
+        {
+          "away": "REYCO Burela FS",
+          "date": "2026-11-28T16:00:00",
+          "home": "MRB FS Mostoles",
+          "venue": "Pabellón Eva Manguan (POL)"
         },
         {
           "away": "Barça Atlètic",
@@ -17088,12 +17096,6 @@
           "venue": "P.M. Vista Alegre (POL)"
         },
         {
-          "away": "C.D. Leganés F.S.",
-          "date": "2026-12-19",
-          "home": "Barça Atlètic",
-          "venue": "Ciutat Esportiva Pabellón Futsal (PIS)"
-        },
-        {
           "away": "Family Cash Alzira F.S.",
           "date": "2026-12-19",
           "home": "MRB FS Mostoles",
@@ -17104,6 +17106,12 @@
           "date": "2026-12-19T17:00:00",
           "home": "Avanza Jaén Paraíso Interior",
           "venue": "Pabellon La Salobreja (POL)"
+        },
+        {
+          "away": "C.D. Leganés F.S.",
+          "date": "2026-12-19T17:00:00",
+          "home": "Barça Atlètic",
+          "venue": "Ciutat Esportiva Pabellón Futsal (PIS)"
         },
         {
           "away": "C.E. Futsal Gestoria Luis Mataró",
@@ -17124,12 +17132,6 @@
         }
       ],
       "15": [
-        {
-          "away": "REYCO Burela FS",
-          "date": "2027-01-09",
-          "home": "Barça Atlètic",
-          "venue": "Ciutat Esportiva Pabellón Futsal (PIS)"
-        },
         {
           "away": "Zambú CFS Pinatar Cerramientos Abatibles",
           "date": "2027-01-09",
@@ -17152,6 +17154,12 @@
           "date": "2027-01-09T16:30:00",
           "home": "C.D. Melistar",
           "venue": "Pab. Javier Imbroda Ortiz (POL)"
+        },
+        {
+          "away": "REYCO Burela FS",
+          "date": "2027-01-09T17:00:00",
+          "home": "Barça Atlètic",
+          "venue": "Ciutat Esportiva Pabellón Futsal (PIS)"
         },
         {
           "away": "ElPozo Ciudad de Murcia",
@@ -17223,12 +17231,6 @@
       ],
       "17": [
         {
-          "away": "Avanza Jaén Paraíso Interior",
-          "date": "2027-01-23",
-          "home": "Barça Atlètic",
-          "venue": "Ciutat Esportiva Pabellón Futsal (PIS)"
-        },
-        {
           "away": "Xerez Toyota Nimauto",
           "date": "2027-01-23",
           "home": "Gasifred Atlético Ibiza",
@@ -17244,6 +17246,12 @@
           "date": "2027-01-23T16:00:00",
           "home": "Entrerrios Automatización",
           "venue": "C.D.M. La Granja (T)"
+        },
+        {
+          "away": "Avanza Jaén Paraíso Interior",
+          "date": "2027-01-23T17:00:00",
+          "home": "Barça Atlètic",
+          "venue": "Ciutat Esportiva Pabellón Futsal (PIS)"
         },
         {
           "away": "REYCO Burela FS",
@@ -18309,12 +18317,12 @@
     "33836163|33836165": "2026-11-13T01:09:39+00:00",
     "33836163|33836166": "2026-11-13T01:24:50+00:00",
     "33836163|33836167": "2026-11-13T01:25:02+00:00",
-    "33836163|33836168": "2026-11-12T07:35:15+00:00",
+    "33836163|33836168": "2026-11-13T12:19:02+00:00",
     "33836163|33836169": "2026-11-13T01:25:13+00:00",
     "33836179|33836180": "2026-11-13T01:25:34+00:00",
     "33836181|33836182": "2026-11-13T01:25:46+00:00",
     "33836181|33836183": "2026-11-13T01:25:57+00:00",
-    "33836181|33836184": "2026-11-12T07:36:07+00:00",
-    "33918407|33918408": "2026-11-12T07:19:07+00:00"
+    "33836181|33836184": "2026-11-13T12:34:50+00:00",
+    "33918407|33918408": "2026-11-13T12:35:11+00:00"
   }
 }
