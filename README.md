@@ -1,6 +1,6 @@
 # lbcoach-leagues-data
 
-Genera y publica `leagues.json` — la fuente de datos que la app **GoalDash / lbcoach** descarga al crear un equipo para autorrellenar la lista de rivales con sus escudos.
+Genera y publica `leagues.json` — la fuente de datos que la app **Pizark** (paquete `lbcoach`; el repo conserva el nombre de antes) descarga para autorrellenar la lista de rivales con sus escudos, el calendario de cada jornada con su hora, pabellón y acta, y el reglamento de la temporada.
 
 ## Cómo funciona
 
@@ -10,8 +10,12 @@ Genera y publica `leagues.json` — la fuente de datos que la app **GoalDash / l
 │   ├─ scrapers/rfef_discovery.py     │  Qué competiciones tiene la temporada
 │   ├─ scrapers/rfef_web.py           │  Equipos desde rfef.es (pretemporada)
 │   ├─ scrapers/rfef.py               │  Equipos + calendario (PNFG, PDF)
+│   ├─ scrapers/rfef_calendario.py    │  Calendario y actas de la PNFG
+│   ├─ scrapers/pnfg_pacer.py         │  El cupo de la PNFG: ritmo y parada
+│   ├─ scrapers/team_renames.py       │  Un equipo con dos nombres en un grupo
+│   ├─ scrapers/former_names.py       │  Nombres de antes de cada club → aliases
 │   ├─ scrapers/fcf.py                │  Lee data/fcf-manual.json
-│   └─ scrapers/logo_resolver.py      │  Escudos oficiales → Wikipedia
+│   └─ scrapers/logo_resolver.py      │  Allowlist curada → portal → caché
 └─────────────────────────────────────┘
               │
               ▼
@@ -21,10 +25,10 @@ Genera y publica `leagues.json` — la fuente de datos que la app **GoalDash / l
        Branch `gh-pages`
               │
               ▼
-  https://raw.githubusercontent.com/<owner>/lbcoach-leagues-data/gh-pages/leagues.json
+  https://raw.githubusercontent.com/borgeszone/lbcoach-leagues-data/gh-pages/leagues.json
               │
               ▼
-       App Flutter (lbcoach)
+       App Flutter (lbcoach) y panel de administración
 ```
 
 ## Uso local
@@ -34,15 +38,30 @@ pip install -r requirements.txt
 python scrape.py
 # Salida: output/leagues.json
 
-python -m unittest discover -s tests -v   # no toca la red
+python -m unittest discover -s tests -v   # 314 casos (2026-11-14)
 ```
 
 Opciones:
 - `--season 2026-2027` — cambiar la temporada
-- `--no-badges` — saltar la resolución de escudos (más rápido para iterar)
+- `--no-badges` — no consultar el portal oficial de escudos; la allowlist curada
+  (`data/badges-overrides.json`) se aplica igual, porque no depende de la red
+- `--teams-only` — solo equipos (2 jornadas por grupo); hereda los calendarios
+  del JSON publicado y no publica si no puede leerlo
 
 Los tests parsean **HTML real** capturado de la PNFG (`tests/fixtures/`), no
 HTML inventado. Se ejecutan también en el workflow, antes del scrape.
+
+> **Problema conocido: los tests no están del todo aislados de la red.** A la
+> PNFG no le piden nada (la suite pasa con la red a la PNFG bloqueada, §6.86 del
+> informe técnico), pero `test_rfef_teams`,
+> `test_season_calendar` y `test_teams_resilience` llegan al camino del PDF
+> legacy (`rfef._pdf_url`) y descargan de verdad
+> `https://rfef.es/sites/default/files/2026-07/Calendario_{1Div,2Div,1DivFem}_Sala_2026-2027.pdf`.
+> Esas URL no existen, así que la salida se llena de `HTTP 404 en https://rfef.es/…`
+> y los 314 casos pasan igual (comprobado el 2026-11-14). Sin red, `_download_pdf`
+> devuelve `None` y tampoco falla nada; pero cada ejecución del workflow hace
+> esas peticiones a rfef.es antes de empezar el scrape, y el día que alguna de
+> esas URL sirva un PDF de verdad, los tests leerán datos reales. Sin arreglar.
 
 ## Mantenimiento por temporada
 
@@ -65,8 +84,9 @@ de una temporada a otra; los códigos no.
 Los equipos salen, por orden: de la **clasificación** (trae escudo oficial, pero
 no existe hasta la J1), del **PDF de calendario de rfef.es** (`scrapers/rfef_web.py`,
 con la temporada leída de su portada), del **calendario de la PNFG** (existe desde
-el sorteo), del PDF oficial legacy, de la **página de competición** de rfef.es, y del
-fallback curado.
+el sorteo), del PDF oficial legacy y del fallback curado. La **página de
+competición** de rfef.es ya no es fuente de equipos (ver «Nada se publica sin
+poder fecharlo»): solo aporta los nombres cortos.
 
 Las dos fuentes de `rfef.es` son las que funcionan en pretemporada. Y hay una regla
 que no conviene deshacer: **ninguna URL de PDF se escribe a mano**. Se descubren
@@ -125,7 +145,7 @@ afirmar la temporada:
 | fuente | por qué se puede fechar |
 |---|---|
 | `clasificacion` | comp/grupo descubiertos para esta temporada |
-| `calendario` | `NFG_CmpJornada` con `CodTemporada` explícito |
+| `calendario` | el calendario de la PNFG pedido con `CodTemporada` explícito |
 | `pdf-rfef`, `pdf-legacy` | la portada imprime "Temporada 2026-2027" |
 | `fallback` | `data/rfef-fallback.json` declara su `season` |
 | `pagina` | **no se puede** — rfef.es no dice de qué año es |
@@ -183,16 +203,41 @@ coincide con la temporada pedida. Al empezar temporada: o se actualizan los
 equipos **y** el `season`, o se deja como está y simplemente no se usa. Subir el
 `season` sin cambiar los equipos es exactamente el fallo que esto evita.
 
-### El rate-limit de la PNFG, y por qué costaba horas
+### El cupo de la PNFG, y cómo se reparte el trabajo
 
-La PNFG bloquea **devolviendo 200 con el cuerpo vacío**, no un 429. Eso importa
-porque no se distingue de "esta jornada no existe", así que la única respuesta
-posible era reintentar: 15+30+60+120 = **225 s por jornada**. Con ~360 jornadas
-por run completo (12 grupos × ~30), un run bloqueado se pasaba horas
-reintentando —alimentando el bloqueo que causó el reintento— y moría en el corte
-de 6 h de Actions **sin llegar a publicar**.
+La PNFG bloquea **devolviendo 200 con el cuerpo vacío**, no un 429, así que un
+bloqueo no se distingue de "esta jornada no existe". Durante meses se trató como
+un límite de ritmo y se reintentaba —15+30+60+120 = 225 s por jornada—; medido
+en octubre de 2026 resultó ser otra cosa (detalle en `scrapers/pnfg_pacer.py`,
+§6.55 y §6.86 del informe técnico):
 
-Tres piezas, y cada una cubre lo que las otras no:
+- **Es un cupo, y es de la IP**: unas 15-20 peticiones, sean de la página que
+  sean y vayan al ritmo que vayan. Una sesión nueva no lo esquiva.
+- Al pasarse viene un corte de varios minutos que **se alarga si se sigue
+  pidiendo durante él y escala con cada reincidencia**. Reintentar, que es lo
+  que se hacía, era exactamente lo que lo empeoraba.
+- Las pausas de 15 minutos apenas lo recargan.
+
+Por eso un run viejo, con ~360 peticiones (una por jornada), se quedaba siempre
+en la J12 de cada grupo. Lo que lo resolvió no fue esperar mejor, sino **pedir
+mucho menos**:
+
+| Pieza | Qué hace | Dónde |
+|---|---|---|
+| Vista completa del calendario | `NFG_VisCalendario_Vis?CDetalle=1`: las 30 jornadas de un grupo, con hora y pabellón, en **una** petición | `rfef_calendario.fetch_season_calendar` |
+| Actas con tope | `NFG_CmpJornada` solo para jornadas jugadas en los últimos 45 días y sin acta, la más reciente primero; como mucho 2 por grupo y 8 por run | `acta_jornadas`, `rfef._acta_budget` (`PNFG_ACTAS_GROUP`, `PNFG_ACTAS_MAX`) |
+| Descubrimiento guardado | La temporada, las competiciones y los grupos se reutilizan 6 días (ninguno en julio-septiembre) si son de la misma temporada | `rfef.load_discovery`, `data/discovery-cache.json` |
+| Reparto entre runs | Cada grupo apunta cuándo se bajó entero; si fue en las últimas 20 h sale de la caché y no se pide | `calendar_cache.fetched_within` (`PNFG_CAL_REFRESH_HOURS`) |
+| Tandas | 6 peticiones y 900 s de silencio; cuentan también las redirecciones que se quedan en la PNFG | `pnfg_pacer.Pacer` (`PNFG_BURST`, `PNFG_REST`) |
+| Parada al primer corte | Desde el primero, `PacedSession` contesta "vacío" sin salir a la red y los tres módulos que piden se rinden por sus caminos de siempre | `pnfg_pacer.stopped()` |
+
+Un día entero son unas 35 peticiones y no caben en un run, pero cada run de
+Actions sale por una IP nueva: de ahí el cron cada 4 horas, en el que cada run
+hace lo que quepa y el siguiente sigue donde lo dejó el anterior. Con eso los 12
+grupos se publican con sus 30 jornadas (antes del cambio, 4).
+
+**El camino de jornada en jornada sigue ahí, como respaldo** de la vista
+completa, con sus tres redes, y cada una cubre lo que las otras no:
 
 | Pieza | Qué hace | Dónde |
 |---|---|---|
@@ -200,48 +245,42 @@ Tres piezas, y cada una cubre lo que las otras no:
 | `calendar_cache` (`_calendars`) | rellena por jornada | entre runs, sin red |
 | `inherit_calendars` | conserva el más completo | entre runs, contra gh-pages |
 
-**El cortacircuitos** abandona un grupo tras 3 jornadas seguidas sin respuesta
-(11 min de evidencia; la cuarta no informa de nada nuevo) y el run entero tras 12
-fallos. El presupuesto es del run y no por grupo a propósito: doce grupos con dos
-fallos describen el mismo servidor enfadado que un grupo con veinticuatro, y el
-objetivo es dejar de pegarle. Además **los reintentos se hunden a uno tras el
-primer fallo y se recuperan con la primera respuesta buena**, que es lo que evita
-que un corte transitorio degrade el resto del run.
-
-**Abandonar no es perder**, y ésa es la condición para que cortar antes sea una
-mejora y no un recorte: lo que el breaker deja a medias lo rellena la caché de
-jornadas. Si algún día se quitan las otras dos piezas, hay que quitar el breaker
-con ellas.
+**El cortacircuitos** abandona un grupo tras 3 jornadas seguidas sin respuesta y
+el run entero tras 12 fallos, o al agotar el tope de tiempo de la fase de
+calendario (`PNFG_CALENDAR_MINUTES`, 250 min: el job muere a las 6 h sin
+publicar), o en cuanto la PNFG ha cortado. El presupuesto es del run y no por
+grupo a propósito: doce grupos con dos fallos describen el mismo servidor
+enfadado que un grupo con veinticuatro. **Abandonar no es perder**: lo que el
+breaker deja a medias lo rellena la caché de jornadas. Si algún día se quitan
+las otras dos piezas, hay que quitar el breaker con ellas.
 
 **La caché guarda solo lo que viene fresco de la PNFG**, nunca lo derivado del
 PDF. Si entrara el PDF, una jornada con hora acabaría pisada por la misma jornada
 sin ella y la caché iría hacia atrás. Al fusionar manda lo fresco —así un
 aplazamiento se corrige al volver a bajar esa jornada— con una excepción: si lo
-fresco no trae hora en ningún partido y la caché sí, gana la caché.
+fresco no trae hora en ningún partido y la caché sí, gana la caché. Y el PDF
+oficial (que viene de rfef.es y no gasta cupo) completa las jornadas que la PNFG
+dejó a medias: antes solo se miraba si la PNFG no daba nada (`if not calendar`),
+y un grupo con 14 de 15 jornadas se publicaba con 14. Pasó el 2026-08-31 con
+Primera masculina.
 
-Esto arregla además un caso que no era de bloqueo total sino **a medias**: el
-fallback al PDF es `if not calendar`, un booleano sobre la lista, así que un
-grupo que trajera 14 de 15 jornadas se publicaba con 14 y el PDF ni se
-consultaba. Pasó el 2026-08-31 con Primera masculina (le faltaba la J12).
+**Liga Prime publica Apertura y Clausura**, una petición cada una, y cada
+jornada lleva su `phase`.
 
-Cuando el breaker recorta algo, el JSON publicado lo dice en `warnings`. Va ahí y
-no solo al log porque un run recortado se parece demasiado a uno normal: sin eso,
-la única diferencia visible entre "la federación no lo ha publicado" y "nos
-bloquearon" es un recuento de jornadas que nadie mira.
-
-> **Lo que esto NO hace: bajar el número de peticiones.** Sigue siendo una por
-> jornada. El siguiente paso natural es invertir la cascada —PDF como base (1
-> petición por grupo, las 30 jornadas con su día) y PNFG solo para la ventana
-> alrededor de hoy (hora y `actaUrl`, que es lo único que cambia)—, que llevaría
-> el run de ~360 peticiones a ~84. No está hecho.
+Cuando el run se recorta, el JSON publicado lo dice en `warnings` («la PNFG cortó
+a mitad de run…», o el tope de tiempo). Va ahí y no solo al log porque un run
+recortado se parece demasiado a uno normal. El workflow, además, lo enseña como
+aviso en Actions: si se repite varios días, ver `docs/plan-b-runner-casa.md`.
 
 ### FCF (manual, ~30 min/año)
 Edita `data/fcf-manual.json`:
 1. Para cada división donde juegues, rellena el array `teams` con los rivales de la temporada actual
 2. Si juegas en un grupo territorial concreto, duplica la división con un id específico (ej. `fcf-1cat-fs-fem-grup-2`)
-3. Los escudos los puedes dejar como `null` — el resolver de Wikipedia los rellenará si encuentra el club
+3. Los escudos los puedes dejar como `null`. Ojo: el resolver ya **no** busca en Wikipedia (se retiró en agosto de 2026, `IP-004`); solo los rellena si el club está en la allowlist curada (`data/badges-overrides.json`), en el portal oficial o en la caché. Si hace falta uno, se añade a la allowlist con su procedencia.
 
-Push al repo y GitHub Actions corre solo (o trigger manual desde la UI).
+Push al repo y GitHub Actions lo recoge en el siguiente run (o trigger manual desde la UI).
+
+**Hoy el fichero está sin rellenar** (las seis divisiones con `teams: []`), y por eso **la categoría `fcf` no se publica**: `scrape.py::drop_unfilled_divisions` retira las divisiones curadas vacías —y la categoría si se queda sin ninguna— y lo dice en `warnings`, con el fichero que hay que editar. Antes salían en el desplegable de la app y el entrenador que elegía una no recibía nunca ni rivales ni calendario. A las de RFEF no se les aplica: una división de RFEF vacía está pendiente de que la federación la abra, y debe seguir publicándose para que el móvil que la tenga elegida se traiga sus rivales solo.
 
 ### Novedades de federación (manual)
 La bandeja de "Novedades" de la app tiene **dos fuentes**, y ésta es solo una:
@@ -293,30 +332,34 @@ Se mantienen en `data/notices-manual.json` y `scrape.py` las inyecta en la categ
 - Si una división tiene bases propias, **mandan sobre** el reglamento general de su federación (la app no suma los dos, elige el más específico).
 - Una **revisión a mitad de temporada** se anuncia cambiando la `url`; con el mismo `season` la app lo dice como "Actualizado el reglamento". Cambiar sólo el `title` no genera aviso.
 - No está automatizado y no es un olvido: la PNFG no publica el reglamento en ningún endpoint estructurado — cuelga de `rfef.es/sites/default/files/YYYY-MM/` con un nombre impredecible.
+- **Estado a 2026-11-14:** el fichero ya lleva las normas reguladoras y bases de competición 2026-27 de la RFEF para las cinco divisiones (tres PDF de `2026-06/`, comprobados leyendo la portada), pero el cambio **está sin commitear**, así que todavía no se publica y la app no avisa de nada. Se publicará en el primer run después de subirlo.
 
 ## GitHub Actions
 
 El workflow `.github/workflows/scrape.yml`:
-- **Cron:** diario a las 06:00 UTC en julio-septiembre (pretemporada), lunes el resto del año. Los meses no se solapan a propósito: si los dos cron casaran el mismo día, GitHub lanzaría dos runs que competirían por publicar
-- **Dos modos**, porque cuestan cosas muy distintas:
+- **Cron:** completo **cada 4 horas, todo el año** (`17 */4 * * *`), con `concurrency` para que dos runs no publiquen ni commiteen las cachés a la vez. Antes era diario en julio-septiembre y semanal el resto del año; cambió con el cupo de la PNFG (ver «El cupo de la PNFG»): cada run sale por una IP nueva, hace lo que quepa y el siguiente sigue donde lo dejó. En la práctica GitHub los lanza con retraso: del 10 al 14 de noviembre de 2026 salieron unos tres al día, de 20 a 50 minutos cada uno (la mayor parte, las pausas de 15 minutos entre tandas).
+- **Dos modos**:
 
-  | Modo | Qué trae | Coste | Cuándo |
-  |---|---|---|---|
-  | `--teams-only` | equipos (2 jornadas por grupo) | ~1 min | cron de martes a domingo |
-  | completo | equipos + las ~30 jornadas | ~3 h | lunes, y `workflow_dispatch` por defecto |
+  | Modo | Qué trae | Cuándo |
+  |---|---|---|
+  | completo | equipos + calendario + actas | el cron, y `workflow_dispatch` por defecto |
+  | `--teams-only` (`equipos`) | equipos (2 jornadas por grupo) | solo a mano |
 
   El run rápido **hereda los calendarios del JSON ya publicado**, y no publica si no puede leerlo o si es de otra temporada — sin eso, un fallo de red de treinta segundos dejaría a la app sin autorrelleno por jornada, y heredar de otra temporada sería reintroducir el bug original por la puerta de atrás.
-
-  El reparto no es arbitrario: el calendario de una temporada apenas cambia (lo que cambia dentro son las actas, y esas ya tienen caché acumulativa), mientras que en agosto lo que cambia a diario es qué divisiones existen. Bajarse las 30 jornadas cada día era pegarle hora y media diaria a la federación desde la misma IP, provocando en parte los bloqueos que luego hacen perder jornadas.
+- **Antes del scrape** corren los tests; **después**, si la PNFG cortó, el run sale con un aviso («La PNFG ha cortado») en vez de en silencio.
+- **Cachés de vuelta a `main`**: `badges-cache.json`, `calendar-cache.json`, `former-names.json` y `discovery-cache.json`, en un commit `chore: refresh data caches [skip ci]`. Sin ese commit se tirarían con el contenedor y nunca acumularían.
+- **Plan B**: con la variable del repo `SCRAPER_RUNNER=self-hosted` el mismo workflow corre en un PC de casa. Ver `docs/plan-b-runner-casa.md`.
 - **Manual:** desde la pestaña Actions → "Scrape leagues data" → "Run workflow"
 - **Output:** publica `output/leagues.json` en la branch `gh-pages`
 
-URL pública del JSON tras el primer despliegue:
+Hay un segundo workflow, `pnfg-probe.yml` («Medir cupo de la PNFG»), que es un experimento y solo se lanza a mano: mide el cupo con `tools/pnfg_quota_probe.py`, una estrategia por job para que cada una tenga su propia IP. No toca datos ni publica nada.
+
+URL pública del JSON:
 ```
-https://raw.githubusercontent.com/<owner>/lbcoach-leagues-data/gh-pages/leagues.json
+https://raw.githubusercontent.com/borgeszone/lbcoach-leagues-data/gh-pages/leagues.json
 ```
 
-Esa URL es la que usará la app Flutter. Configurarla en `lib/leagues_service.dart` cuando se implemente la Fase B.
+Es la misma que `LeaguesService.remoteJsonUrl` (app), `website/admin/config.js` (panel) y `PUBLISHED_JSON_URL` (`scrape.py`, de donde se hereda). Si se separan, el panel informa sobre un fichero que no usa nadie y el run hereda de otro.
 
 ## Setup inicial (primera vez)
 
@@ -339,16 +382,21 @@ gh workflow run "Scrape leagues data"
 # 4. Verificar
 gh run watch
 curl https://raw.githubusercontent.com/<owner>/lbcoach-leagues-data/gh-pages/leagues.json | jq .version
+# (hoy <owner> es borgeszone)
 ```
 
 ## Estructura del JSON publicado
 
+Recortado del publicado el 2026-11-14:
+
 ```json
 {
   "version": "2026-2027",
-  "lastUpdated": "2026-08-15T06:00:00+00:00",
+  "lastUpdated": "2026-11-14T15:43:29+00:00",
   "warnings": [
-    "rfef: sin publicar en la PNFG para 2026-2027: rfef-primera-fs-masc, rfef-segunda-fs-masc"
+    "rfef: data/rfef-fallback.json es de '2025-2026' y se pidió '2026-2027': se ignora (…)",
+    "fcf-1cat-fs-masc: sin equipos curados, no se publica (rellénala en data/fcf-manual.json)",
+    "fcf: ninguna división con equipos, la categoría entera no se publica"
   ],
   "categories": [
     {
@@ -363,21 +411,48 @@ curl https://raw.githubusercontent.com/<owner>/lbcoach-leagues-data/gh-pages/lea
           "teams": [
             { "name": "Barça", "logoUrl": "https://rfef.filesnovanet.es/..." },
             {
-              "name": "Osasuna Magna",
-              "officialName": "C.A. Osasuna Magna",
-              "logoUrl": null
+              "name": "Catgas Energia",
+              "officialName": "Catgas Energía Santa Coloma",
+              "aliases": ["FS García", "Industrias Santa Coloma"],
+              "logoUrl": "https://futsal.rfef.es/..."
             }
+          ],
+          "calendar": [
+            { "jornada": 1, "phase": "Apertura", "matches": [
+              { "home": "CD Xota FS", "away": "Jaen Paraiso Interior F.S.",
+                "date": "2026-09-11T19:30:00", "venue": "Pab. Anaitasuna (POL)",
+                "actaUrl": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?..." }
+            ] }
           ]
         }
       ]
-    },
-    { "id": "fcf", "name": "Liga Catalana", "divisions": [...] }
+    }
   ]
 }
 ```
 
+La categoría `fcf` («Liga Catalana») solo aparece cuando alguna de sus divisiones
+tiene equipos (ver «FCF»). Las divisiones con grupos llevan `groups`, cada uno con
+sus `teams` y su `calendar`.
+
 `officialName` es **opcional** y solo aparece cuando el club tiene dos nombres: el corto
-que publica la federación en su página de competición ("Osasuna Magna") y el largo con
-patrocinador que sale en el acta y en el calendario ("C.A. Osasuna Magna"). La app enseña
-`name` y usa los dos para emparejar. Un cliente viejo que no lo conozca lo ignora y se
+que publica la federación en su página de competición ("Catgas Energia") y el largo con
+patrocinador que sale en el acta y en el calendario ("Catgas Energía Santa Coloma"). La app
+enseña `name` y usa los dos para emparejar. Un cliente viejo que no lo conozca lo ignora y se
 queda con el corto, que es el que quiere enseñar de todas formas.
+
+`aliases` es **opcional** y lleva los nombres que el club ha tenido antes **en esta
+temporada**. Sale de dos sitios: `scrapers/team_renames.py`, que junta los dos nombres de un
+equipo que cambia de nombre a mitad de liga dentro del mismo grupo (nunca coinciden en una
+jornada y se parecen), y `scrapers/former_names.py`, que compara cada run con el publicado y
+recuerda lo aprendido en `data/former-names.json` (dos nombres son del mismo club si
+comparten un nombre o si ocupan el mismo hueco del calendario en dos jornadas o más; nunca
+por parecido). La app los usa para reconocer al rival guardado con el nombre de antes.
+Al cambiar de temporada `former-names.json` empieza de cero.
+
+En el calendario, `phase` solo existe en Liga Prime (Apertura / Clausura), `venue` solo si la
+federación ya asignó pabellón, y `actaUrl` solo cuando el acta está publicada. Una fecha sin
+hora (la PNFG la escribe `00:00`) se publica con el día a secas.
+
+Opcionales a nivel de categoría o división: `notices` (de `data/notices-manual.json`) y
+`rules` (de `data/rules-manual.json`, solo los de la temporada que se genera).

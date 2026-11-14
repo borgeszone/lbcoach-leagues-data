@@ -1,14 +1,18 @@
 # Plan B: el scraper desde un PC de casa
 
-El scraper corre en GitHub Actions. Cada run sale por una IP distinta del pool
-de GitHub y hace unas 40-50 peticiones a la PNFG: el calendario de cada grupo en
-una, como mucho 8 páginas de jornada para las actas (la página cuyo cupo se ha
-medido), y todo en tandas de 6 con 15 minutos de silencio entre ellas. Es menos
-de lo que la PNFG deja (ver `scrapers/pnfg_pacer.py`).
+El scraper corre en GitHub Actions, cada 4 horas. Cada run sale por una IP
+distinta del pool de GitHub, y eso es lo que lo hace funcionar: la PNFG deja
+unas 15-20 peticiones **por IP** antes de cortar (ver `scrapers/pnfg_pacer.py`),
+y un día entero de trabajo son unas 35 —el calendario de cada grupo en una, como
+mucho 8 páginas de jornada para las actas y, una vez por semana, qué divisiones
+hay—. Así que cada run hace lo que cabe, en tandas de 6 con 15 minutos de
+silencio entre ellas, se para al primer corte, y el siguiente se salta los
+grupos que se bajaron en las últimas 20 h.
 
 Este plan es para el día en que eso deje de funcionar: **si la PNFG empieza a
-bloquear las IP de centros de datos**, o si el cupo baja tanto que ni las tandas
-lo respetan. Hoy (octubre de 2026) no pasa.
+bloquear las IP de centros de datos**, o si el cupo baja tanto que ni repartido
+cabe. Hoy (14 de noviembre de 2026) no pasa: los 40 últimos runs terminaron en
+verde.
 
 ## Cómo se sabe que toca
 
@@ -17,7 +21,7 @@ lo respetan. Hoy (octubre de 2026) no pasa.
 - El panel enseña grupos con menos jornadas de las que tienen.
 
 **Un aviso suelto no es motivo**: lo que falta lo pone la caché y lo pide el run
-del día siguiente, que sale por otra IP. Toca actuar si se repite varios días
+siguiente, que sale por otra IP. Toca actuar si se repite varios días
 seguidos. Antes del plan B, prueba lo barato en `.github/workflows/scrape.yml`:
 bajar `PNFG_ACTAS_MAX` a 4 y `PNFG_BURST` a 4.
 
@@ -27,9 +31,19 @@ Un *self-hosted runner*: un programa de GitHub que se instala en un PC y recoge
 los trabajos de Actions de este repo. El workflow es el mismo y publica igual en
 gh-pages. Lo único que cambia es que las peticiones salen por la IP de casa.
 
-El precio es que **ese PC tiene que estar encendido** a la hora del cron
-(06:00 UTC: las 8:00 en verano y las 7:00 en invierno, hora de España) durante
-1-2 horas. Si está apagado, el trabajo espera en cola hasta 24 h y luego falla.
+El precio es que **ese PC tiene que estar encendido** a las horas del cron: cada
+4 horas, al minuto 17 (`17 */4 * * *`, en UTC), y cada run dura de 20 a 50
+minutos, casi todo en las pausas entre tandas. Si está apagado, el trabajo espera
+en cola hasta 24 h y luego falla; como el workflow no deja dos runs a la vez
+(`concurrency`), en cola solo queda el último.
+
+**Y hay un segundo precio, que conviene saber antes de activarlo**: el reparto
+entre runs se apoya en que cada uno sale por una IP nueva. Con el runner de casa
+todos salen por la misma, así que un día de trabajo (~35 peticiones) pasa a
+depender de que el cupo de la IP se recargue entre un run y el siguiente. Eso
+**no se ha medido**: lo medido es que las pausas de 15 minutos apenas lo
+recargan. Si se activa, conviene vigilar los primeros días que los grupos se
+siguen completando, y si no, bajar `PNFG_ACTAS_MAX`.
 
 ## Activarlo (unos 10 minutos)
 
