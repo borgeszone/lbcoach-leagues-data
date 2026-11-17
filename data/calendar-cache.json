@@ -9866,12 +9866,6 @@
           "home": "Nawter Blanca FS"
         },
         {
-          "away": "Joasan Construcciones CFS Pinatar \"B\"",
-          "date": "2026-11-28",
-          "home": "C.D. Bujalance F.S. Beconet",
-          "venue": "P. José Pérez Pozuelo (T)"
-        },
-        {
           "away": "Cdb Salvatierra FS Construcciones Vianri",
           "date": "2026-11-28",
           "home": "Dos Hermanas F.S. C.D. \"A\"",
@@ -9888,6 +9882,12 @@
           "date": "2026-11-28T16:00:00",
           "home": "C.D. Sporting FS Almería Biocampojoyma",
           "venue": "Pabellón José Antonio Segura (POL)"
+        },
+        {
+          "away": "Joasan Construcciones CFS Pinatar \"B\"",
+          "date": "2026-11-28T18:00:00",
+          "home": "C.D. Bujalance F.S. Beconet",
+          "venue": "P. José Pérez Pozuelo (T)"
         },
         {
           "away": "FLEXLIVING JUMILLA FS",
@@ -11240,11 +11240,6 @@
       ],
       "10": [
         {
-          "away": "Wanapix Aldelis InterSala 10 Zaragoza",
-          "date": "2026-12-05",
-          "home": "Ourense Ontime"
-        },
-        {
           "away": "LBTL Futsal Alcantarilla",
           "date": "2026-12-05T10:00:00",
           "home": "Nueces de Ronda Atlético Torcal FS",
@@ -11281,6 +11276,12 @@
           "venue": "Pabellón Eva Manguan (POL)"
         },
         {
+          "away": "Wanapix Aldelis InterSala 10 Zaragoza",
+          "date": "2026-12-05T19:00:00",
+          "home": "Ourense Ontime",
+          "venue": "Pab. de Los Remedios (POL)"
+        },
+        {
           "away": "Rodiles F.S. \"A\"",
           "date": "2026-12-05T19:30:00",
           "home": "F.S.F. Castro Bloques Cando",
@@ -11313,7 +11314,8 @@
         {
           "away": "MRB Móstoles FSF",
           "date": "2026-12-08T12:00:00",
-          "home": "Ceuta Agrupación Deportiva"
+          "home": "Ceuta Agrupación Deportiva",
+          "venue": "P.M. Guillermo Molina Ríos (POL)"
         },
         {
           "away": "Atlético Navalcarnero",
@@ -12794,7 +12796,7 @@
         },
         {
           "away": "CDE Muslera GSW \"A\"",
-          "date": "2026-12-05T20:00:00",
+          "date": "2026-12-05T19:30:00",
           "home": "REYCO Burela FS",
           "venue": "P.M. Vista Alegre (POL)"
         },
@@ -15541,7 +15543,7 @@
       "10": [
         {
           "away": "Coviran UAPO Granada FS Femenino",
-          "date": "2026-11-21T13:00:00",
+          "date": "2026-11-21T16:00:00",
           "home": "Ramón Y Cajal Féminas",
           "venue": "CD Guillermo Molina Ríos (POL)"
         },
@@ -16245,7 +16247,7 @@
         },
         {
           "away": "C.D.E. Leganés F.S. Masdeporte",
-          "date": "2027-03-20",
+          "date": "2027-03-20T13:45:00",
           "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
           "venue": "Pab. Lázaro Fernández (POL)"
         }
@@ -18410,13 +18412,13 @@
     "33836163|33836164": "2026-11-16T18:54:11+00:00",
     "33836163|33836165": "2026-11-16T18:54:22+00:00",
     "33836163|33836166": "2026-11-16T19:09:38+00:00",
-    "33836163|33836167": "2026-11-16T06:40:48+00:00",
+    "33836163|33836167": "2026-11-17T02:58:55+00:00",
     "33836163|33836168": "2026-11-16T19:10:15+00:00",
-    "33836163|33836169": "2026-11-16T06:41:00+00:00",
-    "33836179|33836180": "2026-11-16T06:56:22+00:00",
-    "33836181|33836182": "2026-11-15T21:05:04+00:00",
-    "33836181|33836183": "2026-11-15T21:20:21+00:00",
-    "33836181|33836184": "2026-11-15T15:42:19+00:00",
+    "33836163|33836169": "2026-11-17T02:59:07+00:00",
+    "33836179|33836180": "2026-11-17T03:14:28+00:00",
+    "33836181|33836182": "2026-11-17T03:14:39+00:00",
+    "33836181|33836183": "2026-11-17T03:14:50+00:00",
+    "33836181|33836184": "2026-11-17T03:15:01+00:00",
     "33918407|33918408": "2026-11-16T18:53:48+00:00"
   }
 }
