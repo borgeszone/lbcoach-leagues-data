@@ -2515,11 +2515,6 @@
           "venue": "Pabellón Centro Cívico (PIS)"
         },
         {
-          "away": "Caja Rural River Sala Zamora",
-          "date": "2026-11-28",
-          "home": "C.D. COMPOSALA"
-        },
-        {
           "away": "F.S. Salamanca Energía Duero",
           "date": "2026-11-28",
           "home": "Sibuscascoche Ribeira Fútbol Sala",
@@ -2548,6 +2543,12 @@
           "date": "2026-11-28T19:00:00",
           "home": "Caja Rural Atlético Benavente FS",
           "venue": "Pab. La Rosaleda (POL)"
+        },
+        {
+          "away": "Caja Rural River Sala Zamora",
+          "date": "2026-11-28T19:00:00",
+          "home": "C.D. COMPOSALA",
+          "venue": "Pabellón Santa Isabel (POL)"
         }
       ],
       "12": [
@@ -3981,12 +3982,6 @@
           "venue": "C.D.M. La Granja (T)"
         },
         {
-          "away": "Antiguoko KE Estudio Dental Barrenechea",
-          "date": "2026-11-28",
-          "home": "C.D.Ibararte",
-          "venue": "Pol. Valle de Esteribar (Zubiri) (T)"
-        },
-        {
           "away": "Mondrate C.D.",
           "date": "2026-11-28",
           "home": "Vulcanizados Ruiz Tafa FS",
@@ -4015,6 +4010,12 @@
           "date": "2026-11-28T18:00:00",
           "home": "Pinseque A.D.",
           "venue": "P.M. de Pinseque (PIS)"
+        },
+        {
+          "away": "Antiguoko KE Estudio Dental Barrenechea",
+          "date": "2026-11-28T18:30:00",
+          "home": "C.D.Ibararte",
+          "venue": "Pol. Valle de Esteribar (Zubiri) (T)"
         },
         {
           "away": "Acontebro Tauste FS",
@@ -5497,11 +5498,6 @@
       ],
       "12": [
         {
-          "away": "Nunsys El Pilar",
-          "date": "2026-12-05",
-          "home": "F.S. Ripollet \"A\""
-        },
-        {
           "away": "Canet F.S.",
           "date": "2026-12-05",
           "home": "Sant Joan Despí CFS Cumsa"
@@ -5541,6 +5537,12 @@
           "date": "2026-12-05T18:00:00",
           "home": "Covisa Manresa",
           "venue": "Pab. Mun. El Pujolet (PIS)"
+        },
+        {
+          "away": "Nunsys El Pilar",
+          "date": "2026-12-05T18:30:00",
+          "home": "F.S. Ripollet \"A\"",
+          "venue": "P.M.D. Joan Creus (POL)"
         }
       ],
       "13": [
@@ -8377,7 +8379,7 @@
           "away": "Basilea Futbol Sala C.D.",
           "date": "2026-11-22T12:00:00",
           "home": "C.D. Tenerife Iberia Toscal",
-          "venue": "Pab. de la Salud (POL)"
+          "venue": "Pab. Quico Cabrera (POL)"
         }
       ],
       "11": [
@@ -8396,7 +8398,7 @@
           "away": "Malta 97",
           "date": "2026-11-28T15:00:00",
           "home": "AD Duggi-San Fernando",
-          "venue": "Pab. Quico Cabrera"
+          "venue": "P.M. de la Salud (POL)"
         },
         {
           "away": "Gran Canaria FS",
@@ -17246,12 +17248,6 @@
           "venue": "Pab. Javier Imbroda Ortiz (POL)"
         },
         {
-          "away": "REYCO Burela FS",
-          "date": "2027-01-09T17:00:00",
-          "home": "Barça Atlètic",
-          "venue": "Ciutat Esportiva Pabellón Futsal (PIS)"
-        },
-        {
           "away": "Zambú CFS Pinatar Cerramientos Abatibles",
           "date": "2027-01-09T18:00:00",
           "home": "Gasifred Atlético Ibiza",
@@ -17262,6 +17258,12 @@
           "date": "2027-01-09T18:30:00",
           "home": "Family Cash Alzira F.S.",
           "venue": "Palau D?Esports de Alzira (T)"
+        },
+        {
+          "away": "REYCO Burela FS",
+          "date": "2027-01-09T18:45:00",
+          "home": "Barça Atlètic",
+          "venue": "Ciutat Esportiva Pabellón Futsal (PIS)"
         },
         {
           "away": "Sala 5 Martorell MCD Grup",
@@ -18409,16 +18411,16 @@
   "_fetched": {
     "33836159|33892849": "2026-11-16T18:38:31+00:00",
     "33836159|33892850": "2026-11-16T18:38:37+00:00",
-    "33836163|33836164": "2026-11-16T18:54:11+00:00",
-    "33836163|33836165": "2026-11-16T18:54:22+00:00",
-    "33836163|33836166": "2026-11-16T19:09:38+00:00",
-    "33836163|33836167": "2026-11-17T02:58:55+00:00",
-    "33836163|33836168": "2026-11-16T19:10:15+00:00",
-    "33836163|33836169": "2026-11-17T02:59:07+00:00",
+    "33836163|33836164": "2026-11-17T23:48:18+00:00",
+    "33836163|33836165": "2026-11-17T23:48:29+00:00",
+    "33836163|33836166": "2026-11-17T23:48:46+00:00",
+    "33836163|33836167": "2026-11-17T23:48:57+00:00",
+    "33836163|33836168": "2026-11-18T00:04:20+00:00",
+    "33836163|33836169": "2026-11-18T00:04:09+00:00",
     "33836179|33836180": "2026-11-17T03:14:28+00:00",
     "33836181|33836182": "2026-11-17T03:14:39+00:00",
     "33836181|33836183": "2026-11-17T03:14:50+00:00",
     "33836181|33836184": "2026-11-17T03:15:01+00:00",
-    "33918407|33918408": "2026-11-16T18:53:48+00:00"
+    "33918407|33918408": "2026-11-17T23:33:00+00:00"
   }
 }
