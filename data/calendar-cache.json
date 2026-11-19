@@ -2518,7 +2518,7 @@
         },
         {
           "away": "F.S. Salamanca Energía Duero",
-          "date": "2026-11-28",
+          "date": "2026-11-28T13:00:00",
           "home": "Sibuscascoche Ribeira Fútbol Sala",
           "venue": "Pabellón Municipal de Lugo (POL)"
         },
@@ -3984,12 +3984,6 @@
       ],
       "11": [
         {
-          "away": "A.D. Rioja Sala",
-          "date": "2026-11-28",
-          "home": "Entrerrios Automatización",
-          "venue": "C.D.M. La Granja (T)"
-        },
-        {
           "away": "Coras Futsal Zaragoza",
           "date": "2026-11-28T16:15:00",
           "home": "Otxartabe C.D.",
@@ -4030,6 +4024,12 @@
           "date": "2026-11-28T19:00:00",
           "home": "C.D. Juventud del Círculo Católico",
           "venue": "Polideportivo Círculo Católico (PIS)"
+        },
+        {
+          "away": "A.D. Rioja Sala",
+          "date": "2026-11-29T12:00:00",
+          "home": "Entrerrios Automatización",
+          "venue": "C.D.M. La Granja (T)"
         }
       ],
       "12": [
@@ -5456,18 +5456,6 @@
       ],
       "11": [
         {
-          "away": "F.S. Ripollet \"A\"",
-          "date": "2026-11-28",
-          "home": "F.S. Picassent",
-          "venue": "Pabellon Mpal. de Picassent (POL)"
-        },
-        {
-          "away": "Ye Faky F.S.",
-          "date": "2026-11-28",
-          "home": "Club Deportivo Sporting la Nucía",
-          "venue": "Pavelló Municipal Camilo Cano (T)"
-        },
-        {
           "away": "Catgas Energía Santa Coloma",
           "date": "2026-11-28",
           "home": "Hospitalet Bellsport F.S.",
@@ -5490,6 +5478,18 @@
           "date": "2026-11-28T15:00:00",
           "home": "Canet F.S.",
           "venue": "Pab. Mun. D'Esports (POL)"
+        },
+        {
+          "away": "Ye Faky F.S.",
+          "date": "2026-11-28T17:30:00",
+          "home": "Club Deportivo Sporting la Nucía",
+          "venue": "Pavelló Municipal Camilo Cano (T)"
+        },
+        {
+          "away": "F.S. Ripollet \"A\"",
+          "date": "2026-11-28T18:00:00",
+          "home": "F.S. Picassent",
+          "venue": "Pabellon Mpal. de Picassent (POL)"
         },
         {
           "away": "Sant Joan Despí CFS Cumsa",
@@ -5736,7 +5736,7 @@
         },
         {
           "away": "Nunsys El Pilar",
-          "date": "2027-01-16T16:00:00",
+          "date": "2027-01-16T13:00:00",
           "home": "Illes Balears Palma Futsal",
           "venue": "Pab. Borja Moll (Polig de Levante) (PIS)"
         },
@@ -6928,27 +6928,22 @@
           "venue": "P.M. de Rena (POL)"
         },
         {
-          "away": "Entreparéntesis - Enertel FS Talavera",
-          "date": "2026-11-28",
-          "home": "Club Unión Deportiva Loeches"
-        },
-        {
           "away": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
           "date": "2026-11-28",
           "home": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
           "venue": "Polideportivo Municipal de Navahonda (PIS)"
         },
         {
-          "away": "Grupo López Bolaños F.S. \"A\"",
-          "date": "2026-11-28",
-          "home": "Unión Tres Cantos FS",
-          "venue": "Pab. Mun. de la Luz (POL)"
-        },
-        {
           "away": "CD Cobisa FS \"A\"",
           "date": "2026-11-28",
           "home": "El Alamo F.S.",
           "venue": "Pabellón Municipal IES El Álamo (PIS)"
+        },
+        {
+          "away": "Grupo López Bolaños F.S. \"A\"",
+          "date": "2026-11-28T16:00:00",
+          "home": "Unión Tres Cantos FS",
+          "venue": "Pab. Mun. de la Luz (POL)"
         },
         {
           "away": "Naturpellet San Cristóbal",
@@ -6961,6 +6956,12 @@
           "date": "2026-11-28T19:30:00",
           "home": "CD Albacete FS",
           "venue": "Pabellón Universitario Albacete"
+        },
+        {
+          "away": "Entreparéntesis - Enertel FS Talavera",
+          "date": "2026-11-28T20:00:00",
+          "home": "Club Unión Deportiva Loeches",
+          "venue": "Pabellon Municipal de Torres de la Alameda (PIS)"
         },
         {
           "away": "Inter JP Financial F.S.",
@@ -9866,9 +9867,10 @@
       ],
       "11": [
         {
-          "away": "GH Distribución Moral FS",
-          "date": "2026-11-28",
-          "home": "Nawter Blanca FS"
+          "away": "Jimbee Cartagena Futbol Sala",
+          "date": "2026-11-27T21:00:00",
+          "home": "C.D. Malacitano Futsal",
+          "venue": "P.M. Tiro de Pichón (POL)"
         },
         {
           "away": "Oleoinnova Mengibar FS",
@@ -9889,6 +9891,12 @@
           "venue": "Complejo.Deportivo Nuñez Blanca (PIS)"
         },
         {
+          "away": "GH Distribución Moral FS",
+          "date": "2026-11-28T18:00:00",
+          "home": "Nawter Blanca FS",
+          "venue": "Pabellón Miguel Angel Cano Mellado (POL)"
+        },
+        {
           "away": "Joasan Construcciones CFS Pinatar \"B\"",
           "date": "2026-11-28T18:00:00",
           "home": "C.D. Bujalance F.S. Beconet",
@@ -9905,12 +9913,6 @@
           "date": "2026-11-28T19:00:00",
           "home": "Melilla Ciudad del Deporte Nueva Era",
           "venue": "Pabellón Guillermo García Pezzi (PIS)"
-        },
-        {
-          "away": "Jimbee Cartagena Futbol Sala",
-          "date": "2026-11-28T19:30:00",
-          "home": "C.D. Malacitano Futsal",
-          "venue": "P.M. Tiro de Pichón (POL)"
         }
       ],
       "12": [
@@ -17278,16 +17280,16 @@
           "venue": "Palau D?Esports de Alzira (T)"
         },
         {
+          "away": "Sala 5 Martorell MCD Grup",
+          "date": "2027-01-09T18:30:00",
+          "home": "Entrerrios Automatización",
+          "venue": "C.D.M. La Granja (T)"
+        },
+        {
           "away": "REYCO Burela FS",
           "date": "2027-01-09T18:45:00",
           "home": "Barça Atlètic",
           "venue": "Ciutat Esportiva Pabellón Futsal (PIS)"
-        },
-        {
-          "away": "Sala 5 Martorell MCD Grup",
-          "date": "2027-01-09T19:00:00",
-          "home": "Entrerrios Automatización",
-          "venue": "C.D.M. La Granja (T)"
         },
         {
           "away": "Unión África Ceutí \"A\"",
@@ -18429,16 +18431,16 @@
   "_fetched": {
     "33836159|33892849": "2026-11-19T13:36:20+00:00",
     "33836159|33892850": "2026-11-19T13:36:25+00:00",
-    "33836163|33836164": "2026-11-19T02:10:41+00:00",
-    "33836163|33836165": "2026-11-19T02:10:52+00:00",
-    "33836163|33836166": "2026-11-19T02:11:09+00:00",
-    "33836163|33836167": "2026-11-19T02:11:20+00:00",
-    "33836163|33836168": "2026-11-19T02:26:43+00:00",
-    "33836163|33836169": "2026-11-19T02:26:32+00:00",
+    "33836163|33836164": "2026-11-19T23:22:16+00:00",
+    "33836163|33836165": "2026-11-19T23:22:27+00:00",
+    "33836163|33836166": "2026-11-19T23:22:44+00:00",
+    "33836163|33836167": "2026-11-19T23:22:55+00:00",
+    "33836163|33836168": "2026-11-19T23:38:18+00:00",
+    "33836163|33836169": "2026-11-19T23:38:07+00:00",
     "33836179|33836180": "2026-11-19T13:20:35+00:00",
     "33836181|33836182": "2026-11-19T13:20:47+00:00",
     "33836181|33836183": "2026-11-19T13:35:58+00:00",
     "33836181|33836184": "2026-11-19T13:36:09+00:00",
-    "33918407|33918408": "2026-11-19T01:55:23+00:00"
+    "33918407|33918408": "2026-11-19T23:06:58+00:00"
   }
 }
