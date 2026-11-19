@@ -11456,11 +11456,6 @@
           "home": "Atlético Navalcarnero"
         },
         {
-          "away": "Estrela Revoltosa Verín FSF",
-          "date": "2027-01-05",
-          "home": "Ourense Ontime"
-        },
-        {
           "away": "Wanapix Aldelis InterSala 10 Zaragoza",
           "date": "2027-01-05",
           "home": "Rodiles F.S. \"A\""
@@ -11469,6 +11464,12 @@
           "away": "LBTL Futsal Alcantarilla",
           "date": "2027-01-05",
           "home": "STV Roldán F.S"
+        },
+        {
+          "away": "Estrela Revoltosa Verín FSF",
+          "date": "2027-01-05T12:00:00",
+          "home": "Ourense Ontime",
+          "venue": "Pab. de Los Remedios (POL)"
         },
         {
           "away": "AE Les Corts UBAE",
@@ -12741,6 +12742,12 @@
           "venue": "Pab. Guillermo Cortés (POL)"
         },
         {
+          "away": "At. Arnoia",
+          "date": "2026-11-28T16:00:00",
+          "home": "FC Meigas",
+          "venue": "Pabellón Santa Isabel (POL)"
+        },
+        {
           "away": "Bembrive",
           "date": "2026-11-28T16:30:00",
           "home": "El Gaitero Rodiles FSF",
@@ -12763,12 +12770,6 @@
           "date": "2026-11-28T18:30:00",
           "home": "U.D.C. Txantrea K.K.E.",
           "venue": "Polideportivo Arrosadia (T)"
-        },
-        {
-          "away": "At. Arnoia",
-          "date": "2026-11-28T19:00:00",
-          "home": "FC Meigas",
-          "venue": "Pabellón De Bertamirans (PIS)"
         }
       ],
       "12": [
@@ -14189,28 +14190,6 @@
       ],
       "11": [
         {
-          "away": "C.D. Parque Col. Santa Ana",
-          "date": "2026-11-28",
-          "home": "Entrerrios Automatización"
-        },
-        {
-          "away": "F.S. Sabadell",
-          "date": "2026-11-28",
-          "home": "CFS Autoescola Urgell Linyola",
-          "venue": "Pabellón Municipal del Linyola (PIS)"
-        },
-        {
-          "away": "Club Deportivo San Pablo Ibiza",
-          "date": "2026-11-28",
-          "home": "Club Deportivo Nou Turia FSF \"A\""
-        },
-        {
-          "away": "AE Penya Esplugues Salvat Logística \"A\"",
-          "date": "2026-11-28",
-          "home": "AECS L Hospitalet",
-          "venue": "P.M. Sán Feliú (POL)"
-        },
-        {
           "away": "Feme Castellón C.F.S.",
           "date": "2026-11-28",
           "home": "SolarMon-Les Glories 2014 CD La Concordia"
@@ -14228,9 +14207,34 @@
           "venue": "P.M.D. Joan Creus (POL)"
         },
         {
+          "away": "F.S. Sabadell",
+          "date": "2026-11-28T17:15:00",
+          "home": "CFS Autoescola Urgell Linyola",
+          "venue": "Pabellón Municipal del Linyola (PIS)"
+        },
+        {
           "away": "Lainco Esportiu Rubi F.S.",
-          "date": "2026-11-29",
-          "home": "Futsal Cartonajes Pans Mataró"
+          "date": "2026-11-28T18:15:00",
+          "home": "Futsal Cartonajes Pans Mataró",
+          "venue": "P.M. Teresa Mª Roca (POL)"
+        },
+        {
+          "away": "AE Penya Esplugues Salvat Logística \"A\"",
+          "date": "2026-11-28T18:20:00",
+          "home": "AECS L Hospitalet",
+          "venue": "P.M. Sán Feliú (POL)"
+        },
+        {
+          "away": "C.D. Parque Col. Santa Ana",
+          "date": "2026-11-28T18:30:00",
+          "home": "Entrerrios Automatización",
+          "venue": "C.D.M. La Granja (T)"
+        },
+        {
+          "away": "Club Deportivo San Pablo Ibiza",
+          "date": "2026-11-29T13:00:00",
+          "home": "Club Deportivo Nou Turia FSF \"A\"",
+          "venue": "Pabellon Mpal. Alfafar SUMA (POL)"
         }
       ],
       "12": [
@@ -15611,31 +15615,34 @@
           "venue": "P.M. de la Juventud (POL)"
         },
         {
-          "away": "C.D.E. Leganés F.S. Masdeporte",
-          "date": "2026-11-28",
-          "home": "Globalcaja Albacete F.S."
-        },
-        {
-          "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
-          "date": "2026-11-28",
-          "home": "Dos Hermanas F.S. C.D."
-        },
-        {
-          "away": "CD Salesianos Puertollano",
-          "date": "2026-11-28",
-          "home": "Coviran UAPO Granada FS Femenino"
-        },
-        {
           "away": "I.E.S. Luis de Camoens",
           "date": "2026-11-28T11:00:00",
           "home": "Atletico Navalcarnero",
           "venue": "P.M. Ventas de Retamosa (PIS)"
         },
         {
+          "away": "Melilla Ciudad del Deporte Torreblanca C. F.",
+          "date": "2026-11-28T16:00:00",
+          "home": "Dos Hermanas F.S. C.D.",
+          "venue": "Pabellón Municipal Francisco de Dios Jiménez (POL)"
+        },
+        {
+          "away": "C.D.E. Leganés F.S. Masdeporte",
+          "date": "2026-11-28T16:15:00",
+          "home": "Globalcaja Albacete F.S.",
+          "venue": "Pabellón Universitario Albacete"
+        },
+        {
           "away": "Almagro F.S.F.",
           "date": "2026-11-28T19:00:00",
           "home": "Majadahonda F.S.F./Afar 4",
           "venue": "Polideportivo Navaarmado Patricia García (PIS)"
+        },
+        {
+          "away": "CD Salesianos Puertollano",
+          "date": "2026-11-28T19:15:00",
+          "home": "Coviran UAPO Granada FS Femenino",
+          "venue": "Complejo.Deportivo Nuñez Blanca (PIS)"
         },
         {
           "away": "CD La Garrovilla Femenino",
@@ -18420,18 +18427,18 @@
   },
   "_comment": "Cache persistente del calendario auto-generada por scrapers.calendar_cache. NO editar a mano. Las claves planas son actaUrls por partido; la seccion _calendars guarda las jornadas enteras tal y como las devolvio la PNFG. Cada run fusiona lo fresco con esta cache para que un rate-limit no borre datos que ya teniamos. Si una entrada deja de ser valida, borrala y la proxima ejecucion la volvera a resolver. Las claves llevan dentro el codigo de competicion, que cambia cada temporada, asi que las entradas de temporadas pasadas quedan inertes (no se podan solas).",
   "_fetched": {
-    "33836159|33892849": "2026-11-18T08:09:46+00:00",
-    "33836159|33892850": "2026-11-18T08:09:57+00:00",
+    "33836159|33892849": "2026-11-19T13:36:20+00:00",
+    "33836159|33892850": "2026-11-19T13:36:25+00:00",
     "33836163|33836164": "2026-11-19T02:10:41+00:00",
     "33836163|33836165": "2026-11-19T02:10:52+00:00",
     "33836163|33836166": "2026-11-19T02:11:09+00:00",
     "33836163|33836167": "2026-11-19T02:11:20+00:00",
     "33836163|33836168": "2026-11-19T02:26:43+00:00",
     "33836163|33836169": "2026-11-19T02:26:32+00:00",
-    "33836179|33836180": "2026-11-18T07:54:02+00:00",
-    "33836181|33836182": "2026-11-18T08:09:13+00:00",
-    "33836181|33836183": "2026-11-18T08:09:24+00:00",
-    "33836181|33836184": "2026-11-18T08:09:35+00:00",
+    "33836179|33836180": "2026-11-19T13:20:35+00:00",
+    "33836181|33836182": "2026-11-19T13:20:47+00:00",
+    "33836181|33836183": "2026-11-19T13:35:58+00:00",
+    "33836181|33836184": "2026-11-19T13:36:09+00:00",
     "33918407|33918408": "2026-11-19T01:55:23+00:00"
   }
 }
