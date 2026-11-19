@@ -2511,16 +2511,10 @@
       ],
       "11": [
         {
-          "away": "CD Albense FS",
-          "date": "2026-11-28",
-          "home": "Stellae Leis Pontevedra F.S.",
-          "venue": "Pabellón Municipal de Deportes de Pontevedra (PIS)"
-        },
-        {
           "away": "ADC Lugo Sala",
-          "date": "2026-11-28",
+          "date": "2026-11-27T21:00:00",
           "home": "S.D. Xove F.S.",
-          "venue": "Pabellón Centro Cívico (PIS)"
+          "venue": "Pabellón Municipal de Xove (POL)"
         },
         {
           "away": "F.S. Salamanca Energía Duero",
@@ -2529,10 +2523,10 @@
           "venue": "Pabellón Municipal de Lugo (POL)"
         },
         {
-          "away": "Grupo FORMA-T Vilalba F.S.",
-          "date": "2026-11-28",
-          "home": "Noia Portus Apostoli",
-          "venue": "Pab. Agustín Mouris (POL)"
+          "away": "CD Albense FS",
+          "date": "2026-11-28T17:00:00",
+          "home": "Stellae Leis Pontevedra F.S.",
+          "venue": "P. Monte Carrasco Marcón (T)"
         },
         {
           "away": "5 Coruña F.S.",
@@ -2557,6 +2551,12 @@
           "date": "2026-11-28T19:00:00",
           "home": "C.D. COMPOSALA",
           "venue": "Pabellón Santa Isabel (POL)"
+        },
+        {
+          "away": "Grupo FORMA-T Vilalba F.S.",
+          "date": "2026-11-29T12:30:00",
+          "home": "Noia Portus Apostoli",
+          "venue": "Pab. Agustín Mouris (POL)"
         }
       ],
       "12": [
@@ -3990,12 +3990,6 @@
           "venue": "C.D.M. La Granja (T)"
         },
         {
-          "away": "Mondrate C.D.",
-          "date": "2026-11-28",
-          "home": "Vulcanizados Ruiz Tafa FS",
-          "venue": "IES Politécnico Tafalla (T)"
-        },
-        {
           "away": "Coras Futsal Zaragoza",
           "date": "2026-11-28T16:15:00",
           "home": "Otxartabe C.D.",
@@ -4018,6 +4012,12 @@
           "date": "2026-11-28T18:00:00",
           "home": "Pinseque A.D.",
           "venue": "P.M. de Pinseque (PIS)"
+        },
+        {
+          "away": "Mondrate C.D.",
+          "date": "2026-11-28T18:00:00",
+          "home": "Vulcanizados Ruiz Tafa FS",
+          "venue": "IES Politécnico Tafalla (T)"
         },
         {
           "away": "Antiguoko KE Estudio Dental Barrenechea",
@@ -5468,12 +5468,6 @@
           "venue": "Pavelló Municipal Camilo Cano (T)"
         },
         {
-          "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
-          "date": "2026-11-28",
-          "home": "C. Natacio Sabadell",
-          "venue": "P.M. del Nord (POL)"
-        },
-        {
           "away": "Catgas Energía Santa Coloma",
           "date": "2026-11-28",
           "home": "Hospitalet Bellsport F.S.",
@@ -5502,6 +5496,12 @@
           "date": "2026-11-28T18:00:00",
           "home": "C.F.S. Futsal IBI - Juypal Hogar",
           "venue": "Pabellon Rubén Plaza (POL)"
+        },
+        {
+          "away": "Col. Santo Ángel/Ccr-Baixsud de Castelldefels A",
+          "date": "2026-11-28T18:00:00",
+          "home": "C. Natacio Sabadell",
+          "venue": "P.M. del Nord (POL)"
         }
       ],
       "12": [
@@ -5578,12 +5578,6 @@
           "venue": "Pabellon Rubén Plaza (POL)"
         },
         {
-          "away": "Covisa Manresa",
-          "date": "2026-12-12",
-          "home": "C. Natacio Sabadell",
-          "venue": "P.M. del Nord (POL)"
-        },
-        {
           "away": "A.E. Llevant De Manacor Futsal \"A\"",
           "date": "2026-12-12",
           "home": "Hospitalet Bellsport F.S.",
@@ -5599,6 +5593,12 @@
           "date": "2026-12-12T19:00:00",
           "home": "Canet F.S.",
           "venue": "Pab. Mun. D'Esports (POL)"
+        },
+        {
+          "away": "Covisa Manresa",
+          "date": "2026-12-12T19:30:00",
+          "home": "C. Natacio Sabadell",
+          "venue": "P.M. del Nord (POL)"
         }
       ],
       "14": [
@@ -6933,12 +6933,6 @@
           "home": "Club Unión Deportiva Loeches"
         },
         {
-          "away": "Inter JP Financial F.S.",
-          "date": "2026-11-28",
-          "home": "Serbis AD Alcorcón FS",
-          "venue": "P.M. Los Cantos (POL)"
-        },
-        {
           "away": "E.F.S. Ciudad de Torrejón -Redpiso Torrejón",
           "date": "2026-11-28",
           "home": "Grupo Pulido C.D. Sierra San Vicente Fútbol Sala \"A\"",
@@ -6951,22 +6945,28 @@
           "venue": "Pab. Mun. de la Luz (POL)"
         },
         {
-          "away": "Athletic Club Móstoles",
-          "date": "2026-11-28",
-          "home": "CD Albacete FS",
-          "venue": "Pabellón Municipal Cocheras -Lepanto (POL)"
-        },
-        {
-          "away": "Naturpellet San Cristóbal",
-          "date": "2026-11-28",
-          "home": "Soliss A.D. Bargas",
-          "venue": "P.M. El Balcón (POL)"
-        },
-        {
           "away": "CD Cobisa FS \"A\"",
           "date": "2026-11-28",
           "home": "El Alamo F.S.",
           "venue": "Pabellón Municipal IES El Álamo (PIS)"
+        },
+        {
+          "away": "Naturpellet San Cristóbal",
+          "date": "2026-11-28T18:30:00",
+          "home": "Soliss A.D. Bargas",
+          "venue": "P.M. El Balcón (POL)"
+        },
+        {
+          "away": "Athletic Club Móstoles",
+          "date": "2026-11-28T19:30:00",
+          "home": "CD Albacete FS",
+          "venue": "Pabellón Universitario Albacete"
+        },
+        {
+          "away": "Inter JP Financial F.S.",
+          "date": "2026-11-29T11:15:00",
+          "home": "Serbis AD Alcorcón FS",
+          "venue": "P.M. Los Cantos (POL)"
         }
       ],
       "12": [
@@ -9866,26 +9866,15 @@
       ],
       "11": [
         {
-          "away": "Oleoinnova Mengibar FS",
-          "date": "2026-11-28",
-          "home": "Crevillent Futsal Starts \"A\""
-        },
-        {
           "away": "GH Distribución Moral FS",
           "date": "2026-11-28",
           "home": "Nawter Blanca FS"
         },
         {
-          "away": "Cdb Salvatierra FS Construcciones Vianri",
-          "date": "2026-11-28",
-          "home": "Dos Hermanas F.S. C.D. \"A\"",
-          "venue": "Pabellón Municipal Francisco de Dios Jiménez (POL)"
-        },
-        {
-          "away": "CD Virgili Cádiz \"A\"",
-          "date": "2026-11-28",
-          "home": "Sima Granada FS",
-          "venue": "Complejo.Deportivo Nuñez Blanca (PIS)"
+          "away": "Oleoinnova Mengibar FS",
+          "date": "2026-11-28T16:00:00",
+          "home": "Crevillent Futsal Starts \"A\"",
+          "venue": "Pabellón ABRETS de Crevillente (PIS)"
         },
         {
           "away": "Imperio Los Rosales",
@@ -9894,10 +9883,22 @@
           "venue": "Pabellón José Antonio Segura (POL)"
         },
         {
+          "away": "CD Virgili Cádiz \"A\"",
+          "date": "2026-11-28T17:00:00",
+          "home": "Sima Granada FS",
+          "venue": "Complejo.Deportivo Nuñez Blanca (PIS)"
+        },
+        {
           "away": "Joasan Construcciones CFS Pinatar \"B\"",
           "date": "2026-11-28T18:00:00",
           "home": "C.D. Bujalance F.S. Beconet",
           "venue": "P. José Pérez Pozuelo (T)"
+        },
+        {
+          "away": "Cdb Salvatierra FS Construcciones Vianri",
+          "date": "2026-11-28T18:30:00",
+          "home": "Dos Hermanas F.S. C.D. \"A\"",
+          "venue": "Pabellón Municipal Francisco de Dios Jiménez (POL)"
         },
         {
           "away": "FLEXLIVING JUMILLA FS",
@@ -10020,11 +10021,6 @@
           "venue": "P.M. de Moral de Calatrava (POL)"
         },
         {
-          "away": "Crevillent Futsal Starts \"A\"",
-          "date": "2026-12-19",
-          "home": "Imperio Los Rosales"
-        },
-        {
           "away": "Melilla Ciudad del Deporte Nueva Era",
           "date": "2026-12-19",
           "home": "Jimbee Cartagena Futbol Sala"
@@ -10044,6 +10040,12 @@
           "date": "2026-12-19",
           "home": "Dos Hermanas F.S. C.D. \"A\"",
           "venue": "Pabellón Municipal Francisco de Dios Jiménez (POL)"
+        },
+        {
+          "away": "Crevillent Futsal Starts \"A\"",
+          "date": "2026-12-19T19:00:00",
+          "home": "Imperio Los Rosales",
+          "venue": "CD Guillermo Molina Ríos (POL)"
         },
         {
           "away": "C.D. Malacitano Futsal",
@@ -18420,16 +18422,16 @@
   "_fetched": {
     "33836159|33892849": "2026-11-18T08:09:46+00:00",
     "33836159|33892850": "2026-11-18T08:09:57+00:00",
-    "33836163|33836164": "2026-11-17T23:48:18+00:00",
-    "33836163|33836165": "2026-11-17T23:48:29+00:00",
-    "33836163|33836166": "2026-11-17T23:48:46+00:00",
-    "33836163|33836167": "2026-11-17T23:48:57+00:00",
-    "33836163|33836168": "2026-11-18T00:04:20+00:00",
-    "33836163|33836169": "2026-11-18T00:04:09+00:00",
+    "33836163|33836164": "2026-11-19T02:10:41+00:00",
+    "33836163|33836165": "2026-11-19T02:10:52+00:00",
+    "33836163|33836166": "2026-11-19T02:11:09+00:00",
+    "33836163|33836167": "2026-11-19T02:11:20+00:00",
+    "33836163|33836168": "2026-11-19T02:26:43+00:00",
+    "33836163|33836169": "2026-11-19T02:26:32+00:00",
     "33836179|33836180": "2026-11-18T07:54:02+00:00",
     "33836181|33836182": "2026-11-18T08:09:13+00:00",
     "33836181|33836183": "2026-11-18T08:09:24+00:00",
     "33836181|33836184": "2026-11-18T08:09:35+00:00",
-    "33918407|33918408": "2026-11-17T23:33:00+00:00"
+    "33918407|33918408": "2026-11-19T01:55:23+00:00"
   }
 }
