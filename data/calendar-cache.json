@@ -635,6 +635,13 @@
   "33836163|33836168|J9|lasallesanildelfonso|cdtenerifeiberiatoscal": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703269&NPcd_Pdf=1",
   "33836163|33836168|J9|novocomunidadesbugedofs|grancanariafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703267&NPcd_Pdf=1",
   "33836163|33836168|J9|suntrypaguimesfs|malta97": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703266&NPcd_Pdf=1",
+  "33836163|33836169|J10|cdbsalvatierrafsconstruccionesvianri|cdvirgilicadiza": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703038&NPcd_Pdf=1",
+  "33836163|33836169|J10|crevillentfutsalstartsa|simagranadafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703031&NPcd_Pdf=1",
+  "33836163|33836169|J10|flexlivingjumillafs|nawterblancafs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703033&NPcd_Pdf=1",
+  "33836163|33836169|J10|ghdistribucionmoralfs|cdsportingfsalmeriabiocampojoyma": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703034&NPcd_Pdf=1",
+  "33836163|33836169|J10|imperiolosrosales|cdmalacitanofutsal": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703035&NPcd_Pdf=1",
+  "33836163|33836169|J10|jimbeecartagenafutbolsala|cdbujalancefsbeconet": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703036&NPcd_Pdf=1",
+  "33836163|33836169|J10|joasanconstruccionescfspinatarb|doshermanasfscda": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70703037&NPcd_Pdf=1",
   "33836163|33836169|J1|cdbsalvatierrafsconstrucionesvianri|melillaciudaddeldeportenuevaera": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702962&NPcd_Pdf=1",
   "33836163|33836169|J1|cdbsalvatierrafs|melillaciudaddeldeportenuevaera": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702962&NPcd_Pdf=1",
   "33836163|33836169|J1|cdbujalancefsbeconet|cdmalacitanofutsal": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70702959&NPcd_Pdf=1",
@@ -4120,12 +4127,6 @@
           "venue": "A.D. San Juan (HA)"
         },
         {
-          "away": "CDF Zierbena",
-          "date": "2026-12-05",
-          "home": "Antiguoko KE Estudio Dental Barrenechea",
-          "venue": "Polideportivo Pio Baroja (T)"
-        },
-        {
           "away": "C.D.Ibararte",
           "date": "2026-12-05",
           "home": "Acontebro Tauste FS",
@@ -4141,6 +4142,12 @@
           "date": "2026-12-05",
           "home": "Mondrate C.D.",
           "venue": "Pol. Musakola (T)"
+        },
+        {
+          "away": "CDF Zierbena",
+          "date": "2026-12-05T18:00:00",
+          "home": "Antiguoko KE Estudio Dental Barrenechea",
+          "venue": "Polideportivo Pio Baroja (T)"
         },
         {
           "away": "Otxartabe C.D.",
@@ -5577,7 +5584,7 @@
       "12": [
         {
           "away": "C. Natacio Sabadell",
-          "date": "2026-12-05",
+          "date": "2026-12-05T12:00:00",
           "home": "Catgas Energía Santa Coloma",
           "venue": "Pabellón Nou (POL)"
         },
@@ -10056,12 +10063,6 @@
           "home": "C.D. Malacitano Futsal"
         },
         {
-          "away": "CD Virgili Cádiz \"A\"",
-          "date": "2026-12-12",
-          "home": "C.D. Bujalance F.S. Beconet",
-          "venue": "P. José Pérez Pozuelo (T)"
-        },
-        {
           "away": "Dos Hermanas F.S. C.D. \"A\"",
           "date": "2026-12-12",
           "home": "Sima Granada FS",
@@ -10072,6 +10073,12 @@
           "date": "2026-12-12T12:30:00",
           "home": "Melilla Ciudad del Deporte Nueva Era",
           "venue": "Pabellón Guillermo García Pezzi (PIS)"
+        },
+        {
+          "away": "CD Virgili Cádiz \"A\"",
+          "date": "2026-12-12T18:00:00",
+          "home": "C.D. Bujalance F.S. Beconet",
+          "venue": "P. José Pérez Pozuelo (T)"
         },
         {
           "away": "FLEXLIVING JUMILLA FS",
@@ -12856,11 +12863,6 @@
           "venue": "Pab. de Esteiro (POL)"
         },
         {
-          "away": "Grupo FORMA-T Vilalba F.S.",
-          "date": "2026-12-05",
-          "home": "At. Arnoia"
-        },
-        {
           "away": "FC Meigas",
           "date": "2026-12-05",
           "home": "Bembrive",
@@ -12877,6 +12879,12 @@
           "date": "2026-12-05T16:30:00",
           "home": "CD Lacturale Orvina",
           "venue": "Polideportivo Ezcaba (T)"
+        },
+        {
+          "away": "Grupo FORMA-T Vilalba F.S.",
+          "date": "2026-12-05T17:00:00",
+          "home": "At. Arnoia",
+          "venue": "Pabellón Municipal A Queixeira (POL)"
         },
         {
           "away": "A.D. Mioño FSF",
@@ -18506,14 +18514,14 @@
   "_fetched": {
     "33836159|33892849": "2026-11-22T16:53:13+00:00",
     "33836159|33892850": "2026-11-23T00:58:21+00:00",
-    "33836163|33836164": "2026-11-22T07:13:15+00:00",
-    "33836163|33836165": "2026-11-22T07:13:26+00:00",
-    "33836163|33836166": "2026-11-22T07:13:43+00:00",
-    "33836163|33836167": "2026-11-22T07:29:00+00:00",
-    "33836163|33836168": "2026-11-22T16:21:55+00:00",
-    "33836163|33836169": "2026-11-22T07:29:17+00:00",
-    "33836179|33836180": "2026-11-22T16:37:12+00:00",
-    "33836181|33836182": "2026-11-22T16:37:23+00:00",
+    "33836163|33836164": "2026-11-23T14:46:55+00:00",
+    "33836163|33836165": "2026-11-23T14:47:06+00:00",
+    "33836163|33836166": "2026-11-23T15:02:18+00:00",
+    "33836163|33836167": "2026-11-23T15:02:29+00:00",
+    "33836163|33836168": "2026-11-23T15:02:58+00:00",
+    "33836163|33836169": "2026-11-23T15:02:41+00:00",
+    "33836179|33836180": "2026-11-23T15:18:16+00:00",
+    "33836181|33836182": "2026-11-23T15:18:27+00:00",
     "33836181|33836183": "2026-11-22T16:37:40+00:00",
     "33836181|33836184": "2026-11-22T16:52:57+00:00",
     "33918407|33918408": "2026-11-22T06:57:57+00:00"
