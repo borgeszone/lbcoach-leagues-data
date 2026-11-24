@@ -7051,8 +7051,9 @@
       "12": [
         {
           "away": "El Alamo F.S.",
-          "date": "2026-12-05",
-          "home": "Colegio El Valle C.D."
+          "date": "2026-12-03T21:30:00",
+          "home": "Colegio El Valle C.D.",
+          "venue": "P. Colegio El Valle Sanchinarro (T)"
         },
         {
           "away": "Club Union Deportiva Rena",
@@ -9787,7 +9788,7 @@
         },
         {
           "away": "Las Cuevecitas FS",
-          "date": "2026-11-08T12:00:00",
+          "date": "2026-12-15T21:15:00",
           "home": "C.D. Tenerife Iberia Toscal",
           "venue": "Pab. Quico Cabrera"
         }
@@ -11344,16 +11345,16 @@
           "venue": "Pabellón de Casabermeja (PIS)"
         },
         {
+          "away": "STV Roldán F.S",
+          "date": "2026-12-05T12:00:00",
+          "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
+          "venue": "Pab. Javier Imbroda Ortiz (POL)"
+        },
+        {
           "away": "Ceuta Agrupación Deportiva",
           "date": "2026-12-05T12:00:00",
           "home": "Atlético Navalcarnero",
           "venue": "P.M. La Estación (POL)"
-        },
-        {
-          "away": "STV Roldán F.S",
-          "date": "2026-12-05T12:30:00",
-          "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
-          "venue": "Pab. Javier Imbroda Ortiz (POL)"
         },
         {
           "away": "Estrela Revoltosa Verín FSF",
@@ -13010,12 +13011,6 @@
           "venue": "Pab. de Esteiro (POL)"
         },
         {
-          "away": "Bembrive",
-          "date": "2027-01-09",
-          "home": "REYCO Burela FS",
-          "venue": "P.M. Vista Alegre (POL)"
-        },
-        {
           "away": "ENCE Marín Futsal",
           "date": "2027-01-09",
           "home": "C.D. Segosala",
@@ -13036,6 +13031,12 @@
           "date": "2027-01-09T16:30:00",
           "home": "El Gaitero Rodiles FSF",
           "venue": "P.M. Manuel Busto (POL)"
+        },
+        {
+          "away": "Bembrive",
+          "date": "2027-01-09T18:45:00",
+          "home": "REYCO Burela FS",
+          "venue": "P.M. Vista Alegre (POL)"
         },
         {
           "away": "CFS Gran Canaria Teldeportivo",
@@ -18514,14 +18515,14 @@
   "_fetched": {
     "33836159|33892849": "2026-11-24T03:12:16+00:00",
     "33836159|33892850": "2026-11-24T03:12:22+00:00",
-    "33836163|33836164": "2026-11-23T14:46:55+00:00",
-    "33836163|33836165": "2026-11-23T14:47:06+00:00",
-    "33836163|33836166": "2026-11-23T15:02:18+00:00",
-    "33836163|33836167": "2026-11-23T15:02:29+00:00",
-    "33836163|33836168": "2026-11-23T15:02:58+00:00",
-    "33836163|33836169": "2026-11-23T15:02:41+00:00",
-    "33836179|33836180": "2026-11-23T15:18:16+00:00",
-    "33836181|33836182": "2026-11-23T15:18:27+00:00",
+    "33836163|33836164": "2026-11-24T15:12:25+00:00",
+    "33836163|33836165": "2026-11-24T15:12:36+00:00",
+    "33836163|33836166": "2026-11-24T15:12:47+00:00",
+    "33836163|33836167": "2026-11-24T15:12:58+00:00",
+    "33836163|33836168": "2026-11-24T15:28:26+00:00",
+    "33836163|33836169": "2026-11-24T15:13:09+00:00",
+    "33836179|33836180": "2026-11-24T14:56:23+00:00",
+    "33836181|33836182": "2026-11-24T14:56:34+00:00",
     "33836181|33836183": "2026-11-24T02:56:53+00:00",
     "33836181|33836184": "2026-11-24T02:57:05+00:00",
     "33918407|33918408": "2026-11-24T03:12:33+00:00"
