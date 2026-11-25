@@ -894,6 +894,7 @@
   "33836181|33836183|J2|gruporeciclartecesaraugusta|femecastelloncfs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697508&NPcd_Pdf=1",
   "33836181|33836183|J2|laincoesportiurubifs|clubdeportivosanpabloibiza": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697510&NPcd_Pdf=1",
   "33836181|33836183|J2|lescortsaeb|aepenyaespluguessalvatlogisticaa": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697509&NPcd_Pdf=1",
+  "33836181|33836183|J3|aecslhospitalet|entrerriosautomatizacion": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70705262&NPcd_Pdf=1",
   "33836181|33836183|J3|aepenyaespluguessalvatlogisticaa|laincoesportiurubifs": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697517&NPcd_Pdf=1",
   "33836181|33836183|J3|clubdeportivonouturiafsfa|cfsautoescolaurgelllinyola": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697512&NPcd_Pdf=1",
   "33836181|33836183|J3|clubdeportivosanpabloibiza|cdparquecolsantaana": "https://resultados.rfef.es/pnfg/NPcd/NFG_CMP_Alineacion?cod_primaria=1000121&codacta=70697518&NPcd_Pdf=1",
@@ -1184,6 +1185,12 @@
           "venue": "Pabellon Mpal. de Peñiscola (POL)"
         },
         {
+          "away": "Wanapix",
+          "date": "2026-11-28T20:30:00",
+          "home": "Jaen Paraiso Interior F.S.",
+          "venue": "P.D. Olivo Arena (T)"
+        },
+        {
           "away": "Córdoba Patrimonio De La Humanidad",
           "date": "2026-11-28T20:30:00",
           "home": "O Parrulo Ferrol F.S.",
@@ -1194,12 +1201,6 @@
           "date": "2026-11-29T13:00:00",
           "home": "Inter JP Financial",
           "venue": "Pab. Jorge Garbajosa (POL)"
-        },
-        {
-          "away": "Wanapix",
-          "date": "2026-11-29T17:00:00",
-          "home": "Jaen Paraiso Interior F.S.",
-          "venue": "P.D. Olivo Arena (T)"
         }
       ],
       "11": [
@@ -14440,12 +14441,6 @@
           "home": "Club Deportivo San Pablo Ibiza"
         },
         {
-          "away": "Entrerrios Automatización",
-          "date": "2026-12-19",
-          "home": "AE Penya Esplugues Salvat Logística \"A\"",
-          "venue": "C.E.M. Les Moreres (T)"
-        },
-        {
           "away": "CFS Autoescola Urgell Linyola",
           "date": "2026-12-19",
           "home": "Feme Castellón C.F.S.",
@@ -14455,6 +14450,12 @@
           "away": "AECS L Hospitalet",
           "date": "2026-12-19",
           "home": "SolarMon-Les Glories 2014 CD La Concordia"
+        },
+        {
+          "away": "Entrerrios Automatización",
+          "date": "2026-12-19T16:00:00",
+          "home": "AE Penya Esplugues Salvat Logística \"A\"",
+          "venue": "C.E.M. Les Moreres (T)"
         },
         {
           "away": "Club Deportivo Nou Turia FSF \"A\"",
@@ -15241,7 +15242,7 @@
         },
         {
           "away": "Entrerrios Automatización",
-          "date": "2026-11-24T20:45:00",
+          "date": "2026-11-24T21:06:00",
           "home": "AECS L Hospitalet",
           "venue": "P.M. Sán Feliú (POL)"
         }
@@ -15756,11 +15757,6 @@
           "venue": "P.M. Gemma Arenas Alcazar (POL)"
         },
         {
-          "away": "Majadahonda F.S.F./Afar 4",
-          "date": "2026-12-05",
-          "home": "UDAF Afanion \"A\""
-        },
-        {
           "away": "Atletico Navalcarnero",
           "date": "2026-12-05",
           "home": "C.F.S. Femenino San Fernando",
@@ -15771,6 +15767,12 @@
           "date": "2026-12-05",
           "home": "CD Salesianos Puertollano",
           "venue": "P.M. Santiago Cañizares (POL)"
+        },
+        {
+          "away": "Majadahonda F.S.F./Afar 4",
+          "date": "2026-12-05T16:00:00",
+          "home": "UDAF Afanion \"A\"",
+          "venue": "Pabellón Municipal Cocheras -Lepanto (POL)"
         },
         {
           "away": "Martos FS Jaén Paraíso Interior",
@@ -15844,11 +15846,6 @@
           "home": "Coviran UAPO Granada FS Femenino"
         },
         {
-          "away": "CD La Garrovilla Femenino",
-          "date": "2026-12-19",
-          "home": "UDAF Afanion \"A\""
-        },
-        {
           "away": "Ramón Y Cajal Féminas",
           "date": "2026-12-19",
           "home": "I.E.S. Luis de Camoens",
@@ -15870,6 +15867,12 @@
           "away": "Globalcaja Albacete F.S.",
           "date": "2026-12-19",
           "home": "Dos Hermanas F.S. C.D."
+        },
+        {
+          "away": "CD La Garrovilla Femenino",
+          "date": "2026-12-19T16:00:00",
+          "home": "UDAF Afanion \"A\"",
+          "venue": "Pabellón Universitario Albacete"
         },
         {
           "away": "Atletico Navalcarnero",
@@ -18513,8 +18516,8 @@
   },
   "_comment": "Cache persistente del calendario auto-generada por scrapers.calendar_cache. NO editar a mano. Las claves planas son actaUrls por partido; la seccion _calendars guarda las jornadas enteras tal y como las devolvio la PNFG. Cada run fusiona lo fresco con esta cache para que un rate-limit no borre datos que ya teniamos. Si una entrada deja de ser valida, borrala y la proxima ejecucion la volvera a resolver. Las claves llevan dentro el codigo de competicion, que cambia cada temporada, asi que las entradas de temporadas pasadas quedan inertes (no se podan solas).",
   "_fetched": {
-    "33836159|33892849": "2026-11-24T03:12:16+00:00",
-    "33836159|33892850": "2026-11-24T03:12:22+00:00",
+    "33836159|33892849": "2026-11-25T01:21:23+00:00",
+    "33836159|33892850": "2026-11-25T01:21:29+00:00",
     "33836163|33836164": "2026-11-24T15:12:25+00:00",
     "33836163|33836165": "2026-11-24T15:12:36+00:00",
     "33836163|33836166": "2026-11-24T15:12:47+00:00",
@@ -18523,8 +18526,8 @@
     "33836163|33836169": "2026-11-24T15:13:09+00:00",
     "33836179|33836180": "2026-11-24T14:56:23+00:00",
     "33836181|33836182": "2026-11-24T14:56:34+00:00",
-    "33836181|33836183": "2026-11-24T02:56:53+00:00",
-    "33836181|33836184": "2026-11-24T02:57:05+00:00",
-    "33918407|33918408": "2026-11-24T03:12:33+00:00"
+    "33836181|33836183": "2026-11-25T01:06:00+00:00",
+    "33836181|33836184": "2026-11-25T01:21:12+00:00",
+    "33918407|33918408": "2026-11-25T01:21:41+00:00"
   }
 }
