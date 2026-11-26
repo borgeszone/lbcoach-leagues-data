@@ -2673,16 +2673,16 @@
           "venue": "Pabellón Municipal de A Fraga (PIS)"
         },
         {
+          "away": "Racing de Mieres",
+          "date": "2026-12-05T16:00:00",
+          "home": "CD Albense FS",
+          "venue": "P.M. Alba de Tormes (POL)"
+        },
+        {
           "away": "S.D. Xove F.S.",
           "date": "2026-12-05T17:30:00",
           "home": "C.D. Tierno Galván",
           "venue": "P.M. Lalo García (POL)"
-        },
-        {
-          "away": "Racing de Mieres",
-          "date": "2026-12-05T18:00:00",
-          "home": "CD Albense FS",
-          "venue": "P.M. Alba de Tormes (POL)"
         }
       ],
       "13": [
@@ -4113,20 +4113,9 @@
       "12": [
         {
           "away": "Entrerrios Automatización",
-          "date": "2026-12-05",
-          "home": "EMD. Cadrete Forjas Casado"
-        },
-        {
-          "away": "CMO Valves Lauburu Ibarra",
-          "date": "2026-12-05",
-          "home": "A.D. San Juan",
-          "venue": "A.D. San Juan (HA)"
-        },
-        {
-          "away": "C.D.Ibararte",
-          "date": "2026-12-05",
-          "home": "Acontebro Tauste FS",
-          "venue": "Pabellón Joaquin Lasala de Tauste (PIS)"
+          "date": "2026-12-04T20:00:00",
+          "home": "EMD. Cadrete Forjas Casado",
+          "venue": "P.M. Javier Herrero (PIS)"
         },
         {
           "away": "C.D. Juventud del Círculo Católico",
@@ -4144,6 +4133,18 @@
           "date": "2026-12-05T17:00:00",
           "home": "Mondrate C.D.",
           "venue": "Pol. Musakola (T)"
+        },
+        {
+          "away": "C.D.Ibararte",
+          "date": "2026-12-05T17:30:00",
+          "home": "Acontebro Tauste FS",
+          "venue": "Pabellón Joaquin Lasala de Tauste (PIS)"
+        },
+        {
+          "away": "CMO Valves Lauburu Ibarra",
+          "date": "2026-12-05T18:00:00",
+          "home": "A.D. San Juan",
+          "venue": "Pabellón A.D. San Juan (POL)"
         },
         {
           "away": "CDF Zierbena",
@@ -10000,23 +10001,6 @@
       ],
       "12": [
         {
-          "away": "Crevillent Futsal Starts \"A\"",
-          "date": "2026-12-05",
-          "home": "FLEXLIVING JUMILLA FS",
-          "venue": "P.M. Carlos García (POL)"
-        },
-        {
-          "away": "Melilla Ciudad del Deporte Nueva Era",
-          "date": "2026-12-05",
-          "home": "GH Distribución Moral FS",
-          "venue": "P.M. de Moral de Calatrava (POL)"
-        },
-        {
-          "away": "C.D. Sporting FS Almería Biocampojoyma",
-          "date": "2026-12-05",
-          "home": "Jimbee Cartagena Futbol Sala"
-        },
-        {
           "away": "C.D. Bujalance F.S. Beconet",
           "date": "2026-12-05",
           "home": "Cdb Salvatierra FS Construcciones Vianri"
@@ -10026,6 +10010,12 @@
           "date": "2026-12-05T12:00:00",
           "home": "Imperio Los Rosales",
           "venue": "CD Guillermo Molina Ríos (POL)"
+        },
+        {
+          "away": "Melilla Ciudad del Deporte Nueva Era",
+          "date": "2026-12-05T18:00:00",
+          "home": "GH Distribución Moral FS",
+          "venue": "P.M. de Moral de Calatrava (POL)"
         },
         {
           "away": "Sima Granada FS",
@@ -10040,10 +10030,22 @@
           "venue": "Pab Príncipe de Asturias (PIS)"
         },
         {
+          "away": "Crevillent Futsal Starts \"A\"",
+          "date": "2026-12-05T19:00:00",
+          "home": "FLEXLIVING JUMILLA FS",
+          "venue": "P.M. Carlos García (POL)"
+        },
+        {
           "away": "Dos Hermanas F.S. C.D. \"A\"",
-          "date": "2026-12-06",
+          "date": "2026-12-05T20:00:00",
           "home": "CD Virgili Cádiz \"A\"",
           "venue": "Complejo Dpvo. Ciudad de Cádiz (PIS)"
+        },
+        {
+          "away": "C.D. Sporting FS Almería Biocampojoyma",
+          "date": "2026-12-06T12:30:00",
+          "home": "Jimbee Cartagena Futbol Sala",
+          "venue": "P.M. Wssell de Guimbarda (POL)"
         }
       ],
       "13": [
@@ -12869,12 +12871,6 @@
           "venue": "Pabellón Vicente Álvarez Núñez (PIS)"
         },
         {
-          "away": "El Gaitero Rodiles FSF",
-          "date": "2026-12-05",
-          "home": "ENCE Marín Futsal",
-          "venue": "Pab. A Raña (PIS)"
-        },
-        {
           "away": "U.D.C. Txantrea K.K.E.",
           "date": "2026-12-05T16:30:00",
           "home": "CD Lacturale Orvina",
@@ -12885,6 +12881,12 @@
           "date": "2026-12-05T17:00:00",
           "home": "At. Arnoia",
           "venue": "Pabellón Municipal A Queixeira (POL)"
+        },
+        {
+          "away": "El Gaitero Rodiles FSF",
+          "date": "2026-12-05T17:00:00",
+          "home": "ENCE Marín Futsal",
+          "venue": "Pab. A Raña (PIS)"
         },
         {
           "away": "C.D. Segosala",
@@ -18526,14 +18528,14 @@
   "_fetched": {
     "33836159|33892849": "2026-11-26T00:28:02+00:00",
     "33836159|33892850": "2026-11-26T00:28:08+00:00",
-    "33836163|33836164": "2026-11-25T14:30:53+00:00",
-    "33836163|33836165": "2026-11-25T14:46:05+00:00",
-    "33836163|33836166": "2026-11-25T14:46:16+00:00",
-    "33836163|33836167": "2026-11-25T14:46:27+00:00",
-    "33836163|33836168": "2026-11-25T14:46:50+00:00",
-    "33836163|33836169": "2026-11-25T14:46:38+00:00",
-    "33836179|33836180": "2026-11-25T15:02:08+00:00",
-    "33836181|33836182": "2026-11-25T14:30:02+00:00",
+    "33836163|33836164": "2026-11-26T13:58:36+00:00",
+    "33836163|33836165": "2026-11-26T13:58:47+00:00",
+    "33836163|33836166": "2026-11-26T14:13:58+00:00",
+    "33836163|33836167": "2026-11-26T14:14:09+00:00",
+    "33836163|33836168": "2026-11-26T14:14:31+00:00",
+    "33836163|33836169": "2026-11-26T14:14:20+00:00",
+    "33836179|33836180": "2026-11-26T14:29:54+00:00",
+    "33836181|33836182": "2026-11-26T14:30:05+00:00",
     "33836181|33836183": "2026-11-26T00:45:02+00:00",
     "33836181|33836184": "2026-11-26T00:45:13+00:00",
     "33918407|33918408": "2026-11-26T00:43:19+00:00"
