@@ -1255,16 +1255,16 @@
       ],
       "12": [
         {
-          "away": "Viña Albali Valdepeñas",
-          "date": "2026-12-12T13:00:00",
-          "home": "ElPozo Murcia Costa Cálida",
-          "venue": "Palacio de los Deportes de Murcia (POL)"
-        },
-        {
           "away": "Barça",
-          "date": "2026-12-12T16:30:00",
+          "date": "2026-12-12T13:00:00",
           "home": "Illes Balears Palma Futsal",
           "venue": "Pab. Son Moix (POL)"
+        },
+        {
+          "away": "Viña Albali Valdepeñas",
+          "date": "2026-12-12T17:00:00",
+          "home": "ElPozo Murcia Costa Cálida",
+          "venue": "Palacio de los Deportes de Murcia (POL)"
         },
         {
           "away": "Servigroup Peñiscola FS",
@@ -14341,15 +14341,16 @@
           "venue": "La Llana (T)"
         },
         {
-          "away": "CFS Autoescola Urgell Linyola",
-          "date": "2026-12-05",
-          "home": "Club Deportivo San Pablo Ibiza"
-        },
-        {
           "away": "AECS L Hospitalet",
           "date": "2026-12-05",
           "home": "Feme Castellón C.F.S.",
           "venue": "I.D. Chencho (T)"
+        },
+        {
+          "away": "CFS Autoescola Urgell Linyola",
+          "date": "2026-12-05T16:00:00",
+          "home": "Club Deportivo San Pablo Ibiza",
+          "venue": "Pabellón Municipal Es Viver (PIS)"
         },
         {
           "away": "Club Deportivo Nou Turia FSF \"A\"",
@@ -14389,11 +14390,6 @@
           "venue": "C.D.M. La Granja (T)"
         },
         {
-          "away": "Club Deportivo San Pablo Ibiza",
-          "date": "2026-12-12",
-          "home": "Entrerrios Automatización"
-        },
-        {
           "away": "AE Penya Esplugues Salvat Logística \"A\"",
           "date": "2026-12-12",
           "home": "CFS Autoescola Urgell Linyola",
@@ -14420,6 +14416,12 @@
           "away": "F.S. Sabadell",
           "date": "2026-12-13",
           "home": "Futsal Cartonajes Pans Mataró"
+        },
+        {
+          "away": "Club Deportivo San Pablo Ibiza",
+          "date": "2026-12-13T12:15:00",
+          "home": "Entrerrios Automatización",
+          "venue": "C.D.M. La Granja (T)"
         }
       ],
       "14": [
@@ -14440,11 +14442,6 @@
           "home": "F.S. Sabadell"
         },
         {
-          "away": "Futsal Cartonajes Pans Mataró",
-          "date": "2026-12-19",
-          "home": "Club Deportivo San Pablo Ibiza"
-        },
-        {
           "away": "CFS Autoescola Urgell Linyola",
           "date": "2026-12-19",
           "home": "Feme Castellón C.F.S.",
@@ -14454,6 +14451,12 @@
           "away": "AECS L Hospitalet",
           "date": "2026-12-19",
           "home": "SolarMon-Les Glories 2014 CD La Concordia"
+        },
+        {
+          "away": "Futsal Cartonajes Pans Mataró",
+          "date": "2026-12-19T16:00:00",
+          "home": "Club Deportivo San Pablo Ibiza",
+          "venue": "Pabellón Municipal Es Viver (PIS)"
         },
         {
           "away": "Entrerrios Automatización",
@@ -16694,7 +16697,8 @@
         {
           "away": "CD La Garrovilla Femenino",
           "date": "2026-12-08T12:30:00",
-          "home": "Melilla Ciudad del Deporte Torreblanca C. F."
+          "home": "Melilla Ciudad del Deporte Torreblanca C. F.",
+          "venue": "Pab. Javier Imbroda Ortiz (POL)"
         }
       ],
       "30": [
@@ -18520,8 +18524,8 @@
   },
   "_comment": "Cache persistente del calendario auto-generada por scrapers.calendar_cache. NO editar a mano. Las claves planas son actaUrls por partido; la seccion _calendars guarda las jornadas enteras tal y como las devolvio la PNFG. Cada run fusiona lo fresco con esta cache para que un rate-limit no borre datos que ya teniamos. Si una entrada deja de ser valida, borrala y la proxima ejecucion la volvera a resolver. Las claves llevan dentro el codigo de competicion, que cambia cada temporada, asi que las entradas de temporadas pasadas quedan inertes (no se podan solas).",
   "_fetched": {
-    "33836159|33892849": "2026-11-25T01:21:23+00:00",
-    "33836159|33892850": "2026-11-25T01:21:29+00:00",
+    "33836159|33892849": "2026-11-26T00:28:02+00:00",
+    "33836159|33892850": "2026-11-26T00:28:08+00:00",
     "33836163|33836164": "2026-11-25T14:30:53+00:00",
     "33836163|33836165": "2026-11-25T14:46:05+00:00",
     "33836163|33836166": "2026-11-25T14:46:16+00:00",
@@ -18530,8 +18534,8 @@
     "33836163|33836169": "2026-11-25T14:46:38+00:00",
     "33836179|33836180": "2026-11-25T15:02:08+00:00",
     "33836181|33836182": "2026-11-25T14:30:02+00:00",
-    "33836181|33836183": "2026-11-25T01:06:00+00:00",
-    "33836181|33836184": "2026-11-25T01:21:12+00:00",
-    "33918407|33918408": "2026-11-25T01:21:41+00:00"
+    "33836181|33836183": "2026-11-26T00:45:02+00:00",
+    "33836181|33836184": "2026-11-26T00:45:13+00:00",
+    "33918407|33918408": "2026-11-26T00:43:19+00:00"
   }
 }
